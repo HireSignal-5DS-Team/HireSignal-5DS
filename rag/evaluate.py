@@ -95,10 +95,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--models", nargs="*", default=[])
     ap.add_argument("--batch", help="evaluate only queries of this batch, on the postings they reference")
+    ap.add_argument("--queries", type=Path, help="alternative query file, e.g. eval/queries_reviewed.jsonl")
     args = ap.parse_args()
     jobs, esco = load_jobs(), load_esco()
-    queries = load_queries(jobs)
-    out = OUT
+    queries = load_queries(jobs, args.queries) if args.queries else load_queries(jobs)
+    # results of a reviewed query set go next to, never over, the original results
+    out = OUT.parent / f"results_{args.queries.stem}" if args.queries else OUT
     if args.batch:
         queries = [q for q in queries if q.get("batch") == args.batch]
         jobs = [j for j in jobs if j["doc_id"] in {q.get("job_id") for q in queries}]

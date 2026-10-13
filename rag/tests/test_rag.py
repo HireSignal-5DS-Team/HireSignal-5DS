@@ -1,3 +1,4 @@
+import json
 import sys
 from pathlib import Path
 
@@ -92,3 +93,39 @@ def test_dense_and_hybrid_plumbing(job, monkeypatch):
     out = r.search("Requirements: experience with SQL and Python", mode="hybrid", filters={"doc_id": job["doc_id"]})
     assert out["status"] == "found" and out["results"][0][0]["section"] == "Requirements"
     assert r.search("zzz qqq", mode="dense")["status"] == "no_match"
+
+
+def test_review_apply_never_touches_original(tmp_path, monkeypatch):
+    import csv
+    import hashlib
+
+    import review
+
+    monkeypatch.setattr(review, "REVIEWED", tmp_path / "reviewed.jsonl")
+    monkeypatch.setattr(review, "DIR", tmp_path)
+    before = hashlib.sha256(review.QUERIES.read_bytes()).hexdigest()
+    rows = list(csv.DictReader(open(review.SHEET, encoding="utf-8-sig")))
+    for r in rows:
+        r["decision"] = "ACCEPT"
+    e04 = next(r for r in rows if r["qid"] == "E04")
+    e04["decision"], e04["corrected_gold"] = "CORRECT", e04["gold"] + " | http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead"
+    next(r for r in rows if r["qid"] == "N04")["decision"] = "REJECT"
+    sheet = tmp_path / "sheet.csv"
+    with open(sheet, "w", newline="", encoding="utf-8-sig") as f:
+        w = csv.DictWriter(f, review.COLUMNS)
+        w.writeheader()
+        w.writerows(rows)
+    review.apply("tester", sheet)
+    out = {q["qid"]: q for q in map(json.loads, open(tmp_path / "reviewed.jsonl"))}
+    assert hashlib.sha256(review.QUERIES.read_bytes()).hexdigest() == before
+    assert "N04" not in out and len(out) == len(rows) - 1
+    assert len(out["E04"]["gold_uris"]) == 2 and len(out["E04"]["gold_original_uris"]) == 1
+
+    j01 = next(r for r in rows if r["qid"] == "J01")
+    j01["decision"], j01["corrected_gold"] = "CORRECT", "a quote that is not in the posting"
+    with open(sheet, "w", newline="", encoding="utf-8-sig") as f:
+        w = csv.DictWriter(f, review.COLUMNS)
+        w.writeheader()
+        w.writerows(rows)
+    with pytest.raises(SystemExit, match="J01"):
+        review.apply("tester", sheet)
