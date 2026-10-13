@@ -6,7 +6,7 @@ scored against the same gold evidence spans regardless of strategy.
 S1 fixed:     sliding window of FIXED_WORDS words with FIXED_OVERLAP words overlap.
 S2 structure: one chunk per section of the posting (split at its own headings),
               prefixed with "Job: <title> | Section: <heading>"; long sections are
-              split at line boundaries. No overlap: boundaries are semantic.
+              split at line or sentence boundaries. No overlap: boundaries are semantic.
 """
 import re
 
@@ -48,11 +48,12 @@ def structure_chunks(job):
 
 
 def _split_long(body, start, end):
-    """Split a section longer than MAX_SECTION_WORDS at line boundaries."""
+    """Split a section longer than MAX_SECTION_WORDS at line or sentence boundaries."""
     if len(body[start:end].split()) <= MAX_SECTION_WORDS:
         return [(start, end)]
     parts, s, count = [], start, 0
-    for m in re.finditer(r"[^\n]*\n?", body[start:end]):
+    # units are lines or sentences: scraped postings can hold a 1,000-word section on a single line
+    for m in re.finditer(r".+?(?:[.!?;]\s+|\n+|$)", body[start:end], re.S):
         n = len(m.group().split())
         if count and count + n > MAX_SECTION_WORDS:
             parts.append((s, start + m.start()))

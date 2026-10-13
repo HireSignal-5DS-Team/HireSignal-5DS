@@ -11,6 +11,7 @@ Outputs rag/eval/results/{results.csv, rankings.jsonl, summary.md}.
 """
 import argparse
 import json
+import re
 import time
 from pathlib import Path
 
@@ -33,9 +34,11 @@ def load_queries(jobs, path=HERE / "eval/queries.jsonl"):
         spans = []
         for quote in q.get("gold_quotes", []):
             body = texts[q["job_id"]]
-            if body.count(quote) != 1:
-                raise ValueError(f"{q['qid']}: gold quote must occur exactly once in {q['job_id']}: {quote!r}")
-            spans.append((body.index(quote), body.index(quote) + len(quote)))
+            # scraped postings repeat some passages; every verbatim occurrence is valid evidence
+            found = [(m.start(), m.end()) for m in re.finditer(re.escape(quote), body)]
+            if not found:
+                raise ValueError(f"{q['qid']}: gold quote not found verbatim in {q['job_id']}: {quote!r}")
+            spans += found
         q["spans"] = spans
     return queries
 
@@ -91,10 +94,16 @@ def summarise(df):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--models", nargs="*", default=[])
+    ap.add_argument("--batch", help="evaluate only queries of this batch, on the postings they reference")
     args = ap.parse_args()
     jobs, esco = load_jobs(), load_esco()
     queries = load_queries(jobs)
-    OUT.mkdir(parents=True, exist_ok=True)
+    out = OUT
+    if args.batch:
+        queries = [q for q in queries if q.get("batch") == args.batch]
+        jobs = [j for j in jobs if j["doc_id"] in {q.get("job_id") for q in queries}]
+        out = OUT.parent / f"results_{args.batch}"
+    out.mkdir(parents=True, exist_ok=True)
     stats, all_rows, notes = [], [], []
     for strategy in STRATEGIES:
         chunks = build_chunks(strategy, jobs, esco)
@@ -102,7 +111,8 @@ def main():
         mean_words = np.mean([len(c["text"].split()) for c in jc]) if jc else 0
         stats.append(f"| {strategy} | {len(jc)} | {mean_words:.0f} |")
         for model in [None] + args.models:
-            r = Retriever(chunks, model=model, store_path=HERE / "index" if model else None)
+            # own index folder: Qdrant local mode locks a folder, and the API may hold index/
+            r = Retriever(chunks, model=model, store_path=HERE / "index_eval" if model else None)
             modes = ["bm25"] if model is None else ["dense", "hybrid"]
             for mode in modes:
                 rows = run(r, queries, mode)
@@ -115,8 +125,8 @@ def main():
                 notes.append(f"- {strategy} / {model}: tau={tau} (chosen on even qids), "
                              f"answer-vs-abstain accuracy on odd qids={acc}")
     df = pd.DataFrame(all_rows)
-    df.drop(columns="top3").to_csv(OUT / "results.csv", index=False)
-    with open(OUT / "rankings.jsonl", "w") as f:
+    df.drop(columns="top3").to_csv(out / "results.csv", index=False)
+    with open(out / "rankings.jsonl", "w") as f:
         for row in all_rows:
             f.write(json.dumps(row, default=str) + "\n")
     table = summarise(df)
@@ -126,7 +136,7 @@ def main():
           "## Chunk statistics (job postings)\n\n| strategy | chunks | mean words/chunk |\n|---|---|---|\n"
           + "\n".join(stats) + "\n\n## Retrieval (hit counts out of n)\n\n" + table.to_markdown(index=False)
           + "\n\n## Abstention\n\n" + ("\n".join(notes) or "- not run (needs a dense model)") + "\n")
-    (OUT / "summary.md").write_text(md)
+    (out / "summary.md").write_text(md)
     print(md)
 
 

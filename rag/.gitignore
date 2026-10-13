@@ -1,3 +1,5 @@
 data/esco/_src/
 index/
 .venv/
+data/jobs/_src/
+index_eval/
