@@ -1,6 +1,8 @@
-# Retrieval evaluation — ESCO collection (run 2026-10-13)
+# Retrieval evaluation (runs of 2026-10-13)
 
-Status: **ESCO part complete; job-posting part (and the chunking comparison) pending the job corpus.**
+Status: **complete** for ESCO (part 1) and for the 20 job postings, including the chunking comparison (part 2).
+The ESCO numbers in part 1 come from the ESCO-only run; in the final combined run BM25 ESCO Hit@5 moves from
+10 to 11 (fixed) because BM25 term statistics are now computed over ESCO + job chunks. Dense results are unchanged.
 Raw outputs: `eval/results/summary.md`, `results.csv`, `rankings.jsonl` (top-3 per query and configuration).
 Reproduce: `HF_HOME=<cache> CUDA_VISIBLE_DEVICES= python rag/evaluate.py --models e5-small bge-m3`.
 
@@ -61,3 +63,79 @@ Reproduce: `HF_HOME=<cache> CUDA_VISIBLE_DEVICES= python rag/evaluate.py --model
 14 answerable queries are a small sample; we report hit counts, not percentages, and claim only differences
 that are consistent across metrics. Queries and gold labels are AI-drafted and unverified. Latency was
 measured on a 4-core cloud CPU, not the demo laptop.
+
+
+# Part 2 — Job postings and chunking comparison (final run)
+
+Reproduce: `HF_HOME=<cache> CUDA_VISIBLE_DEVICES= python rag/evaluate.py --models e5-small bge-m3`
+(preliminary 5-posting run: `--batch prelim`, results in `eval/results_prelim/`).
+
+## Setup
+
+- Corpus: 20 real USAJOBS announcements (36,000 words), see `SOURCES.md`; frozen before the 15 final queries were written.
+- Chunking: **S1 fixed** 200 words / 30 overlap → 218 chunks, mean 193 words.
+  **S2 structure** (page headings, `Job | Section` prefix, long sections split at sentence boundaries)
+  → 197 chunks, mean 191 words. Chunk sizes are matched, so differences come from boundaries and prefixes.
+- Queries: 25 (20 English, 5 French), one gold verbatim quote each; a chunk is a hit if it covers >= 50% of the
+  quote. AI-drafted, to be verified by a teammate.
+- Settings: **scoped** = filtered to the gold posting (how the Matcher calls the RAG: it knows the job);
+  **global** = all 20 postings (harder: the right posting must also be found).
+
+## Results (Hit@1 / Hit@5 out of 25, MRR@10, ms/query on 4-core CPU)
+
+| Retriever | Fixed scoped | Structure scoped | Fixed global | Structure global |
+|---|---|---|---|---|
+| BM25 | 20 / 22, 0.840 | 18 / 21, 0.777 | 11 / 20, 0.575 | 12 / 15, 0.559 |
+| e5-small dense | 18 / 25, 0.853 | 19 / 25, 0.880 | 8 / 16, 0.455 | 10 / 17, 0.531 |
+| e5-small hybrid | **23** / 25, **0.960** | 20 / 25, 0.888 | 10 / 18, 0.532 | 12 / 17, 0.581 |
+| bge-m3 dense | 19 / 25, 0.870 | **23** / 25, 0.953 | 8 / 16, 0.431 | **14** / 20, **0.662** |
+| bge-m3 hybrid | 21 / 25, 0.920 | 22 / 25, 0.940 | 10 / 19, 0.529 | 13 / 21, 0.628 |
+
+Latency: BM25 < 1 ms; e5-small 100–115 ms; bge-m3 280–310 ms per query.
+
+## Paired significance (exact McNemar test on Hit@1; "A-only / B-only" = queries only A or only B gets right)
+
+| Comparison (A vs B) | A-only | B-only | p |
+|---|---|---|---|
+| fixed vs structure, bge-m3 dense, global | 1 | 7 | 0.07 |
+| fixed vs structure, bge-m3 dense, scoped | 2 | 6 | 0.29 |
+| fixed vs structure, e5-small dense, global | 1 | 3 | 0.63 |
+| fixed vs structure, e5-small hybrid, scoped | 4 | 1 | 0.38 |
+| fixed vs structure, BM25, scoped | 2 | 0 | 0.50 |
+| e5-small vs bge-m3, structure dense, global | 3 | 7 | 0.34 |
+| e5-small vs bge-m3, structure dense, scoped | 1 | 5 | 0.22 |
+
+## Comments
+
+1. **Chunking: structure-aware helps the dense models, fixed-size helps BM25; no difference is significant at
+   p < 0.05 with 25 queries.** The clearest effect is bge-m3 dense in the global setting (14 vs 8 Hit@1, MRR
+   0.662 vs 0.431, p = 0.07). Likely mechanism: the `Job: <title> | Section: <name>` prefix tells a dense model
+   which posting and which part a chunk belongs to, which matters most when it must pick among 20 postings.
+   BM25 does not benefit because the prefix adds the same words to every chunk of a posting.
+2. **The preliminary run was misleading.** On 5 postings / 10 queries, fixed-size looked equal or better
+   (scoped e5 dense 8 vs 7). With 20 postings / 25 queries the direction reversed for dense models. This is
+   why we froze a larger corpus before deciding.
+3. **Our original hypothesis (keeping must-have and nice-to-have apart) could not be tested on this corpus**:
+   USAJOBS pages have coarse headings ("Qualifications" holds ~1,300 words on one line), so S2 must split by
+   sentences anyway. Private-sector ads with "Requirements / Nice to have" headings would test it directly.
+4. **Model**: bge-m3 is ahead on job postings (scoped 23 vs 19, global 14 vs 10) but not significantly, while
+   e5-small is ahead on ESCO (10 vs 9) and 3x faster. By our pre-set rule (keep the larger model only if it
+   clearly wins), e5-small stays the default; bge-m3 remains a one-variable switch (`RAG_MODEL=bge-m3`).
+5. **Hybrid**: on job postings it helps e5-small (scoped 23 vs 18 with fixed chunks) but not bge-m3; on ESCO it
+   hurts. No uniform winner.
+6. **Global failures are mostly underspecified queries**, not retrieval errors: "exigence de nationalité pour ce
+   poste" (citizenship) or "compétences informatiques exigées" match requirements that every federal posting
+   has; the top results are correct passages from other postings. In production the Matcher always passes
+   `job_id`, i.e. the scoped setting, where the best configurations reach 23/25 Hit@1 and 25/25 Hit@5.
+7. **Abstention re-check**: with job queries added, the even/odd threshold calibration again selects a threshold
+   that abstains on nothing; held-out accuracy (e5-small 20/22, bge-m3 18/22) is at or below the trivial
+   "always answer" baseline (20/22). Decision D6 (no cosine threshold) stands.
+
+## Error examples (global setting)
+
+| Query | Config | Gold rank | What was retrieved |
+|---|---|---|---|
+| J02 "exigence de nationalité pour ce poste" (FR) | structure, bge-m3 | 4 | citizenship conditions of 3 other postings (correct content, wrong posting) |
+| J07 "responsabilités principales : stratégie d'ingénierie pour les systèmes d'IA et le cloud" (FR) | structure, bge-m3 | 10 | duties of the Senior Cloud AI Engineer posting, which genuinely matches the description |
+| J09 "which deep learning frameworks does the role use" | structure, e5-small | 7 | other data-science postings; "the role" gives no clue which posting is meant |
+| J22 "compétences informatiques exigées pour ce poste" (FR) | fixed, e5-small | >10 | IT competency text of other 2210-series postings |

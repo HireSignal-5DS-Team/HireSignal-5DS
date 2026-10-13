@@ -15,5 +15,5 @@ Labelling status: `labelled_by` is `human` or `ai-draft`; `verified_by` names th
 The current 14 ESCO and 4 no-answer queries are **ai-draft** (gold URIs resolved by exact ESCO label, not by
 retrieval) and must be verified by a teammate before the final report.
 
-Targets: ~25 job queries (must-have, nice-to-have, education, experience, responsibilities; include ~5 in French),
-14 ESCO, ~5 no-answer for jobs and 4 for ESCO.
+Current set: 25 job queries (5 French) over 20 USAJOBS postings, 14 ESCO, 4 ESCO no-answer. J01–J10 form the
+`prelim` batch (5 postings); J11–J25 were written after the corpus was frozen at 20 postings.
