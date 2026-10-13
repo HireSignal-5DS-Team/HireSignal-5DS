@@ -1,6 +1,6 @@
 """HTTP retrieval service for the Matcher agent and the n8n workflow.
 
-Run: RAG_STRATEGY=structure RAG_MODEL=e5-small uvicorn api:app --app-dir rag --port 8000
+Run: RAG_STRATEGY=structure RAG_MODEL=e5-small HF_HOME=<cache> uvicorn api:app --app-dir rag --port 8000
 Without RAG_MODEL the service runs BM25-only (no model download, no abstention).
 The JSON schema is PROVISIONAL until confirmed with the backend owner (see docs/API_CONTRACT.md).
 """
@@ -40,7 +40,8 @@ def health():
 
 @app.post("/retrieve")
 def retrieve(q: Query):
-    mode = q.mode or ("hybrid" if MODEL else "bm25")
+    # dense won on the ESCO evaluation (eval/results/summary.md); revisit once job postings are evaluated
+    mode = q.mode or ("dense" if MODEL else "bm25")
     filters = {k: v for k, v in {"doc_id": q.filters.job_id, "source_type": q.filters.source_type}.items() if v}
     out = retriever.search(q.query, k=q.top_k, mode=mode, filters=filters)
     return {

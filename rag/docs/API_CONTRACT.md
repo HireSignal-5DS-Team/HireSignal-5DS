@@ -12,7 +12,7 @@ depend on this schema; only `api.py` does, so changes here are cheap.
 ```
 - `query`: 1–500 characters. Skill mentions or requirement questions. **Never send CV text or personal data.**
 - `filters.job_id`: restrict to one posting. `filters.source_type`: `job` or `esco`.
-- `mode`: optional, `bm25` | `dense` | `hybrid`; default `hybrid` when a dense model is loaded, else `bm25`.
+- `mode`: optional, `bm25` | `dense` | `hybrid`; default `dense` when a dense model is loaded (best on the ESCO evaluation), else `bm25`.
 
 ## Response
 
@@ -27,7 +27,8 @@ depend on this schema; only `api.py` does, so changes here are cheap.
               "text": "...", "relevance_score": 0.0325}],
  "note": "relevance_score ranks text similarity only; it is not a probability and not candidate fit."}
 ```
-- `status = no_match` → `results` is empty; the Matcher must mark the requirement "uncertain", never invent evidence.
+- `status = no_match` → `results` is empty. Currently returned only when nothing is retrieved: a cosine
+  threshold was tested and did not separate answerable from unanswerable queries (see EVALUATION.md); the Matcher must mark the requirement "uncertain", never invent evidence.
 - `char_span` points into the original posting text, so the report can quote the exact evidence.
 - `relevance_score` is BM25, cosine or RRF depending on `mode`. Do not threshold or average it downstream.
 

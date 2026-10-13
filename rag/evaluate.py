@@ -110,6 +110,7 @@ def main():
                     row.update(strategy=strategy, model=model or "-", mode=mode)
                 all_rows += rows
             if model:
+                r.qdrant.close()  # Qdrant local mode allows one client per folder
                 tau, acc = calibrate_tau(rows)
                 notes.append(f"- {strategy} / {model}: tau={tau} (chosen on even qids), "
                              f"answer-vs-abstain accuracy on odd qids={acc}")

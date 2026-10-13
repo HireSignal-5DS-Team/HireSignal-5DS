@@ -11,11 +11,22 @@ Jobs: 0, ESCO entries: 1621, queries: 18 ({'esco': 14, 'none': 4})
 
 ## Retrieval (hit counts out of n)
 
-| strategy   | model   | mode   | setting   |   n |   hit@1 |   hit@5 |   MRR@10 |   ms/query |
-|:-----------|:--------|:-------|:----------|----:|--------:|--------:|---------:|-----------:|
-| fixed      | -       | bm25   | esco      |  14 |       7 |      10 |    0.616 |        0.8 |
-| structure  | -       | bm25   | esco      |  14 |       7 |      10 |    0.616 |        0.6 |
+| strategy   | model    | mode   | setting   |   n |   hit@1 |   hit@5 |   MRR@10 |   ms/query |
+|:-----------|:---------|:-------|:----------|----:|--------:|--------:|---------:|-----------:|
+| fixed      | -        | bm25   | esco      |  14 |       7 |      10 |    0.616 |        0.6 |
+| fixed      | bge-m3   | dense  | esco      |  14 |       9 |      13 |    0.751 |      244.7 |
+| fixed      | bge-m3   | hybrid | esco      |  14 |       8 |      14 |    0.74  |      244.8 |
+| fixed      | e5-small | dense  | esco      |  14 |      10 |      13 |    0.804 |      120.3 |
+| fixed      | e5-small | hybrid | esco      |  14 |       8 |      13 |    0.708 |      111.7 |
+| structure  | -        | bm25   | esco      |  14 |       7 |      10 |    0.616 |        0.7 |
+| structure  | bge-m3   | dense  | esco      |  14 |       9 |      13 |    0.751 |      250.5 |
+| structure  | bge-m3   | hybrid | esco      |  14 |       8 |      14 |    0.74  |      252.5 |
+| structure  | e5-small | dense  | esco      |  14 |      10 |      13 |    0.804 |      100.6 |
+| structure  | e5-small | hybrid | esco      |  14 |       8 |      13 |    0.708 |      106.5 |
 
 ## Abstention
 
-- not run (needs a dense model)
+- fixed / e5-small: tau=0.778 (chosen on even qids), answer-vs-abstain accuracy on odd qids=0.7777777777777778
+- fixed / bge-m3: tau=0.456 (chosen on even qids), answer-vs-abstain accuracy on odd qids=0.7777777777777778
+- structure / e5-small: tau=0.778 (chosen on even qids), answer-vs-abstain accuracy on odd qids=0.7777777777777778
+- structure / bge-m3: tau=0.456 (chosen on even qids), answer-vs-abstain accuracy on odd qids=0.7777777777777778

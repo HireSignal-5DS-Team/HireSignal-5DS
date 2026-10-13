@@ -10,9 +10,9 @@ Status key: **measured** = backed by a run in `eval/results/`; **reasoned** = ar
 | D2 | ESCO subset = skills of 110 ICT/data occupations + transversal skills (1,621 concepts) | Full ESCO (13,896); ESCO digital skills collection | Fits HireSignal's tech/data scope, ~9x less to embed on CPU. Digital collection not in the mirror. Coverage 29/38 probe terms vs 30/38 for full ESCO | measured (`esco_coverage.md`) |
 | D3 | ESCO: one concept = one chunk (label + alt labels + description), never split | Splitting descriptions | Entries are short and atomic; splitting would separate a label from its definition | reasoned |
 | D4 | Job postings: compare S1 fixed 200 words / 30 overlap vs S2 structure-aware (headings, title/section prefix, split > 300 words at line breaks) | Sentence chunking; semantic chunking | S1 is the standard baseline; S2 tests the hypothesis that keeping must-have and nice-to-have apart improves Hit@1. Semantic chunking needs an embedding model in the loop and is harder to explain | pending job corpus |
-| D5 | Retrieval: BM25 + dense fused with RRF (k=60), top-k=5, filters `job_id` / `source_type` | Dense only; BM25 only; reranker | BM25 is strong on exact tool names, dense on paraphrase and French. Filters give precision cheaply; a cross-encoder reranker adds a second model download and latency for a small corpus | BM25 measured; dense pending |
-| D6 | Abstention from the top dense cosine score, threshold chosen on even query ids and reported on odd ones | Threshold on RRF or BM25 score; no abstention | RRF scores depend only on ranks; BM25 scores are unbounded and query-length dependent | pending dense |
-| D7 | Embeddings: compare `multilingual-e5-small` (118M) vs `BAAI/bge-m3` (568M); keep the larger one only if it clearly wins | Single model; English-only models | Must handle French queries; CPU inference in the demo | pending (Hugging Face blocked in cloud) |
+| D5 | Retrieval: BM25 + dense fused with RRF (k=60), top-k=5, filters `job_id` / `source_type` | Dense only; BM25 only; reranker | BM25 is strong on exact tool names, dense on paraphrase and French. Filters give precision cheaply; a cross-encoder reranker adds a second model download and latency for a small corpus | measured on ESCO: dense > hybrid > BM25 at Hit@1; job postings pending |
+| D6 | **Revised**: no cosine threshold; `no_match` only when nothing is retrieved; Matcher checks the label | Cosine threshold (tested), threshold on RRF/BM25 scores | Tested threshold did no better than always answering (7/9 on held-out ids); unknown in-domain tools score like real matches | measured (negative result) |
+| D7 | Embeddings: compare `multilingual-e5-small` (118M) vs `BAAI/bge-m3` (568M); keep the larger one only if it clearly wins | Single model; English-only models | Must handle French queries; CPU inference in the demo | measured: e5-small chosen (Hit@1 10/14 vs 9/14, 101 vs 251 ms/query on CPU) |
 | D8 | Vector store: Qdrant local mode (on disk, no server) | FAISS (no payload filters), Chroma, pgvector (needs a server) | Payload filters + persistence; same client API as a Qdrant server if the team deploys one | plumbing tested with stub embedder |
 | D9 | Gold evidence = verbatim quote resolved to a character span; hit = chunk covers >= 50% of the span | Gold chunk ids | Chunk ids differ per strategy; spans make the chunking comparison fair | implemented |
 
@@ -38,3 +38,8 @@ Status key: **measured** = backed by a run in `eval/results/`; **reasoned** = ar
 10. **Hugging Face only partly reachable after the first network change** (2026-10-13): `huggingface.co` API and
     config files return 200, but weight files redirect to `us.aws.cdn.hf.co` / `cas-bridge.xethub.hf.co` (403) and
     `cdn-lfs.huggingface.co` (502). Correction: allow `*.hf.co` and `cdn-lfs.huggingface.co` as well.
+11. **Weights downloaded after allowing `*.hf.co`** (2026-10-13). Both models loaded and evaluated on CPU.
+12. **Qdrant local-mode folder lock**: a second client on the same index folder is refused. Correction: the
+    evaluation closes each client before opening the next.
+13. **Cosine-threshold abstention failed** (see EVALUATION.md, comment 4). Decision D6 revised.
+14. **Hybrid lowered Hit@1 on ESCO** for both models. Kept only as a candidate for job postings.
