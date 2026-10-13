@@ -62,7 +62,9 @@ def test_api_contract_bm25():
     body = r.json()
     assert r.status_code == 200 and body["schema_version"] == api.SCHEMA_VERSION
     assert body["results"][0]["source_type"] == "esco" and body["results"][0]["url"].startswith("http")
-    assert client.post("/retrieve", json={"query": ""}).status_code == 422  # input validated at the boundary
+    assert client.post("/retrieve", json={"query": ""}).status_code == 422
+    empty = client.post("/retrieve", json={"query": "apprentissage automatique", "filters": {"source_type": "esco"}})
+    assert empty.json()["status"] == "no_match" and empty.json()["results"] == []  # input validated at the boundary
 
 
 def test_dense_and_hybrid_plumbing(job, monkeypatch):

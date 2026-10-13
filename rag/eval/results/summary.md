@@ -6,15 +6,15 @@ Jobs: 0, ESCO entries: 1621, queries: 18 ({'esco': 14, 'none': 4})
 
 | strategy | chunks | mean words/chunk |
 |---|---|---|
-| fixed | 0 | nan |
-| structure | 0 | nan |
+| fixed | 0 | 0 |
+| structure | 0 | 0 |
 
 ## Retrieval (hit counts out of n)
 
 | strategy   | model   | mode   | setting   |   n |   hit@1 |   hit@5 |   MRR@10 |   ms/query |
 |:-----------|:--------|:-------|:----------|----:|--------:|--------:|---------:|-----------:|
-| fixed      | -       | bm25   | esco      |  14 |       7 |      10 |    0.616 |        0.5 |
-| structure  | -       | bm25   | esco      |  14 |       7 |      10 |    0.616 |        0.5 |
+| fixed      | -       | bm25   | esco      |  14 |       7 |      10 |    0.616 |        0.8 |
+| structure  | -       | bm25   | esco      |  14 |       7 |      10 |    0.616 |        0.6 |
 
 ## Abstention
 

@@ -86,7 +86,8 @@ class Retriever:
             ranked = dense if mode == "dense" else rrf([self.bm25_ranking(query, filters), dense])
         best = self.dense_ranking(query, filters, k=1) if self.model else []
         best = best[0][1] if best else None
-        status = "no_match" if (self.model and self.tau is not None and (best is None or best < self.tau)) else "found"
+        below_tau = self.model and self.tau is not None and (best is None or best < self.tau)
+        status = "no_match" if below_tau or not ranked else "found"  # BM25 with no shared term returns nothing
         return {"status": status, "best_dense_score": best,
                 "results": [] if status == "no_match" else [(self.chunks[i], s) for i, s in ranked[:k]]}
 

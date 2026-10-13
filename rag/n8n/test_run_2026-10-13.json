@@ -1,0 +1,56 @@
+{
+ "n8n_version": "1.123.84",
+ "workflow": "rag/n8n/hiresignal_rag_workflow.json",
+ "trigger": "Manual Trigger via `n8n execute` (CLI)",
+ "status": "success",
+ "startedAt": "2026-10-13T18:25:09.861Z",
+ "stoppedAt": "2026-10-13T18:25:10.028Z",
+ "rag_api": "uvicorn api:app (BM25-only, structure chunking, no job postings loaded yet)",
+ "nodes_executed": [
+  "Manual Trigger",
+  "Build query",
+  "RAG retrieve",
+  "Evidence for Matcher"
+ ],
+ "evidence_for_matcher": {
+  "status": "found",
+  "schema_version": "0.1-provisional",
+  "evidence": [
+   {
+    "rank": 1,
+    "source": "esco",
+    "id": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+    "title": "Python (computer programming)",
+    "section": null,
+    "url": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+   },
+   {
+    "rank": 2,
+    "source": "esco",
+    "id": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333",
+    "title": "use scripting programming",
+    "section": null,
+    "url": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333"
+   },
+   {
+    "rank": 3,
+    "source": "esco",
+    "id": "http://data.europa.eu/esco/skill/07dd856d-6141-48a7-a228-918f88494812",
+    "title": "create prototype of user experience solutions",
+    "section": null,
+    "url": "http://data.europa.eu/esco/skill/07dd856d-6141-48a7-a228-918f88494812"
+   }
+  ]
+ },
+ "webhook_test": {
+  "how": "n8n start (workflow active), POST http://127.0.0.1:5678/webhook/hiresignal-rag",
+  "results": {
+   "apprentissage automatique (BM25, after fix)": {
+    "status": "no_match",
+    "schema_version": "0.1-provisional",
+    "evidence": []
+   },
+   "Hadoop ecosystem": "status found, rank 1 = ESCO 'Hadoop' (e46291c7-...), rank 2 = 'MarkLogic'"
+  }
+ }
+}
