@@ -35,3 +35,6 @@ Status key: **measured** = backed by a run in `eval/results/`; **reasoned** = ar
    the active Webhook trigger, calling the RAG API and returning evidence. Record: `n8n/test_run_2026-10-13.json`.
 9. **Bug found by the webhook test**: a French query with no shared BM25 term returned `status: found` with an
    empty evidence list. Correction: `no_match` whenever nothing is retrieved; covered by a test.
+10. **Hugging Face only partly reachable after the first network change** (2026-10-13): `huggingface.co` API and
+    config files return 200, but weight files redirect to `us.aws.cdn.hf.co` / `cas-bridge.xethub.hf.co` (403) and
+    `cdn-lfs.huggingface.co` (502). Correction: allow `*.hf.co` and `cdn-lfs.huggingface.co` as well.
