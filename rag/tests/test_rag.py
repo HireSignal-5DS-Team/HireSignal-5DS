@@ -50,3 +50,43 @@ def test_bm25_filtered_search(job):
 
 def test_rrf_rewards_agreement():
     assert rrf([[(1, 9.0), (2, 5.0)], [(2, 0.9), (3, 0.8)]])[0][0] == 2
+
+
+def test_api_contract_bm25():
+    from fastapi.testclient import TestClient
+
+    import api
+
+    client = TestClient(api.app)
+    r = client.post("/retrieve", json={"query": "Python programming", "filters": {"source_type": "esco"}})
+    body = r.json()
+    assert r.status_code == 200 and body["schema_version"] == api.SCHEMA_VERSION
+    assert body["results"][0]["source_type"] == "esco" and body["results"][0]["url"].startswith("http")
+    assert client.post("/retrieve", json={"query": ""}).status_code == 422  # input validated at the boundary
+
+
+def test_dense_and_hybrid_plumbing(job, monkeypatch):
+    """Checks Qdrant storage, filters, RRF and abstention wiring with a stand-in bag-of-words embedder.
+    Says nothing about retrieval quality: real models are evaluated in evaluate.py."""
+    import types
+    import zlib
+
+    import numpy as np
+
+    class FakeST:
+        def __init__(self, name):
+            pass
+
+        def encode(self, texts, normalize_embeddings=True, **_):
+            def vec(t):
+                v = np.zeros(1024)
+                for w in t.lower().split():
+                    v[zlib.crc32(w.encode()) % 1024] += 1
+                return v / (np.linalg.norm(v) or 1)
+            return np.array([vec(t) for t in texts]) if isinstance(texts, list) else vec(texts)
+
+    monkeypatch.setitem(sys.modules, "sentence_transformers", types.SimpleNamespace(SentenceTransformer=FakeST))
+    r = Retriever(build_chunks("structure", [job], []), model="e5-small", tau=0.2)
+    out = r.search("Requirements: experience with SQL and Python", mode="hybrid", filters={"doc_id": job["doc_id"]})
+    assert out["status"] == "found" and out["results"][0][0]["section"] == "Requirements"
+    assert r.search("zzz qqq", mode="dense")["status"] == "no_match"

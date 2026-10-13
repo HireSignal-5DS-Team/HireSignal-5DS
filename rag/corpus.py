@@ -23,7 +23,7 @@ REQUIRED = ("job_id", "title", "source_url", "retrieved", "rights")
 
 def load_jobs(folder=DATA / "jobs"):
     jobs = []
-    for p in sorted(folder.glob("*.md")):
+    for p in sorted(p for p in folder.glob("*.md") if p.name != "README.md"):
         raw = p.read_text(encoding="utf-8")
         if not raw.startswith("---\n"):
             raise ValueError(f"{p.name}: missing front-matter header")
