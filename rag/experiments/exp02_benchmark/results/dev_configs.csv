@@ -1,0 +1,22 @@
+phase,chunker,retriever,job_chunks,coverage,chunking_s,indexing_s,index_mb,model_mem_mb
+baseline,structure,dense:e5-small,197,1.0,0.02,51.6,2.66,379
+1-chunking,fixed,dense:e5-small,190,1.0,0.01,48.8,2.65,379
+1-chunking,fixed,bm25,190,1.0,0.01,0.1,0.43,0
+1-chunking,structure,bm25,197,1.0,0.02,0.1,0.44,0
+1-chunking,recursive,dense:e5-small,296,1.0,0.04,50.0,2.81,379
+1-chunking,recursive,bm25,296,1.0,0.04,0.1,0.44,0
+1-chunking,semantic,dense:e5-small,463,1.0,23.11,49.1,3.05,379
+1-chunking,semantic,bm25,463,1.0,23.11,0.1,0.44,0
+1-chunking,sliding,dense:e5-small,218,1.0,0.01,50.6,2.69,379
+1-chunking,sliding,bm25,218,1.0,0.01,0.1,0.46,0
+1-chunking,sentence,dense:e5-small,353,1.0,0.01,50.4,2.89,379
+1-chunking,sentence,bm25,353,1.0,0.01,0.1,0.44,0
+1-chunking,parent_child,dense:e5-small,1725,1.0,0.03,55.9,4.9,379
+1-chunking,parent_child,bm25,1725,1.0,0.03,0.1,0.55,0
+2a-lexical,structure,tfidf,197,1.0,0.02,0.4,0.52,0
+2b-embedding,structure,dense:minilm,197,1.0,0.02,21.1,2.66,76
+2b-embedding,structure,dense:e5-base,197,1.0,0.02,141.5,5.33,384
+2b-embedding,structure,dense:bge-m3,197,1.0,0.02,532.9,7.1,235
+2c-fusion,structure,bm25+dense:e5-small RRF,197,1.0,0.02,51.7,3.1,379
+2c-fusion,structure,bm25+dense:bge-m3 RRF,197,1.0,0.02,533.0,7.54,235
+2d-rerank,structure,dense:e5-small > rerank,197,1.0,0.02,51.6,2.66,890
