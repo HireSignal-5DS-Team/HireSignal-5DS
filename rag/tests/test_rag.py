@@ -110,6 +110,10 @@ def test_review_apply_never_touches_original(tmp_path, monkeypatch):
     e04 = next(r for r in rows if r["qid"] == "E04")
     e04["decision"], e04["corrected_gold"] = "CORRECT", e04["gold"] + " | http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead"
     next(r for r in rows if r["qid"] == "N04")["decision"] = "REJECT"
+    n01 = next(r for r in rows if r["qid"] == "N01")  # no-answer query corrected into an ESCO query
+    n01["decision"], n01["corrected_gold"] = "CORRECT", "http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce"
+    j09 = next(r for r in rows if r["qid"] == "J09")  # wording-only correction
+    j09["decision"], j09["notes"] = "CORRECT", "examples only | Suggested query wording: Which frameworks are named as examples?"
     sheet = tmp_path / "sheet.csv"
     with open(sheet, "w", newline="", encoding="utf-8-sig") as f:
         w = csv.DictWriter(f, review.COLUMNS)
@@ -119,7 +123,11 @@ def test_review_apply_never_touches_original(tmp_path, monkeypatch):
     out = {q["qid"]: q for q in map(json.loads, open(tmp_path / "reviewed.jsonl"))}
     assert hashlib.sha256(review.QUERIES.read_bytes()).hexdigest() == before
     assert "N04" not in out and len(out) == len(rows) - 1
-    assert len(out["E04"]["gold_uris"]) == 2 and len(out["E04"]["gold_original_uris"]) == 1
+    assert len(out["E04"]["gold_uris"]) == 2 and len(out["E04"]["gold_original"]) == 1
+    assert out["N01"]["type"] == "esco" and out["N01"]["type_original"] == "none"
+    assert out["J09"]["query"] == "Which frameworks are named as examples?" and out["J09"]["gold_quotes"] == out["J09"].get("gold_quotes")
+    assert "query_original" in out["J09"] and "gold_original" not in out["J09"]
+    assert [json.loads(x)["qid"] for x in open(tmp_path / "rejected_queries.jsonl")] == ["N04"]
 
     j01 = next(r for r in rows if r["qid"] == "J01")
     j01["decision"], j01["corrected_gold"] = "CORRECT", "a quote that is not in the posting"

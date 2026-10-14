@@ -52,3 +52,9 @@ Status key: **measured** = backed by a run in `eval/results/`; **reasoned** = ar
 19. **Preliminary chunking result (5 postings) reversed on the full 20** for dense models; documented in EVALUATION.md.
 20. **Index verification** (2026-10-14): `verify_index.py` rebuilt the API index (structure, e5-small): 1,818 chunks
     (197 job + 1,621 ESCO) in both Qdrant and BM25, 1,641 source documents, full character coverage; 16/16 checks pass.
+21. **Review applied** (2026-10-14): user-approved AI-assisted review, 31 ACCEPT / 11 CORRECT / 1 REJECT. All 6 gold
+    replacements verified against the sources; 3 wording-only corrections; J04 and J10 reworded but gold left as a
+    locator because no corrected gold was supplied (flagged, not invented); N01/N02 converted from no-answer to ESCO.
+    `review.py apply` extended for wording changes, type changes and a rejected-query audit file.
+22. **Re-evaluation on reviewed labels**: default configuration unchanged and still justified (see EVALUATION.md part 3).
+    Latency anomaly for fixed + bge-m3 in that run attributed to container CPU contention.

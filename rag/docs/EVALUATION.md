@@ -139,3 +139,59 @@ Latency: BM25 < 1 ms; e5-small 100–115 ms; bge-m3 280–310 ms per query.
 | J07 "responsabilités principales : stratégie d'ingénierie pour les systèmes d'IA et le cloud" (FR) | structure, bge-m3 | 10 | duties of the Senior Cloud AI Engineer posting, which genuinely matches the description |
 | J09 "which deep learning frameworks does the role use" | structure, e5-small | 7 | other data-science postings; "the role" gives no clue which posting is meant |
 | J22 "compétences informatiques exigées pour ce poste" (FR) | fixed, e5-small | >10 | IT competency text of other 2210-series postings |
+
+# Part 3 — Reviewed labels and re-evaluation (2026-10-14)
+
+Review provenance: **user-approved AI-assisted review**, not independent human annotation (details and
+per-correction source checks: `eval/review/VALIDATION.md`; full changelog: `eval/review/changelog.md`).
+Reviewed set: 42 queries (16 ESCO, 24 job, 2 no-answer); J22 rejected and excluded from all denominators.
+Same frozen configurations, corpus, index and code as part 2; only the labels changed.
+Outputs: `eval/results_queries_reviewed/` (summary, results, rankings) and `comparison.md`.
+Original results in `eval/results/` are unchanged.
+
+## Default configuration (structure chunking, e5-small dense)
+
+| Collection | Labels | n | Hit@1 | Hit@5 | MRR@10 | nDCG@10 |
+|---|---|---|---|---|---|---|
+| ESCO | original | 14 | 10 | 13 | 0.804 | 0.835 |
+| ESCO | reviewed | 16 | 11 | 15 | 0.786 | 0.825 |
+| Jobs, scoped (Matcher setting) | original | 25 | 19 | 25 | 0.880 | 0.911 |
+| Jobs, scoped (Matcher setting) | reviewed | 24 | 20 | 24 | 0.917 | 0.938 |
+| Jobs, global | original | 25 | 10 | 17 | 0.531 | 0.604 |
+| Jobs, global | reviewed | 24 | 10 | 16 | 0.527 | 0.589 |
+| No-answer (correct = `no_match`) | original | 4 | 0 | | | |
+| No-answer (correct = `no_match`) | reviewed | 2 | 0 | | | |
+
+Recall@k equals Hit@k here (one relevant item counted per query). nDCG@10 = mean of 1/log2(rank+1) for the first
+gold hit. Latency is unchanged (~100 ms/query for e5-small on the 4-core CPU).
+
+## What changed and why
+
+- ESCO: N01 (Kubernetes) and N02 (Power BI dashboards) became answerable ESCO queries; e5-small finds the new gold at
+  rank 1 and rank 3. E14 gained a 4th valid URI. Net: 11/16 Hit@1.
+- Jobs: per-query ranks changed only for J04 (rank 2 → 1 after rewording) and J22 (removed). Gold replacements
+  J06, J17, J19 left the first-hit rank of the default configuration unchanged.
+- No-answer: only the two off-domain controls remain; every dense configuration still returns results for them,
+  BM25 returns nothing for 1 of 2. Consistent with decision D6 (no cosine threshold; the Matcher must check labels).
+
+## Is structure-aware chunking + e5-small still justified?
+
+Yes, with the same caveats as before. Exact McNemar tests on Hit@1, reviewed labels:
+
+| Comparison | A-only | B-only | p |
+|---|---|---|---|
+| fixed vs structure, e5-small dense, scoped | 1 | 3 | 0.63 |
+| fixed vs structure, e5-small dense, global | 2 | 3 | 1.00 |
+| fixed vs structure, bge-m3 dense, global | 1 | 6 | 0.13 |
+| e5-small vs bge-m3, structure dense, scoped | 2 | 3 | 1.00 |
+| e5-small vs bge-m3, structure dense, global | 3 | 5 | 0.73 |
+
+Structure-aware chunking stays ahead for dense models (not significant). The e5-small vs bge-m3 gap on job
+postings shrinks to one query in the scoped setting (20 vs 21 Hit@1), while e5-small remains ~2.5x faster,
+so the pre-set rule (keep the larger model only if it clearly wins) still selects e5-small.
+
+## Anomaly
+
+In the reviewed run, fixed-chunking + bge-m3 dense latencies are inflated (median 770–920 ms, one 103 s outlier)
+while all other configurations match part 2. The retrieval code and index are identical, so we attribute it to
+CPU contention in the shared container; use the part-2 latency for that configuration.
