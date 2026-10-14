@@ -50,3 +50,5 @@ Status key: **measured** = backed by a run in `eval/results/`; **reasoned** = ar
 17. **Gold quotes not unique**: some passages repeat inside a posting. Correction: every verbatim occurrence counts.
 18. **Qdrant folder lock between the running API and the evaluation**. Correction: separate `index_eval/` folder.
 19. **Preliminary chunking result (5 postings) reversed on the full 20** for dense models; documented in EVALUATION.md.
+20. **Index verification** (2026-10-14): `verify_index.py` rebuilt the API index (structure, e5-small): 1,818 chunks
+    (197 job + 1,621 ESCO) in both Qdrant and BM25, 1,641 source documents, full character coverage; 16/16 checks pass.

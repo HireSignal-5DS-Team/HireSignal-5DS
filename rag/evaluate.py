@@ -85,10 +85,21 @@ def calibrate_tau(rows):
 def summarise(df):
     def agg(g):
         r = g.first_hit_rank
-        return pd.Series({"n": len(g), "hit@1": (r == 1).sum(), "hit@5": (r <= 5).sum(),
-                          "MRR@10": (1 / r).fillna(0).mean().round(3), "ms/query": g.ms.mean().round(1)})
+        # one relevant item per query (first gold hit), so Recall@k = Hit@k and nDCG@10 = mean 1/log2(rank+1)
+        return pd.Series({"n": len(g), "hit@1": (r == 1).sum(), "hit@5": (r <= 5).sum(), "hit@10": (r <= 10).sum(),
+                          "MRR@10": (1 / r).fillna(0).mean().round(3),
+                          "nDCG@10": (1 / np.log2(r + 1)).fillna(0).mean().round(3), "ms/query": g.ms.mean().round(1)})
     ans = df[df.type != "none"]
     return ans.groupby(["strategy", "model", "mode", "setting"]).apply(agg, include_groups=False).reset_index()
+
+
+def no_answer(df):
+    none = df[df.type == "none"]
+    if none.empty:
+        return pd.DataFrame({"note": ["no no-answer queries in this set"]})
+    return none.groupby(["strategy", "model", "mode"]).apply(
+        lambda g: pd.Series({"n": len(g), "correct_no_match": int((g.status == "no_match").sum())}),
+        include_groups=False).reset_index()
 
 
 def main():
@@ -137,6 +148,8 @@ def main():
           f"({pd.Series([q['type'] for q in queries]).value_counts().to_dict()})\n\n"
           "## Chunk statistics (job postings)\n\n| strategy | chunks | mean words/chunk |\n|---|---|---|\n"
           + "\n".join(stats) + "\n\n## Retrieval (hit counts out of n)\n\n" + table.to_markdown(index=False)
+          + "\n\n## No-answer queries (correct = status no_match)\n\n"
+          + no_answer(df).to_markdown(index=False)
           + "\n\n## Abstention\n\n" + ("\n".join(notes) or "- not run (needs a dense model)") + "\n")
     (out / "summary.md").write_text(md)
     print(md)
