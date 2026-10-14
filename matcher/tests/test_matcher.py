@@ -73,6 +73,8 @@ def test_evidence_years():
     assert evidence_years(["4 years of SQL"]) == 4
     assert evidence_years(["2018 - 2020", "2019 to present"], ref_year=2026) == 8  # overlap merged
     assert evidence_years(["several projects"]) is None
+    assert evidence_years(["Mar 2018 – Jun 2021 Python developer"]) == 3
+    assert evidence_years(["03/2017 - 05/2020"]) == 3
 
 
 def test_contradiction_without_quote_is_not_documented():

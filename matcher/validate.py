@@ -46,7 +46,9 @@ def find_span(cv_text, quote):
 
 
 _YEARS = re.compile(r"(\d+(?:\.\d+)?)\s*\+?\s*(?:years?|yrs?)\b", re.I)
-_RANGE = re.compile(r"\b((?:19|20)\d\d)\s*(?:-|–|—|to)\s*((?:19|20)\d\d|present|now|current|today)\b", re.I)
+# year granularity; an optional month ("Jun 2021", "05/2021") may precede the end year
+_RANGE = re.compile(r"\b((?:19|20)\d\d)\s*(?:-|–|—|to)\s*(?:[a-z]{3,9}\.?\s+|\d{1,2}/)?"
+                    r"((?:19|20)\d\d|present|now|current|today)\b", re.I)
 
 
 def evidence_years(quotes, ref_year=2026):
