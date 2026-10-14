@@ -59,6 +59,24 @@ Main findings: dense beats BM25 on ESCO and French queries; structure-aware chun
 better than e5-small and is ~2.5x slower; hybrid has no uniform benefit; no cosine threshold separates
 answerable from unanswerable queries.
 
+## 4b. Extended benchmark (experiment 02)
+
+Full report: `../experiments/exp02_benchmark/REPORT.md`; pre-registration (`PLAN.md`) and a 30-query holdout
+were committed before any run; selection was frozen before the holdout was evaluated once.
+
+- Tested: 7 chunkers (fixed, structure, recursive, semantic, sliding window, sentence, parent-child), 2 lexical
+  retrievers (BM25, TF-IDF), 4 embedding models (e5-small, all-MiniLM-L6-v2, e5-base, BGE-M3), 2 RRF fusions and
+  1 cross-encoder reranker (bge-reranker-v2-m3), one variable changed at a time, on the reviewed 42-query dev set.
+- No candidate met the pre-registered rule (significant gain on ESCO + job-filtered queries, ≤ 300 ms median,
+  no extra service): **structure + e5-small dense remains the production configuration.**
+- Strongest quality option: e5-small → cross-encoder reranker (dev Matcher MRR 0.929 vs 0.865, holdout 0.910 vs
+  0.803, holdout CI of the difference excludes 0) at ~9 s/query on CPU, so it is recorded as the first upgrade
+  if a GPU or offline batching is available, not adopted.
+- Parent-child chunking and e5-base are slightly better than the baseline on dev (n.s.); MiniLM, BM25 and TF-IDF
+  are clearly worse on the Matcher settings; RRF fusion does not help.
+- On the holdout the baseline reaches Matcher MRR 0.803 (ESCO 8/10, job-filtered 9/16 Hit@1): the dev numbers in
+  section 4 are optimistic.
+
 ## 5. Matcher integration
 
 - `POST /retrieve` (FastAPI, schema `0.1-provisional`): returns status, source type, source ID, URL, section,
@@ -76,6 +94,7 @@ answerable from unanswerable queries.
 - ESCO v1.1.x, not v1.2.1; tool-level skills missing from ESCO.
 - No abstention: the Matcher must check that a retrieved ESCO label actually names the skill.
 - Latency measured on a 4-core cloud CPU, not the demo laptop.
+- Holdout (exp02) written by Claude, not human-annotated; chunker parameters not tuned.
 
 ## 7. Reproduce
 
@@ -89,5 +108,6 @@ python rag/review.py apply --sheet rag/eval/review/decisions_ai_assisted_2026-10
   --reviewer "..." --provenance "user-approved AI-assisted review (not independent human annotation)"
 HF_HOME=<cache> CUDA_VISIBLE_DEVICES= python rag/evaluate.py --queries rag/eval/queries_reviewed.jsonl --models e5-small bge-m3
 python rag/compare_results.py
+cd rag/experiments/exp02_benchmark && python run.py dev && python analyze.py dev && python run.py holdout && python analyze.py holdout
 RAG_MODEL=e5-small uvicorn api:app --app-dir rag --port 8000
 ```

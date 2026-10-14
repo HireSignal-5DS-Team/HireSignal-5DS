@@ -137,3 +137,20 @@ def test_review_apply_never_touches_original(tmp_path, monkeypatch):
         w.writerows(rows)
     with pytest.raises(SystemExit, match="J01"):
         review.apply("tester", sheet)
+
+
+def test_exp02_chunkers_preserve_source(job):
+    """Every exp02 chunker returns exact source offsets and covers the whole posting."""
+    import numpy as np
+
+    sys.path.insert(0, str(Path(__file__).parents[1] / "experiments/exp02_benchmark"))
+    from chunkers import CHUNKERS, coverage
+
+    rng = np.random.default_rng(0)
+    enc = lambda t: (lambda v: v / np.linalg.norm(v, axis=1, keepdims=True))(rng.normal(size=(len(t), 8)))
+    for name, f in CHUNKERS.items():
+        chunks = f(job, enc) if name == "semantic" else f(job)
+        assert coverage(job, chunks) == 1.0, name
+        for c in chunks:
+            body = job["text"][c["start"]:c["end"]]
+            assert body.strip() and body.strip() in c["text"], name  # text is the span, or the span plus a header

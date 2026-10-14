@@ -58,3 +58,7 @@ Status key: **measured** = backed by a run in `eval/results/`; **reasoned** = ar
     `review.py apply` extended for wording changes, type changes and a rejected-query audit file.
 22. **Re-evaluation on reviewed labels**: default configuration unchanged and still justified (see EVALUATION.md part 3).
     Latency anomaly for fixed + bge-m3 in that run attributed to container CPU contention.
+23. **Experiment 02** (2026-10-14): 7 chunkers × e5-small/BM25, lexical, 4 embeddings, 2 RRF fusions, 1 reranker;
+    pre-registered rule and holdout committed before running. Production configuration unchanged. The
+    cross-encoder reranker is the best quality option (confirmed on holdout) but fails the CPU latency limit.
+24. **Holdout drop**: baseline job-filtered Hit@1 9/16 on holdout vs 20/24 on dev; dev metrics are optimistic.
