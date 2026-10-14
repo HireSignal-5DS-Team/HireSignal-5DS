@@ -30,7 +30,7 @@ python rag/build_esco.py                              # needs git + github.com; 
 python -m pytest -q rag/tests
 python rag/evaluate.py                                # BM25 only
 python rag/evaluate.py --models e5-small bge-m3       # dense + hybrid; needs huggingface.co
-RAG_MODEL=e5-small uvicorn api:app --app-dir rag --port 8000
+RAG_PROFILE=baseline uvicorn api:app --app-dir rag --port 8000   # profiles: see profiles.py
 ```
 
 On the shared laptop, force CPU so the LLM benchmark keeps the GPU:

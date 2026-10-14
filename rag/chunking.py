@@ -71,4 +71,23 @@ def _chunk(job, strategy, i, start, end, text, section):
     }
 
 
-STRATEGIES = {"fixed": fixed_chunks, "structure": structure_chunks}
+SENT = re.compile(r"\S.*?(?:[.!?]+(?=\s|$)|\n|$)", re.S)  # shortcut: no abbreviation handling ("e.g." splits)
+
+
+def parent_child_chunks(job):
+    """Children = single sentences with their section's Job/Section header (matched); the parent structure
+    section is what retrieval returns. Same algorithm as experiments/exp02_benchmark/chunkers.py (tested equal)."""
+    out = []
+    for p in structure_chunks(job):
+        head = p["text"].split("\n", 1)[0]
+        for m in SENT.finditer(job["text"][p["start"]:p["end"]]):
+            if not m.group().strip():
+                continue
+            s = p["start"] + m.start()
+            e = s + len(m.group().rstrip())
+            c = _chunk(job, "child", len(out), s, e, f"{head}\n{job['text'][s:e]}", section=p["section"])
+            out.append({**c, "parent_id": p["chunk_id"], "parent_start": p["start"], "parent_end": p["end"], "parent_text": p["text"]})
+    return out
+
+
+STRATEGIES = {"fixed": fixed_chunks, "structure": structure_chunks, "parent_child": parent_child_chunks}

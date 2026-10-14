@@ -11,13 +11,21 @@ from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
 from corpus import build_chunks
+from profiles import PROFILES
 from retrieval import MODELS, Retriever
 
 SCHEMA_VERSION = "0.1-provisional"
-STRATEGY = os.environ.get("RAG_STRATEGY", "structure")
-MODEL = os.environ.get("RAG_MODEL") or None
+PROFILE = os.environ.get("RAG_PROFILE")  # e.g. baseline; unset = legacy RAG_STRATEGY / RAG_MODEL variables
+if PROFILE:
+    _p = PROFILES[PROFILE]
+    STRATEGY, MODEL = _p["strategy"], _p["model"]
+    _extra = {"reranker": _p["reranker"], "top_n": _p["top_n"] or 10, "thresholds": _p["thresholds"]}
+else:
+    STRATEGY = os.environ.get("RAG_STRATEGY", "structure")
+    MODEL = os.environ.get("RAG_MODEL") or None
+    _extra = {}
 retriever = Retriever(build_chunks(STRATEGY), model=MODEL,
-                      store_path=os.path.join(os.path.dirname(__file__), "index") if MODEL else None)
+                      store_path=os.path.join(os.path.dirname(__file__), "index") if MODEL else None, **_extra)
 app = FastAPI(title="HireSignal RAG", version=SCHEMA_VERSION)
 
 
@@ -35,7 +43,7 @@ class Query(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "strategy": STRATEGY, "model": MODEL, "chunks": len(retriever.chunks)}
+    return {"status": "ok", "profile": PROFILE, "strategy": STRATEGY, "model": MODEL, "chunks": len(retriever.chunks)}
 
 
 @app.post("/retrieve")
@@ -46,7 +54,8 @@ def retrieve(q: Query):
     out = retriever.search(q.query, k=q.top_k, mode=mode, filters=filters)
     return {
         "schema_version": SCHEMA_VERSION, "query": q.query, "filters": q.filters.model_dump(exclude_none=True),
-        "status": out["status"], "retrieval": {"mode": mode, "chunking": STRATEGY, "model": MODEL and MODELS[MODEL][0]},
+        "status": out["status"], "retrieval": {"mode": mode, "chunking": STRATEGY, "model": MODEL and MODELS[MODEL][0], "profile": PROFILE,
+                      "reranker": retriever.reranker},
         "best_dense_score": out["best_dense_score"],
         "results": [{
             "rank": i, "source_type": c["source_type"], "source_id": c["doc_id"], "chunk_id": c["chunk_id"],

@@ -208,3 +208,22 @@ def test_defaults_unchanged_without_reranker_or_thresholds(job, monkeypatch):
     r = Retriever(build_chunks("structure", [job], []), model="e5-small")
     out = r.search("Kubernetes orchestration", mode="dense", filters={"doc_id": job["doc_id"]})
     assert out["status"] == "found" and out["rerank_score"] is None  # no abstention unless thresholds are configured
+
+
+def test_production_parent_child_equals_experiment(job):
+    sys.path.insert(0, str(Path(__file__).parents[1] / "experiments/exp02_benchmark"))
+    import chunkers
+    import chunking
+
+    key = lambda cs: [(c["start"], c["end"], c["text"], c["parent_start"], c["parent_end"]) for c in cs]
+    assert key(chunking.parent_child_chunks(job)) == key(chunkers.parent_child_chunks(job))
+
+
+def test_profiles_are_valid():
+    from chunking import STRATEGIES
+    from profiles import PROFILES
+    from retrieval import MODELS, RERANKERS
+
+    for name, p in PROFILES.items():
+        assert p["strategy"] in STRATEGIES and p["model"] in MODELS and (p["reranker"] in RERANKERS or p["reranker"] is None), name
+    assert PROFILES["baseline"]["reranker"] is None and PROFILES["baseline"]["thresholds"] is None

@@ -77,8 +77,26 @@ were committed before any run; selection was frozen before the holdout was evalu
 - On the holdout the baseline reaches Matcher MRR 0.803 (ESCO 8/10, job-filtered 9/16 Hit@1): the dev numbers in
   section 4 are optimistic.
 
+## 4c. Optimisation study (experiment 03)
+
+Full report: `../experiments/exp03_optimization/REPORT.md`; audit `AUDIT.md`; pre-registered budgets and rule
+`PLAN.md`. 28 configurations on dev (chunk sizes, parent-child variants, e5-base, three rerankers at top-5/10/20,
+int8 quantisation, combinations), repeated latency for 13 finalists, calibrated abstention on a separate split.
+
+- Two product profiles were defined before running: real-time (p95 ≤ 300 ms) and async Matcher evidence
+  (p95 ≤ 2 s per query, ≤ 30 s per screening). Under both, **no candidate was significantly better than the
+  baseline**, so **structure + e5-small dense remains the production configuration** for both.
+- Best in-budget candidates: parent-child (3-sentence children) + e5-small, real-time (+0.037 MRR, n.s.);
+  parent-child + e5-base + mmarco reranker, async (+0.048, n.s., 6x latency). The bge reranker is the strongest
+  (+0.065, n.s. on Matcher; large gains on all-jobs search) but takes 3.5–10 s per query on CPU.
+- Abstention: calibrated thresholds work on the calibration split (CV accuracy 0.85–0.95) but wrongly abstain on
+  8/40 natural dev queries, so abstention stays opt-in until recalibrated on natural, human-reviewed queries.
+- A fresh 36-query final test set is sealed and awaits human review; no generalisation claim is made before it.
+
 ## 5. Matcher integration
 
+- Profiles (`profiles.py`, env `RAG_PROFILE`): `baseline` (selected, default and fallback), `async-experimental`
+  (parent-child + e5-base + mmarco reranker), `baseline-abstain-experimental` (calibrated abstention). Same response schema.
 - `POST /retrieve` (FastAPI, schema `0.1-provisional`): returns status, source type, source ID, URL, section,
   character span, text and relevance score (labelled as not a probability).
 - n8n workflow (`n8n/hiresignal_rag_workflow.json`) tested end-to-end via manual and webhook triggers.
@@ -94,14 +112,16 @@ were committed before any run; selection was frozen before the holdout was evalu
 - ESCO v1.1.x, not v1.2.1; tool-level skills missing from ESCO.
 - No abstention: the Matcher must check that a retrieved ESCO label actually names the skill.
 - Latency measured on a 4-core cloud CPU, not the demo laptop.
-- Holdout (exp02) written by Claude, not human-annotated; chunker parameters not tuned.
+- Holdout (exp02) written by Claude, not human-annotated, and since inspected; exp03 final test set unreviewed.
+- Abstention thresholds from a template calibration split do not transfer to natural queries.
+- No GPU measurements (no GPU available to this work).
 
 ## 7. Reproduce
 
 ```bash
 pip install -r rag/requirements.txt
 python rag/build_esco.py && python rag/build_jobs.py          # rebuild both collections from pinned sources
-python -m pytest -q rag/tests
+python -m pytest -q rag/tests                                   # + RAG_REAL=1 for real-model regression/performance tests
 HF_HOME=<cache> CUDA_VISIBLE_DEVICES= python rag/verify_index.py
 HF_HOME=<cache> CUDA_VISIBLE_DEVICES= python rag/evaluate.py --models e5-small bge-m3                  # original labels
 python rag/review.py apply --sheet rag/eval/review/decisions_ai_assisted_2026-10-14.csv \
@@ -109,5 +129,6 @@ python rag/review.py apply --sheet rag/eval/review/decisions_ai_assisted_2026-10
 HF_HOME=<cache> CUDA_VISIBLE_DEVICES= python rag/evaluate.py --queries rag/eval/queries_reviewed.jsonl --models e5-small bge-m3
 python rag/compare_results.py
 cd rag/experiments/exp02_benchmark && python run.py dev && python analyze.py dev && python run.py holdout && python analyze.py holdout
+cd rag/experiments/exp03_optimization && python run.py dev && python analyze.py dev && python run.py calibration && python analyze.py calibration && python latency.py && python analyze.py select
 RAG_MODEL=e5-small uvicorn api:app --app-dir rag --port 8000
 ```
