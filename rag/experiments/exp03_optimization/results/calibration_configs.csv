@@ -1,0 +1,2 @@
+group,config,chunker,embedding,reranker,top_n,job_chunks,chunking_s,indexing_s,index_mb,embed_mem_mb,rerank_mem_mb
+A-chunk-tuning,structure@300 | e5-small,structure@300,e5-small,,,197,0.02,43.3,2.66,378,0

@@ -154,3 +154,57 @@ def test_exp02_chunkers_preserve_source(job):
         for c in chunks:
             body = job["text"][c["start"]:c["end"]]
             assert body.strip() and body.strip() in c["text"], name  # text is the span, or the span plus a header
+
+
+def _stub_models(monkeypatch):
+    import types
+    import zlib
+
+    import numpy as np
+
+    class FakeST:
+        def __init__(self, name):
+            pass
+
+        def encode(self, texts, normalize_embeddings=True, **_):
+            def vec(t):
+                v = np.zeros(1024)
+                for w in t.lower().split():
+                    v[zlib.crc32(w.encode()) % 1024] += 1
+                return v / (np.linalg.norm(v) or 1)
+            return np.array([vec(t) for t in texts]) if isinstance(texts, list) else vec(texts)
+
+    class FakeCE:  # scores = number of query words found in the passage (deterministic)
+        def __init__(self, *a, **k):
+            pass
+
+        def predict(self, pairs, **_):
+            return np.array([float(sum(w in p.lower() for w in q.lower().split())) for q, p in pairs])
+
+    monkeypatch.setitem(sys.modules, "sentence_transformers", types.SimpleNamespace(SentenceTransformer=FakeST, CrossEncoder=FakeCE))
+
+
+def test_parent_child_rerank_attribution_and_abstention(job, monkeypatch):
+    """Children are matched, the parent section is returned with exact source offsets, the reranker reorders,
+    and a calibrated threshold turns an unsupported requirement into no_match."""
+    _stub_models(monkeypatch)
+    sys.path.insert(0, str(Path(__file__).parents[1] / "experiments/exp02_benchmark"))
+    from chunkers import parent_child_chunks
+
+    chunks = parent_child_chunks(job)
+    r = Retriever(chunks, model="e5-small", reranker="mmarco", top_n=5, thresholds={"job": 2.0})
+    out = r.search("experience with SQL and Python", mode="dense", filters={"doc_id": job["doc_id"]})
+    top, score = out["results"][0]
+    assert out["status"] == "found" and top["section"] == "Requirements"
+    assert job["text"][top["start"]:top["end"]].strip() in top["text"]  # source attribution: exact span of the posting
+    assert len({c["chunk_id"] for c, _ in out["results"]}) == len(out["results"])  # parents not duplicated
+    assert out["rerank_score"] == score >= 2.0
+    none = r.search("Kubernetes orchestration", mode="dense", filters={"doc_id": job["doc_id"]})
+    assert none["status"] == "no_match" and none["results"] == []
+
+
+def test_defaults_unchanged_without_reranker_or_thresholds(job, monkeypatch):
+    _stub_models(monkeypatch)
+    r = Retriever(build_chunks("structure", [job], []), model="e5-small")
+    out = r.search("Kubernetes orchestration", mode="dense", filters={"doc_id": job["doc_id"]})
+    assert out["status"] == "found" and out["rerank_score"] is None  # no abstention unless thresholds are configured

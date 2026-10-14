@@ -19,12 +19,19 @@ CANDIDATES = 50  # depth of each ranked list fused by RRF
 MODELS = {
     "e5-small": ("intfloat/multilingual-e5-small", "query: ", "passage: ", None),
     "bge-m3": ("BAAI/bge-m3", "", "", None),
+    "e5-base": ("intfloat/multilingual-e5-base", "query: ", "passage: ", None),
 }
+RERANKERS = {"mmarco": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1", "bge": "BAAI/bge-reranker-v2-m3"}
 
 
 class Retriever:
-    def __init__(self, chunks, model=None, store_path=None, tau=None):
+    def __init__(self, chunks, model=None, store_path=None, tau=None, reranker=None, top_n=10, thresholds=None):
+        """reranker: optional cross-encoder name (RERANKERS) applied to the top_n first-stage results.
+        thresholds: optional {"job": t, "esco": t} abstention cut-offs on the reranker score (cosine without reranker),
+        calibrated per collection on a separate split. Defaults reproduce the original behaviour."""
         self.chunks = chunks
+        self.reranker, self.top_n, self.thresholds = reranker, top_n, thresholds or {}
+        self._ce = None
         self.bm25 = bm25s.BM25()
         self.bm25.index(bm25s.tokenize([c["text"] for c in chunks], stopwords="en", show_progress=False),
                         show_progress=False)
@@ -76,21 +83,53 @@ class Retriever:
         return [(int(h.id), float(h.score)) for h in hits]
 
     def search(self, query, k=5, mode="hybrid", filters=None):
-        """Return {"status", "best_dense_score", "results": [(chunk, score)]}; score type depends on mode."""
+        """Return {"status", "best_dense_score", "rerank_score", "results": [(chunk, score)]}; score type depends on mode."""
         if mode != "bm25" and not self.model:
             raise ValueError(f"mode={mode} needs a dense model")
+        depth = 200 if "parent_id" in self.chunks[0] else CANDIDATES  # many children per returned parent
         if mode == "bm25":
-            ranked = self.bm25_ranking(query, filters)
+            ranked = self.bm25_ranking(query, filters, k=depth)
         else:
-            dense = self.dense_ranking(query, filters)
-            ranked = dense if mode == "dense" else rrf([self.bm25_ranking(query, filters), dense])
+            dense = self.dense_ranking(query, filters, k=depth)
+            ranked = dense if mode == "dense" else rrf([self.bm25_ranking(query, filters, k=depth), dense])
         if self.model and mode == "bm25":
             dense = self.dense_ranking(query, filters, k=1)
         best = dense[0][1] if self.model and dense else None
+        units = self._units(ranked)
+        top_rr = None
+        if self.reranker and units:
+            head = units[:self.top_n]
+            scores = self._cross_encoder().predict([(query, c["text"]) for c, _ in head], batch_size=16)
+            order = np.argsort(-scores)
+            top_rr = float(scores[order[0]])
+            units = [(head[i][0], float(scores[i])) for i in order] + units[self.top_n:]
         below_tau = self.model and self.tau is not None and (best is None or best < self.tau)
-        status = "no_match" if below_tau or not ranked else "found"  # BM25 with no shared term returns nothing
-        return {"status": status, "best_dense_score": best,
-                "results": [] if status == "no_match" else [(self.chunks[i], s) for i, s in ranked[:k]]}
+        coll = "job" if (filters or {}).get("doc_id") or (filters or {}).get("source_type") == "job" else "esco"
+        cut = self.thresholds.get(coll)
+        abstain_score = top_rr if top_rr is not None else best
+        below_cut = cut is not None and (abstain_score is None or abstain_score < cut)
+        status = "no_match" if below_tau or below_cut or not units else "found"  # BM25 with no shared term returns nothing
+        return {"status": status, "best_dense_score": best, "rerank_score": top_rr,
+                "results": [] if status == "no_match" else units[:k]}
+
+    def _units(self, ranked):
+        """(chunk, score) list; parent-child children are collapsed into their parent section (first hit wins)."""
+        out, seen = [], set()
+        for i, score in ranked:
+            c = self.chunks[i]
+            if "parent_id" in c:
+                if c["parent_id"] in seen:
+                    continue
+                seen.add(c["parent_id"])
+                c = {**c, "chunk_id": c["parent_id"], "start": c["parent_start"], "end": c["parent_end"], "text": c["parent_text"]}
+            out.append((c, score))
+        return out
+
+    def _cross_encoder(self):
+        if self._ce is None:
+            from sentence_transformers import CrossEncoder
+            self._ce = CrossEncoder(RERANKERS[self.reranker], device="cpu", max_length=512)
+        return self._ce
 
 
 def rrf(rankings):
