@@ -1,0 +1,14 @@
+config,device,calls,repeats,median ms,p95 ms,repeat-median min..max ms
+structure@300 | e5-small,cpu,100,5,111.9,128.3,108..115
+pc@1s | e5-small,cpu,100,5,112.1,130.5,106..113
+pc@3s2 | e5-small,cpu,100,5,114.8,132.1,106..117
+structure@300 | e5-base,cpu,100,5,134.8,164.0,126..140
+pc@1s | e5-base,cpu,100,5,135.5,170.5,129..140
+structure@300 | e5-small > mmarco@5,cpu,100,5,429.3,636.4,404..443
+structure@300 | e5-small > mmarco@10,cpu,100,5,744.0,1081.4,697..794
+structure@300 | e5-small > mmarco@20,cpu,100,5,923.1,1309.4,834..973
+structure@300 | e5-small > bge@5,cpu,60,3,3537.4,5365.6,3366..3559
+structure@300 | e5-small > bge-int8@10,cpu,60,3,3992.7,6083.7,3947..4132
+pc@1s | e5-small > mmarco@10,cpu,100,5,751.1,1050.0,679..782
+pc@1s | e5-base > mmarco@10,cpu,100,5,664.9,1058.3,634..666
+structure@300 | e5-base > mmarco@10,cpu,100,5,661.9,1106.6,633..686

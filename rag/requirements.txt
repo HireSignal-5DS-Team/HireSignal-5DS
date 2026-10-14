@@ -1,0 +1,12 @@
+# Tested with Python 3.13 (cloud build env). Pinned to the versions actually installed and run.
+bm25s==0.3.13
+numpy==2.5.4
+pandas==3.0.6
+tabulate
+qdrant-client==1.19.1
+fastapi==0.143.0
+uvicorn==0.54.0
+pytest==9.1.1
+httpx==0.28.1
+# Dense retrieval (needs access to huggingface.co to download models):
+sentence-transformers==6.1.0  # pulls torch 2.14.1 (CPU use only)
