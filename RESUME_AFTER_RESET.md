@@ -1,3 +1,7 @@
+> **2026-10-15 ~11:00 UTC: campaign STOPPED by the project owner** (new architecture). Scheduled check-ins deleted,
+> all processes stopped, partial predictions kept. Restart only on explicit request, with the commands below.
+> Unfinished runs: `docs/MATCHER_REPORT.md` §6.2.
+
 # Resume the Matcher benchmark (if the cloud session or container expired)
 
 Results are committed and pushed to `claude/kind-albattani-k7qlt9` after every model

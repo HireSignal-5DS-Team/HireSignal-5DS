@@ -146,7 +146,64 @@ no CV text, no requirement sentence and no CV line longer than 25 characters is 
 
 ## 6. Results
 
-RESULTS_PLACEHOLDER
+Status: the campaign was **stopped on 2026-10-15 at ~11:00 UTC by the project owner** (change of architecture).
+All numbers: val split, 202 requirements, BM25 ESCO RAG (k=3), identical prompt `p1`, greedy decoding,
+`max_new_tokens=192`, float32, 4-core cloud CPU. Full table: `benchmark/results/CONSOLIDATED_val.md`.
+
+| run | params | macro-F1 final | macro-F1 raw | false-MET final | false-MET raw | JSON valid | raw quote valid | UNCERTAIN rate | p50 s/req |
+|---|---|---|---|---|---|---|---|---|---|
+| MOCK gold (pipeline sanity check, not a model) | 0 | 1.000 | 1.000 | 0.000 | 0.000 | 1.000 | 1.000 | 0.193 | 0.00 |
+| lexical keyword baseline + RAG (no neural model) | 0 | **0.436** | 0.436 | 0.560 | 0.560 | 1.000 | 1.000 | 0.000 | 0.00 |
+| lexical keyword baseline, no RAG | 0 | 0.373 | 0.373 | 0.560 | 0.560 | 1.000 | 1.000 | 0.000 | 0.00 |
+| Qwen2.5-0.5B-Instruct + `schema_repair` adapter (post-hoc) | 494,032,768 | 0.265 | 0.386 | 0.009 | — | 1.000 | 0.067 | 0.460 | 5.97 |
+| Qwen2.5-0.5B + Kus-hal LoRA + `schema_repair` (post-hoc) | 494,032,768 + LoRA | 0.245 | 0.226 | 0.000 | — | 0.926 | 0.543 | 0.554 | 9.41 |
+| Qwen3-0.6B (non-thinking) | 596,049,920 | 0.222 | 0.122 | 0.000 | — | 0.203 | n/a | 0.906 | 10.23 |
+| Qwen2.5-0.5B-Instruct | 494,032,768 | 0.211 | 0.265 | 0.009 | 0.276 | 0.634 | 0.056 | 0.698 | 5.97 |
+| Qwen2.5-0.5B + `Kus-hal/resume-screener-lora` | 494,032,768 + LoRA | 0.116 | 0.008 | 0.000 | — | 0.030 | 0.889 | 0.970 | 9.41 |
+| SmolLM2-360M-Instruct | 361,821,120 | 0.108 | 0.000 | 0.000 | — | 0.000 | n/a | 1.000 | 6.40 |
+
+(The Kus-hal parameter count is the base measured before the adapter was attached. Its model card gives 2,162,688
+LoRA parameters. "—" = see `metrics.json`. Raw false-MET is meaningful only when the JSON parses.)
+
+### 6.1 Findings
+
+1. **No zero-shot sub-1B model beats the non-neural keyword baseline** (0.436). The best is 0.265: Qwen2.5-0.5B
+   with the deterministic schema repair applied.
+2. **Formatting is the first failure mode.** JSON validity ranges from 0 % (SmolLM2-360M) to 63 % (Qwen2.5-0.5B)
+   with the strict schema.
+3. **Evidence grounding is the second.** When Qwen2.5-0.5B quotes, only 5.6–6.7 % of its quotes are exact CV text.
+4. **The validator is what keeps false-MET low.** Qwen2.5-0.5B: raw false-MET 27.6 %, final 0.9 %. The price is
+   that most decisions become UNCERTAIN (UNCERTAIN rate 0.46–1.0 against a gold share of 0.193), so they go to
+   human review.
+5. **The keyword baseline has the opposite failure:** false-MET 56 %. It matches terms in negated sentences,
+   and ESCO aliases add recall but not precision.
+6. **Kus-hal LoRA (`Kus-hal/resume-screener-lora`, verified PEFT LoRA r=16 on Qwen2.5-0.5B-Instruct, MIT).**
+   - It tries our JSON keys in 202/202 answers. It invents labels (`CONTRADIZED`, `NOT_DOCUMENTED`,
+     `CHALLENGE|contradicted|…`), adds keys and chains several objects. Its native ATS format appears in only 6/202.
+   - A deterministic repair adapter (`matcher/output_adapters.py`, which never adds evidence or decisions) lifts its
+     JSON validity from 3.0 % to 92.6 % and its macro-F1 from 0.116 to 0.245.
+   - The same adapter lifts the untuned base from 0.211 to 0.265, with raw 0.386 against 0.226 for the adapter.
+   - Conclusion: **its weakness is both formatting and reasoning.** After format repair it is still below its own
+     base. **Rejected** on this evidence.
+   - Not run (campaign stopped): native-prompt, constrained-decoding and one-shot variants (`scripts/kushal_study.sh`).
+
+### 6.2 Not completed (stopped by the owner)
+
+| run | state |
+|---|---|
+| SmolLM2-135M-Instruct | partial: 186/202 predictions saved, no metrics |
+| FLAN-T5-small, resume-scorer-t5-small | not run. Smoke run (6 requirements): 0 % JSON validity, because the T5 vocabulary has no `{`/`}` |
+| FERMI-0.8B (decision-only classifier), Qwen3.5-0.8B | not run |
+| Kus-hal study variants | not run |
+| `gw0/jobfit-model` | not runnable for this task (ONNX-only typed scorer with 17 fixed questions) |
+
+### 6.3 External reference (different data, another session)
+
+Branch `claude/vigilant-albattani-dmn3pk` used a handwritten val set of 110 requirements. Its best zero-shot result
+was Qwen3.5-0.8B at 0.486. A CPU pilot LoRA on Qwen2.5-0.5B reached 0.629 on val and 0.563 on the locked test
+(false-MET 1.7 %). The two datasets differ, so the numbers are not comparable. They point the same way: sub-1B models
+need task fine-tuning to be useful for this task.
+
 
 ## 7. Limitations
 
