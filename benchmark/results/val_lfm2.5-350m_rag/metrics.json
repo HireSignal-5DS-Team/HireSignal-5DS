@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "name": "val_lfm2.5-350m_rag",
+    "split": "val",
+    "backend": {
+      "backend": "transformers",
+      "is_model": true,
+      "model_id": "LiquidAI/LFM2.5-350M",
+      "revision": "9e6c6ccf47cd318696e137d381a7ded8fe4df09f",
+      "adapter_id": null,
+      "adapter_revision": null,
+      "n_params": 354483968,
+      "decoding": {
+        "do_sample": false,
+        "max_new_tokens": 192
+      },
+      "device": "cpu",
+      "load_seconds": 70.34,
+      "prompt_version": "p2"
+    },
+    "knowledge": "rag.bm25",
+    "k": 3,
+    "limit": null,
+    "model": "LiquidAI/LFM2.5-350M",
+    "adapter": null,
+    "max_new_tokens": 192,
+    "peak_rss_mb": 2795.5,
+    "torch_threads": 4,
+    "finished_at": "2026-10-15T01:42:59"
+  },
+  "metrics": {
+    "final": {
+      "n": 110,
+      "accuracy": 0.2727272727272727,
+      "macro_f1": 0.2586783784346102,
+      "per_class": {
+        "MET": {
+          "precision": 0.4444444444444444,
+          "recall": 0.08,
+          "f1": 0.13559322033898308,
+          "support": 50
+        },
+        "MISSING": {
+          "precision": 0.42857142857142855,
+          "recall": 0.24324324324324326,
+          "f1": 0.3103448275862069,
+          "support": 37
+        },
+        "UNCERTAIN": {
+          "precision": 0.2125,
+          "recall": 0.7391304347826086,
+          "f1": 0.33009708737864074,
+          "support": 23
+        }
+      },
+      "confusion": {
+        "MET": {
+          "MET": 4,
+          "MISSING": 8,
+          "UNCERTAIN": 38
+        },
+        "MISSING": {
+          "MET": 3,
+          "MISSING": 9,
+          "UNCERTAIN": 25
+        },
+        "UNCERTAIN": {
+          "MET": 2,
+          "MISSING": 4,
+          "UNCERTAIN": 17
+        }
+      },
+      "false_met_rate": 0.08333333333333333,
+      "uncertain_recall": 0.7391304347826086,
+      "predicted_uncertain_share": 0.7272727272727273,
+      "unsupported_met": 0
+    },
+    "raw_model": {
+      "n": 110,
+      "accuracy": 0.11818181818181818,
+      "macro_f1": 0.146459028550241,
+      "per_class": {
+        "MET": {
+          "precision": 0.3333333333333333,
+          "recall": 0.08,
+          "f1": 0.12903225806451613,
+          "support": 50
+        },
+        "MISSING": {
+          "precision": 0.42857142857142855,
+          "recall": 0.24324324324324326,
+          "f1": 0.3103448275862069,
+          "support": 37
+        },
+        "UNCERTAIN": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 23
+        }
+      },
+      "confusion": {
+        "MET": {
+          "MET": 4,
+          "MISSING": 8,
+          "UNCERTAIN": 0,
+          "INVALID": 38
+        },
+        "MISSING": {
+          "MET": 3,
+          "MISSING": 9,
+          "UNCERTAIN": 0,
+          "INVALID": 25
+        },
+        "UNCERTAIN": {
+          "MET": 5,
+          "MISSING": 4,
+          "UNCERTAIN": 0,
+          "INVALID": 14
+        }
+      },
+      "false_met_rate": 0.13333333333333333,
+      "uncertain_recall": 0.0,
+      "predicted_uncertain_share": 0.0,
+      "json_validity": 0.3,
+      "quotes_emitted": 26,
+      "quote_verbatim_rate": 1.0
+    },
+    "per_tag": {
+      "ambiguous_duration": {
+        "n": 8,
+        "accuracy": 0.875
+      },
+      "certification": {
+        "n": 15,
+        "accuracy": 0.4
+      },
+      "contradictory_requirement": {
+        "n": 2,
+        "accuracy": 1.0
+      },
+      "education": {
+        "n": 9,
+        "accuracy": 0.2222222222222222
+      },
+      "equivalence": {
+        "n": 17,
+        "accuracy": 0.11764705882352941
+      },
+      "exact": {
+        "n": 22,
+        "accuracy": 0.22727272727272727
+      },
+      "experience_years": {
+        "n": 12,
+        "accuracy": 0.16666666666666666
+      },
+      "language": {
+        "n": 7,
+        "accuracy": 0.2857142857142857
+      },
+      "negation": {
+        "n": 6,
+        "accuracy": 0.5
+      },
+      "not_documented": {
+        "n": 18,
+        "accuracy": 0.16666666666666666
+      },
+      "rag_only_term": {
+        "n": 6,
+        "accuracy": 0.0
+      },
+      "related_not_equivalent": {
+        "n": 21,
+        "accuracy": 0.2857142857142857
+      }
+    },
+    "evidence_overlap_gold_met": 0.04,
+    "missing_basis_accuracy": 0.6666666666666666,
+    "latency": {
+      "mean_s": 4.940451818181819,
+      "max_s": 10.1037,
+      "total_s": 543.4497
+    },
+    "n": 110
+  }
+}

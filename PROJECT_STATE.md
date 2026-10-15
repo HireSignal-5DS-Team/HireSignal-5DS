@@ -1,6 +1,6 @@
 # PROJECT_STATE (authoritative checkpoint)
 
-Updated: 2026-10-15 01:05 UTC. Branch `claude/vigilant-albattani-dmn3pk`. Latest SHA: see `git log -1`.
+Updated: 2026-10-15 01:46 UTC. Branch `claude/vigilant-albattani-dmn3pk`. Latest SHA: see `git log -1`.
 
 ## Phase
 P3 (real experiments) running: `scripts/overnight.sh` (log `logs/overnight.log`, not committed).
@@ -12,6 +12,10 @@ Launch long jobs as a harness-tracked background Bash task (run_in_background), 
 |---|---|---|---|---|---|---|---|
 | lexical + RAG (no neural model) | 0.545 | 0.507 | 0.200 | see metrics | 1.00 | 1.00 | 0.001 |
 | Qwen3.5-0.8B zero-shot + RAG | 0.618 | 0.486 | 0.217 | 0.05 | 0.99 | 0.85 | 15.3 |
+| Qwen3-0.6B zero-shot + RAG | 0.300 | 0.272 | 0.017 | - | 0.63 | 0.89 | 9.7 |
+| Qwen2.5-0.5B zero-shot + RAG | 0.291 | 0.248 | 0.000 | - | 0.84 | 1.00 | 5.2 |
+| LFM2.5-350M zero-shot + RAG | 0.273 | 0.259 | 0.083 | - | 0.30 | 1.00 | 4.9 |
+Full table: `benchmark/results/COMPARISON.md`. LoRA pilot (Qwen2.5-0.5B) training started 01:43 UTC, ~59 s/step.
 Zero-shot models almost never answer UNCERTAIN; this is the main target of the LoRA.
 
 ## Done and verified
