@@ -1,0 +1,403 @@
+{
+ "qwen2.5-0.5b": {
+  "name": "qwen2.5-0.5b",
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "adapter_id": null,
+  "adapter_revision": null,
+  "n_params": 494032768,
+  "license": "apache-2.0",
+  "chat_kwargs": {},
+  "load_s": 2.13,
+  "rss_mb_after_load": 2708,
+  "rss_mb_model_delta": 2664,
+  "rss_mb_peak": 2746,
+  "weights_disk_mb": 942,
+  "smoke": [
+   {
+    "req_id": "r1",
+    "expected": [
+     "MET",
+     "supported"
+    ],
+    "raw": "{\"decision\": \"MISSING\", \"basis\": \"not_documented\", \"evidence\": [], \"explanation\": \"The CV does not mention any experience building REST APIs in Python.\"}",
+    "json_parsed": true,
+    "model_decision": "MISSING",
+    "validated": [
+     "MISSING",
+     "not_documented"
+    ],
+    "evidence": [],
+    "latency_s": 4.53
+   },
+   {
+    "req_id": "r2",
+    "expected": [
+     "MISSING",
+     "not_documented"
+    ],
+    "raw": "{\"decision\": \"NOT DOCUMENTED\", \"basis\": \"no information provided on the requirement being documented\", \"evidence\": [], \"explanation\": \"The CV does not mention any specific skills related to Kubernetes administration.\"}",
+    "json_parsed": false,
+    "model_decision": null,
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 4.2
+   }
+  ]
+ },
+ "qwen2.5-0.5b+kushal-lora": {
+  "name": "qwen2.5-0.5b+kushal-lora",
+  "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "adapter_id": "Kus-hal/resume-screener-lora",
+  "adapter_revision": "e4c042f538b4a899b9aa2f2d38bbc39d27fb7aa6",
+  "n_params": 494032768,
+  "license": "apache-2.0 (base) + mit (adapter)",
+  "chat_kwargs": {},
+  "load_s": 2.37,
+  "rss_mb_after_load": 2716,
+  "rss_mb_model_delta": 2672,
+  "rss_mb_peak": 2761,
+  "weights_disk_mb": 942,
+  "smoke": [
+   {
+    "req_id": "r1",
+    "expected": [
+     "MET",
+     "supported"
+    ],
+    "raw": "{\"decision\": \"CONTRADIZED\", \"basis\": \"'Python' is not shown as a required skill.\", \"evidence\": [\"Building REST APIs in Python\"], \"explanation\": \"The CV does not mention 'Python', which is a necessary skill for this position.\"}, {\"decision\": \"NOT_DOCUMENTED\", \"basis\": \"Missing requirement in the provided information.\", \"evidence\": [], \"explanation\": \"The CV lacks the required skill.\", \"skills_missing\": [\"Python\"]}.",
+    "json_parsed": false,
+    "model_decision": null,
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 12.06
+   },
+   {
+    "req_id": "r2",
+    "expected": [
+     "MISSING",
+     "not_documented"
+    ],
+    "raw": "{\"decision\": \"CONTRADIZED\", \"basis\": \"required skill missing\", \"evidence\": [\"Kubernetes administration\"], \"explanation\": \"The CV does not mention Kubernetes, which is a must-have skill for this position.\"}",
+    "json_parsed": false,
+    "model_decision": null,
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 7.77
+   }
+  ],
+  "native_prompt": {
+   "prompt": "Screen this resume for a Backend Engineer position and return a structured verdict. Resume: Profile: Backend developer. Experience: 2019-2024 Software Engineer at a logistics company. Built REST APIs in Python with FastAPI. Skills: Python, PostgreSQL, Docker. Education: BSc Computer Science. ",
+   "latency_s": 6.08,
+   "raw": "{\"role\": \"Backend Engineer\", \"ats_score\": 56, \"verdict\": \"moderate_match\", \"matched_skills\": [\"Python\", \"PostgreSQL\", \"Docker\"], \"missing_skills\": [\"REST API\", \"Java\", \"Kubernetes\"], \"years_experience\": 2}"
+  }
+ },
+ "qwen3-0.6b": {
+  "name": "qwen3-0.6b",
+  "model_id": "Qwen/Qwen3-0.6B",
+  "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "adapter_id": null,
+  "adapter_revision": null,
+  "n_params": 596049920,
+  "license": "apache-2.0",
+  "chat_kwargs": {
+   "enable_thinking": false
+  },
+  "load_s": 2.26,
+  "rss_mb_after_load": 3105,
+  "rss_mb_model_delta": 3061,
+  "rss_mb_peak": 3144,
+  "weights_disk_mb": 1434,
+  "smoke": [
+   {
+    "req_id": "r1",
+    "expected": [
+     "MET",
+     "supported"
+    ],
+    "raw": "{\"decision\": \"MET|MISSING|UNCERTAIN\", \"basis\": \"supported\", \"evidence\": [\"exact quote copied from the CV\"], \"explanation\": \"The CV explicitly states that the candidate has experience building REST APIs in Python, as shown in the experience section.\"}",
+    "json_parsed": false,
+    "model_decision": null,
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 7.74
+   },
+   {
+    "req_id": "r2",
+    "expected": [
+     "MISSING",
+     "not_documented"
+    ],
+    "raw": "{\"decision\": \"UNCERTAIN\", \"basis\": \"ambiguous\", \"evidence\": [], \"explanation\": \"The requirement 'Kubernetes administration' is not explicitly mentioned in the CV, and there is no evidence provided to support or contradict its presence.\"}",
+    "json_parsed": true,
+    "model_decision": "UNCERTAIN",
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 6.53
+   }
+  ]
+ },
+ "qwen3.5-0.8b": {
+  "name": "qwen3.5-0.8b",
+  "model_id": "Qwen/Qwen3.5-0.8B",
+  "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "adapter_id": null,
+  "adapter_revision": null,
+  "n_params": 752393024,
+  "license": "apache-2.0",
+  "chat_kwargs": {
+   "enable_thinking": false
+  },
+  "load_s": 2.83,
+  "rss_mb_after_load": 5201,
+  "rss_mb_model_delta": 5157,
+  "rss_mb_peak": 5252,
+  "weights_disk_mb": 1666,
+  "smoke": [
+   {
+    "req_id": "r1",
+    "expected": [
+     "MET",
+     "supported"
+    ],
+    "raw": "{\"decision\": \"MET\", \"basis\": \"supported\", \"evidence\": [\"exact quote copied from the CV\"], \"explanation\": \"The CV explicitly states the candidate is a 'Software Engineer' with 'Experience' and 'Built REST APIs in Python with FastAPI' at a logistics company, directly matching the requirement.\"}\n",
+    "json_parsed": true,
+    "model_decision": "MET",
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 12.31
+   },
+   {
+    "req_id": "r2",
+    "expected": [
+     "MISSING",
+     "not_documented"
+    ],
+    "raw": "{\"decision\": \"MISSING\", \"basis\": \"contradicted\", \"evidence\": [], \"explanation\": \"The CV explicitly lists the candidate as a 'Backend developer' with skills including 'Python', 'PostgreSQL', and 'Docker'. It does not mention any experience or knowledge related to 'Kubernetes administration' or 'Kubernetes'. The requirement is not documented in the CV.\"}\n",
+    "json_parsed": true,
+    "model_decision": "MISSING",
+    "validated": [
+     "MISSING",
+     "not_documented"
+    ],
+    "evidence": [],
+    "latency_s": 11.41
+   }
+  ]
+ },
+ "smollm2-360m": {
+  "name": "smollm2-360m",
+  "model_id": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+  "adapter_id": null,
+  "adapter_revision": null,
+  "n_params": 361821120,
+  "license": "apache-2.0",
+  "chat_kwargs": {},
+  "load_s": 1.94,
+  "rss_mb_after_load": 2135,
+  "rss_mb_model_delta": 2091,
+  "rss_mb_peak": 2163,
+  "weights_disk_mb": 690,
+  "smoke": [
+   {
+    "req_id": "r1",
+    "expected": [
+     "MET",
+     "supported"
+    ],
+    "raw": "{\n  \"decision\": \"MET|MISSING|UNCERTAIN\",\n  \"basis\": \"supported|contradicted|not_documented|ambiguous\",\n  \"evidence\": [\"exact quote copied from the CV\"],\n  \"explanation\": \"one or two sentences\"\n}",
+    "json_parsed": false,
+    "model_decision": null,
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 4.93
+   },
+   {
+    "req_id": "r2",
+    "expected": [
+     "MISSING",
+     "not_documented"
+    ],
+    "raw": "{\n  \"decision\": \"MET|MISSING|UNCERTAIN\",\n  \"basis\": \"supported|contradicted|not_documented|ambiguous\",\n  \"evidence\": [\"exact quote copied from the CV\"],\n  \"explanation\": \"one or two sentences\"\n}",
+    "json_parsed": false,
+    "model_decision": null,
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 19.76
+   }
+  ]
+ },
+ "granite-4.0-350m": {
+  "name": "granite-4.0-350m",
+  "model_id": "ibm-granite/granite-4.0-350m",
+  "revision": "bd8a1497065c0d6ba1ef19af6b0d2b14bacf71c2",
+  "adapter_id": null,
+  "adapter_revision": null,
+  "n_params": 352379904,
+  "license": "apache-2.0",
+  "chat_kwargs": {},
+  "load_s": 2.18,
+  "rss_mb_after_load": 2168,
+  "rss_mb_model_delta": 2124,
+  "rss_mb_peak": 2178,
+  "weights_disk_mb": 672,
+  "smoke": [
+   {
+    "req_id": "r1",
+    "expected": [
+     "MET",
+     "supported"
+    ],
+    "raw": "{\"decision\": \"MET\", \"basis\": \"supported\", \"evidence\": \"Experience building REST APIs in Python\", \"explanation\": \"The CV clearly states that the candidate must have experience building REST APIs in Python.\"}",
+    "json_parsed": false,
+    "model_decision": null,
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 3.33
+   },
+   {
+    "req_id": "r2",
+    "expected": [
+     "MISSING",
+     "not_documented"
+    ],
+    "raw": "{\"decision\": \"MET\", \"basis\": \"supported\", \"evidence\": \"Python, PostgreSQL, Docker\", \"explanation\": \"The CV clearly states the requirement for Kubernetes administration, meeting the need for this skill.\"}",
+    "json_parsed": false,
+    "model_decision": null,
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 3.09
+   }
+  ]
+ },
+ "lfm2-350m": {
+  "name": "lfm2-350m",
+  "model_id": "LiquidAI/LFM2-350M",
+  "revision": "f37d3f5c8c5484bc01dad379a595cf4c68c4e70e",
+  "adapter_id": null,
+  "adapter_revision": null,
+  "n_params": 354483968,
+  "license": "LFM Open License v1.0 (other)",
+  "chat_kwargs": {},
+  "load_s": 1.33,
+  "rss_mb_after_load": 2139,
+  "rss_mb_model_delta": 2095,
+  "rss_mb_peak": 2159,
+  "weights_disk_mb": 676,
+  "smoke": [
+   {
+    "req_id": "r1",
+    "expected": [
+     "MET",
+     "supported"
+    ],
+    "raw": "MET|MISSING|UNCERTAIN|{\"Experience\": \"2019-2024 Software Engineer at a logistics company\", \"Skills\": [\"Python\", \"PostgreSQL\", \"Docker\"], \"Education\": \"BSc Computer Science\"}",
+    "json_parsed": false,
+    "model_decision": null,
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 4.39
+   },
+   {
+    "req_id": "r2",
+    "expected": [
+     "MISSING",
+     "not_documented"
+    ],
+    "raw": "MET|MISSING|UNCERTAIN|CONTENT\n\nExplanation: The CV mentions experience as a Software Engineer at a logistics company, but does not explicitly state the requirement of Kubernetes administration. The knowledge provided is limited to the term \"Kubernetes administration\" and does not offer any specific details or evidence about this skill.",
+    "json_parsed": false,
+    "model_decision": null,
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 4.13
+   }
+  ]
+ },
+ "lfm2.5-350m": {
+  "name": "lfm2.5-350m",
+  "model_id": "LiquidAI/LFM2.5-350M",
+  "revision": "9e6c6ccf47cd318696e137d381a7ded8fe4df09f",
+  "adapter_id": null,
+  "adapter_revision": null,
+  "n_params": 354483968,
+  "license": "LFM Open License v1.0 (other)",
+  "chat_kwargs": {},
+  "load_s": 1.61,
+  "rss_mb_after_load": 2146,
+  "rss_mb_model_delta": 2102,
+  "rss_mb_peak": 2176,
+  "weights_disk_mb": 676,
+  "smoke": [
+   {
+    "req_id": "r1",
+    "expected": [
+     "MET",
+     "supported"
+    ],
+    "raw": "{\"decision\": \"MET\", \"basis\": \"supported\", \"evidence\": [\"exact quote copied from the CV\"], \"explanation\": \"The CV clearly shows the requirement and includes an exact quote from the CV.\"}",
+    "json_parsed": true,
+    "model_decision": "MET",
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 3.42
+   },
+   {
+    "req_id": "r2",
+    "expected": [
+     "MISSING",
+     "not_documented"
+    ],
+    "raw": "{\"decision\": \"MET\", \"basis\": \"supported\", \"evidence\": [\"exact quote copied from the CV\"], \"explanation\": \"The CV clearly shows the requirement and includes an exact quote from the CV.\"}",
+    "json_parsed": true,
+    "model_decision": "MET",
+    "validated": [
+     "UNCERTAIN",
+     "ambiguous"
+    ],
+    "evidence": [],
+    "latency_s": 3.94
+   }
+  ]
+ }
+}
