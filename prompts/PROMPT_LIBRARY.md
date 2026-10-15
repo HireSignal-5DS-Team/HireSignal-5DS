@@ -49,13 +49,27 @@ NuExtract has no free-text instructions: its "prompt" is a **typed JSON template
 }
 ```
 
-**Failures observed:** *to fill after the first runs on the real job offers
-(`real_job_offers_20.csv`). For each failure: the job offer, what the model produced,
-what was expected, and how often.*
+**First real run** (2026-10-15, laptop RTX 4050, Ollama, `--mode inline`,
+`examples/job_post.example.txt` against the gold card `examples/job_requirements.example.json`):
+
+| Measure | Result |
+|---|---|
+| Requirements found | 7 / 8 |
+| Invented | 0 |
+| kind correct | 7 / 7 |
+| category correct | 7 / 7 |
+| min_years correct | 1 / 1 |
+| Quotes needing repair | 2 (both repaired by the guardrails: `fuzzy 0.93`, `spacing`) |
+| Latency | 64 s (first call, includes model loading) |
+
+**Failures observed**
 
 | # | Failure | Example | Frequency | Fix in v2 |
 |---|---|---|---|---|
-| | | | | |
+| F1 | Compound requirement not split: one item for two skills, so the second skill is lost | "At least 3 years of professional experience with Java and Spring Boot." → only "…with Java" (Spring Boot missing) | 1 of 1 compound requirements on the example | *to do* |
+| F2 | Quote copied with small slips | "Fluent French;" (punctuation), "good written English." (case) | 2 of 7 | none needed: repaired by the guardrails |
+
+*To add: results on the real job offers (`real_job_offers_20.csv`).*
 
 ### Guardrails applied after every call (code, not prompt)
 
