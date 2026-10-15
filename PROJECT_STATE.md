@@ -1,9 +1,18 @@
 # PROJECT_STATE (authoritative checkpoint)
 
-Updated: 2026-10-15 ~00:20 UTC. Branch `claude/vigilant-albattani-dmn3pk`. Latest SHA: see `git log -1`.
+Updated: 2026-10-15 01:05 UTC. Branch `claude/vigilant-albattani-dmn3pk`. Latest SHA: see `git log -1`.
 
 ## Phase
-P3 (real experiments) running: `scripts/overnight.sh` (nohup, log `logs/overnight.log`, not committed).
+P3 (real experiments) running: `scripts/overnight.sh` (log `logs/overnight.log`, not committed).
+IMPORTANT: the cloud container is reclaimed when the session idles (~01:00 UTC restart killed a nohup run).
+Launch long jobs as a harness-tracked background Bash task (run_in_background), not nohup.
+
+## Val results so far (n=110, prompt p2, validator as of b9099c6+; rescored from raw)
+| arm | acc | macro-F1 | false-MET | UNCERTAIN recall | raw JSON valid | raw quote verbatim | s/req |
+|---|---|---|---|---|---|---|---|
+| lexical + RAG (no neural model) | 0.545 | 0.507 | 0.200 | see metrics | 1.00 | 1.00 | 0.001 |
+| Qwen3.5-0.8B zero-shot + RAG | 0.618 | 0.486 | 0.217 | 0.05 | 0.99 | 0.85 | 15.3 |
+Zero-shot models almost never answer UNCERTAIN; this is the main target of the LoRA.
 
 ## Done and verified
 - Recovery: matcher (`e584a13`) + RAG (`1f5610b`) merged; see `docs/RECOVERY_REPORT.md`.
