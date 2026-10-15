@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "name": "val_granite-4.0-350m_rag",
+    "split": "val",
+    "backend": {
+      "backend": "transformers",
+      "is_model": true,
+      "model_id": "ibm-granite/granite-4.0-350m",
+      "revision": "bd8a1497065c0d6ba1ef19af6b0d2b14bacf71c2",
+      "adapter_id": null,
+      "adapter_revision": null,
+      "n_params": 352379904,
+      "decoding": {
+        "do_sample": false,
+        "max_new_tokens": 192
+      },
+      "device": "cpu",
+      "load_seconds": 60.01,
+      "prompt_version": "p2"
+    },
+    "knowledge": "rag.bm25",
+    "k": 3,
+    "limit": null,
+    "model": "ibm-granite/granite-4.0-350m",
+    "adapter": null,
+    "max_new_tokens": 192,
+    "peak_rss_mb": 2813.9,
+    "torch_threads": 4,
+    "finished_at": "2026-10-15T04:13:44"
+  },
+  "metrics": {
+    "final": {
+      "n": 110,
+      "accuracy": 0.20909090909090908,
+      "macro_f1": 0.11528822055137844,
+      "per_class": {
+        "MET": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 50
+        },
+        "MISSING": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 37
+        },
+        "UNCERTAIN": {
+          "precision": 0.20909090909090908,
+          "recall": 1.0,
+          "f1": 0.3458646616541353,
+          "support": 23
+        }
+      },
+      "confusion": {
+        "MET": {
+          "MET": 0,
+          "MISSING": 0,
+          "UNCERTAIN": 50
+        },
+        "MISSING": {
+          "MET": 0,
+          "MISSING": 0,
+          "UNCERTAIN": 37
+        },
+        "UNCERTAIN": {
+          "MET": 0,
+          "MISSING": 0,
+          "UNCERTAIN": 23
+        }
+      },
+      "false_met_rate": 0.0,
+      "uncertain_recall": 1.0,
+      "predicted_uncertain_share": 1.0,
+      "unsupported_met": 0
+    },
+    "raw_model": {
+      "n": 110,
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "per_class": {
+        "MET": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 50
+        },
+        "MISSING": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 37
+        },
+        "UNCERTAIN": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 23
+        }
+      },
+      "confusion": {
+        "MET": {
+          "MET": 0,
+          "MISSING": 0,
+          "UNCERTAIN": 0,
+          "INVALID": 50
+        },
+        "MISSING": {
+          "MET": 0,
+          "MISSING": 0,
+          "UNCERTAIN": 1,
+          "INVALID": 36
+        },
+        "UNCERTAIN": {
+          "MET": 0,
+          "MISSING": 0,
+          "UNCERTAIN": 0,
+          "INVALID": 23
+        }
+      },
+      "false_met_rate": 0.0,
+      "uncertain_recall": 0.0,
+      "predicted_uncertain_share": 0.00909090909090909,
+      "json_validity": 0.00909090909090909,
+      "quotes_emitted": 0,
+      "quote_verbatim_rate": null
+    },
+    "per_tag": {
+      "ambiguous_duration": {
+        "n": 8,
+        "accuracy": 1.0
+      },
+      "certification": {
+        "n": 15,
+        "accuracy": 0.06666666666666667
+      },
+      "contradictory_requirement": {
+        "n": 2,
+        "accuracy": 1.0
+      },
+      "education": {
+        "n": 9,
+        "accuracy": 0.1111111111111111
+      },
+      "equivalence": {
+        "n": 17,
+        "accuracy": 0.11764705882352941
+      },
+      "exact": {
+        "n": 22,
+        "accuracy": 0.13636363636363635
+      },
+      "experience_years": {
+        "n": 12,
+        "accuracy": 0.16666666666666666
+      },
+      "language": {
+        "n": 7,
+        "accuracy": 0.2857142857142857
+      },
+      "negation": {
+        "n": 6,
+        "accuracy": 0.0
+      },
+      "not_documented": {
+        "n": 18,
+        "accuracy": 0.0
+      },
+      "rag_only_term": {
+        "n": 6,
+        "accuracy": 0.0
+      },
+      "related_not_equivalent": {
+        "n": 21,
+        "accuracy": 0.23809523809523808
+      }
+    },
+    "evidence_overlap_gold_met": 0.0,
+    "missing_basis_accuracy": null,
+    "latency": {
+      "mean_s": 6.929782727272728,
+      "max_s": 13.7041,
+      "total_s": 762.2761
+    },
+    "n": 110
+  }
+}
