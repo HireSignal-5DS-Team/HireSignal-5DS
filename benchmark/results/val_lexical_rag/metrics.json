@@ -12,33 +12,33 @@
     "model": null,
     "adapter": null,
     "max_new_tokens": 192,
-    "peak_rss_mb": 53.8,
+    "peak_rss_mb": 54.2,
     "torch_threads": 4,
-    "finished_at": "2026-10-15T00:05:37"
+    "finished_at": "2026-10-15T00:19:10"
   },
   "metrics": {
     "final": {
       "n": 110,
-      "accuracy": 0.5363636363636364,
-      "macro_f1": 0.4985482162448454,
+      "accuracy": 0.5454545454545454,
+      "macro_f1": 0.507471264367816,
       "per_class": {
         "MET": {
-          "precision": 0.6326530612244898,
+          "precision": 0.7209302325581395,
           "recall": 0.62,
-          "f1": 0.6262626262626263,
+          "f1": 0.6666666666666666,
           "support": 50
         },
         "MISSING": {
           "precision": 0.44,
-          "recall": 0.5641025641025641,
-          "f1": 0.49438202247191015,
-          "support": 39
+          "recall": 0.5945945945945946,
+          "f1": 0.5057471264367815,
+          "support": 37
         },
         "UNCERTAIN": {
-          "precision": 0.5454545454545454,
-          "recall": 0.2857142857142857,
-          "f1": 0.37499999999999994,
-          "support": 21
+          "precision": 0.4117647058823529,
+          "recall": 0.30434782608695654,
+          "f1": 0.35,
+          "support": 23
         }
       },
       "confusion": {
@@ -48,25 +48,25 @@
           "UNCERTAIN": 1
         },
         "MISSING": {
-          "MET": 13,
+          "MET": 6,
           "MISSING": 22,
-          "UNCERTAIN": 4
+          "UNCERTAIN": 9
         },
         "UNCERTAIN": {
-          "MET": 5,
+          "MET": 6,
           "MISSING": 10,
-          "UNCERTAIN": 6
+          "UNCERTAIN": 7
         }
       },
-      "false_met_rate": 0.3,
-      "uncertain_recall": 0.2857142857142857,
-      "predicted_uncertain_share": 0.1,
+      "false_met_rate": 0.2,
+      "uncertain_recall": 0.30434782608695654,
+      "predicted_uncertain_share": 0.15454545454545454,
       "unsupported_met": 0
     },
     "raw_model": {
       "n": 110,
       "accuracy": 0.4909090909090909,
-      "macro_f1": 0.3587334014300307,
+      "macro_f1": 0.36252176941832115,
       "per_class": {
         "MET": {
           "precision": 0.5333333333333333,
@@ -76,15 +76,15 @@
         },
         "MISSING": {
           "precision": 0.44,
-          "recall": 0.5641025641025641,
-          "f1": 0.49438202247191015,
-          "support": 39
+          "recall": 0.5945945945945946,
+          "f1": 0.5057471264367815,
+          "support": 37
         },
         "UNCERTAIN": {
           "precision": null,
           "recall": 0.0,
           "f1": 0.0,
-          "support": 21
+          "support": 23
         }
       },
       "confusion": {
@@ -94,12 +94,12 @@
           "UNCERTAIN": 0
         },
         "MISSING": {
-          "MET": 17,
+          "MET": 15,
           "MISSING": 22,
           "UNCERTAIN": 0
         },
         "UNCERTAIN": {
-          "MET": 11,
+          "MET": 13,
           "MISSING": 10,
           "UNCERTAIN": 0
         }
@@ -113,8 +113,8 @@
     },
     "per_tag": {
       "ambiguous_duration": {
-        "n": 7,
-        "accuracy": 0.7142857142857143
+        "n": 8,
+        "accuracy": 0.75
       },
       "certification": {
         "n": 15,
@@ -138,7 +138,7 @@
       },
       "experience_years": {
         "n": 12,
-        "accuracy": 0.4166666666666667
+        "accuracy": 0.5
       },
       "language": {
         "n": 7,
@@ -149,8 +149,8 @@
         "accuracy": 0.0
       },
       "not_documented": {
-        "n": 19,
-        "accuracy": 0.8421052631578947
+        "n": 18,
+        "accuracy": 0.8888888888888888
       },
       "rag_only_term": {
         "n": 6,

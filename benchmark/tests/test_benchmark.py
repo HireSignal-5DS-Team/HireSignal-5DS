@@ -88,6 +88,17 @@ def test_run_lexical_limit_and_resume(tmp_path, capsys):
     assert len((out / "predictions.jsonl").read_text().splitlines()) == 3
 
 
+def test_resume_survives_torn_and_duplicate_lines(tmp_path, capsys):
+    out = tmp_path / "lex"
+    argv = ["--split", "val", "--backend", "lexical", "--knowledge", "none", "--limit", "3", "--out", str(out)]
+    run.main(argv)
+    p = out / "predictions.jsonl"
+    p.write_text(p.read_text() + p.read_text().splitlines()[0] + "\n" + '{"case_id": "va')
+    run.main(argv)
+    assert len(p.read_text().splitlines()) == 3
+    assert json.loads((out / "metrics.json").read_text())["metrics"]["n"] == 3
+
+
 def test_test_split_is_locked(tmp_path):
     with pytest.raises(SystemExit):
         run.main(["--split", "test", "--backend", "lexical", "--out", str(tmp_path / "t")])

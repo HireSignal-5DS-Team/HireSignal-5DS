@@ -15,7 +15,11 @@ REASONS = {
     "inconsistent_decision_basis": HIGH,
     "met_without_verified_evidence": HIGH,
     "years_below_minimum_in_evidence": HIGH,
+    "negation_in_evidence": HIGH,
+    "years_not_tied_to_skill": HIGH,
     "evidence_not_in_cv": MEDIUM,
+    "evidence_too_short": MEDIUM,
+    "no_requirement_term_in_quote": MEDIUM,
     "contradiction_without_evidence": MEDIUM,
     "duration_not_verified": HIGH,
     "semantic_inference_no_term_in_quote": MEDIUM,
@@ -44,7 +48,7 @@ def _normalize(obj):
 
 def parse_model_output(raw):
     """First JSON object in the raw generation, validated against ModelAnswer; None if impossible."""
-    raw = re.sub(r"<think>.*?</think>", "", raw or "", flags=re.S)
+    raw = re.sub(r"<think>.*?(?:</think>|$)", "", raw or "", flags=re.S)  # unclosed block = no answer
     start = raw.find("{")
     while start != -1:
         try:
@@ -87,11 +91,29 @@ def evidence_years(quotes, ref_year=2026):
     return max(vals) if vals else None
 
 
+_STOP = set("""a an and or of in on with for to the as at by be is are have has from years year experience
+plus least minimum strong good solid working knowledge ability hands proven required preferred must nice""".split())
+# shortcut: negation is lexical, so "zero-downtime" style phrases may demote a valid MET to UNCERTAIN (review, not loss)
+_NEG = re.compile(r"\b(?:no|not|never|without|lacks?|none)\b|in preparation|expired|studying for|currently learning|planned",
+                  re.I)
+
+
+def _has(term, text):
+    return re.search(rf"(?<!\w){re.escape(term)}(?!\w)", text.casefold()) is not None
+
+
 def _terms(req, refs):
-    terms = list(req.skill_terms)
+    """Requirement skill terms plus aliases of refs that name one of them (an unrelated retrieved ref adds nothing)."""
+    terms = {t.casefold() for t in req.skill_terms if len(t) >= 2}
     for r in refs:
-        terms += [r.title, *r.aliases]
-    return {t.casefold() for t in terms if len(t) >= 2}
+        names = {n.casefold() for n in [r.title, *r.aliases]}
+        if any(_has(t, n) or _has(n, t) for t in terms for n in names):
+            terms |= {n for n in names if len(n) >= 2}
+    return terms
+
+
+def _req_words(req):
+    return {w for w in re.findall(r"[a-z][a-z0-9+#.]*", req.text.casefold()) if len(w) >= 3 and w not in _STOP}
 
 
 def validate(answer, cv, req, refs, ref_year=2026):
@@ -108,12 +130,15 @@ def validate(answer, cv, req, refs, ref_year=2026):
         quotes = []
         for q in answer.evidence:
             span = find_span(cv.text, q)
-            if span:
+            if span and span[1] - span[0] < 4:  # "e", "-", "CV": verbatim but proves nothing
+                reasons.append("evidence_too_short")
+            elif span:
                 quotes.append(cv.text[span[0]:span[1]])
             else:
                 reasons.append("evidence_not_in_cv")
     quotes = list(dict.fromkeys(quotes))
     spans = [find_span(cv.text, q) for q in quotes]
+    terms = _terms(req, refs)
 
     if decision == "MET" and not quotes:
         decision, basis = "UNCERTAIN", "ambiguous"
@@ -121,24 +146,40 @@ def validate(answer, cv, req, refs, ref_year=2026):
     if decision == "MISSING" and basis == "contradicted" and not quotes:
         basis = "not_documented"
         reasons.append("contradiction_without_evidence")
+    if decision == "MET" and any(_NEG.search(q) for q in quotes):
+        decision, basis = "UNCERTAIN", "ambiguous"
+        reasons.append("negation_in_evidence")
     if decision == "MET" and req.min_years:
-        years = evidence_years(quotes, ref_year)
+        # years must come from a quote that names the skill; other skills' or total-career years do not count
+        # shortcut: attribution is per quote, so "Java (5 years), Python" credits Python; needs clause parsing to fix
+        named = [i for i, q in enumerate(quotes) if any(_has(t, q) for t in terms)]
+        if named:  # plus a role header ending <= 300 chars before a quote that names the skill
+            about = [q for i, q in enumerate(quotes) if i in named or any(
+                0 <= spans[j][0] - spans[i][1] <= 300 for j in named)]
+        else:  # possible equivalence claim ("LAN/WAN" for networking): keep, but a human must confirm
+            about = quotes
+            reasons.append("years_not_tied_to_skill")
+        years = evidence_years(about, ref_year)
         if years is None:  # the minimum cannot be confirmed from the quotes, so MET is not defensible
             decision, basis = "UNCERTAIN", "ambiguous"
             reasons.append("duration_not_verified")
         elif years < req.min_years:
             decision, basis = "UNCERTAIN", "ambiguous"
             reasons.append("years_below_minimum_in_evidence")
-    if decision == "MET" and req.category == "skill":
-        terms = _terms(req, refs)
-        if terms and not any(re.search(rf"(?<!\w){re.escape(t)}(?!\w)", q.casefold()) for q in quotes for t in terms):
-            reasons.append("semantic_inference_no_term_in_quote")
+    if decision == "MET":
+        if req.category == "skill" and terms:
+            if not any(_has(t, q) for q in quotes for t in terms):
+                reasons.append("semantic_inference_no_term_in_quote")
+        elif not any(_has(w, q) for q in quotes for w in _req_words(req) | terms):
+            reasons.append("no_requirement_term_in_quote")
     if decision == "UNCERTAIN":
         reasons.append("uncertain_decision")
     if decision == "MISSING" and req.kind == "must":
         reasons.append("must_have_absence_of_evidence" if basis == "not_documented" else "must_have_contradicted")
 
     reasons = list(dict.fromkeys(reasons))
+    if answer is not None and decision != model_decision:  # the model's explanation argued for another decision
+        expl = f"Validator changed {model_decision} to {decision}: {', '.join(r for r in reasons if r != 'uncertain_decision')}."
     prios = {REASONS[r] for r in reasons}
     priority = HIGH if HIGH in prios else MEDIUM if MEDIUM in prios else "low"
     return RequirementResult(

@@ -115,7 +115,8 @@ def test_esco_aliases():
 def test_lexical_baseline_negation_trap_and_alias():
     m = Matcher(LexicalBaseline(), FIX)
     k8s, _ = m.match_requirement(CVX, req(text="Kubernetes", skill_terms=["Kubernetes"]))
-    assert k8s.decision == "MET"  # known weakness of keyword matching; the benchmark measures it
+    assert k8s.model_decision == "MET"  # keyword matching falls for the negation...
+    assert k8s.decision == "UNCERTAIN" and "negation_in_evidence" in k8s.review_reasons  # ...the validator does not
     cv2 = CV(cv_id="c2", text="Wrote Structured Query Language reports.")
     assert m.match_requirement(cv2, req())[0].decision == "MET"
     assert m.match_requirement(CV(cv_id="c3", text="Java developer."), req())[0].basis == "not_documented"
@@ -164,3 +165,39 @@ def test_harmless_json_deviations_repaired():
     assert a.evidence == ["Data analyst"] and len(a.explanation) == 600
     assert parse_model_output('{"decision": "MET", "basis": "supported", "evidence": ["a","b","c","d"]}').evidence == ["a", "b", "c"]
     assert parse_model_output('{"decision": "missing", "basis": "NOT_DOCUMENTED", "evidence": []}').basis == "not_documented"
+
+
+def test_trivial_or_irrelevant_quote_flagged():
+    out = run(ans(evidence=["e"]), req(text="MSc in Computer Science", category="education", skill_terms=[]))
+    assert out.decision == "UNCERTAIN" and "evidence_too_short" in out.review_reasons
+    out = run(ans(evidence=["Hobbies: chess, hiking."]), req(text="Fluent French", category="language", skill_terms=[]))
+    assert out.decision == "MET" and out.needs_human_review and "no_requirement_term_in_quote" in out.review_reasons
+
+
+def test_years_from_other_skill_do_not_count():
+    cv = CV(cv_id="c", text="Java (5 years), Python\nBSc 2008-2012")
+    r = Requirement(req_id="r", text="3+ years Python", skill_terms=["Python"], min_years=3)
+    for ev in (["Python", "BSc 2008-2012"], ["BSc 2008-2012"]):
+        a = parse_model_output(ans(evidence=ev))
+        out = validate(a, cv, r, [])
+        assert out.decision != "MET" or out.review_priority == "high"
+
+
+def test_unrelated_ref_alias_does_not_silence_semantic_flag():
+    from matcher.schemas import KnowledgeRef
+    java = KnowledgeRef(source_type="esco", source_id="esco:java", title="Java (computer programming)", text="Java.",
+                        aliases=["J2EE"], retrieval="test")
+    cv = CV(cv_id="c", text="Backend work in J2EE since 2015.")
+    out = validate(parse_model_output(ans(evidence=["Backend work in J2EE since 2015."])), cv,
+                   Requirement(req_id="r", text="Kotlin", skill_terms=["Kotlin"]), [java])
+    assert "semantic_inference_no_term_in_quote" in out.review_reasons
+
+
+def test_demoted_decision_replaces_model_explanation():
+    out = run(ans(evidence=["Did not use Kubernetes in production."], explanation="Kubernetes is met."),
+              req(text="Kubernetes", skill_terms=["Kubernetes"]))
+    assert out.decision == "UNCERTAIN" and "met" not in out.explanation.split(":")[-1].lower().split()
+
+
+def test_unclosed_think_block_is_not_an_answer():
+    assert parse_model_output('<think>maybe {"decision": "MET", "basis": "supported", "evidence": []}') is None

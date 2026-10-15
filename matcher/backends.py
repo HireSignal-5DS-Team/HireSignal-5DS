@@ -119,7 +119,7 @@ class TransformersBackend:
         import torch
 
         text = self.tok.apply_chat_template(task.messages, tokenize=False, add_generation_prompt=True, **self.chat_kwargs)
-        ids = self.tok(text, return_tensors="pt").to(self.device)
+        ids = self.tok(text, return_tensors="pt", add_special_tokens=False).to(self.device)  # template has BOS
         with torch.no_grad():
             out = self.model.generate(**ids, max_new_tokens=self.max_new_tokens, do_sample=False,
                                       pad_token_id=self.tok.pad_token_id or self.tok.eos_token_id)

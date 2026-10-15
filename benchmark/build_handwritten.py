@@ -176,8 +176,9 @@ VAL = [
         Education: Bachelor of Arts in Graphic Design (2021)
         Languages: Polish (native), English (B2)
         """, [
-        R("r1", "4+ years of professional frontend development", "CONTRA",
-          ["Junior-to-mid frontend engineer (3 years) with a design background."], ["experience_years"], "experience",
+        # UNC (QA fix): "(3 years)" vs Jan 2022 - present roles; depends on how the junior web role is counted
+        R("r1", "4+ years of professional frontend development", "UNC",
+          ["Junior-to-mid frontend engineer (3 years) with a design background."], ["experience_years", "ambiguous_duration"], "experience",
           ["frontend"], 4),
         R("r2", "Strong React skills", "MET", ["Built a component library in React with TypeScript and Storybook."],
           ["exact"], terms=["React"]),
@@ -224,7 +225,9 @@ VAL = [
         R("r5", "MLOps: experiment tracking and model serving", "MET",
           ["Served models behind a FastAPI service; tracked experiments with MLflow."], ["equivalence"],
           terms=["MLOps", "MLflow"]),
-        R("r6", "PhD in machine learning or a related field", "MISS", [], ["education", "not_documented"], "education",
+        # CONTRA (QA fix): MSc listed as highest degree, per LABELING.md
+        R("r6", "PhD in machine learning or a related field", "CONTRA",
+          ["Education: MSc Artificial Intelligence, 2019; BSc Mathematics, 2017"], ["education"], "education",
           kind="nice"),
         R("r7", "3+ years of TensorFlow in production", "UNC",
           ["Technical: Python, PyTorch, TensorFlow (basic), scikit-learn, LightGBM, MLflow, Docker, SQL, Spark (basic)"],
@@ -511,7 +514,8 @@ VAL = [
           ["certification", "related_not_equivalent"], "certification", ["PRINCE2 Practitioner"]),
         R("r7", "Business analysis background", "MET", ["2015 - 2019: Business Analyst, Consultancy (anonymized)"],
           ["exact"], terms=["business analysis"], kind="nice"),
-        R("r8", "French at B2 level", "CONTRA", ["Languages: Dutch (native), English (fluent), French (basic)"],
+        # UNC (QA fix): self-rated "basic" without CEFR grade, per LABELING.md
+        R("r8", "French at B2 level", "UNC", ["Languages: Dutch (native), English (fluent), French (basic)"],
           ["language"], "language", ["French"]),
     ]),
     C("val-014", "Network Engineer", """

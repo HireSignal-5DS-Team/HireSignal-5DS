@@ -12,33 +12,33 @@
     "model": null,
     "adapter": null,
     "max_new_tokens": 192,
-    "peak_rss_mb": 26.2,
+    "peak_rss_mb": 26.5,
     "torch_threads": 4,
-    "finished_at": "2026-10-15T00:05:38"
+    "finished_at": "2026-10-15T00:19:10"
   },
   "metrics": {
     "final": {
       "n": 110,
-      "accuracy": 0.5181818181818182,
-      "macro_f1": 0.477037037037037,
+      "accuracy": 0.5272727272727272,
+      "macro_f1": 0.48848311254326293,
       "per_class": {
         "MET": {
-          "precision": 0.65,
+          "precision": 0.7647058823529411,
           "recall": 0.52,
-          "f1": 0.5777777777777778,
+          "f1": 0.6190476190476191,
           "support": 50
         },
         "MISSING": {
           "precision": 0.4262295081967213,
-          "recall": 0.6666666666666666,
-          "f1": 0.52,
-          "support": 39
+          "recall": 0.7027027027027027,
+          "f1": 0.5306122448979592,
+          "support": 37
         },
         "UNCERTAIN": {
-          "precision": 0.5555555555555556,
-          "recall": 0.23809523809523808,
-          "f1": 0.33333333333333326,
-          "support": 21
+          "precision": 0.4,
+          "recall": 0.2608695652173913,
+          "f1": 0.31578947368421056,
+          "support": 23
         }
       },
       "confusion": {
@@ -48,25 +48,25 @@
           "UNCERTAIN": 1
         },
         "MISSING": {
-          "MET": 10,
+          "MET": 3,
           "MISSING": 26,
-          "UNCERTAIN": 3
+          "UNCERTAIN": 8
         },
         "UNCERTAIN": {
-          "MET": 4,
+          "MET": 5,
           "MISSING": 12,
-          "UNCERTAIN": 5
+          "UNCERTAIN": 6
         }
       },
-      "false_met_rate": 0.23333333333333334,
-      "uncertain_recall": 0.23809523809523808,
-      "predicted_uncertain_share": 0.08181818181818182,
+      "false_met_rate": 0.13333333333333333,
+      "uncertain_recall": 0.2608695652173913,
+      "predicted_uncertain_share": 0.13636363636363635,
       "unsupported_met": 0
     },
     "raw_model": {
       "n": 110,
       "accuracy": 0.4818181818181818,
-      "macro_f1": 0.35515151515151516,
+      "macro_f1": 0.3586889301175016,
       "per_class": {
         "MET": {
           "precision": 0.5510204081632653,
@@ -76,15 +76,15 @@
         },
         "MISSING": {
           "precision": 0.4262295081967213,
-          "recall": 0.6666666666666666,
-          "f1": 0.52,
-          "support": 39
+          "recall": 0.7027027027027027,
+          "f1": 0.5306122448979592,
+          "support": 37
         },
         "UNCERTAIN": {
           "precision": null,
           "recall": 0.0,
           "f1": 0.0,
-          "support": 21
+          "support": 23
         }
       },
       "confusion": {
@@ -94,12 +94,12 @@
           "UNCERTAIN": 0
         },
         "MISSING": {
-          "MET": 13,
+          "MET": 11,
           "MISSING": 26,
           "UNCERTAIN": 0
         },
         "UNCERTAIN": {
-          "MET": 9,
+          "MET": 11,
           "MISSING": 12,
           "UNCERTAIN": 0
         }
@@ -113,8 +113,8 @@
     },
     "per_tag": {
       "ambiguous_duration": {
-        "n": 7,
-        "accuracy": 0.7142857142857143
+        "n": 8,
+        "accuracy": 0.75
       },
       "certification": {
         "n": 15,
@@ -138,7 +138,7 @@
       },
       "experience_years": {
         "n": 12,
-        "accuracy": 0.5
+        "accuracy": 0.5833333333333334
       },
       "language": {
         "n": 7,
@@ -149,7 +149,7 @@
         "accuracy": 0.0
       },
       "not_documented": {
-        "n": 19,
+        "n": 18,
         "accuracy": 1.0
       },
       "rag_only_term": {
@@ -162,7 +162,7 @@
       }
     },
     "evidence_overlap_gold_met": 0.44,
-    "missing_basis_accuracy": 0.8461538461538461,
+    "missing_basis_accuracy": 0.8076923076923077,
     "latency": {
       "mean_s": 0.0001181818181818182,
       "max_s": 0.0005,

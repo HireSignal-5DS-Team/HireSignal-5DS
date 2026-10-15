@@ -19,7 +19,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "benchmark"))
 
-from matcher import CV, Job, Matcher  # noqa: E402
+from matcher import CV, Job, Matcher, Requirement  # noqa: E402
+from matcher.prompt import PROMPT_VERSION  # noqa: E402
+from matcher.validate import parse_model_output, validate  # noqa: E402
 from matcher.backends import LexicalBaseline, MockBackend  # noqa: E402
 from matcher.knowledge import FixtureKnowledge, NoKnowledge  # noqa: E402
 
@@ -71,6 +73,24 @@ def make_backend(args, cases):
     if not args.model:
         sys.exit("--model or --arm is required for --backend transformers")
     return TransformersBackend(args.model, adapter_id=args.adapter, max_new_tokens=args.max_new_tokens, **kw)
+
+
+def load_preds(path):
+    """{(case_id, req_id): record}. Drops a torn last line (crash mid-write) and duplicates (last wins), then
+    rewrites the file cleanly so appends never join a partial line."""
+    if not path.exists():
+        return {}
+    recs = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        try:
+            x = json.loads(line)
+            recs[(x["case_id"], x["req_id"])] = x
+        except (json.JSONDecodeError, KeyError, TypeError):
+            print(f"  dropping unreadable line in {path}", flush=True)
+    tmp = path.with_suffix(".tmp")
+    tmp.write_text("".join(json.dumps(x, ensure_ascii=False) + "\n" for x in recs.values()), encoding="utf-8")
+    tmp.replace(path)
+    return recs
 
 
 def peak_rss_mb():
@@ -137,12 +157,7 @@ def main(argv=None):
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     pred_path = out / "predictions.jsonl"
-    done = set()
-    if pred_path.exists():
-        for line in pred_path.read_text(encoding="utf-8").splitlines():
-            if line.strip():
-                rec = json.loads(line)
-                done.add((rec["case_id"], rec["req_id"]))
+    done = {k for k in load_preds(pred_path)}
     todo = [(c, r) for c, r in items if (c["case_id"], r["req_id"]) not in done]
     print(f"{len(items)} requirements, {len(items) - len(todo)} already done, {len(todo)} to run", flush=True)
 
@@ -157,15 +172,24 @@ def main(argv=None):
             result, info = matcher.match_requirement(cv, req)
             rec = {"case_id": c["case_id"], "req_id": req.req_id, "gold": c["gold"][req.req_id],
                    "result": result.model_dump(), "raw": info["raw"], "parsed": info["parsed"],
-                   "latency_s": round(info["latency_s"], 4)}
+                   "latency_s": round(info["latency_s"], 4), "prompt_version": PROMPT_VERSION}
             f.write(json.dumps(rec, ensure_ascii=False) + "\n")
             f.flush()
             if i % 10 == 0 or i == len(todo):
                 print(f"  {i}/{len(todo)} ({time.perf_counter() - t_start:.0f}s)", flush=True)
 
     keys = {(c["case_id"], r["req_id"]) for c, r in items}
-    recs = [json.loads(line) for line in pred_path.read_text(encoding="utf-8").splitlines() if line.strip()]
-    recs = [x for x in recs if (x["case_id"], x["req_id"]) in keys]
+    recs = [x for k, x in load_preds(pred_path).items() if k in keys]
+    versions = {x.get("prompt_version", PROMPT_VERSION) for x in recs}
+    if versions != {PROMPT_VERSION}:
+        sys.exit(f"{pred_path} mixes prompt versions {versions}; rerun into a new --out")
+    # re-validate stored raw outputs with the current validator, so rule changes never need a model rerun
+    by_key = {(c["case_id"], r["req_id"]): (c, r) for c, r in items}
+    for x in recs:
+        c, r = by_key[(x["case_id"], x["req_id"])]
+        cv, req = CV.model_validate(c["cv"]), Requirement.model_validate(r)
+        x["gold"] = c["gold"][r["req_id"]]  # labels may be corrected after a run
+        x["result"] = validate(parse_model_output(x["raw"]), cv, req, knowledge.lookup(req, k=args.k)).model_dump()
     m = M.compute(recs, {c["case_id"]: c["cv"]["text"] for c in cases})
     prev = out / "metrics.json"
     info = backend.info() if backend else (json.loads(prev.read_text())["meta"]["backend"] if prev.exists()
