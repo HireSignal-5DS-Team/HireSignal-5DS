@@ -1,0 +1,27 @@
+# Qwen2.5-0.5B-Instruct LoRA (494M params, < 1B). Pin `revision` to a commit sha before the reported run.
+name: qwen25_05b_lora
+base_model: Qwen/Qwen2.5-0.5B-Instruct
+revision: 7ae557604adf67be50417f59c2c2f167def9a775
+train_file: finetune/data/sft_train.jsonl
+dev_file: finetune/data/sft_dev.jsonl
+output_root: finetune/runs
+r: 16
+alpha: 32
+dropout: 0.05
+target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+lr: 2.0e-4
+warmup_ratio: 0.05
+epochs: 2
+max_steps: null          # set to cap steps (overrides epochs)
+max_len: 1024            # longer examples are skipped and counted, never truncated
+batch_size: 1
+grad_accum: 8            # effective batch 8
+seed: 13
+save_every: 25
+eval_every: 25
+early_stopping_patience: 3
+max_dev_examples: null
+num_threads: null        # CPU: set e.g. 4
+device: auto             # cuda if available else cpu
+dtype: auto              # bf16 on CUDA if supported, else float32
+gradient_checkpointing: false

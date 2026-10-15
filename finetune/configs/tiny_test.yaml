@@ -1,0 +1,11 @@
+# Unit tests / plumbing only: 2.4M-param random Qwen2. Not a real model.
+name: tiny_test
+base_model: trl-internal-testing/tiny-Qwen2ForCausalLM-2.5
+train_file: finetune/data/sft_train.jsonl
+dev_file: finetune/data/sft_dev.jsonl
+max_steps: 3
+grad_accum: 1
+lr: 1.0e-3
+save_every: 2
+eval_every: 3
+num_threads: 2
