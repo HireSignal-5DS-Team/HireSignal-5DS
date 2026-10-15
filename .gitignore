@@ -218,3 +218,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# HireSignal local data (never commit real CVs)
+samples/
+out/
