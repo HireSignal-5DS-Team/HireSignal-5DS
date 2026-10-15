@@ -1,0 +1,86 @@
+{
+  "config": {
+    "name": "qwen25_05b_lora_pilot",
+    "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "train_file": "finetune/data/sft_train.jsonl",
+    "dev_file": "finetune/data/sft_dev.jsonl",
+    "output_root": "finetune/runs",
+    "r": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "lr": 0.0002,
+    "weight_decay": 0.0,
+    "warmup_ratio": 0.05,
+    "epochs": 2,
+    "max_steps": 100,
+    "max_len": 1024,
+    "batch_size": 1,
+    "grad_accum": 8,
+    "max_grad_norm": 1.0,
+    "seed": 13,
+    "save_every": 25,
+    "eval_every": 25,
+    "log_every": 1,
+    "early_stopping_patience": 3,
+    "max_dev_examples": 48,
+    "num_threads": 4,
+    "device": "auto",
+    "dtype": "auto",
+    "gradient_checkpointing": false,
+    "chat_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "prompt_version": "p2",
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "n_params": 494032768,
+  "n_trainable": 8798208,
+  "steps_per_epoch": 176,
+  "total_steps": 100,
+  "versions": {
+    "python": "3.13.16",
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "peft": "0.21.2"
+  },
+  "data_sha256": {
+    "train": "b6e19640b2149053fee20b811c33661a264e1bbd5c7df6d49acc76b76973bd95",
+    "dev": "455c87194fae1ea92723b6c4ec84504118eb00faaeb0fbf62359635f0d055011"
+  },
+  "data": {
+    "train_lengths": {
+      "n": 1408,
+      "min": 404,
+      "p50": 558,
+      "p90": 673,
+      "p99": 734,
+      "max": 754,
+      "mean": 561.0
+    },
+    "dev_lengths": {
+      "n": 144,
+      "min": 422,
+      "p50": 563,
+      "p90": 672,
+      "p99": 724,
+      "max": 743,
+      "mean": 557.5
+    },
+    "train_used": 1408,
+    "train_skipped_over_max_len": 0,
+    "dev_used": 48,
+    "dev_skipped_over_max_len": 0
+  },
+  "resumed_from": null
+}
