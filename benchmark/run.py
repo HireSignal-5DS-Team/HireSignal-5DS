@@ -185,6 +185,9 @@ def run(a):
                 if (c["case_id"], req.req_id) in done:
                     continue
                 res, info = matcher.match_requirement(cv, req)
+                call_err = (getattr(backend, "last_call", None) or {}).get("error")
+                if call_err:  # transport failure (server down, timeout): never record it as a model answer
+                    raise SystemExit(f"backend call failed at {c['case_id']}/{req.req_id}: {call_err}; nothing recorded, resume later")
                 g = c["gold"][req.req_id]
                 ans = parse_model_output(info["raw"])
                 quotes = ans.evidence if ans else []

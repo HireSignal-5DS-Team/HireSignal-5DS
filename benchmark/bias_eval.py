@@ -62,7 +62,13 @@ def main():
         for c, r in select(a.n):
             if (c["case_id"], r["req_id"]) in done:
                 continue
-            fd = counterfactual(lambda cv, req: matcher.match_requirement(cv, req)[0], CV(**c["cv"]), Requirement(**r))
+            def match(cv, req):
+                res = matcher.match_requirement(cv, req)[0]
+                err = (getattr(backend, "last_call", None) or {}).get("error")
+                if err:  # transport failure: abort, never count it as a decision (and never as a flip)
+                    raise SystemExit(f"backend call failed at {c['case_id']}/{r['req_id']}: {err}; nothing recorded")
+                return res
+            fd = counterfactual(match, CV(**c["cv"]), Requirement(**r))
             f.write(json.dumps({"case_id": c["case_id"], "req_id": r["req_id"], "tags": c["gold"][r["req_id"]]["tags"],
                                 **fd.to_dict()}) + "\n")
             f.flush()

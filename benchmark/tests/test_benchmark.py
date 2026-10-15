@@ -92,3 +92,15 @@ def test_resume_drops_half_written_line(tmp_path):
     pred.write_text("\n".join(lines[:-1]) + "\n" + lines[-1][:20])  # simulate a kill mid-write
     run.run(run.parse_args(args))
     assert [json.loads(x) for x in pred.read_text().splitlines()] == [json.loads(x) for x in lines]
+
+
+def test_transport_error_aborts_without_recording(tmp_path, monkeypatch):
+    from matcher import backends_api
+
+    monkeypatch.setattr(backends_api.time, "sleep", lambda s: None)
+    args = ["--backend", "openai", "--model", "m", "--base-url", "http://127.0.0.1:9/v1", "--timeout", "1",
+            "--split", "val", "--knowledge", "none", "--limit", "1", "--run-id", "t", "--out-root", str(tmp_path)]
+    with pytest.raises(SystemExit, match="nothing recorded"):
+        run.run(run.parse_args(args))
+    pred = tmp_path / "t/predictions.jsonl"
+    assert not pred.exists() or pred.read_text() == ""
