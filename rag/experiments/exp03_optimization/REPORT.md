@@ -111,3 +111,10 @@ effect could become detectable. Natural-query calibration would decide whether a
 - Calibration split is template-generated (some awkward wording, easy positives); thresholds did not transfer.
 - CPU-only latency on a shared cloud container; RAM numbers are process RSS growth (indicative only).
 - One run per configuration for quality (deterministic); repeats only for latency.
+
+## Erratum (audit, 2026-10-15)
+
+The dev grid contained **27** configurations (8 chunk tuning, 2 embedding, 9 rerankers, 2 int8, 6 combinations), i.e.
+26 paired comparisons against the baseline; summaries elsewhere said 28. All per-configuration numbers are unaffected
+(recomputed exactly by `rag/audit/recompute.py`). With a Holm correction for the 26 comparisons, every adjusted
+p-value is 1.0.

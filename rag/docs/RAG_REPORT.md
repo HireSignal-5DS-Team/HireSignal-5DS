@@ -96,7 +96,7 @@ were committed before any run; selection was frozen before the holdout was evalu
 ## 4c. Optimisation study (experiment 03)
 
 Full report: `../experiments/exp03_optimization/REPORT.md`; audit `AUDIT.md`; pre-registered budgets and rule
-`PLAN.md`. 28 configurations on dev (chunk sizes, parent-child variants, e5-base, three rerankers at top-5/10/20,
+`PLAN.md`. 27 configurations on dev (erratum 2026-10-15: earlier text said 28) (chunk sizes, parent-child variants, e5-base, three rerankers at top-5/10/20,
 int8 quantisation, combinations), repeated latency for 13 finalists, calibrated abstention on a separate split.
 
 - Two product profiles were defined before running: real-time (p95 ≤ 300 ms) and async Matcher evidence

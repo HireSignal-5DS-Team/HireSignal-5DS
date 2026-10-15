@@ -7,7 +7,7 @@ Posting `usajobs-883337000` (1859 words). Probe passage: GS-14 specialized-exper
 | fixed | 10 chunks | 186 | 2 | no | no |
 | structure | 11 chunks | 179 | 1 | yes | yes |
 | recursive | 14 chunks | 133 | 1 | yes | no |
-| semantic | (run with --semantic) | | | | |
+| semantic | 23 chunks | 81 | 1 | yes | no |
 | sliding | 11 chunks | 196 | 1 | yes | no |
 | sentence | 17 chunks | 109 | 2 | no | no |
 | parent_child | 11 parent sections (84 children) | 32 | 1 | yes | yes |

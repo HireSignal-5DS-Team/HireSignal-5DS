@@ -63,7 +63,7 @@ Status key: **measured** = backed by a run in `eval/results/`; **reasoned** = ar
     cross-encoder reranker is the best quality option (confirmed on holdout) but fails the CPU latency limit.
 24. **Holdout drop**: baseline job-filtered Hit@1 9/16 on holdout vs 20/24 on dev; dev metrics are optimistic.
 25. **Experiment 03** (2026-10-14): budgets per product profile pre-registered (real-time p95 ≤ 300 ms, async ≤ 2 s).
-    28 dev configurations; no significant improvement in either budget → baseline kept for both profiles.
+    27 dev configurations (erratum: originally written as 28); no significant improvement in either budget → baseline kept for both profiles.
 26. **Abstention**: calibrated thresholds did not transfer from the template calibration split to natural dev queries
     (8/40 false abstentions). Kept opt-in (`baseline-abstain-experimental`), not default.
 27. **Configurable interface**: `profiles.py` + `RAG_PROFILE`; `Retriever` gained optional reranking, parent-child
