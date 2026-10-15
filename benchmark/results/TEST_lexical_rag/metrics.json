@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "name": "TEST_lexical_rag",
+    "split": "test",
+    "backend": {
+      "backend": "lexical_baseline",
+      "is_model": false
+    },
+    "knowledge": "rag.bm25",
+    "k": 3,
+    "limit": null,
+    "model": null,
+    "adapter": null,
+    "max_new_tokens": 192,
+    "peak_rss_mb": 54.2,
+    "torch_threads": 4,
+    "finished_at": "2026-10-15T04:41:14"
+  },
+  "metrics": {
+    "final": {
+      "n": 112,
+      "accuracy": 0.5714285714285714,
+      "macro_f1": 0.46878106081142135,
+      "per_class": {
+        "MET": {
+          "precision": 0.75,
+          "recall": 0.6666666666666666,
+          "f1": 0.7058823529411765,
+          "support": 54
+        },
+        "MISSING": {
+          "precision": 0.49056603773584906,
+          "recall": 0.6842105263157895,
+          "f1": 0.5714285714285714,
+          "support": 38
+        },
+        "UNCERTAIN": {
+          "precision": 0.18181818181818182,
+          "recall": 0.1,
+          "f1": 0.12903225806451613,
+          "support": 20
+        }
+      },
+      "confusion": {
+        "MET": {
+          "MET": 36,
+          "MISSING": 15,
+          "UNCERTAIN": 3
+        },
+        "MISSING": {
+          "MET": 6,
+          "MISSING": 26,
+          "UNCERTAIN": 6
+        },
+        "UNCERTAIN": {
+          "MET": 6,
+          "MISSING": 12,
+          "UNCERTAIN": 2
+        }
+      },
+      "false_met_rate": 0.20689655172413793,
+      "uncertain_recall": 0.1,
+      "predicted_uncertain_share": 0.09821428571428571,
+      "unsupported_met": 0
+    },
+    "raw_model": {
+      "n": 112,
+      "accuracy": 0.5803571428571429,
+      "macro_f1": 0.4205646860514117,
+      "per_class": {
+        "MET": {
+          "precision": 0.6610169491525424,
+          "recall": 0.7222222222222222,
+          "f1": 0.6902654867256637,
+          "support": 54
+        },
+        "MISSING": {
+          "precision": 0.49056603773584906,
+          "recall": 0.6842105263157895,
+          "f1": 0.5714285714285714,
+          "support": 38
+        },
+        "UNCERTAIN": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 20
+        }
+      },
+      "confusion": {
+        "MET": {
+          "MET": 39,
+          "MISSING": 15,
+          "UNCERTAIN": 0
+        },
+        "MISSING": {
+          "MET": 12,
+          "MISSING": 26,
+          "UNCERTAIN": 0
+        },
+        "UNCERTAIN": {
+          "MET": 8,
+          "MISSING": 12,
+          "UNCERTAIN": 0
+        }
+      },
+      "false_met_rate": 0.3448275862068966,
+      "uncertain_recall": 0.0,
+      "predicted_uncertain_share": 0.0,
+      "json_validity": 1.0,
+      "quotes_emitted": 63,
+      "quote_verbatim_rate": 1.0
+    },
+    "per_tag": {
+      "ambiguous_duration": {
+        "n": 4,
+        "accuracy": 0.25
+      },
+      "certification": {
+        "n": 8,
+        "accuracy": 0.625
+      },
+      "contradictory_requirement": {
+        "n": 2,
+        "accuracy": 0.5
+      },
+      "education": {
+        "n": 10,
+        "accuracy": 0.5
+      },
+      "equivalence": {
+        "n": 12,
+        "accuracy": 0.3333333333333333
+      },
+      "exact": {
+        "n": 26,
+        "accuracy": 0.6923076923076923
+      },
+      "experience_years": {
+        "n": 15,
+        "accuracy": 0.4
+      },
+      "language": {
+        "n": 9,
+        "accuracy": 0.5555555555555556
+      },
+      "negation": {
+        "n": 9,
+        "accuracy": 0.3333333333333333
+      },
+      "not_documented": {
+        "n": 21,
+        "accuracy": 0.9047619047619048
+      },
+      "rag_only_term": {
+        "n": 4,
+        "accuracy": 0.25
+      },
+      "related_not_equivalent": {
+        "n": 21,
+        "accuracy": 0.6190476190476191
+      }
+    },
+    "evidence_overlap_gold_met": 0.6111111111111112,
+    "missing_basis_accuracy": 0.7692307692307693,
+    "latency": {
+      "mean_s": 0.0010589285714285713,
+      "max_s": 0.005,
+      "total_s": 0.1186
+    },
+    "n": 112
+  }
+}

@@ -8,7 +8,7 @@ The Matcher runs end to end with one generative model under 1B parameters: **Qwe
 (494,032,768 params) + a task LoRA trained here (r=16, +8.8M params)**, BM25 ESCO retrieval, and deterministic
 validation. On the validation set (110 requirements), it reaches macro-F1 **0.629** with a false-MET rate of
 **8.3%**, against 0.486 / 21.7% for the best zero-shot model (Qwen3.5-0.8B) and 0.507 / 20.0% for a keyword
-baseline. On the locked test set, run once after selection: TEST_RESULT. The LoRA is a CPU **pilot**
+baseline. On the locked test set (112 requirements, run once after selection) it reaches macro-F1 **0.563**, false-MET **1.7%** (keyword baseline 0.469 / 20.7%). It is conservative: MET precision 0.96 with recall 0.46. The LoRA is a CPU **pilot**
 (100-step budget, stopped at step 98 by the 2-hour job limit; `best/` = step 75). Training and evaluation data are synthetic, so
 these numbers show the pipeline works and how arms rank. They are not production accuracy.
 
@@ -61,7 +61,14 @@ Findings:
 
 ## Locked test (single run, after selection)
 
-TEST_TABLE
+| arm | n | macro-F1 | acc | false-MET | UNCERTAIN recall | MET P / R | MISSING P / R | UNCERTAIN P / R | JSON valid | quote verbatim | s/req |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Qwen2.5-0.5B + pilot LoRA + RAG | 112 | 0.563 | 0.598 | 1.7% | 0.45 | 0.96 / 0.46 | 0.56 / 0.87 | 0.33 / 0.45 | 100% | 80.3% | 6.2 |
+| keyword baseline + RAG (reference) | 112 | 0.469 | 0.571 | 20.7% | 0.10 | 0.75 / 0.67 | 0.49 / 0.68 | 0.18 / 0.10 | 100% | 100% | 0.0 |
+
+The test score is lower than val (0.563 vs 0.629). MET recall drops (0.46): the model misses MET more than it
+invents it, so many true matches go to MISSING or UNCERTAIN, and every one of those goes to human review.
+No tuning was done after this run.
 
 ## IMPLEMENTED BUT NOT FULLY TESTED
 
