@@ -158,7 +158,11 @@ def run(a):
     cfg_path.write_text(json.dumps(cfg, indent=2) + "\n")
 
     pred_path = out / "predictions.jsonl"
-    done = {(r["case_id"], r["req_id"]) for r in read_jsonl(pred_path)} if pred_path.exists() else set()
+    if pred_path.exists():  # a killed run can leave a half-written last line: drop it before appending
+        raw = pred_path.read_bytes()
+        if raw and not raw.endswith(b"\n"):
+            pred_path.write_bytes(raw[: raw.rfind(b"\n") + 1])
+    done ={(r["case_id"], r["req_id"]) for r in read_jsonl(pred_path)} if pred_path.exists() else set()
     matcher = Matcher(backend, knowledge, k=a.k)
     from matcher.validate import parse_model_output
 

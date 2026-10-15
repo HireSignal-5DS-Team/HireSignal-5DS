@@ -81,3 +81,14 @@ def test_runner_mock_and_resume(tmp_path):
 def test_test_split_needs_explicit_flag():
     with pytest.raises(SystemExit):
         run.parse_args(["--backend", "lexical", "--split", "test", "--run-id", "x"])
+
+
+def test_resume_drops_half_written_line(tmp_path):
+    args = ["--backend", "mock_gold", "--split", "val", "--knowledge", "none", "--limit", "1", "--run-id", "t",
+            "--out-root", str(tmp_path)]
+    run.run(run.parse_args(args))
+    pred = tmp_path / "t/predictions.jsonl"
+    lines = pred.read_text().splitlines()
+    pred.write_text("\n".join(lines[:-1]) + "\n" + lines[-1][:20])  # simulate a kill mid-write
+    run.run(run.parse_args(args))
+    assert [json.loads(x) for x in pred.read_text().splitlines()] == [json.loads(x) for x in lines]
