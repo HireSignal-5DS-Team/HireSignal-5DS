@@ -1,0 +1,56 @@
+{
+  "run": "qwen3-4b-q4-rag-val",
+  "judge": "pretrained",
+  "judge_dir": "/home/user/hf/hub/models--MoritzLaurer--DeBERTa-v3-base-mnli-fever-anli/snapshots/6f5cf0a2b59cabb106aca4c287eed12e357e90eb",
+  "tau": 0.65,
+  "n_applicable": 100,
+  "n_errors": 8,
+  "strict": {
+    "precision": 0.10638297872340426,
+    "recall": 0.625,
+    "f1": 0.1818181818181818,
+    "false_positive_flag_rate": 0.45652173913043476,
+    "flags": 47
+  },
+  "broad": {
+    "precision": 0.07692307692307693,
+    "recall": 0.625,
+    "f1": 0.13698630136986303,
+    "false_positive_flag_rate": 0.6521739130434783,
+    "flags": 65
+  },
+  "auroc_error_detection": 0.436820652173913,
+  "ece_correctness": 0.509791,
+  "per_tag_error_detection": {
+    "ambiguous_duration": {
+      "errors": 4,
+      "detected_strict": 0.75
+    },
+    "date_range": {
+      "errors": 1,
+      "detected_strict": 1.0
+    },
+    "distractor_details": {
+      "errors": 4,
+      "detected_strict": 0.5
+    },
+    "equivalent_skill_alias": {
+      "errors": 2,
+      "detected_strict": 0.0
+    },
+    "multi_requirement": {
+      "errors": 4,
+      "detected_strict": 0.75
+    },
+    "sufficient_experience": {
+      "errors": 2,
+      "detected_strict": 1.0
+    }
+  },
+  "verdicts": {
+    "PASS": 35,
+    "FAIL": 47,
+    "UNCERTAIN": 18,
+    "NOT_APPLICABLE": 102
+  }
+}
