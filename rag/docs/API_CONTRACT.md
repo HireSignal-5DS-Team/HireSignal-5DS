@@ -33,3 +33,14 @@ depend on this schema; only `api.py` does, so changes here are cheap.
 - `relevance_score` is BM25, cosine or RRF depending on `mode`. Do not threshold or average it downstream.
 
 `GET /health` returns strategy, model and chunk count.
+
+## Additional endpoints (2026-10-15)
+
+- `POST /knowledge` — same request and retrieval as `/retrieve`; returns `{"status", "knowledge_refs": [...]}` where
+  each item is the Qwen3-4B Matcher's `KnowledgeRef` (`rag/contracts/KnowledgeRef.schema.json`, copied verbatim from
+  the Matcher branch; validated in tests). `retrieval` names the retriever, e.g. `rag.dense.e5-small`.
+- `POST /mock/v1/search` — **mock** for Dali's backend: `schema_version: "mock-0 ..."`. Dali's `pipeline` v0.2.0 and
+  `rag_search` v1.1.0 schemas are not in the repository; no field of theirs has been guessed.
+- `GET /health` — now also reports `profile`, `index` (collection name) and `index_reused` (true after a restart).
+- Profiles: start the API with `RAG_PROFILE=baseline` (default/fallback), `async-experimental` or
+  `baseline-abstain-experimental` (see `profiles.py`). The response schema does not change between profiles.

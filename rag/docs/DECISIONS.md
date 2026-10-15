@@ -69,3 +69,9 @@ Status key: **measured** = backed by a run in `eval/results/`; **reasoned** = ar
 27. **Configurable interface**: `profiles.py` + `RAG_PROFILE`; `Retriever` gained optional reranking, parent-child
     collapse and per-collection abstention, all off by default (old tests unchanged). Production `chunking.py` gained
     `parent_child` (tested identical to the exp02 algorithm). Real-model tests gated by `RAG_REAL=1`.
+28. **Model execution** (2026-10-15): keep e5-small loaded inside the single API process (no model server, no
+    background job); embeddings precomputed by `build_index.py` and reused on restart (measured: `index_reused` true,
+    10–11 s start, identical results). Stale collections pruned.
+29. **Matcher integration**: `/knowledge` returns the Matcher's real `KnowledgeRef` schema (copied from its branch,
+    validated in tests); the existing in-process BM25 call of the Matcher is covered by a compatibility test.
+30. **Dali**: schemas still absent; `/mock/v1/search` is a labelled mock, no fields guessed.

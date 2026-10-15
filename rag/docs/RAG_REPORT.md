@@ -1,4 +1,20 @@
-# HireSignal RAG component — final report (2026-10-14)
+# HireSignal RAG component — final report (updated 2026-10-15)
+
+## 0. Final architecture (summary)
+
+| Component | Final choice | Evidence |
+|---|---|---|
+| Knowledge base | 20 USAJOBS postings (public domain) + 1,621 ESCO ICT/data skills (CC BY 4.0), hash-pinned builds | section 2, `SOURCES.md` |
+| Chunking | structure-aware, 300-word sections with `Job / Section` header; ESCO one entry = one chunk | exp01–03 |
+| Embedding | `intfloat/multilingual-e5-small`, CPU, loaded once in the API process | exp02–03 |
+| Index | Qdrant local mode on disk (`rag/index/`), built once by `build_index.py`, reused after restarts | `MODEL_EXECUTION.md`, `RUNTIME.md` |
+| Retrieval | dense, exact cosine, top-k 5, **job-ID filter mandatory** for job-specific queries | exp02–03 |
+| Reranking / abstention | not in the default; available as opt-in experimental profiles | exp03 |
+| Interfaces | `/retrieve` (provisional), `/knowledge` (Matcher `KnowledgeRef`), `/mock/v1/search` (mock for Dali), n8n workflow | section 5 |
+
+Measured on the dev set (42 reviewed queries): ESCO + job-filtered MRR 0.865, Hit@1 31/40; p95 latency ≤ 164 ms
+per query on a 4-core CPU; ~1.3 GB RAM. No generalisation claim yet: the sealed final test awaits review (section 7).
+
 
 Branch `claude/gracious-fermi-ncuem4`. Details: `SOURCES.md`, `DECISIONS.md` (decisions and 22 logged
 failures/corrections), `EVALUATION.md` (all results), `INDEX_VERIFICATION.md`, `../eval/review/VALIDATION.md`.
@@ -99,9 +115,13 @@ int8 quantisation, combinations), repeated latency for 13 finalists, calibrated 
   (parent-child + e5-base + mmarco reranker), `baseline-abstain-experimental` (calibrated abstention). Same response schema.
 - `POST /retrieve` (FastAPI, schema `0.1-provisional`): returns status, source type, source ID, URL, section,
   character span, text and relevance score (labelled as not a probability).
+- `POST /knowledge`: the same retrieval returned as the Qwen3-4B Matcher's `KnowledgeRef` objects; the schema is a
+  verbatim copy from the Matcher branch (`contracts/`) and the output is validated against it in tests. The Matcher's
+  current in-process BM25 call of `Retriever` is covered by a compatibility test.
 - n8n workflow (`n8n/hiresignal_rag_workflow.json`) tested end-to-end via manual and webhook triggers.
-- Adapter for the backend schemas (pipeline v0.2.0, RAG search v1.1.0): **blocked**, schema files not yet in the
-  repository; design in `INTEGRATION_ADAPTER.md`.
+- Dali's backend schemas (pipeline v0.2.0, RAG search v1.1.0): **not in the repository**; `/mock/v1/search` is a
+  labelled mock and `INTEGRATION_ADAPTER.md` describes the real adapter. No schema field has been guessed.
+- Runtime: one process, no model server; embeddings precomputed and reused (`MODEL_EXECUTION.md`).
 
 ## 6. Limitations
 
@@ -116,7 +136,16 @@ int8 quantisation, combinations), repeated latency for 13 finalists, calibrated 
 - Abstention thresholds from a template calibration split do not transfer to natural queries.
 - No GPU measurements (no GPU available to this work).
 
-## 7. Reproduce
+## 7. Final test status and remaining dependencies
+
+- Sealed final test set (`experiments/exp03_optimization/final_test_queries.jsonl`, 36 queries, SHA256 `0a14b0cd…`):
+  **not evaluated**. Its review sheet in the repository has 36 undecided rows; `check_final_review.py` validates a
+  filled sheet without running retrieval. Evaluation runs only after the review is approved.
+- The planned review is AI-assisted with human approval; it must be reported as such, not as independent human annotation.
+- Remaining dependencies: (1) approved final-test review; (2) Dali's two schema files; (3) natural-query calibration
+  before abstention can be enabled; (4) GPU measurements, if a GPU is to be used.
+
+## 8. Reproduce
 
 ```bash
 pip install -r rag/requirements.txt
@@ -130,5 +159,7 @@ HF_HOME=<cache> CUDA_VISIBLE_DEVICES= python rag/evaluate.py --queries rag/eval/
 python rag/compare_results.py
 cd rag/experiments/exp02_benchmark && python run.py dev && python analyze.py dev && python run.py holdout && python analyze.py holdout
 cd rag/experiments/exp03_optimization && python run.py dev && python analyze.py dev && python run.py calibration && python analyze.py calibration && python latency.py && python analyze.py select
-RAG_MODEL=e5-small uvicorn api:app --app-dir rag --port 8000
+python rag/build_index.py --profile baseline --prune
+RAG_PROFILE=baseline uvicorn api:app --app-dir rag --port 8000
+python rag/runtime_check.py
 ```

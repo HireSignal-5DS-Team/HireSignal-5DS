@@ -30,7 +30,9 @@ python rag/build_esco.py                              # needs git + github.com; 
 python -m pytest -q rag/tests
 python rag/evaluate.py                                # BM25 only
 python rag/evaluate.py --models e5-small bge-m3       # dense + hybrid; needs huggingface.co
-RAG_PROFILE=baseline uvicorn api:app --app-dir rag --port 8000   # profiles: see profiles.py
+python rag/build_index.py --profile baseline --prune            # embed once, persist in rag/index/
+RAG_PROFILE=baseline uvicorn api:app --app-dir rag --port 8000   # reuses rag/index/; profiles: see profiles.py
+python rag/runtime_check.py                                       # cold build vs restart, RAM, latency -> docs/RUNTIME.md
 ```
 
 On the shared laptop, force CPU so the LLM benchmark keeps the GPU:
@@ -38,3 +40,6 @@ On the shared laptop, force CPU so the LLM benchmark keeps the GPU:
 
 n8n: import `n8n/hiresignal_rag_workflow.json`. If n8n runs in Docker, change the HTTP node URL from
 `http://localhost:8000` to `http://host.docker.internal:8000`.
+
+Runtime behaviour (model loading, persistence, restart, CPU/RAM/latency): `docs/MODEL_EXECUTION.md`.
+Matcher integration: `POST /knowledge` returns the Matcher's `KnowledgeRef` objects (`contracts/`).
