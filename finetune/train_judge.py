@@ -13,6 +13,7 @@ train. val and test are never read. Checkpoint is written outside git (size ~0.7
 """
 import argparse
 import json
+import math
 import random
 import time
 from pathlib import Path
@@ -73,7 +74,8 @@ def main():
     tr = pairs([c for c in cases if not is_dev(c["case_id"])])
     dev = pairs([c for c in cases if is_dev(c["case_id"])])
     tok = AutoTokenizer.from_pretrained(BASE, revision=BASE_REV)
-    model = AutoModelForSequenceClassification.from_pretrained(BASE, revision=BASE_REV)
+    model = AutoModelForSequenceClassification.from_pretrained(BASE, revision=BASE_REV, dtype=torch.float32)  # config says fp16
+    assert next(model.parameters()).dtype == torch.float32
     id2label = {int(k): v.lower() for k, v in model.config.id2label.items()}
     lab2id = {lab: next(i for i, v in id2label.items() if v.startswith(lab[:4])) for lab in LABELS}
 
@@ -120,6 +122,10 @@ def main():
             sched.step()
             opt.zero_grad()
             tot, n = tot + loss.item(), n + 1
+            if n % 5 == 0:
+                print(json.dumps({"epoch": ep, "step": n, "loss_avg": tot / n, "elapsed_s": round(time.perf_counter() - t0, 1)}), flush=True)
+        if not math.isfinite(tot / n):
+            raise FloatingPointError(f"non-finite training loss in epoch {ep}")
         acc, per = evaluate()
         log.append({"epoch": ep, "train_loss": tot / n, "dev_acc": acc, "dev_per_type": per,
                     "elapsed_s": round(time.perf_counter() - t0, 1)})

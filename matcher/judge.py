@@ -45,7 +45,8 @@ class NLIJudge:
 
         self.torch = torch
         self.tok = AutoTokenizer.from_pretrained(model_dir)
-        self.model = AutoModelForSequenceClassification.from_pretrained(model_dir).to(device).eval()
+        # explicit fp32: the checkpoint config says float16, which transformers 5 honours (slow + unstable on CPU)
+        self.model = AutoModelForSequenceClassification.from_pretrained(model_dir, dtype=torch.float32).to(device).eval()
         id2label = {int(k): v.lower() for k, v in self.model.config.id2label.items()}
         self.idx = {lab: next(i for i, v in id2label.items() if v.startswith(lab[:4])) for lab in LABELS}
         self.tau_pass, self.tau_fail, self.device, self.max_length = tau_pass, tau_fail, device, max_length

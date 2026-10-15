@@ -1,0 +1,1 @@
+Judge results produced with the checkpoint loaded in float16 (transformers 5 default from config torch_dtype). Fine-tuning diverged (NaN at step 12) and was stopped; inference numbers kept for traceability only. Superseded by the fp32 reruns.
