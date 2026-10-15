@@ -1,0 +1,66 @@
+{
+  "base": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+  "base_revision": "6f5cf0a2b59cabb106aca4c287eed12e357e90eb",
+  "args": {
+    "out": "/home/user/judge_runs/deberta-hs-v1",
+    "epochs": 2,
+    "lr": 2e-05,
+    "batch": 16,
+    "max_len": 320,
+    "seed": 13
+  },
+  "n_train_pairs": 770,
+  "n_dev_pairs": 208,
+  "train_pair_types": {
+    "ambiguous": 87,
+    "wrong_evidence": 231,
+    "met": 237,
+    "not_documented": 79,
+    "contradicted": 136
+  },
+  "dataset_sha256": "d0206264f093be7c1b41b7fd9e71868ded006ee997ad7e0f8007710511231a77",
+  "splits_used": [
+    "train (index % 5 != 0) for training",
+    "train (index % 5 == 0) for dev"
+  ],
+  "log": [
+    {
+      "epoch": 0,
+      "dev_acc": 0.5865384615384616,
+      "dev_per_type": {
+        "met": 0.441,
+        "wrong_evidence": 0.803,
+        "contradicted": 0.633,
+        "not_documented": 0.464,
+        "ambiguous": 0.438
+      }
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.25338543741013475,
+      "dev_acc": 0.9759615384615384,
+      "dev_per_type": {
+        "met": 0.941,
+        "wrong_evidence": 1.0,
+        "contradicted": 1.0,
+        "not_documented": 0.964,
+        "ambiguous": 1.0
+      },
+      "elapsed_s": 314.2
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.006293785380560676,
+      "dev_acc": 0.9903846153846154,
+      "dev_per_type": {
+        "met": 0.985,
+        "wrong_evidence": 1.0,
+        "contradicted": 1.0,
+        "not_documented": 0.964,
+        "ambiguous": 1.0
+      },
+      "elapsed_s": 617.2
+    }
+  ],
+  "best_dev_acc": 0.9903846153846154
+}
