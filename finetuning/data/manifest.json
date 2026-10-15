@@ -1,0 +1,58 @@
+{
+  "source": "benchmark/data/train.jsonl (bench-v1, synthetic, generator benchmark/make_dataset.py, seed 20261015)",
+  "source_sha256": "d0206264f093be7c1b41b7fd9e71868ded006ee997ad7e0f8007710511231a77",
+  "prompt_version": "p1",
+  "knowledge": "rag.bm25 (ESCO ICT subset), k=3",
+  "files": {
+    "sft_train.jsonl": {
+      "sha256": "32efc320f4188081737c3fb67cb3c080835b8f62dd75a56ff9a6d18f2ffcb098",
+      "examples": 539,
+      "cases": 120,
+      "decisions": {
+        "MET": 237,
+        "UNCERTAIN": 87,
+        "MISSING": 215
+      }
+    },
+    "sft_dev.jsonl": {
+      "sha256": "f20111f13923032ee29e8a78b1a4b6ed36cc0e8e95c4f18e0f6ae300f0820978",
+      "examples": 142,
+      "cases": 30,
+      "decisions": {
+        "MET": 68,
+        "MISSING": 58,
+        "UNCERTAIN": 16
+      }
+    },
+    "val_prompts.jsonl": {
+      "sha256": "b49708f2722cee38fefeafdbae72c4362d92d0c43b8947be10b29851a4d8ef82",
+      "prompts": 202,
+      "use": "EVALUATION ONLY - never train on it; gold labels stay in benchmark/data/val.jsonl"
+    }
+  },
+  "reserved_never_train": {
+    "val": "benchmark/data/val.jsonl (45 cases / 202 requirements)",
+    "test": "benchmark/data/test.jsonl (45 cases / 199 requirements, sealed)"
+  },
+  "leakage_audit": {
+    "val": {
+      "cases": 45,
+      "exact_cv_duplicates": 0,
+      "exact_requirement_text_overlap": 0,
+      "exact_cv_line_overlap (len>25)": 0,
+      "near_duplicate_cv_max_jaccard_6gram": 0.0,
+      "near_duplicate_cv_mean_jaccard_6gram": 0.0,
+      "cvs_with_jaccard_ge_0.5": 0
+    },
+    "test": {
+      "cases": 45,
+      "exact_cv_duplicates": 0,
+      "exact_requirement_text_overlap": 0,
+      "exact_cv_line_overlap (len>25)": 0,
+      "near_duplicate_cv_max_jaccard_6gram": 0.0,
+      "near_duplicate_cv_mean_jaccard_6gram": 0.0,
+      "cvs_with_jaccard_ge_0.5": 0
+    }
+  },
+  "privacy": "fully synthetic, anonymised by construction: no real person, name, e-mail or employer"
+}
