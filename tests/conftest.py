@@ -140,5 +140,21 @@ def scanned_pdf(photo_png):
 
 
 @pytest.fixture(scope="session")
+def noisy_photo(photo_png):
+    """The clean photo with salt-and-pepper noise, like a bad scan (real case: samples/1.png)."""
+    import random
+    from PIL import Image
+    random.seed(0)
+    img = Image.open(io.BytesIO(photo_png)).convert("L")
+    px = img.load()
+    for _ in range(int(img.width * img.height * 0.08)):
+        x, y = random.randrange(img.width), random.randrange(img.height)
+        px[x, y] = random.choice((0, 90, 160))
+    buf = io.BytesIO()
+    img.save(buf, "PNG")
+    return buf.getvalue()
+
+
+@pytest.fixture(scope="session")
 def two_column_photo(two_column_pdf):
     return _pdf_to_png(two_column_pdf)

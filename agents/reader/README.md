@@ -7,7 +7,7 @@ Turns any CV file into **clean text + sections**. No AI model, only tools.
 | Text PDF | PyMuPDF | Detects two-column CVs and reads left column, then right |
 | Scanned PDF | PyMuPDF renders the page, Tesseract reads it | A page with < 50 characters of text is treated as a scan |
 | Word `.docx` | python-docx | Also reads page headers, tables and text boxes (sidebars) |
-| Photo / image | Pillow cleans it, Tesseract reads it | Fixes rotation, contrast, small size; crops columns before OCR |
+| Photo / image | Pillow cleans it, Tesseract reads it | Fixes rotation, transparency, contrast, small size; crops columns before OCR; denoises bad scans |
 
 The file type is detected from the file's **content**, not its extension.
 
@@ -72,7 +72,17 @@ python -m pytest -q
 The tests build fake CVs on the fly (single-column PDF, two-column PDF, DOCX,
 photo, scanned PDF), so no real personal data is stored in the repo.
 
+## What real CVs taught us (for the report)
+
+| Real CV | Problem | Fix |
+|---|---|---|
+| cv02.pdf | `Technical skills: Java, ...` on the heading's line was swallowed by Education | Inline headings (`Label: content`) start a section; job-level labels like `Tools:` don't |
+| 1.png | Salt-and-pepper noise: OCR confidence 53.5, text unreadable | If confidence < 80, retry with median filters (3, 5) and keep the best: 53.5 -> 88.1 |
+
 ## Known limits (for the report)
+
+- CVs with **no headings at all** put everything in `header`. The full `text` is
+  still complete, and the Profile Agent's NER finds titles, degrees and dates.
 
 - Column detection handles **two** columns, not three.
 - Old `.doc` files are refused (ask for `.docx` or PDF).

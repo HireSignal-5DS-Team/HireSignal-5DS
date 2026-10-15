@@ -85,6 +85,18 @@ def test_ocr_two_column_photo(two_column_photo):
     assert "Talan" not in r.sections["skills"]
 
 
+def test_noisy_scan_is_denoised(noisy_photo):
+    r = read_cv(noisy_photo, "noisy.png")
+    assert any("denoised" in w for w in r.warnings)
+    assert r.ocr_confidence > 70
+    assert "PyTorch" in r.sections["skills"]
+
+
+def test_clean_photo_is_not_denoised(photo_png):
+    r = read_cv(photo_png, "photo.png")
+    assert not any("denoised" in w for w in r.warnings)
+
+
 def test_scanned_pdf_falls_back_to_ocr(scanned_pdf):
     r = read_cv(scanned_pdf, "scan.pdf")
     assert r.file_type == "pdf"
@@ -127,6 +139,10 @@ def test_split_sections_merges_repeated_headings():
     s = split_sections(text)
     assert s["skills"] == "Python\nDocker"
     assert s["header"] == "Name"
+
+
+def test_clean_text_drops_noise_only_lines():
+    assert clean_text("Wassim\n;\n° :\nEngineer") == "Wassim\n\nEngineer"
 
 
 def test_clean_text_fixes_ligatures_and_hyphens():

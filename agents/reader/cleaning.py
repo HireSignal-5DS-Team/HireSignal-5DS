@@ -25,6 +25,8 @@ def clean_text(text: str) -> str:
     text = re.sub(r"(\w)-\n(?=[a-zà-ÿ])", r"\1", text)
 
     lines = [re.sub(r"[ \t]+", " ", line).strip() for line in text.splitlines()]
+    # Drop lines with no letter or digit (OCR noise like ";", "° :", "|").
+    lines = [line if re.search(r"\w", line) else "" for line in lines]
 
     # Collapse runs of empty lines to a single empty line.
     cleaned, blank = [], False

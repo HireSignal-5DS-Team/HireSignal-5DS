@@ -24,7 +24,7 @@ from pathlib import Path
 import docx
 import pymupdf
 import pytesseract
-from PIL import Image, ImageOps
+from PIL import Image, ImageFilter, ImageOps
 
 from .cleaning import clean_text
 from .sections import split_sections
@@ -35,6 +35,8 @@ MIN_CHARS_TEXT_PAGE = 50     # fewer characters than this on a PDF page -> treat
 OCR_DPI = 300                # resolution used to render scanned PDF pages
 MIN_IMAGE_WIDTH = 1500       # small photos are upscaled before OCR
 LOW_OCR_CONFIDENCE = 60      # below this (0-100), a person should check the text
+RETRY_OCR_CONFIDENCE = 80    # below this, also try denoised versions of the image
+DENOISE_SIZES = (3, 5)       # median filter sizes tried on noisy scans
 MIN_CV_CHARS = 200           # a real CV has at least this much text
 
 _WINDOWS_TESSERACT = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
@@ -149,6 +151,28 @@ def _ocr_image(image: Image.Image) -> tuple[str, float | None, str]:
     return "\n\n".join(parts), conf, "two_column"
 
 
+def _ocr_with_cleanup(image: Image.Image, warnings: list[str]) -> tuple[str, float | None, str]:
+    """OCR the page; if confidence is low, retry on denoised copies and keep the best.
+
+    A median filter removes "salt and pepper" dots from bad scans, which
+    Tesseract otherwise reads as letters. It is not applied to clean images,
+    because it can also thin out small letters.
+    """
+    text, conf, layout = _ocr_image(image)
+    if conf is not None and conf >= RETRY_OCR_CONFIDENCE:
+        return text, conf, layout
+
+    best = (text, conf, layout, None)
+    for size in DENOISE_SIZES:
+        t, c, l = _ocr_image(image.filter(ImageFilter.MedianFilter(size)))
+        if c is not None and (best[1] is None or c > best[1]):
+            best = (t, c, l, size)
+    if best[3] is not None:
+        warnings.append(f"Noisy image: denoised before OCR (median {best[3]}), "
+                        f"confidence {conf} -> {best[1]}.")
+    return best[0], best[1], best[2]
+
+
 def _merge_rows(boxes: list) -> list:
     """Group boxes whose vertical centres line up into rows, read left to right.
 
@@ -195,6 +219,10 @@ def _blocks_to_text(blocks: list) -> str:
 def _prepare_photo(image: Image.Image) -> Image.Image:
     """Make phone photos and scans easier for OCR."""
     image = ImageOps.exif_transpose(image)          # respect the phone's rotation flag
+    if image.mode in ("RGBA", "LA", "P"):           # transparent PNG -> white background
+        image = image.convert("RGBA")
+        background = Image.new("RGBA", image.size, "white")
+        image = Image.alpha_composite(background, image)
     image = image.convert("L")                      # grayscale
     image = ImageOps.autocontrast(image, cutoff=1)  # stretch faded scans
     if image.width < MIN_IMAGE_WIDTH:               # small photos -> upscale
@@ -295,7 +323,7 @@ def _read_pdf(data: bytes, warnings: list[str]) -> tuple[str, list[str], str, fl
         else:
             pix = page.get_pixmap(dpi=OCR_DPI)
             image = Image.open(io.BytesIO(pix.tobytes("png")))
-            text, conf, layout = _ocr_image(_prepare_photo(image))
+            text, conf, layout = _ocr_with_cleanup(_prepare_photo(image), warnings)
             page_texts.append(text)
             routes.append("ocr")
             layouts.append(layout)
@@ -364,7 +392,7 @@ def _read_image(data: bytes, warnings: list[str]) -> tuple[str, float | None, st
     except Exception as exc:
         raise ReaderError(f"Unreadable image: {exc}") from exc
     warnings.append("Image file: text was read with OCR.")
-    return _ocr_image(_prepare_photo(image))
+    return _ocr_with_cleanup(_prepare_photo(image), warnings)
 
 
 # ------------------------------------------------------------ file sniffing ---
