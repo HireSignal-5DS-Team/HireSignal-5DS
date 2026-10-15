@@ -52,6 +52,11 @@ def make_backend(a, cases):
         from matcher.backends_extra import Seq2SeqBackend
 
         return Seq2SeqBackend(a.model, revision=a.revision, max_new_tokens=a.max_new_tokens, device=a.device, dtype=a.dtype)
+    if a.backend == "openai":
+        from matcher.backends_api import OpenAICompatBackend
+
+        return OpenAICompatBackend(base_url=a.base_url, model=a.model, max_tokens=a.max_new_tokens, provider=a.provider,
+                                   timeout=a.timeout)
     if a.backend == "fermi":
         from matcher.backends_extra import FermiBackend
 
@@ -104,7 +109,10 @@ def git_commit():
 
 def parse_args(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--backend", required=True, choices=["lexical", "mock_gold", "mock_uncertain", "transformers", "seq2seq", "fermi"])
+    ap.add_argument("--backend", required=True, choices=["lexical", "mock_gold", "mock_uncertain", "transformers", "seq2seq", "fermi", "openai"])
+    ap.add_argument("--base-url", help="openai backend: OpenAI-compatible /v1 endpoint (local llama.cpp server or hosted API)")
+    ap.add_argument("--provider", default="local", help="openai backend: 'local' or a hosted provider name (cost bookkeeping)")
+    ap.add_argument("--timeout", type=float, default=300.0, help="openai backend: per-call timeout in seconds")
     ap.add_argument("--fermi-repo", help="local snapshot of Zerflyne/FERMI-0.8B (its fermi/ package is imported)")
     ap.add_argument("--fermi-base", help="local snapshot of Qwen/Qwen3.5-0.8B")
     ap.add_argument("--model")
@@ -126,7 +134,7 @@ def parse_args(argv=None):
                     help="adapter study only; p1 is the Matcher prompt")
     ap.add_argument("--constrained", action="store_true", help="JSON-schema constrained decoding (transformers backend)")
     a = ap.parse_args(argv)
-    if a.backend in ("transformers", "seq2seq") and not a.model:
+    if a.backend in ("transformers", "seq2seq", "openai") and not a.model:
         ap.error(f"--model is required for --backend {a.backend}")
     if a.backend == "fermi" and not (a.fermi_repo and a.fermi_base):
         ap.error("--fermi-repo and --fermi-base are required for --backend fermi")
@@ -188,7 +196,8 @@ def run(a):
                        "raw_quotes_valid": sum(find_span(cv.text, q) is not None for q in quotes),
                        "evidence": res.evidence, "evidence_spans": res.evidence_spans,
                        "needs_human_review": res.needs_human_review, "review_reasons": res.review_reasons,
-                       "rag_refs": res.rag_refs, "latency_s": round(info["latency_s"], 4)}
+                       "rag_refs": res.rag_refs, "latency_s": round(info["latency_s"], 4),
+                       **({"call": backend.last_call} if getattr(backend, "last_call", None) is not None else {})}
                 f.write(json.dumps(rec, ensure_ascii=False) + "\n")
                 f.flush()
             print(f"{c['case_id']} done", flush=True)

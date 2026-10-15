@@ -1,0 +1,25 @@
+{
+  "run_id": "lexical-rag-train",
+  "split": "train",
+  "limit": 0,
+  "knowledge": "rag.bm25",
+  "k": 3,
+  "backend": {
+    "backend": "lexical_baseline",
+    "is_model": false
+  },
+  "dataset_version": "bench-v1",
+  "dataset_sha256": "d0206264f093be7c1b41b7fd9e71868ded006ee997ad7e0f8007710511231a77",
+  "git_commit": "8e38ad4ec31dfef06d1be9d0c7e78d73f4de55a0",
+  "hardware": {
+    "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+    "python": "3.13.16",
+    "cpu_count": 4,
+    "ram_gb": 15.7,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "load_seconds": 5.06
+}
