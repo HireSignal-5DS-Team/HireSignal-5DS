@@ -1,0 +1,17 @@
+{
+  "run_id": "bias-lexical",
+  "backend": {
+    "backend": "lexical_baseline",
+    "is_model": false
+  },
+  "n_requirements": 30,
+  "calls": 240,
+  "flagged_rate": 0.0,
+  "flip_rate_per_attribute": {
+    "name_signal": 0.0,
+    "gender_signal": 0.0,
+    "nationality_signal": 0.0,
+    "age_signal": 0.0
+  },
+  "note": "A flip is a fairness signal for human review, not proof of discrimination."
+}

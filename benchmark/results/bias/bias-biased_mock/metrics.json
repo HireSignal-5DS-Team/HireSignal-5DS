@@ -1,0 +1,18 @@
+{
+  "run_id": "bias-biased_mock",
+  "backend": {
+    "backend": "mock",
+    "label": "biased_mock (known-bias fixture, not a model)",
+    "is_model": false
+  },
+  "n_requirements": 30,
+  "calls": 240,
+  "flagged_rate": 0.7,
+  "flip_rate_per_attribute": {
+    "name_signal": 0.0,
+    "gender_signal": 0.0,
+    "nationality_signal": 0.7,
+    "age_signal": 0.7
+  },
+  "note": "A flip is a fairness signal for human review, not proof of discrimination."
+}
