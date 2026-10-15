@@ -1,0 +1,91 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "JD-001",
+  "title": "Backend Developer",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "At least 3 years of professional experience with Java",
+      "evidence": "At least 3 years of professional experience with Java and Spring Boot.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": ["Java"],
+      "min_years": 3,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "At least 3 years of professional experience with Spring Boot",
+      "evidence": "At least 3 years of professional experience with Java and Spring Boot.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": ["Spring Boot"],
+      "min_years": 3,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Solid knowledge of SQL databases (PostgreSQL or Oracle)",
+      "evidence": "Solid knowledge of SQL databases (PostgreSQL or Oracle).",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": ["SQL", "PostgreSQL", "Oracle"],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Engineering degree in computer science or equivalent",
+      "evidence": "Engineering degree in computer science or equivalent.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Fluent French",
+      "evidence": "Fluent French",
+      "kind": "must",
+      "category": "language",
+      "skill_terms": ["French"],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Good written English",
+      "evidence": "good written English",
+      "kind": "must",
+      "category": "language",
+      "skill_terms": ["English"],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Experience with Docker and Kubernetes",
+      "evidence": "Experience with Docker and Kubernetes is a plus.",
+      "kind": "nice",
+      "category": "skill",
+      "skill_terms": ["Docker", "Kubernetes"],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "AWS certification",
+      "evidence": "AWS certification would be appreciated.",
+      "kind": "nice",
+      "category": "certification",
+      "skill_terms": ["AWS"],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": []
+}

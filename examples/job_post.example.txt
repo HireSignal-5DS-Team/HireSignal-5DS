@@ -1,0 +1,13 @@
+Backend Developer - Tunis (hybrid)
+
+We are looking for a Backend Developer to join our payments team.
+
+Requirements:
+- At least 3 years of professional experience with Java and Spring Boot.
+- Solid knowledge of SQL databases (PostgreSQL or Oracle).
+- Engineering degree in computer science or equivalent.
+- Fluent French; good written English.
+
+Nice to have:
+- Experience with Docker and Kubernetes is a plus.
+- AWS certification would be appreciated.

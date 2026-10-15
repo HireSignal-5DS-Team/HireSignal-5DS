@@ -1,0 +1,5 @@
+# Contracts
+pydantic>=2.6
+
+# Tests
+pytest>=8.0
