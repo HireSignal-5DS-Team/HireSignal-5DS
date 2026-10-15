@@ -1,0 +1,72 @@
+{
+  "run": "lexical-rag-val",
+  "judge": "finetuned",
+  "judge_dir": "/home/user/judge_runs/deberta-hs-v1/best",
+  "tau": 0.85,
+  "n_applicable": 202,
+  "n_errors": 84,
+  "strict": {
+    "precision": 0.8939393939393939,
+    "recall": 0.7023809523809523,
+    "f1": 0.7866666666666666,
+    "false_positive_flag_rate": 0.059322033898305086,
+    "flags": 66
+  },
+  "broad": {
+    "precision": 0.8421052631578947,
+    "recall": 0.7619047619047619,
+    "f1": 0.8,
+    "false_positive_flag_rate": 0.1016949152542373,
+    "flags": 76
+  },
+  "auroc_error_detection": 0.9054176755447942,
+  "ece_correctness": 0.15104455445544557,
+  "per_tag_error_detection": {
+    "ambiguous_duration": {
+      "errors": 21,
+      "detected_strict": 1.0
+    },
+    "certification": {
+      "errors": 9,
+      "detected_strict": 1.0
+    },
+    "contradictory_evidence": {
+      "errors": 26,
+      "detected_strict": 0.8461538461538461
+    },
+    "distractor_details": {
+      "errors": 29,
+      "detected_strict": 0.8275862068965517
+    },
+    "equivalent_skill_alias": {
+      "errors": 4,
+      "detected_strict": 0.0
+    },
+    "implicit_project_evidence": {
+      "errors": 15,
+      "detected_strict": 0.06666666666666667
+    },
+    "language": {
+      "errors": 4,
+      "detected_strict": 0.0
+    },
+    "multi_requirement": {
+      "errors": 46,
+      "detected_strict": 0.6739130434782609
+    },
+    "negation_trap": {
+      "errors": 22,
+      "detected_strict": 1.0
+    },
+    "partial_evidence": {
+      "errors": 18,
+      "detected_strict": 0.8333333333333334
+    }
+  },
+  "verdicts": {
+    "PASS": 126,
+    "FAIL": 66,
+    "UNCERTAIN": 10,
+    "NOT_APPLICABLE": 0
+  }
+}
