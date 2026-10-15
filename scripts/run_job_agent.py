@@ -69,7 +69,9 @@ def main() -> None:
     out = args.out or Path("out") / f"{job_id}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(card.model_dump(), indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"\nSaved {out}")
+    raw = out.with_name(out.stem + f".{args.prompt}.raw.txt")
+    raw.write_text(backend.last_raw, encoding="utf-8")
+    print(f"\nSaved {out}  (model's raw answer: {raw})")
 
 
 if __name__ == "__main__":

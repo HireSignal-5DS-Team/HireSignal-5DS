@@ -97,12 +97,31 @@ following the rule "one requirement = one thing to check" (9 requirements in tot
 **Before / after** (same job offer, same model, same settings; run
 `python scripts\run_job_agent.py examples\job_post.example.txt --prompt job-v1` then `--prompt job-v2`):
 
-| Measure | job-v1 | job-v2 |
+**First job-v2 run** (2026-10-15, laptop, Ollama, `--mode inline`):
+
+| Check against the gold card (9) | job-v1 | job-v2 (first run) |
 |---|---|---|
-| Requirements found (of 9) | 7 | *to measure* |
-| Invented | 0 | |
-| Skills lost in compound lines | 2 (Spring Boot, Kubernetes) | |
-| kind correct | 7 / 7 | |
+| Java **and** Spring Boot both found (F1) | no: Spring Boot lost | **yes, fixed** |
+| "PostgreSQL or Oracle" kept as one | yes | yes |
+| French / English correct | yes | text wrong: "Fluent English" instead of "good written English" (F3) |
+| Docker / Kubernetes found | as one item | **dropped** as invented (F4) |
+| Invented requirements kept | 0 | 0 |
+
+The prompt change worked (the model now lists both skills of a compound line), and it
+exposed two failures **in the code around the model**, not in the model:
+
+| # | Failure | Cause | Fix (code) |
+|---|---|---|---|
+| F3 | "Fluent French; good written English." split into "Fluent French" + "Fluent **English**" | the split assumed both skills share one phrase ("experience with Java and Spring Boot"); here they are two clauses | if the skills are separated by `;`, a sentence end or a line break, each skill gets **its own clause** as text and evidence, with its own years and must/nice (`_split_by_clause`) |
+| F4 | Docker/Kubernetes quote 87% similar to the real line, under the 90% threshold, so dropped | the model quoted the line with extra words around it (exact text unknown: raw answers were not saved yet) | if the quote **contains** a whole real line, keep that line (`contained`); dropped items now show what the model quoted, and the raw answer is saved to `out/<job>.<prompt>.raw.txt` |
+
+Lesson for the report: a better prompt can move errors downstream. Measuring the whole
+agent (model + guardrails), not the model alone, is what caught F3.
+
+| Measure | job-v1 | job-v2 + F3/F4 fixes |
+|---|---|---|
+| Requirements correct (of 9) | *to re-measure* | *to measure* |
+| Invented kept | | |
 
 ### Guardrails applied after every call (code, not prompt)
 

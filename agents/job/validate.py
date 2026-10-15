@@ -108,6 +108,14 @@ def locate_evidence(quote: str, post: str) -> tuple[str | None, str]:
         if match:
             return match.group(0), "spacing"
 
+    # The quote wraps a real line with extra words, e.g. a heading glued on:
+    # "Nice to have: Experience with Docker ..." -> keep the real line only.
+    squashed_quote = _squash(quote).lower()
+    contained = [line for line in _candidate_lines(post)
+                 if len(line) >= 15 and _squash(line).lower() in squashed_quote]
+    if contained:
+        return max(contained, key=len), "contained"
+
     # A small copying slip ("Experiance", missing final period): closest line.
     best, best_ratio = None, 0.0
     for line in _candidate_lines(post):
@@ -155,10 +163,12 @@ def check_requirements(items: list, post: str) -> CheckReport:
         label = f"'{text[:50]}'" if text else label
 
         # 1. Evidence must come from the job offer.
-        evidence, how = locate_evidence(str(item.get("evidence") or ""), post)
+        raw_quote = str(item.get("evidence") or "")
+        evidence, how = locate_evidence(raw_quote, post)
         if evidence is None:
             report.dropped += 1
-            report.warnings.append(f"{label}: quote {how} in the job offer, dropped as invented")
+            report.warnings.append(f"{label}: quote {how} in the job offer, dropped as invented "
+                                   f"(model quoted: \"{_squash(raw_quote)[:100]}\")")
             continue
         if how != "exact":
             report.repaired += 1
@@ -237,6 +247,37 @@ def check_requirements(items: list, post: str) -> CheckReport:
 
 _ALTERNATIVE = re.compile(r"\b(or|ou|either|soit)\b|/")
 _NO_SPLIT_CATEGORIES = {"education", "other"}
+_CLAUSE_BREAK = re.compile(r"[;\n]|\.\s")
+
+
+def _split_by_clause(req: dict) -> list[dict]:
+    """Two requirements share one line: give each skill its own clause.
+
+    "Fluent French; good written English." -> "Fluent French" + "good written English"
+    (not "Fluent English"). Each clause keeps its own years and must/nice wording.
+    """
+    clauses = [c.strip().rstrip(".;:,").strip()
+               for c in re.split(r"[;\n]|(?<=\.)\s+", req["evidence"])]
+    clauses = [c for c in clauses if c]
+    groups: dict[str, list[str]] = {}
+    for term in req["skill_terms"]:
+        home = next((c for c in clauses if term.lower() in c.lower()), None)
+        if home is None:
+            return [req]  # cannot place a term: keep the line whole rather than guess
+        groups.setdefault(home, []).append(term)
+
+    parts = []
+    for clause, terms in groups.items():
+        years = years_in(clause)
+        kind = req["kind"]
+        if _has_cue(clause, NICE_CUES) and not _has_cue(clause, MUST_CUES):
+            kind = "nice"
+        elif _has_cue(clause, MUST_CUES) and not _has_cue(clause, NICE_CUES):
+            kind = "must"
+        sub = {**req, "text": clause, "evidence": clause, "skill_terms": terms, "kind": kind,
+               "min_years": (int(min(years)) if min(years).is_integer() else min(years)) if years else None}
+        parts += split_compound(sub) if len(terms) > 1 else [sub]
+    return parts
 
 
 def _term_span(evidence: str, terms: list[str]) -> tuple[int, int] | None:
@@ -262,7 +303,10 @@ def split_compound(req: dict) -> list[dict]:
         return [req]
 
     span = _term_span(req["evidence"], terms)
-    if span and _ALTERNATIVE.search(_fold(req["evidence"][span[0]:span[1]])):
+    between = req["evidence"][span[0]:span[1]] if span else ""
+    if span and _CLAUSE_BREAK.search(between):
+        return _split_by_clause(req)  # "Fluent French; good written English."
+    if span and _ALTERNATIVE.search(_fold(between)):
         return [req]  # alternatives: any one of them is enough
 
     parts = []

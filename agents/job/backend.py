@@ -63,6 +63,7 @@ class NuExtractClient:
             raise ValueError("mode must be 'kwargs' or 'inline'")
         self.timeout, self.max_tokens = timeout, max_tokens
         self.last_call: dict = {}
+        self.last_raw: str = ""   # the model's raw answer, saved for debugging and the prompt library
 
     def _payload(self, text: str, template: str, examples: list[dict]) -> dict:
         payload = {
@@ -110,7 +111,8 @@ class NuExtractClient:
             "mode": self.mode,
         }
         try:
-            return body["choices"][0]["message"]["content"] or ""
+            self.last_raw = body["choices"][0]["message"]["content"] or ""
+            return self.last_raw
         except (KeyError, IndexError, TypeError) as exc:
             raise BackendError(f"Unexpected answer from the server: {str(body)[:300]}") from exc
 

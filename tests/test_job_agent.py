@@ -287,3 +287,43 @@ def test_education_is_never_split():
     item = {"text": "x", "evidence": "Degree in mathematics and statistics.", "kind": "must",
             "category": "education", "skill_terms": ["mathematics", "statistics"], "min_years": None, "chunk_ids": []}
     assert split_compound(item) == [item]
+
+
+# ------------------------------------- failures from the first job-v2 run (F3, F4) ---
+
+def test_f3_two_requirements_on_one_line_get_their_own_clause():
+    """Real run: 'Fluent French; good written English.' became 'Fluent English'."""
+    line = "Fluent French; good written English."
+    card = run_job_agent(POST, "JD-001", FakeBackend([answer([
+        req("Fluent French and English", line, category="language", skill_terms=["French", "English"])])]))
+    assert [(r.text, r.evidence, r.skill_terms) for r in card.requirements] == [
+        ("Fluent French", "Fluent French", ["French"]),
+        ("good written English", "good written English", ["English"]),
+    ]
+
+
+def test_clause_split_keeps_each_clause_own_years_and_kind():
+    post = POST + "\n- 5 years of Java required; Go is a plus."
+    card = run_job_agent(post, "JD-001", FakeBackend([answer([
+        req("Java and Go", "5 years of Java required; Go is a plus.", category="experience",
+            skill_terms=["Java", "Go"], min_years=5)])]))
+    assert [(r.skill_terms, r.kind, r.min_years) for r in card.requirements] == [
+        (["Java"], "must", 5), (["Go"], "nice", None)]
+
+
+def test_f4_quote_with_heading_glued_on_keeps_the_real_line():
+    """Real run: the Docker/Kubernetes quote was 87% similar and got dropped as invented."""
+    glued = "Nice to have: Experience with Docker and Kubernetes is a plus."
+    card = run_job_agent(POST, "JD-001", FakeBackend([answer([
+        req("Docker and Kubernetes", glued, kind="nice", skill_terms=["Docker", "Kubernetes"])])]))
+    assert [r.text for r in card.requirements] == [
+        "Experience with Docker is a plus", "Experience with Kubernetes is a plus"]
+    assert card.requirements[0].evidence == "Experience with Docker and Kubernetes is a plus."
+    assert any("contained" in w for w in card.warnings)
+
+
+def test_dropped_warning_shows_what_the_model_quoted():
+    card = run_job_agent(POST, "JD-001", FakeBackend([answer([
+        req("SQL", "Solid knowledge of SQL databases (PostgreSQL or Oracle).", skill_terms=["SQL"]),
+        req("Rust", "Ten years of Rust in production.", skill_terms=["Rust"])])]))
+    assert any('model quoted: "Ten years of Rust in production."' in w for w in card.warnings)
