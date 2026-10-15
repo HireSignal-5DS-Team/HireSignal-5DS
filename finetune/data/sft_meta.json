@@ -3,7 +3,7 @@
   "input_sha256": "399ef0c3ed7dbc40016a1885ef30c450c1c0efa2328bba96fc014d35a30c30a5",
   "knowledge": "rag.bm25",
   "k": 3,
-  "prompt_version": "p1",
+  "prompt_version": "p2",
   "n_cases": 300,
   "dev_case_ids": [
     "train-0007",
