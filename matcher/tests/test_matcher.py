@@ -163,3 +163,4 @@ def test_harmless_json_deviations_repaired():
     a = parse_model_output(raw)
     assert a.evidence == ["Data analyst"] and len(a.explanation) == 600
     assert parse_model_output('{"decision": "MET", "basis": "supported", "evidence": ["a","b","c","d"]}').evidence == ["a", "b", "c"]
+    assert parse_model_output('{"decision": "missing", "basis": "NOT_DOCUMENTED", "evidence": []}').basis == "not_documented"

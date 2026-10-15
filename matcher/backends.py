@@ -100,6 +100,9 @@ class TransformersBackend:
             if not allow_local_adapter_base_mismatch:
                 check_adapter_compat(adapter_id, model_id, adapter_revision)
             self.model = PeftModel.from_pretrained(self.model, adapter_id, revision=adapter_revision)
+            self.n_params = sum(p.numel() for p in self.model.parameters())  # base + adapter, still one model
+            if self.n_params >= MAX_PARAMS:
+                raise ValueError(f"{model_id} + {adapter_id} has {self.n_params:,} parameters; the Matcher requires < 1B")
         self.model.to(device).eval()
         self.device, self.max_new_tokens = device, max_new_tokens
         # Qwen3: disable thinking so the reply is the JSON object; ignored by templates without the flag

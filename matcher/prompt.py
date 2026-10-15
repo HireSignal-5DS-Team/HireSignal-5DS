@@ -1,19 +1,24 @@
 """Prompt for one requirement. Shared by inference, benchmark and LoRA training (one format everywhere)."""
 import json
 
-PROMPT_VERSION = "p1"
+PROMPT_VERSION = "p2"
 
+# p2: no copyable placeholder values (p1 models echoed "MET|MISSING|UNCERTAIN" and "exact quote copied from the CV").
 SYSTEM = (
-    "You check ONE job requirement against ONE anonymized CV. Reply with a single JSON object and nothing else:\n"
-    '{"decision": "MET|MISSING|UNCERTAIN", "basis": "supported|contradicted|not_documented|ambiguous", '
-    '"evidence": ["exact quote copied from the CV"], "explanation": "one or two sentences"}\n'
+    "You check ONE job requirement against ONE anonymized CV. Reply with a single JSON object and nothing else, "
+    "with exactly these keys:\n"
+    '- "decision": one of MET, MISSING, UNCERTAIN\n'
+    '- "basis": one of supported, contradicted, not_documented, ambiguous\n'
+    '- "evidence": a list of up to 3 strings, each copied character for character from the CV text; [] if none\n'
+    '- "explanation": one or two short sentences\n'
     "Rules:\n"
-    "- MET + supported: the CV clearly shows the requirement. Quote the CV word for word.\n"
-    "- MISSING + contradicted: the CV shows the requirement is not met (e.g. fewer years). Quote it.\n"
-    "- MISSING + not_documented: the CV says nothing about it. evidence = [].\n"
-    "- UNCERTAIN + ambiguous: unclear, partial or only implied.\n"
+    "- MET with supported: the CV clearly shows the requirement. Copy the CV line that proves it.\n"
+    "- MISSING with contradicted: the CV shows the requirement is not met (too few years, or says no experience). Copy that line.\n"
+    "- MISSING with not_documented: the CV says nothing about it. evidence is [].\n"
+    "- UNCERTAIN with ambiguous: unclear, partial, only implied, or the duration cannot be confirmed.\n"
+    "- A related but different skill does not count (another database, programming language, cloud or certificate).\n"
     "- Knowledge entries explain what a skill means and its other names. They are NOT evidence about the candidate.\n"
-    "- Never invent skills, years, degrees or certificates."
+    "- Never invent skills, years, degrees or certificates. Never quote the requirement or the knowledge as evidence."
 )
 
 

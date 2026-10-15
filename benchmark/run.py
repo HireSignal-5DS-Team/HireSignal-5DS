@@ -61,9 +61,16 @@ def make_backend(args, cases):
     from matcher.backends import TransformersBackend
 
     torch.set_num_threads(4)
+    kw = {}
+    if args.arm:  # pinned model/adapter revisions from models/candidates.json
+        arms = json.loads((Path(__file__).parents[1] / "models/candidates.json").read_text())["arms"]
+        a = next((a for a in arms if a["name"] == args.arm), None) or sys.exit(f"unknown arm {args.arm}")
+        args.model, args.adapter = a["model_id"], args.adapter or a.get("adapter_id")
+        kw = {"revision": a.get("revision"), "chat_kwargs": a.get("chat_kwargs") or None,
+              "adapter_revision": a.get("adapter_revision") if args.adapter == a.get("adapter_id") else None}
     if not args.model:
-        sys.exit("--model is required for --backend transformers")
-    return TransformersBackend(args.model, adapter_id=args.adapter, max_new_tokens=args.max_new_tokens)
+        sys.exit("--model or --arm is required for --backend transformers")
+    return TransformersBackend(args.model, adapter_id=args.adapter, max_new_tokens=args.max_new_tokens, **kw)
 
 
 def peak_rss_mb():
@@ -114,6 +121,7 @@ def main(argv=None):
     ap.add_argument("--i-am-final-report", action="store_true", help="required to touch the locked test split")
     ap.add_argument("--backend", choices=["lexical", "mock_oracle", "transformers"], required=True)
     ap.add_argument("--model")
+    ap.add_argument("--arm", help="arm name from models/candidates.json (pins revisions)")
     ap.add_argument("--adapter")
     ap.add_argument("--knowledge", choices=["rag", "none", "fixture"], default="rag")
     ap.add_argument("--k", type=int, default=3, help="knowledge entries per requirement")

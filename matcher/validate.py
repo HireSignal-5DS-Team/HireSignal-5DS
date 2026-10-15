@@ -26,11 +26,14 @@ REASONS = {
 
 
 def _normalize(obj):
-    """Deterministic repair of harmless deviations: extra keys dropped, a bare string quote listed,
+    """Deterministic repair of harmless deviations: decision/basis case, extra keys dropped, a bare string quote listed,
     quotes capped at 3, explanation capped at 600 chars. Decision/basis are never repaired."""
     if not isinstance(obj, dict):
         return obj
     obj = {k: obj[k] for k in ModelAnswer.model_fields if k in obj}
+    for k, f in (("decision", str.upper), ("basis", str.lower)):  # case only; values are never remapped
+        if isinstance(obj.get(k), str):
+            obj[k] = f(obj[k].strip())
     ev = obj.get("evidence", [])
     obj["evidence"] = ([ev] if isinstance(ev, str) else ev)[:3] if isinstance(ev, (str, list)) else ev
     if isinstance(obj.get("explanation"), str):
