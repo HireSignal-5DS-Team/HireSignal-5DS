@@ -12,9 +12,9 @@
     "model": null,
     "adapter": null,
     "max_new_tokens": 192,
-    "peak_rss_mb": 54.2,
+    "peak_rss_mb": 53.4,
     "torch_threads": 4,
-    "finished_at": "2026-10-15T00:19:10"
+    "finished_at": "2026-10-15T01:01:31"
   },
   "metrics": {
     "final": {

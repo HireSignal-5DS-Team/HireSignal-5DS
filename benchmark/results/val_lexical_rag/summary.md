@@ -14,7 +14,7 @@ split `val` · backend `lexical_baseline` · knowledge `rag.bm25` · n = 110 req
 | quote verbatim rate | | 100.0% (60 quotes) |
 
 Evidence overlap on gold MET: 54.0% · basis accuracy on MISSING/MISSING: 86.4%
-Latency: 0.001 s/req (max 0.01 s) · peak RSS 54 MB (last process)
+Latency: 0.001 s/req (max 0.01 s) · peak RSS 53 MB (last process)
 
 ## Confusion (rows gold, columns final prediction)
 

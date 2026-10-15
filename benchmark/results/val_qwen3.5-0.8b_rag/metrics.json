@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "name": "val_qwen3.5-0.8b_rag",
+    "split": "val",
+    "backend": {
+      "backend": "transformers",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3.5-0.8B",
+      "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+      "adapter_id": null,
+      "adapter_revision": null,
+      "n_params": 752393024,
+      "decoding": {
+        "do_sample": false,
+        "max_new_tokens": 192
+      },
+      "device": "cpu",
+      "load_seconds": 2.11,
+      "prompt_version": "p2"
+    },
+    "knowledge": "rag.bm25",
+    "k": 3,
+    "limit": null,
+    "model": "Qwen/Qwen3.5-0.8B",
+    "adapter": null,
+    "max_new_tokens": 192,
+    "peak_rss_mb": 5408.5,
+    "torch_threads": 4,
+    "finished_at": "2026-10-15T00:40:14"
+  },
+  "metrics": {
+    "final": {
+      "n": 110,
+      "accuracy": 0.6181818181818182,
+      "macro_f1": 0.4856091277143908,
+      "per_class": {
+        "MET": {
+          "precision": 0.7346938775510204,
+          "recall": 0.72,
+          "f1": 0.7272727272727272,
+          "support": 50
+        },
+        "MISSING": {
+          "precision": 0.5535714285714286,
+          "recall": 0.7948717948717948,
+          "f1": 0.6526315789473683,
+          "support": 39
+        },
+        "UNCERTAIN": {
+          "precision": 0.2,
+          "recall": 0.047619047619047616,
+          "f1": 0.07692307692307693,
+          "support": 21
+        }
+      },
+      "confusion": {
+        "MET": {
+          "MET": 36,
+          "MISSING": 11,
+          "UNCERTAIN": 3
+        },
+        "MISSING": {
+          "MET": 7,
+          "MISSING": 31,
+          "UNCERTAIN": 1
+        },
+        "UNCERTAIN": {
+          "MET": 6,
+          "MISSING": 14,
+          "UNCERTAIN": 1
+        }
+      },
+      "false_met_rate": 0.21666666666666667,
+      "uncertain_recall": 0.047619047619047616,
+      "predicted_uncertain_share": 0.045454545454545456,
+      "unsupported_met": 0
+    },
+    "raw_model": {
+      "n": 110,
+      "accuracy": 0.6272727272727273,
+      "macro_f1": 0.4634985522057571,
+      "per_class": {
+        "MET": {
+          "precision": 0.7169811320754716,
+          "recall": 0.76,
+          "f1": 0.7378640776699028,
+          "support": 50
+        },
+        "MISSING": {
+          "precision": 0.5535714285714286,
+          "recall": 0.7948717948717948,
+          "f1": 0.6526315789473683,
+          "support": 39
+        },
+        "UNCERTAIN": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 21
+        }
+      },
+      "confusion": {
+        "MET": {
+          "MET": 38,
+          "MISSING": 11,
+          "UNCERTAIN": 0,
+          "INVALID": 1
+        },
+        "MISSING": {
+          "MET": 8,
+          "MISSING": 31,
+          "UNCERTAIN": 0
+        },
+        "UNCERTAIN": {
+          "MET": 7,
+          "MISSING": 14,
+          "UNCERTAIN": 0
+        }
+      },
+      "false_met_rate": 0.25,
+      "uncertain_recall": 0.0,
+      "predicted_uncertain_share": 0.0,
+      "json_validity": 0.990909090909091,
+      "quotes_emitted": 145,
+      "quote_verbatim_rate": 0.8482758620689655
+    },
+    "per_tag": {
+      "ambiguous_duration": {
+        "n": 7,
+        "accuracy": 0.0
+      },
+      "certification": {
+        "n": 15,
+        "accuracy": 0.7333333333333333
+      },
+      "contradictory_requirement": {
+        "n": 2,
+        "accuracy": 0.0
+      },
+      "education": {
+        "n": 9,
+        "accuracy": 0.7777777777777778
+      },
+      "equivalence": {
+        "n": 17,
+        "accuracy": 0.6470588235294118
+      },
+      "exact": {
+        "n": 22,
+        "accuracy": 0.6818181818181818
+      },
+      "experience_years": {
+        "n": 12,
+        "accuracy": 0.4166666666666667
+      },
+      "language": {
+        "n": 7,
+        "accuracy": 0.5714285714285714
+      },
+      "negation": {
+        "n": 6,
+        "accuracy": 0.5
+      },
+      "not_documented": {
+        "n": 19,
+        "accuracy": 0.8947368421052632
+      },
+      "rag_only_term": {
+        "n": 6,
+        "accuracy": 0.5
+      },
+      "related_not_equivalent": {
+        "n": 21,
+        "accuracy": 0.7142857142857143
+      }
+    },
+    "evidence_overlap_gold_met": 0.5,
+    "missing_basis_accuracy": 0.6451612903225806,
+    "latency": {
+      "mean_s": 15.341497272727272,
+      "max_s": 38.1701,
+      "total_s": 1687.5647
+    },
+    "n": 110
+  }
+}
