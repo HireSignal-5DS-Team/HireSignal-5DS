@@ -1,0 +1,182 @@
+{
+  "n": 202,
+  "final": {
+    "macro_f1": 0.21061359867330018,
+    "accuracy": 0.23267326732673269,
+    "false_met_rate": 0.008620689655172414,
+    "per_class": {
+      "MET": {
+        "precision": 0.75,
+        "recall": 0.03488372093023256,
+        "f1": 0.06666666666666667,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 0.3508771929824561,
+        "recall": 0.2597402597402597,
+        "f1": 0.29850746268656714,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 0.1702127659574468,
+        "recall": 0.6153846153846154,
+        "f1": 0.26666666666666666,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 3,
+        "MISSING": 22,
+        "UNCERTAIN": 61,
+        "null": 0
+      },
+      "MISSING": {
+        "MET": 1,
+        "MISSING": 20,
+        "UNCERTAIN": 56,
+        "null": 0
+      },
+      "UNCERTAIN": {
+        "MET": 0,
+        "MISSING": 15,
+        "UNCERTAIN": 24,
+        "null": 0
+      }
+    }
+  },
+  "raw_model": {
+    "macro_f1": 0.2651075831035903,
+    "accuracy": 0.29207920792079206,
+    "false_met_rate": 0.27586206896551724,
+    "per_class": {
+      "MET": {
+        "precision": 0.5492957746478874,
+        "recall": 0.45348837209302323,
+        "f1": 0.49681528662420377,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 0.3508771929824561,
+        "recall": 0.2597402597402597,
+        "f1": 0.29850746268656714,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 39,
+        "MISSING": 22,
+        "UNCERTAIN": 0,
+        "null": 25
+      },
+      "MISSING": {
+        "MET": 24,
+        "MISSING": 20,
+        "UNCERTAIN": 0,
+        "null": 33
+      },
+      "UNCERTAIN": {
+        "MET": 8,
+        "MISSING": 15,
+        "UNCERTAIN": 0,
+        "null": 16
+      }
+    }
+  },
+  "json_schema_validity": 0.6336633663366337,
+  "basis_accuracy": 0.1782178217821782,
+  "evidence": {
+    "raw_quotes": 126,
+    "raw_quote_validity": 0.05555555555555555,
+    "raw_met_with_verified_quote": 0.056338028169014086,
+    "attribution_vs_gold": 0.14285714285714285,
+    "attribution_n": 14
+  },
+  "validator_changed_decision": 0.698019801980198,
+  "needs_human_review_rate": 0.9207920792079208,
+  "per_tag_accuracy": {
+    "ambiguous_duration": {
+      "n": 21,
+      "accuracy": 0.6666666666666666
+    },
+    "certification": {
+      "n": 13,
+      "accuracy": 0.0
+    },
+    "contradictory_evidence": {
+      "n": 31,
+      "accuracy": 0.1935483870967742
+    },
+    "date_range": {
+      "n": 8,
+      "accuracy": 0.0
+    },
+    "direct_match": {
+      "n": 8,
+      "accuracy": 0.0
+    },
+    "distractor_details": {
+      "n": 74,
+      "accuracy": 0.24324324324324326
+    },
+    "education": {
+      "n": 10,
+      "accuracy": 0.1
+    },
+    "equivalent_skill_alias": {
+      "n": 21,
+      "accuracy": 0.0
+    },
+    "implicit_project_evidence": {
+      "n": 15,
+      "accuracy": 0.13333333333333333
+    },
+    "insufficient_experience": {
+      "n": 17,
+      "accuracy": 0.29411764705882354
+    },
+    "language": {
+      "n": 14,
+      "accuracy": 0.0
+    },
+    "missing_evidence": {
+      "n": 18,
+      "accuracy": 0.5
+    },
+    "multi_requirement": {
+      "n": 117,
+      "accuracy": 0.2222222222222222
+    },
+    "negation_trap": {
+      "n": 22,
+      "accuracy": 0.2727272727272727
+    },
+    "partial_evidence": {
+      "n": 18,
+      "accuracy": 0.5555555555555556
+    },
+    "rag_suggests_absent_skill": {
+      "n": 11,
+      "accuracy": 0.0
+    },
+    "sufficient_experience": {
+      "n": 25,
+      "accuracy": 0.0
+    }
+  },
+  "latency_s": {
+    "mean": 7.131920297029703,
+    "p50": 5.9668,
+    "p95": 12.5003,
+    "max": 40.3289
+  },
+  "peak_rss_mb": 3617.5,
+  "load_seconds": 8.68
+}
