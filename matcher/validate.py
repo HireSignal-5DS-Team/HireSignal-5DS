@@ -60,10 +60,16 @@ def parse_model_output(raw):
 
 
 def find_span(cv_text, quote):
-    """[start, end) of an exact occurrence, or None. Only surrounding whitespace is stripped."""
+    """[start, end) of the quote in the CV, or None. Exact match first; else ignoring case and whitespace runs.
+    The caller always stores cv_text[start:end], so stored evidence is verbatim CV text either way."""
     q = quote.strip()
-    i = cv_text.find(q) if q else -1
-    return (i, i + len(q)) if i >= 0 else None
+    if not q:
+        return None
+    i = cv_text.find(q)
+    if i >= 0:
+        return i, i + len(q)
+    m = re.search(r"\s+".join(map(re.escape, q.split())), cv_text, re.I)
+    return (m.start(), m.end()) if m else None
 
 
 _YEARS = re.compile(r"(\d+(?:\.\d+)?)\s*\+?\s*(?:years?|yrs?)\b", re.I)

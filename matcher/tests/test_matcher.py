@@ -201,3 +201,10 @@ def test_demoted_decision_replaces_model_explanation():
 
 def test_unclosed_think_block_is_not_an_answer():
     assert parse_model_output('<think>maybe {"decision": "MET", "basis": "supported", "evidence": []}') is None
+
+
+def test_quote_located_case_insensitively_but_stored_verbatim():
+    out = run(ans(evidence=["built a churn  prediction model"]), req(text="churn prediction", skill_terms=["churn"]))
+    assert out.decision == "MET" and out.evidence == ["Built a churn prediction model"]
+    s, e = out.evidence_spans[0]
+    assert CV_TEXT[s:e] == out.evidence[0]
