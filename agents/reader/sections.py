@@ -77,11 +77,36 @@ def detect_heading(line: str) -> str | None:
     return _HEADING_TO_SECTION.get(_normalise(line))
 
 
+# Labels that often appear inside a job entry ("Tools: Docker, Git"); as
+# inline labels they must not start a new section.
+_JOB_LEVEL_LABELS = {"tools", "technologies", "outils", "environment", "environnement"}
+
+_INLINE_HEADING = re.compile(r"^\s*([^:]{2,45}?)\s*:\s*(\S.*)$")
+
+
+def detect_inline_heading(line: str) -> tuple[str, str] | None:
+    """'Technical skills: Java, Spring Boot' -> ('skills', 'Java, Spring Boot').
+
+    Only a colon counts as the separator, so a sentence like
+    'Experience with Python and SQL' is not taken as a heading.
+    """
+    match = _INLINE_HEADING.match(line)
+    if not match:
+        return None
+    label = _normalise(match.group(1))
+    if label in _JOB_LEVEL_LABELS:  # "Tools: Docker, Git" under a job stays in that job
+        return None
+    section = _HEADING_TO_SECTION.get(label)
+    return (section, match.group(2).strip()) if section else None
+
+
 def split_sections(text: str) -> dict[str, str]:
     """Split text into {section_name: section_text}.
 
     - Text before the first heading goes to "header" (name, contact details).
       The Profile Agent anonymises this part.
+    - Headings can stand alone ("SKILLS") or share the line with their
+      content ("Technical skills: Java, Spring Boot").
     - If the same section appears twice (e.g. two-column CVs), texts are joined.
     """
     sections: dict[str, list[str]] = {"header": []}
@@ -91,6 +116,11 @@ def split_sections(text: str) -> dict[str, str]:
         if section:
             current = section
             sections.setdefault(current, [])
+            continue
+        inline = detect_inline_heading(line)
+        if inline:
+            current, content = inline
+            sections.setdefault(current, []).append(content)
         else:
             sections[current].append(line)
 

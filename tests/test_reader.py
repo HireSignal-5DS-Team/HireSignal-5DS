@@ -131,3 +131,39 @@ def test_split_sections_merges_repeated_headings():
 
 def test_clean_text_fixes_ligatures_and_hyphens():
     assert clean_text("eﬃcient develop-\nment\n\n\n\nnext") == "efficient development\n\nnext"
+
+
+# ------------------------------------------------- inline headings ---
+
+def test_inline_heading_starts_a_section():
+    """Real CV (cv02): 'Technical skills: ...' was swallowed by education."""
+    text = ("Youssef Trabelsi - Backend Software Engineer\n"
+            "EDUCATION\n"
+            "Software Engineering degree, INSAT, 2019\n"
+            "\n"
+            "Technical skills: Java, Spring Boot, PostgreSQL\n"
+            "Languages: Arabic, French, English")
+    s = split_sections(text)
+    assert s["education"] == "Software Engineering degree, INSAT, 2019"
+    assert s["skills"] == "Java, Spring Boot, PostgreSQL"
+    assert s["languages"] == "Arabic, French, English"
+
+
+def test_tools_line_inside_a_job_does_not_switch_section():
+    text = ("EXPERIENCE\n"
+            "Backend Developer at Telnet, 2024 to present\n"
+            "Tools: Docker, Git\n"
+            "Junior Developer at Vermeg, 2021 to 2023")
+    s = split_sections(text)
+    assert "skills" not in s
+    assert "Vermeg" in s["experience"] and "Docker" in s["experience"]
+
+
+@pytest.mark.parametrize("line", [
+    "Experience with Python and SQL",            # no colon: a sentence
+    "Email: someone@example.com",                # not a section label
+    "Note: available from January",
+])
+def test_lines_that_are_not_inline_headings(line):
+    from agents.reader.sections import detect_inline_heading
+    assert detect_inline_heading(line) is None
