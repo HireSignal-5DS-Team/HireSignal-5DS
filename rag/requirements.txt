@@ -10,3 +10,4 @@ pytest==9.1.1
 httpx==0.28.1
 # Dense retrieval (needs access to huggingface.co to download models):
 sentence-transformers==6.1.0  # pulls torch 2.14.1 (CPU use only)
+jsonschema==4.26.0  # contract tests

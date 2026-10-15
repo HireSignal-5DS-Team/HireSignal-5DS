@@ -50,7 +50,8 @@ class Retriever:
         # collection name fingerprints model + chunk texts, so a changed corpus is re-embedded
         digest = hashlib.sha1("".join(c["chunk_id"] + c["text"] for c in self.chunks).encode()).hexdigest()[:12]
         self.collection = f"{model}-{digest}"
-        if not self.qdrant.collection_exists(self.collection):
+        self.index_reused = self.qdrant.collection_exists(self.collection)  # embeddings persisted on disk by a previous run
+        if not self.index_reused:
             vecs = self.model.encode([p_prefix + c["text"] for c in self.chunks], normalize_embeddings=True,
                                      batch_size=32, show_progress_bar=True)
             self.qdrant.create_collection(self.collection, vectors_config=models.VectorParams(
@@ -58,6 +59,11 @@ class Retriever:
             self.qdrant.upload_collection(self.collection, vectors=vecs, ids=range(len(self.chunks)),
                                           payload=[{"doc_id": c["doc_id"], "source_type": c["source_type"]}
                                                    for c in self.chunks])
+
+    def close(self):
+        """Release the on-disk index (Qdrant local mode allows one process per folder)."""
+        if self.model:
+            self.qdrant.close()
 
     def _mask(self, filters):
         ok = np.ones(len(self.chunks), bool)

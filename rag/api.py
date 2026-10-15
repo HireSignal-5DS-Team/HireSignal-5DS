@@ -10,6 +10,7 @@ from typing import Literal
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
+from adapters import mock_dali_search, to_knowledge_refs
 from corpus import build_chunks
 from profiles import PROFILES
 from retrieval import MODELS, Retriever
@@ -43,7 +44,8 @@ class Query(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "profile": PROFILE, "strategy": STRATEGY, "model": MODEL, "chunks": len(retriever.chunks)}
+    return {"status": "ok", "profile": PROFILE, "strategy": STRATEGY, "model": MODEL, "chunks": len(retriever.chunks),
+            "index": getattr(retriever, "collection", None), "index_reused": getattr(retriever, "index_reused", None)}
 
 
 @app.post("/retrieve")
@@ -64,3 +66,25 @@ def retrieve(q: Query):
         } for i, (c, s) in enumerate(out["results"], 1)],
         "note": "relevance_score ranks text similarity only; it is not a probability and not candidate fit.",
     }
+
+
+def _retrieval_name(mode):
+    return f"rag.{mode}" + (f".{MODEL}" if MODEL and mode != "bm25" else "") + (f">{retriever.reranker}" if retriever.reranker else "")
+
+
+@app.post("/knowledge")
+def knowledge(q: Query):
+    """Same retrieval as /retrieve, returned as the Matcher's KnowledgeRef objects (contracts/KnowledgeRef.schema.json)."""
+    mode = q.mode or ("dense" if MODEL else "bm25")
+    filters = {k: v for k, v in {"doc_id": q.filters.job_id, "source_type": q.filters.source_type}.items() if v}
+    out = retriever.search(q.query, k=q.top_k, mode=mode, filters=filters)
+    return {"status": out["status"], "knowledge_refs": to_knowledge_refs(out["results"], _retrieval_name(mode))}
+
+
+@app.post("/mock/v1/search")
+def mock_search(q: Query):
+    """MOCK adapter for Dali's backend until his schemas are committed; see adapters.py."""
+    mode = q.mode or ("dense" if MODEL else "bm25")
+    filters = {k: v for k, v in {"doc_id": q.filters.job_id, "source_type": q.filters.source_type}.items() if v}
+    return mock_dali_search(q.query, q.filters.job_id, q.top_k, retriever.search(q.query, k=q.top_k, mode=mode, filters=filters),
+                            _retrieval_name(mode))

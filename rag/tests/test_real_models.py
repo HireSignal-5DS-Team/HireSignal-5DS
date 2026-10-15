@@ -65,3 +65,21 @@ def test_performance_p95_realtime_budget(baseline):
             baseline.search(q["query"], mode="dense", filters=_filters(q))
             ms.append((time.perf_counter() - t) * 1000)
     assert np.percentile(ms, 95) <= 300, np.percentile(ms, 95)
+
+
+@pytest.mark.parametrize("name", list(PROFILES))
+def test_every_profile_serves_from_persisted_index(name):
+    """Each profile loads from rag/index (built once by build_index.py), answers a job-filtered query with an exact
+    source span from the right posting, and keeps the experimental features off unless the profile enables them."""
+    p = PROFILES[name]
+    r = Retriever(build_chunks(p["strategy"]), model=p["model"], store_path=Path(__file__).parents[1] / "index",
+                  reranker=p["reranker"], top_n=p["top_n"] or 10, thresholds=p["thresholds"])
+    try:
+        jobs = {j["doc_id"]: j["text"] for j in load_jobs()}
+        out = r.search("experience with Python", k=3, mode="dense", filters={"doc_id": "usajobs-884225200"})
+        assert out["status"] == "found"
+        for c, _ in out["results"]:
+            assert c["doc_id"] == "usajobs-884225200" and jobs[c["doc_id"]][c["start"]:c["end"]].strip() in c["text"]
+        assert (out["rerank_score"] is not None) == bool(p["reranker"])
+    finally:
+        r.close()

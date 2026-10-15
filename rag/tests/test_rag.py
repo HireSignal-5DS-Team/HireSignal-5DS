@@ -227,3 +227,55 @@ def test_profiles_are_valid():
     for name, p in PROFILES.items():
         assert p["strategy"] in STRATEGIES and p["model"] in MODELS and (p["reranker"] in RERANKERS or p["reranker"] is None), name
     assert PROFILES["baseline"]["reranker"] is None and PROFILES["baseline"]["thresholds"] is None
+
+
+def test_matcher_bm25_call_compatible():
+    """Mirrors matcher/knowledge.py (branch claude/kind-albattani-k7qlt9): BM25-only Retriever over ESCO."""
+    from corpus import load_esco
+
+    chunks = [{**e, "chunk_id": e["doc_id"], "section": None, "start": None, "end": None} for e in load_esco()]
+    out = Retriever(chunks).search("Python programming", k=3, mode="bm25", filters={"source_type": "esco"})
+    c, s = out["results"][0]
+    assert {"doc_id", "title", "text", "url"} <= set(c) and isinstance(s, float) and c["title"].startswith("Python")
+
+
+def test_knowledge_refs_match_matcher_schema():
+    import jsonschema
+    from fastapi.testclient import TestClient
+
+    import api
+
+    schema = json.loads((Path(__file__).parents[1] / "contracts/KnowledgeRef.schema.json").read_text())
+    client = TestClient(api.app)
+    body = client.post("/knowledge", json={"query": "SQL databases", "filters": {"source_type": "esco"}}).json()
+    assert body["status"] == "found" and body["knowledge_refs"]
+    for ref in body["knowledge_refs"]:
+        jsonschema.validate(ref, schema)
+    mock = client.post("/mock/v1/search", json={"query": "SQL", "filters": {"source_type": "esco"}}).json()
+    assert mock["schema_version"].startswith("mock")
+
+
+def test_index_persists_across_restart(tmp_path, monkeypatch, job):
+    """First start embeds the corpus and stores it; a restart reuses the stored vectors and only embeds queries."""
+    _stub_models(monkeypatch)
+    import sentence_transformers
+
+    calls = []
+    orig = sentence_transformers.SentenceTransformer.encode
+
+    def counting(self, texts, **kw):
+        calls.append(len(texts) if isinstance(texts, list) else 1)
+        return orig(self, texts, **kw)
+
+    monkeypatch.setattr(sentence_transformers.SentenceTransformer, "encode", counting)
+    chunks = build_chunks("structure", [job], [])
+    r1 = Retriever(chunks, model="e5-small", store_path=tmp_path)
+    first = r1.search("SQL and Python", mode="dense", filters={"doc_id": job["doc_id"]})
+    r1.close()
+    assert r1.index_reused is False and calls[0] == len(chunks)
+    calls.clear()
+    r2 = Retriever(chunks, model="e5-small", store_path=tmp_path)  # "restart"
+    second = r2.search("SQL and Python", mode="dense", filters={"doc_id": job["doc_id"]})
+    r2.close()
+    assert r2.index_reused is True and calls == [1]  # only the query was embedded
+    assert [c["chunk_id"] for c, _ in first["results"]] == [c["chunk_id"] for c, _ in second["results"]]
