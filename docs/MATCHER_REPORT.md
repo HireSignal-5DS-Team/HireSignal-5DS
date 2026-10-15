@@ -221,3 +221,119 @@ need task fine-tuning to be useful for this task.
   verdict. It is measured as-is with our prompt.
 - The local components `hiresignal_cv_reader`, `hiresignal_benchmark` and `hiresignal_finetune` were not
   accessible. The integration contract is in `LOCAL_INTEGRATION_HANDOFF.md`.
+
+## 8. Final architecture evaluation (Qwen3-4B Matcher → Validator → Bias Auditor → NLI Judge), validation split only
+
+**Validation-only results.** The sealed test split (199 requirements) has not been run; it is reserved for one
+confirmation run of the chosen configuration.
+
+**Setup.**
+- 202 val requirements. Same prompt `p1`, greedy decoding, `max_new_tokens=192`.
+- Matcher: `Qwen/Qwen3-4B-Instruct-2507`, served as GGUF Q4_K_M (`unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b`) through
+  llama.cpp 0.3.16 on 4 CPU cores. Calls go through the OpenAI-compatible backend (`matcher/backends_api.py`).
+- Hosted API: **not tested**, because no credentials were available.
+- Hardware and versions are recorded in each `config.json`.
+
+### 8.1 Matcher
+
+| configuration | macro-F1 final | macro-F1 raw | false-MET final | MET P / R | JSON valid | quote valid | p50 s/req |
+|---|---|---|---|---|---|---|---|
+| lexical baseline + RAG (no model) | 0.436 | 0.436 | 0.560 | 0.508 / 0.779 | 1.000 | 1.000 | 0.00 |
+| Qwen3-4B, no RAG | **0.634** | 0.641 | **0.009** | — | 0.950 | — | 12.9 |
+| Qwen3-4B + BM25 RAG | 0.630 | 0.647 | **0.009** | 0.981 / 0.605 | 0.916 | 1.000 (141/141) | 16.4 |
+
+- Qwen3-4B + RAG: evidence attribution to the gold span is 0.855, and the validator changed 9.4 % of decisions.
+- Raw false-MET with RAG is 0.026; the validator cuts it to 0.009.
+- Main weakness: UNCERTAIN is over-predicted. UNCERTAIN precision is 0.343 at recall 0.897, so about 50 % of answers are
+  UNCERTAIN against a gold share of 19 %.
+
+**RAG ablation (per tag, accuracy with RAG vs without):**
+
+| tag | with RAG | without RAG |
+|---|---|---|
+| alias equivalence | 0.571 | 0.286 |
+| implicit project evidence | 0.400 | 0.600 |
+| RAG near-miss | 0.364 | 0.455 |
+
+The net effect is zero: 7 requirements are correct only with RAG and 8 only without, which is not significant. RAG
+helps exactly the case it targets (ESCO aliases) and distracts on others. **Keep RAG only together with a fix for the
+distraction**, for example retrieving only when the requirement contains an ESCO label. This is a recommendation, not
+yet measured.
+
+### 8.2 Bias Auditor (counterfactual, 30 val requirements × 4 attributes × 2 variants = 240 Matcher calls)
+
+| matcher | flagged requirements | name | gender | nationality | age |
+|---|---|---|---|---|---|
+| Qwen3-4B + RAG | 1/30 (3.3 %) | 3.3 % | 0 | 0 | 0 |
+| known-bias mock (control) | 21/30 (70 %; every requirement where a flip was possible) | 0 | 0 | 70 % | 70 % |
+| lexical baseline (unbiased control) | 0/30 (false-positive check) | 0 | 0 | 0 | 0 |
+
+- The single Qwen flip was on `val-039 r1`: UNCERTAIN for "Emily Johnson" and MET for "Mohamed Ben Salah".
+- It is a borderline case. With n = 30 there is no evidence of systematic bias. The case is flagged for human review,
+  as designed.
+
+### 8.3 NLI Judge (`MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli`, 184M) — error detection on Matcher decisions
+
+The Judge only flags; it never changes a decision. Thresholds were calibrated on train-dev only: pretrained τ = 0.65,
+fine-tuned τ = 0.85.
+
+**Fine-tuning.**
+- Data: 770 NLI pairs from the train split; train-dev has 208 pairs.
+- Config: 2 epochs, lr 2e-5, batch 16, fp32 on CPU, 10.3 min.
+- Train-dev accuracy went from 0.587 to 0.990. This is optimistic: train-dev comes from the same templates.
+
+**Incident.** The first fine-tuning run loaded the checkpoint in float16, because its config says so and
+transformers 5 honours it. The loss went NaN at step 12, at about 8 min per step. The run was stopped, fp32 was
+forced, and everything was re-run. The fp16 artefacts are kept in `benchmark/results/judge/_invalid_fp16/`.
+
+| decisions judged | Judge | flag precision | flag recall | F1 | false-flag rate on correct | AUROC | ECE |
+|---|---|---|---|---|---|---|---|
+| lexical baseline (84 errors / 202) | pretrained | 0.652 | 0.714 | 0.682 | 0.271 | 0.716 | 0.250 |
+| lexical baseline | **fine-tuned** | **0.894** | 0.702 | **0.787** | **0.059** | **0.905** | 0.151 |
+| Qwen3-4B + RAG (8 errors / 100 applicable) | pretrained | 0.106 | 0.625 | 0.182 | 0.457 | 0.438 | — |
+| Qwen3-4B + RAG | **fine-tuned** | **0.500** | 0.375 | **0.429** | **0.033** | 0.413 | 0.192 |
+| Qwen3-4B no RAG (8 errors) | fine-tuned | 0.375 | 0.375 | 0.375 | 0.053 | 0.537 | — |
+
+- On the lexical baseline, the pretrained Judge caught all 22 negation-trap errors and all 26 contradiction errors.
+- On Qwen3-4B, the fine-tuned Judge misses alias and duration errors.
+- Only 8 Qwen errors were judged, so the Qwen confidence intervals are very wide.
+
+### 8.4 System: what a human must review, and what passes unreviewed
+
+A requirement **passes without review** only if all of these hold:
+- the validator raised no reason;
+- the decision is not UNCERTAIN;
+- the Judge verdict is PASS;
+- there is no bias flag.
+
+| matcher | stages | review rate | passes unreviewed | wrong among passed | false-MET among passed |
+|---|---|---|---|---|---|
+| lexical baseline | validator only | 0.381 | 125 | 48 | 44 |
+| lexical baseline | + fine-tuned Judge | 0.639 | 73 | 8 | 4 |
+| Qwen3-4B + RAG | validator only | 0.743 | 52 | 1 | 0 |
+| Qwen3-4B + RAG | + pretrained Judge | 0.970 | 6 | 0 | 0 |
+| Qwen3-4B + RAG | + fine-tuned Judge | 0.807 | 39 | 1 | 0 |
+
+**Conclusions.**
+1. **The Matcher is the step change.** Qwen3-4B more than doubles the best sub-1B result (0.634 vs 0.265) and beats
+   the lexical baseline (0.436), with 0.9 % false-MET and 100 % verbatim quotes. It is not yet production-ready: the
+   high UNCERTAIN rate gives a 74 % review rate, and the data is synthetic.
+2. **The Judge is valuable when the Matcher makes obvious errors.** With the lexical baseline, unreviewed false-METs
+   drop from 44 to 4.
+3. **Behind Qwen3-4B the Judge adds review load without removing an error.** One error passes either way, and 13 more
+   requirements go to review. Qwen's remaining errors are subtle (aliases, durations), where an NLI model trained on
+   template data does not generalise.
+4. **Recommendation:**
+   - Keep the fine-tuned Judge as a low-noise safety net (3.3 % false flags) for the hosted Matcher. A model or provider
+     change could reintroduce gross errors.
+   - Do not count it as an accuracy gain.
+   - The priority next step is reducing Qwen's UNCERTAIN over-prediction. Options: the teammate's QLoRA run on the
+     train split, or a prompt fix.
+5. **Bias:** no systematic counterfactual effect was detected on 30 requirements. The auditor detects an injected bias
+   and raises no false alarms.
+
+Reproduce:
+- matcher runs: `scripts/hs_queue.sh` with the llama.cpp server (`scripts/run_qwen4b.sh` header);
+- per-stage logs: `benchmark/results/logs/queue/`;
+- Judge checkpoint: `/home/user/judge_runs/deberta-hs-v1/best` (not in git, ~0.7 GB). Rebuild it with
+  `python -m finetune.train_judge --out <dir>`; the training record is `benchmark/results/judge/finetuned_train_meta.json`.
