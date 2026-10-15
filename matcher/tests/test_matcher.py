@@ -75,6 +75,7 @@ def test_evidence_years():
     assert evidence_years(["several projects"]) is None
     assert evidence_years(["Mar 2018 – Jun 2021 Python developer"]) == 3
     assert evidence_years(["03/2017 - 05/2020"]) == 3
+    assert evidence_years(["Since 2017 I have designed workloads on Azure"], ref_year=2026) == 9
 
 
 def test_contradiction_without_quote_is_not_documented():
@@ -149,3 +150,16 @@ def test_end_to_end_with_real_rag_bm25_and_mock_slm():
     res = rep.results[0]
     assert res.decision == "MET" and res.rag_refs == [x.source_id for x in refs]
     assert json.loads(rep.model_dump_json())["backend"]["knowledge"] == "rag.bm25"
+
+
+def test_met_with_unverifiable_duration_becomes_uncertain():
+    out = run(ans(evidence=["Data analyst"]), req(category="experience", min_years=3))
+    assert out.decision == "UNCERTAIN" and "duration_not_verified" in out.review_reasons
+
+
+def test_harmless_json_deviations_repaired():
+    raw = ('{"decision": "MET", "basis": "supported", "evidence": "Data analyst", "confidence": 0.9, '
+           '"explanation": "' + "x" * 900 + '"}')
+    a = parse_model_output(raw)
+    assert a.evidence == ["Data analyst"] and len(a.explanation) == 600
+    assert parse_model_output('{"decision": "MET", "basis": "supported", "evidence": ["a","b","c","d"]}').evidence == ["a", "b", "c"]

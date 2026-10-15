@@ -17,12 +17,26 @@ REASONS = {
     "years_below_minimum_in_evidence": HIGH,
     "evidence_not_in_cv": MEDIUM,
     "contradiction_without_evidence": MEDIUM,
-    "duration_not_verified": MEDIUM,
+    "duration_not_verified": HIGH,
     "semantic_inference_no_term_in_quote": MEDIUM,
     "uncertain_decision": MEDIUM,
     "must_have_absence_of_evidence": MEDIUM,
     "must_have_contradicted": MEDIUM,
 }
+
+
+def _normalize(obj):
+    """Deterministic repair of harmless deviations: extra keys dropped, a bare string quote listed,
+    quotes capped at 3, explanation capped at 600 chars. Decision/basis are never repaired."""
+    if not isinstance(obj, dict):
+        return obj
+    obj = {k: obj[k] for k in ModelAnswer.model_fields if k in obj}
+    ev = obj.get("evidence", [])
+    obj["evidence"] = ([ev] if isinstance(ev, str) else ev)[:3] if isinstance(ev, (str, list)) else ev
+    if isinstance(obj.get("explanation"), str):
+        obj["explanation"] = obj["explanation"][:600]
+    obj.setdefault("explanation", "")
+    return obj
 
 
 def parse_model_output(raw):
@@ -32,7 +46,7 @@ def parse_model_output(raw):
     while start != -1:
         try:
             obj, _ = json.JSONDecoder().raw_decode(raw[start:])
-            return ModelAnswer.model_validate(obj)
+            return ModelAnswer.model_validate(_normalize(obj))
         except (json.JSONDecodeError, ValidationError, TypeError):
             start = raw.find("{", start + 1)
     return None
@@ -51,10 +65,14 @@ _RANGE = re.compile(r"\b((?:19|20)\d\d)\s*(?:-|–|—|to)\s*(?:[a-z]{3,9}\.?\s+
                     r"((?:19|20)\d\d|present|now|current|today)\b", re.I)
 
 
+_SINCE = re.compile(r"\bsince\s+(?:[a-z]{3,9}\.?\s+)?((?:19|20)\d\d)\b", re.I)
+
+
 def evidence_years(quotes, ref_year=2026):
     """Largest of: explicit 'N years' mentions, merged span of year ranges. None if nothing parseable."""
     explicit = [float(m) for q in quotes for m in _YEARS.findall(q)]
-    ranges = sorted((int(a), ref_year if not b.isdigit() else int(b)) for q in quotes for a, b in _RANGE.findall(q))
+    ranges = sorted([(int(a), ref_year if not b.isdigit() else int(b)) for q in quotes for a, b in _RANGE.findall(q)]
+                    + [(int(a), ref_year) for q in quotes for a in _SINCE.findall(q)])
     merged = []
     for a, b in ranges:
         if merged and a <= merged[-1][1]:
@@ -102,14 +120,15 @@ def validate(answer, cv, req, refs, ref_year=2026):
         reasons.append("contradiction_without_evidence")
     if decision == "MET" and req.min_years:
         years = evidence_years(quotes, ref_year)
-        if years is None:
+        if years is None:  # the minimum cannot be confirmed from the quotes, so MET is not defensible
+            decision, basis = "UNCERTAIN", "ambiguous"
             reasons.append("duration_not_verified")
         elif years < req.min_years:
             decision, basis = "UNCERTAIN", "ambiguous"
             reasons.append("years_below_minimum_in_evidence")
     if decision == "MET" and req.category == "skill":
         terms = _terms(req, refs)
-        if terms and not any(t in q.casefold() for q in quotes for t in terms):
+        if terms and not any(re.search(rf"(?<!\w){re.escape(t)}(?!\w)", q.casefold()) for q in quotes for t in terms):
             reasons.append("semantic_inference_no_term_in_quote")
     if decision == "UNCERTAIN":
         reasons.append("uncertain_decision")

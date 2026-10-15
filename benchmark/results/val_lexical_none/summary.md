@@ -4,11 +4,11 @@ split `val` · backend `lexical_baseline` · knowledge `none` · n = 110 require
 
 | metric | final (after validation) | raw model |
 |---|---|---|
-| accuracy | 0.482 | 0.482 |
-| macro-F1 | 0.355 | 0.355 |
-| false-MET rate | 36.7% | 36.7% |
-| UNCERTAIN recall | 0.000 | 0.000 |
-| predicted UNCERTAIN share | 0.0% | 0.0% |
+| accuracy | 0.518 | 0.482 |
+| macro-F1 | 0.477 | 0.355 |
+| false-MET rate | 23.3% | 36.7% |
+| UNCERTAIN recall | 0.238 | 0.000 |
+| predicted UNCERTAIN share | 8.2% | 0.0% |
 | unsupported MET | 0 | |
 | JSON validity | | 100.0% |
 | quote verbatim rate | | 100.0% (49 quotes) |
@@ -20,23 +20,23 @@ Latency: 0.000 s/req (max 0.00 s) · peak RSS 26 MB (last process)
 
 | gold \ pred | MET | MISSING | UNCERTAIN |
 |---|---|---|---|
-| MET | 27 | 23 | 0 |
-| MISSING | 13 | 26 | 0 |
-| UNCERTAIN | 9 | 12 | 0 |
+| MET | 26 | 23 | 1 |
+| MISSING | 10 | 26 | 3 |
+| UNCERTAIN | 4 | 12 | 5 |
 
 ## Per class (final)
 
 | class | precision | recall | F1 | support |
 |---|---|---|---|---|
-| MET | 0.551 | 0.540 | 0.545 | 50 |
+| MET | 0.650 | 0.520 | 0.578 | 50 |
 | MISSING | 0.426 | 0.667 | 0.520 | 39 |
-| UNCERTAIN | n/a | 0.000 | 0.000 | 21 |
+| UNCERTAIN | 0.556 | 0.238 | 0.333 | 21 |
 
 ## Per tag accuracy (final)
 
 | tag | n | accuracy |
 |---|---|---|
-| ambiguous_duration | 7 | 0.000 |
+| ambiguous_duration | 7 | 0.714 |
 | certification | 15 | 0.600 |
 | contradictory_requirement | 2 | 0.000 |
 | education | 9 | 0.444 |

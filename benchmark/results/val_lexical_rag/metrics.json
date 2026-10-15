@@ -12,20 +12,20 @@
     "model": null,
     "adapter": null,
     "max_new_tokens": 192,
-    "peak_rss_mb": 53.9,
+    "peak_rss_mb": 53.8,
     "torch_threads": 4,
-    "finished_at": "2026-10-15T00:04:12"
+    "finished_at": "2026-10-15T00:05:37"
   },
   "metrics": {
     "final": {
       "n": 110,
-      "accuracy": 0.4909090909090909,
-      "macro_f1": 0.3587334014300307,
+      "accuracy": 0.5363636363636364,
+      "macro_f1": 0.4985482162448454,
       "per_class": {
         "MET": {
-          "precision": 0.5333333333333333,
-          "recall": 0.64,
-          "f1": 0.5818181818181818,
+          "precision": 0.6326530612244898,
+          "recall": 0.62,
+          "f1": 0.6262626262626263,
           "support": 50
         },
         "MISSING": {
@@ -35,32 +35,32 @@
           "support": 39
         },
         "UNCERTAIN": {
-          "precision": null,
-          "recall": 0.0,
-          "f1": 0.0,
+          "precision": 0.5454545454545454,
+          "recall": 0.2857142857142857,
+          "f1": 0.37499999999999994,
           "support": 21
         }
       },
       "confusion": {
         "MET": {
-          "MET": 32,
+          "MET": 31,
           "MISSING": 18,
-          "UNCERTAIN": 0
+          "UNCERTAIN": 1
         },
         "MISSING": {
-          "MET": 17,
+          "MET": 13,
           "MISSING": 22,
-          "UNCERTAIN": 0
+          "UNCERTAIN": 4
         },
         "UNCERTAIN": {
-          "MET": 11,
+          "MET": 5,
           "MISSING": 10,
-          "UNCERTAIN": 0
+          "UNCERTAIN": 6
         }
       },
-      "false_met_rate": 0.4666666666666667,
-      "uncertain_recall": 0.0,
-      "predicted_uncertain_share": 0.0,
+      "false_met_rate": 0.3,
+      "uncertain_recall": 0.2857142857142857,
+      "predicted_uncertain_share": 0.1,
       "unsupported_met": 0
     },
     "raw_model": {
@@ -114,7 +114,7 @@
     "per_tag": {
       "ambiguous_duration": {
         "n": 7,
-        "accuracy": 0.0
+        "accuracy": 0.7142857142857143
       },
       "certification": {
         "n": 15,
@@ -158,15 +158,15 @@
       },
       "related_not_equivalent": {
         "n": 21,
-        "accuracy": 0.7619047619047619
+        "accuracy": 0.8095238095238095
       }
     },
     "evidence_overlap_gold_met": 0.54,
     "missing_basis_accuracy": 0.8636363636363636,
     "latency": {
-      "mean_s": 0.0011854545454545453,
-      "max_s": 0.0082,
-      "total_s": 0.1304
+      "mean_s": 0.0011654545454545455,
+      "max_s": 0.008,
+      "total_s": 0.1282
     },
     "n": 110
   }
