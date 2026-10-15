@@ -1,0 +1,135 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-884301900",
+  "title": "Senior IT Specialist (Robotic Process Automation and AI)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "You must have IT-related experience demonstrating each of the four competencies listed below",
+      "evidence": "You must have IT-related experience demonstrating each of the four competencies listed below",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "IT-related experience"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Attention to Detail",
+      "evidence": "Attention to Detail",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Attention to Detail"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Customer Service",
+      "evidence": "Customer Service",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Customer Service"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Oral Communication",
+      "evidence": "Oral Communication",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Oral Communication"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Problem Solving",
+      "evidence": "Problem Solving",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Problem Solving"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level",
+      "evidence": "at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere",
+      "evidence": "Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "robotic process automation",
+        "UiPath",
+        "Microsoft Power Automate",
+        "Automation Anywhere"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Analyzing and reviewing automated workflows, including integrations between RPA tools and other software applications, to assess performance, identify gaps, or recommend improvements",
+      "evidence": "Analyzing and reviewing automated workflows, including integrations between RPA tools and other software applications, to assess performance, identify gaps, or recommend improvements.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "automated workflows"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring)",
+      "evidence": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring)",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "RPA projects"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies",
+      "evidence": "Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "RPA",
+        "AI"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [
+    "Here the four competencies are part of the Basic Requirement, so they are counted."
+  ],
+  "needs_human_review": false,
+  "warnings": []
+}

@@ -54,14 +54,15 @@ class NuExtractClient:
     """Calls NuExtract through an OpenAI-compatible /chat/completions endpoint."""
 
     def __init__(self, base_url: str | None = None, model: str | None = None,
-                 mode: str | None = None, timeout: float = 180.0, max_tokens: int = 2048):
+                 mode: str | None = None, timeout: float = 180.0, max_tokens: int = 2048,
+                 seed: int = 0):
         self.base_url = (base_url or os.environ.get("HS_NUEXTRACT_BASE_URL",
                                                     "http://127.0.0.1:8080/v1")).rstrip("/")
         self.model = model or os.environ.get("HS_NUEXTRACT_MODEL", "NuExtract-2.0-2B")
         self.mode = mode or os.environ.get("HS_NUEXTRACT_MODE", "kwargs")
         if self.mode not in ("kwargs", "inline"):
             raise ValueError("mode must be 'kwargs' or 'inline'")
-        self.timeout, self.max_tokens = timeout, max_tokens
+        self.timeout, self.max_tokens, self.seed = timeout, max_tokens, seed
         self.last_call: dict = {}
         self.last_raw: str = ""   # the model's raw answer, saved for debugging and the prompt library
 
@@ -69,6 +70,9 @@ class NuExtractClient:
         payload = {
             "model": self.model,
             "temperature": 0,          # the model card asks for temperature 0
+            "top_p": 1,
+            "seed": self.seed,         # fixed seed: same input -> same output (measured: temperature 0
+                                       # alone was not enough with Ollama's CPU/GPU split)
             "max_tokens": self.max_tokens,
         }
         if self.mode == "kwargs":

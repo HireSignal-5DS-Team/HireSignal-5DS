@@ -202,6 +202,9 @@ def test_french_offer():
 @pytest.mark.parametrize("text,expected", [
     ("3+ years of Java", [3]), ("Minimum 5 ans", [5]), ("two years", [2]),
     ("3-5 years", [3]), ("often years later", []), ("Fluent French", []),
+    ("at least 52 weeks of specialized experience", [1]), ("18 months of Python", [1.5]), ("6 mois", [0.5]),
+    ("you must have one (1) year of specialized experience", [1]),
+    ("you must have one full year of specialized experience", [1]),
 ])
 def test_years_in(text, expected):
     assert years_in(text) == expected
@@ -222,6 +225,7 @@ def test_kwargs_mode_sends_template_the_official_way():
     payload = NuExtractClient(base_url="http://x/v1", mode="kwargs")._payload("TXT", "{}", [])
     assert payload["chat_template_kwargs"] == {"template": "{}", "examples": []}
     assert payload["temperature"] == 0
+    assert payload["seed"] == 0 and payload["top_p"] == 1
 
 
 # ------------------------------------------------- compound requirements (F1) ---
@@ -327,3 +331,38 @@ def test_dropped_warning_shows_what_the_model_quoted():
         req("SQL", "Solid knowledge of SQL databases (PostgreSQL or Oracle).", skill_terms=["SQL"]),
         req("Rust", "Ten years of Rust in production.", skill_terms=["Rust"])])]))
     assert any('model quoted: "Ten years of Rust in production."' in w for w in card.warnings)
+
+
+@pytest.mark.parametrize("evidence,terms", [
+    ("Expertise with enterprise ETL tools such as Pentaho, AWS Glue, Hadoop, and Apache Airflow.",
+     ["Pentaho", "AWS Glue", "Hadoop", "Apache Airflow"]),
+    ("Experience with cloud tools, e.g. AWS and Azure.", ["AWS", "Azure"]),
+    ("Maîtrise des outils tels que Jenkins et GitLab.", ["Jenkins", "GitLab"]),
+])
+def test_examples_list_is_one_requirement(evidence, terms):
+    """Found while reading a real USAJOBS offer: 'such as' lists are examples, not 4 musts."""
+    from agents.job.validate import split_compound
+    item = {"text": evidence, "evidence": evidence, "kind": "must", "category": "skill",
+            "skill_terms": terms, "min_years": None, "chunk_ids": []}
+    assert split_compound(item) == [item]
+
+
+@pytest.mark.parametrize("evidence,terms,n", [
+    ("Experience working within CI/CD pipelines and modern DevOps practices.", ["CI/CD", "DevOps"], 2),
+    ("Proficiency using git (particularly GitLab) for source control.", ["git", "GitLab"], 1),
+    ("Experience with TCP/IP or UDP.", ["TCP/IP", "UDP"], 1),
+])
+def test_only_words_between_terms_decide(evidence, terms, n):
+    """Found while drafting gold cards: the '/' inside 'CI/CD' was read as 'or'."""
+    from agents.job.validate import split_compound
+    item = {"text": evidence, "evidence": evidence, "kind": "must", "category": "skill",
+            "skill_terms": terms, "min_years": None, "chunk_ids": []}
+    assert len(split_compound(item)) == n
+
+
+def test_years_in_an_education_deadline_are_not_experience():
+    """Found while drafting gold cards: 'degree within the last two years' is not 2 years of experience."""
+    post = POST + "\n- A degree completed within the last two years."
+    card = run_job_agent(post, "JD-001", FakeBackend([answer([
+        req("Recent degree", "A degree completed within the last two years.", category="education")])]))
+    assert card.requirements[0].min_years is None

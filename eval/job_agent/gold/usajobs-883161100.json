@@ -1,0 +1,155 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883161100",
+  "title": "Data Scientist (Supply Chain)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Degree: Mathematics, statistics, computer science, data science or field directly related to the position",
+      "evidence": "Degree: Mathematics, statistics, computer science, data science or field directly related to the position.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "applicants must possess one year of specialized experience equivalent to the GS-13 level or equivalent under other pay systems in the Federal service, military or private sector",
+      "evidence": "applicants must possess one year of specialized experience equivalent to the GS-13 level or equivalent under other pay systems in the Federal service, military or private sector.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis to research and improve supply chain risk assessment processes",
+      "evidence": "Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis to research and improve supply chain risk assessment processes.",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [
+        "regression",
+        "decision tree analytics",
+        "probability",
+        "game theory",
+        "statistical analysis"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Providing technical direction, planning, and leadership to create and implement new agency data and supply chain risk assessment policy and processes",
+      "evidence": "Providing technical direction, planning, and leadership to create and implement new agency data and supply chain risk assessment policy and processes.",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [
+        "supply chain risk assessment"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Providing a high level of technical expertise in data science",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "nice",
+      "category": "skill",
+      "skill_terms": [
+        "data science"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Providing a high level of technical expertise in intelligence",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "nice",
+      "category": "skill",
+      "skill_terms": [
+        "intelligence"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Providing a high level of technical expertise in artificial intelligence/machine learning",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "nice",
+      "category": "skill",
+      "skill_terms": [
+        "artificial intelligence/machine learning"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Providing a high level of technical expertise in system analysis",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "nice",
+      "category": "skill",
+      "skill_terms": [
+        "system analysis"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Providing a high level of technical expertise in risk analysis",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "nice",
+      "category": "skill",
+      "skill_terms": [
+        "risk analysis"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Providing a high level of technical expertise in predictive analysis",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "nice",
+      "category": "skill",
+      "skill_terms": [
+        "predictive analysis"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Providing a high level of technical expertise in computer simulation",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "nice",
+      "category": "skill",
+      "skill_terms": [
+        "computer simulation"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "Using standard-type models to simulate real world environments",
+      "evidence": "Using standard-type models to simulate real world environments.",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [
+    "'Creditable specialized experience includes' lists examples of qualifying experience, so the items are annotated nice. The DoD Practitioner certification is obtained after hiring ('within required timeframes'): excluded."
+  ],
+  "needs_human_review": false,
+  "warnings": []
+}

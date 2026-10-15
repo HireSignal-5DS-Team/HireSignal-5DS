@@ -1,0 +1,199 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883337000",
+  "title": "IT Specialist (Senior Cloud AI Engineer)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "you must show that you have the required IT-related experience for the grade level to which your are applying",
+      "evidence": "you must show that you have the required IT-related experience for the grade level to which your are applying",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "IT-related experience"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Attention to Detail",
+      "evidence": "Attention to Detail",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Attention to Detail"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Customer Service",
+      "evidence": "Customer Service",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Customer Service"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Decision Making",
+      "evidence": "Decision Making",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Decision Making"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Information Management",
+      "evidence": "Information Management",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Information Management"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Interpersonal Skills",
+      "evidence": "Interpersonal Skills",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Interpersonal Skills"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Oral Communication",
+      "evidence": "Oral Communication",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Oral Communication"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Problem Solving",
+      "evidence": "Problem Solving",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Problem Solving"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Reasoning",
+      "evidence": "Reasoning",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Reasoning"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Teamwork",
+      "evidence": "Teamwork",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Teamwork"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Technical Competence",
+      "evidence": "Technical Competence",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Technical Competence"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector",
+      "evidence": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions",
+      "evidence": "serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "cloud-hosted AI solutions"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads",
+      "evidence": "designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "AI platforms"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r15",
+      "text": "planning and executing pilots or proofs-of-concept to evaluate emerging cloud and AI technologies, and advising leadership on whether to adopt, refine, or discontinue those solutions based on mission impact, security, and implementation risk",
+      "evidence": "planning and executing pilots or proofs-of-concept to evaluate emerging cloud and AI technologies, and advising leadership on whether to adopt, refine, or discontinue those solutions based on mission impact, security, and implementation risk",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r16",
+      "text": "routinely explaining complex technical issues, risks, and tradeoffs to both technical and non-technical stakeholders in ways that build consensus and secure acceptance of recommended technical approaches, priorities, and standards within a federal IT and AI policy and governance context",
+      "evidence": "routinely explaining complex technical issues, risks, and tradeoffs to both technical and non-technical stakeholders in ways that build consensus and secure acceptance of recommended technical approaches, priorities, and standards within a federal IT and AI policy and governance context",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [
+    "The ten 'Required Competencies' are counted as must. The four specialized-experience items are joined by AND: all required. The 52 weeks for current federal employees is time in grade (administrative): excluded."
+  ],
+  "needs_human_review": false,
+  "warnings": []
+}

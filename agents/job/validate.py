@@ -39,9 +39,10 @@ _NUMBER_WORDS = {
 }
 _YEARS = re.compile(
     r"(?<![a-z0-9])(\d+(?:[.,]\d+)?|" + "|".join(sorted(_NUMBER_WORDS, key=len, reverse=True))
-    + r")\s*\+?\s*(?:-\s*\d+\s*)?(?:years?|yrs?|ans|an|annees?)\b",
+    + r")\s*(?:\(\s*\d+\s*\)\s*)?\+?\s*(?:-\s*\d+\s*)?(?:full\s+|complete\s+|pleine\s+)?(years?|yrs?|ans|an|annees?|months?|mois|weeks?|semaines?)\b",
     re.IGNORECASE,
 )
+_PER_YEAR = {"month": 12, "months": 12, "mois": 12, "week": 52, "weeks": 52, "semaine": 52, "semaines": 52}
 
 
 @dataclass
@@ -72,11 +73,12 @@ def _has_cue(text: str, cues: list[str]) -> bool:
 
 
 def years_in(text: str) -> list[float]:
-    """All numbers of years mentioned: '3+ years' -> [3], 'trois ans' -> [3]."""
+    """All durations mentioned, in years: '3+ years' -> [3], 'trois ans' -> [3], '52 weeks' -> [1]."""
     found = []
     for match in _YEARS.finditer(_fold(text)):
         token = match.group(1).replace(",", ".")
         value = float(token) if token[0].isdigit() else float(_NUMBER_WORDS.get(token, 0))
+        value = round(value / _PER_YEAR.get(match.group(2).lower(), 1), 2)  # "52 weeks" -> 1.0
         if value:
             found.append(value)
     return found
@@ -206,7 +208,9 @@ def check_requirements(items: list, post: str) -> CheckReport:
             min_years = float(min_years) if min_years not in (None, "") else None
         except (TypeError, ValueError):
             min_years = None
-        if stated:
+        if stated and min_years is None and category != "experience":
+            pass  # "degree completed within the last two years" is a deadline, not experience
+        elif stated:
             if min_years not in stated:
                 report.repaired += 1
                 report.warnings.append(f"{label}: min_years {min_years} -> {min(stated)} (from the quote)")
@@ -246,6 +250,16 @@ def check_requirements(items: list, post: str) -> CheckReport:
 # --------------------------------------------------- compound requirements ---
 
 _ALTERNATIVE = re.compile(r"\b(or|ou|either|soit)\b|/")
+# A list introduced by these words gives EXAMPLES, so any one of them is enough:
+# "ETL tools such as Pentaho, AWS Glue and Airflow" is one requirement, not four.
+_EXAMPLE_MARKER = re.compile(
+    r"(?:\b(?:such as|including|to include|like|for example|for instance|"
+    r"notamment|tels? que|telles? que|comme|par exemple)\b|\be\.?g\.?)[\s:,(]*$"
+)
+_EXAMPLE_IN_GAP = re.compile(
+    r"\b(such as|including|to include|like|for example|for instance|notamment|tels? que|telles? que|"
+    r"par exemple)\b|\be\.?g\.?"
+)
 _NO_SPLIT_CATEGORIES = {"education", "other"}
 _CLAUSE_BREAK = re.compile(r"[;\n]|\.\s")
 
@@ -280,16 +294,21 @@ def _split_by_clause(req: dict) -> list[dict]:
     return parts
 
 
-def _term_span(evidence: str, terms: list[str]) -> tuple[int, int] | None:
-    """Start of the first term and end of the last one, if they appear in order."""
-    low, pos, start, end = evidence.lower(), 0, None, None
+def _term_positions(evidence: str, terms: list[str]) -> list[tuple[int, int]] | None:
+    """(start, end) of each term in the evidence, if they appear in this order."""
+    low, pos, found = evidence.lower(), 0, []
     for term in terms:
-        found = low.find(term.lower(), pos)
-        if found == -1:
+        start = low.find(term.lower(), pos)
+        if start == -1:
             return None
-        start = found if start is None else start
-        pos = end = found + len(term)
-    return start, end
+        found.append((start, start + len(term)))
+        pos = start + len(term)
+    return found
+
+
+# Words BETWEEN two terms that mean "the second one is a detail of the first":
+# "git (particularly GitLab)" is one requirement.
+_ELABORATION = re.compile(r"\(|\b(particularly|especially|notably|in particular|surtout|en particulier)\b")
 
 
 def split_compound(req: dict) -> list[dict]:
@@ -302,12 +321,21 @@ def split_compound(req: dict) -> list[dict]:
     if len(terms) < 2 or req["category"] in _NO_SPLIT_CATEGORIES:
         return [req]
 
-    span = _term_span(req["evidence"], terms)
-    between = req["evidence"][span[0]:span[1]] if span else ""
-    if span and _CLAUSE_BREAK.search(between):
+    ev = req["evidence"]
+    positions = _term_positions(ev, terms)
+    span = (positions[0][0], positions[-1][1]) if positions else None
+    # Only the words BETWEEN the terms decide (the "/" inside "CI/CD" must not count).
+    gaps = [_fold(ev[a[1]:b[0]]) for a, b in zip(positions, positions[1:])] if positions else []
+    if any(_CLAUSE_BREAK.search(g) for g in gaps):
         return _split_by_clause(req)  # "Fluent French; good written English."
-    if span and _ALTERNATIVE.search(_fold(between)):
+    if any(_ALTERNATIVE.search(g) for g in gaps):
         return [req]  # alternatives: any one of them is enough
+    if any(_ELABORATION.search(g) for g in gaps):
+        return [req]  # "git (particularly GitLab)": one requirement
+    if any(_EXAMPLE_IN_GAP.search(g) for g in gaps):
+        return [req]  # "data science, such as deep learning and LLMs": examples of the first term
+    if span and _EXAMPLE_MARKER.search(_fold(ev[:span[0]])):
+        return [req]  # "such as A, B and C": examples, any one is enough
 
     parts = []
     for term in terms:

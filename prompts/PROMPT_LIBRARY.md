@@ -69,7 +69,7 @@ NuExtract has no free-text instructions: its "prompt" is a **typed JSON template
 | F1 | Compound requirement not split: one item for two skills, so the second skill is lost | "At least 3 years of professional experience with Java and Spring Boot." → only "…with Java", `skill_terms: ["Java"]` (Spring Boot missing entirely) | 1 of 1 compound requirements on the example | `job-v2` |
 | F2 | Quote copied with small slips | "Fluent French;" (punctuation), "good written English." (case) | 2 of 7 | none needed: repaired by the guardrails |
 
-*To add: results on the real job offers (`real_job_offers_20.csv`).*
+*Results on the real job offers: see the evaluation below.*
 
 ### job-v2
 
@@ -118,10 +118,26 @@ exposed two failures **in the code around the model**, not in the model:
 Lesson for the report: a better prompt can move errors downstream. Measuring the whole
 agent (model + guardrails), not the model alone, is what caught F3.
 
-| Measure | job-v1 | job-v2 + F3/F4 fixes |
-|---|---|---|
-| Requirements correct (of 9) | *to re-measure* | *to measure* |
-| Invented kept | | |
+**Rerun with the F3/F4 fixes** (same day): both `job-v1` and `job-v2` gave all 9 requirements.
+`job-v1` lost Spring Boot in three earlier runs and found it in this one, with the same input
+and temperature 0: **one example is not a valid comparison**. The model was not fully
+reproducible (Ollama split the work differently between CPU and GPU across runs), so a fixed
+`seed` is now sent with every request, and the comparison is made on 10 real offers.
+
+### Evaluation on real job offers
+
+10 USAJOBS offers, 104 gold requirements, rules in
+[`eval/job_agent/ANNOTATION_RULES.md`](../eval/job_agent/ANNOTATION_RULES.md); run
+`scripts/eval_job_agent.py`. *Results table to paste here from `eval/job_agent/results/<name>/summary.md`.*
+
+Drafting the gold cards (before any model run) exposed four more guardrail bugs, now fixed and tested:
+
+| # | Found in | Problem | Fix |
+|---|---|---|---|
+| G1 | "ETL tools such as Pentaho, AWS Glue, Hadoop, and Apache Airflow" | the split made four required skills out of a list of examples | lists after "such as / e.g. / including / to include / notamment / tels que" stay one requirement |
+| G2 | "CI/CD pipelines and modern DevOps practices" | the `/` inside "CI/CD" was read as "or" | only the words **between** the skills decide; "git (particularly GitLab)" stays one |
+| G3 | "at least 52 weeks", "one (1) year", "one full year" | durations not recognised as years | weeks and months converted; "(1)" and "full" accepted |
+| G4 | "a degree completed within the last two years" | the years check would set `min_years: 2` on an education requirement | years are only filled in automatically for experience requirements |
 
 ### Guardrails applied after every call (code, not prompt)
 
