@@ -46,11 +46,26 @@ class Retriever:
 
         hf_id, self.q_prefix, p_prefix, _ = MODELS[model]
         self.model = SentenceTransformer(hf_id)
-        self.qdrant = QdrantClient(path=str(store_path)) if store_path else QdrantClient(":memory:")
         # collection name fingerprints model + chunk texts, so a changed corpus is re-embedded
         digest = hashlib.sha1("".join(c["chunk_id"] + c["text"] for c in self.chunks).encode()).hexdigest()[:12]
         self.collection = f"{model}-{digest}"
-        self.index_reused = self.qdrant.collection_exists(self.collection)  # embeddings persisted on disk by a previous run
+        self.index_recovered_from = None
+        try:
+            self.qdrant = QdrantClient(path=str(store_path)) if store_path else QdrantClient(":memory:")
+            self.index_reused = self.qdrant.collection_exists(self.collection)  # embeddings persisted by a previous run
+            if self.index_reused:
+                self.qdrant.count(self.collection)  # touches the storage file: fails here if it is corrupted
+        except Exception as err:  # unreadable index: keep it aside for inspection, rebuild (embeddings are derived data)
+            if not store_path:
+                raise
+            import shutil
+            import time
+            self.index_recovered_from = f"{store_path}.corrupt-{int(time.time())}"
+            shutil.move(str(store_path), self.index_recovered_from)
+            print(f"WARNING: index at {store_path} unreadable ({type(err).__name__}); moved to "
+                  f"{self.index_recovered_from}, rebuilding", flush=True)
+            self.qdrant = QdrantClient(path=str(store_path))
+            self.index_reused = False
         if not self.index_reused:
             vecs = self.model.encode([p_prefix + c["text"] for c in self.chunks], normalize_embeddings=True,
                                      batch_size=32, show_progress_bar=True)
