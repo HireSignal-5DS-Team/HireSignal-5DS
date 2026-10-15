@@ -53,7 +53,7 @@ Detailed tables in `EXPERIMENT_COMPARISON.md`. Summary (dev, Matcher setting = E
 `EXPERIMENT_MATRIX.md` (58 rows: exp01 re-scored on reviewed labels, exp02, exp03), `EXPERIMENT_COMPARISON.md` §5–6.
 Best quality: e5-small → bge@20 (0.929). Best latency: BM25 (0.2 ms). Best trade-off: parent-child 3-sentence +
 e5-small (0.902, p95 132 ms). Best CPU-only ≤ 300 ms: structure + e5-small or pc@3s2 + e5-small (n.s. difference).
-Best EN/FR balance: e5-base or any multilingual reranker. Best for the real Matcher: §11.
+Best EN/FR balance: e5-base or any multilingual reranker. Best for the real Matcher: no injection (§11).
 
 ## 8. Experiments 01–03: reliability and reproducibility
 
@@ -90,9 +90,36 @@ Qwen3-4B-Instruct-2507 Q4_K_M GGUF (unsloth @ `a06e946`, SHA256 verified identic
 k = 3 ESCO references, prompt p1, CPU. A and B were run earlier by the Matcher session with `llama_cpp.server`; C and
 the control reruns B′/A′ were run in this audit with `llama-server` (llama.cpp `620d222`, `-c 4096 -np 1 --jinja`).
 
-_PENDING: control reruns B′ (BM25) and A′ (no RAG) are running; table filled when they finish. Run C result so far: macro-F1 0.599 vs 0.634 for A (teammate run, different server)._
+Full table: `integration/results/matcher_comparison.md`. A = teammate no-RAG, B = teammate BM25 (`llama_cpp.server`);
+A′, B′, C = this audit (`llama-server`, identical settings between them).
 
-Interpretation: _pending control runs._
+| Run | Knowledge | macro-F1 | JSON valid | UNCERTAIN rate | false-MET | latency p50/p95 s |
+|---|---|---|---|---|---|---|
+| A′ (control) | none | **0.649** | 0.931 | 0.475 | 0.009 | 10.6 / 15.4 |
+| B′ | BM25 ESCO, k=3 | 0.608 | 0.866 | 0.515 | 0.009 | 13.2 / 18.3 |
+| C | dense e5-small ESCO, k=3 | 0.599 | 0.876 | 0.520 | 0.009 | 16.4 / 23.5 |
+| A (teammate) | none | 0.634 | 0.950 | 0.495 | 0.009 | 12.9 / 20.7 |
+| B (teammate) | BM25 ESCO, k=3 | 0.630 | 0.916 | 0.505 | 0.009 | 16.4 / 34.2 |
+
+Paired against A′ (same 202 requirements; McNemar on correctness, bootstrap 95% CI of macro-F1 difference):
+
+| Comparison | Δ macro-F1 | 95% CI | McNemar p | alias acc. (n=21) | absent-skill acc. (n=11) | certification acc. (n=13) |
+|---|---|---|---|---|---|---|
+| B′ vs A′ | −0.041 | [−0.083, −0.000] | 0.093 | 0.29 → 0.43 | 0.45 → 0.36 | 0.54 → 0.23 |
+| C vs A′ | −0.050 | [−0.101, +0.001] | 0.080 | 0.29 → 0.43 | 0.45 → 0.09 | 0.54 → 0.38 |
+| C vs B′ | −0.009 | — | 0.851 | | | |
+| A vs A′ (server drift) | −0.015 | [−0.045, +0.016] | 0.581 | | | |
+
+JSON-failure analysis: unparsed outputs become UNCERTAIN (A′ 14, B′ 27, C 25 of 202). Mean prompt tokens 315 / 401 / 501
+(A′ / B′ / C; dense always injects 3 references, BM25 injects none for 87/202). On the 167 requirements parsed in all
+three runs, accuracy is 0.689 / 0.683 / 0.671 — nearly equal.
+
+Interpretation: on bench-v1 validation, neither RAG variant improves the base Qwen3-4B Q4 Matcher; both point estimates
+are lower (BM25 CI just touching 0, dense CI including 0, neither McNemar significant at 0.05). Most of the loss comes
+from longer prompts causing more invalid JSON, not from worse decisions on parsed outputs. RAG helps skill aliases
+(the case it was designed for) and hurts absent-skill traps and certifications, where related ESCO concepts push the
+model toward MET/UNCERTAIN. Dense retrieval, better in retrieval metrics (§3–6), does not translate into better Matcher
+decisions here. Limits: synthetic benchmark, one prompt (p1), one quantised model on CPU, base model only (no LoRA).
 
 ## 12. Robustness and security (14 new tests, `tests/test_robustness.py`)
 
@@ -115,7 +142,10 @@ labelled mock route exists, no fields guessed. Interface is model-agnostic: the 
 
 ## 14. Test results in this audit
 
-_Pending: full test run after the Matcher runs release the CPU._
+Unit tests (stub models): **30 passed**, 7 skipped (real-model tests). Real-model tests (`RAG_REAL=1`, e5-small /
+e5-base / mmarco, CPU, offline cache): **7 passed** in 216 s, including the dev regression (Hit@1 ≥ 31/40), source
+attribution, every profile from the persisted index and the p95 ≤ 300 ms budget. Run after llama-server was stopped.
+One real defect was found and fixed during the audit (corrupted index crash, §12).
 
 ## 15. Final-test status
 
@@ -131,4 +161,12 @@ outage handling untested.
 
 ## 17. Recommended production configuration
 
-_Pending final Matcher comparison; current default: structure-300 + e5-small dense (unchanged)._
+Retrieval service default (unchanged): **structure-aware chunking (300 words) + multilingual-e5-small dense, Qdrant
+local persisted index, exact cosine, top-5, mandatory job filter, BM25 kept as fallback; no reranker, no fusion, no
+abstention.** No alternative is significantly better after correction; e5-base and parent-child remain opt-in profiles;
+rerankers only for an async/GPU path.
+
+Matcher: **do not inject RAG knowledge by default** for the base Qwen3-4B Q4 Matcher — it lowered macro-F1 under
+identical serving (§11). If RAG is kept, re-test a narrower variant before enabling it: inject only on
+alias/terminology requirements, shorter knowledge text, a relevance cut-off (fewer than 3 references), and JSON-robust
+decoding. Repeat the comparison with Dali's LoRA adapter under identical serving when it exists.

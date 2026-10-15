@@ -10,7 +10,7 @@
 | 6 | Small dev set (40 Matcher queries, 27 configurations) | no candidate is significant after multiple-comparison correction | larger reviewed set | — |
 | 7 | GPU latency never measured | reranker viability on GPU unknown | a GPU machine | 30 min |
 | 8 | Matcher-side prompt-injection resistance not tested | RAG returns text verbatim; only the Matcher prompt labels it as terminology | Matcher owner / a targeted test with the real model | 1 h |
-| 9 | Matcher uses BM25 in-process, not `/knowledge` | dense retrieval is better for ESCO and French in retrieval metrics; end-to-end effect: see `COMPLETE_RAG_AUDIT.md` §11 | Matcher owner decision | small |
+| 9 | Matcher uses BM25 in-process, not `/knowledge` | dense retrieval is better for ESCO and French in retrieval metrics; but end-to-end neither BM25 (−0.041) nor dense (−0.050) RAG improved Matcher macro-F1 (`COMPLETE_RAG_AUDIT.md` §11) | Matcher owner: shorter, relevance-filtered knowledge format, then re-test | ~3 h CPU per run |
 | 10 | Unavailable-RAG handling on the Matcher side | no HTTP client exists yet, so timeouts/fallback are untested | Matcher owner | small |
 | 11 | Precision@5 and contradictory-passage tests | gold data stores one first-hit rank; no contradiction labels | new annotation | — |
 | 12 | GTE embeddings, MonoT5 reranker | never tested (only considered) | optional | 1–2 h each |

@@ -122,6 +122,10 @@ int8 quantisation, combinations), repeated latency for 13 finalists, calibrated 
 - Dali's backend schemas (pipeline v0.2.0, RAG search v1.1.0): **not in the repository**; `/mock/v1/search` is a
   labelled mock and `INTEGRATION_ADAPTER.md` describes the real adapter. No schema field has been guessed.
 - Runtime: one process, no model server; embeddings precomputed and reused (`MODEL_EXECUTION.md`).
+- End-to-end effect (audit, `audit/COMPLETE_RAG_AUDIT.md` §11): on 202 bench-v1 validation requirements, base Qwen3-4B
+  Q4 macro-F1 was 0.649 without RAG, 0.608 with BM25 knowledge and 0.599 with dense knowledge (same server; neither
+  difference significant, both negative). Longer prompts caused more invalid JSON. Recommendation: no RAG injection
+  in the Matcher by default until a shorter, relevance-filtered format is re-tested.
 
 ## 6. Limitations
 
