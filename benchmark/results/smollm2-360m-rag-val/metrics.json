@@ -1,0 +1,182 @@
+{
+  "n": 202,
+  "final": {
+    "macro_f1": 0.1078838174273859,
+    "accuracy": 0.19306930693069307,
+    "false_met_rate": 0.0,
+    "per_class": {
+      "MET": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 0.19306930693069307,
+        "recall": 1.0,
+        "f1": 0.3236514522821577,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 86,
+        "null": 0
+      },
+      "MISSING": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 77,
+        "null": 0
+      },
+      "UNCERTAIN": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 39,
+        "null": 0
+      }
+    }
+  },
+  "raw_model": {
+    "macro_f1": 0.0,
+    "accuracy": 0.0,
+    "false_met_rate": 0.0,
+    "per_class": {
+      "MET": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 86
+      },
+      "MISSING": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 77
+      },
+      "UNCERTAIN": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 39
+      }
+    }
+  },
+  "json_schema_validity": 0.0,
+  "basis_accuracy": 0.19306930693069307,
+  "evidence": {
+    "raw_quotes": 0,
+    "raw_quote_validity": null,
+    "raw_met_with_verified_quote": null,
+    "attribution_vs_gold": null,
+    "attribution_n": 0
+  },
+  "validator_changed_decision": 1.0,
+  "needs_human_review_rate": 1.0,
+  "per_tag_accuracy": {
+    "ambiguous_duration": {
+      "n": 21,
+      "accuracy": 1.0
+    },
+    "certification": {
+      "n": 13,
+      "accuracy": 0.0
+    },
+    "contradictory_evidence": {
+      "n": 31,
+      "accuracy": 0.0
+    },
+    "date_range": {
+      "n": 8,
+      "accuracy": 0.0
+    },
+    "direct_match": {
+      "n": 8,
+      "accuracy": 0.0
+    },
+    "distractor_details": {
+      "n": 74,
+      "accuracy": 0.1891891891891892
+    },
+    "education": {
+      "n": 10,
+      "accuracy": 0.0
+    },
+    "equivalent_skill_alias": {
+      "n": 21,
+      "accuracy": 0.0
+    },
+    "implicit_project_evidence": {
+      "n": 15,
+      "accuracy": 0.0
+    },
+    "insufficient_experience": {
+      "n": 17,
+      "accuracy": 0.0
+    },
+    "language": {
+      "n": 14,
+      "accuracy": 0.0
+    },
+    "missing_evidence": {
+      "n": 18,
+      "accuracy": 0.0
+    },
+    "multi_requirement": {
+      "n": 117,
+      "accuracy": 0.19658119658119658
+    },
+    "negation_trap": {
+      "n": 22,
+      "accuracy": 0.0
+    },
+    "partial_evidence": {
+      "n": 18,
+      "accuracy": 1.0
+    },
+    "rag_suggests_absent_skill": {
+      "n": 11,
+      "accuracy": 0.0
+    },
+    "sufficient_experience": {
+      "n": 25,
+      "accuracy": 0.0
+    }
+  },
+  "latency_s": {
+    "mean": 9.810479207920793,
+    "p50": 6.3996,
+    "p95": 15.9609,
+    "max": 21.8816
+  },
+  "peak_rss_mb": 2792.1,
+  "load_seconds": 5.48
+}
