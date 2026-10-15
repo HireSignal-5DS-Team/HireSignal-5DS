@@ -1,0 +1,182 @@
+{
+  "n": 202,
+  "final": {
+    "macro_f1": 0.22222222222222224,
+    "accuracy": 0.2623762376237624,
+    "false_met_rate": 0.0,
+    "per_class": {
+      "MET": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 0.8421052631578947,
+        "recall": 0.2077922077922078,
+        "f1": 0.33333333333333337,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 0.20218579234972678,
+        "recall": 0.9487179487179487,
+        "f1": 0.3333333333333333,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 0,
+        "MISSING": 1,
+        "UNCERTAIN": 85,
+        "null": 0
+      },
+      "MISSING": {
+        "MET": 0,
+        "MISSING": 16,
+        "UNCERTAIN": 61,
+        "null": 0
+      },
+      "UNCERTAIN": {
+        "MET": 0,
+        "MISSING": 2,
+        "UNCERTAIN": 37,
+        "null": 0
+      }
+    }
+  },
+  "raw_model": {
+    "macro_f1": 0.122040072859745,
+    "accuracy": 0.08415841584158416,
+    "false_met_rate": 0.0,
+    "per_class": {
+      "MET": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 0.8421052631578947,
+        "recall": 0.2077922077922078,
+        "f1": 0.33333333333333337,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 0.045454545454545456,
+        "recall": 0.02564102564102564,
+        "f1": 0.032786885245901634,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 0,
+        "MISSING": 1,
+        "UNCERTAIN": 9,
+        "null": 76
+      },
+      "MISSING": {
+        "MET": 0,
+        "MISSING": 16,
+        "UNCERTAIN": 12,
+        "null": 49
+      },
+      "UNCERTAIN": {
+        "MET": 0,
+        "MISSING": 2,
+        "UNCERTAIN": 1,
+        "null": 36
+      }
+    }
+  },
+  "json_schema_validity": 0.20297029702970298,
+  "basis_accuracy": 0.20297029702970298,
+  "evidence": {
+    "raw_quotes": 0,
+    "raw_quote_validity": null,
+    "raw_met_with_verified_quote": null,
+    "attribution_vs_gold": 0.0,
+    "attribution_n": 12
+  },
+  "validator_changed_decision": 0.7970297029702971,
+  "needs_human_review_rate": 0.9801980198019802,
+  "per_tag_accuracy": {
+    "ambiguous_duration": {
+      "n": 21,
+      "accuracy": 0.9047619047619048
+    },
+    "certification": {
+      "n": 13,
+      "accuracy": 0.38461538461538464
+    },
+    "contradictory_evidence": {
+      "n": 31,
+      "accuracy": 0.3548387096774194
+    },
+    "date_range": {
+      "n": 8,
+      "accuracy": 0.0
+    },
+    "direct_match": {
+      "n": 8,
+      "accuracy": 0.0
+    },
+    "distractor_details": {
+      "n": 74,
+      "accuracy": 0.28378378378378377
+    },
+    "education": {
+      "n": 10,
+      "accuracy": 0.3
+    },
+    "equivalent_skill_alias": {
+      "n": 21,
+      "accuracy": 0.0
+    },
+    "implicit_project_evidence": {
+      "n": 15,
+      "accuracy": 0.0
+    },
+    "insufficient_experience": {
+      "n": 17,
+      "accuracy": 0.058823529411764705
+    },
+    "language": {
+      "n": 14,
+      "accuracy": 0.0
+    },
+    "missing_evidence": {
+      "n": 18,
+      "accuracy": 0.2222222222222222
+    },
+    "multi_requirement": {
+      "n": 117,
+      "accuracy": 0.2564102564102564
+    },
+    "negation_trap": {
+      "n": 22,
+      "accuracy": 0.4090909090909091
+    },
+    "partial_evidence": {
+      "n": 18,
+      "accuracy": 1.0
+    },
+    "rag_suggests_absent_skill": {
+      "n": 11,
+      "accuracy": 0.0
+    },
+    "sufficient_experience": {
+      "n": 25,
+      "accuracy": 0.0
+    }
+  },
+  "latency_s": {
+    "mean": 10.488616336633664,
+    "p50": 10.2261,
+    "p95": 15.2821,
+    "max": 28.6371
+  },
+  "peak_rss_mb": 5099.3,
+  "load_seconds": 6.78
+}
