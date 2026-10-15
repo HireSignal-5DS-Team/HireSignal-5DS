@@ -17,12 +17,12 @@
       "max_new_tokens": 192
     },
     "device": "cpu",
-    "load_seconds": 0.9,
+    "load_seconds": 1.03,
     "prompt_version": "p1"
   },
   "dataset_version": "bench-v1",
   "dataset_sha256": "37c60915f2db377f22c5b08f4b9e708e05cd9363709e9c39815d8e8d93545198",
-  "git_commit": "383c3726d10d99456ef54a7e5927dde6f6e64473",
+  "git_commit": "1db32248c4120e00d532e6e867e56c7c34025500",
   "hardware": {
     "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
     "python": "3.13.16",
@@ -33,5 +33,5 @@
     "cuda": false,
     "torch_threads": 4
   },
-  "load_seconds": 5.21
+  "load_seconds": 5.48
 }
