@@ -1,0 +1,37 @@
+{
+  "run_id": "smollm2-135m-rag-val",
+  "split": "val",
+  "limit": 0,
+  "knowledge": "rag.bm25",
+  "k": 3,
+  "backend": {
+    "backend": "transformers",
+    "is_model": true,
+    "model_id": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "adapter_id": null,
+    "adapter_revision": null,
+    "n_params": 134515008,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 192
+    },
+    "device": "cpu",
+    "load_seconds": 0.81,
+    "prompt_version": "p1"
+  },
+  "dataset_version": "bench-v1",
+  "dataset_sha256": "37c60915f2db377f22c5b08f4b9e708e05cd9363709e9c39815d8e8d93545198",
+  "git_commit": "4fedac6c8bc7204065f878fe0dbeefc0e7009f84",
+  "hardware": {
+    "platform": "Linux-6.18.44-fc-v114-x86_64-with-glibc2.39",
+    "python": "3.13.16",
+    "cpu_count": 4,
+    "ram_gb": 15.7,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "load_seconds": 4.87
+}
