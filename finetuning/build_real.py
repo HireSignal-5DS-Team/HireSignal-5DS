@@ -203,11 +203,11 @@ def prompts(cases, knowledge):
 
 def main(argv=None):
     ap = argparse.ArgumentParser()
-    ap.add_argument("--labels", nargs="+", required=True)
+    ap.add_argument("--labels", nargs="*", default=[], help="none = trial build from --extra only")
     ap.add_argument("--out", required=True)
     ap.add_argument("--val", required=True, help="benchmark/data/val.jsonl (evaluation prompts only)")
     ap.add_argument("--test", help="benchmark/data/test.jsonl: read ONLY for the leakage audit")
-    ap.add_argument("--extra", nargs="*", default=[], help="FILE:SHARE, e.g. contractnli_sft.jsonl:0.25")
+    ap.add_argument("--extra", nargs="*", default=[], help="FILE:SHARE (<1, share of train) or FILE:N (count), e.g. x.jsonl:0.25")
     ap.add_argument("--knowledge", choices=["rag", "none"], default="rag", help="knowledge block in training prompts")
     a = ap.parse_args(argv)
     out = Path(a.out)
@@ -230,15 +230,20 @@ def main(argv=None):
     sft = {s: [{**e, "source": "djinni"} for e in examples(by[s], kn)] for s in ("train", "dev")}
     n_real = len(sft["train"])
     shares = {p.rsplit(":", 1)[0]: float(p.rsplit(":", 1)[1]) for p in a.extra}
-    assert sum(shares.values()) < 1, "extra shares must sum to < 1"
+    frac = sum(v for v in shares.values() if v < 1)
+    assert frac < 1, "extra shares must sum to < 1"
     rng, extra_counts = random.Random(SEED), {}
     for path, share in shares.items():
         assert "test" not in Path(path).stem.lower() and "val" not in Path(path).stem.lower(), f"refusing {path}"
         ex = read_jsonl(path)
-        n = min(len(ex), round(share / (1 - sum(shares.values())) * n_real))
+        n = min(len(ex), int(share) if share >= 1 else round(share / (1 - frac) * n_real))
         pick = rng.sample(ex, n)
         sft["train"] += [{**e, "source": e.get("source") or Path(path).stem} for e in pick]
         extra_counts[Path(path).name] = n
+    if not sft["dev"]:  # trial build without labels: hold out 10 % of the extra cases for eval loss
+        dev_ids = {e["case_id"] for e in sft["train"] if int(hashlib.sha1(e["case_id"].encode()).hexdigest(), 16) % 10 == 0}
+        sft["dev"] = [e for e in sft["train"] if e["case_id"] in dev_ids]
+        sft["train"] = [e for e in sft["train"] if e["case_id"] not in dev_ids]
     rng.shuffle(sft["train"])
 
     val = read_jsonl(a.val)
@@ -254,7 +259,7 @@ def main(argv=None):
                                       "cases": len(by["eval_real"]),
                                       "requirements": sum(len(c["gold"]) for c in by["eval_real"]),
                                       "decisions": dict(Counter(g["decision"] for c in by["eval_real"] for g in c["gold"].values()))}
-    for name, cs in (("val", val), ("real", by["eval_real"])):
+    for name, cs in (("val", val), ("real", by["eval_real"])) if by["eval_real"] else (("val", val),):
         for kname, k in (("rag", rag), ("none", NoKnowledge())):
             f = f"eval/{name}_{kname}_prompts.jsonl"
             ps = prompts(cs, k)
