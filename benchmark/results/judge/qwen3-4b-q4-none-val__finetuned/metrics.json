@@ -1,0 +1,56 @@
+{
+  "run": "qwen3-4b-q4-none-val",
+  "judge": "finetuned",
+  "judge_dir": "/home/user/judge_runs/deberta-hs-v1/best",
+  "tau": 0.85,
+  "n_applicable": 102,
+  "n_errors": 8,
+  "strict": {
+    "precision": 0.375,
+    "recall": 0.375,
+    "f1": 0.375,
+    "false_positive_flag_rate": 0.05319148936170213,
+    "flags": 8
+  },
+  "broad": {
+    "precision": 0.23529411764705882,
+    "recall": 0.5,
+    "f1": 0.31999999999999995,
+    "false_positive_flag_rate": 0.13829787234042554,
+    "flags": 17
+  },
+  "auroc_error_detection": 0.5372340425531915,
+  "ece_correctness": 0.13978529411764712,
+  "per_tag_error_detection": {
+    "ambiguous_duration": {
+      "errors": 5,
+      "detected_strict": 0.2
+    },
+    "date_range": {
+      "errors": 1,
+      "detected_strict": 1.0
+    },
+    "distractor_details": {
+      "errors": 3,
+      "detected_strict": 0.3333333333333333
+    },
+    "equivalent_skill_alias": {
+      "errors": 1,
+      "detected_strict": 0.0
+    },
+    "multi_requirement": {
+      "errors": 5,
+      "detected_strict": 0.4
+    },
+    "sufficient_experience": {
+      "errors": 2,
+      "detected_strict": 1.0
+    }
+  },
+  "verdicts": {
+    "PASS": 85,
+    "FAIL": 8,
+    "UNCERTAIN": 9,
+    "NOT_APPLICABLE": 100
+  }
+}
