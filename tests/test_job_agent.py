@@ -38,7 +38,7 @@ PERFECT = answer([{k: v for k, v in r.items() if k not in ("req_id", "chunk_ids"
 def test_perfect_answer_gives_the_expected_card():
     card = run_job_agent(POST, "JD-001", FakeBackend([PERFECT]))
     assert isinstance(card, JobRequirements)
-    assert [r.req_id for r in card.requirements] == [f"r{i}" for i in range(1, 9)]
+    assert [r.req_id for r in card.requirements] == [f"r{i}" for i in range(1, 10)]
     assert card.to_matcher_job()["requirements"] == JobRequirements.model_validate(GOLD).to_matcher_job()["requirements"]
     assert card.warnings == [] and not card.needs_human_review
     assert card.language == "en" and card.title == "Backend Developer"
@@ -52,12 +52,25 @@ def test_template_and_examples_are_sent_to_the_model():
     assert len(call["examples"]) == 2
 
 
-def test_prompt_examples_obey_their_own_rules():
-    """Every quote in the few-shot examples must be in its example input."""
-    for ex in prompts.EXAMPLES:
+@pytest.mark.parametrize("version", sorted(prompts.VERSIONS))
+def test_prompt_examples_obey_their_own_rules(version):
+    """Every quote and skill term in the few-shot examples must be in its example input."""
+    template, examples = prompts.VERSIONS[version]
+    for ex in examples:
         out = json.loads(ex["output"])
+        assert out["title"] in ex["input"]
         for r in out["requirements"]:
             assert r["evidence"] in ex["input"], r["evidence"]
+            assert set(r) == set(template["requirements"][0]), "example fields must match the template"
+            for term in r["skill_terms"]:
+                assert term in r["evidence"], term
+
+
+def test_older_prompt_version_can_still_be_used():
+    fake = FakeBackend([PERFECT])
+    run_job_agent(POST, "JD-001", fake, prompt_version="job-v1")
+    v1 = fake.calls[0]["template"]
+    assert v1.index('"text"') < v1.index('"evidence"')   # v1 order; v2 puts evidence first
 
 
 # --------------------------------------------------------------- guardrails ---
@@ -132,13 +145,13 @@ def test_unknown_category_becomes_other():
 def test_unreadable_answer_is_retried_once():
     fake = FakeBackend(["Sorry, I cannot do that", PERFECT])
     card = run_job_agent(POST, "JD-001", fake)
-    assert len(fake.calls) == 2 and len(card.requirements) == 8
+    assert len(fake.calls) == 2 and len(card.requirements) == 9
     assert any("unreadable" in w for w in card.warnings)
 
 
 def test_json_wrapped_in_code_fence_is_accepted():
     card = run_job_agent(POST, "JD-001", FakeBackend(["```json\n" + PERFECT + "\n```"]))
-    assert len(card.requirements) == 8
+    assert len(card.requirements) == 9
 
 
 def test_two_unreadable_answers_raise():
@@ -209,3 +222,68 @@ def test_kwargs_mode_sends_template_the_official_way():
     payload = NuExtractClient(base_url="http://x/v1", mode="kwargs")._payload("TXT", "{}", [])
     assert payload["chat_template_kwargs"] == {"template": "{}", "examples": []}
     assert payload["temperature"] == 0
+
+
+# ------------------------------------------------- compound requirements (F1) ---
+
+JAVA_SPRING = "At least 3 years of professional experience with Java and Spring Boot."
+
+
+def test_f1_compound_requirement_is_split_into_one_per_skill():
+    """Real failure F1: v2 asks the model to list every skill of the line; code splits."""
+    card = run_job_agent(POST, "JD-001", FakeBackend([answer([
+        req(JAVA_SPRING, JAVA_SPRING, category="experience", skill_terms=["Java", "Spring Boot"], min_years=3)])]))
+    assert [(r.text, r.skill_terms, r.min_years) for r in card.requirements] == [
+        ("At least 3 years of professional experience with Java", ["Java"], 3),
+        ("At least 3 years of professional experience with Spring Boot", ["Spring Boot"], 3),
+    ]
+    assert all(r.evidence == JAVA_SPRING for r in card.requirements)
+    assert card.warnings == []
+
+
+def test_alternatives_are_not_split():
+    card = run_job_agent(POST, "JD-001", FakeBackend([answer([
+        req("SQL", "Solid knowledge of SQL databases (PostgreSQL or Oracle).",
+            skill_terms=["SQL", "PostgreSQL", "Oracle"])])]))
+    assert len(card.requirements) == 1
+    assert card.requirements[0].skill_terms == ["SQL", "PostgreSQL", "Oracle"]
+
+
+def test_nice_compound_is_split_and_stays_nice():
+    card = run_job_agent(POST, "JD-001", FakeBackend([answer([
+        req("Docker and Kubernetes", "Experience with Docker and Kubernetes is a plus.", kind="nice",
+            skill_terms=["Docker", "Kubernetes"])])]))
+    assert [(r.text, r.kind) for r in card.requirements] == [
+        ("Experience with Docker is a plus", "nice"), ("Experience with Kubernetes is a plus", "nice")]
+
+
+def test_v2_style_answer_reproduces_the_gold_card():
+    """What a correct job-v2 answer looks like: one item per line, all skills listed."""
+    lines = [
+        (JAVA_SPRING, ["Java", "Spring Boot"], "must", "experience", 3),
+        ("Solid knowledge of SQL databases (PostgreSQL or Oracle).", ["SQL", "PostgreSQL", "Oracle"], "must", "skill", None),
+        ("Engineering degree in computer science or equivalent.", [], "must", "education", None),
+        ("Fluent French", ["French"], "must", "language", None),
+        ("good written English", ["English"], "must", "language", None),
+        ("Experience with Docker and Kubernetes is a plus.", ["Docker", "Kubernetes"], "nice", "skill", None),
+        ("AWS certification would be appreciated.", ["AWS"], "nice", "certification", None),
+    ]
+    items = [req(ev.rstrip("."), ev, kind=k, category=c, skill_terms=t, min_years=y) for ev, t, k, c, y in lines]
+    card = run_job_agent(POST, "JD-001", FakeBackend([answer(items)]))
+    got = [(r.kind, r.category, r.skill_terms, r.min_years) for r in card.requirements]
+    want = [(r["kind"], r["category"], r["skill_terms"], r["min_years"]) for r in GOLD["requirements"]]
+    assert got == want
+
+
+def test_french_compound_with_et():
+    card = run_job_agent(FR_POST + "\n- Expérience avec Ansible et Terraform.", "JD-FR", FakeBackend([answer([
+        req("Ansible et Terraform", "Expérience avec Ansible et Terraform.", skill_terms=["Ansible", "Terraform"])],
+        title="Ingénieur DevOps")]))
+    assert [r.text for r in card.requirements] == ["Expérience avec Ansible", "Expérience avec Terraform"]
+
+
+def test_education_is_never_split():
+    from agents.job.validate import split_compound
+    item = {"text": "x", "evidence": "Degree in mathematics and statistics.", "kind": "must",
+            "category": "education", "skill_terms": ["mathematics", "statistics"], "min_years": None, "chunk_ids": []}
+    assert split_compound(item) == [item]

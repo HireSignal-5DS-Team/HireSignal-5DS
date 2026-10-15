@@ -3,6 +3,7 @@
     python scripts/run_job_agent.py examples/job_post.example.txt
     python scripts/run_job_agent.py offer.txt --job-id JD-007 --out out/JD-007.json
     python scripts/run_job_agent.py offer.txt --mode inline      (if the server ignores chat_template_kwargs)
+    python scripts/run_job_agent.py offer.txt --prompt job-v1    (an older prompt, for before/after)
 
 NuExtract must be running first (see agents/job/README.md).
 """
@@ -14,7 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from agents.job import BackendError, JobAgentError, NuExtractClient, PROMPT_VERSION, run_job_agent  # noqa: E402
+from agents.job import BackendError, JobAgentError, NuExtractClient, PROMPT_VERSION, VERSIONS, run_job_agent  # noqa: E402
 
 
 def read_offer(path: Path) -> str:
@@ -37,14 +38,16 @@ def main() -> None:
     parser.add_argument("--out", type=Path, help="where to save the card (default: out/<job-id>.json)")
     parser.add_argument("--base-url", help="NuExtract server, default http://127.0.0.1:8080/v1")
     parser.add_argument("--mode", choices=["kwargs", "inline"], help="how the template is sent")
+    parser.add_argument("--prompt", choices=sorted(VERSIONS), default=PROMPT_VERSION,
+                        help=f"prompt version (default {PROMPT_VERSION})")
     args = parser.parse_args()
 
     job_id = args.job_id or args.file.stem
     backend = NuExtractClient(base_url=args.base_url, mode=args.mode)
-    print(f"Job Agent ({PROMPT_VERSION}) -> {backend.info()}")
+    print(f"Job Agent ({args.prompt}) -> {backend.info()}")
 
     try:
-        card = run_job_agent(read_offer(args.file), job_id, backend)
+        card = run_job_agent(read_offer(args.file), job_id, backend, prompt_version=args.prompt)
     except BackendError as exc:
         sys.exit(f"MODEL ERROR: {exc}")
     except JobAgentError as exc:

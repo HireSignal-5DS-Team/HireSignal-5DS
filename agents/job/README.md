@@ -16,9 +16,9 @@ job offer ─► NuExtract fills the template ─► parse JSON ─┬─► che
 
 | File | Role |
 |---|---|
-| `prompts.py` | the template + 2 solved examples (prompt `job-v1`), documented in [`prompts/PROMPT_LIBRARY.md`](../../prompts/PROMPT_LIBRARY.md) |
+| `prompts.py` | the template + 2 solved examples per version (`job-v1`, `job-v2` active), documented in [`prompts/PROMPT_LIBRARY.md`](../../prompts/PROMPT_LIBRARY.md) |
 | `backend.py` | talks to NuExtract (llama.cpp server, vLLM or an API), plus a fake for tests |
-| `validate.py` | the guardrails: quotes really in the offer, years, must/nice, skill terms |
+| `validate.py` | the guardrails: quotes really in the offer, years, must/nice, skill terms; splits "Java and Spring Boot" into one requirement per skill |
 | `agent.py` | the loop: extract → retry if unreadable → check → build the card → flag for review |
 
 **Guardrails.** A quote not found in the offer → requirement dropped as invented.
@@ -63,6 +63,18 @@ python scripts\run_job_agent.py examples\job_post.example.txt --mode inline
 ```
 
 Note which mode works: it goes in the report.
+
+**With Ollama instead of llama.cpp** (what we use on the laptop):
+
+```
+$env:HS_NUEXTRACT_MODEL = "hf.co/numind/NuExtract-2.0-2B-GGUF:Q4_K_M"
+python scripts\run_job_agent.py examples\job_post.example.txt --base-url http://127.0.0.1:11434/v1 --mode inline
+```
+
+Ollama needs `--mode inline`, and a context of 8192 tokens for long job offers
+(set once: `[Environment]::SetEnvironmentVariable("OLLAMA_CONTEXT_LENGTH", "8192", "User")`, then restart Ollama).
+
+**Compare prompt versions** (for the prompt library): add `--prompt job-v1` or `--prompt job-v2`.
 
 ## Tests
 

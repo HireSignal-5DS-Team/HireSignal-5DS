@@ -16,8 +16,6 @@ Template types (NuExtract 2.0 model card):
 
 import json
 
-PROMPT_VERSION = "job-v1"
-
 CATEGORIES = ["skill", "experience", "education", "certification", "language", "other"]
 
 # ------------------------------------------------------------------ v1 ---
@@ -106,11 +104,123 @@ EXAMPLES_V1 = [
     {"input": _EX2_INPUT, "output": json.dumps(_EX2_OUTPUT, ensure_ascii=False)},
 ]
 
-# Active version used by the agent.
-TEMPLATE = TEMPLATE_V1
-EXAMPLES = EXAMPLES_V1
+# ------------------------------------------------------------------ v2 ---
+# Fix for failure F1 (v1): "Java and Spring Boot" gave one item with
+# skill_terms ["Java"]; Spring Boot was lost. The v1 examples always showed one
+# skill per item, so the model learned "one term per item" and stopped early.
+#
+# Technique: task decomposition. The model does the easy part (one item per
+# requirement LINE, listing EVERY skill of that line); code does the exact part
+# (validate.split_compound makes one requirement per skill for "and"/"et",
+# keeps alternatives "or"/"ou" together).
+# Also: `evidence` comes first in the template, so the model copies the line
+# before describing it (the description is then grounded in the quote).
+
+TEMPLATE_V2 = {
+    "title": "verbatim-string",
+    "requirements": [
+        {
+            "evidence": "verbatim-string",
+            "skill_terms": ["verbatim-string"],
+            "kind": ["must", "nice"],
+            "category": CATEGORIES,
+            "min_years": "number",
+            "text": "string",
+        }
+    ],
+}
+
+_V2_EX1_INPUT = """Data Engineer
+
+What you need:
+- 2+ years of experience with Python, Airflow and dbt.
+- Experience with AWS or Azure.
+- Bachelor's degree in computer science or a related field.
+- Good command of English and French.
+
+Bonus points:
+- Knowledge of Spark and Kafka is a plus.
+- GCP certification preferred."""
+
+_V2_EX1_OUTPUT = {
+    "title": "Data Engineer",
+    "requirements": [
+        {"evidence": "2+ years of experience with Python, Airflow and dbt.",
+         "skill_terms": ["Python", "Airflow", "dbt"],
+         "kind": "must", "category": "experience", "min_years": 2,
+         "text": "2+ years of experience with Python, Airflow and dbt"},
+        {"evidence": "Experience with AWS or Azure.",
+         "skill_terms": ["AWS", "Azure"],
+         "kind": "must", "category": "skill", "min_years": None,
+         "text": "Experience with AWS or Azure"},
+        {"evidence": "Bachelor's degree in computer science or a related field.",
+         "skill_terms": [],
+         "kind": "must", "category": "education", "min_years": None,
+         "text": "Bachelor's degree in computer science or a related field"},
+        {"evidence": "Good command of English and French.",
+         "skill_terms": ["English", "French"],
+         "kind": "must", "category": "language", "min_years": None,
+         "text": "Good command of English and French"},
+        {"evidence": "Knowledge of Spark and Kafka is a plus.",
+         "skill_terms": ["Spark", "Kafka"],
+         "kind": "nice", "category": "skill", "min_years": None,
+         "text": "Knowledge of Spark and Kafka"},
+        {"evidence": "GCP certification preferred.",
+         "skill_terms": ["GCP"],
+         "kind": "nice", "category": "certification", "min_years": None,
+         "text": "GCP certification"},
+    ],
+}
+
+_V2_EX2_INPUT = """Développeur Full Stack (H/F) - Sfax
+
+Profil recherché :
+- Diplôme d'ingénieur en informatique.
+- Minimum 3 ans d'expérience avec Angular et Node.js.
+- Maîtrise de MySQL ou PostgreSQL.
+- La connaissance de Docker serait un atout."""
+
+_V2_EX2_OUTPUT = {
+    "title": "Développeur Full Stack (H/F)",
+    "requirements": [
+        {"evidence": "Diplôme d'ingénieur en informatique.",
+         "skill_terms": [],
+         "kind": "must", "category": "education", "min_years": None,
+         "text": "Diplôme d'ingénieur en informatique"},
+        {"evidence": "Minimum 3 ans d'expérience avec Angular et Node.js.",
+         "skill_terms": ["Angular", "Node.js"],
+         "kind": "must", "category": "experience", "min_years": 3,
+         "text": "Minimum 3 ans d'expérience avec Angular et Node.js"},
+        {"evidence": "Maîtrise de MySQL ou PostgreSQL.",
+         "skill_terms": ["MySQL", "PostgreSQL"],
+         "kind": "must", "category": "skill", "min_years": None,
+         "text": "Maîtrise de MySQL ou PostgreSQL"},
+        {"evidence": "La connaissance de Docker serait un atout.",
+         "skill_terms": ["Docker"],
+         "kind": "nice", "category": "skill", "min_years": None,
+         "text": "Connaissance de Docker"},
+    ],
+}
+
+EXAMPLES_V2 = [
+    {"input": _V2_EX1_INPUT, "output": json.dumps(_V2_EX1_OUTPUT, ensure_ascii=False)},
+    {"input": _V2_EX2_INPUT, "output": json.dumps(_V2_EX2_OUTPUT, ensure_ascii=False)},
+]
+
+# ------------------------------------------------------------ registry ---
+
+VERSIONS = {
+    "job-v1": (TEMPLATE_V1, EXAMPLES_V1),
+    "job-v2": (TEMPLATE_V2, EXAMPLES_V2),
+}
+PROMPT_VERSION = "job-v2"  # active version
 
 
-def template_json() -> str:
-    """Template as the indented JSON string NuExtract expects."""
-    return json.dumps(TEMPLATE, indent=4, ensure_ascii=False)
+def get_prompt(version: str | None = None) -> tuple[str, list[dict]]:
+    """(template as indented JSON, examples) for a prompt version."""
+    template, examples = VERSIONS[version or PROMPT_VERSION]
+    return json.dumps(template, indent=4, ensure_ascii=False), examples
+
+
+def template_json(version: str | None = None) -> str:
+    return get_prompt(version)[0]

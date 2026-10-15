@@ -51,6 +51,7 @@ class CheckReport:
     uncertain: list[str] = field(default_factory=list)
     dropped: int = 0
     repaired: int = 0
+    split: int = 0  # compound items turned into one requirement per skill
 
 
 # ------------------------------------------------------------ text helpers ---
@@ -216,17 +217,63 @@ def check_requirements(items: list, post: str) -> CheckReport:
             elif term:
                 report.warnings.append(f"{label}: skill term '{term}' not in the quote, removed")
 
-        key = (_fold(text), _fold(evidence))
-        if key in seen:
-            report.warnings.append(f"{label}: duplicate, dropped")
-            continue
-        seen.add(key)
+        base = {"text": text, "evidence": evidence, "kind": kind, "category": category,
+                "skill_terms": terms, "min_years": min_years, "chunk_ids": []}
+        parts = split_compound(base)
+        if len(parts) > 1:
+            report.split += 1
 
-        report.requirements.append({
-            "text": text, "evidence": evidence, "kind": kind, "category": category,
-            "skill_terms": terms, "min_years": min_years, "chunk_ids": [],
-        })
+        for part in parts:
+            key = (_fold(part["text"]), _fold(part["evidence"]))
+            if key in seen:
+                report.warnings.append(f"'{part['text'][:50]}': duplicate, dropped")
+                continue
+            seen.add(key)
+            report.requirements.append(part)
     return report
+
+
+# --------------------------------------------------- compound requirements ---
+
+_ALTERNATIVE = re.compile(r"\b(or|ou|either|soit)\b|/")
+_NO_SPLIT_CATEGORIES = {"education", "other"}
+
+
+def _term_span(evidence: str, terms: list[str]) -> tuple[int, int] | None:
+    """Start of the first term and end of the last one, if they appear in order."""
+    low, pos, start, end = evidence.lower(), 0, None, None
+    for term in terms:
+        found = low.find(term.lower(), pos)
+        if found == -1:
+            return None
+        start = found if start is None else start
+        pos = end = found + len(term)
+    return start, end
+
+
+def split_compound(req: dict) -> list[dict]:
+    """One requirement per skill when skills are joined by 'and' / 'et' / commas.
+
+    "3 years with Java and Spring Boot" -> "3 years with Java", "3 years with Spring Boot"
+    "PostgreSQL or Oracle" stays ONE requirement: either skill satisfies it.
+    """
+    terms = req["skill_terms"]
+    if len(terms) < 2 or req["category"] in _NO_SPLIT_CATEGORIES:
+        return [req]
+
+    span = _term_span(req["evidence"], terms)
+    if span and _ALTERNATIVE.search(_fold(req["evidence"][span[0]:span[1]])):
+        return [req]  # alternatives: any one of them is enough
+
+    parts = []
+    for term in terms:
+        if span:
+            ev = req["evidence"]
+            text = (ev[:span[0]] + term + ev[span[1]:]).strip().rstrip(".;:,")
+        else:
+            text = f"{req['text']} ({term})"
+        parts.append({**req, "text": _squash(text), "skill_terms": [term]})
+    return parts
 
 
 def detect_language(text: str) -> str:

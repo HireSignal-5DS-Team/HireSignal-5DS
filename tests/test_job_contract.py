@@ -18,7 +18,7 @@ JOB_POST = (ROOT / "examples/job_post.example.txt").read_text(encoding="utf-8")
 
 def test_example_is_valid():
     card = JobRequirements.model_validate(EXAMPLE)
-    assert len(card.requirements) == 8
+    assert len(card.requirements) == 9
 
 
 def test_every_evidence_is_an_exact_quote_from_the_job_post():

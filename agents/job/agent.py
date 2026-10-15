@@ -43,14 +43,16 @@ def _clean_post(text: str) -> str:
 
 
 def run_job_agent(job_text: str, job_id: str, backend: ExtractionBackend,
-                  template: str | None = None, examples: list[dict] | None = None) -> JobRequirements:
-    """Extract, check and repair the requirements of one job offer."""
+                  prompt_version: str | None = None) -> JobRequirements:
+    """Extract, check and repair the requirements of one job offer.
+
+    prompt_version: "job-v1", "job-v2", ... (default: prompts.PROMPT_VERSION).
+    """
     post = _clean_post(job_text)
     if len(post) < 30:
         raise JobAgentError("The job offer is empty or too short.")
 
-    template = template or prompts.template_json()
-    examples = prompts.EXAMPLES if examples is None else examples
+    template, examples = prompts.get_prompt(prompt_version)
     warnings: list[str] = []
     data = None
 
