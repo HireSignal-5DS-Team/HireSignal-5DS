@@ -83,7 +83,8 @@ def check_adapter_compat(adapter_id, base_id, revision=None):
 
 class TransformersBackend:
     def __init__(self, model_id, adapter_id=None, revision=None, adapter_revision=None, max_new_tokens=192,
-                 device="cpu", dtype="float32", chat_kwargs=None, allow_local_adapter_base_mismatch=False):
+                 device="cpu", dtype="float32", chat_kwargs=None, allow_local_adapter_base_mismatch=False,
+                 prompt_variant="p1", constrained=False):
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -104,10 +105,25 @@ class TransformersBackend:
         self.device, self.max_new_tokens = device, max_new_tokens
         # Qwen3: disable thinking so the reply is the JSON object; ignored by templates without the flag
         self.chat_kwargs = {"enable_thinking": False, **(chat_kwargs or {})}
+        self.prompt_variant, self.constrained, self._allowed = prompt_variant, constrained, None
+        if constrained:  # JSON-schema constrained decoding (lm-format-enforcer), opt-in, for the adapter study only
+            import sys
+
+            import transformers.tokenization_utils_base as tub
+
+            sys.modules["transformers.tokenization_utils"] = tub  # shortcut: lm-format-enforcer 0.11.3 imports a v4 path; drop once it supports transformers 5
+            from lmformatenforcer import JsonSchemaParser
+            from lmformatenforcer.integrations.transformers import build_transformers_prefix_allowed_tokens_fn
+
+            from .schemas import ModelAnswer
+
+            self._allowed = build_transformers_prefix_allowed_tokens_fn(self.tok, JsonSchemaParser(ModelAnswer.model_json_schema()))
         self.load_seconds = time.perf_counter() - t0
 
     def info(self):
-        return {"backend": "transformers", "is_model": True, "model_id": self.model_id, "revision": self.revision,
+        extra = {} if self.prompt_variant == "p1" and not self.constrained else \
+            {"prompt_variant": self.prompt_variant, "constrained_json": self.constrained}
+        return {**extra, "backend": "transformers", "is_model": True, "model_id": self.model_id, "revision": self.revision,
                 "adapter_id": self.adapter_id, "adapter_revision": self.adapter_revision, "n_params": self.n_params,
                 "decoding": {"do_sample": False, "max_new_tokens": self.max_new_tokens}, "device": self.device,
                 "load_seconds": round(self.load_seconds, 2), "prompt_version": prompt.PROMPT_VERSION}
@@ -115,9 +131,15 @@ class TransformersBackend:
     def generate(self, task):
         import torch
 
-        text = self.tok.apply_chat_template(task.messages, tokenize=False, add_generation_prompt=True, **self.chat_kwargs)
+        msgs = task.messages
+        if self.prompt_variant != "p1":
+            from .prompt_variants import messages
+
+            msgs = messages(self.prompt_variant, task.cv, task.req, task.refs)
+        text = self.tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True, **self.chat_kwargs)
         ids = self.tok(text, return_tensors="pt").to(self.device)
+        extra = {"prefix_allowed_tokens_fn": self._allowed} if self._allowed else {}
         with torch.no_grad():
             out = self.model.generate(**ids, max_new_tokens=self.max_new_tokens, do_sample=False,
-                                      pad_token_id=self.tok.pad_token_id or self.tok.eos_token_id)
+                                      pad_token_id=self.tok.pad_token_id or self.tok.eos_token_id, **extra)
         return self.tok.decode(out[0, ids["input_ids"].shape[1]:], skip_special_tokens=True)

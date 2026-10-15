@@ -30,6 +30,12 @@ EOF
 HIRESIGNAL_RAG_DIR=/tmp/ragsrc/rag setsid nohup scripts/continue_benchmark.sh 0 > benchmark/results/continue.log 2>&1 &
 ```
 
+Then the Kus-hal adapter study (it waits for `continue_benchmark.sh` to finish, never runs two models at once):
+
+```bash
+HIRESIGNAL_RAG_DIR=/tmp/ragsrc/rag setsid nohup scripts/kushal_study.sh > benchmark/results/kushal_study.log 2>&1 < /dev/null &
+```
+
 `continue_benchmark.sh` skips every run that already has `metrics.json`. It commits and pushes after each model,
 and then writes `benchmark/results/CONSOLIDATED_val.md`.
 
@@ -47,3 +53,17 @@ python -m pytest -q matcher benchmark finetune  # tests
 
 Then fill §6 of `docs/MATCHER_REPORT.md` from `benchmark/results/CONSOLIDATED_val.md`. Pick the model on val
 only. The locked test split is for a single confirmation run of the selected configuration.
+
+## Status at hand-off (2026-10-15 ~09:45 UTC)
+
+| work | state |
+|---|---|
+| lexical / mock baselines, Qwen2.5-0.5B, Qwen2.5-0.5B + Kus-hal (val) | done, pushed |
+| post-hoc `schema_repair` adapter on Kus-hal and Qwen2.5 raw outputs | done, pushed (`*__schema_repair` runs) |
+| Qwen3-0.6B, SmolLM2-360M | running / queued: original queue, then `continue_benchmark.sh` |
+| SmolLM2-135M, FLAN-T5-small, resume-scorer-t5, FERMI-0.8B, Qwen3.5-0.8B | queued in `continue_benchmark.sh` |
+| Kus-hal study: native prompt (+ `kushal_native` adapter), constrained JSON, one-shot, and the same three on the Qwen2.5 base | queued in `scripts/kushal_study.sh` |
+| `docs/MATCHER_REPORT.md` §6 results, final recommendation | not written yet: fill from `benchmark/results/CONSOLIDATED_val.md` |
+| `gw0/jobfit-model` | not runnable (ONNX-only typed scorer, fixed 17 questions); documented, its base is benchmarked |
+
+Logs in the original container: `/home/user/continue.log`, `/home/user/kushal_study.log`.

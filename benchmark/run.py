@@ -59,7 +59,8 @@ def make_backend(a, cases):
     from matcher.backends import TransformersBackend
 
     return TransformersBackend(a.model, adapter_id=a.adapter, revision=a.revision, adapter_revision=a.adapter_revision,
-                               max_new_tokens=a.max_new_tokens, device=a.device, dtype=a.dtype)
+                               max_new_tokens=a.max_new_tokens, device=a.device, dtype=a.dtype,
+                               prompt_variant=a.prompt_variant, constrained=a.constrained)
 
 
 def hardware():
@@ -121,6 +122,9 @@ def parse_args(argv=None):
     ap.add_argument("--dtype", default="float32")
     ap.add_argument("--data-dir", default=str(DATA))
     ap.add_argument("--i-understand-test-is-locked", action="store_true")
+    ap.add_argument("--prompt-variant", default="p1", choices=["p1", "p1_oneshot", "kushal_native"],
+                    help="adapter study only; p1 is the Matcher prompt")
+    ap.add_argument("--constrained", action="store_true", help="JSON-schema constrained decoding (transformers backend)")
     a = ap.parse_args(argv)
     if a.backend in ("transformers", "seq2seq") and not a.model:
         ap.error(f"--model is required for --backend {a.backend}")
