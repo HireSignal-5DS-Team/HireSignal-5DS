@@ -1,0 +1,116 @@
+{
+  "version": "bench-v1",
+  "seed": 20261015,
+  "note": "test split is LOCKED: never used for training, prompt tuning or model selection",
+  "generator": "benchmark/make_dataset.py",
+  "splits": {
+    "train": {
+      "file": "train.jsonl",
+      "sha256": "d0206264f093be7c1b41b7fd9e71868ded006ee997ad7e0f8007710511231a77",
+      "cases": 150,
+      "requirements": 681,
+      "decisions": {
+        "MET": 305,
+        "MISSING": 273,
+        "UNCERTAIN": 103
+      },
+      "basis": {
+        "supported": 305,
+        "contradicted": 166,
+        "ambiguous": 103,
+        "not_documented": 107
+      },
+      "tags": {
+        "ambiguous_duration": 53,
+        "certification": 47,
+        "contradictory_evidence": 119,
+        "date_range": 43,
+        "direct_match": 54,
+        "distractor_details": 388,
+        "education": 32,
+        "equivalent_skill_alias": 55,
+        "implicit_project_evidence": 46,
+        "insufficient_experience": 47,
+        "language": 45,
+        "missing_evidence": 57,
+        "multi_requirement": 410,
+        "negation_trap": 81,
+        "partial_evidence": 50,
+        "rag_suggests_absent_skill": 50,
+        "sufficient_experience": 99
+      }
+    },
+    "val": {
+      "file": "val.jsonl",
+      "sha256": "37c60915f2db377f22c5b08f4b9e708e05cd9363709e9c39815d8e8d93545198",
+      "cases": 45,
+      "requirements": 202,
+      "decisions": {
+        "UNCERTAIN": 39,
+        "MET": 86,
+        "MISSING": 77
+      },
+      "basis": {
+        "ambiguous": 39,
+        "supported": 86,
+        "not_documented": 29,
+        "contradicted": 48
+      },
+      "tags": {
+        "ambiguous_duration": 21,
+        "certification": 13,
+        "contradictory_evidence": 31,
+        "date_range": 8,
+        "direct_match": 8,
+        "distractor_details": 74,
+        "education": 10,
+        "equivalent_skill_alias": 21,
+        "implicit_project_evidence": 15,
+        "insufficient_experience": 17,
+        "language": 14,
+        "missing_evidence": 18,
+        "multi_requirement": 117,
+        "negation_trap": 22,
+        "partial_evidence": 18,
+        "rag_suggests_absent_skill": 11,
+        "sufficient_experience": 25
+      }
+    },
+    "test": {
+      "file": "test.jsonl",
+      "sha256": "0bde3a86cc3047b8addcd916809d3db96086ff1ad23881367fe6b2774b6c62a8",
+      "cases": 45,
+      "requirements": 199,
+      "decisions": {
+        "MISSING": 84,
+        "UNCERTAIN": 23,
+        "MET": 92
+      },
+      "basis": {
+        "not_documented": 48,
+        "ambiguous": 23,
+        "supported": 92,
+        "contradicted": 36
+      },
+      "tags": {
+        "ambiguous_duration": 12,
+        "certification": 12,
+        "contradictory_evidence": 29,
+        "date_range": 15,
+        "direct_match": 9,
+        "distractor_details": 88,
+        "education": 12,
+        "equivalent_skill_alias": 20,
+        "implicit_project_evidence": 12,
+        "insufficient_experience": 7,
+        "language": 17,
+        "missing_evidence": 24,
+        "multi_requirement": 123,
+        "negation_trap": 17,
+        "partial_evidence": 11,
+        "rag_suggests_absent_skill": 24,
+        "sufficient_experience": 31
+      }
+    }
+  }
+}

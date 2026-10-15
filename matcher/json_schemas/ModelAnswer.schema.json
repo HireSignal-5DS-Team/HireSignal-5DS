@@ -1,0 +1,45 @@
+{
+  "additionalProperties": false,
+  "description": "What the SLM must emit for one requirement (strict JSON).",
+  "properties": {
+    "decision": {
+      "enum": [
+        "MET",
+        "MISSING",
+        "UNCERTAIN"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "basis": {
+      "enum": [
+        "supported",
+        "contradicted",
+        "not_documented",
+        "ambiguous"
+      ],
+      "title": "Basis",
+      "type": "string"
+    },
+    "evidence": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "title": "Evidence",
+      "type": "array"
+    },
+    "explanation": {
+      "maxLength": 600,
+      "title": "Explanation",
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "basis",
+    "explanation"
+  ],
+  "title": "ModelAnswer",
+  "type": "object"
+}

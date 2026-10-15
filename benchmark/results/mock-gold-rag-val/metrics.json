@@ -1,0 +1,182 @@
+{
+  "n": 202,
+  "final": {
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "false_met_rate": 0.0,
+    "per_class": {
+      "MET": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 86,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 0
+      },
+      "MISSING": {
+        "MET": 0,
+        "MISSING": 77,
+        "UNCERTAIN": 0,
+        "null": 0
+      },
+      "UNCERTAIN": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 39,
+        "null": 0
+      }
+    }
+  },
+  "raw_model": {
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "false_met_rate": 0.0,
+    "per_class": {
+      "MET": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 86,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 0
+      },
+      "MISSING": {
+        "MET": 0,
+        "MISSING": 77,
+        "UNCERTAIN": 0,
+        "null": 0
+      },
+      "UNCERTAIN": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 39,
+        "null": 0
+      }
+    }
+  },
+  "json_schema_validity": 1.0,
+  "basis_accuracy": 1.0,
+  "evidence": {
+    "raw_quotes": 134,
+    "raw_quote_validity": 1.0,
+    "raw_met_with_verified_quote": 1.0,
+    "attribution_vs_gold": 1.0,
+    "attribution_n": 134
+  },
+  "validator_changed_decision": 0.0,
+  "needs_human_review_rate": 0.5841584158415841,
+  "per_tag_accuracy": {
+    "ambiguous_duration": {
+      "n": 21,
+      "accuracy": 1.0
+    },
+    "certification": {
+      "n": 13,
+      "accuracy": 1.0
+    },
+    "contradictory_evidence": {
+      "n": 31,
+      "accuracy": 1.0
+    },
+    "date_range": {
+      "n": 8,
+      "accuracy": 1.0
+    },
+    "direct_match": {
+      "n": 8,
+      "accuracy": 1.0
+    },
+    "distractor_details": {
+      "n": 74,
+      "accuracy": 1.0
+    },
+    "education": {
+      "n": 10,
+      "accuracy": 1.0
+    },
+    "equivalent_skill_alias": {
+      "n": 21,
+      "accuracy": 1.0
+    },
+    "implicit_project_evidence": {
+      "n": 15,
+      "accuracy": 1.0
+    },
+    "insufficient_experience": {
+      "n": 17,
+      "accuracy": 1.0
+    },
+    "language": {
+      "n": 14,
+      "accuracy": 1.0
+    },
+    "missing_evidence": {
+      "n": 18,
+      "accuracy": 1.0
+    },
+    "multi_requirement": {
+      "n": 117,
+      "accuracy": 1.0
+    },
+    "negation_trap": {
+      "n": 22,
+      "accuracy": 1.0
+    },
+    "partial_evidence": {
+      "n": 18,
+      "accuracy": 1.0
+    },
+    "rag_suggests_absent_skill": {
+      "n": 11,
+      "accuracy": 1.0
+    },
+    "sufficient_experience": {
+      "n": 25,
+      "accuracy": 1.0
+    }
+  },
+  "latency_s": {
+    "mean": 9.900990099009902e-07,
+    "p50": 0.0,
+    "p95": 0.0,
+    "max": 0.0001
+  },
+  "peak_rss_mb": 521.9,
+  "load_seconds": 2.78
+}

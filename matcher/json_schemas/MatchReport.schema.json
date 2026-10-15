@@ -1,0 +1,234 @@
+{
+  "$defs": {
+    "MatchSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "counts": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "propertyNames": {
+            "enum": [
+              "MET",
+              "MISSING",
+              "UNCERTAIN"
+            ]
+          },
+          "title": "Counts",
+          "type": "object"
+        },
+        "must_total": {
+          "title": "Must Total",
+          "type": "integer"
+        },
+        "must_met": {
+          "title": "Must Met",
+          "type": "integer"
+        },
+        "must_coverage": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "must_met / must_total; transparent ratio, not a fit probability",
+          "title": "Must Coverage"
+        },
+        "needs_human_review": {
+          "title": "Needs Human Review",
+          "type": "integer"
+        },
+        "note": {
+          "default": "Requirement-level screening aid. No automatic rejection or hiring decision is made.",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "counts",
+        "must_total",
+        "must_met",
+        "must_coverage",
+        "needs_human_review"
+      ],
+      "title": "MatchSummary",
+      "type": "object"
+    },
+    "RequirementResult": {
+      "additionalProperties": false,
+      "properties": {
+        "req_id": {
+          "title": "Req Id",
+          "type": "string"
+        },
+        "requirement_text": {
+          "title": "Requirement Text",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "must",
+            "nice"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "decision": {
+          "enum": [
+            "MET",
+            "MISSING",
+            "UNCERTAIN"
+          ],
+          "title": "Decision",
+          "type": "string"
+        },
+        "basis": {
+          "enum": [
+            "supported",
+            "contradicted",
+            "not_documented",
+            "ambiguous"
+          ],
+          "title": "Basis",
+          "type": "string"
+        },
+        "evidence": {
+          "description": "verified verbatim substrings of CV.text",
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "evidence_spans": {
+          "description": "[start, end) offsets of each evidence quote in CV.text",
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Evidence Spans",
+          "type": "array"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        },
+        "rag_refs": {
+          "description": "source_ids of knowledge used to interpret the requirement",
+          "items": {
+            "type": "string"
+          },
+          "title": "Rag Refs",
+          "type": "array"
+        },
+        "model_decision": {
+          "anyOf": [
+            {
+              "enum": [
+                "MET",
+                "MISSING",
+                "UNCERTAIN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "raw model decision before deterministic validation; None if output unparseable",
+          "title": "Model Decision"
+        },
+        "review_priority": {
+          "description": "heuristic review signal from validation rules; NOT a calibrated probability",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "title": "Review Priority",
+          "type": "string"
+        },
+        "needs_human_review": {
+          "title": "Needs Human Review",
+          "type": "boolean"
+        },
+        "review_reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Review Reasons",
+          "type": "array"
+        }
+      },
+      "required": [
+        "req_id",
+        "requirement_text",
+        "kind",
+        "decision",
+        "basis",
+        "evidence",
+        "evidence_spans",
+        "explanation",
+        "rag_refs",
+        "model_decision",
+        "review_priority",
+        "needs_human_review",
+        "review_reasons"
+      ],
+      "title": "RequirementResult",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "cv_id": {
+      "title": "Cv Id",
+      "type": "string"
+    },
+    "job_id": {
+      "title": "Job Id",
+      "type": "string"
+    },
+    "backend": {
+      "additionalProperties": true,
+      "title": "Backend",
+      "type": "object"
+    },
+    "results": {
+      "items": {
+        "$ref": "#/$defs/RequirementResult"
+      },
+      "title": "Results",
+      "type": "array"
+    },
+    "summary": {
+      "$ref": "#/$defs/MatchSummary"
+    }
+  },
+  "required": [
+    "cv_id",
+    "job_id",
+    "backend",
+    "results",
+    "summary"
+  ],
+  "title": "MatchReport",
+  "type": "object"
+}

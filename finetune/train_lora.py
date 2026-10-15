@@ -47,7 +47,8 @@ def parse_args(argv=None):
     ap.add_argument("--keep-checkpoints", type=int, default=2)
     ap.add_argument("--log-every", type=int, default=1)
     ap.add_argument("--grad-ckpt", action="store_true", help="gradient checkpointing (less memory, slower)")
-    ap.add_argument("--dtype", default="float32", choices=["float32", "bfloat16", "float16"])
+    ap.add_argument("--dtype", default="float32", choices=["float32", "bfloat16"],
+                    help="bfloat16 on GPUs that support it (RTX 40xx); float16 omitted: no loss scaler in this loop")
     ap.add_argument("--device", default="auto", help="auto|cpu|cuda|mps")
     ap.add_argument("--seed", type=int, default=13)
     a = ap.parse_args(argv)

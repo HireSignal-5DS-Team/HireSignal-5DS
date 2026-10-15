@@ -1,0 +1,182 @@
+{
+  "n": 202,
+  "final": {
+    "macro_f1": 0.436185483367659,
+    "accuracy": 0.5841584158415841,
+    "false_met_rate": 0.5603448275862069,
+    "per_class": {
+      "MET": {
+        "precision": 0.5075757575757576,
+        "recall": 0.7790697674418605,
+        "f1": 0.6146788990825689,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 0.7285714285714285,
+        "recall": 0.6623376623376623,
+        "f1": 0.6938775510204082,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 67,
+        "MISSING": 19,
+        "UNCERTAIN": 0,
+        "null": 0
+      },
+      "MISSING": {
+        "MET": 26,
+        "MISSING": 51,
+        "UNCERTAIN": 0,
+        "null": 0
+      },
+      "UNCERTAIN": {
+        "MET": 39,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 0
+      }
+    }
+  },
+  "raw_model": {
+    "macro_f1": 0.436185483367659,
+    "accuracy": 0.5841584158415841,
+    "false_met_rate": 0.5603448275862069,
+    "per_class": {
+      "MET": {
+        "precision": 0.5075757575757576,
+        "recall": 0.7790697674418605,
+        "f1": 0.6146788990825689,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 0.7285714285714285,
+        "recall": 0.6623376623376623,
+        "f1": 0.6938775510204082,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 67,
+        "MISSING": 19,
+        "UNCERTAIN": 0,
+        "null": 0
+      },
+      "MISSING": {
+        "MET": 26,
+        "MISSING": 51,
+        "UNCERTAIN": 0,
+        "null": 0
+      },
+      "UNCERTAIN": {
+        "MET": 39,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 0
+      }
+    }
+  },
+  "json_schema_validity": 1.0,
+  "basis_accuracy": 0.5594059405940595,
+  "evidence": {
+    "raw_quotes": 149,
+    "raw_quote_validity": 1.0,
+    "raw_met_with_verified_quote": 1.0,
+    "attribution_vs_gold": 0.9438202247191011,
+    "attribution_n": 89
+  },
+  "validator_changed_decision": 0.0,
+  "needs_human_review_rate": 0.3811881188118812,
+  "per_tag_accuracy": {
+    "ambiguous_duration": {
+      "n": 21,
+      "accuracy": 0.0
+    },
+    "certification": {
+      "n": 13,
+      "accuracy": 0.3076923076923077
+    },
+    "contradictory_evidence": {
+      "n": 31,
+      "accuracy": 0.16129032258064516
+    },
+    "date_range": {
+      "n": 8,
+      "accuracy": 1.0
+    },
+    "direct_match": {
+      "n": 8,
+      "accuracy": 1.0
+    },
+    "distractor_details": {
+      "n": 74,
+      "accuracy": 0.6081081081081081
+    },
+    "education": {
+      "n": 10,
+      "accuracy": 1.0
+    },
+    "equivalent_skill_alias": {
+      "n": 21,
+      "accuracy": 0.8095238095238095
+    },
+    "implicit_project_evidence": {
+      "n": 15,
+      "accuracy": 0.0
+    },
+    "insufficient_experience": {
+      "n": 17,
+      "accuracy": 1.0
+    },
+    "language": {
+      "n": 14,
+      "accuracy": 0.7142857142857143
+    },
+    "missing_evidence": {
+      "n": 18,
+      "accuracy": 1.0
+    },
+    "multi_requirement": {
+      "n": 117,
+      "accuracy": 0.6068376068376068
+    },
+    "negation_trap": {
+      "n": 22,
+      "accuracy": 0.0
+    },
+    "partial_evidence": {
+      "n": 18,
+      "accuracy": 0.0
+    },
+    "rag_suggests_absent_skill": {
+      "n": 11,
+      "accuracy": 1.0
+    },
+    "sufficient_experience": {
+      "n": 25,
+      "accuracy": 1.0
+    }
+  },
+  "latency_s": {
+    "mean": 0.00041683168316831683,
+    "p50": 0.0001,
+    "p95": 0.0012,
+    "max": 0.0037
+  },
+  "peak_rss_mb": 522.1,
+  "load_seconds": 2.62
+}

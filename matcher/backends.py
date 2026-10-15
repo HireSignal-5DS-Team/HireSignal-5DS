@@ -75,8 +75,8 @@ def check_adapter_compat(adapter_id, base_id, revision=None):
     cfg = PeftConfig.from_pretrained(adapter_id, revision=revision)
     if cfg.peft_type.value != "LORA":
         raise ValueError(f"{adapter_id} is {cfg.peft_type}, not a LoRA adapter")
-    declared = (cfg.base_model_name_or_path or "").rstrip("/")
-    if declared.split("/")[-2:] != base_id.rstrip("/").split("/")[-2:]:
+    declared = (cfg.base_model_name_or_path or "").replace("\\", "/").rstrip("/")
+    if declared.split("/")[-2:] != base_id.replace("\\", "/").rstrip("/").split("/")[-2:]:  # Windows paths too
         raise ValueError(f"{adapter_id} was trained on {declared!r}, refusing to attach to {base_id!r}")
     return cfg
 

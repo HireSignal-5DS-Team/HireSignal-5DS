@@ -1,0 +1,26 @@
+{
+  "split": "val",
+  "source": "/home/user/HireSignal-5DS/benchmark/data/val.jsonl",
+  "source_sha256": "37c60915f2db377f22c5b08f4b9e708e05cd9363709e9c39815d8e8d93545198",
+  "output": "/home/user/HireSignal-5DS/finetune/data/sft_val.jsonl",
+  "output_sha256": "3ff377fd11ef97881f639447305ef9a24cbde5b923b9d1e72b951c0bbd94ff52",
+  "n_cases": 45,
+  "n_examples": 202,
+  "decisions": {
+    "UNCERTAIN": 39,
+    "MET": 86,
+    "MISSING": 77
+  },
+  "families": {
+    "val-t3-b2": 24,
+    "val-t3-b0": 26,
+    "val-t3-b1": 49,
+    "val-t3-b3": 45,
+    "val-t3-b4": 58
+  },
+  "prompt_version": "p1",
+  "knowledge": "rag",
+  "k": 3,
+  "test_file": "/home/user/HireSignal-5DS/benchmark/data/test.jsonl",
+  "test_case_ids_checked": 45
+}

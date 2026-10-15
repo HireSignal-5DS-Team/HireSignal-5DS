@@ -147,3 +147,15 @@ def test_end_to_end_with_real_rag_bm25_and_mock_slm():
     res = rep.results[0]
     assert res.decision == "MET" and res.rag_refs == [x.source_id for x in refs]
     assert json.loads(rep.model_dump_json())["backend"]["knowledge"] == "rag.bm25"
+    # one-neural-model constraint: the RAG side loads no embedding or reranking model
+    import sys
+
+    assert rag.retriever.model is None and rag.retriever.reranker is None
+    assert "sentence_transformers" not in sys.modules and "qdrant_client" not in sys.modules
+
+
+def test_retrieval_query_never_contains_cv_text():
+    from matcher.knowledge import query_for
+
+    r = req(text="Experience with SQL databases", skill_terms=[])
+    assert query_for(r) == r.text and CV_TEXT not in query_for(r)

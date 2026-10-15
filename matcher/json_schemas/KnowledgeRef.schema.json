@@ -1,0 +1,74 @@
+{
+  "additionalProperties": false,
+  "description": "A retrieved knowledge item (ESCO / O*NET / job posting). Terminology only, never candidate evidence.",
+  "properties": {
+    "source_type": {
+      "enum": [
+        "esco",
+        "onet",
+        "job",
+        "fixture"
+      ],
+      "title": "Source Type",
+      "type": "string"
+    },
+    "source_id": {
+      "title": "Source Id",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "text": {
+      "title": "Text",
+      "type": "string"
+    },
+    "url": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Url"
+    },
+    "aliases": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Aliases",
+      "type": "array"
+    },
+    "relevance_score": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "retriever rank score; not a probability",
+      "title": "Relevance Score"
+    },
+    "retrieval": {
+      "description": "retriever that produced it, e.g. rag.bm25",
+      "title": "Retrieval",
+      "type": "string"
+    }
+  },
+  "required": [
+    "source_type",
+    "source_id",
+    "title",
+    "text",
+    "retrieval"
+  ],
+  "title": "KnowledgeRef",
+  "type": "object"
+}
