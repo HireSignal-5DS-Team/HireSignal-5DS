@@ -1,0 +1,72 @@
+{
+  "run": "lexical-rag-val",
+  "judge": "pretrained",
+  "judge_dir": "/home/user/hf/hub/models--MoritzLaurer--DeBERTa-v3-base-mnli-fever-anli/snapshots/6f5cf0a2b59cabb106aca4c287eed12e357e90eb",
+  "tau": 0.65,
+  "n_applicable": 202,
+  "n_errors": 84,
+  "strict": {
+    "precision": 0.6521739130434783,
+    "recall": 0.7142857142857143,
+    "f1": 0.6818181818181819,
+    "false_positive_flag_rate": 0.2711864406779661,
+    "flags": 92
+  },
+  "broad": {
+    "precision": 0.49640287769784175,
+    "recall": 0.8214285714285714,
+    "f1": 0.6188340807174888,
+    "false_positive_flag_rate": 0.5932203389830508,
+    "flags": 139
+  },
+  "auroc_error_detection": 0.7164043583535109,
+  "ece_correctness": 0.2500069306930693,
+  "per_tag_error_detection": {
+    "ambiguous_duration": {
+      "errors": 21,
+      "detected_strict": 0.5714285714285714
+    },
+    "certification": {
+      "errors": 9,
+      "detected_strict": 1.0
+    },
+    "contradictory_evidence": {
+      "errors": 26,
+      "detected_strict": 1.0
+    },
+    "distractor_details": {
+      "errors": 29,
+      "detected_strict": 0.7931034482758621
+    },
+    "equivalent_skill_alias": {
+      "errors": 4,
+      "detected_strict": 0.75
+    },
+    "implicit_project_evidence": {
+      "errors": 15,
+      "detected_strict": 1.0
+    },
+    "language": {
+      "errors": 4,
+      "detected_strict": 1.0
+    },
+    "multi_requirement": {
+      "errors": 46,
+      "detected_strict": 0.717391304347826
+    },
+    "negation_trap": {
+      "errors": 22,
+      "detected_strict": 1.0
+    },
+    "partial_evidence": {
+      "errors": 18,
+      "detected_strict": 0.2222222222222222
+    }
+  },
+  "verdicts": {
+    "PASS": 63,
+    "FAIL": 92,
+    "UNCERTAIN": 47,
+    "NOT_APPLICABLE": 0
+  }
+}
