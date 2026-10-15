@@ -48,6 +48,14 @@ def make_backend(a, cases):
         return LexicalBaseline()
     if a.backend in ("mock_gold", "mock_uncertain"):
         return gold_backend(cases, a.backend == "mock_uncertain")
+    if a.backend == "seq2seq":
+        from matcher.backends_extra import Seq2SeqBackend
+
+        return Seq2SeqBackend(a.model, revision=a.revision, max_new_tokens=a.max_new_tokens, device=a.device, dtype=a.dtype)
+    if a.backend == "fermi":
+        from matcher.backends_extra import FermiBackend
+
+        return FermiBackend(a.fermi_repo, a.fermi_base, device=a.device)
     from matcher.backends import TransformersBackend
 
     return TransformersBackend(a.model, adapter_id=a.adapter, revision=a.revision, adapter_revision=a.adapter_revision,
@@ -95,7 +103,9 @@ def git_commit():
 
 def parse_args(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--backend", required=True, choices=["lexical", "mock_gold", "mock_uncertain", "transformers"])
+    ap.add_argument("--backend", required=True, choices=["lexical", "mock_gold", "mock_uncertain", "transformers", "seq2seq", "fermi"])
+    ap.add_argument("--fermi-repo", help="local snapshot of Zerflyne/FERMI-0.8B (its fermi/ package is imported)")
+    ap.add_argument("--fermi-base", help="local snapshot of Qwen/Qwen3.5-0.8B")
     ap.add_argument("--model")
     ap.add_argument("--revision")
     ap.add_argument("--adapter")
@@ -112,8 +122,10 @@ def parse_args(argv=None):
     ap.add_argument("--data-dir", default=str(DATA))
     ap.add_argument("--i-understand-test-is-locked", action="store_true")
     a = ap.parse_args(argv)
-    if a.backend == "transformers" and not a.model:
-        ap.error("--model is required for --backend transformers")
+    if a.backend in ("transformers", "seq2seq") and not a.model:
+        ap.error(f"--model is required for --backend {a.backend}")
+    if a.backend == "fermi" and not (a.fermi_repo and a.fermi_base):
+        ap.error("--fermi-repo and --fermi-base are required for --backend fermi")
     if a.split == "test" and not a.i_understand_test_is_locked:
         ap.error("the test split is LOCKED; pass --i-understand-test-is-locked only for the final confirmation run")
     return a
