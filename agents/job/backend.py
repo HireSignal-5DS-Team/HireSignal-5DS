@@ -1,0 +1,137 @@
+"""How the Job Agent talks to NuExtract.
+
+One OpenAI-compatible client covers every way of running the model:
+  - llama.cpp server on your laptop   (llama-server -m NuExtract-2.0-2B-Q4_K_M.gguf --jinja)
+  - vLLM, or a hosted API
+
+Two modes for sending the template:
+  "kwargs"  the official way (model card): template and examples go in
+            chat_template_kwargs, and the model's own chat template builds the prompt.
+            Needs a server that supports it (vLLM; llama.cpp with --jinja).
+  "inline"  fallback: we write the "# Template / # Examples / # Context" layout
+            ourselves in the user message, for servers that ignore chat_template_kwargs.
+
+Settings come from arguments or environment variables:
+  HS_NUEXTRACT_BASE_URL   default http://127.0.0.1:8080/v1
+  HS_NUEXTRACT_MODEL      default NuExtract-2.0-2B
+  HS_NUEXTRACT_MODE       kwargs | inline   (default kwargs)
+  HS_NUEXTRACT_API_KEY    only for hosted APIs (never logged)
+"""
+
+from __future__ import annotations
+
+import json
+import os
+import time
+import urllib.error
+import urllib.request
+from typing import Protocol
+
+SYSTEM_PROMPT = "You are NuExtract, an information extraction tool created by NuMind."
+
+
+class ExtractionBackend(Protocol):
+    def extract(self, text: str, template: str, examples: list[dict]) -> str:
+        """Return the model's raw answer (expected: a JSON string)."""
+
+
+class BackendError(Exception):
+    """The model server could not be reached or answered with an error."""
+
+
+def build_inline_prompt(text: str, template: str, examples: list[dict]) -> str:
+    """The NuExtract layout written by hand (used by the 'inline' mode)."""
+    parts = ["# Template:", template]
+    if examples:
+        parts.append("# Examples:")
+        for ex in examples:
+            parts += ["## Input:", ex["input"], "## Output:", ex["output"]]
+    parts += ["# Context:", text]
+    return "\n".join(parts)
+
+
+class NuExtractClient:
+    """Calls NuExtract through an OpenAI-compatible /chat/completions endpoint."""
+
+    def __init__(self, base_url: str | None = None, model: str | None = None,
+                 mode: str | None = None, timeout: float = 180.0, max_tokens: int = 2048):
+        self.base_url = (base_url or os.environ.get("HS_NUEXTRACT_BASE_URL",
+                                                    "http://127.0.0.1:8080/v1")).rstrip("/")
+        self.model = model or os.environ.get("HS_NUEXTRACT_MODEL", "NuExtract-2.0-2B")
+        self.mode = mode or os.environ.get("HS_NUEXTRACT_MODE", "kwargs")
+        if self.mode not in ("kwargs", "inline"):
+            raise ValueError("mode must be 'kwargs' or 'inline'")
+        self.timeout, self.max_tokens = timeout, max_tokens
+        self.last_call: dict = {}
+
+    def _payload(self, text: str, template: str, examples: list[dict]) -> dict:
+        payload = {
+            "model": self.model,
+            "temperature": 0,          # the model card asks for temperature 0
+            "max_tokens": self.max_tokens,
+        }
+        if self.mode == "kwargs":
+            payload["messages"] = [{"role": "user", "content": text}]
+            payload["chat_template_kwargs"] = {"template": template, "examples": examples}
+        else:
+            payload["messages"] = [
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": build_inline_prompt(text, template, examples)},
+            ]
+        return payload
+
+    def extract(self, text: str, template: str, examples: list[dict]) -> str:
+        headers = {"Content-Type": "application/json"}
+        key = os.environ.get("HS_NUEXTRACT_API_KEY")
+        if key:
+            headers["Authorization"] = f"Bearer {key}"
+        request = urllib.request.Request(
+            f"{self.base_url}/chat/completions",
+            data=json.dumps(self._payload(text, template, examples)).encode("utf-8"),
+            headers=headers,
+        )
+        start = time.perf_counter()
+        try:
+            with urllib.request.urlopen(request, timeout=self.timeout) as response:
+                body = json.loads(response.read())
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", "replace")[:300]
+            raise BackendError(f"NuExtract server error {exc.code}: {detail}") from exc
+        except (urllib.error.URLError, TimeoutError, OSError) as exc:
+            raise BackendError(
+                f"Cannot reach NuExtract at {self.base_url} ({exc}). Is llama-server running?"
+            ) from exc
+
+        usage = body.get("usage") or {}
+        self.last_call = {
+            "latency_s": round(time.perf_counter() - start, 2),
+            "prompt_tokens": usage.get("prompt_tokens"),
+            "completion_tokens": usage.get("completion_tokens"),
+            "mode": self.mode,
+        }
+        try:
+            return body["choices"][0]["message"]["content"] or ""
+        except (KeyError, IndexError, TypeError) as exc:
+            raise BackendError(f"Unexpected answer from the server: {str(body)[:300]}") from exc
+
+    def info(self) -> dict:
+        return {"model": self.model, "mode": self.mode,
+                "base_url": self.base_url if "127.0.0.1" in self.base_url or "localhost" in self.base_url
+                else "<hosted>"}
+
+
+class FakeBackend:
+    """Returns prepared answers in order. Used by the tests (no GPU needed)."""
+
+    def __init__(self, answers: list[str]):
+        self.answers = list(answers)
+        self.calls: list[dict] = []
+
+    def extract(self, text: str, template: str, examples: list[dict]) -> str:
+        self.calls.append({"text": text, "template": template, "examples": examples})
+        if not self.answers:
+            raise BackendError("FakeBackend has no more answers")
+        return self.answers.pop(0)
+
+    def info(self) -> dict:
+        return {"model": "fake", "mode": "fake"}
