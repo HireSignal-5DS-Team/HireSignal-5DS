@@ -13,8 +13,10 @@ a production default and does not touch the production Matcher, `matcher/factory
 | compatibility check (`compat_check.py`) | **run, MEASURED** (metadata + tokenizer, no weights): all checks pass |
 | feasibility (`estimate.py --probe`) | **run, MEASURED** on random full-width slices of the 4B model, extrapolated |
 | CPU smoke run, whole pipeline (`smoke.py`) | **run, SMOKE** (tiny random model, real data files) |
-| Kaggle handoff (`make_bundle.py`, `kaggle_soft_prompt.ipynb`) | ready; **not run** |
-| 4B training and the 4-arm comparison on the 202 val requirements | **pending** (Kaggle GPU, or CPU in window 1) |
+| Kaggle handoff (`make_bundle.py`, `kaggle_soft_prompt.ipynb`) | ready, documented step by step (§4.1); **not run** (needs the project owner's Kaggle account) |
+| importer for returned Kaggle outputs (`import_kaggle.py`) | implemented; tested on notebook-layout outputs of the tiny model (SMOKE) |
+| CPU run of the 4B model | **not approved** by the orchestrator (2026-10-16) |
+| 4B training and the 4-arm comparison on the 202 val requirements | **pending** (Kaggle GPU run, then `import_kaggle`) |
 
 ## 1. Method
 
@@ -168,46 +170,126 @@ python -m prompt_tuning.compat_check                       # metadata + tokenize
 nice -n 19 python -m prompt_tuning.estimate --tokenizer Qwen/Qwen3-4B-Instruct-2507 \
     --revision cdbee75f17c01a7cc42f958dc650907174af0554 --probe
 nice -n 19 python -m prompt_tuning.smoke                   # tiny random model, ~20 s, writes .../soft_prompt/smoke/
-python -m pytest prompt_tuning/tests                       # 15 tests
+python -m pytest prompt_tuning/tests                       # 25 tests
 ```
 
-**Kaggle (GPU T4 x2 or P100, Internet ON).**
+### 4.1 Kaggle handoff, step by step
 
-1. Run `python -m prompt_tuning.make_bundle`. It writes `prompt_tuning/dist/hiresignal_soft_prompt_bundle.zip`:
-   283 KB, 48 files, no test split.
-2. Upload the zip as a **private** dataset named `hiresignal-soft-prompt`.
-3. Import `prompt_tuning/kaggle_soft_prompt.ipynb` and add the dataset.
-4. Run all cells:
-   - integrity and sha check;
-   - base and LoRA eval;
-   - training of the two soft prompts;
-   - eval of the two soft prompt arms;
-   - comparison;
-   - zips.
+This needs a Kaggle account with GPU quota, which means the project owner. The whole run is estimated at about
+3–4 h of GPU time. This is an estimate, see §3.
 
-   Every cell is resumable.
-5. Download `soft_prompt_results.zip` and `soft_prompt_runs.zip`. Commit them under
-   `benchmark/results/experimental/soft_prompt/`. Each soft prompt is about 0.7 MB (PEFT file + plain tensor export); checkpoints are excluded.
-
-The notebook runs these, with `DTYPE` = bfloat16 if the GPU supports it, else float16, for **all** arms:
+**A. Build the bundle (in the repo, on `session/s3-matcher-soft-prompt`).**
 
 ```bash
-python -m prompt_tuning.evaluate --arm base --device cuda --dtype $DTYPE --run-id base-$DTYPE-val
-python -m prompt_tuning.evaluate --arm lora --lora $LORA --lora-revision $LREV --device cuda --dtype $DTYPE --run-id lora-$DTYPE-val
-python -m prompt_tuning.train_soft_prompt --run-id sp-base-v1 --device cuda --dtype $DTYPE --grad-ckpt
-python -m prompt_tuning.train_soft_prompt --run-id sp-lora-v1 --lora $LORA --lora-revision $LREV --device cuda --dtype $DTYPE --grad-ckpt
-python -m prompt_tuning.evaluate --arm soft_prompt --soft-prompt runs/sp-base-v1/soft_prompt --device cuda --dtype $DTYPE --run-id sp-base-v1-$DTYPE-val
+python -m pytest prompt_tuning/tests          # must pass first
+python -m prompt_tuning.make_bundle
+# -> prompt_tuning/dist/hiresignal_soft_prompt_bundle.zip (≈ 283 KB, 48 files; no test split; dist/ is gitignored)
+```
+
+`make_bundle` refuses to build if `sft_train.jsonl`, `sft_val.jsonl` or `val_prompts.jsonl` no longer match the
+sha256 in `prompt_tuning/data/manifest.json`.
+
+**B. Create the Kaggle dataset.**
+
+1. Go to Kaggle → *Datasets* → *New Dataset*.
+2. Upload the zip.
+3. Set the slug to **`hiresignal-soft-prompt`** and the visibility to **Private**.
+
+The notebook reads `/kaggle/input/hiresignal-soft-prompt/` and accepts either the zip or its extracted content.
+
+**C. Create the notebook.**
+
+1. Go to Kaggle → *Code* → *New Notebook* → *File* → *Import notebook*, and select
+   `prompt_tuning/kaggle_soft_prompt.ipynb`.
+2. Under *Add input*, add the dataset.
+3. Settings:
+   - *Accelerator*: **GPU T4 x2** or **P100**. Only one GPU is used.
+   - *Internet*: **ON**. The base model and the public Matcher LoRA are downloaded from Hugging Face; no token is
+     needed.
+   - *Persistence*: *Files only*. A restarted session can then resume from `/kaggle/working`.
+
+**D. Run all cells, in order.** Every cell can be re-run after an interruption: it resumes and skips finished work.
+
+| cell | what it does | writes (under `/kaggle/working/`) |
+|---|---|---|
+| 1 | pins `transformers==5.19.0`, `peft==0.21.2`, `accelerate==1.15.0`; unpacks the bundle | `hs/` |
+| 2 | checks the sha256 of every data file against the manifest; asserts there is no test split; picks `DTYPE` (bfloat16 if supported, else float16) for **all** arms | — |
+| 3 | evaluates arms `base` and `lora` on the 202 val prompts | `results/base-$DTYPE-val/`, `results/lora-$DTYPE-val/` |
+| 4 | trains the soft prompt on the frozen base | `runs/sp-base-v1/` |
+| 5 | trains the soft prompt on the frozen merged LoRA | `runs/sp-lora-v1/` |
+| 6 | evaluates arms `soft_prompt` and `lora_soft_prompt` | `results/sp-base-v1-$DTYPE-val/`, `results/sp-lora-v1-$DTYPE-val/` |
+| 7 | four-arm comparison | `results/COMPARISON.md`, `results/COMPARISON.json` |
+| 8 | deletes checkpoints, zips the outputs | `soft_prompt_results.zip`, `soft_prompt_runs.zip` |
+
+What each output contains:
+- Each eval run directory holds `config.json`, `predictions.jsonl` (202 lines) and `metrics.json` / `metrics.md`.
+- Each training run holds:
+  - `soft_prompt/`: the PEFT adapter, `soft_prompt.safetensors` and `hs_soft_prompt.json`;
+  - `best/`;
+  - `provenance.json`, `training_args.json`, `environment.json`, `loss_log.jsonl` and `README.md`.
+- Do **not** run anything on the test split; the bundle does not contain it.
+
+**E. Bring the results back.**
+
+1. From the notebook's *Output* tab, download `soft_prompt_results.zip` and `soft_prompt_runs.zip`.
+2. Import them in the repo:
+
+   ```bash
+   python -m prompt_tuning.import_kaggle --results soft_prompt_results.zip --runs soft_prompt_runs.zip
+   # -> benchmark/results/experimental/soft_prompt/kaggle/IMPORT_REPORT.json (always written)
+   #    and, only if every check passes:
+   #    kaggle/<eval run id>/{config,metrics}.json + predictions.jsonl + metrics.md      (4 arms)
+   #    kaggle/train/sp-{base,lora}-v1/{soft_prompt/, provenance.json, loss_log.jsonl, ...}
+   #    kaggle/COMPARISON.md / COMPARISON.json   (recomputed here by prompt_tuning.compare)
+   ```
+
+3. The importer treats the zips as untrusted data. It refuses members with absolute paths, `..`, symlinks or
+   unexpected file types, and it executes nothing from them.
+4. It runs 97 checks on a complete 4-arm import. If **any** check fails, nothing is imported, the failures are listed in
+   `IMPORT_REPORT.json`, and the exit code is 1. The checks are:
+   - **Arms:** exactly one eval run per arm.
+   - **Val coverage:** the predictions cover exactly the 202 val (case_id, req_id) pairs, with no duplicates and no
+     test cases. The prompt and gold sha256 equal the committed files. The label is `MEASURED`, `limit` is 0, and
+     decoding is greedy with 192 new tokens.
+   - **One backend for all arms:** the same dtype, device, GPU, and torch/transformers/peft versions.
+   - **Pinned models:** the base and its revision for every arm; the Matcher LoRA and its revision for exactly the
+     LoRA arms.
+   - **Recomputation:** the config hash recomputes from `config.json`, and `metrics.json` recomputes from
+     `predictions.jsonl`.
+   - **Soft prompt provenance:**
+     - the `soft_prompt.safetensors` sha256 is the same in the file, the eval config and `provenance.json`;
+     - it was trained on the committed `sft_train.jsonl`, selected on `sft_val.jsonl`, and leak-checked against the
+       committed manifest;
+     - seed 13;
+     - the training dtype equals the eval dtype;
+     - the backbone matches the arm (base vs merged LoRA);
+     - the train config hash is consistent everywhere.
+5. Fill §5 below from `kaggle/COMPARISON.md`.
+6. Commit `benchmark/results/experimental/soft_prompt/kaggle/` on `session/s3-matcher-soft-prompt`. The soft
+   prompts are about 0.7 MB each.
+7. Numbers from the notebook's own `results/COMPARISON.md` are never copied into the table directly. Only the
+   imported and validated ones are.
+
+Reference: the commands the notebook runs. `DTYPE` is the same for every arm;
+`LORA=HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora`, `LREV=0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a`.
+
+```bash
+python -m prompt_tuning.evaluate --arm base --device cuda --dtype $DTYPE --run-id base-$DTYPE-val --out-root $OUT
+python -m prompt_tuning.evaluate --arm lora --lora $LORA --lora-revision $LREV --device cuda --dtype $DTYPE --run-id lora-$DTYPE-val --out-root $OUT
+python -m prompt_tuning.train_soft_prompt --run-id sp-base-v1 --runs-dir /kaggle/working/runs --device cuda --dtype $DTYPE --grad-ckpt
+python -m prompt_tuning.train_soft_prompt --run-id sp-lora-v1 --runs-dir /kaggle/working/runs --lora $LORA --lora-revision $LREV --device cuda --dtype $DTYPE --grad-ckpt
+python -m prompt_tuning.evaluate --arm soft_prompt --soft-prompt /kaggle/working/runs/sp-base-v1/soft_prompt --device cuda --dtype $DTYPE --run-id sp-base-v1-$DTYPE-val --out-root $OUT
 python -m prompt_tuning.evaluate --arm lora_soft_prompt --lora $LORA --lora-revision $LREV \
-    --soft-prompt runs/sp-lora-v1/soft_prompt --device cuda --dtype $DTYPE --run-id sp-lora-v1-$DTYPE-val
-python -m prompt_tuning.compare --runs base=base-$DTYPE-val lora=lora-$DTYPE-val \
+    --soft-prompt /kaggle/working/runs/sp-lora-v1/soft_prompt --device cuda --dtype $DTYPE --run-id sp-lora-v1-$DTYPE-val --out-root $OUT
+python -m prompt_tuning.compare --out-root $OUT --runs base=base-$DTYPE-val lora=lora-$DTYPE-val \
     soft_prompt=sp-base-v1-$DTYPE-val lora_soft_prompt=sp-lora-v1-$DTYPE-val
 ```
 
-`LORA=HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora` and `LREV=0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a`.
+### 4.2 CPU
 
-**CPU in window 1.** This is only if the orchestrator assigns about 20 h, under `flock /home/user/hs_queue.lock`.
-Use the same commands with `--device cpu --dtype bfloat16 --allow-large-cpu`. All four arms must then also be
-evaluated in CPU bf16.
+**Not approved.** The orchestrator decided on 2026-10-16 that no 4B job runs on CPU. For the record, the
+commands would be the same with `--device cpu --dtype bfloat16 --allow-large-cpu`, and all four arms would then
+also have to be evaluated in CPU bf16.
 
 ## 5. Results
 
@@ -275,8 +357,9 @@ configuration already selected on val.
 | `compare.py` | four-arm table, exact McNemar, bootstrap CI; refuses unequal setups or mixed labels |
 | `compat_check.py`, `estimate.py` | §2 and §3 |
 | `tiny.py`, `smoke.py` | tiny random Qwen3 + LoRA; end-to-end CPU smoke run |
-| `make_bundle.py`, `kaggle_soft_prompt.ipynb` | GPU handoff |
-| `tests/test_soft_prompt.py` | 15 tests (see below) |
+| `make_bundle.py`, `kaggle_soft_prompt.ipynb` | GPU handoff (§4.1 A–D) |
+| `import_kaggle.py` | validates returned Kaggle outputs, then imports them and recomputes the comparison (§4.1 E) |
+| `tests/test_soft_prompt.py`, `tests/test_import_kaggle.py` | 15 + 10 tests (see below) |
 
 The tests run on a tiny random Qwen3. They cover:
 - leakage refusals in the code and in the committed data;
@@ -295,4 +378,7 @@ The tests run on a tiny random Qwen3. They cover:
 - refusal of test prompts;
 - refusal of unequal comparisons;
 - McNemar;
-- the parameter count (4.022 B).
+- the parameter count (4.022 B);
+- the importer: it accepts outputs in the exact notebook layout (all 202 prompts, tiny model) and refuses a missing
+  prediction, an inflated metric, a changed dtype, a swapped soft prompt, another seed, a missing training run, a
+  duplicate arm, SMOKE outputs presented as MEASURED, and unsafe zip members.
