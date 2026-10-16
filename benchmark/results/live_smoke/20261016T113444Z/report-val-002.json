@@ -1,0 +1,1118 @@
+{
+  "cv_id": "cv-val-002",
+  "job_id": "job-val-002",
+  "parser": "structured-input (Parser Agent not integrated)",
+  "backend": {
+    "backend": "fallback",
+    "is_model": true,
+    "primary": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+      "label": "matcher-lora",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8081/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 2,
+      "prompt_version": "p1",
+      "adapter_id": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+      "adapter_revision": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+      "revision": null,
+      "provenance": {
+        "role": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": {
+          "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+          "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+          "r": 16,
+          "lora_alpha": 32,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ],
+          "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+        },
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8081/v1",
+        "alias_verified": true,
+        "served_aliases": [
+          "Qwen/Qwen3-4B-Instruct-2507+lora"
+        ],
+        "prompt_id": "p1"
+      }
+    },
+    "fallback": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "label": "matcher-base-fallback",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8080/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 2,
+      "prompt_version": "p1",
+      "adapter_id": null,
+      "adapter_revision": null,
+      "revision": null,
+      "provenance": {
+        "role": "fallback",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": null,
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8080/v1",
+        "alias_verified": null,
+        "served_aliases": null,
+        "prompt_id": "p1"
+      }
+    },
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+    "prompt_version": "p1",
+    "knowledge": "rag.bm25",
+    "knowledge_provider": "rag.bm25",
+    "knowledge_version": null,
+    "prompt_id": "p1",
+    "results": {
+      "r1": {
+        "role": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": {
+          "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+          "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+          "r": 16,
+          "lora_alpha": 32,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ],
+          "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+        },
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8081/v1",
+        "alias_verified": true,
+        "served_aliases": [
+          "Qwen/Qwen3-4B-Instruct-2507+lora"
+        ],
+        "prompt_id": "p1",
+        "answered_by": "primary",
+        "knowledge_provider": "rag.bm25",
+        "knowledge_version": null,
+        "repairs": [],
+        "finish_reason": "stop",
+        "error": null,
+        "primary_error": null
+      },
+      "r2": {
+        "role": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": {
+          "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+          "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+          "r": 16,
+          "lora_alpha": 32,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ],
+          "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+        },
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8081/v1",
+        "alias_verified": true,
+        "served_aliases": [
+          "Qwen/Qwen3-4B-Instruct-2507+lora"
+        ],
+        "prompt_id": "p1",
+        "answered_by": "primary",
+        "knowledge_provider": "rag.bm25",
+        "knowledge_version": null,
+        "repairs": [],
+        "finish_reason": "stop",
+        "error": null,
+        "primary_error": null
+      },
+      "r3": {
+        "role": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": {
+          "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+          "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+          "r": 16,
+          "lora_alpha": 32,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ],
+          "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+        },
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8081/v1",
+        "alias_verified": true,
+        "served_aliases": [
+          "Qwen/Qwen3-4B-Instruct-2507+lora"
+        ],
+        "prompt_id": "p1",
+        "answered_by": "primary",
+        "knowledge_provider": "rag.bm25",
+        "knowledge_version": null,
+        "repairs": [],
+        "finish_reason": "stop",
+        "error": null,
+        "primary_error": null
+      },
+      "r4": {
+        "role": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": {
+          "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+          "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+          "r": 16,
+          "lora_alpha": 32,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ],
+          "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+        },
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8081/v1",
+        "alias_verified": true,
+        "served_aliases": [
+          "Qwen/Qwen3-4B-Instruct-2507+lora"
+        ],
+        "prompt_id": "p1",
+        "answered_by": "primary",
+        "knowledge_provider": "rag.bm25",
+        "knowledge_version": null,
+        "repairs": [],
+        "finish_reason": "stop",
+        "error": null,
+        "primary_error": null
+      }
+    }
+  },
+  "knowledge": "rag.bm25",
+  "match_report": {
+    "schema_version": "1.0.0",
+    "cv_id": "cv-val-002",
+    "job_id": "job-val-002",
+    "backend": {
+      "backend": "fallback",
+      "is_model": true,
+      "primary": {
+        "backend": "openai_compat",
+        "is_model": true,
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "label": "matcher-lora",
+        "provider": "local",
+        "base_url": "http://127.0.0.1:8081/v1",
+        "decoding": {
+          "temperature": 0,
+          "max_tokens": 192
+        },
+        "timeout_s": 300.0,
+        "max_retries": 2,
+        "prompt_version": "p1",
+        "adapter_id": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+        "adapter_revision": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+        "revision": null,
+        "provenance": {
+          "role": "primary",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+          "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+          "weights": {
+            "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+            "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+            "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+            "quant": "Q4_K_M"
+          },
+          "adapter": {
+            "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+            "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+            "r": 16,
+            "lora_alpha": 32,
+            "target_modules": [
+              "q_proj",
+              "k_proj",
+              "v_proj",
+              "o_proj",
+              "gate_proj",
+              "up_proj",
+              "down_proj"
+            ],
+            "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+          },
+          "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+          "endpoint": "http://127.0.0.1:8081/v1",
+          "alias_verified": true,
+          "served_aliases": [
+            "Qwen/Qwen3-4B-Instruct-2507+lora"
+          ],
+          "prompt_id": "p1"
+        }
+      },
+      "fallback": {
+        "backend": "openai_compat",
+        "is_model": true,
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "label": "matcher-base-fallback",
+        "provider": "local",
+        "base_url": "http://127.0.0.1:8080/v1",
+        "decoding": {
+          "temperature": 0,
+          "max_tokens": 192
+        },
+        "timeout_s": 300.0,
+        "max_retries": 2,
+        "prompt_version": "p1",
+        "adapter_id": null,
+        "adapter_revision": null,
+        "revision": null,
+        "provenance": {
+          "role": "fallback",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "served_alias": "Qwen/Qwen3-4B-Instruct-2507",
+          "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+          "weights": {
+            "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+            "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+            "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+            "quant": "Q4_K_M"
+          },
+          "adapter": null,
+          "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+          "endpoint": "http://127.0.0.1:8080/v1",
+          "alias_verified": null,
+          "served_aliases": null,
+          "prompt_id": "p1"
+        }
+      },
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+      "prompt_version": "p1",
+      "knowledge": "rag.bm25",
+      "knowledge_provider": "rag.bm25",
+      "knowledge_version": null,
+      "prompt_id": "p1",
+      "results": {
+        "r1": {
+          "role": "primary",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+          "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+          "weights": {
+            "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+            "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+            "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+            "quant": "Q4_K_M"
+          },
+          "adapter": {
+            "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+            "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+            "r": 16,
+            "lora_alpha": 32,
+            "target_modules": [
+              "q_proj",
+              "k_proj",
+              "v_proj",
+              "o_proj",
+              "gate_proj",
+              "up_proj",
+              "down_proj"
+            ],
+            "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+          },
+          "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+          "endpoint": "http://127.0.0.1:8081/v1",
+          "alias_verified": true,
+          "served_aliases": [
+            "Qwen/Qwen3-4B-Instruct-2507+lora"
+          ],
+          "prompt_id": "p1",
+          "answered_by": "primary",
+          "knowledge_provider": "rag.bm25",
+          "knowledge_version": null,
+          "repairs": [],
+          "finish_reason": "stop",
+          "error": null,
+          "primary_error": null
+        },
+        "r2": {
+          "role": "primary",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+          "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+          "weights": {
+            "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+            "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+            "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+            "quant": "Q4_K_M"
+          },
+          "adapter": {
+            "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+            "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+            "r": 16,
+            "lora_alpha": 32,
+            "target_modules": [
+              "q_proj",
+              "k_proj",
+              "v_proj",
+              "o_proj",
+              "gate_proj",
+              "up_proj",
+              "down_proj"
+            ],
+            "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+          },
+          "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+          "endpoint": "http://127.0.0.1:8081/v1",
+          "alias_verified": true,
+          "served_aliases": [
+            "Qwen/Qwen3-4B-Instruct-2507+lora"
+          ],
+          "prompt_id": "p1",
+          "answered_by": "primary",
+          "knowledge_provider": "rag.bm25",
+          "knowledge_version": null,
+          "repairs": [],
+          "finish_reason": "stop",
+          "error": null,
+          "primary_error": null
+        },
+        "r3": {
+          "role": "primary",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+          "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+          "weights": {
+            "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+            "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+            "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+            "quant": "Q4_K_M"
+          },
+          "adapter": {
+            "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+            "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+            "r": 16,
+            "lora_alpha": 32,
+            "target_modules": [
+              "q_proj",
+              "k_proj",
+              "v_proj",
+              "o_proj",
+              "gate_proj",
+              "up_proj",
+              "down_proj"
+            ],
+            "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+          },
+          "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+          "endpoint": "http://127.0.0.1:8081/v1",
+          "alias_verified": true,
+          "served_aliases": [
+            "Qwen/Qwen3-4B-Instruct-2507+lora"
+          ],
+          "prompt_id": "p1",
+          "answered_by": "primary",
+          "knowledge_provider": "rag.bm25",
+          "knowledge_version": null,
+          "repairs": [],
+          "finish_reason": "stop",
+          "error": null,
+          "primary_error": null
+        },
+        "r4": {
+          "role": "primary",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+          "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+          "weights": {
+            "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+            "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+            "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+            "quant": "Q4_K_M"
+          },
+          "adapter": {
+            "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+            "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+            "r": 16,
+            "lora_alpha": 32,
+            "target_modules": [
+              "q_proj",
+              "k_proj",
+              "v_proj",
+              "o_proj",
+              "gate_proj",
+              "up_proj",
+              "down_proj"
+            ],
+            "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+          },
+          "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+          "endpoint": "http://127.0.0.1:8081/v1",
+          "alias_verified": true,
+          "served_aliases": [
+            "Qwen/Qwen3-4B-Instruct-2507+lora"
+          ],
+          "prompt_id": "p1",
+          "answered_by": "primary",
+          "knowledge_provider": "rag.bm25",
+          "knowledge_version": null,
+          "repairs": [],
+          "finish_reason": "stop",
+          "error": null,
+          "primary_error": null
+        }
+      }
+    },
+    "results": [
+      {
+        "req_id": "r1",
+        "requirement_text": "Working knowledge of FastAPI",
+        "kind": "nice",
+        "decision": "MET",
+        "basis": "supported",
+        "evidence": [
+          "Led the migration of reporting jobs to FastAPI."
+        ],
+        "evidence_spans": [
+          [
+            236,
+            283
+          ]
+        ],
+        "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+        "rag_refs": [],
+        "model_decision": "MET",
+        "review_priority": "low",
+        "needs_human_review": false,
+        "review_reasons": []
+      },
+      {
+        "req_id": "r2",
+        "requirement_text": "Working knowledge of database design",
+        "kind": "nice",
+        "decision": "MET",
+        "basis": "supported",
+        "evidence": [
+          "Modelled 40 relational tables with primary keys, foreign keys and indexes for the HR system."
+        ],
+        "evidence_spans": [
+          [
+            93,
+            185
+          ]
+        ],
+        "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+        "rag_refs": [
+          "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+          "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f",
+          "http://data.europa.eu/esco/skill/29fb0fb5-dfc4-4098-ac9b-3a712000f48f"
+        ],
+        "model_decision": "MET",
+        "review_priority": "medium",
+        "needs_human_review": true,
+        "review_reasons": [
+          "semantic_inference_no_term_in_quote"
+        ]
+      },
+      {
+        "req_id": "r3",
+        "requirement_text": "Hands-on Oracle Warehouse Builder experience",
+        "kind": "must",
+        "decision": "MET",
+        "basis": "supported",
+        "evidence": [
+          "Built OWB mappings for the finance data mart."
+        ],
+        "evidence_spans": [
+          [
+            188,
+            233
+          ]
+        ],
+        "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+        "rag_refs": [
+          "http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e",
+          "http://data.europa.eu/esco/skill/772a9c72-abef-4333-9788-f4cb48ad8e08",
+          "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655"
+        ],
+        "model_decision": "MET",
+        "review_priority": "low",
+        "needs_human_review": false,
+        "review_reasons": []
+      },
+      {
+        "req_id": "r4",
+        "requirement_text": "Microsoft Azure Administrator Associate certification",
+        "kind": "must",
+        "decision": "MISSING",
+        "basis": "contradicted",
+        "evidence": [
+          "Enrolled in a Microsoft Azure Administrator Associate preparation course."
+        ],
+        "evidence_spans": [
+          [
+            356,
+            429
+          ]
+        ],
+        "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+        "rag_refs": [
+          "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+          "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+          "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6"
+        ],
+        "model_decision": "MISSING",
+        "review_priority": "medium",
+        "needs_human_review": true,
+        "review_reasons": [
+          "must_have_contradicted"
+        ]
+      }
+    ],
+    "summary": {
+      "counts": {
+        "MET": 3,
+        "MISSING": 1,
+        "UNCERTAIN": 0
+      },
+      "must_total": 2,
+      "must_met": 1,
+      "must_coverage": 0.5,
+      "needs_human_review": 2,
+      "note": "Requirement-level screening aid. No automatic rejection or hiring decision is made."
+    }
+  },
+  "judge": null,
+  "requirements": [
+    {
+      "req_id": "r1",
+      "requirement_text": "Working knowledge of FastAPI",
+      "kind": "nice",
+      "final_decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        "Led the migration of reporting jobs to FastAPI."
+      ],
+      "evidence_spans": [
+        [
+          236,
+          283
+        ]
+      ],
+      "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+      "rag_refs": [],
+      "validator": {
+        "review_priority": "low",
+        "reasons": []
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {}
+      },
+      "judge": null,
+      "requires_human_review": false,
+      "review_reasons": [],
+      "explanation_grounded": "Requirement \"Working knowledge of FastAPI\": MET. The CV states \"Led the migration of reporting jobs to FastAPI.\".",
+      "citations": [],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 16.342,
+        "error": null,
+        "finish_reason": "stop"
+      },
+      "provenance": {
+        "role": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": {
+          "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+          "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+          "r": 16,
+          "lora_alpha": 32,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ],
+          "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+        },
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8081/v1",
+        "alias_verified": true,
+        "served_aliases": [
+          "Qwen/Qwen3-4B-Instruct-2507+lora"
+        ],
+        "prompt_id": "p1",
+        "answered_by": "primary",
+        "knowledge_provider": "rag.bm25",
+        "knowledge_version": null,
+        "repairs": [],
+        "finish_reason": "stop",
+        "error": null,
+        "primary_error": null
+      }
+    },
+    {
+      "req_id": "r2",
+      "requirement_text": "Working knowledge of database design",
+      "kind": "nice",
+      "final_decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        "Modelled 40 relational tables with primary keys, foreign keys and indexes for the HR system."
+      ],
+      "evidence_spans": [
+        [
+          93,
+          185
+        ]
+      ],
+      "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+      "rag_refs": [
+        "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+        "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f",
+        "http://data.europa.eu/esco/skill/29fb0fb5-dfc4-4098-ac9b-3a712000f48f"
+      ],
+      "validator": {
+        "review_priority": "medium",
+        "reasons": [
+          "semantic_inference_no_term_in_quote"
+        ]
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {}
+      },
+      "judge": null,
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:semantic_inference_no_term_in_quote"
+      ],
+      "explanation_grounded": "Requirement \"Working knowledge of database design\": MET. The CV states \"Modelled 40 relational tables with primary keys, foreign keys and indexes for the HR system.\". Terminology from: design database in the cloud, create database diagrams, manage database (knowledge base, not candidate evidence).",
+      "citations": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+          "source_type": "esco",
+          "title": "design database in the cloud",
+          "url": "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+          "retrieval": "rag.bm25",
+          "shown_as": "7e796b51-49d"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f",
+          "source_type": "esco",
+          "title": "create database diagrams",
+          "url": "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f",
+          "retrieval": "rag.bm25",
+          "shown_as": "84f58e3d-866"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/29fb0fb5-dfc4-4098-ac9b-3a712000f48f",
+          "source_type": "esco",
+          "title": "manage database",
+          "url": "http://data.europa.eu/esco/skill/29fb0fb5-dfc4-4098-ac9b-3a712000f48f",
+          "retrieval": "rag.bm25",
+          "shown_as": "29fb0fb5-dfc"
+        }
+      ],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 21.941,
+        "error": null,
+        "finish_reason": "stop"
+      },
+      "provenance": {
+        "role": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": {
+          "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+          "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+          "r": 16,
+          "lora_alpha": 32,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ],
+          "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+        },
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8081/v1",
+        "alias_verified": true,
+        "served_aliases": [
+          "Qwen/Qwen3-4B-Instruct-2507+lora"
+        ],
+        "prompt_id": "p1",
+        "answered_by": "primary",
+        "knowledge_provider": "rag.bm25",
+        "knowledge_version": null,
+        "repairs": [],
+        "finish_reason": "stop",
+        "error": null,
+        "primary_error": null
+      }
+    },
+    {
+      "req_id": "r3",
+      "requirement_text": "Hands-on Oracle Warehouse Builder experience",
+      "kind": "must",
+      "final_decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        "Built OWB mappings for the finance data mart."
+      ],
+      "evidence_spans": [
+        [
+          188,
+          233
+        ]
+      ],
+      "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+      "rag_refs": [
+        "http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e",
+        "http://data.europa.eu/esco/skill/772a9c72-abef-4333-9788-f4cb48ad8e08",
+        "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655"
+      ],
+      "validator": {
+        "review_priority": "low",
+        "reasons": []
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {}
+      },
+      "judge": null,
+      "requires_human_review": false,
+      "review_reasons": [],
+      "explanation_grounded": "Requirement \"Hands-on Oracle Warehouse Builder experience\": MET. The CV states \"Built OWB mappings for the finance data mart.\". Terminology from: Oracle Warehouse Builder, identify software for warehouse management, Oracle Relational Database (knowledge base, not candidate evidence).",
+      "citations": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e",
+          "source_type": "esco",
+          "title": "Oracle Warehouse Builder",
+          "url": "http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e",
+          "retrieval": "rag.bm25",
+          "shown_as": "23900e3d-06f"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/772a9c72-abef-4333-9788-f4cb48ad8e08",
+          "source_type": "esco",
+          "title": "identify software for warehouse management",
+          "url": "http://data.europa.eu/esco/skill/772a9c72-abef-4333-9788-f4cb48ad8e08",
+          "retrieval": "rag.bm25",
+          "shown_as": "772a9c72-abe"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655",
+          "source_type": "esco",
+          "title": "Oracle Relational Database",
+          "url": "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655",
+          "retrieval": "rag.bm25",
+          "shown_as": "de9f85ba-e77"
+        }
+      ],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 19.613,
+        "error": null,
+        "finish_reason": "stop"
+      },
+      "provenance": {
+        "role": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": {
+          "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+          "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+          "r": 16,
+          "lora_alpha": 32,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ],
+          "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+        },
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8081/v1",
+        "alias_verified": true,
+        "served_aliases": [
+          "Qwen/Qwen3-4B-Instruct-2507+lora"
+        ],
+        "prompt_id": "p1",
+        "answered_by": "primary",
+        "knowledge_provider": "rag.bm25",
+        "knowledge_version": null,
+        "repairs": [],
+        "finish_reason": "stop",
+        "error": null,
+        "primary_error": null
+      }
+    },
+    {
+      "req_id": "r4",
+      "requirement_text": "Microsoft Azure Administrator Associate certification",
+      "kind": "must",
+      "final_decision": "MISSING",
+      "model_decision": "MISSING",
+      "basis": "contradicted",
+      "evidence": [
+        "Enrolled in a Microsoft Azure Administrator Associate preparation course."
+      ],
+      "evidence_spans": [
+        [
+          356,
+          429
+        ]
+      ],
+      "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+      "rag_refs": [
+        "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+        "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+        "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6"
+      ],
+      "validator": {
+        "review_priority": "medium",
+        "reasons": [
+          "must_have_contradicted"
+        ]
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {}
+      },
+      "judge": null,
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:must_have_contradicted"
+      ],
+      "explanation_grounded": "Requirement \"Microsoft Azure Administrator Associate certification\": MISSING. The CV text \"Enrolled in a Microsoft Azure Administrator Associate preparation course.\" shows it is not met. Terminology from: SQL Server, Microsoft Access, Microsoft Visio (knowledge base, not candidate evidence).",
+      "citations": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+          "source_type": "esco",
+          "title": "SQL Server",
+          "url": "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+          "retrieval": "rag.bm25",
+          "shown_as": "c062bab3-3ea"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+          "source_type": "esco",
+          "title": "Microsoft Access",
+          "url": "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+          "retrieval": "rag.bm25",
+          "shown_as": "3d03c40c-1b8"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6",
+          "source_type": "esco",
+          "title": "Microsoft Visio",
+          "url": "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6",
+          "retrieval": "rag.bm25",
+          "shown_as": "86f7126d-97f"
+        }
+      ],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 26.005,
+        "error": null,
+        "finish_reason": "stop"
+      },
+      "provenance": {
+        "role": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": {
+          "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+          "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+          "r": 16,
+          "lora_alpha": 32,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ],
+          "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+        },
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8081/v1",
+        "alias_verified": true,
+        "served_aliases": [
+          "Qwen/Qwen3-4B-Instruct-2507+lora"
+        ],
+        "prompt_id": "p1",
+        "answered_by": "primary",
+        "knowledge_provider": "rag.bm25",
+        "knowledge_version": null,
+        "repairs": [],
+        "finish_reason": "stop",
+        "error": null,
+        "primary_error": null
+      }
+    }
+  ],
+  "summary": {
+    "MET": 3,
+    "MISSING": 1,
+    "UNCERTAIN": 0,
+    "must_met": 1,
+    "must_total": 2,
+    "requires_human_review": 2,
+    "note": "Requirement-level screening aid. No automatic rejection or hiring decision."
+  }
+}

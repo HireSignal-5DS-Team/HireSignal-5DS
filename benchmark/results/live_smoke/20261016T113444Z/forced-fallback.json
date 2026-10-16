@@ -1,0 +1,429 @@
+{
+  "cv_id": "cv-val-000",
+  "job_id": "job-val-000",
+  "parser": "structured-input (Parser Agent not integrated)",
+  "backend": {
+    "backend": "fallback",
+    "is_model": true,
+    "primary": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+      "label": "matcher-lora",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:9/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 0,
+      "prompt_version": "p1",
+      "adapter_id": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+      "adapter_revision": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+      "revision": null,
+      "provenance": {
+        "role": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": {
+          "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+          "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+          "r": 16,
+          "lora_alpha": 32,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ],
+          "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+        },
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:9/v1",
+        "alias_verified": null,
+        "served_aliases": "unreachable: URLError",
+        "prompt_id": "p1"
+      }
+    },
+    "fallback": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "label": "matcher-base-fallback",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8080/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 0,
+      "prompt_version": "p1",
+      "adapter_id": null,
+      "adapter_revision": null,
+      "revision": null,
+      "provenance": {
+        "role": "fallback",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": null,
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8080/v1",
+        "alias_verified": true,
+        "served_aliases": [
+          "Qwen/Qwen3-4B-Instruct-2507"
+        ],
+        "prompt_id": "p1"
+      }
+    },
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+    "prompt_version": "p1",
+    "knowledge": "rag.bm25",
+    "knowledge_provider": "rag.bm25",
+    "knowledge_version": null,
+    "prompt_id": "p1",
+    "results": {
+      "r1": {
+        "role": "fallback",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": null,
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8080/v1",
+        "alias_verified": true,
+        "served_aliases": [
+          "Qwen/Qwen3-4B-Instruct-2507"
+        ],
+        "prompt_id": "p1",
+        "answered_by": "fallback",
+        "knowledge_provider": "rag.bm25",
+        "knowledge_version": null,
+        "repairs": [],
+        "finish_reason": "stop",
+        "error": null,
+        "primary_error": "URLError: <urlopen error [Errno 111] Connection refused>"
+      }
+    }
+  },
+  "knowledge": "rag.bm25",
+  "match_report": {
+    "schema_version": "1.0.0",
+    "cv_id": "cv-val-000",
+    "job_id": "job-val-000",
+    "backend": {
+      "backend": "fallback",
+      "is_model": true,
+      "primary": {
+        "backend": "openai_compat",
+        "is_model": true,
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "label": "matcher-lora",
+        "provider": "local",
+        "base_url": "http://127.0.0.1:9/v1",
+        "decoding": {
+          "temperature": 0,
+          "max_tokens": 192
+        },
+        "timeout_s": 300.0,
+        "max_retries": 0,
+        "prompt_version": "p1",
+        "adapter_id": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+        "adapter_revision": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+        "revision": null,
+        "provenance": {
+          "role": "primary",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+          "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+          "weights": {
+            "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+            "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+            "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+            "quant": "Q4_K_M"
+          },
+          "adapter": {
+            "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+            "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+            "r": 16,
+            "lora_alpha": 32,
+            "target_modules": [
+              "q_proj",
+              "k_proj",
+              "v_proj",
+              "o_proj",
+              "gate_proj",
+              "up_proj",
+              "down_proj"
+            ],
+            "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+          },
+          "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+          "endpoint": "http://127.0.0.1:9/v1",
+          "alias_verified": null,
+          "served_aliases": "unreachable: URLError",
+          "prompt_id": "p1"
+        }
+      },
+      "fallback": {
+        "backend": "openai_compat",
+        "is_model": true,
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "label": "matcher-base-fallback",
+        "provider": "local",
+        "base_url": "http://127.0.0.1:8080/v1",
+        "decoding": {
+          "temperature": 0,
+          "max_tokens": 192
+        },
+        "timeout_s": 300.0,
+        "max_retries": 0,
+        "prompt_version": "p1",
+        "adapter_id": null,
+        "adapter_revision": null,
+        "revision": null,
+        "provenance": {
+          "role": "fallback",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "served_alias": "Qwen/Qwen3-4B-Instruct-2507",
+          "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+          "weights": {
+            "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+            "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+            "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+            "quant": "Q4_K_M"
+          },
+          "adapter": null,
+          "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+          "endpoint": "http://127.0.0.1:8080/v1",
+          "alias_verified": true,
+          "served_aliases": [
+            "Qwen/Qwen3-4B-Instruct-2507"
+          ],
+          "prompt_id": "p1"
+        }
+      },
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+      "prompt_version": "p1",
+      "knowledge": "rag.bm25",
+      "knowledge_provider": "rag.bm25",
+      "knowledge_version": null,
+      "prompt_id": "p1",
+      "results": {
+        "r1": {
+          "role": "fallback",
+          "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+          "served_alias": "Qwen/Qwen3-4B-Instruct-2507",
+          "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+          "weights": {
+            "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+            "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+            "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+            "quant": "Q4_K_M"
+          },
+          "adapter": null,
+          "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+          "endpoint": "http://127.0.0.1:8080/v1",
+          "alias_verified": true,
+          "served_aliases": [
+            "Qwen/Qwen3-4B-Instruct-2507"
+          ],
+          "prompt_id": "p1",
+          "answered_by": "fallback",
+          "knowledge_provider": "rag.bm25",
+          "knowledge_version": null,
+          "repairs": [],
+          "finish_reason": "stop",
+          "error": null,
+          "primary_error": "URLError: <urlopen error [Errno 111] Connection refused>"
+        }
+      }
+    },
+    "results": [
+      {
+        "req_id": "r1",
+        "requirement_text": "React: 4 years of experience or more",
+        "kind": "must",
+        "decision": "UNCERTAIN",
+        "basis": "ambiguous",
+        "evidence": [
+          "Applied React in various side projects over time."
+        ],
+        "evidence_spans": [
+          [
+            93,
+            142
+          ]
+        ],
+        "explanation": "The CV mentions experience with React in side projects, but does not specify the duration or whether it meets the 4-year requirement. The phrase 'over time' is vague and insufficient to confirm four years of professional experience.",
+        "rag_refs": [
+          "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+          "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+          "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+        ],
+        "model_decision": "UNCERTAIN",
+        "review_priority": "medium",
+        "needs_human_review": true,
+        "review_reasons": [
+          "uncertain_decision",
+          "matcher:fallback_model_used"
+        ]
+      }
+    ],
+    "summary": {
+      "counts": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 1
+      },
+      "must_total": 1,
+      "must_met": 0,
+      "must_coverage": 0.0,
+      "needs_human_review": 1,
+      "note": "Requirement-level screening aid. No automatic rejection or hiring decision is made."
+    }
+  },
+  "judge": null,
+  "requirements": [
+    {
+      "req_id": "r1",
+      "requirement_text": "React: 4 years of experience or more",
+      "kind": "must",
+      "final_decision": "UNCERTAIN",
+      "model_decision": "UNCERTAIN",
+      "basis": "ambiguous",
+      "evidence": [
+        "Applied React in various side projects over time."
+      ],
+      "evidence_spans": [
+        [
+          93,
+          142
+        ]
+      ],
+      "explanation": "The CV mentions experience with React in side projects, but does not specify the duration or whether it meets the 4-year requirement. The phrase 'over time' is vague and insufficient to confirm four years of professional experience.",
+      "rag_refs": [
+        "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+        "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+        "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+      ],
+      "validator": {
+        "review_priority": "medium",
+        "reasons": [
+          "uncertain_decision"
+        ]
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {}
+      },
+      "judge": null,
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:uncertain_decision",
+        "decision:uncertain",
+        "matcher:fallback_model_used"
+      ],
+      "explanation_grounded": "Requirement \"React: 4 years of experience or more\": UNCERTAIN. The CV evidence is partial or ambiguous: \"Applied React in various side projects over time.\". Terminology from: react to physical changes or hazards, improvise, think quickly (knowledge base, not candidate evidence).",
+      "citations": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+          "source_type": "esco",
+          "title": "react to physical changes or hazards",
+          "url": "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+          "retrieval": "rag.bm25",
+          "shown_as": "ef7562b2-f17"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+          "source_type": "esco",
+          "title": "improvise",
+          "url": "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+          "retrieval": "rag.bm25",
+          "shown_as": "b40584aa-7c6"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1",
+          "source_type": "esco",
+          "title": "think quickly",
+          "url": "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1",
+          "retrieval": "rag.bm25",
+          "shown_as": "20012caa-b63"
+        }
+      ],
+      "matcher_call": {
+        "used": "fallback",
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "latency_s": 13.701,
+        "error": null,
+        "primary_error": "URLError: <urlopen error [Errno 111] Connection refused>",
+        "finish_reason": "stop"
+      },
+      "provenance": {
+        "role": "fallback",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": null,
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8080/v1",
+        "alias_verified": true,
+        "served_aliases": [
+          "Qwen/Qwen3-4B-Instruct-2507"
+        ],
+        "prompt_id": "p1",
+        "answered_by": "fallback",
+        "knowledge_provider": "rag.bm25",
+        "knowledge_version": null,
+        "repairs": [],
+        "finish_reason": "stop",
+        "error": null,
+        "primary_error": "URLError: <urlopen error [Errno 111] Connection refused>"
+      }
+    }
+  ],
+  "summary": {
+    "MET": 0,
+    "MISSING": 0,
+    "UNCERTAIN": 1,
+    "must_met": 0,
+    "must_total": 1,
+    "requires_human_review": 1,
+    "note": "Requirement-level screening aid. No automatic rejection or hiring decision."
+  }
+}
