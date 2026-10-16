@@ -1,8 +1,12 @@
 # HireSignal Bias Auditor (Session 4)
 
 Branch `session/s4-bias-auditor`. Owner files: `matcher/bias_audit.py`, `benchmark/bias_eval.py`, `bias/`,
-`benchmark/results/bias/`, this document. Status on 2026-10-16: **compute window 0**. No LLM was run in this
-session. Every number below is labelled **LIVE** (a real model call, with a run directory), **DETERMINISTIC** (rules
+`benchmark/results/bias/`, this document. Status on 2026-10-16: window-1 LIVE runs done.
+- Reviewer: 110 calls.
+- Counterfactual audit, new attributes + placebo: 2 × 360 Matcher calls, base and LoRA.
+- The LoRA core-4 attributes are reused from the evaluation session.
+
+Every number below is labelled **LIVE** (a real model call, with a run directory), **DETERMINISTIC** (rules
 only, no model, reproducible) or **MOCK** (a scripted fixture, never a model result).
 
 ## 1. Question and short answer
@@ -26,7 +30,15 @@ and the counterfactual audit? Or do we need a fairness-specific LoRA adapter, or
     positives (§5.3).
   - Every reply was valid JSON, and p95 latency is 14 s per call.
   - It adds no model to memory: it reuses the fallback base server on :8080.
-- **Measured today (DETERMINISTIC):**
+- **Fairness of the deployed LoRA Matcher (LIVE, §5.2c).**
+  - 4/270 protected counterfactual cells flip, against 2/253 for the base Matcher (McNemar p = 0.69). Placebo
+    0/30 and 0/27.
+  - No attribute is significantly above the placebo floor. Flip directions are mixed. 5 of 6 flips are on
+    borderline items (QA-029, not significant).
+  - Power is low (30 requirements). These results are no evidence of bias, not evidence of no bias.
+  - Three LoRA flips leave an adverse MISSING on a nice-to-have requirement unreviewed. The proposed review rule
+    (§5.2c) costs +10/202 reviews.
+- **Rules (DETERMINISTIC):**
   - The current rules (v1) have a 40 % false-positive rate on negative controls and 65 % recall (after the QA-020
     fix; 43 % before).
   - The new rules (v2) reach 97.5 % precision and 85 % recall on test + holdout.
