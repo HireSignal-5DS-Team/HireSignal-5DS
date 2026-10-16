@@ -1,0 +1,16 @@
+{
+  "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+  "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+  "private": false,
+  "files": [
+    ".gitattributes",
+    "README.md",
+    "adapter_config.json",
+    "adapter_model.safetensors",
+    "chat_template.jinja",
+    "data_manifest.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "train_meta.json"
+  ]
+}
