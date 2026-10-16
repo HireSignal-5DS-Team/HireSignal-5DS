@@ -49,7 +49,7 @@ ensure_server() {
   server_up && return 0
   log "starting llama.cpp server"
   setsid nohup $P -m llama_cpp.server --model $GGUF --model_alias Qwen/Qwen3-4B-Instruct-2507 --n_ctx 4096 \
-    --n_threads 4 --host 127.0.0.1 --port 8080 > /home/user/llama_server.log 2>&1 < /dev/null &
+    --n_threads 4 --host 127.0.0.1 --port 8080 > /home/user/llama_server.log 2>&1 < /dev/null 9>&- &  # 9>&-: server must not keep the queue lock
   for i in $(seq 1 120); do server_up && return 0; sleep 5; done
   fail "llama.cpp server did not start (see /home/user/llama_server.log)"
 }

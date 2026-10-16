@@ -28,7 +28,7 @@ SHA=$($P -c "import json;print(json.load(open('$ADIR/hs_provenance.json'))['sha'
 mkdir -p $R/adapter && cp "$ADIR/adapter_config.json" $R/adapter/hs_lora_adapter_config.json && cp "$ADIR/hs_provenance.json" $R/adapter/hs_lora_provenance.json
 # 2. serve base + adapter on :8081 (base server on :8080 stays for the baseline)
 if ! curl -s -m 3 http://127.0.0.1:8081/v1/models >/dev/null; then
-  setsid nohup scripts/serve_qwen4b_lora.sh "$ADIR" 8081 > /home/user/llama_lora_server.log 2>&1 < /dev/null &
+  setsid nohup scripts/serve_qwen4b_lora.sh "$ADIR" 8081 > /home/user/llama_lora_server.log 2>&1 < /dev/null 9>&- &  # 9>&-: the long-lived server must not keep the queue lock
   for i in $(seq 1 120); do curl -s -m 3 http://127.0.0.1:8081/v1/models >/dev/null && break; sleep 5; done
 fi
 curl -s -m 3 http://127.0.0.1:8081/v1/models >/dev/null || { echo "lora server failed"; tail -20 /home/user/llama_lora_server.log; exit 1; }
