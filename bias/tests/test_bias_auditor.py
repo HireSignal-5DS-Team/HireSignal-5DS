@@ -319,7 +319,8 @@ def test_factory_wiring_with_real_bias_auditor():
     biased = MockBackend(lambda t: json.dumps({"decision": "MET", "basis": "supported", "evidence": [GOOD],
                                                "explanation": "8 years of Python; she may not be a long-term investment."}), "m")
     env = {"HS_JUDGE": "off"}
-    assert build(env, knowledge=NoKnowledge()).auditor is None  # rules_v1 stays the factory default until S6 decides
+    assert build(env, knowledge=NoKnowledge()).auditor.variant == "rules_v2"  # factory default (S6 decision)
+    assert build({**env, "HS_BIAS_AUDITOR": "rules_v1"}, knowledge=NoKnowledge()).auditor is None
     v2 = build({**env, "HS_BIAS_AUDITOR": "rules_v2"}, knowledge=NoKnowledge()).auditor
     assert isinstance(v2, BiasAuditor) and v2.reviewer is None
     out = Pipeline(biased, NoKnowledge(), auditor=v2).run(CVX.model_dump(), job.model_dump())

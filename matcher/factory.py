@@ -61,7 +61,7 @@ def _gated_qdrant(env):
     return gated(retriever=r, mode="dense", dense_tau=tau)
 
 
-BIAS_AUDITOR_DEFAULT = "rules_v1"  # production until S6 merges S4's bias/ and sets the default (S4 proposes rules_v2)
+BIAS_AUDITOR_DEFAULT = "rules_v2"  # blind holdout (n=44): same recall as v1 (19/26), FPR 1/18 vs 9/18; no model call
 
 
 def bias_auditor(env, cfg):

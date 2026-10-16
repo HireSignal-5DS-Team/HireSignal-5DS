@@ -376,9 +376,11 @@ def fake_bias(monkeypatch):
     monkeypatch.setitem(sys.modules, "bias.reviewer", rev)
 
 
-def test_bias_auditor_default_is_rules_v1_without_model_calls():
+def test_bias_auditor_default_is_rules_v2_without_model_calls():
     p = build({"HS_JUDGE": "off"}, knowledge=ESCO)
-    assert p.auditor is None
+    assert p.auditor.variant == "rules_v2" and getattr(p.auditor, "reviewer", None) is None  # no model call by default
+    p1 = build({"HS_JUDGE": "off", "HS_BIAS_AUDITOR": "rules_v1"}, knowledge=ESCO)
+    assert p1.auditor is None
     out = Pipeline(FallbackBackend(Fake("lora", GOOD), Fake("base", GOOD)), ESCO).run(CVX.model_dump(), JOB.model_dump())
     assert out["match_report"]["backend"]["bias_auditor"] == {"variant": "rules_v1"}
 
