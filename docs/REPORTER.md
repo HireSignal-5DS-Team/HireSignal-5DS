@@ -115,7 +115,53 @@ and "MOCK, not a model"; it is never labelled `slm`.
 
 ## Measured results
 
-RESULTS_PLACEHOLDER
+**LIVE SLM** (Qwen3-0.6B Q8_0, llama.cpp CPU, 4 threads, this container: 4 vCPU, 15 GiB, no GPU) on pipeline outputs
+built from **real LoRA Matcher outputs**: the saved raw answers of the LIVE val run `rag_opt/results/e2e/lora__gated`
+(Qwen3-4B + LoRA `0b6925b1`, Q4_K_M, prompt p1, `rag.gated.v1`), replayed through the current pipeline
+(`reporter/replay.py`: strict parse, validator v2, bias auditor rules_v2, aggregator; knowledge refs rebuilt and checked
+identical to the saved ones). Val only. The prompt and validator were developed on val-000..val-004; the measurement
+uses the next 25 val cases (val-005..val-029), 148 text sections. Judge not run (see Limitations).
+Artefacts: `reporter/results/val_replay/` (`metrics.json`, `sections.jsonl` with every text, attempt and rejected output,
+`examples.md`, and the full JSON/HTML/MD report of each case).
+
+| measure | value |
+|---|---|
+| sections written by the SLM (accepted) | **71.6 %** (106/148): 70.3 % on the first try, 1.4 % after the corrective retry |
+| deterministic fallback | **28.4 %** (42/148) |
+| per-requirement notes | 93/123 accepted (75.6 %), 30 fallback; retry never rescued a note |
+| executive summaries | 13/25 accepted (11 first try, 2 after retry), 12 fallback, mostly wrong counts |
+| rejection reasons (all attempts) | decision_claim 31, count_mismatch 26, json_key_in_text 25, term_not_in_facts 24, quote_not_in_facts 6, review_claim_mismatch 6, number_not_in_facts 3 |
+| latency per section p50 / p95 | 4.2 s / 13.4 s (note 3.1 / 6.7 s; summary 11.4 / 14.5 s; includes the retry when there is one) |
+| latency per report p50 / p95 / mean | 30.3 s / 37.8 s / 29.7 s (4–6 requirements; all sections, in sequence) |
+| model load | 0.4 s (warm page cache) |
+| peak RSS (whole process: pipeline + model) | 1276 MB (1159 MB right after model load) |
+| unsupported claims in the 25 final reports (independent audit) | **0** |
+| injected hallucinations rejected | 527/530 (99.4 %): new skill 106/106, new number 106/106, new employer 106/106, verdict 106/106, flipped decision 103/106 |
+
+The 3 "flipped decision" variants that passed are not false: in those summaries the MET and MISSING counts are equal,
+so replacing the first "MET" by "MISSING" gives a true (redundant) sentence ("2 are MISSING, 2 are MISSING"). Every
+injected variant that states something false was rejected.
+
+The audit is separate from the writer's validator: for each SLM-written section of each final report it checks that
+every quoted string is in the CV text read from `benchmark/data/val.jsonl`, every number is in the facts, there is no
+verdict word, the decision word is the pipeline's, and the section re-validates.
+
+What the rejections looked like (from `examples.md`; all are real model outputs):
+- a summary that said "1 requirement needs human review" when 2 did (count_mismatch, fell back);
+- "4 of the must-have requirements are met" when 0 were (rejected; the retry with the reason was correct and accepted);
+- a quote with an added comma ("foreign keys, and indexes") (quote_not_in_facts, fell back);
+- "the evidence_quotes are empty" (JSON key), "does not provide any supporting information" on an UNCERTAIN
+  (claims not-documented for an ambiguous result);
+- "a human reviewer must check it" on a nice-to-have MISSING that needs no review.
+
+Accepted examples: `MET: the CV states "Spoken languages: Spanish (C2)."`; `MISSING: the CV does not mention working
+knowledge of Flask; a human reviewer must check it.`; `UNCERTAIN: the quoted CV text states no duration for the
+required years; a human reviewer must check it.`; summary `Of 4 requirements, 2 are MET, 2 are MISSING, and 0 are
+UNCERTAIN. 2 of 4 must-have requirements are MET, and 2 require human review.`
+
+Reading: the SLM adds readable prose for about 3 sections in 4 at about 30 s per report on CPU; the validator is what
+makes it safe, and it is strict enough that roughly 1 summary in 2 falls back. If report latency matters more than
+prose, run with `HS_REPORTER_SLM=off` (the deterministic report is complete and takes milliseconds).
 
 ## Tests (`reporter/tests/`)
 

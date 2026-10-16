@@ -1,0 +1,131 @@
+{
+  "label": "LIVE SLM run (Qwen3-0.6B Q8_0, llama.cpp CPU) on pipeline outputs replayed from LIVE LoRA Matcher outputs (val)",
+  "matcher_run": "rag_opt/results/e2e/lora__gated",
+  "cases": [
+    "val-005",
+    "val-006",
+    "val-007",
+    "val-008",
+    "val-009",
+    "val-010",
+    "val-011",
+    "val-012",
+    "val-013",
+    "val-014",
+    "val-015",
+    "val-016",
+    "val-017",
+    "val-018",
+    "val-019",
+    "val-020",
+    "val-021",
+    "val-022",
+    "val-023",
+    "val-024",
+    "val-025",
+    "val-026",
+    "val-027",
+    "val-028",
+    "val-029"
+  ],
+  "dev_cases_excluded": [
+    "val-000",
+    "val-001",
+    "val-002",
+    "val-003",
+    "val-004"
+  ],
+  "slm": {
+    "model_id": "Qwen/Qwen3-0.6B",
+    "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "gguf_repo": "Qwen/Qwen3-0.6B-GGUF",
+    "gguf_revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
+    "gguf_file": "Qwen3-0.6B-Q8_0.gguf",
+    "gguf_sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+    "licence": "apache-2.0",
+    "params": "0.6B (0.44B non-embedding), 28 layers",
+    "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+    "verified_sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+    "runtime": "llama-cpp-python 0.3.16, CPU, 4 threads, n_ctx 4096",
+    "decoding": {
+      "temperature": 0,
+      "max_tokens": 160,
+      "grammar": "JSON schema per section",
+      "thinking": "disabled (empty <think></think>, enable_thinking=False)",
+      "timeout_s": 30.0
+    },
+    "load_s": 0.9,
+    "mock": false
+  },
+  "sections": 148,
+  "reports": 25,
+  "accepted_share": 0.716,
+  "accepted_first_try_share": 0.703,
+  "fallback_share": 0.284,
+  "by_kind": {
+    "summary": {
+      "n": 25,
+      "slm_first_try": 11,
+      "slm_after_retry": 2,
+      "fallback": 12,
+      "latency_p50_s": 11.408,
+      "latency_p95_s": 14.46
+    },
+    "note": {
+      "n": 123,
+      "slm_first_try": 93,
+      "slm_after_retry": 0,
+      "fallback": 30,
+      "latency_p50_s": 3.11,
+      "latency_p95_s": 6.709
+    }
+  },
+  "rejection_codes": {
+    "decision_claim": 31,
+    "count_mismatch": 26,
+    "json_key_in_text": 25,
+    "term_not_in_facts": 24,
+    "quote_not_in_facts": 6,
+    "review_claim_mismatch": 6,
+    "number_not_in_facts": 3
+  },
+  "section_latency_p50_s": 4.213,
+  "section_latency_p95_s": 13.401,
+  "report_latency_p50_s": 30.29,
+  "report_latency_p95_s": 37.83,
+  "report_latency_mean_s": 29.72,
+  "peak_rss_mb": {
+    "process_start": 29,
+    "after_model_load": 1159,
+    "peak": 1276
+  },
+  "audit_unsupported_claims_in_final_reports": 0,
+  "audit_failures": [],
+  "injection": {
+    "total": 530,
+    "rejected": 527,
+    "by_kind": {
+      "new_skill": [
+        106,
+        106
+      ],
+      "new_number": [
+        106,
+        106
+      ],
+      "new_employer": [
+        106,
+        106
+      ],
+      "verdict": [
+        106,
+        106
+      ],
+      "flipped_decision": [
+        103,
+        106
+      ]
+    },
+    "rejection_rate": 0.994
+  }
+}

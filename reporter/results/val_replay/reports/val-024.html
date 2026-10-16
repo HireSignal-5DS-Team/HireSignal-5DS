@@ -1,0 +1,87 @@
+<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content='width=device-width,initial-scale=1'>
+<title>Requirement check cv-val-024 / job-val-024</title><style>body{font-family:system-ui,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem;color:#1a1a1a;background:#fff}
+.disc{border:2px solid #b45309;background:#fffbeb;padding:.75rem 1rem;font-weight:600}
+.req{border:1px solid #d4d4d8;border-radius:6px;padding:.5rem 1rem;margin:1rem 0}
+.MET{color:#166534}.MISSING{color:#991b1b}.UNCERTAIN{color:#92400e}
+.who{color:#52525b;font-size:.85em}.review{color:#991b1b;font-weight:600}.mock{background:#fee2e2;padding:.5rem}
+blockquote{margin:.25rem 0;padding-left:.75rem;border-left:3px solid #a1a1aa}
+.kn{color:#52525b}table{border-collapse:collapse}td,th{border:1px solid #d4d4d8;padding:.2rem .5rem;text-align:left}</style></head><body>
+<h1>Requirement check: CV cv-val-024 vs job job-val-024 (Synthetic technical role)</h1>
+<p class=disc>Decision support only. This report checks job requirements against the text of an anonymised CV. It is not a hiring decision and makes no recommendation about the person. A human reviewer makes every decision, and must check each item flagged for review.</p>
+<table><tr><th>MET</th><th>MISSING</th><th>UNCERTAIN</th><th>must-have met</th><th>need review</th></tr>
+<tr><td>4</td><td>1</td><td>1</td><td>4/6</td><td>3</td></tr></table>
+<h2>Summary</h2><p>Of 6 requirements, 4 are MET, 1 is MISSING, and 1 is UNCERTAIN. 4 of the must-have requirements are MET, and 3 require human review.</p><p class=who>Written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf</p>
+<section class=req><h2>r1 (must-have): Pandas: 5 years of experience or more</h2>
+<p>Decision: <strong class=MET>MET</strong> (basis: supported); Matcher model said MET</p>
+<p>MET: the CV states &quot;Pandas in daily use for 8 years.&quot; <span class=who>(written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf)</span></p>
+<p>Requirement &quot;Pandas: 5 years of experience or more&quot;: MET. The CV states &quot;Pandas in daily use for 8 years.&quot;. The quoted text covers the required 5 years. <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Pandas in daily use for 8 years. <span class=who>verbatim CV quote, chars 275-307</span></blockquote>
+<ul>
+<li>Validator: no issue</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: not required</li></ul></section>
+<section class=req><h2>r2 (must-have): Angular: 5 years of experience or more</h2>
+<p>Decision: <strong class=MISSING>MISSING</strong> (basis: contradicted); Matcher model said MISSING</p>
+<p>MISSING: the CV states &quot;Applied Angular in various side projects over time.&quot; <span class=who>(written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf)</span></p>
+<p>Requirement &quot;Angular: 5 years of experience or more&quot;: MISSING. The CV text &quot;Applied Angular in various side projects over time.&quot; shows it is not met. Terminology from: Angular (knowledge base, not candidate evidence). <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Applied Angular in various side projects over time. <span class=who>verbatim CV quote, chars 221-272</span></blockquote>
+<p class=kn>Knowledge shown to the model (terminology, NOT candidate evidence): Angular [http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146]</p>
+<ul>
+<li>Validator: must_have_contradicted</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: <span class=review>REQUIRED: validator:must_have_contradicted</span></li></ul></section>
+<section class=req><h2>r3 (must-have): Microsoft Azure Administrator Associate certification</h2>
+<p>Decision: <strong class=MET>MET</strong> (basis: supported); Matcher model said MET</p>
+<p>MET: the CV states &quot;Holder of the Microsoft Azure Administrator Associate certificate since 2015.&quot; <span class=who>(written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf)</span></p>
+<p>Requirement &quot;Microsoft Azure Administrator Associate certification&quot;: MET. The CV states &quot;Holder of the Microsoft Azure Administrator Associate certificate since 2015.&quot;. <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Holder of the Microsoft Azure Administrator Associate certificate since 2015. <span class=who>verbatim CV quote, chars 370-447</span></blockquote>
+<ul>
+<li>Validator: no issue</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: not required</li></ul></section>
+<section class=req><h2>r4 (must-have): Spanish at C1 level or above</h2>
+<p>Decision: <strong class=MET>MET</strong> (basis: supported); Matcher model said MET</p>
+<p>MET: the CV states &quot;Spoken languages: Spanish (C2).&quot; <span class=who>(written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf)</span></p>
+<p>Requirement &quot;Spanish at C1 level or above&quot;: MET. The CV states &quot;Spoken languages: Spanish (C2)&quot;. <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Spoken languages: Spanish (C2) <span class=who>verbatim CV quote, chars 321-351</span></blockquote>
+<ul>
+<li>Validator: no issue</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: not required</li></ul></section>
+<section class=req><h2>r5 (must-have): Working knowledge of database design</h2>
+<p>Decision: <strong class=MET>MET</strong> (basis: supported); Matcher model said MET</p>
+<p>MET: the CV states &quot;Modelled 40 relational tables with primary keys, foreign keys and indexes for the HR system.&quot; A human reviewer must check it. <span class=who>(written by: deterministic fallback (SLM text failed the fact check); failed checks: quote_not_in_facts)</span></p>
+<p>Requirement &quot;Working knowledge of database design&quot;: MET. The CV states &quot;Modelled 40 relational tables with primary keys, foreign keys and indexes for the HR system.&quot;. <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Modelled 40 relational tables with primary keys, foreign keys and indexes for the HR system. <span class=who>verbatim CV quote, chars 93-185</span></blockquote>
+<ul>
+<li>Validator: semantic_inference_no_term_in_quote</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: <span class=review>REQUIRED: validator:semantic_inference_no_term_in_quote</span></li></ul></section>
+<section class=req><h2>r6 (must-have): React: 3 years of experience or more</h2>
+<p>Decision: <strong class=UNCERTAIN>UNCERTAIN</strong> (basis: ambiguous); Matcher model said MET</p>
+<p>UNCERTAIN: the quoted CV text shows fewer years than required; a human reviewer must check it. <span class=who>(written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf)</span></p>
+<p>Requirement &quot;React: 3 years of experience or more&quot;: UNCERTAIN. The model answered MET, but the quoted CV text shows fewer years than required. <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>React in daily use for 1 year. <span class=who>verbatim CV quote, chars 188-218</span></blockquote>
+<ul>
+<li>Validator: years_below_minimum_in_evidence, uncertain_decision</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: <span class=review>REQUIRED: validator:years_below_minimum_in_evidence, validator:uncertain_decision, decision:uncertain</span></li></ul></section>
+<h2>Provenance</h2><ul>
+<li>Report schema 1.0.0, renderer reporter.deterministic.v1</li>
+<li>SLM layer: on; Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf, prompt reporter-slm-p1 (sha256 7cc19a3d93f0)</li>
+<li>Text sections: 7 total, 6 written by the SLM, 1 deterministic fallback after a failed fact check</li>
+<li>Matcher prompt p1 · knowledge rag.gated.v1+bm25 · judge None</li></ul>
+<p class=disc>Decision support only. This report checks job requirements against the text of an anonymised CV. It is not a hiring decision and makes no recommendation about the person. A human reviewer makes every decision, and must check each item flagged for review.</p></body></html>
