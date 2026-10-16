@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 import pytest
-from _qa_support import Scripted, defect, explanation_on_topic, explanation_problems
+from _qa_support import Scripted, explanation_on_topic, explanation_problems
 
 from matcher import CV, Requirement
 from matcher.pipeline import Pipeline

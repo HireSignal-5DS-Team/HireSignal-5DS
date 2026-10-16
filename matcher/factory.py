@@ -9,7 +9,10 @@ RAG     : HS_RAG = none | bm25 | qdrant (default bm25: the measured best ESCO pr
           docs; qdrant = team dense index, persisted under HIRESIGNAL_RAG_DIR/index)
 Judge   : HS_JUDGE_DIR (fine-tuned DeBERTa; if missing, the pretrained MoritzLaurer model) and HS_JUDGE_TAU
           (calibrated on train-dev: 0.85 fine-tuned, 0.65 pretrained); HS_JUDGE=off disables
-Bias    : rules always; HS_LIVE_COUNTERFACTUAL=1 adds the inline counterfactual test (8 extra Matcher calls/requirement)
+Bias    : HS_BIAS_AUDITOR = rules_v1 (default, matcher.bias_audit) | rules_v2 | rules_v2+reviewer (S4, bias/auditor.py).
+          The reviewer is opt-in (one extra LLM call per result) and runs on the BASE model only:
+          HS_BIAS_REVIEWER_URL (default HS_FALLBACK_URL) / HS_BIAS_REVIEWER_MODEL (default the base alias); never the LoRA.
+          HS_LIVE_COUNTERFACTUAL=1 adds the inline counterfactual test (8 extra Matcher calls/requirement)
 """
 import os
 from pathlib import Path
@@ -25,6 +28,29 @@ FINETUNED_JUDGE = ("/home/user/judge_runs/deberta-hs-v1/best", 0.85)
 def model_provenance(env):
     """(primary, fallback, cfg) provenance dicts for OpenAICompatBackend, from the pinned config + env overrides."""
     return pinned_provenance(env)
+
+
+BIAS_AUDITOR_DEFAULT = "rules_v1"  # production until S6 merges S4's bias/ and sets the default (S4 proposes rules_v2)
+
+
+def bias_auditor(env, cfg):
+    """None for rules_v1 (matcher.bias_audit), else S4's BiasAuditor. Fails loudly if bias/ is missing."""
+    variant = env.get("HS_BIAS_AUDITOR", BIAS_AUDITOR_DEFAULT)
+    if variant == "rules_v1":
+        return None
+    from bias.auditor import BiasAuditor  # S4 package; ImportError here = S4 not merged on this branch
+
+    reviewer = None
+    if "reviewer" in variant:
+        from bias.reviewer import LLMReviewer
+
+        url = env.get("HS_BIAS_REVIEWER_URL") or env.get("HS_FALLBACK_URL", cfg["fallback"]["url"])
+        model = env.get("HS_BIAS_REVIEWER_MODEL", cfg["fallback"]["served_alias"])
+        if model == cfg["primary"]["served_alias"] or url == env.get("HS_MATCHER_URL", cfg["primary"]["url"]):
+            raise ValueError("the bias reviewer must not run on the Matcher LoRA endpoint (measured on the base model only)")
+        reviewer = LLMReviewer(OpenAICompatBackend(base_url=url, model=model, timeout=float(env.get("HS_TIMEOUT", 300)),
+                                                   max_tokens=160, label="bias-reviewer"))
+    return BiasAuditor(variant, reviewer=reviewer)
 
 
 def judge_config(env):
@@ -57,4 +83,5 @@ def build(env=None, knowledge=None, judge=None):
         from .judge import NLIJudge
 
         judge = NLIJudge(jcfg[0], tau_pass=jcfg[1], tau_fail=jcfg[1], name=jcfg[2])
-    return Pipeline(backend, knowledge, judge=judge, live_counterfactual=env.get("HS_LIVE_COUNTERFACTUAL") == "1")
+    return Pipeline(backend, knowledge, judge=judge, live_counterfactual=env.get("HS_LIVE_COUNTERFACTUAL") == "1",
+                    auditor=bias_auditor(env, cfg))

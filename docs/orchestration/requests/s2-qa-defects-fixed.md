@@ -1,8 +1,9 @@
-# Request from S2 to S5 / S6: S2 defects fixed, strict xfail markers now XPASS
+# Note from S2 to S5 / S6: S2 defects fixed, strict xfail markers removed
 
-After merging the integration branch (validator v2) into `session/s2-matcher-lora-integration`, these `tests/qa`
-tests fail only because they are `xfail(strict=True)` and now pass. S5 owns `tests/qa/` and `docs/qa/FAILURES.md`, so
-S2 did not touch them. Please remove the markers and mark the defects fixed:
+After merging the integration branch (validator v2) into `session/s2-matcher-lora-integration`, these `tests/qa` tests
+XPASSed. As `docs/qa/README.md` prescribes, and as the orchestrator asked for QA-028, S2 removed their `@defect` lines
+(4 lines, plus the now-unused `defect` imports in two files). That is the only edit to S5 files. The tests stay as
+regression tests. S5: please mark these defects fixed in `docs/qa/FAILURES.md`:
 
 | defect | test(s) now passing | fix |
 |---|---|---|
@@ -15,5 +16,4 @@ QA-014 (`test_production_provenance_is_complete`) still xfails, now only on `kno
 (S1, `docs/orchestration/requests/s2-knowledge-version.md`). `base_revision`, `adapter_id` and `adapter_revision` are
 present. QA-027 (model level, years below the minimum) stays open: the validator catches it.
 
-Run on this branch: `pytest matcher benchmark/tests tests/qa` gives 182 passed, 6 skipped, 7 xfailed and **6 failed,
-all six being the XPASS(strict) tests above**.
+Run on this branch: `pytest matcher benchmark/tests tests/qa` gives **191 passed, 6 skipped, 7 xfailed, 0 failed**.

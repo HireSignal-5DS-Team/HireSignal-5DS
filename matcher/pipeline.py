@@ -88,13 +88,15 @@ def aggregate(res, bias, judge):
 
 
 class Pipeline:
-    def __init__(self, backend, knowledge, judge=None, parser=None, counterfactual=None, k=3, live_counterfactual=False):
+    def __init__(self, backend, knowledge, judge=None, parser=None, counterfactual=None, k=3, live_counterfactual=False,
+                 auditor=None):
         """live_counterfactual: run the Bias Auditor's counterfactual test inline (8 extra Matcher calls per
         requirement). Default off: counterfactual audits normally run in batch (benchmark/bias_eval.py)."""
         self.matcher = Matcher(backend, knowledge, k=k)
         self.live_counterfactual = live_counterfactual
         self.judge, self.parser = judge, parser or StructuredInputParser()
         self.counterfactual = counterfactual or {}  # {req_id: BiasFinding} from a batch audit, optional
+        self.auditor = auditor  # S4 bias.auditor.BiasAuditor (HS_BIAS_AUDITOR); None = matcher.bias_audit rules v1
 
     def run(self, cv_obj, job_obj):
         cv, job = self.parser.parse(cv_obj, job_obj)
@@ -111,7 +113,9 @@ class Pipeline:
                     seen.add(info["provenance"].get("answered_by"))
                     return out
                 cf[res.req_id] = counterfactual(fn, cv, r)
-        audits = [merge(check_result(res, cv.text), cf.get(res.req_id)) for res in results]  # Bias
+        audits = [merge(self.auditor.check_result(res, cv.text, requirement_text=r.text) if self.auditor
+                        else check_result(res, cv.text), cf.get(res.req_id))
+                  for res, r in zip(results, job.requirements)]  # Bias
         judged = self.judge.judge_many([(res, cv, r) for res, r in zip(results, job.requirements)]) if self.judge \
             else [None] * len(results)  # Judge (after the auditor, on the same validated results)
         rows = [aggregate(res, b, j) for res, b, j in zip(results, audits, judged)]
@@ -128,11 +132,14 @@ class Pipeline:
             if cf_models.get(row["req_id"], set()) - {info["provenance"].get("answered_by")}:
                 # a counterfactual variant was answered by another model (or none): a flip may be a model switch
                 info["review"] = info["review"] + ["matcher:counterfactual_mixed_models"]
+            if ((row["bias_audit"].get("details") or {}).get("reviewer") or {}).get("error"):
+                info["review"] = info["review"] + ["bias:reviewer_unavailable"]  # fail-closed: no silent PASS
             if info["review"]:  # fallback answer, backend down, unparseable/repaired output, wrong served model
                 row["review_reasons"] = list(dict.fromkeys(row["review_reasons"] + info["review"]))
                 row["requires_human_review"] = True
         musts = [r for r in rows if r["kind"] == "must"]
         report = self.matcher.build_report(cv, job, pairs)  # frozen MatchReport contract (validated by pydantic)
+        report.backend["bias_auditor"] = self.auditor.info() if self.auditor else {"variant": "rules_v1"}
         return {"cv_id": cv.cv_id, "job_id": job.job_id, "parser": self.parser.name,
                 "backend": report.backend, "knowledge": self.matcher.knowledge.name,
                 "match_report": report.model_dump(mode="json"),

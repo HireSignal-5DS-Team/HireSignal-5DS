@@ -6,7 +6,7 @@ import threading
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 import pytest
-from _qa_support import CVX, JOB, Scripted, ans, defect
+from _qa_support import CVX, JOB, Scripted, ans
 
 from matcher.backends_api import FallbackBackend, OpenAICompatBackend
 from matcher.pipeline import Pipeline

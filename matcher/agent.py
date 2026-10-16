@@ -21,6 +21,7 @@ MATCHER_REVIEW = {
     "matcher:fallback_model_used": "medium",  # the base model answered instead of the fine-tuned primary
     "matcher:output_repaired": "medium",      # the answer was readable only after a form repair (list in provenance)
     "matcher:counterfactual_mixed_models": "medium",  # live bias test variants not all answered by the same model
+    "bias:reviewer_unavailable": "medium",    # HS_BIAS_AUDITOR=rules_v2+reviewer and the reviewer call failed
 }
 _RANK = {"low": 0, "medium": 1, "high": 2}
 
