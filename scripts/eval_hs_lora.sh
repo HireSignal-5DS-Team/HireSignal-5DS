@@ -1,13 +1,12 @@
 #!/bin/bash
 # Verify Dali's adapter Daibalooo/hiresignal-qwen3-4b-matcher-lora against the untuned baseline, same conditions:
 # same Q4_K_M base GGUF + llama.cpp runtime, same prompt p1, greedy decoding, validator, RAG, 202 val requirements.
-# Needs HF_TOKEN (read-only, fine-grained to that repo) in the environment. Never prints the token.
+# Public repo: no token. If it is made private, set HF_TOKEN (read-only) as an environment secret. Never printed.
 # Resumable, fail-fast, one model job at a time. Usage: setsid nohup scripts/eval_hs_lora.sh >> /home/user/eval_hs_lora.log 2>&1 &
 set -euo pipefail
 cd "$(dirname "$0")/.."
 exec 9>/home/user/hs_queue.lock; flock -n 9 || { echo "another eval queue is running"; exit 1; }
-: "${HF_TOKEN:?HF_TOKEN not set (add it as an environment secret, start a new session)}"
-REPO=${HS_LORA_REPO:-Daibalooo/hiresignal-qwen3-4b-matcher-lora}
+REPO=${HS_LORA_REPO:-HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora}  # public; HF_TOKEN only needed if private
 P=${PYTHON:-/home/user/venv/bin/python}
 export HF_HOME=${HF_HOME:-/home/user/hf} HIRESIGNAL_RAG_DIR=${HIRESIGNAL_RAG_DIR:?set HIRESIGNAL_RAG_DIR}
 R=benchmark/results; mkdir -p $R/logs/queue
@@ -15,9 +14,9 @@ R=benchmark/results; mkdir -p $R/logs/queue
 ADIR=$($P - "$REPO" <<'EOF'
 import json, os, sys
 from huggingface_hub import HfApi, snapshot_download
-repo = sys.argv[1]; api = HfApi(token=os.environ["HF_TOKEN"])
+repo = sys.argv[1]; tok = os.environ.get("HF_TOKEN") or None; api = HfApi(token=tok)
 info = api.model_info(repo)
-d = snapshot_download(repo, revision=info.sha, token=os.environ["HF_TOKEN"],
+d = snapshot_download(repo, revision=info.sha, token=tok,
                       allow_patterns=["adapter_config.json", "adapter_model.safetensors", "*.md", "*.json"])
 json.dump({"repo": repo, "sha": info.sha, "private": info.private, "files": sorted(s.rfilename for s in info.siblings)},
           open(f"{d}/hs_provenance.json", "w"), indent=2)
