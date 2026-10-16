@@ -56,7 +56,8 @@ _CERT = re.compile(r"certif|licen[cs]|accredit|credential", re.I)
 _INJECT = re.compile(r"ignore\s+(all\s+)?(the\s+)?(previous|prior|above|earlier)\s+instructions|^\W*system\s*:|"
                      r"mark\s+(every|all|each|this)\s+requirements?\s+(as\s+)?met", re.I | re.M)
 _WEAK = re.compile(r"\b(tutorials?|watched|read (?:about|up on)|interested in|online course|bootcamp|familiar with|"
-                   r"exposure to|introductory|attended (?:a |an )?(?:talk|webinar|workshop))\b", re.I)
+                   r"exposure to|introductory|attended (?:a |an )?(?:talk|webinar|workshop)|"
+                   r"(?:preparing|studying) for|plans? to|enrolled in)\b", re.I)  # S2 cues: 0/305 train MET quotes
 _CLAUSE = re.compile(r"[,;\n]|\.(?=\s|$)")
 
 
