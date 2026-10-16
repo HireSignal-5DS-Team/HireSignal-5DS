@@ -75,3 +75,27 @@ class OpenAICompatBackend:
 
     def generate(self, task):
         return self.chat(task.messages)
+
+
+class FallbackBackend:
+    """Primary Matcher model with a fallback (e.g. fine-tuned LoRA endpoint -> original Qwen3-4B endpoint).
+    Falls back ONLY on a transport failure of the primary (error after its retries), never on a model answer the
+    validator dislikes. `last_call["used"]` records which model produced each answer, so reports cite it."""
+
+    def __init__(self, primary, fallback):
+        self.primary, self.fallback = primary, fallback
+        self.last_call = {}
+
+    def info(self):
+        return {"backend": "fallback", "is_model": True, "primary": self.primary.info(), "fallback": self.fallback.info(),
+                "model_id": self.primary.info().get("model_id"), "prompt_version": prompt.PROMPT_VERSION}
+
+    def generate(self, task):
+        raw = self.primary.generate(task)
+        if not self.primary.last_call.get("error"):
+            self.last_call = {**self.primary.last_call, "used": "primary", "model": self.primary.model}
+            return raw
+        raw = self.fallback.generate(task)
+        self.last_call = {**self.fallback.last_call, "used": "fallback", "model": self.fallback.model,
+                          "primary_error": self.primary.last_call["error"]}
+        return raw

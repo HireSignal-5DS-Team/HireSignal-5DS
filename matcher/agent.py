@@ -10,13 +10,16 @@ class Matcher:
     def __init__(self, backend, knowledge, k=3, ref_year=2026):
         self.backend, self.knowledge, self.k, self.ref_year = backend, knowledge, k, ref_year
 
-    def match_requirement(self, cv, req):
-        refs = self.knowledge.lookup(req, k=self.k)
+    def match_requirement(self, cv, req, job_id=None):
+        use_job = job_id and getattr(self.knowledge, "uses_job", False)
+        refs = self.knowledge.lookup(req, k=self.k, job_id=job_id) if use_job else self.knowledge.lookup(req, k=self.k)
         t0 = time.perf_counter()
         raw = self.backend.generate(Task(cv, req, refs))
         latency = time.perf_counter() - t0
         answer = parse_model_output(raw)
-        return validate(answer, cv, req, refs, self.ref_year), {"raw": raw, "latency_s": latency, "parsed": answer is not None}
+        info = {"raw": raw, "latency_s": latency, "parsed": answer is not None, "refs": refs,
+                "call": dict(getattr(self.backend, "last_call", None) or {})}
+        return validate(answer, cv, req, refs, self.ref_year), info
 
     def match(self, cv, job):
         results = [self.match_requirement(cv, r)[0] for r in job.requirements]

@@ -11,7 +11,7 @@ Report Writer: deterministic renderer (no LLM, so no new claims); a teammate's L
 the same aggregated JSON.
 """
 from .agent import Matcher
-from .bias_audit import check_result, merge
+from .bias_audit import check_result, counterfactual, merge
 from .schemas import CV, Job
 
 
@@ -49,18 +49,37 @@ def aggregate(res, bias, judge):
 
 
 class Pipeline:
-    def __init__(self, backend, knowledge, judge=None, parser=None, counterfactual=None, k=3):
+    def __init__(self, backend, knowledge, judge=None, parser=None, counterfactual=None, k=3, live_counterfactual=False):
+        """live_counterfactual: run the Bias Auditor's counterfactual test inline (8 extra Matcher calls per
+        requirement). Default off: counterfactual audits normally run in batch (benchmark/bias_eval.py)."""
         self.matcher = Matcher(backend, knowledge, k=k)
+        self.live_counterfactual = live_counterfactual
         self.judge, self.parser = judge, parser or StructuredInputParser()
         self.counterfactual = counterfactual or {}  # {req_id: BiasFinding} from a batch audit, optional
 
     def run(self, cv_obj, job_obj):
         cv, job = self.parser.parse(cv_obj, job_obj)
-        results = [self.matcher.match_requirement(cv, r)[0] for r in job.requirements]  # Matcher + Validator
-        audits = [merge(check_result(res, cv.text), self.counterfactual.get(res.req_id)) for res in results]  # Bias
+        pairs = [self.matcher.match_requirement(cv, r, job_id=job.job_id) for r in job.requirements]  # Matcher + Validator
+        results = [res for res, _ in pairs]
+        cf = dict(self.counterfactual)
+        if self.live_counterfactual:  # Bias Auditor tests the deployed Matcher itself (it is the system under audit)
+            for res, r in zip(results, job.requirements):
+                cf[res.req_id] = counterfactual(lambda c, q: self.matcher.match_requirement(c, q, job_id=job.job_id)[0], cv, r)
+        audits = [merge(check_result(res, cv.text), cf.get(res.req_id)) for res in results]  # Bias
         judged = self.judge.judge_many([(res, cv, r) for res, r in zip(results, job.requirements)]) if self.judge \
             else [None] * len(results)  # Judge (after the auditor, on the same validated results)
         rows = [aggregate(res, b, j) for res, b, j in zip(results, audits, judged)]
+        for row, (_, info) in zip(rows, pairs):
+            row["citations"] = [{"source_id": x.source_id, "source_type": x.source_type, "title": x.title, "url": x.url,
+                                 "retrieval": x.retrieval} for x in info["refs"]]
+            call = info["call"]
+            row["matcher_call"] = {k: call.get(k) for k in ("used", "model", "latency_s", "error", "primary_error") if k in call}
+            if call.get("error"):  # every backend failed: the decision is the validator's invalid-output UNCERTAIN
+                row["review_reasons"].append("matcher:backend_unavailable")
+                row["requires_human_review"] = True
+            elif call.get("used") == "fallback":
+                row["review_reasons"].append("matcher:fallback_model_used")
+                row["requires_human_review"] = True
         musts = [r for r in rows if r["kind"] == "must"]
         return {"cv_id": cv.cv_id, "job_id": job.job_id, "parser": self.parser.name,
                 "backend": self.matcher.backend.info(), "knowledge": self.matcher.knowledge.name,
