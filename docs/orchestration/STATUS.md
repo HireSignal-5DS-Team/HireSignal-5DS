@@ -70,3 +70,8 @@ No session branch has been merged into the integration branch yet.
 - 2026-10-16 11:05Z: LoRA evaluation complete (202/202). Window 1 opened. First review of all branches; S3 test defect found.
 - 2026-10-16 11:10Z: S3 fixture defect fixed and verified. S3 4B training waits on a Kaggle GPU run by the owner (not approved on CPU).
 - 2026-10-16 11:25Z: S5 merged; validator v2 applied and replay-verified on val (in-sample).
+- 2026-10-16 11:35Z: S5 LIVE suite on real models (docs/qa/live_runs/20261016T111644Z on S5 @ eb03c46): 19 passed,
+  2 xfailed (QA-014, QA-028 confirmed live), 1 skipped (Judge checkpoint absent). No unreviewed MET on 11 trap probes.
+  New LIVE finding QA-029 (name-header counterfactual flip on a borderline item) sent to S4.
+  Contract decisions QA-010 (`rag_refs` = knowledge shown to the model) and QA-011 (MISSING reviewed only for must)
+  recorded in ORCHESTRATION.md §3; the code already behaves this way.
