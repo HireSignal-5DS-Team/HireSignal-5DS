@@ -84,3 +84,10 @@ Evaluation session (read-only): `claude/kind-albattani-k7qlt9` @ `e995669` — i
   **Production default switched to HS_BIAS_AUDITOR=rules_v2** (orchestrator-verified blind holdout n=44: recall 19/26
   for v1 and v2, FPR 9/18 vs 1/18). Reviewer (`rules_v2+reviewer`) stays opt-in (+11 s p50 per result).
   Integration MOCK (matcher, benchmark, qa, rag, bias): 289 passed, 12 skipped, 1 xfailed.
+- 2026-10-16 13:05Z: S1 paired review-rate test (rag_opt/review_rate.py, val 202, LIVE LoRA outputs): gated vs none
+  review rate 0.663 -> 0.589, delta -0.074 [-0.114, -0.040], McNemar 15/0, p = 0.0001 (same under validator v2);
+  noise floor none-repeat vs none -0.005, p = 1.0. All 15 dropped reviews are on correct decisions. Mechanism: a
+  shown ESCO alias counts as a requirement term (semantic_inference_no_term_in_quote -13). **This is RAG's measured,
+  significant benefit on the LoRA Matcher: lower human-review load at equal accuracy and false-MET.** QA-023 closed as
+  fixed in the production provider (gated), won't-fix in legacy BM25. S1 base-model arms running (~2.5 h, S1 container).
+- 13:05Z: final locked-test run plan committed (a1f7f6d) before any test access; serving stack installing in S6.
