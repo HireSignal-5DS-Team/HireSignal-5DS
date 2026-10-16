@@ -23,7 +23,7 @@
   },
   "dataset_version": "bench-v1",
   "dataset_sha256": "37c60915f2db377f22c5b08f4b9e708e05cd9363709e9c39815d8e8d93545198",
-  "git_commit": "23799f4135efb3389a4e31539ce7e9449efe7670",
+  "git_commit": "9bbe64016cd9c0fae3974b1875a734ed3d3ee844",
   "hardware": {
     "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
     "python": "3.13.16",
@@ -34,5 +34,5 @@
     "cuda": false,
     "torch_threads": 4
   },
-  "load_seconds": 4.23
+  "load_seconds": 2.35
 }
