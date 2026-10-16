@@ -337,3 +337,104 @@ Reproduce:
 - per-stage logs: `benchmark/results/logs/queue/`;
 - Judge checkpoint: `/home/user/judge_runs/deberta-hs-v1/best` (not in git, ~0.7 GB). Rebuild it with
   `python -m finetune.train_judge --out <dir>`; the training record is `benchmark/results/judge/finetuned_train_meta.json`.
+
+## 9. Fine-tuned Matcher: HireSignal LoRA vs original Qwen3-4B (validation split only)
+
+**Validation-only results.** The sealed test split has still not been run.
+
+**Adapter.** `HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a` (public).
+- PEFT LoRA r=16, alpha=32, on all 7 linear projections of `Qwen/Qwen3-4B-Instruct-2507`; 132 MB.
+- Trained by the fine-tuning teammate on 505 synthetic bench-v1 **train** examples plus 272 ContractNLI examples, with
+  0 real CV labels. The adapter's own leakage audit reports 0 overlap with val/test.
+- The adapter repo does not contain `comparison.csv`. Its reported numbers are not reproduced here; this section is the
+  independent measurement.
+
+**Setup.** Identical to §8, except for the adapter:
+- same Q4_K_M base GGUF and llama.cpp 0.3.16 runtime;
+- the adapter is converted with llama.cpp's `convert_lora_to_gguf.py` and applied with `--lora_path`
+  (`scripts/serve_qwen4b_lora.sh`);
+- same prompt `p1`, greedy decoding, validator, BM25 RAG and 202 val requirements.
+
+The conversion path was checked with a zero-delta adapter: its output was byte-identical to the base server.
+
+Runner: `scripts/eval_hs_lora.sh`. There were **0 call errors** in all four runs.
+
+### 9.1 Matcher
+
+| configuration | macro-F1 final | macro-F1 raw | false-MET final | false-MET raw | MET P / R | UNCERTAIN P / R | JSON valid | evidence attribution | review rate | p50 s/req |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Qwen3-4B, no RAG | 0.634 | 0.641 | **0.009** | 0.026 | 0.981 / 0.616 | — | 0.950 | 0.857 | 0.782 | 12.9 |
+| Qwen3-4B + BM25 RAG | 0.630 | 0.647 | **0.009** | 0.026 | 0.981 / 0.605 | 0.343 / 0.897 | 0.916 | 0.855 | 0.743 | 16.4 |
+| Qwen3-4B + LoRA, no RAG | **0.908** | 0.917 | 0.026 | 0.060 | 0.964 / 0.942 | 0.889 / 0.821 | **1.000** | **1.000** | 0.663 | 8.9 |
+| Qwen3-4B + LoRA + BM25 RAG | 0.897 | 0.903 | 0.034 | 0.060 | 0.955 / 0.977 | 0.903 / 0.718 | **1.000** | **1.000** | 0.574 | 13.1 |
+
+- **The LoRA fixes the base model's main weakness.** UNCERTAIN over-prediction is gone: UNCERTAIN precision rises from
+  0.34 to 0.90, and the UNCERTAIN share falls to 15–18 % against a gold share of 19 %.
+- **JSON validity and evidence attribution are perfect.** Every quote is verbatim and on the gold span. The validator
+  changed only 1.5–2 % of decisions, against 6–9 % for the base model.
+- **Trade-off: false-MET rises from 0.9 % to 2.6–3.4 %.** All of these errors are gold-UNCERTAIN items with weak
+  evidence that the LoRA calls MET:
+  - "Applied Node.js / Angular in various side projects over time." (ambiguous duration);
+  - "Watched tutorials about React / Angular in spare time." (partial evidence).
+
+  None of them is a gold-MISSING item. They are cases the original Qwen sent to UNCERTAIN.
+- **RAG is still neutral.** Without RAG the score is 0.908; with BM25 RAG it is 0.897. RAG helps ESCO aliases
+  (0.952 vs 0.810) and costs on `partial_evidence` (0.722 vs 0.889). The BM25 run has the lower review rate
+  (0.574 vs 0.663).
+
+**Per tag (accuracy).** These are the tags that changed most:
+
+| tag (n) | base + RAG | base, no RAG | LoRA + RAG | LoRA, no RAG |
+|---|---|---|---|---|
+| missing_evidence (18) | 0.278 | 0.278 | 1.000 | 1.000 |
+| certification (13) | 0.231 | 0.385 | 1.000 | 1.000 |
+| date_range (8) | 0.125 | 0.125 | 0.875 | 0.875 |
+| negation_trap (22) | 0.636 | 0.636 | 1.000 | 1.000 |
+| contradictory_evidence (31) | 0.710 | 0.710 | 1.000 | 1.000 |
+| rag_suggests_absent_skill (11) | 0.364 | 0.455 | 1.000 | 1.000 |
+| equivalent_skill_alias (21) | 0.571 | 0.286 | 0.952 | 0.810 |
+| insufficient_experience (17) | 0.529 | 0.529 | 0.824 | 0.765 |
+| **partial_evidence (18)** | **1.000** | **1.000** | **0.722** | 0.889 |
+| **ambiguous_duration (21)** | 0.810 | 0.762 | **0.714** | 0.762 |
+
+### 9.2 NLI Judge (fine-tuned DeBERTa, τ 0.85) behind the LoRA Matcher
+
+| matcher | Judge-applicable | Matcher errors among them | AUROC error detection | strict P / R | false-flag rate |
+|---|---|---|---|---|---|
+| Qwen3-4B + RAG | 100 | 8 | 0.413 | 0.500 / 0.375 | 0.033 |
+| LoRA + RAG | 171 | 13 | **0.987** | 0.300 / 0.462 | 0.089 |
+| LoRA, no RAG | 166 | 12 | 0.840 | 0.278 / 0.417 | 0.084 |
+
+The LoRA's remaining errors are MET calls on weak quotes. The NLI Judge separates that kind of error far better than
+it separates the base model's errors (AUROC 0.987 vs 0.413).
+
+### 9.3 System: what passes without human review
+
+The rule is the same as in §8.4.
+
+| matcher | stages | review rate | passes unreviewed | wrong among passed | false-MET among passed |
+|---|---|---|---|---|---|
+| Qwen3-4B + RAG | validator only | 0.743 | 52 | 1 | 0 |
+| Qwen3-4B + RAG | + fine-tuned Judge | 0.807 | 39 | 1 | 0 |
+| LoRA + RAG | validator only | 0.574 | 86 | 5 | 2 |
+| LoRA + RAG | **+ fine-tuned Judge** | **0.678** | **65** | **0** | **0** |
+| LoRA, no RAG | validator only | 0.663 | 68 | 3 | 1 |
+| LoRA, no RAG | + fine-tuned Judge | 0.693 | 62 | 1 | 0 |
+
+**Conclusions.**
+1. **Adopt the LoRA as the primary Matcher, together with the Judge.**
+   - LoRA + BM25 RAG + fine-tuned Judge lets 65 of 202 requirements pass unreviewed with **0 errors**.
+   - The base pipeline lets 39 pass, with 1 error.
+   - The Judge is now load-bearing, not optional: without it, 2 false-METs pass unreviewed.
+2. The original Qwen3-4B stays as the transport fallback. It is more conservative on weak evidence (fewer false-METs)
+   but sends 3/4 of requirements to review.
+3. **Caveat: in-distribution.** The adapter was trained on train cases from the same synthetic generator as val. The
+   gain on real CVs is unknown until a labelled real-CV set exists. The sealed test split is the next confirmation, run
+   once.
+4. **Next fix:** add training examples where weak exposure ("tutorials", "side projects over time") is UNCERTAIN.
+   This is a data change for the next adapter version, not a prompt change.
+
+Reproduce:
+- `HIRESIGNAL_RAG_DIR=<rag> scripts/eval_hs_lora.sh`;
+- results: `benchmark/results/qwen3-4b-q4+hslora-{rag,none}-val/` and `benchmark/results/judge/*hslora*__finetuned/`;
+- provenance: `benchmark/results/adapter/hs_lora_provenance.json`.
