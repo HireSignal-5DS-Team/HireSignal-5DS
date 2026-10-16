@@ -1,0 +1,93 @@
+{
+  "$defs": {
+    "Requirement": {
+      "additionalProperties": false,
+      "properties": {
+        "req_id": {
+          "title": "Req Id",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "kind": {
+          "default": "must",
+          "enum": [
+            "must",
+            "nice"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "category": {
+          "default": "skill",
+          "enum": [
+            "skill",
+            "experience",
+            "education",
+            "certification",
+            "language",
+            "other"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "skill_terms": {
+          "description": "skill names used as retrieval queries",
+          "items": {
+            "type": "string"
+          },
+          "title": "Skill Terms",
+          "type": "array"
+        },
+        "min_years": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Min Years"
+        }
+      },
+      "required": [
+        "req_id",
+        "text"
+      ],
+      "title": "Requirement",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "job_id": {
+      "title": "Job Id",
+      "type": "string"
+    },
+    "title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "requirements": {
+      "items": {
+        "$ref": "#/$defs/Requirement"
+      },
+      "minItems": 1,
+      "title": "Requirements",
+      "type": "array"
+    }
+  },
+  "required": [
+    "job_id",
+    "title",
+    "requirements"
+  ],
+  "title": "Job",
+  "type": "object"
+}

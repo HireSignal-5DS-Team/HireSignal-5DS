@@ -102,3 +102,13 @@ Evaluation session (read-only): `claude/kind-albattani-k7qlt9` @ `e995669` — i
   started at test-008/r1. Monitor: /home/user/hs_final_run_monitor.log, atomic snapshots in /home/user/hs_final_run_snapshots.
 - Fine-tuned Judge: trained in the eval session's container at /home/user/judge_runs/deberta-hs-v1/best and never pushed
   (only metrics + train meta are in git). Recipe is committed (finetune/train_judge.py, train split, seed 13).
+
+## Final-delivery phase (deadline 2026-10-17 22:59 UTC)
+
+| component | owner | status | branch | session |
+|---|---|---|---|---|
+| NLI Judge (xsmall eval, calibration, provenance) | S7 | IN PROGRESS | `session/s7-judge-nli` | `session_0162eFFwGNh9LTqytiCUyHWm` |
+| Tiny SLM Report Writer (Qwen3-0.6B + deterministic fallback) | S8 | IN PROGRESS | `session/s8-slm-reporter` | `session_01SgDad1xET9FMM66nr7mdjH` |
+| Integration contract v1.1 + adapters + handoffs | S6 | DONE (mock-tested) | `claude/beautiful-galileo-o36bdv` @ `cdd5cc0` | — |
+| Deployment (FastAPI/Docker) | Dali | NOT STARTED in repo (no branch yet) | — | local |
+| Upstream agents | Ayoub | PARTIAL: reader `2386e14`, job agent `985d14d` (Oct 15); Profile Agent not delivered | `feature/reader-agent`, `feature/job-agent` | local |
