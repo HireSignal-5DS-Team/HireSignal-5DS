@@ -168,7 +168,7 @@ prose, run with `HS_REPORTER_SLM=off` (the deterministic report is complete and 
 | file | what |
 |---|---|
 | `test_render.py` | report validates against the committed JSON Schema (and the schema is up to date); sections come from the pipeline fields; writer labels; disclaimer; no verdict words; HTML/Markdown escaping (`<script>` in CV text and job title); MOCK Matcher labelled; Judge/bias/backend-down fields rendered |
-| `test_slm_validate.py` | 21 hallucinated notes (new skill, number, number word, employer, credential, altered quote, verdicts, judgements, wrong decision, "lacks" on not_documented, wrong review claim, JSON key) and 11 hallucinated summaries (wrong counts, wrong totals, false "no review", verdicts, invented number or skill) are all rejected; faithful texts are accepted; malformed JSON rejected |
+| `test_slm_validate.py` | 22 hallucinated notes (new skill, number, number word, employer, credential, altered quote, verdicts, judgements, wrong decision, "lacks" on not_documented, wrong review claim, JSON key, "does not provide evidence" on UNCERTAIN) and 14 hallucinated summaries (wrong counts, "all are X", wrong totals, false "no review", verdicts, invented number or skill) are all rejected; faithful texts are accepted; malformed JSON rejected |
 | `test_fallback.py` | SLM down, timeout, invalid JSON, hallucination in every section -> deterministic fallback after one retry, recorded; corrective retry succeeds and receives the reasons; scripted output labelled MOCK; `HS_REPORTER_SLM` off / unavailable / required |
 | `test_slm_real.py` | skipped unless the pinned GGUF is cached: sha256 pin, chat template equality with thinking disabled, every accepted section re-validates |
 
