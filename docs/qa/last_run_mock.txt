@@ -1,0 +1,5 @@
+label: MOCK (scripted backends, stub HTTP servers, keyword NLI stand-in; no model weights)
+commit: 83478e1  date_utc: 2026-10-16T14:49:48Z
+defects reproduced (strict xfail):
+      3 QA-032 (owner S6)
+228 passed, 5 skipped, 3 xfailed in 18.23s

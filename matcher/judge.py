@@ -10,11 +10,18 @@ Formulation (premise -> hypothesis H = "The candidate meets this job requirement
 | UNCERTAIN                  | -                      | judge not applicable: verdict UNCERTAIN, review already required |
 
 * For MET, "neutral" means the quote does not establish the requirement: FAIL when p(neutral) >= tau_fail.
+Quote premises are read in context: each quote is widened to its CV line (bounded), so a negation the Matcher left
+out of a partial quote ("Never used | Kubernetes in production") is visible to the Judge (QA-017). A whole-CV premise
+is split into chunks that fit the model window and the chunk with the highest entailment decides (QA-018). An NLI
+failure yields an UNCERTAIN finding with `error`, never a crash (QA-019). See docs/qa/FAILURES.md.
 Verdict: PASS when p(supporting) >= tau_pass, FAIL when p(opposing) >= tau_fail, else UNCERTAIN.
 judge_score = probability of the label that decided the verdict (a model probability, calibration measured in
 benchmark/judge_eval.py, not assumed). Thresholds come from a calibration split, never from the test split.
 """
+import re
 from dataclasses import asdict, dataclass
+
+from .validate import find_span
 
 LABELS = ("entailment", "neutral", "contradiction")
 
@@ -28,6 +35,7 @@ class JudgeFinding:
     nli_probs: dict | None
     premise_kind: str | None
     model: str
+    error: str | None = None
 
     def to_dict(self):
         return asdict(self)
@@ -38,7 +46,45 @@ def hypothesis(req):
     return f"The candidate meets this job requirement: {req.text}{years}."
 
 
+_MARKER = re.compile(r"^[\s\-–—*•·>]+")
+
+
+def quote_context(text, span, max_side=300):
+    """The CV line around a [start, end) span, cut at a sentence boundary when the line is longer than max_side.
+    A leading list marker ('- ', '– ', '* ', '• ') is dropped: it carries no meaning but moves NLI scores (QA-030)."""
+    a, b = span
+    lo, hi = text.rfind("\n", 0, a) + 1, text.find("\n", b)
+    hi = len(text) if hi == -1 else hi
+    if a - lo > max_side:
+        cut = max(text.rfind(c, a - max_side, a) for c in ".;!?")
+        lo = cut + 1 if cut != -1 else a - max_side
+    if hi - b > max_side:
+        cut = min((i for i in (text.find(c, b, b + max_side) for c in ".;!?") if i != -1), default=-1)
+        hi = cut + 1 if cut != -1 else b + max_side
+    ctx = text[lo:hi].strip()
+    return ctx if lo >= a else _MARKER.sub("", ctx)
+
+
+def chunk_text(text, max_chars):
+    """Line-aligned chunks of at most max_chars (a longer line is split hard). Nothing is dropped."""
+    chunks, cur = [], ""
+    for line in text.splitlines(keepends=True):
+        while len(line) > max_chars:
+            if cur:
+                chunks.append(cur)
+                cur = ""
+            chunks.append(line[:max_chars])
+            line = line[max_chars:]
+        if len(cur) + len(line) > max_chars:
+            chunks.append(cur)
+            cur = ""
+        cur += line
+    return [c for c in chunks + [cur] if c.strip()]
+
+
 class NLIJudge:
+    max_premise_chars = 1500  # ~350-400 DeBERTa tokens: premise + hypothesis stay inside max_length=512
+
     def __init__(self, model_dir, tau_pass=0.5, tau_fail=0.5, device="cpu", max_length=512, name=None):
         import torch
         from transformers import AutoModelForSequenceClassification, AutoTokenizer
@@ -65,12 +111,36 @@ class NLIJudge:
 
     @staticmethod
     def premise(result, cv):
-        """(kind, premise text) for a validated RequirementResult, or (None, None) when the judge does not apply."""
+        """(kind, premise text) for a validated RequirementResult, or (None, None) when the judge does not apply.
+        Quotes are widened to their CV line context (QA-017). The whole-CV premise is returned unchunked here;
+        `premises` splits it to fit the model window."""
         if result.decision == "UNCERTAIN":
             return None, None
         if result.decision == "MISSING" and result.basis == "not_documented":
             return "cv", cv.text
-        return ("quotes", " ".join(result.evidence)) if result.evidence else (None, None)
+        if not result.evidence:
+            return None, None
+        spans = list(getattr(result, "evidence_spans", None) or [find_span(cv.text, q) for q in result.evidence])
+        ctx = [quote_context(cv.text, sp) if sp else q for q, sp in zip(result.evidence, spans)]
+        return "quotes", " ".join(dict.fromkeys(ctx))
+
+    def premises(self, result, cv):
+        """(kind, [premise, ...]): one premise for quotes, window-sized chunks for the whole CV (QA-018)."""
+        kind, prem = self.premise(result, cv)
+        if kind is None:
+            return None, []
+        return kind, chunk_text(prem, self.max_premise_chars) if kind == "cv" else [prem]
+
+    def item_probs(self, items_pairs):
+        """items_pairs: [[(premise, hypothesis), ...] per item] -> [probs | None]. For several chunks of one item the
+        chunk with the highest entailment decides (only entailment can contradict a not_documented decision)."""
+        flat = [p for pairs in items_pairs for p in pairs]
+        pr = iter(self.probs(flat) if flat else [])
+        out = []
+        for pairs in items_pairs:
+            got = [next(pr) for _ in pairs]
+            out.append(max(got, key=lambda d: d["entailment"]) if got else None)
+        return out
 
     def verdict(self, result, probs, kind):
         if kind is None:
@@ -92,15 +162,18 @@ class NLIJudge:
                             kind, self.name)
 
     def judge_many(self, items):
-        """items: [(validated RequirementResult, CV, Requirement)] -> [JudgeFinding] (batched NLI)."""
-        kinds, pairs, pos = [], [], []
+        """items: [(validated RequirementResult, CV, Requirement)] -> [JudgeFinding] (batched NLI).
+        An NLI failure gives UNCERTAIN findings with `error` (review required); decisions are untouched (QA-019)."""
+        kinds, pairs = [], []
         for res, cv, req in items:
-            kind, prem = self.premise(res, cv)
+            kind, prems = self.premises(res, cv)
             kinds.append(kind)
-            if kind:
-                pos.append(len(pairs))
-                pairs.append((prem, hypothesis(req)))
-            else:
-                pos.append(None)
-        pr = self.probs(pairs) if pairs else []
-        return [self.verdict(res, pr[p] if p is not None else None, k) for (res, _, _), k, p in zip(items, kinds, pos)]
+            pairs.append([(p, hypothesis(req)) for p in prems])
+        try:
+            pr = self.item_probs(pairs)
+        except Exception as e:  # noqa: BLE001  any model/runtime failure must not stop the pipeline
+            err = f"{type(e).__name__}: {str(e)[:200]}"
+            return [self.verdict(res, None, None) if k is None else
+                    JudgeFinding("UNCERTAIN", None, False, True, None, k, self.name, error=err)
+                    for (res, _, _), k in zip(items, kinds)]
+        return [self.verdict(res, p, k) for (res, _, _), k, p in zip(items, kinds, pr)]

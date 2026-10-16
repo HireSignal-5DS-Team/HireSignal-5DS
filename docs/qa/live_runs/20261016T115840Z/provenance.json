@@ -1,0 +1,141 @@
+{
+  "label": "LIVE",
+  "git_commit": "4f50045874d980584d7b50723f36ba75e7848751",
+  "created_utc": "2026-10-16T12:02:12.286859+00:00",
+  "servers": {
+    "primary": {
+      "url": "http://127.0.0.1:8081/v1",
+      "models": {
+        "object": "list",
+        "data": [
+          {
+            "id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+            "object": "model",
+            "owned_by": "me",
+            "permissions": []
+          }
+        ]
+      }
+    },
+    "fallback": {
+      "url": "http://127.0.0.1:8080/v1",
+      "models": {
+        "object": "list",
+        "data": [
+          {
+            "id": "Qwen/Qwen3-4B-Instruct-2507",
+            "object": "model",
+            "owned_by": "me",
+            "permissions": []
+          }
+        ]
+      }
+    }
+  },
+  "backend": {
+    "backend": "fallback",
+    "is_model": true,
+    "primary": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+      "label": "matcher-lora",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8081/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 2,
+      "prompt_version": "p1",
+      "adapter_id": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+      "adapter_revision": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+      "revision": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M + HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a (llama.cpp --lora_path)",
+      "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "provenance": {
+        "role": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": {
+          "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+          "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+          "r": 16,
+          "lora_alpha": 32,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj"
+          ],
+          "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+        },
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8081/v1",
+        "alias_verified": null,
+        "served_aliases": null,
+        "prompt_id": "p1"
+      }
+    },
+    "fallback": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "label": "matcher-base-fallback",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8080/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 2,
+      "prompt_version": "p1",
+      "adapter_id": null,
+      "adapter_revision": null,
+      "revision": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M + HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a (llama.cpp --lora_path)",
+      "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "provenance": {
+        "role": "fallback",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507",
+        "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+        "weights": {
+          "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+          "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+          "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+          "quant": "Q4_K_M"
+        },
+        "adapter": null,
+        "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible",
+        "endpoint": "http://127.0.0.1:8080/v1",
+        "alias_verified": null,
+        "served_aliases": null,
+        "prompt_id": "p1"
+      }
+    },
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+    "prompt_version": "p1"
+  },
+  "knowledge": "none",
+  "judge": null,
+  "env": {
+    "HS_FALLBACK_URL": "http://127.0.0.1:8080/v1",
+    "HS_TIMEOUT": "300",
+    "HS_LIVE_OUT": "docs/qa/live_runs/20261016T115840Z",
+    "HS_LLM_REVISION": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M + HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a (llama.cpp --lora_path)",
+    "HS_RAG": "none",
+    "HS_LIVE": "1",
+    "HS_MATCHER_URL": "http://127.0.0.1:8081/v1"
+  }
+}

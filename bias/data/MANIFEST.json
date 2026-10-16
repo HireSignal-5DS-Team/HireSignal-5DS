@@ -1,0 +1,24 @@
+{
+  "version": "bias-testset-v1",
+  "generator": "bias/make_testset.py",
+  "counts": {
+    "dev": {
+      "items": 34,
+      "positive": 20,
+      "negative": 14,
+      "sha256": "2786d7c804b6bfaf49c045a14db1d08b290d951e987d8f9acf7d10664205e534"
+    },
+    "test": {
+      "items": 32,
+      "positive": 20,
+      "negative": 12,
+      "sha256": "7da707222d2eb65ce7d466275fa4d1878769ff620f634172639c59bc98b5bec7"
+    },
+    "holdout": {
+      "items": 44,
+      "positive": 26,
+      "negative": 18,
+      "sha256": "ccb7e890f1697498b68e5b6d28a5f22b340649a63f7cdd8d5169f34d913b1012"
+    }
+  }
+}

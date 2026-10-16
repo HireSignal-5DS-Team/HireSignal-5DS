@@ -1,0 +1,25 @@
+{
+  "_doc": "Pinned Matcher models (docs/MATCHER_INTEGRATION.md). Provenance in every MatchReport.backend comes from here; env HS_LORA_REPO / HS_LORA_SHA override the adapter. Shas checked on the Hub 2026-10-16.",
+  "base": {
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+    "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "weights": {"repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF", "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+                "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf", "quant": "Q4_K_M"},
+    "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible"
+  },
+  "primary": {
+    "role": "primary",
+    "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+    "url": "http://127.0.0.1:8081/v1",
+    "adapter": {"repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+                "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a", "r": 16, "lora_alpha": 32,
+                "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"],
+                "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"}
+  },
+  "fallback": {
+    "role": "fallback",
+    "served_alias": "Qwen/Qwen3-4B-Instruct-2507",
+    "url": "http://127.0.0.1:8080/v1",
+    "adapter": null
+  }
+}

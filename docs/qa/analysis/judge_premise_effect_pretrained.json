@@ -1,0 +1,27 @@
+{
+  "judge": "pretrained",
+  "tau": 0.65,
+  "results_root": "/tmp/claude-0/-home-user-HireSignal-5DS/1122fae7-0f01-516d-82e2-ed0975147578/scratchpad/eval/runs",
+  "runs": {
+    "qwen3-4b-q4+hslora-none-val": {
+      "n": 202,
+      "verdicts_changed": 0,
+      "changes": []
+    },
+    "qwen3-4b-q4+hslora-rag-val": {
+      "n": 202,
+      "verdicts_changed": 0,
+      "changes": []
+    },
+    "qwen3-4b-q4-none-val": {
+      "n": 202,
+      "verdicts_changed": 0,
+      "changes": []
+    },
+    "qwen3-4b-q4-rag-val": {
+      "n": 202,
+      "verdicts_changed": 0,
+      "changes": []
+    }
+  }
+}

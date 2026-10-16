@@ -1,0 +1,40 @@
+{
+  "arm": "gated",
+  "knowledge_provider": "rag.gated.v1+bm25",
+  "k": 3,
+  "label": "LIVE model run",
+  "esco_sha256": "8c6a4b3d0f26b3fa524579ebfdffb45648ca754fa08ef43c6ac14926a93f4b29",
+  "gated_thresholds_sha256": null,
+  "git_commit": "9ab05f939e1dc9342e371d95ad8e1b22596f5811",
+  "dataset_sha256": "0bde3a86cc3047b8addcd916809d3db96086ff1ad23881367fe6b2774b6c62a8",
+  "server_models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "object": "model",
+        "owned_by": "me",
+        "permissions": []
+      }
+    ]
+  },
+  "server_peak_rss_mb": 4230.9,
+  "client_peak_rss_mb": 553.0,
+  "adapter": {
+    "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+    "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+    "private": false,
+    "files": [
+      ".gitattributes",
+      "README.md",
+      "adapter_config.json",
+      "adapter_model.safetensors",
+      "chat_template.jinja",
+      "data_manifest.json",
+      "tokenizer.json",
+      "tokenizer_config.json",
+      "train_meta.json"
+    ]
+  },
+  "wall_s": 2807.7
+}
