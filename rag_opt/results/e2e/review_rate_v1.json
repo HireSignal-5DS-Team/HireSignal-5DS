@@ -1,0 +1,107 @@
+{
+ "label": "validator v1",
+ "model": "lora",
+ "n": 202,
+ "pairs": {
+  "bm25 vs none": {
+   "rate_base": 0.6634,
+   "rate_cand": 0.5743,
+   "delta": -0.0891,
+   "ci95": [
+    -0.1337,
+    -0.0495
+   ],
+   "reviewed_only_base": 18,
+   "reviewed_only_cand": 0,
+   "mcnemar_p": 0.0,
+   "review_dropped_and_correct": 15,
+   "review_dropped_and_wrong": 3,
+   "reason_count_changes": {
+    "semantic_inference_no_term_in_quote": -13,
+    "uncertain_decision": -5,
+    "years_below_minimum_in_evidence": -1,
+    "must_have_absence_of_evidence": -1
+   }
+  },
+  "gated vs none": {
+   "rate_base": 0.6634,
+   "rate_cand": 0.5891,
+   "delta": -0.0743,
+   "ci95": [
+    -0.1139,
+    -0.0396
+   ],
+   "reviewed_only_base": 15,
+   "reviewed_only_cand": 0,
+   "mcnemar_p": 0.0001,
+   "review_dropped_and_correct": 15,
+   "review_dropped_and_wrong": 0,
+   "reason_count_changes": {
+    "semantic_inference_no_term_in_quote": -13,
+    "must_have_absence_of_evidence": -4,
+    "must_have_contradicted": 2,
+    "years_below_minimum_in_evidence": 1
+   }
+  },
+  "none-repeat vs none": {
+   "rate_base": 0.6634,
+   "rate_cand": 0.6584,
+   "delta": -0.005,
+   "ci95": [
+    -0.0149,
+    0.0
+   ],
+   "reviewed_only_base": 1,
+   "reviewed_only_cand": 0,
+   "mcnemar_p": 1.0,
+   "review_dropped_and_correct": 0,
+   "review_dropped_and_wrong": 1,
+   "reason_count_changes": {
+    "uncertain_decision": 2,
+    "years_below_minimum_in_evidence": 1,
+    "must_have_absence_of_evidence": -1,
+    "must_have_contradicted": -1
+   }
+  },
+  "gated vs none-repeat": {
+   "rate_base": 0.6584,
+   "rate_cand": 0.5891,
+   "delta": -0.0693,
+   "ci95": [
+    -0.104,
+    -0.0347
+   ],
+   "reviewed_only_base": 14,
+   "reviewed_only_cand": 0,
+   "mcnemar_p": 0.0001,
+   "review_dropped_and_correct": 14,
+   "review_dropped_and_wrong": 0,
+   "reason_count_changes": {
+    "semantic_inference_no_term_in_quote": -12,
+    "must_have_absence_of_evidence": -3,
+    "must_have_contradicted": 3,
+    "uncertain_decision": -2
+   }
+  },
+  "bm25 vs none-repeat": {
+   "rate_base": 0.6584,
+   "rate_cand": 0.5743,
+   "delta": -0.0842,
+   "ci95": [
+    -0.1238,
+    -0.0494
+   ],
+   "reviewed_only_base": 17,
+   "reviewed_only_cand": 0,
+   "mcnemar_p": 0.0,
+   "review_dropped_and_correct": 14,
+   "review_dropped_and_wrong": 3,
+   "reason_count_changes": {
+    "semantic_inference_no_term_in_quote": -12,
+    "uncertain_decision": -7,
+    "years_below_minimum_in_evidence": -2,
+    "must_have_contradicted": 2
+   }
+  }
+ }
+}

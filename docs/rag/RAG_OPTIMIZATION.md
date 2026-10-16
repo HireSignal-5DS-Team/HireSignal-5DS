@@ -34,7 +34,13 @@ this was written: **no LLM was run in this session.** Every number below names i
    the no-RAG level (0.026; legacy BM25 0.034) and raises alias accuracy 0.81 → 0.90, with 0 template echoes. None of
    these differences is significant. The honest reading: on the LoRA Matcher, gated RAG is **safe (within noise)**,
    removes BM25's false-MET increase and helps aliases, but it does **not** raise macro-F1 measurably on bench-v1 val.
-   It meets the pre-registered rule, so the recommendation is `HS_RAG=gated` as the production default.
+   It meets the pre-registered rule, so the recommendation is `HS_RAG=gated` as the production default (adopted by
+   the orchestrator, integration `e27c461`).
+6. **The replay estimates did not hold live.** For the LoRA Matcher the replay predicted gated vs no-RAG +0.012
+   [0.000, +0.028]; the live run measured **−0.005 [−0.028, +0.014]**, within the noise floor (−0.003). On the LoRA
+   Matcher RAG's measured value is **not macro-F1**. It is (a) alias handling (0.81 → 0.90) and (b) a lower human-review
+   load: review rate 0.663 → 0.589, −7.4 points [−11.4, −4.0], McNemar 15/0, p = 0.0001, under validator v1 and v2.
+   All 15 dropped reviews are on correct decisions (§6.1).
 
 ## 1. Reproduce (no LLM needed)
 
@@ -232,6 +238,13 @@ legacy answer (B′ or C, which had 3 longer references) stands in for the gated
 The absent-skill rows still use the old 3-reference answers. The gated prompt carries only the concept itself, so
 its effect on absent-skill items is unmeasured.
 
+**Outcome (window 1):** these estimates are for the base model. The same replay method on the LoRA Matcher predicted
++0.012 [0.000, +0.028]; the live run gave −0.005 [−0.028, +0.014] (§6.1). The estimate did **not** hold. It assumed
+the gated prompt (1 short reference) behaves like the legacy prompt (3 references) on the 51 requirements with a
+reference, and that assumption failed on 2 of them (val-021, val-028). The method stays useful for bounding the
+effect of abstentions, which reproduced exactly (151/151 byte-identical), and not for predicting the effect of
+the references that are injected.
+
 ## 6. End-to-end comparison (prepared in window 0, run in window 1: results in §6.1)
 
 ```bash
@@ -309,6 +322,24 @@ reproduces every saved decision (0 changes). Under v2, false-MET is 0.000 in eve
 none-repeat 0.925, bm25 0.926, gated 0.924; gated vs none −0.005 [−0.027, +0.014]; bm25 vs none −0.003
 [−0.033, +0.026]. Nothing is significant.
 
+**Human-review load** (paired, same 202 items; `rag_opt/review_rate.py`, `rag_opt/results/e2e/review_rate_v{1,2}.md`):
+
+| comparison | review rate | Δ | 95% CI | reviewed only base / only cand | McNemar p | dropped reviews: correct / wrong |
+|---|---|---|---|---|---|---|
+| gated vs none (v1) | 0.663 → 0.589 | −0.074 | [−0.114, −0.040] | 15 / 0 | 0.0001 | 15 / 0 |
+| gated vs none-repeat (v1) | 0.658 → 0.589 | −0.069 | [−0.104, −0.035] | 14 / 0 | 0.0001 | 14 / 0 |
+| bm25 vs none (v1) | 0.663 → 0.574 | −0.089 | [−0.134, −0.050] | 18 / 0 | < 0.0001 | 15 / 3 |
+| none-repeat vs none (v1, noise) | 0.663 → 0.658 | −0.005 | [−0.015, +0.000] | 1 / 0 | 1.0 | 0 / 1 |
+| gated vs none (v2) | 0.668 → 0.594 | −0.074 | [−0.114, −0.040] | 15 / 0 | 0.0001 | 15 / 0 |
+| bm25 vs none (v2) | 0.668 → 0.584 | −0.084 | [−0.124, −0.049] | 17 / 0 | < 0.0001 | 15 / 2 |
+
+Mechanism: the main change is the validator reason `semantic_inference_no_term_in_quote` (−13). When the model
+quotes a CV line that names the skill by an ESCO alias it was shown ("Zed Attack Proxy" for OWASP ZAP), the validator
+counts the alias as a requirement term and drops the flag. This is a validator rule acting on shown, verified ESCO
+aliases, not a model change. Gated drops reviews only on correct decisions (15/0). Legacy BM25 drops 3 reviews on
+decisions that are wrong, because its off-target references supply "terms" for unrelated concepts. The reduction
+is significant, but its value depends on the validator rule: it is review load saved, not accuracy gained.
+
 **Decision (pre-registered rule above):** gated's CI vs none is not entirely below 0, and gated is not worse than
 bm25 (+0.006, p 1.0) → recommend `HS_RAG=gated` as the production default. That RAG "helps" is **not** shown on this
 benchmark: macro-F1 is unchanged within noise. What is shown: no off-target knowledge, no false-MET increase
@@ -333,6 +364,19 @@ BASE_LIVE_PLACEHOLDER
 - French and paraphrased free-text queries: gated BM25 abstains on all 5 French queries (recall@1 0.0; legacy
   BM25 0.2). Gated Qdrant reaches 0.2 and legacy dense 0.4 (§4.1); 5 queries are too few for a conclusion.
 - Latency and peak RSS of the Matcher with each arm: measured only in window 1. Retrieval itself takes < 1 ms (BM25).
+
+## 7.1 QA-023 (S1): answer
+
+QA-023 asks that the BM25 provider drop hits that share only a generic token ("Apache Maven" for "Apache Kafka").
+The proposed fix, a score ratio ≥ 0.5 × the top hit, was measured on the retrieval benchmark (bench-v1 val, terms
+mode). It barely helps: off-target refs per requirement go from 1.28 to 1.19 (0.84 at ratio 0.7, 0.52 at 0.9). It
+cannot abstain, because the top hit always passes, and on the team queries recall@3 falls from 0.778 to 0.750 (0.639
+at 0.9). The production provider is now `rag.gated.v1` (`HS_RAG=gated`, integration `e27c461`). It solves the case
+by construction: a candidate needs a label with the same content words, so "Apache Kafka" never matches "Apache
+Maven" (0 off-target refs; test `rag/tests/test_gated_knowledge.py::test_qa023_shared_generic_token_is_not_relevance`).
+Legacy `RagKnowledge` stays unchanged on purpose: it is the reproducible "old BM25" arm of every recorded comparison
+(B, B′, eval LoRA+BM25). Proposed status: **fixed in the production provider; won't fix in the legacy arm**. The
+QA test should target the default provider (S5's file).
 
 ## 8. Tests
 

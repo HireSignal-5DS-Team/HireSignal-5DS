@@ -196,3 +196,27 @@ def test_every_provider_has_a_version_for_provenance(gated):
         assert isinstance(p.version, str) and p.version
     assert gated.version.startswith("rag.gated.v1;retriever=bm25s-") and "esco=8c6a4b3d0f26" in gated.version
     assert "esco=8c6a4b3d0f26" in RagKnowledge().version
+
+
+class FakeBM25:
+    """BM25-like retriever returning fixed candidates (QA-023 case)."""
+    model = None
+
+    def __init__(self, chunks, results):
+        self.chunks, self.results = chunks, results
+
+    def search(self, query, k=5, mode="bm25", filters=None):
+        return {"status": "found", "results": self.results}
+
+
+def test_qa023_shared_generic_token_is_not_relevance():
+    """QA-023: BM25 matches "Apache Kafka" to "Apache Maven" through the token "Apache". The production provider
+    (rag.gated.v1) keeps only a candidate whose label holds the same content words."""
+    kafka = {"doc_id": "esco/kafka", "source_type": "esco", "title": "Apache Kafka", "url": "k",
+             "text": "Apache Kafka. Also known as: Kafka. Stream processing platform."}
+    maven = {"doc_id": "esco/maven", "source_type": "esco", "title": "Apache Maven", "url": "m",
+             "text": "Apache Maven. Also known as: Maven. Build tool."}
+    only_maven = GatedKnowledge(retriever=FakeBM25([maven], [(maven, 0.9)]), esco=[maven])
+    assert only_maven.lookup(R("Experience with Apache Kafka", ["Apache Kafka"])) == []
+    both = GatedKnowledge(retriever=FakeBM25([kafka, maven], [(maven, 7.1), (kafka, 0.9)]), esco=[kafka, maven])
+    assert titles(both.lookup(R("Experience with Apache Kafka", ["Apache Kafka"]))) == ["Apache Kafka"]
