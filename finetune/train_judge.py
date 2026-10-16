@@ -1,6 +1,7 @@
-"""Fine-tune the NLI Judge (MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli) on NLI pairs built from the TRAIN split.
+"""Fine-tune the NLI Judge (default MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli; any HF NLI checkpoint with
+--base/--base-rev, e.g. cross-encoder/nli-deberta-v3-xsmall) on NLI pairs built from the TRAIN split.
 
-Pairs (hypothesis = matcher.judge.hypothesis(requirement)):
+Pairs (hypothesis = matcher.judge.hypothesis(requirement, --hypothesis template, default v1)):
   MET/supported          premise = gold CV quote                         -> entailment
   MISSING/contradicted   premise = gold CV quote                         -> contradiction
   MISSING/not_documented premise = whole CV                              -> neutral
@@ -10,6 +11,8 @@ Split: train cases with index % 5 == 0 form `train-dev` (early stopping + Judge 
 train. val and test are never read. Checkpoint is written outside git (size ~0.7 GB); metrics/config are in git.
 
   python -m finetune.train_judge --out /home/user/judge_runs/deberta-hs-v1
+  python -m finetune.train_judge --base cross-encoder/nli-deberta-v3-xsmall \
+      --base-rev a150876415327c80daeff35ca6f68f5ed8cf5c24 --out /home/user/judge_runs/xsmall-hs-v1
 """
 import argparse
 import json
@@ -19,7 +22,7 @@ import time
 from pathlib import Path
 
 from benchmark.run import DATA, read_jsonl
-from matcher.judge import LABELS, hypothesis
+from matcher.judge import hypothesis, label_index
 from matcher.schemas import Requirement
 
 BASE = "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli"
@@ -30,13 +33,13 @@ def is_dev(case_id):
     return int(case_id.rsplit("-", 1)[1]) % 5 == 0
 
 
-def pairs(cases):
+def pairs(cases, template="v1"):
     out = []
     for c in cases:
         cv, reqs = c["cv"]["text"], {r["req_id"]: Requirement(**r) for r in c["job"]["requirements"]}
         quotes = {rid: g["evidence"] for rid, g in c["gold"].items() if g["evidence"]}
         for rid, g in c["gold"].items():
-            req, h = reqs[rid], hypothesis(reqs[rid])
+            req, h = reqs[rid], hypothesis(reqs[rid], template)
             if g["basis"] == "supported":
                 out.append((" ".join(g["evidence"]), h, "entailment", "met"))
                 other = [q for r2, q in quotes.items() if r2 != rid]
@@ -61,6 +64,9 @@ def main():
     ap.add_argument("--batch", type=int, default=16)
     ap.add_argument("--max-len", type=int, default=320)
     ap.add_argument("--seed", type=int, default=13)
+    ap.add_argument("--base", default=BASE)
+    ap.add_argument("--base-rev", default=BASE_REV)
+    ap.add_argument("--hypothesis", default="v1")
     a = ap.parse_args()
     import torch
     from transformers import AutoModelForSequenceClassification, AutoTokenizer, get_linear_schedule_with_warmup
@@ -71,13 +77,12 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     cases = read_jsonl(DATA / "train.jsonl")
     assert all(c["split"] == "train" for c in cases)
-    tr = pairs([c for c in cases if not is_dev(c["case_id"])])
-    dev = pairs([c for c in cases if is_dev(c["case_id"])])
-    tok = AutoTokenizer.from_pretrained(BASE, revision=BASE_REV)
-    model = AutoModelForSequenceClassification.from_pretrained(BASE, revision=BASE_REV, dtype=torch.float32)  # config says fp16
+    tr = pairs([c for c in cases if not is_dev(c["case_id"])], a.hypothesis)
+    dev = pairs([c for c in cases if is_dev(c["case_id"])], a.hypothesis)
+    tok = AutoTokenizer.from_pretrained(a.base, revision=a.base_rev)
+    model = AutoModelForSequenceClassification.from_pretrained(a.base, revision=a.base_rev, dtype=torch.float32)  # some configs say fp16
     assert next(model.parameters()).dtype == torch.float32
-    id2label = {int(k): v.lower() for k, v in model.config.id2label.items()}
-    lab2id = {lab: next(i for i, v in id2label.items() if v.startswith(lab[:4])) for lab in LABELS}
+    lab2id = label_index(model.config.id2label)
 
     def batches(data, shuffle):
         idx = list(range(len(data)))
@@ -134,7 +139,10 @@ def main():
             best = acc
             model.save_pretrained(out / "best")
             tok.save_pretrained(out / "best")
-    meta = {"base": BASE, "base_revision": BASE_REV, "args": vars(a), "n_train_pairs": len(tr), "n_dev_pairs": len(dev),
+            (out / "best" / "judge_meta.json").write_text(json.dumps(
+                {"base": a.base, "base_revision": a.base_rev, "hypothesis": a.hypothesis, "seed": a.seed,
+                 "epoch": ep, "dev_acc": acc, "recipe": "finetune/train_judge.py"}, indent=2) + "\n")
+    meta = {"base": a.base, "base_revision": a.base_rev, "hypothesis": a.hypothesis, "args": vars(a), "n_train_pairs": len(tr), "n_dev_pairs": len(dev),
             "train_pair_types": {t: sum(x[3] == t for x in tr) for t in {x[3] for x in tr}},
             "dataset_sha256": json.loads((DATA / "MANIFEST.json").read_text())["splits"]["train"]["sha256"],
             "splits_used": ["train (index % 5 != 0) for training", "train (index % 5 == 0) for dev"],

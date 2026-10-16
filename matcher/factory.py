@@ -10,8 +10,10 @@ Decoding: HS_JSON_SCHEMA = off (default) | fallback | all: constrain the named e
 RAG     : HS_RAG = none | bm25 | qdrant | gated | gated-qdrant (default gated = S1's rag.gated.v1 over BM25: on the LIVE
           LoRA val run it matches no-RAG macro-F1 within noise and keeps BM25's alias gain without its false-MET rise,
           see rag_opt/results/e2e/e2e_report.md; qdrant = team dense index under HIRESIGNAL_RAG_DIR/index)
-Judge   : HS_JUDGE_DIR (fine-tuned DeBERTa; if missing, the pretrained MoritzLaurer model) and HS_JUDGE_TAU
-          (calibrated on train-dev: 0.85 fine-tuned, 0.65 pretrained); HS_JUDGE=off disables
+Judge   : HS_JUDGE_MODEL (Hub id or local dir; HS_JUDGE_DIR is the old name) + HS_JUDGE_REVISION (Hub commit sha),
+          HS_JUDGE_TAU_PASS / HS_JUDGE_TAU_FAIL (HS_JUDGE_TAU sets both), HS_JUDGE_HYPOTHESIS (v1 | v2).
+          Defaults: JUDGE_DEFAULT pinned in JUDGE_MODELS, thresholds calibrated on train-dev (docs/JUDGE.md). A local
+          dir may carry judge_calibration.json; a missing local dir falls back to JUDGE_DEFAULT. HS_JUDGE=off disables
 Bias    : HS_BIAS_AUDITOR = rules_v1 (default, matcher.bias_audit) | rules_v2 | rules_v2+reviewer (S4, bias/auditor.py).
           The reviewer is opt-in (one extra LLM call per result) and runs on the BASE model only:
           HS_BIAS_REVIEWER_URL (default HS_FALLBACK_URL) / HS_BIAS_REVIEWER_MODEL (default the base alias); never the LoRA.
@@ -19,6 +21,7 @@ Bias    : HS_BIAS_AUDITOR = rules_v1 (default, matcher.bias_audit) | rules_v2 | 
 """
 import json
 import os
+from collections import namedtuple
 from pathlib import Path
 
 from .backends_api import MODELS_CONFIG, FallbackBackend, OpenAICompatBackend, pinned_provenance  # noqa: F401
@@ -26,8 +29,17 @@ from .knowledge import NoKnowledge, QdrantKnowledge, RagKnowledge
 from .pipeline import Pipeline
 from .schemas import ModelAnswer
 
-PRETRAINED_JUDGE = ("MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli", 0.65)
-FINETUNED_JUDGE = ("/home/user/judge_runs/deberta-hs-v1/best", 0.85)
+# Pinned Hub NLI checkpoints and their train-dev calibration (S7, judge/experiment.py, docs/JUDGE.md §4).
+JUDGE_MODELS = {
+    "cross-encoder/nli-deberta-v3-xsmall": {"revision": "a150876415327c80daeff35ca6f68f5ed8cf5c24", "licence": "apache-2.0",
+                                            "tau_pass": 0.75, "tau_fail": 0.85, "hypothesis": "v2"},
+    "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli": {"revision": "6f5cf0a2b59cabb106aca4c287eed12e357e90eb",
+                                                     "licence": "mit", "tau_pass": 0.4, "tau_fail": 0.65, "hypothesis": "v1"},
+}
+JUDGE_DEFAULT = "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli"
+PRETRAINED_JUDGE = (JUDGE_DEFAULT, JUDGE_MODELS[JUDGE_DEFAULT]["tau_fail"])
+FINETUNED_JUDGE = ("/home/user/judge_runs/deberta-hs-v1/best", 0.85)  # never published; used only if present
+JudgeConfig = namedtuple("JudgeConfig", "model tau_pass name revision tau_fail hypothesis")
 
 
 def model_provenance(env):
@@ -85,13 +97,32 @@ def bias_auditor(env, cfg):
 
 
 def judge_config(env):
+    """JudgeConfig(model, tau_pass, name, revision, tau_fail, hypothesis) from env, or None when HS_JUDGE=off."""
     if env.get("HS_JUDGE", "on") == "off":
         return None
-    d = env.get("HS_JUDGE_DIR") or FINETUNED_JUDGE[0]
-    if Path(d).exists() or not d.startswith("/"):
-        tau = float(env.get("HS_JUDGE_TAU") or (FINETUNED_JUDGE[1] if d == FINETUNED_JUDGE[0] else PRETRAINED_JUDGE[1]))
-        return d, tau, "nli-judge-finetuned" if d == FINETUNED_JUDGE[0] else "nli-judge"
-    return PRETRAINED_JUDGE[0], PRETRAINED_JUDGE[1], "nli-judge-pretrained (fine-tuned checkpoint missing)"
+    model = env.get("HS_JUDGE_MODEL") or env.get("HS_JUDGE_DIR")
+    note = ""
+    if model is None and Path(FINETUNED_JUDGE[0]).exists():  # legacy fine-tuned base checkpoint (tau 0.85)
+        model, known = FINETUNED_JUDGE[0], {"tau_pass": FINETUNED_JUDGE[1], "tau_fail": FINETUNED_JUDGE[1], "hypothesis": "v1"}
+    else:
+        model = model or JUDGE_DEFAULT
+        if model.startswith("/") and not Path(model).exists():
+            note, model = f" (checkpoint {model} missing)", JUDGE_DEFAULT
+        known = JUDGE_MODELS.get(model)
+        if known is None and (Path(model) / "judge_calibration.json").exists():
+            known = json.loads((Path(model) / "judge_calibration.json").read_text())
+        known = known or {}
+    tau = env.get("HS_JUDGE_TAU")
+    tau_pass = float(env.get("HS_JUDGE_TAU_PASS") or tau or known.get("tau_pass", 0.5))
+    tau_fail = float(env.get("HS_JUDGE_TAU_FAIL") or tau or known.get("tau_fail", 0.5))
+    hyp = env.get("HS_JUDGE_HYPOTHESIS") or known.get("hypothesis", "v1")
+    from .judge import HYPOTHESES
+
+    if hyp not in HYPOTHESES:
+        raise ValueError(f"HS_JUDGE_HYPOTHESIS must be one of {sorted(HYPOTHESES)}, not {hyp!r}")
+    calibrated = "" if known or tau or env.get("HS_JUDGE_TAU_PASS") else " (uncalibrated thresholds)"
+    name = ("nli-judge-finetuned" if model == FINETUNED_JUDGE[0] else f"nli-judge:{model}") + note + calibrated
+    return JudgeConfig(model, tau_pass, name, env.get("HS_JUDGE_REVISION") or known.get("revision"), tau_fail, hyp)
 
 
 def build(env=None, knowledge=None, judge=None):
@@ -124,6 +155,7 @@ def build(env=None, knowledge=None, judge=None):
     if judge is None and (jcfg := judge_config(env)):
         from .judge import NLIJudge
 
-        judge = NLIJudge(jcfg[0], tau_pass=jcfg[1], tau_fail=jcfg[1], name=jcfg[2])
+        judge = NLIJudge(jcfg.model, tau_pass=jcfg.tau_pass, tau_fail=jcfg.tau_fail, name=jcfg.name,
+                         revision=jcfg.revision, hypothesis_template=jcfg.hypothesis)
     return Pipeline(backend, knowledge, judge=judge, live_counterfactual=env.get("HS_LIVE_COUNTERFACTUAL") == "1",
                     auditor=bias_auditor(env, cfg))

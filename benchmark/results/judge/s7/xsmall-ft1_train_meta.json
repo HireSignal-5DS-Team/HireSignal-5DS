@@ -1,0 +1,70 @@
+{
+  "base": "cross-encoder/nli-deberta-v3-xsmall",
+  "base_revision": "a150876415327c80daeff35ca6f68f5ed8cf5c24",
+  "hypothesis": "v1",
+  "args": {
+    "out": "/home/user/judge_runs/xsmall-hs-v1",
+    "epochs": 2,
+    "lr": 2e-05,
+    "batch": 16,
+    "max_len": 320,
+    "seed": 13,
+    "base": "cross-encoder/nli-deberta-v3-xsmall",
+    "base_rev": "a150876415327c80daeff35ca6f68f5ed8cf5c24",
+    "hypothesis": "v1"
+  },
+  "n_train_pairs": 770,
+  "n_dev_pairs": 208,
+  "train_pair_types": {
+    "ambiguous": 87,
+    "contradicted": 136,
+    "wrong_evidence": 231,
+    "met": 237,
+    "not_documented": 79
+  },
+  "dataset_sha256": "d0206264f093be7c1b41b7fd9e71868ded006ee997ad7e0f8007710511231a77",
+  "splits_used": [
+    "train (index % 5 != 0) for training",
+    "train (index % 5 == 0) for dev"
+  ],
+  "log": [
+    {
+      "epoch": 0,
+      "dev_acc": 0.4423076923076923,
+      "dev_per_type": {
+        "met": 0.0,
+        "wrong_evidence": 0.727,
+        "contradicted": 0.467,
+        "not_documented": 0.536,
+        "ambiguous": 0.938
+      }
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.648122003492044,
+      "dev_acc": 0.8990384615384616,
+      "dev_per_type": {
+        "met": 0.912,
+        "wrong_evidence": 0.924,
+        "contradicted": 0.967,
+        "not_documented": 0.929,
+        "ambiguous": 0.562
+      },
+      "elapsed_s": 104.9
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.1747988974865602,
+      "dev_acc": 0.9375,
+      "dev_per_type": {
+        "met": 0.926,
+        "wrong_evidence": 0.909,
+        "contradicted": 1.0,
+        "not_documented": 1.0,
+        "ambiguous": 0.875
+      },
+      "elapsed_s": 216.4
+    }
+  ],
+  "best_dev_acc": 0.9375
+}
