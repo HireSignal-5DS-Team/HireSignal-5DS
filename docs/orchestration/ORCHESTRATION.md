@@ -62,8 +62,15 @@ Change only through the orchestrator. S5 owns contract tests that pin these.
 2. **Generation backend** (S2): `generate(task: Task) -> str` (raw model text). Live models are served
    OpenAI-compatible by llama.cpp: primary LoRA on `:8081`, fallback base on `:8080`.
 3. **Matcher output**: `ModelAnswer` → validator → `RequirementResult` → `MatchReport`
-   (`matcher/json_schemas/*.schema.json`). Evidence quotes are verbatim CV substrings with spans; `rag_refs` are the
-   cited `source_id`s; missing evidence is UNCERTAIN + review, never NOT_MET by inference.
+   (`matcher/json_schemas/*.schema.json`). Evidence quotes are verbatim CV substrings with spans. Missing evidence
+   is never turned into a negative judgement by inference.
+   - `rag_refs` (decision on QA-010, 2026-10-16): the `source_id`s of the knowledge **shown to the model** for that
+     requirement, after any gating or filtering, and nothing else. This makes them a record of what the model saw,
+     not a claim about which ref it relied on. `ModelAnswer` gets no citation field in v1: the deployed LoRA was trained
+     on the v1 answer schema and would not fill it. Reports call them "knowledge shown", not "sources cited".
+   - MISSING / `not_documented` (decision on QA-011, 2026-10-16): MISSING means "not documented in the CV", never
+     "the candidate lacks it". It goes to human review for **must** requirements. For nice-to-have requirements it
+     carries no review flag. It never rejects anyone; the summary counts only must coverage.
 4. **Provenance** (S2): `MatchReport.backend` records, for the model that answered each result: model id, base
    revision, adapter repo + sha (or none), primary/fallback, knowledge provider + its version, prompt id. A result
    produced by the fallback is routed to human review.

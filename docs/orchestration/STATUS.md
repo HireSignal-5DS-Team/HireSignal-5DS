@@ -2,19 +2,76 @@
 
 Maintained by Session 6. Plan and rules: `docs/orchestration/ORCHESTRATION.md`.
 
-**Compute window: 0** (evaluation running in `session_015pC4cWnLapLopyiUgf8VmG`, 138/202 at `302a424`).
-No LLM server or training in any session until the orchestrator opens window 1.
+**Compute window: 1 (opened 2026-10-16 11:05Z).** The 202-requirement LoRA evaluation is complete
+(`claude/kind-albattani-k7qlt9` @ `46d24e1`, 202/202 predictions for both arms, `metrics.json` committed).
+Live LLM work is allowed: one model job at a time per container (`flock /home/user/hs_queue.lock`). The evaluation
+session continues its own follow-up runs in its own container; never touch them.
 
-| session | branch | Claude session | deliverable | blockers | tests |
+## LoRA evaluation result (LIVE, val, 202 requirements, Q4_K_M, llama.cpp, prompt p1)
+
+Source: `benchmark/results/CONSOLIDATED_val.md` on `claude/kind-albattani-k7qlt9` @ `46d24e1`.
+
+| arm | macro-F1 | false-MET | JSON valid | UNCERTAIN | expl. on topic | p50 / p95 s |
+|---|---|---|---|---|---|---|
+| base, no RAG | 0.634 | 0.009 | 0.950 | 0.495 | 0.847 | 12.9 / 20.8 |
+| base, BM25 RAG | 0.630 | 0.009 | 0.916 | 0.505 | 0.837 | 16.4 / 34.3 |
+| LoRA, no RAG | **0.908** | 0.026 | 1.000 | 0.178 | **0.000** | 8.9 / 13.9 |
+| LoRA, BM25 RAG | 0.897 | 0.034 | 1.000 | 0.153 | **0.000** | 13.1 / 21.5 |
+
+Open issues raised by this result:
+1. RAG still costs about 0.011 macro-F1 and raises false-MET (0.026 → 0.034) on the LoRA Matcher. Not yet tested
+   for significance. Owner: S1.
+2. False-MET rose about 3× from base to LoRA (0.009 → 0.026 / 0.034). Owners: S5 (error analysis), S2 (review routing).
+3. The LoRA writes fixed template explanations ("The CV directly shows this requirement; ...") that never name the
+   requirement (expl. on topic 0.000). This is an explainability gap. Owner: S2, with S5 tests. Any fix must not
+   invent claims: it may only use the verified evidence quotes and cited RAG refs.
+4. The consolidated table shows adapter `n/a` for the LoRA runs. Provenance belongs in the report. Owner: S2.
+
+## Sessions (reviewed at 11:00Z; mock tests run by the orchestrator in `/home/user/hs-wt/<session>`)
+
+| session | branch @ head | Claude session | delivered so far | blockers | tests (orchestrator rerun) |
 |---|---|---|---|---|---|
-| 1 RAG | `session/s1-rag-optimization` | `session_013GKCTUT4EiMBH2Q8tVdquw` | RAG failure analysis; improved query, filter, chunking, citations; retrieval + end-to-end comparisons | live Matcher runs wait for window 1 | not run |
-| 2 Matcher LoRA | `session/s2-matcher-lora-integration` | `session_01ReP1Qmd3Hq69cVnvLM4RZJ` | LoRA-primary Matcher wired to contracts, provenance, review routing, live E2E harness | live smoke waits for window 1 | not run |
-| 3 Soft prompt | `session/s3-matcher-soft-prompt` | `session_01Uxb7wkSL8FdicKUG7jGBk8` | trainable soft-prompt code + feasibility study; 4-arm comparison if feasible | 4B training does not fit a CPU container; GPU handoff needed | not run |
-| 4 Bias Auditor | `session/s4-bias-auditor` | `session_01QjD3VUqjjj6hLiUU5LegT1` | fairness test set, prompt-only vs adapter research, measured recommendation | live audit waits for window 1 | not run |
-| 5 QA | `session/s5-qa-contracts` | `session_015KY6nW8NkJuGZ2rB35uZGz` | contract, regression, adversarial and live-ready test suites; failure log | none for mock work | not run |
-| 6 Orchestrator | `claude/beautiful-galileo-o36bdv` | `session_01CyLv8Vej3sAYAmPbyrDsJy` | plan, contracts, reviews, merges, final real E2E | final E2E waits for window 2 | baseline mock: 50 passed, 1 skipped |
+| 1 RAG | `session/s1-rag-optimization` @ `f30197a` | `session_013GKCTUT4EiMBH2Q8tVdquw` | merged team `rag/`; gated provider `rag.gated.v1`; per-requirement RAG error analysis; retrieval metrics (BM25 + dense); E2E comparison prepared, not run; `docs/rag/RAG_OPTIMIZATION.md` | none (window 1 open) | MOCK: 105 passed, 8 skipped |
+| 2 Matcher LoRA | `session/s2-matcher-lora-integration` @ `03b6431` | `session_01ReP1Qmd3Hq69cVnvLM4RZJ` | pinned LoRA provenance per result, `/v1/models` alias check, strict JSON repair, review routing, fake-server mock tests, live harness + smoke script; `docs/MATCHER_INTEGRATION.md` | none (window 1 open) | MOCK: 71 passed, 6 skipped |
+| 3 Soft prompt | `session/s3-matcher-soft-prompt` @ `88e1fb4` | `session_01Uxb7wkSL8FdicKUG7jGBk8` | PEFT prompt-tuning pipeline, 4-arm eval (one backend + dtype enforced), Kaggle bundle + notebook, tiny-model SMOKE run (all arms 0.061: random model, no valid JSON), tokenizer/PEFT compatibility check | **4B training needs a GPU**: CPU estimate about 8.5 h per soft prompt, about 20 h total; fp32 needs 16.1 GB. Not approved on CPU. Waiting on the owner to run `prompt_tuning/kaggle_soft_prompt.ipynb` on Kaggle | fixture defect fixed (`de4bd64`); orchestrator rerun with torch: 64 passed, 2 skipped |
+| 4 Bias Auditor | `session/s4-bias-auditor` @ `9173d6d` | `session_01QjD3VUqjjj6hLiUU5LegT1` | extended attributes + placebo floor, rules v2, prompted reviewer, adapter registry, fairness test set (dev/test/blind), paired McNemar, window-1 runner; `docs/BIAS_AUDITOR.md` | the evaluation session has its own LoRA bias re-audit queued: reuse it, do not duplicate | MOCK: 71 passed, 2 skipped |
+| 5 QA | `session/s5-qa-contracts` @ `91a88fb` | `session_015KY6nW8NkJuGZ2rB35uZGz` | contract, grounding, false-MET, citation, injection, Judge, bias and fallback tests; Judge fixes QA-017/018/019; live suite; `docs/qa/FAILURES.md` (18 open defects) | none | MOCK: 129 passed, 2 skipped, 26 xfailed |
+| 6 Orchestrator | `claude/beautiful-galileo-o36bdv` | `session_01CyLv8Vej3sAYAmPbyrDsJy` | plan, contracts, tracker, reviews | final E2E waits for window 2 | baseline MOCK: 50 passed, 1 skipped |
+
+Ownership check at 11:00Z: no session edited a file outside its ownership or a frozen contract. S2 added new files
+(`scripts/check_matcher_lora.py`, `scripts/live_smoke.{py,sh}`, `docs/matcher_integration/`); accepted.
+
+No session branch has been merged into the integration branch yet.
+
+## Integration branch
+
+- `e3aa6c8`: merged `session/s5-qa-contracts` @ `a4379ed` (QA suites, Judge fixes QA-017/018/019, failure log).
+- `4f38c97`: **validator v2 + prompt fence** (S5 patch to frozen files `matcher/validate.py`, `matcher/prompt.py`).
+  Fixes QA-002/003/004/005/007/008/009/012/022/025/026. Decision changes go only MET to UNCERTAIN (human review).
+  MOCK: `pytest matcher benchmark/tests tests/qa` gives 154 passed, 1 skipped, 15 xfailed.
+  Orchestrator replay of the committed LIVE val raw outputs (no model call; v1 replay reproduces the saved decisions
+  with 0 changes):
+
+  | arm | v1 macro-F1 / false-MET | v2 macro-F1 / false-MET | review rate v1 / v2 |
+  |---|---|---|---|
+  | LoRA, no RAG | 0.908 / 0.026 | 0.929 / 0.000 | 0.663 / 0.668 |
+  | LoRA, BM25 RAG | 0.897 / 0.034 | 0.926 / 0.000 | 0.574 / 0.584 |
+  | base, no RAG | 0.634 / 0.009 | 0.640 / 0.000 | 0.782 / 0.782 |
+  | base, BM25 RAG | 0.630 / 0.009 | 0.635 / 0.000 | 0.743 / 0.743 |
+
+  **In-sample:** the QA-025/026 rules were written after inspecting val errors. Held-out effect is measured once in
+  the locked-test final run, with v1 and v2 replays reported side by side.
+- All session branches must merge `claude/beautiful-galileo-o36bdv` before their next merge request.
 
 ## Log
 
 - 2026-10-16: audit done, branches and worktrees created, contracts frozen (v1).
 - 2026-10-16 10:05Z: sessions S1–S5 launched as independent cloud sessions (tag `hiresignal-orchestra`), each on its own branch and container.
+- 2026-10-16 11:05Z: LoRA evaluation complete (202/202). Window 1 opened. First review of all branches; S3 test defect found.
+- 2026-10-16 11:10Z: S3 fixture defect fixed and verified. S3 4B training waits on a Kaggle GPU run by the owner (not approved on CPU).
+- 2026-10-16 11:25Z: S5 merged; validator v2 applied and replay-verified on val (in-sample).
+- 2026-10-16 11:35Z: S5 LIVE suite on real models (docs/qa/live_runs/20261016T111644Z on S5 @ eb03c46): 19 passed,
+  2 xfailed (QA-014, QA-028 confirmed live), 1 skipped (Judge checkpoint absent). No unreviewed MET on 11 trap probes.
+  New LIVE finding QA-029 (name-header counterfactual flip on a borderline item) sent to S4.
+  Contract decisions QA-010 (`rag_refs` = knowledge shown to the model) and QA-011 (MISSING reviewed only for must)
+  recorded in ORCHESTRATION.md §3; the code already behaves this way.
