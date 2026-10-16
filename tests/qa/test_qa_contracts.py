@@ -10,7 +10,7 @@ import tempfile
 from pathlib import Path
 
 import pytest
-from _qa_support import CVX, GOOD, JOB, Scripted, ans, check, defect, provenance_problems, ref
+from _qa_support import CVX, GOOD, JOB, Scripted, ans, check, provenance_problems, ref
 
 from matcher import knowledge
 from matcher.agent import Matcher
@@ -46,8 +46,7 @@ def _cv_fragments(text):
 PROVIDERS = [knowledge.FixtureKnowledge, knowledge.RagKnowledge, knowledge.NoKnowledge, knowledge.QdrantKnowledge]
 
 
-@pytest.mark.parametrize("cls", [pytest.param(c, marks=defect("QA-001", "S1") if c is not knowledge.QdrantKnowledge else ())
-                                 for c in PROVIDERS], ids=lambda c: c.__name__)
+@pytest.mark.parametrize("cls", PROVIDERS, ids=lambda c: c.__name__)
 def test_lookup_signature_is_frozen_v1(cls):
     """lookup(req: Requirement, k: int = 3, job_id: str | None = None) -> list[KnowledgeRef]"""
     params = list(inspect.signature(cls.lookup).parameters.values())
@@ -149,7 +148,6 @@ def test_provenance_records_prompt_and_knowledge():
     assert out["knowledge"] == "spy" and all("matcher_call" in r for r in out["requirements"])
 
 
-@defect("QA-014", "S2")
 def test_production_provenance_is_complete(monkeypatch):
     """MatchReport.backend of the factory-built Matcher (LoRA primary + base fallback) names model, base revision,
     adapter repo + sha, knowledge provider + version and prompt id. The HTTP call is stubbed (MOCK)."""
@@ -162,7 +160,6 @@ def test_production_provenance_is_complete(monkeypatch):
     assert provenance_problems(rep.backend) == []
 
 
-@defect("QA-013", "S2")
 def test_match_report_routes_fallback_results_to_review():
     rep = Matcher(FallbackBackend(Scripted("lora", mode="down"), Scripted("base")), SpyKnowledge()).match(CVX, JOB)
     assert all(r.needs_human_review for r in rep.results)

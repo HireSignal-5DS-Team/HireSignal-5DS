@@ -18,6 +18,7 @@ Verdict: PASS when p(supporting) >= tau_pass, FAIL when p(opposing) >= tau_fail,
 judge_score = probability of the label that decided the verdict (a model probability, calibration measured in
 benchmark/judge_eval.py, not assumed). Thresholds come from a calibration split, never from the test split.
 """
+import re
 from dataclasses import asdict, dataclass
 
 from .validate import find_span
@@ -45,8 +46,12 @@ def hypothesis(req):
     return f"The candidate meets this job requirement: {req.text}{years}."
 
 
+_MARKER = re.compile(r"^[\s\-–—*•·>]+")
+
+
 def quote_context(text, span, max_side=300):
-    """The CV line around a [start, end) span, cut at a sentence boundary when the line is longer than max_side."""
+    """The CV line around a [start, end) span, cut at a sentence boundary when the line is longer than max_side.
+    A leading list marker ('- ', '– ', '* ', '• ') is dropped: it carries no meaning but moves NLI scores (QA-030)."""
     a, b = span
     lo, hi = text.rfind("\n", 0, a) + 1, text.find("\n", b)
     hi = len(text) if hi == -1 else hi
@@ -56,7 +61,8 @@ def quote_context(text, span, max_side=300):
     if hi - b > max_side:
         cut = min((i for i in (text.find(c, b, b + max_side) for c in ".;!?") if i != -1), default=-1)
         hi = cut + 1 if cut != -1 else b + max_side
-    return text[lo:hi].strip()
+    ctx = text[lo:hi].strip()
+    return ctx if lo >= a else _MARKER.sub("", ctx)
 
 
 def chunk_text(text, max_chars):

@@ -6,7 +6,7 @@ import re
 
 from _qa_support import CVX, JOB, Scripted, ans, check, defect, ref, req
 
-from matcher import CV, Job
+from matcher import CV
 from matcher.backends import Task
 from matcher.knowledge import RagKnowledge
 from matcher.pipeline import Pipeline
@@ -59,14 +59,25 @@ def test_knowledge_text_cannot_become_evidence():
     assert r.decision == "UNCERTAIN" and r.evidence == []
 
 
-@defect("QA-010", "S6")
-def test_rag_refs_are_the_cited_refs_not_every_retrieved_ref():
-    """ORCHESTRATION §3.3: `rag_refs` are the cited source_ids. A Docker ref retrieved for a Kafka requirement and not
-    used by the model must not be reported as a citation (ModelAnswer has no citation field to say what was used)."""
-    kafka = Job(job_id="j", title="t", requirements=[{"req_id": "r4", "text": "Apache Kafka", "skill_terms": ["Kafka"]}])
-    out = Pipeline(Scripted(answers={"r4": ("MISSING", "not_documented", [])}), ListKnowledge([DOCKER])).run(
-        CVX.model_dump(), kafka.model_dump())
-    assert out["requirements"][0]["rag_refs"] == []
+def test_rag_refs_are_exactly_the_knowledge_shown_to_the_model():
+    """Decision on QA-010 (ORCHESTRATION §3.3): `rag_refs` = the source_ids of the knowledge shown to the model,
+    after gating, in order, and nothing else. A record of what the model saw, not a claim of reliance."""
+    backend = Scripted()
+    out = Pipeline(backend, ListKnowledge([MAVEN, DOCKER])).run(CVX.model_dump(), JOB.model_dump())
+    for row, task in zip(out["requirements"], backend.tasks):
+        shown = [r.source_id for r in task.refs]
+        assert row["rag_refs"] == shown and [c["source_id"] for c in row["citations"]] == shown
+    rep_backend = Scripted()
+    from matcher.agent import Matcher
+    rep = Matcher(rep_backend, ListKnowledge([MAVEN, DOCKER])).match(CVX, JOB)
+    assert [r.rag_refs for r in rep.results] == [[x.source_id for x in t.refs] for t in rep_backend.tasks]
+
+
+def test_report_does_not_call_shown_knowledge_cited_sources():
+    from matcher.pipeline import write_report
+
+    md = write_report(Pipeline(Scripted(), ListKnowledge([MAVEN])).run(CVX.model_dump(), JOB.model_dump()))
+    assert "cited" not in md.lower() and "sources cited" not in md.lower()
 
 
 # ---- RAG relevance ----------------------------------------------------------------------------------------------

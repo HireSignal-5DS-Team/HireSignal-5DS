@@ -23,6 +23,45 @@ class StructuredInputParser:
         return CV.model_validate(cv_obj), Job.model_validate(job_obj)
 
 
+_WHY_UNCERTAIN = {  # validator reason -> plain words (no new claim: each restates a rule that fired)
+    "model_output_invalid": "the model's answer could not be read",
+    "inconsistent_decision_basis": "the model's decision and its basis contradict each other",
+    "met_without_verified_evidence": "the model said MET but none of its quotes is in the CV",
+    "years_below_minimum_in_evidence": "the quoted CV text shows fewer years than required",
+    "evidence_not_in_cv": "a quote given by the model is not in the CV",
+    "weak_evidence_cue": "the quoted CV text shows exposure (e.g. tutorials or a course), not use",
+    "duration_not_verified": "the quoted CV text states no duration for the required years",
+}
+
+
+def _q(quotes):
+    return " and ".join(f'"{q}"' for q in quotes)
+
+
+def grounded_explanation(res, req, refs):
+    """Deterministic explanation from the requirement text, the VALIDATED decision, the verified CV quotes and the
+    titles of the cited knowledge entries only. It adds no claim about the candidate beyond those quotes; the model's
+    own text stays in `explanation`."""
+    head = f'Requirement "{req.text}": {res.decision}.'
+    if res.decision == "MET":
+        body = f" The CV states {_q(res.evidence)}."
+        if req.min_years:
+            body += (f" The required {req.min_years:g} years could not be confirmed from the quoted text."
+                     if "duration_not_verified" in res.review_reasons else f" The quoted text covers the required {req.min_years:g} years.")
+    elif res.basis == "contradicted":
+        body = f" The CV text {_q(res.evidence)} shows it is not met."
+    elif res.basis == "not_documented":
+        body = " No statement in the CV addresses it. This is absence of evidence, not proof that the candidate lacks it."
+    else:
+        why = [_WHY_UNCERTAIN[r] for r in res.review_reasons if r in _WHY_UNCERTAIN]
+        body = (f" The model answered {res.model_decision}, but {'; '.join(why)}." if why and res.model_decision
+                else f" {why[0][0].upper() + why[0][1:]}." if why
+                else f" The CV evidence is partial or ambiguous{': ' + _q(res.evidence) if res.evidence else ''}.")
+    cited = list(dict.fromkeys(r.title for r in refs))
+    tail = f" Terminology from: {', '.join(cited)} (knowledge base, not candidate evidence)." if cited else ""
+    return head + body + tail
+
+
 def aggregate(res, bias, judge):
     """Transparent combination for one requirement. Review reasons are the union of every stage's reasons."""
     reasons = [f"validator:{r}" for r in res.review_reasons]
@@ -49,40 +88,61 @@ def aggregate(res, bias, judge):
 
 
 class Pipeline:
-    def __init__(self, backend, knowledge, judge=None, parser=None, counterfactual=None, k=3, live_counterfactual=False):
+    def __init__(self, backend, knowledge, judge=None, parser=None, counterfactual=None, k=3, live_counterfactual=False,
+                 auditor=None):
         """live_counterfactual: run the Bias Auditor's counterfactual test inline (8 extra Matcher calls per
         requirement). Default off: counterfactual audits normally run in batch (benchmark/bias_eval.py)."""
         self.matcher = Matcher(backend, knowledge, k=k)
         self.live_counterfactual = live_counterfactual
         self.judge, self.parser = judge, parser or StructuredInputParser()
         self.counterfactual = counterfactual or {}  # {req_id: BiasFinding} from a batch audit, optional
+        self.auditor = auditor  # S4 bias.auditor.BiasAuditor (HS_BIAS_AUDITOR); None = matcher.bias_audit rules v1
 
     def run(self, cv_obj, job_obj):
         cv, job = self.parser.parse(cv_obj, job_obj)
         pairs = [self.matcher.match_requirement(cv, r, job_id=job.job_id) for r in job.requirements]  # Matcher + Validator
         results = [res for res, _ in pairs]
         cf = dict(self.counterfactual)
+        cf_models = {}  # req_id -> set of models that answered the counterfactual variants
         if self.live_counterfactual:  # Bias Auditor tests the deployed Matcher itself (it is the system under audit)
             for res, r in zip(results, job.requirements):
-                cf[res.req_id] = counterfactual(lambda c, q: self.matcher.match_requirement(c, q, job_id=job.job_id)[0], cv, r)
-        audits = [merge(check_result(res, cv.text), cf.get(res.req_id)) for res in results]  # Bias
+                seen = cf_models.setdefault(res.req_id, set())
+
+                def fn(c, q, seen=seen):
+                    out, info = self.matcher.match_requirement(c, q, job_id=job.job_id)
+                    seen.add(info["provenance"].get("answered_by"))
+                    return out
+                cf[res.req_id] = counterfactual(fn, cv, r)
+        audits = [merge(self.auditor.check_result(res, cv.text, requirement_text=r.text) if self.auditor
+                        else check_result(res, cv.text), cf.get(res.req_id))
+                  for res, r in zip(results, job.requirements)]  # Bias
         judged = self.judge.judge_many([(res, cv, r) for res, r in zip(results, job.requirements)]) if self.judge \
             else [None] * len(results)  # Judge (after the auditor, on the same validated results)
         rows = [aggregate(res, b, j) for res, b, j in zip(results, audits, judged)]
-        for row, (_, info) in zip(rows, pairs):
+        for row, (res, info), req in zip(rows, pairs, job.requirements):
+            # QA-028: the report explains THIS requirement from validated content only; the model's text is kept
+            row["explanation_model"] = row["explanation"]
+            row["explanation"] = grounded_explanation(res, req, info["refs"])
             row["citations"] = [{"source_id": x.source_id, "source_type": x.source_type, "title": x.title, "url": x.url,
                                  "retrieval": x.retrieval} for x in info["refs"]]
             call = info["call"]
-            row["matcher_call"] = {k: call.get(k) for k in ("used", "model", "latency_s", "error", "primary_error") if k in call}
-            if call.get("error"):  # every backend failed: the decision is the validator's invalid-output UNCERTAIN
-                row["review_reasons"].append("matcher:backend_unavailable")
-                row["requires_human_review"] = True
-            elif call.get("used") == "fallback":
-                row["review_reasons"].append("matcher:fallback_model_used")
+            row["matcher_call"] = {k: call.get(k) for k in ("used", "model", "latency_s", "error", "primary_error",
+                                                            "finish_reason") if k in call}
+            row["provenance"] = info["provenance"]  # the model that answered THIS requirement
+            if cf_models.get(row["req_id"], set()) - {info["provenance"].get("answered_by")}:
+                # a counterfactual variant was answered by another model (or none): a flip may be a model switch
+                info["review"] = info["review"] + ["matcher:counterfactual_mixed_models"]
+            if ((row["bias_audit"].get("details") or {}).get("reviewer") or {}).get("error"):
+                info["review"] = info["review"] + ["bias:reviewer_unavailable"]  # fail-closed: no silent PASS
+            if info["review"]:  # fallback answer, backend down, unparseable/repaired output, wrong served model
+                row["review_reasons"] = list(dict.fromkeys(row["review_reasons"] + info["review"]))
                 row["requires_human_review"] = True
         musts = [r for r in rows if r["kind"] == "must"]
+        report = self.matcher.build_report(cv, job, pairs)  # frozen MatchReport contract (validated by pydantic)
+        report.backend["bias_auditor"] = self.auditor.info() if self.auditor else {"variant": "rules_v1"}
         return {"cv_id": cv.cv_id, "job_id": job.job_id, "parser": self.parser.name,
-                "backend": self.matcher.backend.info(), "knowledge": self.matcher.knowledge.name,
+                "backend": report.backend, "knowledge": self.matcher.knowledge.name,
+                "match_report": report.model_dump(mode="json"),
                 "judge": getattr(self.judge, "name", None), "requirements": rows,
                 "summary": {"MET": sum(r["final_decision"] == "MET" for r in rows),
                             "MISSING": sum(r["final_decision"] == "MISSING" for r in rows),
@@ -92,23 +152,36 @@ class Pipeline:
                             "note": "Requirement-level screening aid. No automatic rejection or hiring decision."}}
 
 
+def _who(p):
+    if not p or p.get("answered_by") is None:
+        return "no model (all Matcher endpoints failed)"
+    a = p.get("adapter")
+    return (f"{p['answered_by']} · {p.get('served_alias') or p.get('model_id')}"
+            + (f" · adapter {a['repo']}@{a['sha'][:8]}" if a else " · no adapter") + (" · MOCK" if p.get("MOCK") else ""))
+
+
 def write_report(out):
     """Report Writer (deterministic): markdown from the aggregated pipeline output. Adds no claims of its own."""
     s = out["summary"]
     lines = [f"# Matching report — CV `{out['cv_id']}` vs job `{out['job_id']}`", "",
              f"MET {s['MET']} · MISSING {s['MISSING']} · UNCERTAIN {s['UNCERTAIN']} · must-have met "
              f"{s['must_met']}/{s['must_total']} · **{s['requires_human_review']} requirement(s) need human review**", "",
-             f"_{s['note']}_", ""]
+             f"_{s['note']}_", "",
+             f"Prompt `{out['backend'].get('prompt_id')}` · knowledge `{out['backend'].get('knowledge_provider')}`"
+             + (" · **MOCK backend: not a model result**" if any((r.get("provenance") or {}).get("MOCK")
+                                                                for r in out["requirements"]) else ""), ""]
     for r in out["requirements"]:
         j = r["judge"] or {}
         lines += [f"## {r['req_id']} ({r['kind']}-have): {r['requirement_text']}",
                   f"- Decision: **{r['final_decision']}** ({r['basis']}); model said {r['model_decision']}",
                   *(f"- Evidence: \"{q}\" (chars {a}-{b})" for q, (a, b) in zip(r["evidence"], r["evidence_spans"])),
-                  f"- Explanation (model): {r['explanation']}",
+                  f"- Explanation: {r['explanation']}",
+                  f"- Model text: {r.get('explanation_model', '')}",
                   f"- Validator: {', '.join(r['validator']['reasons']) or 'no issue'}",
                   f"- Bias audit: {r['bias_audit']['audit_status']}"
                   + (f" (flip on {r['bias_audit']['affected_attribute']})" if r["bias_audit"].get("counterfactual_flip") else ""),
                   f"- NLI judge: {j.get('judge_verdict', 'not run')}" + (f" (score {j['judge_score']})" if j.get("judge_score") is not None else ""),
+                  f"- Answered by: {_who(r.get('provenance') or {})}",
                   f"- Human review: {'**REQUIRED** — ' + ', '.join(r['review_reasons']) if r['requires_human_review'] else 'not required'}",
                   ""]
     return "\n".join(lines)

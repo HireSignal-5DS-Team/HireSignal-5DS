@@ -2,12 +2,11 @@
 Rule under test: a failure gives UNCERTAIN + human review, never an invented decision. MOCK servers (a local HTTP
 stub that speaks the OpenAI chat-completions shape), no model.
 """
-import json
 import threading
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 import pytest
-from _qa_support import CVX, JOB, Scripted, ans, defect
+from _qa_support import CVX, JOB, Scripted, ans
 
 from matcher.backends_api import FallbackBackend, OpenAICompatBackend
 from matcher.pipeline import Pipeline
@@ -79,7 +78,6 @@ def test_json_wrapped_in_prose_or_fences_is_parsed():
     assert parse_model_output("<think>{\"decision\": \"MET\"}</think>" + ans("UNCERTAIN", "ambiguous")).decision == "UNCERTAIN"
 
 
-@defect("QA-015", "S2")
 def test_backend_exception_does_not_crash_the_pipeline():
     out = run(FallbackBackend(Scripted("lora", mode="raise"), Scripted("base")))
     assert all(r["matcher_call"]["used"] == "fallback" for r in out["requirements"])
@@ -133,7 +131,6 @@ def test_handled_malformed_server_responses_are_uncertain(stub, body):
         assert_never_invented(r)
 
 
-@defect("QA-015", "S2")
 @pytest.mark.parametrize("body", [b"[]", b'{"choices": null}', b'{"choices": [{"message": {"content": ["MET"]}}]}'])
 def test_unhandled_malformed_server_responses_do_not_crash(stub, body):
     _Stub.body = body

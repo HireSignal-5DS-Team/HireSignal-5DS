@@ -1,0 +1,22 @@
+{
+  "name": "HireSignal RAG retrieval",
+  "nodes": [
+    {"parameters": {}, "name": "Manual Trigger", "type": "n8n-nodes-base.manualTrigger", "typeVersion": 1, "position": [0, 0]},
+    {"parameters": {"httpMethod": "POST", "path": "hiresignal-rag", "responseMode": "lastNode", "options": {}},
+     "name": "Webhook", "type": "n8n-nodes-base.webhook", "typeVersion": 2, "position": [0, 200], "webhookId": "hiresignal-rag"},
+    {"parameters": {"jsCode": "// Demo query when started manually; webhook calls pass their own body.\nconst b = $input.first().json.body;\nreturn [{json: b && b.query ? b : {query: 'experience programming in Python', top_k: 3, filters: {source_type: 'esco'}}}];"},
+     "name": "Build query", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [220, 100]},
+    {"parameters": {"method": "POST", "url": "http://localhost:8000/retrieve", "sendBody": true, "specifyBody": "json",
+                    "jsonBody": "={{ JSON.stringify($json) }}", "options": {}},
+     "name": "RAG retrieve", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2, "position": [440, 100]},
+    {"parameters": {"jsCode": "const r = $input.first().json;\nreturn [{json: {status: r.status, schema_version: r.schema_version, evidence: r.results.map(x => ({rank: x.rank, source: x.source_type, id: x.source_id, title: x.title, section: x.section, url: x.url}))}}];"},
+     "name": "Evidence for Matcher", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [660, 100]}
+  ],
+  "connections": {
+    "Manual Trigger": {"main": [[{"node": "Build query", "type": "main", "index": 0}]]},
+    "Webhook": {"main": [[{"node": "Build query", "type": "main", "index": 0}]]},
+    "Build query": {"main": [[{"node": "RAG retrieve", "type": "main", "index": 0}]]},
+    "RAG retrieve": {"main": [[{"node": "Evidence for Matcher", "type": "main", "index": 0}]]}
+  },
+  "settings": {}
+}

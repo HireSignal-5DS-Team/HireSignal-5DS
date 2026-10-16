@@ -13,7 +13,7 @@ when it receives a given model answer. It says nothing about how often the real 
 ```bash
 tests/qa/run_qa.sh                 # mock: matcher + benchmark tests + tests/qa; summary -> docs/qa/last_run_mock.txt
 HS_LIVE=1 HS_MATCHER_URL=http://127.0.0.1:8081/v1 HS_FALLBACK_URL=http://127.0.0.1:8080/v1 \
-  HIRESIGNAL_RAG_DIR=<rag> HS_RAG=bm25 HS_LIVE_OUT=benchmark/results/qa_live/<run-id> tests/qa/run_qa.sh --live
+  HIRESIGNAL_RAG_DIR=<rag> HS_RAG=bm25 HS_LIVE_OUT=docs/qa/live_runs/<run-id> tests/qa/run_qa.sh --live
 #   add HS_LIVE_JUDGE=1 to load the NLI Judge
 ```
 
@@ -22,6 +22,12 @@ The live run writes `provenance.json` (servers' `/models`, `backend.info()`, kno
 Cite that directory for any live claim. The harness was self-tested against a stub server that answers with the
 lexical baseline (MOCK, not committed). It runs end to end and fails on the negation and years traps, as expected
 until QA-002 and QA-004 are fixed.
+
+## Live runs
+
+- `live_runs/20261016T111644Z/`: LoRA + base on llama.cpp, validator v2, no RAG. 19 passed, 2 xfailed (QA-014, QA-028), 1 skipped (Judge). Summary in `FAILURES.md` (Window 1: LIVE QA suite).
+
+- `live_runs/20261016T115840Z/`: rerun after the S2 merge (`4f50045`). 20 passed, 1 xfailed (QA-014 residual), 1 skipped (Judge).
 
 ## Markers
 

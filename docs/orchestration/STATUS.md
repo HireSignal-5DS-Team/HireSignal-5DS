@@ -27,21 +27,18 @@ Open issues raised by this result:
    invent claims: it may only use the verified evidence quotes and cited RAG refs.
 4. The consolidated table shows adapter `n/a` for the LoRA runs. Provenance belongs in the report. Owner: S2.
 
-## Sessions (reviewed at 11:00Z; mock tests run by the orchestrator in `/home/user/hs-wt/<session>`)
+## Sessions (reviewed at 11:56Z; mock tests rerun by the orchestrator)
 
-| session | branch @ head | Claude session | delivered so far | blockers | tests (orchestrator rerun) |
+| session | branch @ head | Claude session | state | blockers | tests |
 |---|---|---|---|---|---|
-| 1 RAG | `session/s1-rag-optimization` @ `f30197a` | `session_013GKCTUT4EiMBH2Q8tVdquw` | merged team `rag/`; gated provider `rag.gated.v1`; per-requirement RAG error analysis; retrieval metrics (BM25 + dense); E2E comparison prepared, not run; `docs/rag/RAG_OPTIMIZATION.md` | none (window 1 open) | MOCK: 105 passed, 8 skipped |
-| 2 Matcher LoRA | `session/s2-matcher-lora-integration` @ `03b6431` | `session_01ReP1Qmd3Hq69cVnvLM4RZJ` | pinned LoRA provenance per result, `/v1/models` alias check, strict JSON repair, review routing, fake-server mock tests, live harness + smoke script; `docs/MATCHER_INTEGRATION.md` | none (window 1 open) | MOCK: 71 passed, 6 skipped |
-| 3 Soft prompt | `session/s3-matcher-soft-prompt` @ `88e1fb4` | `session_01Uxb7wkSL8FdicKUG7jGBk8` | PEFT prompt-tuning pipeline, 4-arm eval (one backend + dtype enforced), Kaggle bundle + notebook, tiny-model SMOKE run (all arms 0.061: random model, no valid JSON), tokenizer/PEFT compatibility check | **4B training needs a GPU**: CPU estimate about 8.5 h per soft prompt, about 20 h total; fp32 needs 16.1 GB. Not approved on CPU. Waiting on the owner to run `prompt_tuning/kaggle_soft_prompt.ipynb` on Kaggle | fixture defect fixed (`de4bd64`); orchestrator rerun with torch: 64 passed, 2 skipped |
-| 4 Bias Auditor | `session/s4-bias-auditor` @ `9173d6d` | `session_01QjD3VUqjjj6hLiUU5LegT1` | extended attributes + placebo floor, rules v2, prompted reviewer, adapter registry, fairness test set (dev/test/blind), paired McNemar, window-1 runner; `docs/BIAS_AUDITOR.md` | the evaluation session has its own LoRA bias re-audit queued: reuse it, do not duplicate | MOCK: 71 passed, 2 skipped |
-| 5 QA | `session/s5-qa-contracts` @ `91a88fb` | `session_015KY6nW8NkJuGZ2rB35uZGz` | contract, grounding, false-MET, citation, injection, Judge, bias and fallback tests; Judge fixes QA-017/018/019; live suite; `docs/qa/FAILURES.md` (18 open defects) | none | MOCK: 129 passed, 2 skipped, 26 xfailed |
-| 6 Orchestrator | `claude/beautiful-galileo-o36bdv` | `session_01CyLv8Vej3sAYAmPbyrDsJy` | plan, contracts, tracker, reviews | final E2E waits for window 2 | baseline MOCK: 50 passed, 1 skipped |
+| 1 RAG | `session/s1-rag-optimization` @ `864ccf8` | `session_013GKCTUT4EiMBH2Q8tVdquw` | gated provider `rag.gated.v1`; error analysis; retrieval metrics. Paired on reused eval predictions: LoRA BM25 vs none Δ macro-F1 −0.011 [−0.047, +0.021], McNemar p = 1.0 (not significant). **LIVE E2E running:** `lora__gated` 131/202; `lora__none` repeat next | not merged: E2E incomplete; QA-001, QA-023 open; owes S2 `knowledge_version` (QA-014) | MOCK at `f30197a`: 105 passed, 8 skipped |
+| 2 Matcher LoRA | merged (`04bac85`, from `598d958`) | `session_01ReP1Qmd3Hq69cVnvLM4RZJ` | LoRA primary + pinned provenance, fallback, strict JSON, review routing, grounded explanation, opt-in bias-auditor wiring (`HS_BIAS_AUDITOR`, default `rules_v1`). **LIVE smoke** `benchmark/results/live_smoke/20261016T113444Z` (ran before validator v2): 4/4 live tests, 14/14 checks | QA-014 (waits on S1), QA-027 (model-level, caught by validator) | merged branch MOCK: 200 passed, 5 skipped, 7 xfailed |
+| 3 Soft prompt | `session/s3-matcher-soft-prompt` @ `9c62328` | `session_01Uxb7wkSL8FdicKUG7jGBk8` | pipeline, 4-arm eval, Kaggle bundle + notebook, validating importer (97 checks), SMOKE run only | **owner decision: run the Kaggle notebook on a GPU.** CPU 4B training not approved (about 20 h) | MOCK: 74 passed, 2 skipped (with torch) |
+| 4 Bias Auditor | `session/s4-bias-auditor` @ `73bfe8c` | `session_01QjD3VUqjjj6hLiUU5LegT1` | rules v2, prompted reviewer. **LIVE (base Qwen3-4B reviewer):** holdout recall 25/26, FP 0/18 (same-author test set: upper bound). QA-016/020 fixed; QA-029 pre-registered flip analysis added; base-Matcher new-attribute arm running | not merged: LoRA flip-rate arm pending (torch install for adapter conversion) | MOCK at `d025a3d`: 179 passed, 1 skipped, 13 xfailed |
+| 5 QA | merged (`115f364`, from `a11296f`) | `session_015KY6nW8NkJuGZ2rB35uZGz` | contract/adversarial suites; validator v2 patch; false-MET analysis; **LIVE suite** `docs/qa/live_runs/20261016T111644Z`: 19 passed, 2 xfailed, 1 skipped; QA-029 found; Judge τ recheck (unchanged); QA-030 fixed | live Judge run needs the fine-tuned Judge checkpoint (not available in any session) | in integration branch |
+| 6 Orchestrator | `claude/beautiful-galileo-o36bdv` @ `04bac85` | `session_01CyLv8Vej3sAYAmPbyrDsJy` | S5 and S2 merged; validator v2 + narrow S2 cues; contract decisions QA-010/011 | final real E2E after S1 + S4 merges | integration MOCK: 200 passed, 5 skipped, 7 xfailed |
 
-Ownership check at 11:00Z: no session edited a file outside its ownership or a frozen contract. S2 added new files
-(`scripts/check_matcher_lora.py`, `scripts/live_smoke.{py,sh}`, `docs/matcher_integration/`); accepted.
-
-No session branch has been merged into the integration branch yet.
+Evaluation session (read-only): `claude/kind-albattani-k7qlt9` @ `e995669` — its LoRA bias audit is in progress; S4 will reuse it.
 
 ## Integration branch
 
@@ -70,3 +67,15 @@ No session branch has been merged into the integration branch yet.
 - 2026-10-16 11:05Z: LoRA evaluation complete (202/202). Window 1 opened. First review of all branches; S3 test defect found.
 - 2026-10-16 11:10Z: S3 fixture defect fixed and verified. S3 4B training waits on a Kaggle GPU run by the owner (not approved on CPU).
 - 2026-10-16 11:25Z: S5 merged; validator v2 applied and replay-verified on val (in-sample).
+- 2026-10-16 11:35Z: S5 LIVE suite on real models (docs/qa/live_runs/20261016T111644Z on S5 @ eb03c46): 19 passed,
+  2 xfailed (QA-014, QA-028 confirmed live), 1 skipped (Judge checkpoint absent). No unreviewed MET on 11 trap probes.
+  New LIVE finding QA-029 (name-header counterfactual flip on a borderline item) sent to S4.
+  Contract decisions QA-010 (`rag_refs` = knowledge shown to the model) and QA-011 (MISSING reviewed only for must)
+  recorded in ORCHESTRATION.md §3; the code already behaves this way.
+- 2026-10-16 11:56Z: S2 merged (6281fd8, 04bac85) + narrow intent cues (971f6fd). S1 LIVE gated arm at 131/202. Open owner decision: Kaggle GPU run for S3.
+- 2026-10-16 12:55Z: S1 merged (23799f4). LIVE LoRA E2E (val 202): none 0.908, bm25 0.897 (reused), gated 0.903,
+  none-repeat 0.905; gated vs none -0.005 [-0.028, +0.014], p=1.0 (noise floor -0.003). v2 replay: 0.929 / 0.926 /
+  0.924 / 0.925, false-MET 0 everywhere; review rate lower with RAG (0.59 vs 0.67, untested). **Production default
+  switched to HS_RAG=gated.** QA-001 and QA-014 closed. Integration MOCK (with rag/tests): 262 passed, 12 skipped,
+  3 xfailed. Eval session's LoRA bias audit: 1/30 flagged (name signal, borderline item), same as base (f22b97f).
+  Remaining before the final run: S4 merge (LoRA flip-rate arm), owner decision on the S3 Kaggle run.

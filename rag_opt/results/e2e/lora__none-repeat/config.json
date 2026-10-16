@@ -1,0 +1,38 @@
+{
+  "run_id": "lora__none-repeat",
+  "split": "val",
+  "limit": 0,
+  "knowledge": "none",
+  "k": 3,
+  "backend": {
+    "backend": "openai_compat",
+    "is_model": true,
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+    "label": "Qwen/Qwen3-4B-Instruct-2507+lora",
+    "provider": "local",
+    "base_url": "http://127.0.0.1:8081/v1",
+    "decoding": {
+      "temperature": 0,
+      "max_tokens": 192
+    },
+    "timeout_s": 300.0,
+    "max_retries": 2,
+    "prompt_version": "p1",
+    "adapter_id": null,
+    "revision": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M + HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora (llama.cpp --lora_path)"
+  },
+  "dataset_version": "bench-v1",
+  "dataset_sha256": "37c60915f2db377f22c5b08f4b9e708e05cd9363709e9c39815d8e8d93545198",
+  "git_commit": "864ccf844ef55adc8cd4a6627de9a93b13bfa335",
+  "hardware": {
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "python": "3.13.16",
+    "cpu_count": 4,
+    "ram_gb": 15.7,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.20.0",
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "load_seconds": 2.42
+}

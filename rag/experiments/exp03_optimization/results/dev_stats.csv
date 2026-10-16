@@ -1,0 +1,53 @@
+config,settings,base-only@1,cand-only@1,McNemar p,MRR diff,CI lo,CI hi
+structure@150 | e5-small,Matcher,5,1,0.219,-0.06,-0.127,-0.004
+structure@150 | e5-small,global,3,1,0.625,-0.08,-0.188,0.022
+structure@500 | e5-small,Matcher,2,1,1.0,-0.021,-0.071,0.025
+structure@500 | e5-small,global,2,3,1.0,0.014,-0.109,0.119
+sliding@100/15 | e5-small,Matcher,6,4,0.754,-0.049,-0.146,0.044
+sliding@100/15 | e5-small,global,7,6,1.0,-0.031,-0.255,0.18
+sliding@200/30 | e5-small,Matcher,3,1,0.625,-0.029,-0.087,0.025
+sliding@200/30 | e5-small,global,3,2,1.0,-0.06,-0.202,0.066
+sliding@300/45 | e5-small,Matcher,4,2,0.688,-0.033,-0.1,0.029
+sliding@300/45 | e5-small,global,4,2,0.688,-0.092,-0.261,0.072
+pc@1s | e5-small,Matcher,2,4,0.688,0.021,-0.042,0.087
+pc@1s | e5-small,global,3,3,1.0,0.046,-0.092,0.19
+pc@3s2 | e5-small,Matcher,1,4,0.375,0.037,-0.013,0.1
+pc@3s2 | e5-small,global,2,1,1.0,0.015,-0.083,0.13
+structure@300 | e5-base,Matcher,2,4,0.688,0.033,-0.036,0.102
+structure@300 | e5-base,global,6,3,0.508,-0.09,-0.277,0.084
+pc@1s | e5-base,Matcher,3,5,0.727,0.033,-0.042,0.115
+pc@1s | e5-base,global,5,4,1.0,0.015,-0.158,0.19
+structure@300 | e5-small > msmarco-l6@5,Matcher,4,5,1.0,-0.009,-0.101,0.08
+structure@300 | e5-small > msmarco-l6@5,global,2,6,0.289,0.106,-0.028,0.238
+structure@300 | e5-small > msmarco-l6@10,Matcher,4,5,1.0,-0.017,-0.116,0.075
+structure@300 | e5-small > msmarco-l6@10,global,2,8,0.109,0.182,0.013,0.35
+structure@300 | e5-small > msmarco-l6@20,Matcher,4,5,1.0,-0.017,-0.119,0.077
+structure@300 | e5-small > msmarco-l6@20,global,2,9,0.065,0.207,0.018,0.393
+structure@300 | e5-small > mmarco@5,Matcher,2,4,0.688,0.035,-0.025,0.098
+structure@300 | e5-small > mmarco@5,global,2,5,0.453,0.092,-0.021,0.212
+structure@300 | e5-small > mmarco@10,Matcher,2,4,0.688,0.023,-0.04,0.087
+structure@300 | e5-small > mmarco@10,global,2,5,0.453,0.14,0.021,0.263
+structure@300 | e5-small > mmarco@20,Matcher,3,5,0.727,0.031,-0.051,0.12
+structure@300 | e5-small > mmarco@20,global,2,5,0.453,0.166,0.043,0.287
+structure@300 | e5-small > bge@5,Matcher,1,4,0.375,0.044,-0.01,0.102
+structure@300 | e5-small > bge@5,global,2,4,0.688,0.072,-0.042,0.184
+structure@300 | e5-small > bge@10,Matcher,1,4,0.375,0.044,-0.01,0.102
+structure@300 | e5-small > bge@10,global,2,6,0.289,0.147,0.004,0.293
+structure@300 | e5-small > bge@20,Matcher,1,5,0.219,0.065,-0.01,0.15
+structure@300 | e5-small > bge@20,global,2,7,0.18,0.206,0.047,0.367
+structure@300 | e5-small > mmarco-int8@10,Matcher,4,4,1.0,-0.026,-0.118,0.06
+structure@300 | e5-small > mmarco-int8@10,global,1,5,0.219,0.137,0.022,0.267
+structure@300 | e5-small > bge-int8@10,Matcher,1,4,0.375,0.048,-0.006,0.106
+structure@300 | e5-small > bge-int8@10,global,2,7,0.18,0.175,0.02,0.332
+pc@1s | e5-small > mmarco@10,Matcher,2,4,0.688,0.023,-0.04,0.087
+pc@1s | e5-small > mmarco@10,global,2,6,0.289,0.182,0.039,0.325
+pc@1s | e5-small > bge@10,Matcher,1,4,0.375,0.044,-0.01,0.102
+pc@1s | e5-small > bge@10,global,2,7,0.18,0.185,0.024,0.356
+pc@1s | e5-base > mmarco@10,Matcher,2,5,0.453,0.048,-0.029,0.135
+pc@1s | e5-base > mmarco@10,global,2,6,0.289,0.208,0.071,0.348
+pc@1s | e5-base > bge@10,Matcher,1,5,0.219,0.06,-0.008,0.14
+pc@1s | e5-base > bge@10,global,2,8,0.109,0.255,0.083,0.433
+structure@300 | e5-base > mmarco@10,Matcher,2,5,0.453,0.048,-0.029,0.135
+structure@300 | e5-base > mmarco@10,global,3,6,0.508,0.147,-0.023,0.312
+structure@300 | e5-base > bge@10,Matcher,1,5,0.219,0.06,-0.008,0.14
+structure@300 | e5-base > bge@10,global,3,7,0.344,0.175,-0.011,0.362

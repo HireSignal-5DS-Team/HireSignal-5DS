@@ -1,0 +1,90 @@
+{
+ "n8n_version": "1.123.84",
+ "workflow": "rag/n8n/hiresignal_rag_workflow.json",
+ "trigger": "Manual Trigger via `n8n execute` (CLI)",
+ "status": "success",
+ "startedAt": "2026-10-13T18:25:09.861Z",
+ "stoppedAt": "2026-10-13T18:25:10.028Z",
+ "rag_api": "uvicorn api:app (BM25-only, structure chunking, no job postings loaded yet)",
+ "nodes_executed": [
+  "Manual Trigger",
+  "Build query",
+  "RAG retrieve",
+  "Evidence for Matcher"
+ ],
+ "evidence_for_matcher": {
+  "status": "found",
+  "schema_version": "0.1-provisional",
+  "evidence": [
+   {
+    "rank": 1,
+    "source": "esco",
+    "id": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+    "title": "Python (computer programming)",
+    "section": null,
+    "url": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d"
+   },
+   {
+    "rank": 2,
+    "source": "esco",
+    "id": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333",
+    "title": "use scripting programming",
+    "section": null,
+    "url": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333"
+   },
+   {
+    "rank": 3,
+    "source": "esco",
+    "id": "http://data.europa.eu/esco/skill/07dd856d-6141-48a7-a228-918f88494812",
+    "title": "create prototype of user experience solutions",
+    "section": null,
+    "url": "http://data.europa.eu/esco/skill/07dd856d-6141-48a7-a228-918f88494812"
+   }
+  ]
+ },
+ "webhook_test": {
+  "how": "n8n start (workflow active), POST http://127.0.0.1:5678/webhook/hiresignal-rag",
+  "results": {
+   "apprentissage automatique (BM25, after fix)": {
+    "status": "no_match",
+    "schema_version": "0.1-provisional",
+    "evidence": []
+   },
+   "Hadoop ecosystem": "status found, rank 1 = ESCO 'Hadoop' (e46291c7-...), rank 2 = 'MarkLogic'"
+  }
+ },
+ "webhook_test_dense": {
+  "rag_api": "RAG_MODEL=e5-small (dense, CPU)",
+  "query": "exploration de données",
+  "response": {
+   "status": "found",
+   "schema_version": "0.1-provisional",
+   "evidence": [
+    {
+     "rank": 1,
+     "source": "esco",
+     "id": "http://data.europa.eu/esco/skill/47a49cd6-097d-457a-9f7b-c290c14930d5",
+     "title": "analyse big data",
+     "section": null,
+     "url": "http://data.europa.eu/esco/skill/47a49cd6-097d-457a-9f7b-c290c14930d5"
+    },
+    {
+     "rank": 2,
+     "source": "esco",
+     "id": "http://data.europa.eu/esco/skill/4216e465-7baa-4884-a241-54b197bb9278",
+     "title": "perform data mining",
+     "section": null,
+     "url": "http://data.europa.eu/esco/skill/4216e465-7baa-4884-a241-54b197bb9278"
+    },
+    {
+     "rank": 3,
+     "source": "esco",
+     "id": "http://data.europa.eu/esco/skill/46990b9b-746e-481d-a66a-0cac3f07dfac",
+     "title": "find trends in geographic data",
+     "section": null,
+     "url": "http://data.europa.eu/esco/skill/46990b9b-746e-481d-a66a-0cac3f07dfac"
+    }
+   ]
+  }
+ }
+}
