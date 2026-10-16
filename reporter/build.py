@@ -39,6 +39,18 @@ def _bias_view(b):
                     requires_human_review=bool(b.get("requires_human_review")))
 
 
+def why_uncertain(row):
+    """Plain words for the rules that made a result UNCERTAIN (restating the pipeline's own reasons, nothing new)."""
+    from matcher.pipeline import _WHY_UNCERTAIN
+
+    reasons = row["review_reasons"]
+    if "matcher:backend_unavailable" in reasons:
+        return ["no Matcher model answered"]
+    if "matcher:output_unparseable" in reasons:
+        return ["the model's answer could not be read"]
+    return [_WHY_UNCERTAIN[r] for r in row["validator"]["reasons"] if r in _WHY_UNCERTAIN]
+
+
 def requirement_note(row):
     """Deterministic one-sentence note (also the fallback when the SLM text is rejected)."""
     d, basis = row["final_decision"], row["basis"]
@@ -50,6 +62,8 @@ def requirement_note(row):
         s = f'MISSING: the CV states "{q}", which does not meet it.'
     elif d == "MISSING":
         s = f"MISSING: {BASIS_WORDS.get(basis, basis)}."
+    elif why := why_uncertain(row):
+        s = f"UNCERTAIN: {'; '.join(why)}."
     else:
         s = f"UNCERTAIN: {BASIS_WORDS.get(basis, 'the evidence is unclear')}."
     return s + (" A human reviewer must check it." if row["requires_human_review"] else "")
@@ -67,7 +81,8 @@ def facts_for_requirement(row):
     """The verified facts the SLM may use for one requirement note (and the validator checks against)."""
     return {"requirement": row["requirement_text"], "kind": row["kind"] + "-have",
             "decision": row["final_decision"], "basis": row["basis"], "evidence_quotes": list(row["evidence"]),
-            "needs_human_review": bool(row["requires_human_review"])}
+            "needs_human_review": bool(row["requires_human_review"]),
+            **({"why_uncertain": why} if row["final_decision"] == "UNCERTAIN" and (why := why_uncertain(row)) else {})}
 
 
 def facts_for_summary(out):
