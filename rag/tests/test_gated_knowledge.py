@@ -63,9 +63,12 @@ def test_absent_skill_trap_gets_no_neighbouring_concepts(gated):
     assert len(legacy) == 3
 
 
-def test_sentence_query_uses_longest_label_span(gated):
+def test_sentence_query_needs_a_label_covering_the_sentence(gated):
     assert titles(gated.lookup(R("Ability to use concurrent programming"))) == ["use concurrent programming"]
-    assert titles(gated.lookup(R("experience programming in Python"))) == ["Python (computer programming)"]
+    assert gated.lookup(R("Working knowledge of database design")) == []  # not "database" + "design" separately
+    assert gated.lookup(R("experience programming in Python")) == []  # "Python" covers 1 of 2 content words
+    loose = GatedKnowledge(retriever=gated.retriever, sentence_min_cover=0.5)
+    assert titles(loose.lookup(R("experience programming in Python"))) == ["Python (computer programming)"]
 
 
 # -- relevance cut-off ------------------------------------------------------------------------------------------

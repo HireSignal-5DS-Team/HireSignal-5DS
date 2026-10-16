@@ -188,8 +188,9 @@ class GatedKnowledge:
 
     1. Gate: requirement categories in NO_KNOWLEDGE_CATEGORIES -> [] (prompt identical to the no-RAG prompt).
     2. Query = the requirement's skill terms (the requirement sentence when it has none; never CV text).
-    3. Exact ESCO preferred-label / alternative-label match (longest matching phrase of the sentence when there are
-       no skill terms). Ambiguous surface forms prefer the concept whose preferred label it is.
+    3. Exact ESCO preferred-label / alternative-label match. Without skill terms: the label inside the sentence that
+       covers all its content words (sentence_min_cover=1.0; stop words and template words like "ability to" are
+       ignored). Ambiguous surface forms prefer the concept whose preferred label it is.
     4. Otherwise retriever candidates (BM25, or dense through Qdrant) pass a relevance cut-off: one of the
        candidate's labels (preferred or alternative) must contain every content token of the query (stop words and
        inflection ignored) and at most `max_extra` other content tokens (default 0, i.e. the same words in any
@@ -204,7 +205,7 @@ class GatedKnowledge:
     uses_job = True
 
     def __init__(self, rag_dir=None, retriever=None, mode="bm25", per_term=1, max_extra=0, dense_tau=None,
-                 gate=NO_KNOWLEDGE_CATEGORIES, k_job=1, candidates=10, esco=None):
+                 gate=NO_KNOWLEDGE_CATEGORIES, k_job=1, candidates=10, esco=None, sentence_min_cover=1.0):
         rag_dir = Path(rag_dir or os.environ.get("HIRESIGNAL_RAG_DIR") or Path(__file__).parents[1] / "rag")
         if str(rag_dir) not in sys.path:
             sys.path.insert(0, str(rag_dir))
@@ -218,6 +219,7 @@ class GatedKnowledge:
         self.retriever, self.mode = retriever, mode
         self.per_term, self.max_extra, self.dense_tau = per_term, max_extra, dense_tau
         self.gate, self.k_job, self.candidates = frozenset(gate), k_job, candidates
+        self.sentence_min_cover = sentence_min_cover
         if esco is None:
             esco = [c for c in retriever.chunks if c.get("source_type") == "esco"]
         self.esco = {e["doc_id"]: e for e in esco}
@@ -239,19 +241,20 @@ class GatedKnowledge:
         return list(self.surface_index.get(surface(phrase), []))
 
     def _exact_in_sentence(self, text):
-        """Longest word spans of the sentence that are ESCO surface forms (non-overlapping, left to right)."""
-        words = surface(text).split()
-        found, used = [], set()
+        """The ESCO surface form inside the sentence that covers the largest share of the sentence's content words
+        (ties: the longer form); kept only if that share >= sentence_min_cover. One concept group at most, so a
+        sentence such as "database design" does not return "database" and "design" as two separate concepts."""
+        words, q = surface(text).split(), content_tokens(text)
+        best = None
         for n in range(len(words), 0, -1):
             for i in range(len(words) - n + 1):
-                span = range(i, i + n)
-                if used.intersection(span):
-                    continue
                 phrase = " ".join(words[i:i + n])
-                if phrase in self.surface_index and content_tokens(phrase):
-                    found.append((i, self.surface_index[phrase]))
-                    used.update(span)
-        return [ids for _, ids in sorted(found)]
+                toks = content_tokens(phrase)
+                if phrase in self.surface_index and toks and q:
+                    key = (len(toks & q) / len(q), n)
+                    if best is None or key > best[0]:
+                        best = (key, self.surface_index[phrase])
+        return [best[1]] if best and best[0][0] >= self.sentence_min_cover else []
 
     def _fuzzy(self, query):
         q = content_tokens(query)

@@ -143,7 +143,8 @@ def groups_of(rows, kind):
 
 def build_providers(dense):
     gated = GatedKnowledge()
-    prov = {"legacy rag.bm25 (k=3)": RagKnowledge(), gated.name: gated}
+    prov = {"legacy rag.bm25 (k=3)": RagKnowledge(), gated.name: gated,
+            gated.name + " (sentence_min_cover=0.5)": GatedKnowledge(retriever=gated.retriever, sentence_min_cover=0.5)}
     if dense:
         sys.path.insert(0, str(ROOT / "rag"))
         from corpus import build_chunks
@@ -155,9 +156,9 @@ def build_providers(dense):
         tau = thr["structure@300 | e5-small"]["esco"]
         r = Retriever(build_chunks("structure"), model="e5-small", store_path=ROOT / "rag/index")
         prov["legacy rag.qdrant.e5-small (k=3)"] = QdrantKnowledge(retriever=r)
-        g2 = GatedKnowledge(retriever=r, mode="dense", dense_tau=tau)
+        g2 = GatedKnowledge(retriever=r, mode="dense", dense_tau=tau, esco=gated.esco.values())
         prov[g2.name + f" (tau={tau:.4f})"] = g2
-        g3 = GatedKnowledge(retriever=r, mode="dense", dense_tau=None)
+        g3 = GatedKnowledge(retriever=r, mode="dense", dense_tau=None, esco=gated.esco.values())
         prov[g3.name + " (lexical cut-off only)"] = g3
     return gated, prov
 
