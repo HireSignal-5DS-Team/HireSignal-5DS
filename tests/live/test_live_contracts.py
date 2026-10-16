@@ -8,7 +8,7 @@ These are small adversarial probes, not the 202-requirement evaluation (that is 
 import os
 
 import pytest
-from _qa_support import CVX, JOB, defect, provenance_problems
+from _qa_support import CVX, JOB, provenance_problems
 from live_cases import POSITIVES, TRAPS, job_for
 
 from matcher import CV
@@ -107,7 +107,6 @@ def test_provenance_names_the_answering_model(live, recorder):
     recorder("provenance_rows", "full_job", {"backend": out["backend"], "knowledge": out["knowledge"]})
 
 
-@defect("QA-014", "S2")
 def test_provenance_is_complete(live):
     rep = live.matcher.match(CVX, JOB.model_copy(update={"requirements": JOB.requirements[:1]}))
     assert provenance_problems(rep.backend) == []
