@@ -1,0 +1,138 @@
+diff --git a/matcher/agent.py b/matcher/agent.py
+index 66a4440..5a93256 100644
+--- a/matcher/agent.py
++++ b/matcher/agent.py
+@@ -22,7 +22,17 @@ class Matcher:
+         return validate(answer, cv, req, refs, self.ref_year), info
+ 
+     def match(self, cv, job):
+-        results = [self.match_requirement(cv, r)[0] for r in job.requirements]
++        results, calls = [], {}
++        for r in job.requirements:
++            res, info = self.match_requirement(cv, r, job_id=job.job_id)
++            call = info["call"]
++            calls[r.req_id] = {k: call.get(k) for k in ("used", "model", "error", "primary_error") if k in call}
++            extra = (["backend_unavailable"] if call.get("error") else
++                     ["fallback_model_used"] if call.get("used") == "fallback" else [])
++            if extra:  # ORCHESTRATION §3.4: a fallback (or failed) answer goes to human review (QA-013)
++                res = res.model_copy(update={"needs_human_review": True, "review_reasons": res.review_reasons + extra,
++                                             "review_priority": "high" if res.review_priority == "high" else "medium"})
++            results.append(res)
+         musts = [r for r in results if r.kind == "must"]
+         met = sum(r.decision == "MET" for r in musts)
+         summary = MatchSummary(
+@@ -30,4 +40,5 @@ class Matcher:
+             must_total=len(musts), must_met=met, must_coverage=round(met / len(musts), 3) if musts else None,
+             needs_human_review=sum(r.needs_human_review for r in results))
+         return MatchReport(cv_id=cv.cv_id, job_id=job.job_id, results=results, summary=summary,
+-                           backend={**self.backend.info(), "knowledge": self.knowledge.name})
++                           backend={**self.backend.info(), "knowledge": self.knowledge.name,
++                                    "knowledge_version": getattr(self.knowledge, "version", None), "calls": calls})
+diff --git a/matcher/backends_api.py b/matcher/backends_api.py
+index 251d46f..8e94142 100644
+--- a/matcher/backends_api.py
++++ b/matcher/backends_api.py
+@@ -21,20 +21,24 @@ from . import prompt
+ 
+ class OpenAICompatBackend:
+     def __init__(self, base_url=None, model=None, api_key_env="HS_LLM_API_KEY", timeout=120.0, max_retries=2,
+-                 max_tokens=192, label=None, price_per_mtok=None, provider="local"):
++                 max_tokens=192, label=None, price_per_mtok=None, provider="local", base_revision=None,
++                 adapter_id=None, adapter_revision=None):
+         self.base_url = (base_url or os.environ.get("HS_LLM_BASE_URL", "http://127.0.0.1:8080/v1")).rstrip("/")
+         self.model = model or os.environ.get("HS_LLM_MODEL", "Qwen/Qwen3-4B-Instruct-2507")
+         self.api_key_env, self.timeout, self.max_retries, self.max_tokens = api_key_env, timeout, max_retries, max_tokens
+         self.label, self.provider = label or self.model, provider
+         self.price_per_mtok = price_per_mtok  # (input, output) USD per 1M tokens, only for cost estimates
++        self.base_revision = base_revision or os.environ.get("HS_LLM_REVISION")
++        self.adapter_id, self.adapter_revision = adapter_id, adapter_revision
+         self.last_call, self.totals = {}, {"calls": 0, "errors": 0, "prompt_tokens": 0, "completion_tokens": 0}
+ 
+     def info(self):
+         return {"backend": "openai_compat", "is_model": True, "model_id": self.model, "label": self.label,
+                 "provider": self.provider, "base_url": self.base_url if self.provider == "local" else "<hosted>",
+                 "decoding": {"temperature": 0, "max_tokens": self.max_tokens}, "timeout_s": self.timeout,
+-                "max_retries": self.max_retries, "prompt_version": prompt.PROMPT_VERSION, "adapter_id": None,
+-                "revision": os.environ.get("HS_LLM_REVISION")}
++                "max_retries": self.max_retries, "prompt_version": prompt.PROMPT_VERSION,
++                "base_revision": self.base_revision, "revision": self.base_revision,
++                "adapter_id": self.adapter_id, "adapter_revision": self.adapter_revision}
+ 
+     def _post(self, payload):
+         headers = {"Content-Type": "application/json"}
+@@ -52,10 +56,14 @@ class OpenAICompatBackend:
+         for attempt in range(1, self.max_retries + 2):
+             try:
+                 out = self._post(payload)
++                content = out["choices"][0]["message"]["content"]
++                if content is not None and not isinstance(content, str):
++                    raise TypeError(f"message content is {type(content).__name__}, not a string")
+                 usage = out.get("usage") or {}
+                 self._record(t0, attempt, None, usage)
+-                return out["choices"][0]["message"]["content"] or ""
+-            except (urllib.error.URLError, TimeoutError, OSError, KeyError, IndexError, json.JSONDecodeError) as e:
++                return content or ""
++            except (urllib.error.URLError, TimeoutError, OSError, KeyError, IndexError, TypeError, AttributeError,
++                    ValueError) as e:  # ValueError covers json.JSONDecodeError; malformed bodies never escape (QA-015)
+                 err = f"{type(e).__name__}: {str(e)[:200]}"
+                 if isinstance(e, urllib.error.HTTPError) and e.code in (400, 401, 403, 404):
+                     break  # not retryable
+@@ -90,12 +98,20 @@ class FallbackBackend:
+         return {"backend": "fallback", "is_model": True, "primary": self.primary.info(), "fallback": self.fallback.info(),
+                 "model_id": self.primary.info().get("model_id"), "prompt_version": prompt.PROMPT_VERSION}
+ 
++    @staticmethod
++    def _call(backend, task):
++        """(raw, last_call) of one backend; an exception counts as a transport failure, never a crash (QA-015)."""
++        try:
++            raw = backend.generate(task)
++            return raw, dict(getattr(backend, "last_call", None) or {})
++        except Exception as e:  # noqa: BLE001
++            return "", {"error": f"{type(e).__name__}: {str(e)[:200]}"}
++
+     def generate(self, task):
+-        raw = self.primary.generate(task)
+-        if not self.primary.last_call.get("error"):
+-            self.last_call = {**self.primary.last_call, "used": "primary", "model": self.primary.model}
++        raw, call = self._call(self.primary, task)
++        if not call.get("error"):
++            self.last_call = {**call, "used": "primary", "model": self.primary.model}
+             return raw
+-        raw = self.fallback.generate(task)
+-        self.last_call = {**self.fallback.last_call, "used": "fallback", "model": self.fallback.model,
+-                          "primary_error": self.primary.last_call["error"]}
++        raw, fcall = self._call(self.fallback, task)
++        self.last_call = {**fcall, "used": "fallback", "model": self.fallback.model, "primary_error": call["error"]}
+         return raw
+diff --git a/matcher/factory.py b/matcher/factory.py
+index 03ba1d7..addc484 100644
+--- a/matcher/factory.py
++++ b/matcher/factory.py
+@@ -15,6 +15,8 @@ from .backends_api import FallbackBackend, OpenAICompatBackend
+ from .knowledge import NoKnowledge, QdrantKnowledge, RagKnowledge
+ from .pipeline import Pipeline
+ 
++BASE_REVISION = "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M"  # ORCHESTRATION §4 serving build
++ADAPTER = ("HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora", "0b6925b1")  # docs/AGENT_PIPELINE.md
+ PRETRAINED_JUDGE = ("MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli", 0.65)
+ FINETUNED_JUDGE = ("/home/user/judge_runs/deberta-hs-v1/best", 0.85)
+ 
+@@ -33,13 +35,16 @@ def build(env=None, knowledge=None, judge=None):
+     env = dict(os.environ if env is None else env)
+     primary = OpenAICompatBackend(base_url=env.get("HS_MATCHER_URL", "http://127.0.0.1:8081/v1"),
+                                   model=env.get("HS_MATCHER_MODEL", "Qwen/Qwen3-4B-Instruct-2507+lora"),
+-                                  timeout=float(env.get("HS_TIMEOUT", 300)), label="matcher-lora")
++                                  timeout=float(env.get("HS_TIMEOUT", 300)), label="matcher-lora",
++                                  base_revision=env.get("HS_BASE_REVISION", BASE_REVISION),
++                                  adapter_id=env.get("HS_MATCHER_ADAPTER", ADAPTER[0]),
++                                  adapter_revision=env.get("HS_MATCHER_ADAPTER_REVISION", ADAPTER[1]))
+     backend = primary
+     if env.get("HS_FALLBACK", "on") != "off":
+         backend = FallbackBackend(primary, OpenAICompatBackend(
+             base_url=env.get("HS_FALLBACK_URL", "http://127.0.0.1:8080/v1"),
+             model=env.get("HS_FALLBACK_MODEL", "Qwen/Qwen3-4B-Instruct-2507"), timeout=float(env.get("HS_TIMEOUT", 300)),
+-            label="matcher-base-fallback"))
++            label="matcher-base-fallback", base_revision=env.get("HS_BASE_REVISION", BASE_REVISION)))
+     if knowledge is None:
+         rag = env.get("HS_RAG", "bm25")
+         knowledge = {"none": NoKnowledge, "bm25": RagKnowledge, "qdrant": QdrantKnowledge}[rag]()

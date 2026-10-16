@@ -98,8 +98,8 @@ def test_provenance_names_the_answering_model(live, recorder):
 
 @defect("QA-014", "S2")
 def test_provenance_is_complete(live):
-    backend = {**live.matcher.backend.info(), "knowledge": live.matcher.knowledge.name}
-    assert provenance_problems(backend) == []
+    rep = live.matcher.match(CVX, JOB.model_copy(update={"requirements": JOB.requirements[:1]}))
+    assert provenance_problems(rep.backend) == []
 
 
 def test_fallback_serves_when_primary_is_unreachable(servers, recorder):

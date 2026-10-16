@@ -75,8 +75,9 @@ def provenance_problems(backend):
     primary = backend.get("primary", backend)
     flat = {**primary, **{k: v for k, v in backend.items() if k != "primary"}}
     out = [k for k in REQUIRED_PROVENANCE if k not in flat]
-    if "base_revision" in flat and not flat.get("base_revision"):
-        out.append("base_revision is empty")
+    for k in ("base_revision", "knowledge_version", "prompt_version"):
+        if k in flat and not flat.get(k):
+            out.append(f"{k} is empty")
     if flat.get("model_id", "").endswith("+lora") and not (flat.get("adapter_id") and flat.get("adapter_revision")):
         out.append("LoRA primary without adapter repo + sha")
     return out

@@ -150,10 +150,16 @@ def test_provenance_records_prompt_and_knowledge():
 
 
 @defect("QA-014", "S2")
-def test_production_provenance_is_complete():
+def test_production_provenance_is_complete(monkeypatch):
+    """MatchReport.backend of the factory-built Matcher (LoRA primary + base fallback) names model, base revision,
+    adapter repo + sha, knowledge provider + version and prompt id. The HTTP call is stubbed (MOCK)."""
+    from matcher.backends_api import OpenAICompatBackend
+
+    canned = {"choices": [{"message": {"content": ans(*GOOD["r1"])}}], "usage": {}}
+    monkeypatch.setattr(OpenAICompatBackend, "_post", lambda self, payload: canned)
     p = build({"HS_JUDGE": "off"}, knowledge=knowledge.NoKnowledge())
-    backend = {**p.matcher.backend.info(), "knowledge": p.matcher.knowledge.name}
-    assert provenance_problems(backend) == []
+    rep = Matcher(p.matcher.backend, p.matcher.knowledge).match(CVX, JOB.model_copy(update={"requirements": JOB.requirements[:1]}))
+    assert provenance_problems(rep.backend) == []
 
 
 @defect("QA-013", "S2")
