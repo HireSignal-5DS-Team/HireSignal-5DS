@@ -6,7 +6,7 @@ is never replaced.
 
 ```
 Parser (StructuredInputParser; teammates' Reader/Profile/Job agents not integrated yet)
-  -> RAG knowledge per requirement (HS_RAG = none | bm25 | qdrant; CV text never sent)
+  -> RAG knowledge per requirement (HS_RAG = gated (default) | bm25 | qdrant | gated-qdrant | none; CV text never sent)
   -> Matcher: fine-tuned Qwen3-4B + LoRA (primary)  --transport failure-->  original Qwen3-4B (fallback)
      strict JSON parse -> form-only repair (never a new decision) ; provenance of the answering model per result
   -> Deterministic Validator (JSON schema, exact CV quotes + spans, years, consistency)

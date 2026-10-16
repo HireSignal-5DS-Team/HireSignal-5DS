@@ -289,9 +289,9 @@ def test_pinned_config_matches_hub_evidence_and_eval_run():
 def test_production_default_keeps_rag_and_lora_primary(monkeypatch):
     built = {}
     import matcher.factory as fac
-    monkeypatch.setattr(fac, "RagKnowledge", lambda: built.setdefault("k", NoKnowledge()))
+    monkeypatch.setattr(fac, "_knowledge_attr", lambda name: lambda: built.setdefault(name, NoKnowledge()))
     p = build({"HS_JUDGE": "off"})
-    assert "k" in built  # HS_RAG unset -> bm25 RAG provider, never "none" by default
+    assert "GatedKnowledge" in built  # HS_RAG unset -> gated RAG provider (rag.gated.v1), never "none" by default
     b = p.matcher.backend
     assert isinstance(b, FallbackBackend) and isinstance(b.primary, OpenAICompatBackend)
     assert b.primary.base_url.endswith(":8081/v1") and b.primary.model == LORA_ALIAS

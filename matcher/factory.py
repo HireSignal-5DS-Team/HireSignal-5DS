@@ -7,8 +7,9 @@ Matcher : HS_MATCHER_URL / HS_MATCHER_MODEL   primary   (default: fine-tuned LoR
           HS_TIMEOUT (s, default 300), HS_MAX_RETRIES (default 2) per endpoint before falling back.
 Decoding: HS_JSON_SCHEMA = off (default) | fallback | all: constrain the named endpoint(s) to the ModelAnswer JSON
           schema (llama.cpp grammar). Recorded in provenance; measure on val before enabling.
-RAG     : HS_RAG = none | bm25 | qdrant | gated | gated-qdrant (S1's rag.gated.v1, needs S1 merged) (default bm25: the measured best ESCO provider is still "none" or "bm25", see
-          docs; qdrant = team dense index, persisted under HIRESIGNAL_RAG_DIR/index)
+RAG     : HS_RAG = none | bm25 | qdrant | gated | gated-qdrant (default gated = S1's rag.gated.v1 over BM25: on the LIVE
+          LoRA val run it matches no-RAG macro-F1 within noise and keeps BM25's alias gain without its false-MET rise,
+          see rag_opt/results/e2e/e2e_report.md; qdrant = team dense index under HIRESIGNAL_RAG_DIR/index)
 Judge   : HS_JUDGE_DIR (fine-tuned DeBERTa; if missing, the pretrained MoritzLaurer model) and HS_JUDGE_TAU
           (calibrated on train-dev: 0.85 fine-tuned, 0.65 pretrained); HS_JUDGE=off disables
 Bias    : HS_BIAS_AUDITOR = rules_v1 (default, matcher.bias_audit) | rules_v2 | rules_v2+reviewer (S4, bias/auditor.py).
@@ -113,7 +114,7 @@ def build(env=None, knowledge=None, judge=None):
             max_retries=int(env.get("HS_MAX_RETRIES", 2)), label="matcher-base-fallback", provenance=prov_f,
             response_schema=schema if js in ("fallback", "all") else None))
     if knowledge is None:
-        rag = env.get("HS_RAG", "bm25")
+        rag = env.get("HS_RAG", "gated")
         providers = {"none": NoKnowledge, "bm25": RagKnowledge, "qdrant": QdrantKnowledge,
                      "gated": lambda: _knowledge_attr("GatedKnowledge")(),
                      "gated-qdrant": lambda: _gated_qdrant(env)}
