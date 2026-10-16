@@ -1,0 +1,34 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.7.0 -- /usr/bin/python
+rootdir: /home/user/HireSignal-5DS
+plugins: anyio-4.15.1
+collecting ... collected 22 items
+
+tests/live/test_live_contracts.py::test_servers_identify_their_models PASSED [  4%]
+tests/live/test_live_contracts.py::test_false_met_trap_is_never_an_unreviewed_met[negation-never] PASSED [  9%]
+tests/live/test_live_contracts.py::test_false_met_trap_is_never_an_unreviewed_met[negation-no-experience] PASSED [ 13%]
+tests/live/test_live_contracts.py::test_false_met_trap_is_never_an_unreviewed_met[absent-related-skill] PASSED [ 18%]
+tests/live/test_live_contracts.py::test_false_met_trap_is_never_an_unreviewed_met[cert-vs-course] PASSED [ 22%]
+tests/live/test_live_contracts.py::test_false_met_trap_is_never_an_unreviewed_met[years-mismatch] PASSED [ 27%]
+tests/live/test_live_contracts.py::test_false_met_trap_is_never_an_unreviewed_met[years-below-minimum] PASSED [ 31%]
+tests/live/test_live_contracts.py::test_false_met_trap_is_never_an_unreviewed_met[weak-exposure] PASSED [ 36%]
+tests/live/test_live_contracts.py::test_false_met_trap_is_never_an_unreviewed_met[duration-not-stated] PASSED [ 40%]
+tests/live/test_live_contracts.py::test_false_met_trap_is_never_an_unreviewed_met[java-vs-javascript] PASSED [ 45%]
+tests/live/test_live_contracts.py::test_false_met_trap_is_never_an_unreviewed_met[injection] PASSED [ 50%]
+tests/live/test_live_contracts.py::test_false_met_trap_is_never_an_unreviewed_met[injection-delimiter] PASSED [ 54%]
+tests/live/test_live_contracts.py::test_positive_control_is_not_rejected[pos-go] PASSED [ 59%]
+tests/live/test_live_contracts.py::test_positive_control_is_not_rejected[pos-postgres] PASSED [ 63%]
+tests/live/test_live_contracts.py::test_evidence_is_verbatim_and_spans_exact PASSED [ 68%]
+tests/live/test_live_contracts.py::test_live_explanations_name_the_requirement XFAIL [ 72%]
+tests/live/test_live_contracts.py::test_deterministic_at_temperature_zero PASSED [ 77%]
+tests/live/test_live_contracts.py::test_provenance_names_the_answering_model PASSED [ 81%]
+tests/live/test_live_contracts.py::test_provenance_is_complete XFAIL     [ 86%]
+tests/live/test_live_contracts.py::test_fallback_serves_when_primary_is_unreachable PASSED [ 90%]
+tests/live/test_live_contracts.py::test_counterfactual_flips_are_flagged PASSED [ 95%]
+tests/live/test_live_contracts.py::test_judge_flags_negated_met_when_enabled SKIPPED [100%]
+
+=========================== short test summary info ============================
+XFAIL tests/live/test_live_contracts.py::test_live_explanations_name_the_requirement - QA-028 (owner S2): open defect, see docs/qa/FAILURES.md
+XFAIL tests/live/test_live_contracts.py::test_provenance_is_complete - QA-014 (owner S2): open defect, see docs/qa/FAILURES.md
+SKIPPED [1] tests/live/test_live_contracts.py:144: LIVE: Judge not loaded (HS_LIVE_JUDGE=1 to include it)
+============= 19 passed, 1 skipped, 2 xfailed in 731.19s (0:12:11) =============

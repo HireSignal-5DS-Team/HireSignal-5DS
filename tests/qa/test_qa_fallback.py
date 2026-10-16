@@ -2,7 +2,6 @@
 Rule under test: a failure gives UNCERTAIN + human review, never an invented decision. MOCK servers (a local HTTP
 stub that speaks the OpenAI chat-completions shape), no model.
 """
-import json
 import threading
 from http.server import BaseHTTPRequestHandler, HTTPServer
 

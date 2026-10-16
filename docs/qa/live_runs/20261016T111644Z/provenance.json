@@ -1,0 +1,86 @@
+{
+  "label": "LIVE",
+  "git_commit": "8f058ad9b12cdc91fc42c6099a3dff45b1b81d8d",
+  "created_utc": "2026-10-16T11:16:54.676189+00:00",
+  "servers": {
+    "primary": {
+      "url": "http://127.0.0.1:8081/v1",
+      "models": {
+        "object": "list",
+        "data": [
+          {
+            "id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+            "object": "model",
+            "owned_by": "me",
+            "permissions": []
+          }
+        ]
+      }
+    },
+    "fallback": {
+      "url": "http://127.0.0.1:8080/v1",
+      "models": {
+        "object": "list",
+        "data": [
+          {
+            "id": "Qwen/Qwen3-4B-Instruct-2507",
+            "object": "model",
+            "owned_by": "me",
+            "permissions": []
+          }
+        ]
+      }
+    }
+  },
+  "backend": {
+    "backend": "fallback",
+    "is_model": true,
+    "primary": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+      "label": "matcher-lora",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8081/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 2,
+      "prompt_version": "p1",
+      "adapter_id": null,
+      "revision": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M + HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a (llama.cpp --lora_path)"
+    },
+    "fallback": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "label": "matcher-base-fallback",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8080/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 2,
+      "prompt_version": "p1",
+      "adapter_id": null,
+      "revision": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M + HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a (llama.cpp --lora_path)"
+    },
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+    "prompt_version": "p1"
+  },
+  "knowledge": "none",
+  "judge": null,
+  "env": {
+    "HS_FALLBACK_URL": "http://127.0.0.1:8080/v1",
+    "HS_TIMEOUT": "300",
+    "HS_LIVE_OUT": "benchmark/results/qa_live/20261016T111644Z",
+    "HS_LLM_REVISION": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M + HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a (llama.cpp --lora_path)",
+    "HS_RAG": "none",
+    "HS_LIVE": "1",
+    "HS_MATCHER_URL": "http://127.0.0.1:8081/v1"
+  }
+}
