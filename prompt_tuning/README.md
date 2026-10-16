@@ -183,7 +183,7 @@ This needs a Kaggle account with GPU quota, which means the project owner. The w
 ```bash
 python -m pytest prompt_tuning/tests          # must pass first
 python -m prompt_tuning.make_bundle
-# -> prompt_tuning/dist/hiresignal_soft_prompt_bundle.zip (≈ 283 KB, 48 files; no test split; dist/ is gitignored)
+# -> prompt_tuning/dist/hiresignal_soft_prompt_bundle.zip (≈ 290 KB, 49 files; no test split; dist/ is gitignored)
 ```
 
 `make_bundle` refuses to build if `sft_train.jsonl`, `sft_val.jsonl` or `val_prompts.jsonl` no longer match the
