@@ -1,0 +1,35 @@
+{
+ "rule": "PLAN.md selection rule",
+ "baseline": [
+  "structure",
+  "dense:e5-small"
+ ],
+ "selected": [
+  "structure",
+  "dense:e5-small"
+ ],
+ "changed": false,
+ "best_dev_candidate_by_MRR": [
+  "structure",
+  "dense:e5-small > rerank"
+ ],
+ "qualifying_candidates": [],
+ "evaluate_on_holdout": [
+  [
+   "structure",
+   [
+    "dense:e5-small"
+   ],
+   null,
+   false
+  ],
+  [
+   "structure",
+   [
+    "dense:e5-small"
+   ],
+   null,
+   true
+  ]
+ ]
+}

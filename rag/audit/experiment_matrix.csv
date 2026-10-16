@@ -1,0 +1,59 @@
+Experiment,Configuration,n,Hit@1,MRR,Recall@5,nDCG@10,EN MRR,FR MRR (n),p95 ms,Memory MB
+exp01-reviewed,fixed + - + bm25,40,28,0.762,0.85,0.79,0.838,0.333 (6),1 (single-shot),N/A
+exp01-reviewed,fixed + e5-small + dense,40,29,0.835,0.975,0.871,0.865,0.667 (6),149 (single-shot),N/A
+exp01-reviewed,fixed + e5-small + hybrid,40,31,0.854,0.95,0.884,0.891,0.639 (6),135 (single-shot),N/A
+exp01-reviewed,fixed + bge-m3 + dense,40,29,0.815,0.95,0.854,0.835,0.7 (6),2211 (single-shot),N/A
+exp01-reviewed,fixed + bge-m3 + hybrid,40,30,0.847,0.975,0.879,0.887,0.617 (6),315 (single-shot),N/A
+exp01-reviewed,structure + - + bm25,40,26,0.73,0.825,0.765,0.8,0.333 (6),1 (single-shot),N/A
+exp01-reviewed,structure + e5-small + dense,40,31,0.865,0.975,0.893,0.885,0.75 (6),134 (single-shot),N/A
+exp01-reviewed,structure + e5-small + hybrid,40,29,0.829,0.95,0.865,0.862,0.639 (6),133 (single-shot),N/A
+exp01-reviewed,structure + bge-m3 + dense,40,31,0.846,0.95,0.878,0.842,0.867 (6),316 (single-shot),N/A
+exp01-reviewed,structure + bge-m3 + hybrid,40,30,0.847,0.975,0.879,0.873,0.7 (6),303 (single-shot),N/A
+exp02-dev,structure + dense:e5-small,40,31,0.865,0.975,0.893,0.885,0.75 (6),175 (single-shot),379
+exp02-dev,fixed + dense:e5-small,40,31,0.858,0.975,0.888,0.877,0.75 (6),132 (single-shot),379
+exp02-dev,fixed + bm25,40,25,0.722,0.825,0.759,0.79,0.333 (6),0 (single-shot),0
+exp02-dev,structure + bm25,40,26,0.73,0.825,0.765,0.8,0.333 (6),0 (single-shot),0
+exp02-dev,recursive + dense:e5-small,40,29,0.835,0.975,0.871,0.865,0.667 (6),123 (single-shot),379
+exp02-dev,recursive + bm25,40,25,0.723,0.825,0.761,0.792,0.333 (6),0 (single-shot),0
+exp02-dev,semantic + dense:e5-small,40,31,0.86,0.975,0.89,0.88,0.75 (6),132 (single-shot),379
+exp02-dev,semantic + bm25,40,24,0.714,0.825,0.754,0.782,0.333 (6),0 (single-shot),0
+exp02-dev,sliding + dense:e5-small,40,29,0.835,0.975,0.871,0.865,0.667 (6),127 (single-shot),379
+exp02-dev,sliding + bm25,40,28,0.762,0.85,0.79,0.838,0.333 (6),0 (single-shot),0
+exp02-dev,sentence + dense:e5-small,40,31,0.856,0.975,0.886,0.875,0.75 (6),134 (single-shot),379
+exp02-dev,sentence + bm25,40,27,0.748,0.825,0.779,0.822,0.333 (6),0 (single-shot),0
+exp02-dev,parent_child + dense:e5-small,40,33,0.885,0.975,0.908,0.909,0.75 (6),132 (single-shot),379
+exp02-dev,parent_child + bm25,40,26,0.732,0.825,0.767,0.817,0.25 (6),0 (single-shot),0
+exp02-dev,structure + tfidf,40,27,0.74,0.825,0.773,0.812,0.333 (6),1 (single-shot),0
+exp02-dev,structure + dense:minilm,40,24,0.732,0.9,0.78,0.77,0.517 (6),116 (single-shot),76
+exp02-dev,structure + dense:e5-base,40,33,0.897,0.975,0.923,0.894,0.917 (6),170 (single-shot),384
+exp02-dev,structure + dense:bge-m3,40,31,0.846,0.95,0.878,0.842,0.867 (6),319 (single-shot),235
+exp02-dev,structure + bm25+dense:e5-small RRF,40,29,0.829,0.95,0.865,0.862,0.639 (6),133 (single-shot),379
+exp02-dev,structure + bm25+dense:bge-m3 RRF,40,30,0.847,0.975,0.879,0.873,0.7 (6),349 (single-shot),235
+exp02-dev,structure + dense:e5-small > rerank,40,35,0.929,1.0,0.947,0.917,1.0 (6),19109 (single-shot),890
+exp03-dev,structure@150 + e5-small,40,27,0.804,0.975,0.848,0.814,0.75 (6),127 (single-shot),378
+exp03-dev,structure@300 + e5-small,40,31,0.865,0.975,0.893,0.885,0.75 (6),128 (repeated),378
+exp03-dev,structure@500 + e5-small,40,30,0.844,0.975,0.877,0.86,0.75 (6),123 (single-shot),378
+exp03-dev,sliding@100/15 + e5-small,40,29,0.815,0.975,0.855,0.85,0.617 (6),119 (single-shot),378
+exp03-dev,sliding@200/30 + e5-small,40,29,0.835,0.975,0.871,0.865,0.667 (6),125 (single-shot),378
+exp03-dev,sliding@300/45 + e5-small,40,29,0.831,0.975,0.868,0.86,0.667 (6),136 (single-shot),378
+exp03-dev,pc@1s + e5-small,40,33,0.885,0.975,0.908,0.909,0.75 (6),130 (repeated),378
+exp03-dev,pc@3s2 + e5-small,40,34,0.902,0.975,0.921,0.929,0.75 (6),132 (repeated),378
+exp03-dev,structure@300 + e5-base,40,33,0.897,0.975,0.923,0.894,0.917 (6),164 (repeated),153
+exp03-dev,pc@1s + e5-base,40,33,0.897,0.975,0.923,0.894,0.917 (6),170 (repeated),153
+exp03-dev,structure@300 + e5-small > msmarco-l6@5,40,32,0.856,0.975,0.885,0.927,0.45 (6),361 (single-shot),453
+exp03-dev,structure@300 + e5-small > msmarco-l6@10,40,32,0.847,0.875,0.877,0.925,0.41 (6),536 (single-shot),453
+exp03-dev,structure@300 + e5-small > msmarco-l6@20,40,32,0.848,0.9,0.873,0.922,0.431 (6),644 (single-shot),453
+exp03-dev,structure@300 + e5-small > mmarco@5,40,33,0.9,0.975,0.92,0.912,0.833 (6),636 (repeated),517
+exp03-dev,structure@300 + e5-small > mmarco@10,40,33,0.887,0.975,0.91,0.897,0.833 (6),1081 (repeated),517
+exp03-dev,structure@300 + e5-small > mmarco@20,40,33,0.895,0.95,0.921,0.877,1.0 (6),1309 (repeated),517
+exp03-dev,structure@300 + e5-small > bge@5,40,34,0.908,0.975,0.926,0.922,0.833 (6),5366 (repeated),529
+exp03-dev,structure@300 + e5-small > bge@10,40,34,0.908,0.975,0.926,0.922,0.833 (6),10211 (single-shot),529
+exp03-dev,structure@300 + e5-small > bge@20,40,35,0.929,1.0,0.947,0.917,1.0 (6),11606 (single-shot),529
+exp03-dev,structure@300 + e5-small > mmarco-int8@10,40,31,0.838,0.925,0.871,0.839,0.833 (6),979 (single-shot),582
+exp03-dev,structure@300 + e5-small > bge-int8@10,40,34,0.912,0.975,0.929,0.926,0.833 (6),6084 (repeated),2082
+exp03-dev,pc@1s + e5-small > mmarco@10,40,33,0.887,0.975,0.91,0.897,0.833 (6),1050 (repeated),517
+exp03-dev,pc@1s + e5-small > bge@10,40,34,0.908,0.975,0.926,0.922,0.833 (6),10388 (single-shot),529
+exp03-dev,pc@1s + e5-base > mmarco@10,40,34,0.912,0.975,0.934,0.897,1.0 (6),1058 (repeated),292
+exp03-dev,pc@1s + e5-base > bge@10,40,35,0.925,0.975,0.944,0.912,1.0 (6),10198 (single-shot),304
+exp03-dev,structure@300 + e5-base > mmarco@10,40,34,0.912,0.975,0.934,0.897,1.0 (6),1107 (repeated),292
+exp03-dev,structure@300 + e5-base > bge@10,40,35,0.925,0.975,0.944,0.912,1.0 (6),10065 (single-shot),304
