@@ -36,7 +36,7 @@ JUDGE_MODELS = {
     "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli": {"revision": "6f5cf0a2b59cabb106aca4c287eed12e357e90eb",
                                                      "licence": "mit", "tau_pass": 0.4, "tau_fail": 0.65, "hypothesis": "v1"},
 }
-JUDGE_DEFAULT = "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli"
+JUDGE_DEFAULT = "cross-encoder/nli-deberta-v3-xsmall"  # owner spec; base (AUROC 0.94 vs 0.75 on val) via HS_JUDGE_MODEL
 PRETRAINED_JUDGE = (JUDGE_DEFAULT, JUDGE_MODELS[JUDGE_DEFAULT]["tau_fail"])
 FINETUNED_JUDGE = ("/home/user/judge_runs/deberta-hs-v1/best", 0.85)  # never published; used only if present
 JudgeConfig = namedtuple("JudgeConfig", "model tau_pass name revision tau_fail hypothesis")

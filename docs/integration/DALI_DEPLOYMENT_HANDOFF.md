@@ -45,7 +45,7 @@ Suggested endpoints (your choice): `POST /match` (CV + Job JSON -> PipelineOutpu
 | Matcher primary | `Qwen/Qwen3-4B-Instruct-2507` + LoRA `HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora` | base `cdbee75f`, adapter `0b6925b1` |
 | Matcher weights | `unsloth/Qwen3-4B-Instruct-2507-GGUF`, `Qwen3-4B-Instruct-2507-Q4_K_M.gguf` | `a06e946b` |
 | Matcher fallback | same GGUF, no adapter | — |
-| Judge (NLI) | today `MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli` (pretrained, τ 0.65); S7 is evaluating `cross-encoder/nli-deberta-v3-xsmall` and will publish the chosen default | announced on merge |
+| Judge (NLI) | `cross-encoder/nli-deberta-v3-xsmall` (default, Apache-2.0, 70.8M, τ_pass 0.75 / τ_fail 0.85, hypothesis v2); alternative `MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli` (MIT, 184M, τ 0.40/0.65, v1) via `HS_JUDGE_MODEL` | xsmall `a1508764`, base `6f5cf0a2` |
 | Report Writer SLM | `Qwen/Qwen3-0.6B` (S8, in progress) | announced on merge |
 | RAG retriever | BM25 over the ESCO ICT subset (`rag/`), gated provider `rag.gated.v1`; Qdrant dense index optional (`HS_RAG=gated-qdrant`, e5-small) | provider `version` string is recorded per result |
 
@@ -66,7 +66,7 @@ server is `python -m llama_cpp.server --model <Q4_K_M.gguf> --model_alias Qwen/Q
 | `HS_RAG` | `gated` (default) | `gated` \| `bm25` \| `qdrant` \| `gated-qdrant` \| `none` (never `none` in production) |
 | `HIRESIGNAL_RAG_DIR` | path to the repo's `rag/` | team RAG code + ESCO data |
 | `HS_BIAS_AUDITOR` | `rules_v2` (default) | `rules_v1` \| `rules_v2` \| `rules_v2+reviewer` (reviewer = +1 base-model call/result, opt-in) |
-| `HS_JUDGE`, `HS_JUDGE_DIR`, `HS_JUDGE_TAU` | see S7's docs/JUDGE.md once merged | `HS_JUDGE=off` disables the Judge |
+| `HS_JUDGE_MODEL`, `HS_JUDGE_REVISION`, `HS_JUDGE_TAU_PASS`, `HS_JUDGE_TAU_FAIL`, `HS_JUDGE_HYPOTHESIS` | unset = pinned xsmall defaults | details in `docs/JUDGE.md`; `HS_JUDGE=off` disables the Judge |
 | `HS_JSON_SCHEMA` | `off` (default) | constrained decoding, not yet measured: keep off |
 | `HS_TIMEOUT`, `HS_MAX_RETRIES` | 300, 2 | per Matcher call |
 | `HF_HOME` | a persistent volume | model cache (avoid re-downloads) |
