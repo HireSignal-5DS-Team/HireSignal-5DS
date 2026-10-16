@@ -162,7 +162,6 @@ def test_production_provenance_is_complete(monkeypatch):
     assert provenance_problems(rep.backend) == []
 
 
-@defect("QA-013", "S2")
 def test_match_report_routes_fallback_results_to_review():
     rep = Matcher(FallbackBackend(Scripted("lora", mode="down"), Scripted("base")), SpyKnowledge()).match(CVX, JOB)
     assert all(r.needs_human_review for r in rep.results)

@@ -162,6 +162,14 @@ The label the prompt shows for an entry is `agent.shown_label(ref)`.
   (`docs/orchestration/requests/s2-qa-defects-fixed.md`). QA-014 is complete except `knowledge_version` (S1).
   QA-027 is model-level and caught by the validator.
 
+- **Bias Auditor wiring (S4 request).** `HS_BIAS_AUDITOR` = `rules_v1` (default; production today, no model call) |
+  `rules_v2` | `rules_v2+reviewer`. The S4 variants load `bias/auditor.py` and fail loudly if S4 is not merged. The
+  reviewer is opt-in: it costs one LLM call per result and runs on the base model (`HS_BIAS_REVIEWER_URL`, default
+  `HS_FALLBACK_URL`; `HS_BIAS_REVIEWER_MODEL`, default the base alias). The factory refuses to point it at the LoRA. If
+  the reviewer is unavailable, the result is routed to review (`bias:reviewer_unavailable`, fail-closed).
+  `MatchReport.backend["bias_auditor"]` records the auditor's `info()`. The default stays `rules_v1` until S6 merges S4
+  and decides; S4 proposes `rules_v2`.
+
 ## 6. Contracts used (unchanged)
 
 Frozen files are untouched: `matcher/schemas.py`, `matcher/json_schemas/`, `matcher/validate.py`, `matcher/prompt.py`.
@@ -171,7 +179,7 @@ validated results and never change a decision; the Judge (S5) adds findings only
 
 ## 7. Tests
 
-Mock (run anywhere): `pytest matcher benchmark/tests` gives **74 passed, 6 skipped** (with `tests/qa`: 182 passed, 7 xfailed, 6 XPASS(strict) awaiting S5 marker removal). The skips are 2 tests that need
+Mock (run anywhere): `pytest matcher benchmark/tests` gives the merge gate `pytest matcher benchmark/tests tests/qa` gives **191 passed, 6 skipped, 7 xfailed**. The skips are 2 tests that need
 the RAG checkout or torch, and 4 live tests. `matcher/tests/test_matcher_integration.py` runs the real
 `OpenAICompatBackend` / `FallbackBackend` / factory over HTTP against fake llama.cpp servers that mimic llama-cpp-python
 (alias echo, `/v1/models`). It covers provenance per result, the JSON-schema-file validation of the MatchReport,

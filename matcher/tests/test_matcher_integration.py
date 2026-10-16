@@ -230,7 +230,7 @@ def test_matcher_report_routes_review_into_the_frozen_contract():
     assert r1.review_priority in ("medium", "high") and rep.summary.needs_human_review == 4
     assert set(MATCHER_REVIEW) == {"matcher:backend_unavailable", "matcher:output_unparseable",
                                    "matcher:served_model_mismatch", "matcher:fallback_model_used", "matcher:output_repaired",
-                                   "matcher:counterfactual_mixed_models"}
+                                   "matcher:counterfactual_mixed_models", "bias:reviewer_unavailable"}
 
 
 class FlakyFake(Fake):
@@ -337,3 +337,68 @@ def test_benchmark_style_backend_records_pinned_adapter():
     assert base.info()["adapter_id"] is None and base.info()["provenance"]["base_revision"].startswith("cdbee75f")
     hosted = OpenAICompatBackend(base_url="https://x/v1", model=LORA_ALIAS, provider="hosted")
     assert hosted.info()["adapter_id"] is None  # no guess for a hosted endpoint
+
+
+# --- S4 Bias Auditor wiring (docs/orchestration/requests/s4-bias-auditor-integration.md, S4 code not on this branch) ---
+
+class FakeAuditor:
+    """Duck-typed stand-in for bias.auditor.BiasAuditor (same call shape, BiasFinding out)."""
+
+    def __init__(self, variant, reviewer=None, reviewer_error=None):
+        self.variant, self.reviewer, self.reviewer_error, self.calls = variant, reviewer, reviewer_error, []
+
+    def info(self):
+        return {"variant": self.variant, **({"reviewer": {"model": self.reviewer.backend.model}} if self.reviewer else {})}
+
+    def check_result(self, result, cv_text, requirement_text=None):
+        from matcher.bias_audit import check_result
+        self.calls.append(requirement_text)
+        f = check_result(result, cv_text)
+        f.details["auditor"] = self.variant
+        if self.reviewer_error:
+            f.details["reviewer"] = {"verdict": None, "error": self.reviewer_error}
+        return f
+
+
+class FakeReviewer:
+    def __init__(self, backend):
+        self.backend = backend
+
+
+@pytest.fixture
+def fake_bias(monkeypatch):
+    import sys
+    import types
+    pkg, aud, rev = types.ModuleType("bias"), types.ModuleType("bias.auditor"), types.ModuleType("bias.reviewer")
+    aud.BiasAuditor, rev.LLMReviewer = FakeAuditor, FakeReviewer
+    monkeypatch.setitem(sys.modules, "bias", pkg)
+    monkeypatch.setitem(sys.modules, "bias.auditor", aud)
+    monkeypatch.setitem(sys.modules, "bias.reviewer", rev)
+
+
+def test_bias_auditor_default_is_rules_v1_without_model_calls():
+    p = build({"HS_JUDGE": "off"}, knowledge=ESCO)
+    assert p.auditor is None
+    out = Pipeline(FallbackBackend(Fake("lora", GOOD), Fake("base", GOOD)), ESCO).run(CVX.model_dump(), JOB.model_dump())
+    assert out["match_report"]["backend"]["bias_auditor"] == {"variant": "rules_v1"}
+
+
+def test_bias_auditor_opt_in_reviewer_on_base_model_only(fake_bias):
+    p = build({"HS_JUDGE": "off", "HS_BIAS_AUDITOR": "rules_v2+reviewer"}, knowledge=ESCO)
+    assert p.auditor.variant == "rules_v2+reviewer"
+    rb = p.auditor.reviewer.backend
+    assert rb.base_url.endswith(":8080/v1") and rb.model == BASE_ALIAS and rb.max_tokens == 160
+    with pytest.raises(ValueError, match="must not run on the Matcher LoRA"):
+        build({"HS_JUDGE": "off", "HS_BIAS_AUDITOR": "rules_v2+reviewer", "HS_BIAS_REVIEWER_MODEL": LORA_ALIAS}, knowledge=ESCO)
+    assert build({"HS_JUDGE": "off", "HS_BIAS_AUDITOR": "rules_v2"}, knowledge=ESCO).auditor.reviewer is None
+
+
+def test_injected_auditor_gets_requirement_text_and_reviewer_failure_is_reviewed():
+    aud = FakeAuditor("rules_v2+reviewer", reviewer_error="URLError: refused")
+    out = Pipeline(FallbackBackend(Fake("lora", GOOD), Fake("base", GOOD)), ESCO, auditor=aud).run(CVX.model_dump(), JOB.model_dump())
+    assert aud.calls == [r.text for r in JOB.requirements]
+    assert out["match_report"]["backend"]["bias_auditor"]["variant"] == "rules_v2+reviewer"
+    for x in out["requirements"]:
+        assert "bias:reviewer_unavailable" in x["review_reasons"] and x["requires_human_review"]
+    assert [x["final_decision"] for x in out["requirements"]] == ["MET", "MET", "MISSING", "MISSING"]  # findings only
+    assert all("bias:reviewer_unavailable" in r["review_reasons"] for r in out["match_report"]["results"])
