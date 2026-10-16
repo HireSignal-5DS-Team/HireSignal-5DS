@@ -103,3 +103,12 @@ def test_judge_scores_bias_flip_and_backend_down_are_rendered(out):
     md, html = to_markdown(rep), to_html(rep)
     for doc in (md, html):
         assert "FAIL (score 0.123)" in doc and "counterfactual flip on name" in doc
+
+
+
+def test_human_review_banner(out):  # owner requirement: unmistakable banner whenever any requirement needs review
+    rep = write(out)
+    n = sum(r["requires_human_review"] for r in out["requirements"])
+    assert n > 0
+    for doc in (to_markdown(rep), to_html(rep)):
+        assert f"HUMAN REVIEW REQUIRED for {n} requirement(s)" in doc

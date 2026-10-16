@@ -30,8 +30,11 @@ out = pipeline.run(cv_dict, job_dict)           # dict; validate_output(out) che
   text) are preserved from input to output.
 - **Upstream (Ayoub)**: `cv_from_reader(ReaderResult.to_dict(), cv_id)` and `job_from_card(JobRequirements dict)`.
   Samples: `integration/examples/reader_result.json` and `job_card.json`.
-- **Report**: `matcher.pipeline.write_report(out)` gives deterministic Markdown today. The tiny-SLM Report Writer
-  (S8, `reporter/`) adds JSON/HTML on top. Its entry point will be announced when it is merged.
+- **Report**: `from reporter import slm_from_env, write_files; slm, status = slm_from_env(); write_files(out, folder, slm=slm,
+  slm_status=status, job_title=job["title"])` writes `report.report.json` (schema `reporter/json_schemas/`), `report.html`
+  and `report.slm.md`. Or `python -m reporter <pipeline_output.json> --out <dir> --job-title "..."`. With the SLM off or
+  unavailable, the same files come from the deterministic renderer, and each section says which writer produced it.
+  Any requirement with `requires_human_review` produces a **HUMAN REVIEW REQUIRED** banner.
 - **Never a hiring decision**: every response carries `summary.note`. A requirement with `requires_human_review` must be
   shown as needing review. Do not hide these flags in the UI.
 
@@ -46,7 +49,7 @@ Suggested endpoints (your choice): `POST /match` (CV + Job JSON -> PipelineOutpu
 | Matcher weights | `unsloth/Qwen3-4B-Instruct-2507-GGUF`, `Qwen3-4B-Instruct-2507-Q4_K_M.gguf` | `a06e946b` |
 | Matcher fallback | same GGUF, no adapter | — |
 | Judge (NLI) | `cross-encoder/nli-deberta-v3-xsmall` (default, Apache-2.0, 70.8M, τ_pass 0.75 / τ_fail 0.85, hypothesis v2); alternative `MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli` (MIT, 184M, τ 0.40/0.65, v1) via `HS_JUDGE_MODEL` | xsmall `a1508764`, base `6f5cf0a2` |
-| Report Writer SLM | `Qwen/Qwen3-0.6B` (S8, in progress) | announced on merge |
+| Report Writer SLM | `Qwen/Qwen3-0.6B` (rev `c1899de2`), GGUF `Qwen/Qwen3-0.6B-GGUF` file `Qwen3-0.6B-Q8_0.gguf` (639 MB, sha256 `9465e63a…`), llama-cpp-python, thinking off | GGUF repo rev `23749fef` |
 | RAG retriever | BM25 over the ESCO ICT subset (`rag/`), gated provider `rag.gated.v1`; Qdrant dense index optional (`HS_RAG=gated-qdrant`, e5-small) | provider `version` string is recorded per result |
 
 Serving: two llama.cpp OpenAI-compatible servers. `scripts/serve_qwen4b_lora.sh <adapter-dir> 8081` converts the PEFT
@@ -67,6 +70,9 @@ server is `python -m llama_cpp.server --model <Q4_K_M.gguf> --model_alias Qwen/Q
 | `HIRESIGNAL_RAG_DIR` | path to the repo's `rag/` | team RAG code + ESCO data |
 | `HS_BIAS_AUDITOR` | `rules_v2` (default) | `rules_v1` \| `rules_v2` \| `rules_v2+reviewer` (reviewer = +1 base-model call/result, opt-in) |
 | `HS_JUDGE_MODEL`, `HS_JUDGE_REVISION`, `HS_JUDGE_TAU_PASS`, `HS_JUDGE_TAU_FAIL`, `HS_JUDGE_HYPOTHESIS` | unset = pinned xsmall defaults | details in `docs/JUDGE.md`; `HS_JUDGE=off` disables the Judge |
+| `HS_REPORTER_SLM` | `on` | `off` = deterministic report only |
+| `HS_REPORTER_MODEL_PATH` / `HS_REPORTER_DOWNLOAD` | path to the Q8_0 GGUF / `1` to fetch the pinned file into `HF_HOME` | if neither is set the reporter needs the cached GGUF, else it falls back (recorded) |
+| `HS_REPORTER_THREADS`, `HS_REPORTER_TIMEOUT`, `HS_REPORTER_MAX_TOKENS` | 4, 30, 160 | SLM runtime limits |
 | `HS_JSON_SCHEMA` | `off` (default) | constrained decoding, not yet measured: keep off |
 | `HS_TIMEOUT`, `HS_MAX_RETRIES` | 300, 2 | per Matcher call |
 | `HF_HOME` | a persistent volume | model cache (avoid re-downloads) |
@@ -95,3 +101,33 @@ server is `python -m llama_cpp.server --model <Q4_K_M.gguf> --model_alias Qwen/Q
 - The fine-tuned DeBERTa Judge from 2026-10-15 was never pushed and is lost. The pretrained Judge is the fallback.
 - CPU latency is about 14 to 17 s per requirement: use async jobs or streaming for multi-requirement CVs.
 - The Profile Agent is not delivered yet; `CV.structured` is optional and never used as evidence.
+
+## 8. Verified real-model end-to-end run (2026-10-16 16:44Z, orchestrator container, 4 vCPU, CPU only)
+
+Every model in this run was real; nothing was mocked:
+- LoRA Matcher `0b6925b1` on `:8081`, base model on `:8080`;
+- `rag.gated.v1+bm25`;
+- bias rules `rules_v2`;
+- Judge `cross-encoder/nli-deberta-v3-xsmall@a1508764`;
+- Report Writer Qwen3-0.6B Q8_0.
+
+Input: `integration/examples/{cv,job}.json`.
+
+```bash
+# servers
+python -m llama_cpp.server --model <Q4_K_M.gguf> --model_alias Qwen/Qwen3-4B-Instruct-2507 --n_ctx 4096 --n_threads 4 --port 8080
+scripts/serve_qwen4b_lora.sh <adapter-dir> 8081
+# pipeline + report (writes pipeline output report.json plus report.report.json/.html/.slm.md)
+HIRESIGNAL_RAG_DIR=$PWD/rag HS_REPORTER_SLM=on python scripts/run_pipeline.py \
+  --cv integration/examples/cv.json --job integration/examples/job.json --out out/ex1
+```
+
+Result: `integration/e2e_evidence/20261016-real-ex1/` (pipeline output, report JSON/HTML/MD, and the SLM-unavailable
+fallback report):
+- `validate_output()` passes (contract 1.1.0) and evidence spans match the CV.
+- r1 MET, r2 MET, r3 MISSING, all answered by the LoRA primary.
+- Judge on r1: FAIL; on r2: UNCERTAIN. Both requirements are flagged HUMAN REVIEW REQUIRED. NLI cannot do year
+  arithmetic, so "2019 - present" vs "3+ years" scores as neutral: a false alarm, sent to review, never a rejection.
+- The SLM wrote 3/4 sections; the executive summary failed the fact check (count mismatch), was replaced by the
+  deterministic text, and the report says so.
+- 1 min 13 s for 3 requirements, including model loads.
