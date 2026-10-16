@@ -1,5 +1,5 @@
 label: MOCK (scripted backends, stub HTTP servers, keyword NLI stand-in; no model weights)
-commit: 8c08562  date_utc: 2026-10-16T10:21:31Z
+commit: c040191  date_utc: 2026-10-16T10:29:14Z
 defects reproduced (strict xfail):
       3 QA-001 (owner S1)
       3 QA-002 (owner S6)
@@ -19,4 +19,4 @@ defects reproduced (strict xfail):
       1 QA-020 (owner S4)
       1 QA-022 (owner S6)
       1 QA-023 (owner S1)
-1 failed, 128 passed, 2 skipped, 26 xfailed in 11.66s
+129 passed, 2 skipped, 26 xfailed in 10.13s

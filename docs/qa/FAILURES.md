@@ -41,9 +41,10 @@ cosmetic or a rare false alarm.
 | QA-020 | low | S4 | open | leakage rule flags job-relevant "old" ("an old Perl codebase") when the CV has an attribute line |
 | QA-022 | medium | S6 | open | quote stitched across sections ("Python\n\nHobbies\n- 10 years") creates years of Python |
 | QA-023 | medium | S1 | open | BM25 provider keeps hits that share only a generic token ("Apache" Maven for an "Apache Kafka" query) |
+| QA-024 | medium | S2 (test) | open | existing `test_api_backend_success_timeout_and_unavailable` is flaky (2 failures in ~15 full runs) |
 
 QA-006 and QA-021 were merged into QA-002 and dropped as negligible (12-character ref id collisions in the prompt).
-Open defects by owner: **S6 11** (2 of them contract decisions), **S2 3**, **S1 2**, **S4 2**. S5's 3 are fixed.
+Open defects by owner: **S6 11** (2 of them contract decisions), **S2 4** (1 flaky existing test), **S1 2**, **S4 2**. S5's 3 are fixed.
 
 ## Details
 
@@ -206,6 +207,18 @@ Open defects by owner: **S6 11** (2 of them contract decisions), **S2 3**, **S1 
 - Root cause: `RagKnowledge` keeps every hit with BM25 score > 0 (`knowledge.py:62`).
 - Fix: also require score ≥ `min_rel_score` (0.5) × the top hit's score. Patch: S1. S1 should tune the ratio on the
   retrieval benchmark: it is a proposal, not a measured optimum.
+
+### QA-024 · medium · S2 (existing test, not marked)
+- Observed: `matcher/tests/test_pipeline.py::test_api_backend_success_timeout_and_unavailable` failed in 2 of about
+  15 full `pytest matcher benchmark/tests tests/qa` runs. Run alone 21 times (15 idle + 6 under CPU load) it passed
+  every time. This is a pre-existing test; the S5 changes do not touch the code under test.
+- Likely root cause (hypothesis, not proven): the fixture's `HTTPServer` is single-threaded. In "slow" mode the
+  retried request (t≈3 s) holds the server until t≈5 s. The following "404" request (t≈4 s, client timeout 1 s)
+  waits for it, so its timeout races the server by about 1 ms. When it times out, it is retried and
+  `attempts == 1` fails.
+- Fix: serve the stub with `http.server.ThreadingHTTPServer` (a one-word change in the fixture), or reset the mode
+  and wait for the slow handler before the 404 phase. No xfail marker: marking a flaky test would hide real
+  failures. A merge gate that sees this single failure should re-run once.
 
 ## Baseline note
 
