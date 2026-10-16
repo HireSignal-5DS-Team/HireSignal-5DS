@@ -224,20 +224,25 @@ How to publish (not done; it needs an owner decision and a write token):
 
 ## 7. Deployment
 
-Recommended production default: **`MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli@6f5cf0a2`, hypothesis v1,
-τ_pass 0.40, τ_fail 0.65**. This is `JUDGE_DEFAULT` in `matcher/factory.py`. It is pinned, has a MIT licence, gave
-0 false approvals on val, and has the better AUROC of the two pretrained models. The cost is +0.28 review rate on the
-gated arm. xsmall is supported as a lighter option with its own calibrated thresholds.
+**Production default (owner decision): `cross-encoder/nli-deberta-v3-xsmall@a1508764`, hypothesis v2, τ_pass 0.75,
+τ_fail 0.85** (`JUDGE_DEFAULT` in `matcher/factory.py`, set by the orchestrator in `e3bca19`). It is pinned,
+Apache-2.0, the smallest supported checkpoint, and approved 0 wrong METs on val.
+
+**Measured-better alternative: `MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli@6f5cf0a2`, hypothesis v1, τ_pass 0.40,
+τ_fail 0.65**, selectable with `HS_JUDGE_MODEL`. On the same val pairs (gated arm, replay-v2) it ranks Matcher errors
+better (AUROC 0.94 vs 0.75), also approved 0 wrong METs, and adds slightly less review (validator+Judge 0.876 vs 0.901).
+Both pretrained Judges add about +0.28–0.31 review rate. Latency (0.09 vs 0.04 s per requirement) is negligible next to
+the Matcher call.
 
 ```bash
 HS_JUDGE=on                                                  # off disables the Judge
-HS_JUDGE_MODEL=MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli  # Hub id or local dir (HS_JUDGE_DIR is the old name)
-HS_JUDGE_REVISION=6f5cf0a2b59cabb106aca4c287eed12e357e90eb   # defaults to the JUDGE_MODELS pin
-HS_JUDGE_TAU_PASS=0.40                                       # defaults to the calibrated value
-HS_JUDGE_TAU_FAIL=0.65                                       # HS_JUDGE_TAU sets both
-HS_JUDGE_HYPOTHESIS=v1                                       # v1 | v2, defaults to the calibrated template
-# lighter alternative:
-# HS_JUDGE_MODEL=cross-encoder/nli-deberta-v3-xsmall  (pins a150876..., τ_pass 0.75, τ_fail 0.85, v2 applied automatically)
+HS_JUDGE_MODEL=cross-encoder/nli-deberta-v3-xsmall           # Hub id or local dir (HS_JUDGE_DIR is the old name)
+HS_JUDGE_REVISION=a150876415327c80daeff35ca6f68f5ed8cf5c24    # defaults to the JUDGE_MODELS pin
+HS_JUDGE_TAU_PASS=0.75                                        # defaults to the calibrated value
+HS_JUDGE_TAU_FAIL=0.85                                        # HS_JUDGE_TAU sets both
+HS_JUDGE_HYPOTHESIS=v2                                        # v1 | v2, defaults to the calibrated template
+# measured-better alternative:
+# HS_JUDGE_MODEL=MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli (pins 6f5cf0a2..., τ_pass 0.40, τ_fail 0.65, v1 applied automatically)
 HF_HOME=<model cache>  HF_HUB_OFFLINE=1                      # after a first download, run offline
 ```
 
