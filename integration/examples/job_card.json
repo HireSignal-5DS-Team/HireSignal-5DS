@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "JD-EX-1",
+  "title": "Backend Developer",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "At least 3 years of professional experience with Java",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "Java"
+      ],
+      "min_years": 3,
+      "evidence": "At least 3 years of professional experience with Java.",
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Solid knowledge of SQL databases (PostgreSQL or Oracle)",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "SQL",
+        "PostgreSQL",
+        "Oracle"
+      ],
+      "min_years": null,
+      "evidence": "Solid knowledge of SQL databases (PostgreSQL or Oracle).",
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Experience with Kubernetes is a plus",
+      "kind": "nice",
+      "category": "skill",
+      "skill_terms": [
+        "Kubernetes"
+      ],
+      "min_years": null,
+      "evidence": "Experience with Kubernetes is a plus.",
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": []
+}

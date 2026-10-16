@@ -1,0 +1,666 @@
+{
+  "$defs": {
+    "BiasOut": {
+      "additionalProperties": true,
+      "properties": {
+        "audit_status": {
+          "description": "PASS | FLAGGED | NOT_TESTED",
+          "title": "Audit Status",
+          "type": "string"
+        },
+        "counterfactual_flip": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Counterfactual Flip"
+        },
+        "affected_attribute": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Affected Attribute"
+        },
+        "requires_human_review": {
+          "default": false,
+          "title": "Requires Human Review",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "audit_status"
+      ],
+      "title": "BiasOut",
+      "type": "object"
+    },
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_type": {
+          "title": "Source Type",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "retrieval": {
+          "title": "Retrieval",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "source_type",
+        "title",
+        "retrieval"
+      ],
+      "title": "Citation",
+      "type": "object"
+    },
+    "JudgeOut": {
+      "additionalProperties": true,
+      "properties": {
+        "judge_verdict": {
+          "description": "PASS | FAIL | UNCERTAIN | NOT_APPLICABLE",
+          "title": "Judge Verdict",
+          "type": "string"
+        },
+        "judge_score": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "NLI score of the deciding label; NOT a probability that the decision is correct",
+          "title": "Judge Score"
+        },
+        "nli_probs": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "entailment / neutral / contradiction softmax scores",
+          "title": "Nli Probs"
+        },
+        "requires_human_review": {
+          "title": "Requires Human Review",
+          "type": "boolean"
+        },
+        "model": {
+          "title": "Model",
+          "type": "string"
+        }
+      },
+      "required": [
+        "judge_verdict",
+        "requires_human_review",
+        "model"
+      ],
+      "title": "JudgeOut",
+      "type": "object"
+    },
+    "MatchReport": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "default": "1.0.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "cv_id": {
+          "title": "Cv Id",
+          "type": "string"
+        },
+        "job_id": {
+          "title": "Job Id",
+          "type": "string"
+        },
+        "backend": {
+          "additionalProperties": true,
+          "title": "Backend",
+          "type": "object"
+        },
+        "results": {
+          "items": {
+            "$ref": "#/$defs/RequirementResult"
+          },
+          "title": "Results",
+          "type": "array"
+        },
+        "summary": {
+          "$ref": "#/$defs/MatchSummary"
+        }
+      },
+      "required": [
+        "cv_id",
+        "job_id",
+        "backend",
+        "results",
+        "summary"
+      ],
+      "title": "MatchReport",
+      "type": "object"
+    },
+    "MatchSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "counts": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "propertyNames": {
+            "enum": [
+              "MET",
+              "MISSING",
+              "UNCERTAIN"
+            ]
+          },
+          "title": "Counts",
+          "type": "object"
+        },
+        "must_total": {
+          "title": "Must Total",
+          "type": "integer"
+        },
+        "must_met": {
+          "title": "Must Met",
+          "type": "integer"
+        },
+        "must_coverage": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "must_met / must_total; transparent ratio, not a fit probability",
+          "title": "Must Coverage"
+        },
+        "needs_human_review": {
+          "title": "Needs Human Review",
+          "type": "integer"
+        },
+        "note": {
+          "default": "Requirement-level screening aid. No automatic rejection or hiring decision is made.",
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "counts",
+        "must_total",
+        "must_met",
+        "must_coverage",
+        "needs_human_review"
+      ],
+      "title": "MatchSummary",
+      "type": "object"
+    },
+    "RequirementResult": {
+      "additionalProperties": false,
+      "properties": {
+        "req_id": {
+          "title": "Req Id",
+          "type": "string"
+        },
+        "requirement_text": {
+          "title": "Requirement Text",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "must",
+            "nice"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "decision": {
+          "enum": [
+            "MET",
+            "MISSING",
+            "UNCERTAIN"
+          ],
+          "title": "Decision",
+          "type": "string"
+        },
+        "basis": {
+          "enum": [
+            "supported",
+            "contradicted",
+            "not_documented",
+            "ambiguous"
+          ],
+          "title": "Basis",
+          "type": "string"
+        },
+        "evidence": {
+          "description": "verified verbatim substrings of CV.text",
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "evidence_spans": {
+          "description": "[start, end) offsets of each evidence quote in CV.text",
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Evidence Spans",
+          "type": "array"
+        },
+        "explanation": {
+          "title": "Explanation",
+          "type": "string"
+        },
+        "rag_refs": {
+          "description": "source_ids of knowledge used to interpret the requirement",
+          "items": {
+            "type": "string"
+          },
+          "title": "Rag Refs",
+          "type": "array"
+        },
+        "model_decision": {
+          "anyOf": [
+            {
+              "enum": [
+                "MET",
+                "MISSING",
+                "UNCERTAIN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "raw model decision before deterministic validation; None if output unparseable",
+          "title": "Model Decision"
+        },
+        "review_priority": {
+          "description": "heuristic review signal from validation rules; NOT a calibrated probability",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "title": "Review Priority",
+          "type": "string"
+        },
+        "needs_human_review": {
+          "title": "Needs Human Review",
+          "type": "boolean"
+        },
+        "review_reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Review Reasons",
+          "type": "array"
+        }
+      },
+      "required": [
+        "req_id",
+        "requirement_text",
+        "kind",
+        "decision",
+        "basis",
+        "evidence",
+        "evidence_spans",
+        "explanation",
+        "rag_refs",
+        "model_decision",
+        "review_priority",
+        "needs_human_review",
+        "review_reasons"
+      ],
+      "title": "RequirementResult",
+      "type": "object"
+    },
+    "RequirementRow": {
+      "additionalProperties": true,
+      "description": "One requirement after every stage. Never a hiring decision.",
+      "properties": {
+        "req_id": {
+          "title": "Req Id",
+          "type": "string"
+        },
+        "requirement_text": {
+          "title": "Requirement Text",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "must",
+            "nice"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "final_decision": {
+          "enum": [
+            "MET",
+            "MISSING",
+            "UNCERTAIN"
+          ],
+          "title": "Final Decision",
+          "type": "string"
+        },
+        "model_decision": {
+          "anyOf": [
+            {
+              "enum": [
+                "MET",
+                "MISSING",
+                "UNCERTAIN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "raw Matcher decision before deterministic validation",
+          "title": "Model Decision"
+        },
+        "basis": {
+          "title": "Basis",
+          "type": "string"
+        },
+        "evidence": {
+          "description": "verbatim substrings of CV.text",
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "evidence_spans": {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "type": "array"
+          },
+          "title": "Evidence Spans",
+          "type": "array"
+        },
+        "explanation": {
+          "description": "grounded explanation built from validated content only",
+          "title": "Explanation",
+          "type": "string"
+        },
+        "explanation_model": {
+          "default": "",
+          "description": "the Matcher model's own text, kept for audit",
+          "title": "Explanation Model",
+          "type": "string"
+        },
+        "rag_refs": {
+          "description": "source_ids of the knowledge SHOWN to the model (not candidate evidence)",
+          "items": {
+            "type": "string"
+          },
+          "title": "Rag Refs",
+          "type": "array"
+        },
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "title": "Citations",
+          "type": "array"
+        },
+        "validator": {
+          "$ref": "#/$defs/ValidatorOut"
+        },
+        "bias_audit": {
+          "$ref": "#/$defs/BiasOut"
+        },
+        "judge": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/JudgeOut"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "requires_human_review": {
+          "title": "Requires Human Review",
+          "type": "boolean"
+        },
+        "review_reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Review Reasons",
+          "type": "array"
+        },
+        "provenance": {
+          "additionalProperties": true,
+          "description": "model that answered THIS requirement",
+          "title": "Provenance",
+          "type": "object"
+        }
+      },
+      "required": [
+        "req_id",
+        "requirement_text",
+        "kind",
+        "final_decision",
+        "model_decision",
+        "basis",
+        "evidence",
+        "evidence_spans",
+        "explanation",
+        "rag_refs",
+        "validator",
+        "bias_audit",
+        "judge",
+        "requires_human_review",
+        "review_reasons"
+      ],
+      "title": "RequirementRow",
+      "type": "object"
+    },
+    "Summary": {
+      "additionalProperties": false,
+      "properties": {
+        "MET": {
+          "title": "Met",
+          "type": "integer"
+        },
+        "MISSING": {
+          "title": "Missing",
+          "type": "integer"
+        },
+        "UNCERTAIN": {
+          "title": "Uncertain",
+          "type": "integer"
+        },
+        "must_met": {
+          "title": "Must Met",
+          "type": "integer"
+        },
+        "must_total": {
+          "title": "Must Total",
+          "type": "integer"
+        },
+        "requires_human_review": {
+          "title": "Requires Human Review",
+          "type": "integer"
+        },
+        "note": {
+          "title": "Note",
+          "type": "string"
+        }
+      },
+      "required": [
+        "MET",
+        "MISSING",
+        "UNCERTAIN",
+        "must_met",
+        "must_total",
+        "requires_human_review",
+        "note"
+      ],
+      "title": "Summary",
+      "type": "object"
+    },
+    "ValidatorOut": {
+      "additionalProperties": false,
+      "properties": {
+        "review_priority": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "title": "Review Priority",
+          "type": "string"
+        },
+        "reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reasons",
+          "type": "array"
+        }
+      },
+      "required": [
+        "review_priority",
+        "reasons"
+      ],
+      "title": "ValidatorOut",
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "description": "Response of `matcher.pipeline.Pipeline.run(cv, job)` (and of Dali's API).",
+  "properties": {
+    "contract_version": {
+      "default": "1.1.0",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "cv_id": {
+      "title": "Cv Id",
+      "type": "string"
+    },
+    "job_id": {
+      "title": "Job Id",
+      "type": "string"
+    },
+    "parser": {
+      "title": "Parser",
+      "type": "string"
+    },
+    "backend": {
+      "additionalProperties": true,
+      "title": "Backend",
+      "type": "object"
+    },
+    "knowledge": {
+      "title": "Knowledge",
+      "type": "string"
+    },
+    "match_report": {
+      "$ref": "#/$defs/MatchReport"
+    },
+    "judge": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Judge"
+    },
+    "requirements": {
+      "items": {
+        "$ref": "#/$defs/RequirementRow"
+      },
+      "title": "Requirements",
+      "type": "array"
+    },
+    "summary": {
+      "$ref": "#/$defs/Summary"
+    }
+  },
+  "required": [
+    "cv_id",
+    "job_id",
+    "parser",
+    "backend",
+    "knowledge",
+    "match_report",
+    "judge",
+    "requirements",
+    "summary"
+  ],
+  "title": "PipelineOutput",
+  "type": "object"
+}
