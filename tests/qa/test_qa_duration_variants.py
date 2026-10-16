@@ -5,7 +5,7 @@ Requirement: Python, at least 5 years. A verbatim quote that states >= 5 years o
 duration flag; one that states fewer years of Python (or years of another skill only) must not stay an unflagged MET.
 """
 import pytest
-from _qa_support import check, defect, req
+from _qa_support import check, req
 
 from matcher import CV
 
@@ -54,7 +54,6 @@ def test_insufficient_duration_is_not_an_unflagged_met(quote):
     assert r.decision != "MET" or r.needs_human_review, (quote, r.review_reasons)
 
 
-@defect("QA-032", "S6")
 @pytest.mark.parametrize("quote", ENOUGH_UNPARSED)
 def test_unparsed_duration_forms(quote):
     r = _met(quote)

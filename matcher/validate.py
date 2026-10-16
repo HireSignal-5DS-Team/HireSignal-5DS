@@ -72,12 +72,25 @@ def line_context(cv_text, span):
 
 
 _YEARS = re.compile(r"(\d+(?:\.\d+)?)\s*\+?\s*(?:years?|yrs?)\b", re.I)
+_NUMWORDS = {w: i for i, w in enumerate("zero one two three four five six seven eight nine ten eleven twelve thirteen "
+                                         "fourteen fifteen sixteen seventeen eighteen nineteen twenty".split())}
+_NUMWORD_YEARS = re.compile(rf"\b({'|'.join(_NUMWORDS)})(?=\s*\+?\s*(?:years?|yrs?)\b)", re.I)
+_SINCE = re.compile(r"\bsince\s+((?:19|20)\d\d)\b", re.I)
+
+
+def _norm_duration(q):
+    """QA-032: 'Seven years' -> '7 years'; 'since 2018' -> '2018 - present' (read like a range to today)."""
+    q = _NUMWORD_YEARS.sub(lambda m: str(_NUMWORDS[m.group(1).lower()]), q)
+    return _SINCE.sub(lambda m: f"{m.group(1)} - present", q)
+
+
 _RANGE = re.compile(r"\b((?:19|20)\d\d)\s*(?:-|–|—|to)\s*((?:19|20)\d\d|present|now|current|today)\b", re.I)
 
 
 def evidence_years(quotes, ref_year=2026, terms=None):
     """Largest of: explicit 'N years' mentions, merged span of year ranges. None if nothing parseable.
     With terms, only clauses naming a term count (years of another skill or another section do not)."""
+    quotes = [_norm_duration(q) for q in quotes]
     if terms:
         scoped = []
         for sent in (x for q in quotes for x in _SENT.split(q) if _has_term(x, terms)):
