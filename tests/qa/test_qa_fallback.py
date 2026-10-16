@@ -78,7 +78,6 @@ def test_json_wrapped_in_prose_or_fences_is_parsed():
     assert parse_model_output("<think>{\"decision\": \"MET\"}</think>" + ans("UNCERTAIN", "ambiguous")).decision == "UNCERTAIN"
 
 
-@defect("QA-015", "S2")
 def test_backend_exception_does_not_crash_the_pipeline():
     out = run(FallbackBackend(Scripted("lora", mode="raise"), Scripted("base")))
     assert all(r["matcher_call"]["used"] == "fallback" for r in out["requirements"])
@@ -132,7 +131,6 @@ def test_handled_malformed_server_responses_are_uncertain(stub, body):
         assert_never_invented(r)
 
 
-@defect("QA-015", "S2")
 @pytest.mark.parametrize("body", [b"[]", b'{"choices": null}', b'{"choices": [{"message": {"content": ["MET"]}}]}'])
 def test_unhandled_malformed_server_responses_do_not_crash(stub, body):
     _Stub.body = body

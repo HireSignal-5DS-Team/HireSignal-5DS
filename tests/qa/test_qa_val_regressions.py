@@ -75,7 +75,6 @@ def test_explanation_checker_negative_and_positive_controls():
     assert explanation_problems({"explanation": "Uses Angular for 9 years.", "evidence": ["Angular since 2020"]}, req)
 
 
-@defect("QA-028", "S2")
 def test_final_report_explanations_are_requirement_specific_and_grounded():
     """The LoRA emits 4 fixed templates (on-topic 0.000 on val vs 1.000 for the base model by this check). Whatever
     the model emits, each row of the final report must explain THIS requirement with THIS evidence."""
