@@ -78,6 +78,18 @@ def test_evidence_is_verbatim_and_spans_exact(live, recorder):
         assert row["final_decision"] != "MET" or row["evidence"]
 
 
+@defect("QA-028", "S2")
+def test_live_explanations_name_the_requirement(live, recorder):
+    from _qa_support import explanation_problems
+
+    out = live.run(CVX.model_dump(), JOB.model_dump())
+    reqs = {r.req_id: r for r in JOB.requirements}
+    problems = {r["req_id"]: explanation_problems(r, reqs[r["req_id"]]) for r in out["requirements"]}
+    recorder("explanations", "full_job", {"explanations": {r["req_id"]: r["explanation"] for r in out["requirements"]},
+                                          "problems": problems})
+    assert all(not p for p in problems.values()), problems
+
+
 def test_deterministic_at_temperature_zero(live):
     case = POSITIVES[0]
     raws = []

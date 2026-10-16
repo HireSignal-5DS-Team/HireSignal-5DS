@@ -5,6 +5,7 @@ owning session fixes the defect the test XPASSes, the suite fails, and the marke
 test then stays as a normal test).
 """
 import json
+import re
 
 import pytest
 
@@ -80,6 +81,41 @@ def provenance_problems(backend):
             out.append(f"{k} is empty")
     if flat.get("model_id", "").endswith("+lora") and not (flat.get("adapter_id") and flat.get("adapter_revision")):
         out.append("LoRA primary without adapter repo + sha")
+    return out
+
+
+# ---- explanation quality (QA-028) -------------------------------------------------------------------------------
+_STOP = {"experience", "years", "year", "more", "with", "and", "the", "for", "working", "knowledge", "least",
+         "proficiency", "hands", "good", "strong", "skills", "skill", "ability", "degree", "level", "able", "using",
+         "use", "of", "in"}
+
+
+def requirement_terms(req):
+    """Skill terms plus content words (>= 3 chars, not generic) of the requirement text, casefolded."""
+    text, terms = (req["text"], req.get("skill_terms", [])) if isinstance(req, dict) else (req.text, req.skill_terms)
+    words = [w for w in re.findall(r"[A-Za-z][A-Za-z0-9.+#-]{2,}", text) if w.casefold() not in _STOP]
+    return {t.casefold().rstrip(".") for t in [*terms, *words]}
+
+
+def explanation_on_topic(expl, req):
+    e = (expl or "").casefold()
+    return any(re.search(rf"(?<!\w){re.escape(t)}(?!\w)", e) for t in requirement_terms(req))
+
+
+def explanation_grounded(expl, req, quotes):
+    """Every number in the explanation occurs in the quotes or the requirement (no invented years/counts)."""
+    text, years = (req["text"], req.get("min_years")) if isinstance(req, dict) else (req.text, req.min_years)
+    hay = " ".join(quotes) + " " + text + " " + (f"{years:g}" if years else "")
+    return all(n in hay for n in re.findall(r"\d+(?:\.\d+)?", expl or ""))
+
+
+def explanation_problems(row, req):
+    """For a final report row: [] if the explanation names the requirement and invents no numbers."""
+    out = []
+    if not explanation_on_topic(row["explanation"], req):
+        out.append("explanation does not name the requirement")
+    if not explanation_grounded(row["explanation"], req, row["evidence"]):
+        out.append("explanation has numbers not in evidence or requirement")
     return out
 
 

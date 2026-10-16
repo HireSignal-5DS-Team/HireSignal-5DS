@@ -32,10 +32,10 @@ index 9e9feab..6fa4d37 100644
  
  def test_fabricated_quote_and_invalid_json_route_to_review():
 diff --git a/matcher/validate.py b/matcher/validate.py
-index 3ddc71e..02a3c76 100644
+index 3ddc71e..5cdebd2 100644
 --- a/matcher/validate.py
 +++ b/matcher/validate.py
-@@ -15,7 +15,12 @@ REASONS = {
+@@ -15,7 +15,13 @@ REASONS = {
      "inconsistent_decision_basis": HIGH,
      "met_without_verified_evidence": HIGH,
      "years_below_minimum_in_evidence": HIGH,
@@ -43,12 +43,13 @@ index 3ddc71e..02a3c76 100644
 +    "certification_not_evidenced": HIGH,
 +    "contradiction_refuted_by_evidence": HIGH,
 +    "possible_prompt_injection": HIGH,
++    "weak_evidence_cue": HIGH,
      "evidence_not_in_cv": MEDIUM,
 +    "evidence_too_short": MEDIUM,
      "contradiction_without_evidence": MEDIUM,
      "duration_not_verified": MEDIUM,
      "semantic_inference_no_term_in_quote": MEDIUM,
-@@ -45,12 +50,31 @@ def find_span(cv_text, quote):
+@@ -45,12 +51,33 @@ def find_span(cv_text, quote):
      return (i, i + len(q)) if i >= 0 else None
  
  
@@ -56,7 +57,9 @@ index 3ddc71e..02a3c76 100644
 +_CERT = re.compile(r"certif|licen[cs]|accredit|credential", re.I)
 +_INJECT = re.compile(r"ignore\s+(all\s+)?(the\s+)?(previous|prior|above|earlier)\s+instructions|^\W*system\s*:|"
 +                     r"mark\s+(every|all|each|this)\s+requirements?\s+(as\s+)?met", re.I | re.M)
-+_CLAUSE = re.compile(r"[,;\n]|\.(?!\d)")
++_WEAK = re.compile(r"\b(tutorials?|watched|read (?:about|up on)|interested in|online course|bootcamp|familiar with|"
++                   r"exposure to|introductory|attended (?:a |an )?(?:talk|webinar|workshop))\b", re.I)
++_CLAUSE = re.compile(r"[,;\n]|\.(?=\s|$)")
 +
 +
 +def _has_term(text, terms):
@@ -82,7 +85,7 @@ index 3ddc71e..02a3c76 100644
      explicit = [float(m) for q in quotes for m in _YEARS.findall(q)]
      ranges = sorted((int(a), ref_year if not b.isdigit() else int(b)) for q in quotes for a, b in _RANGE.findall(q))
      merged = []
-@@ -65,9 +89,14 @@ def evidence_years(quotes, ref_year=2026):
+@@ -65,9 +92,14 @@ def evidence_years(quotes, ref_year=2026):
  
  
  def _terms(req, refs):
@@ -98,7 +101,7 @@ index 3ddc71e..02a3c76 100644
      return {t.casefold() for t in terms if len(t) >= 2}
  
  
-@@ -85,7 +114,9 @@ def validate(answer, cv, req, refs, ref_year=2026):
+@@ -85,7 +117,9 @@ def validate(answer, cv, req, refs, ref_year=2026):
          quotes = []
          for q in answer.evidence:
              span = find_span(cv.text, q)
@@ -109,13 +112,16 @@ index 3ddc71e..02a3c76 100644
                  quotes.append(cv.text[span[0]:span[1]])
              else:
                  reasons.append("evidence_not_in_cv")
-@@ -98,16 +129,26 @@ def validate(answer, cv, req, refs, ref_year=2026):
+@@ -98,16 +132,30 @@ def validate(answer, cv, req, refs, ref_year=2026):
      if decision == "MISSING" and basis == "contradicted" and not quotes:
          basis = "not_documented"
          reasons.append("contradiction_without_evidence")
 +    terms = _terms(req, refs)
 +    if decision == "MET" and any(_NEG.search(line_context(cv.text, sp)) for sp in spans):
 +        reasons.append("negation_in_evidence_context")
++    if decision == "MET" and quotes and all(_WEAK.search(q) for q in quotes):  # QA-025: exposure is not ability
++        decision, basis = "UNCERTAIN", "ambiguous"
++        reasons.append("weak_evidence_cue")
 +    if decision == "MET" and req.category == "certification" and not any(_CERT.search(q) for q in quotes):
 +        reasons.append("certification_not_evidenced")
 +    if _INJECT.search(cv.text):
@@ -126,8 +132,10 @@ index 3ddc71e..02a3c76 100644
 +            reasons.append("contradiction_refuted_by_evidence")
      if decision == "MET" and req.min_years:
 -        years = evidence_years(quotes, ref_year)
+-        if years is None:
 +        years = evidence_years(quotes, ref_year, terms)
-         if years is None:
++        if years is None:  # QA-026: a minimum duration that the evidence does not state is not verified
++            decision, basis = "UNCERTAIN", "ambiguous"
              reasons.append("duration_not_verified")
          elif years < req.min_years:
              decision, basis = "UNCERTAIN", "ambiguous"

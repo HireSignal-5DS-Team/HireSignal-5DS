@@ -175,3 +175,13 @@ def test_no_evidence_must_have_goes_to_review():
 def test_inconsistent_decision_basis_is_uncertain():
     r = check("MET", "not_documented", ["Set up Maven builds for twelve Java services."], CVX, K8S)
     assert r.decision == "UNCERTAIN" and "inconsistent_decision_basis" in r.review_reasons
+
+
+@pytest.mark.parametrize("quote,term,minimum", [("Node.js in daily use for 3 years.", "Node.js", 4),
+                                                ("Vue.js in daily use for 1 year.", "Vue.js", 3)])
+def test_years_with_a_dotted_skill_name_still_count(quote, term, minimum):
+    """Regression from val (val-014/r2, val-028/r4): a clause splitter must not cut 'Node.js' at the dot."""
+    cv = CV(cv_id="d", text=f"- {quote}")
+    r = check("MET", "supported", [quote], cv,
+              req("r1", f"{term}: {minimum} years", category="experience", skill_terms=[term], min_years=minimum))
+    assert r.decision == "UNCERTAIN" and "years_below_minimum_in_evidence" in r.review_reasons

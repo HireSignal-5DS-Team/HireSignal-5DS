@@ -41,10 +41,14 @@ cosmetic or a rare false alarm.
 | QA-020 | low | S4 | open | leakage rule flags job-relevant "old" ("an old Perl codebase") when the CV has an attribute line |
 | QA-022 | medium | S6 | open | quote stitched across sections ("Python\n\nHobbies\n- 10 years") creates years of Python |
 | QA-023 | medium | S1 | open | BM25 provider keeps hits that share only a generic token ("Apache" Maven for an "Apache Kafka" query) |
+| QA-025 | high | S6 (S2 model) | open | LIVE: LoRA quotes weak exposure ("Watched tutorials about Angular") as MET; validator gives an **unreviewed** MET (val-029/r4, val-017/r1) |
+| QA-026 | medium | S6 | open | LIVE: MET kept when min_years is required but no duration is stated ("Applied Node.js in various side projects over time"; val-009/r3, val-016/r1) |
+| QA-027 | medium | S2 (model) | open | LIVE: LoRA answers MET despite years below the minimum 4x on val (base: 2x); caught by the validator (UNCERTAIN), never final MET |
+| QA-028 | high | S2 | open | LIVE: LoRA explanations are 4 fixed templates that never name the requirement; the final report shows them as the explanation |
 | QA-024 | medium | S2 (test) | open | existing `test_api_backend_success_timeout_and_unavailable` is flaky (2 failures in ~15 full runs) |
 
 QA-006 and QA-021 were merged into QA-002 and dropped as negligible (12-character ref id collisions in the prompt).
-Open defects by owner: **S6 11** (2 of them contract decisions), **S2 4** (1 flaky existing test), **S1 2**, **S4 2**. S5's 3 are fixed.
+Open defects by owner: **S6 13** (2 of them contract decisions), **S2 6** (1 flaky existing test, 1 model-level), **S1 2**, **S4 2**. S5's 3 are fixed.
 
 ## Details
 
@@ -219,6 +223,71 @@ Open defects by owner: **S6 11** (2 of them contract decisions), **S2 4** (1 fla
 - Fix: serve the stub with `http.server.ThreadingHTTPServer` (a one-word change in the fixture), or reset the mode
   and wait for the slow handler before the 404 phase. No xfail marker: marking a flaky test would hide real
   failures. A merge gate that sees this single failure should re-run once.
+
+## Window 1: false-MET analysis of the LIVE LoRA evaluation (val, 202 requirements)
+
+Source: `claude/kind-albattani-k7qlt9` @ `46d24e1`, `benchmark/results/qwen3-4b-q4{,+hslora}-{none,rag}-val/
+predictions.jsonl` and the fine-tuned Judge's `judged.jsonl`. Read with `git show`, no model run. Full tables:
+`docs/qa/analysis/val_error_analysis.md` (made by `val_error_analysis.py`). Replay of the raw outputs through a
+validator: `replay_validator.py`. Replaying through the current validator reproduces all 808 saved decisions
+(0 changed), so the replay is faithful.
+
+| arm | raw false-MET | final false-MET | final and unreviewed (validator only) | Judge on those finals |
+|---|---|---|---|---|
+| base, no RAG | 3 | 1 (0.009) | 0 | not run |
+| base, RAG | 3 | 1 (0.009) | 0 | not run |
+| LoRA, no RAG | 7 | 3 (0.026) | 1 | FAIL on all 3 |
+| LoRA, RAG | 7 | 4 (0.034) | 2 | FAIL on all 4 |
+
+The 7 raw LoRA false-METs fall into three families. All CVs and requirements are in `benchmark/data/val.jsonl`.
+1. **Years below the minimum** (val-014/r2, val-024/r6, val-028/r4, val-037/r2: "React in daily use for 1 year" for
+   ≥ 3 years). The LoRA makes this error 4 times; the base model makes it twice (val-014/r2, val-042/r1). The
+   validator downgrades all of them to UNCERTAIN, so none is a final false-MET. Gold is MISSING/contradicted, so the
+   final answer is not optimal either. → **QA-027**, model level, S2 (training data or targets for year
+   comparisons). Regression: `test_qa_val_regressions.py::test_lora_met_with_years_below_minimum_is_caught`.
+2. **Duration required but not stated** (val-009/r3, val-016/r1: "Applied Angular in various side projects over
+   time"). Gold is UNCERTAIN. The validator keeps MET with `duration_not_verified` (reviewed). The base model makes
+   the same error on val-016. → **QA-026**, S6. Fix: an unverifiable minimum duration becomes UNCERTAIN.
+3. **Weak exposure as ability** (val-029/r4 in both arms, val-017/r1 RAG arm: "Watched tutorials about Angular in
+   spare time"). Gold is UNCERTAIN. The validator has no rule for this, so the result is MET with **no review**.
+   This is the only unreviewed false-MET family. RAG adds val-017: without RAG the LoRA said UNCERTAIN. The ESCO
+   React entries plausibly push it to MET; I have not verified this. → **QA-025**, S6, with S2 for the model. Fix:
+   when every quote has an exposure cue (tutorials, watched, read about, online course, familiar with, ...), the
+   result becomes UNCERTAIN with `weak_evidence_cue`.
+
+The fine-tuned Judge marks every final LoRA false-MET FAIL (p(neutral) ≥ 0.998). With the Judge enabled, each of
+them already reaches human review. The validator rules are still needed: the Judge is optional (`HS_JUDGE=off`),
+and in the metrics a reviewed MET still counts as MET.
+
+**Measured effect of the updated S6 patch** (`patches/S6-validator-prompt.patch`, which includes QA-025/026),
+replayed on the same raw LIVE outputs:
+
+| arm | macro-F1 now → patched | false-MET now → patched | unreviewed false-MET | decisions changed |
+|---|---|---|---|---|
+| base, no RAG | 0.634 → 0.640 | 0.009 → 0.000 | 0 → 0 | 1 |
+| base, RAG | 0.630 → 0.635 | 0.009 → 0.000 | 0 → 0 | 1 |
+| LoRA, no RAG | 0.908 → 0.929 | 0.026 → 0.000 | 1 → 0 | 3 |
+| LoRA, RAG | 0.897 → 0.926 | 0.034 → 0.000 | 2 → 0 | 4 |
+
+No other decision changes on the 808 outputs, so the negation, term, injection and certification rules change no
+decision on this data. No gold-MET quote in train or val has a weak-exposure cue. **Caveat:** QA-025 and QA-026
+were written after inspecting val errors, so these gains are tuned on val. The orchestrator should confirm them on
+the locked test split before quoting them as results. The replay also caught a bug in my first draft of the patch:
+the clause splitter cut "Node.js" at the dot. It is fixed and pinned by
+`test_qa_grounding.py::test_years_with_a_dotted_skill_name_still_count`.
+
+### QA-028 · high · S2: template explanations in the final report
+- Tests: `test_qa_val_regressions.py::test_final_report_explanations_are_requirement_specific_and_grounded` (mock
+  replay of the LoRA's template), and `tests/live/test_live_contracts.py::test_live_explanations_name_the_requirement`.
+- Evidence: the LoRA uses 4 distinct explanations over 202 answers, e.g. 88x "The CV directly shows this requirement;
+  the quote is copied from the CV.". On-topic rate 0.000 (base 1.000 with this check, which is looser than the
+  orchestrator's 0.847 metric). The check (`_qa_support.explanation_problems`): the explanation names a requirement
+  term, and every number in it occurs in the evidence or the requirement.
+- Root cause: the LoRA targets used template explanations, and `pipeline.aggregate`/`write_report` show the model
+  text as is.
+- Fix options (S2): retrain targets with requirement-specific explanations, or have the aggregator write a
+  deterministic explanation from requirement + decision + verified quotes (no new claims) whenever the model's text
+  fails `explanation_problems`, keeping the raw text as `model_explanation`.
 
 ## Baseline note
 
