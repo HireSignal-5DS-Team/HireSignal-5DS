@@ -91,3 +91,4 @@ Evaluation session (read-only): `claude/kind-albattani-k7qlt9` @ `e995669` — i
   significant benefit on the LoRA Matcher: lower human-review load at equal accuracy and false-MET.** QA-023 closed as
   fixed in the production provider (gated), won't-fix in legacy BM25. S1 base-model arms running (~2.5 h, S1 container).
 - 13:05Z: final locked-test run plan committed (a1f7f6d) before any test access; serving stack installing in S6.
+- 2026-10-16 13:43Z: final run lora__gated 154/199 (~14 s/req). ETA: lora__gated ~13:55Z, lora__none ~14:40Z, base__gated ~15:30Z. S1 base arms and S4 new-attribute arms running in their containers.
