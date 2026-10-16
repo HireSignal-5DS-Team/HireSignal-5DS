@@ -1,0 +1,44 @@
+﻿qid,decision,corrected_gold,notes
+E01,ACCEPT,,"Exact Python programming concept exists; source description covers coding and development. This tests concept retrieval, NOT proof of a candidate’s experience."
+E02,ACCEPT,,French query correctly translates to the English-indexed machine learning concept.
+E03,ACCEPT,,"Deep learning entry directly covers neural networks; artificial neural networks is a possible secondary valid retrieval, but gold is sufficient."
+E04,ACCEPT,,ESCO SQL concept explicitly covers database query language.
+E05,ACCEPT,,"Both statistical analysis practice and statistics knowledge are acceptable; this is an OR list, not a requirement to retrieve both."
+E06,ACCEPT,,Both predictive model building and statistical forecasting directly match the question; treat alternative gold URIs as OR.
+E07,ACCEPT,,"The ETL tools concept covers the technology behind the query. Caveat: ESCO classifies knowledge of tools, not necessarily hands-on proof of pipeline-building."
+E08,ACCEPT,,French exploration de données is well supported by data mining knowledge and perform data mining activity.
+E09,ACCEPT,,Natural language processing concept matches NLP; text mining is a related use case but not separately a named concept in this subset.
+E10,ACCEPT,,"Teamwork skill and teamwork principles knowledge both support cross-functional collaboration, though cross-functional is not explicitly in passage."
+E11,ACCEPT,,Hadoop concept includes MapReduce and HDFS and clearly matches the query.
+E12,ACCEPT,,General spreadsheet-software skill applies to Excel; no exclusive Microsoft Excel skill is required.
+E13,ACCEPT,,Computer vision explicitly covers extraction of information from images and videos.
+E14,CORRECT,http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4 | http://data.europa.eu/esco/skill/dba46f87-0831-49cd-a1c7-340a653c0221 | http://data.europa.eu/esco/skill/bec4359e-cb92-468f-a997-8fb28e32fba9 | http://data.europa.eu/esco/skill/8ff015a0-98ea-4d80-a23e-1f68110a919e,"Three existing accepted URIs are valid, but ESCO software design methodologies explicitly lists Scrum; omitting it may produce an unfair false negative. Add it as a fourth valid URI (OR semantics)."
+N01,CORRECT,http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce,"False no-match: the indexed ESCO skill manage ICT virtualisation environments explicitly names Kubernetes and Docker. It is broader than Kubernetes orchestration, but undeniably a relevant answer."
+N02,CORRECT,http://data.europa.eu/esco/skill/143769cb-b61e-47d8-a61e-eedfbec1016c | http://data.europa.eu/esco/skill/c3e36d05-8ae8-447f-bb2b-6f9409f85389,"Power BI product name is absent, but indexed concepts business intelligence and deliver visual presentation of data match BI dashboards. Change to acceptable broad related skills; note no exact Power BI product concept exists."
+N03,ACCEPT,,"No pastry, baking, or cake-decoration concept identified in the 1,621-entry ICT subset; appropriate easy out-of-domain negative control."
+N04,ACCEPT,,"No truck-driving-licence/transport-licence concept identified in the 1,621-entry ICT subset; appropriate easy out-of-domain negative control."
+J01,CORRECT,,"The job asks for experience with languages SUCH AS SQL, R, Python, SAS, SPSS or Stata. Current wording ""must know"" risks implying all six are individually mandatory. Keep verified quote; reword question to ask for examples. | Suggested query wording: Which programming languages does the posting list as examples for statistical analysis?"
+J02,ACCEPT,,Direct quote establishes U.S. Citizen or U.S. National requirement; French query accurately asks about nationality.
+J03,ACCEPT,,Posting quote directly covers automated data pipelines and BI visualisation platforms including Tableau/Power BI; dashboard-specific duty may be implied rather than explicit.
+J04,CORRECT,,"Gold gives only item 1 of a GS-14 specialized-experience list joined by AND; 1 year at GS-13 equivalent and items 2 and 3 are omitted. Verify full posting and replace gold with complete essential qualification passage; no safe full correction from this truncated context. | Suggested query wording: What specialized experience (duration, grade equivalence, and listed duties) is required at GS-14?"
+J05,ACCEPT,,"Target-state cloud AI architecture quote directly covers APIs, pipelines, inference and container applications."
+J06,CORRECT,one year of specialized experience equivalent to the GS-12 level in the Federal service,Gold currently answers only the nine-competency condition and fails the explicit minimum EXPERIENCE question. Replace with one-year GS-12-equivalent requirement present in context.
+J07,ACCEPT,,The quoted principal expert role formulation directly supports the French question about strategy for AI-enabled systems.
+J08,ACCEPT,,"Quantified degree-credit requirements are stated in the marked passage (24 total, 12 mathematics, 6 statistics)."
+J09,CORRECT,,"PyTorch and TensorFlow are introduced as examples (e.g.), not guaranteed mandatory or exclusive frameworks. Gold quote is accurate; reword to ""mentioned as examples"". | Suggested query wording: Which deep learning frameworks are mentioned as examples in this posting?"
+J10,CORRECT,,Gold is only the heading of one required GS-14 experience bullet; the passage also states leading model lifecycle work and begins a second AI/data-pipeline requirement. A comprehensive qualification answer requires the full qualifications section. | Suggested query wording: What specialized AI/ML experience is listed for GS-14 in this posting?
+J11,ACCEPT,,Technical-advisor duty for projects and studies matches the question.
+J12,ACCEPT,,Degree fields and related fields are clearly enumerated in the quoted basic requirements.
+J13,CORRECT,,Source says AT LEAST FOUR from a list; it does NOT say that differential calculus and linear algebra are individually required. Keep list as evidence but reword French question to ask which courses can count. | Suggested query wording: Quels cours figurent parmi les options possibles pour satisfaire la condition d’au moins quatre matières mathématiques ?
+J14,ACCEPT,,"Methods and specialized experience are explicitly listed, with supply-chain relevance grounded in the role title."
+J15,ACCEPT,,AI/ML capabilities and edge computing both appear in the quoted duties.
+J16,ACCEPT,,"Production-grade data/ML pipelines, data-quality checks, and lineage are stated verbatim."
+J17,CORRECT,"Conducting original research in machine learning, deep learning, and natural language processing to address critical standards challenges.","Gold cuts off after ""and"" and excludes natural language processing—the key portion needed to answer the query. Replace with the complete contiguous sentence in the supplied evidence."
+J18,ACCEPT,,"Exact quote specifies pipelines using SQL/T-SQL, Python, R, Databricks or Synapse; French question is supported."
+J19,CORRECT,Python required,"Gold ends with the unclosed parenthetical ""(Python required""; concise exact quote ""Python required"" more directly answers the yes/no question."
+J20,ACCEPT,,"Software and AI solution design, development and maintenance explicitly quoted."
+J21,ACCEPT,,"Design, development, planning and implementation of data-science models and applications quoted."
+J22,REJECT,,"Question asks WHICH four IT competencies, but the marked gold merely says that four competencies exist and the supplied context shows only two of the four. Cannot verify full answer using the sheet. Reject current Q/A pair pending source-based rewrite and exact full list. | Suggested query wording: Does the position require IT-related experience demonstrating four listed competencies?"
+J23,ACCEPT,,"All collecting, processing, storing, managing and integrating activities explicitly in gold."
+J24,ACCEPT,,Directly states leadership of survey group automation strategy.
+J25,ACCEPT,,"Directly cites LLMs, RAG, MCP servers, AWS Bedrock and Azure OpenAI."

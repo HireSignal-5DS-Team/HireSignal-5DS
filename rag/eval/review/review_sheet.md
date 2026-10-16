@@ -1,0 +1,935 @@
+# Query review sheet (read-only view; fill in review_sheet.csv)
+
+## E01 (esco, en)
+**Query:** experience programming in Python  
+**Expected answer:** Python (computer programming)  
+**Gold:** `http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> Python (computer programming): Python (computer programming). Also known as: Python3; Pyston; Py3K; Python2; Python prog; Python 3K; Python3000; Python; Python 3k. The techniques and principles of software development, such as analysis, algorithms, coding, testing and compiling of programming paradigms in Python.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> use experience map <http://data.europa.eu/esco/skill/0737ad0a-75ac-4696-988b-565820577ac0>
+> use scripting programming <http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E02 (esco, fr)
+**Query:** apprentissage automatique  
+**Expected answer:** machine learning  
+**Gold:** `http://data.europa.eu/esco/skill/3a2d5b45-56e4-4f5a-a55a-4a4a65afdc43`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> machine learning: machine learning. Also known as: ML. The principles, methods and algorithms of machine learning, a subfield of artificial intelligence. Common machine learning models such as supervised or unsupervised models, semi- supervised models and reinforcement learning models.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> use automatic programming <http://data.europa.eu/esco/skill/7d10fcb2-b368-48ab-996b-7c9fafcf68ed>
+> demonstrate willingness to learn <http://data.europa.eu/esco/skill/9bf266a6-188b-4d17-a22f-2f266d76832b>
+> apply blended learning <http://data.europa.eu/esco/skill/b363bb5f-2c79-40af-94da-33e06f9dee9f>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E03 (esco, en)
+**Query:** neural networks and deep learning models  
+**Expected answer:** deep learning  
+**Gold:** `http://data.europa.eu/esco/skill/ecc4552a-92c5-4222-b18d-faf5ac841080`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> deep learning: deep learning. The principles, methods and algorithms of deep learning, a subfield of artificial intelligence and machine learning. Common neural networks like perceptrons, feed-forward, backpropagation, and convolutional and recurrent neural networks.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> artificial neural networks <http://data.europa.eu/esco/skill/5608d5a0-6d5e-43b7-be37-616501729bb4>
+> machine learning <http://data.europa.eu/esco/skill/3a2d5b45-56e4-4f5a-a55a-4a4a65afdc43>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E04 (esco, en)
+**Query:** writing SQL queries against relational databases  
+**Expected answer:** SQL  
+**Gold:** `http://data.europa.eu/esco/skill/598de5b0-5b58-4ea7-8058-a4bc4d18c742`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> SQL: SQL. Also known as: Informix 4GL/SQL; SEQUEL; Subquery. The computer language SQL is a query language for retrieval of information from a database and of documents containing the needed information. It is developed by the American National Standards Institute and the International Organization for Standardization.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> operate relational database management system <http://data.europa.eu/esco/skill/7369f779-4b71-4aab-8836-48b69c676eec>
+> NoSQL <http://data.europa.eu/esco/skill/76ef6ed3-1658-4a1a-9593-204d799c6d0c>
+> design database scheme <http://data.europa.eu/esco/skill/6c08403c-a5bb-4868-b8c2-b7d039c0e511>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E05 (esco, en)
+**Query:** statistical analysis of experimental data  
+**Expected answer:** apply statistical analysis techniques / statistics  
+**Gold:** `http://data.europa.eu/esco/skill/382c11ed-20d5-4ae7-b60e-15fec527fa6c | http://data.europa.eu/esco/skill/7ee4c2ea-b349-4bd2-81a3-ec31475d4833`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> apply statistical analysis techniques: apply statistical analysis techniques. Also known as: apply numerical analysis to data. Use models (descriptive or inferential statistics) and techniques (data mining or machine learning) for statistical analysis and ICT tools to analyse data, uncover correlations and forecast trends.
+> statistics: statistics. Also known as: use of data in performance of work; use of statistics in performance of work; use of data; use of statistics; data; data analysis; statistical analysis; stats. The study of statistical theory, methods and practices such as collection, organisation, analysis, interpretation and presentation of data. It deals with all aspects of data including the planning of data collection in terms of the design of surveys and experiments in order to forecast and plan work-related activities.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> gather experimental data <http://data.europa.eu/esco/skill/89db623e-e1fc-4ec2-9a0f-7b72b4c35303>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E06 (esco, en)
+**Query:** forecasting with predictive models  
+**Expected answer:** build predictive models / carry out statistical forecasts  
+**Gold:** `http://data.europa.eu/esco/skill/38d49d88-9069-467b-b29e-3cae739bdd4d | http://data.europa.eu/esco/skill/be727774-46d7-43d7-aee9-1a51b5cd8c71`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> build predictive models: build predictive models. Also known as: devise predictive models; assemble predictive models; build a predictive model; building predictive models; building a predictive model; construct predictive models; produce predictive models. Create models to predict the probability of an outcome.
+> carry out statistical forecasts: carry out statistical forecasts. Also known as: carrying out statistical forecasts; oversee statistical forecasts; complete statistical forecasts; make statistical forecasts; carrying out a statistical forecast; carry out a statistical forecast; undertake statistical forecasts. Undertake a systematic statistical examination of data representing past observed behaviour of the system to be forecast, including observations of useful predictors outside the system.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> forecast human population trends <http://data.europa.eu/esco/skill/27910071-8dcd-40e5-9b58-7db56e9d6d2c>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E07 (esco, en)
+**Query:** building ETL pipelines  
+**Expected answer:** data extraction, transformation and loading tools  
+**Gold:** `http://data.europa.eu/esco/skill/9d0d89be-bffa-4393-b6f6-8d05bea49051`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> data extraction, transformation and loading tools: data extraction, transformation and loading tools. Also known as: Sagent Data Flow; extract, transform, load; Relational Junction ETL Manager; Centerprise Data Integrator; CloverETL; Talend Studio for Data Integration; Adeptia Integration Server; ETL; IBM Infosphere WarehoEdition; Syncsort DMX; Data Migrator; Open Text Integration Center; Cognos Data Manager; Pervasive Data Integrator; Elixir Repertoire for Data ETL; PowerCenter Informatica. The tools for integration of information from multiple applications, created and maintained by organisations, into one consistent and transparent data structure.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> implement data warehousing techniques <http://data.europa.eu/esco/skill/fd6d2981-3d4a-4ce2-9741-cfc98c5b74bd>
+> Oracle Warehouse Builder <http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E08 (esco, fr)
+**Query:** exploration de données  
+**Expected answer:** data mining / perform data mining  
+**Gold:** `http://data.europa.eu/esco/skill/25f0ea33-b4a2-4f31-b7b4-7d20e827b180 | http://data.europa.eu/esco/skill/4216e465-7baa-4884-a241-54b197bb9278`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> data mining: data mining. The methods of artificial intelligence, machine learning, statistics and databases used to extract content from a dataset.
+> perform data mining: perform data mining. Also known as: mine data; use model data. Explore large datasets to reveal patterns using statistics, database systems or artificial intelligence and present the information in a comprehensible way.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> analyse big data <http://data.europa.eu/esco/skill/47a49cd6-097d-457a-9f7b-c290c14930d5>
+> find trends in geographic data <http://data.europa.eu/esco/skill/46990b9b-746e-481d-a66a-0cac3f07dfac>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E09 (esco, en)
+**Query:** text mining and NLP  
+**Expected answer:** natural language processing  
+**Gold:** `http://data.europa.eu/esco/skill/fff0e2cd-d0bd-4b02-9daf-158b79d9688a`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> natural language processing: natural language processing. Also known as: NLP. The technologies which enable ICT devices to understand and interact with users through human language.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> data mining <http://data.europa.eu/esco/skill/25f0ea33-b4a2-4f31-b7b4-7d20e827b180>
+> use word processing software <http://data.europa.eu/esco/skill/81633a44-f1db-4a01-a940-804c6905e330>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E10 (esco, en)
+**Query:** collaborating in cross-functional teams  
+**Expected answer:** work in teams / teamwork principles  
+**Gold:** `http://data.europa.eu/esco/skill/60c78287-22eb-4103-9c8c-28deaa460da0 | http://data.europa.eu/esco/skill/a5b0cd5c-e13a-4ab3-8d93-4d242adcfb01`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> work in teams: work in teams. Also known as: work in groups; working in teams; support colleagues; work in squads; handle team dynamics; foster social networks; cooperate with colleagues; team-working; cooperate; collaborate on tasks. Work confidently within a group with each doing their part in the service of the whole.
+> teamwork principles: teamwork principles. Also known as: teamwork approaches; teamwork methods; teamwork concepts; teamwork principle. The cooperation between people characterised by a unified commitment to achieving a given goal, participating equally, maintaining open communication, facilitating effective usage of ideas etc.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> ensure cross-department cooperation <http://data.europa.eu/esco/skill/b216d9a2-7d4e-4312-8d05-e375f4ab44d8>
+> work with an artistic team <http://data.europa.eu/esco/skill/e9ea388a-5e61-451b-aac9-f9080def9374>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E11 (esco, en)
+**Query:** Hadoop ecosystem  
+**Expected answer:** Hadoop  
+**Gold:** `http://data.europa.eu/esco/skill/e46291c7-52b9-4174-bd59-178884861038`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> Hadoop: Hadoop. The open-source data storing, analysis and processing framework which consists mainly in the MapReduce and Hadoop distributed file system (HDFS) components and it is used to provide support for managing and analysing large datasets.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> blockchain platforms <http://data.europa.eu/esco/skill/9035afc4-5317-455d-ab60-f32e2ecc6bfc>
+> Havok Vision <http://data.europa.eu/esco/skill/a7723f06-53c3-4228-9fd0-1952ea1d7391>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E12 (esco, en)
+**Query:** Excel spreadsheets  
+**Expected answer:** use spreadsheets software  
+**Gold:** `http://data.europa.eu/esco/skill/1973c966-f236-40c9-b2d4-5d71a89019be`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> use spreadsheets software: use spreadsheets software. Also known as: use spreadsheets program; Calligra Sheets; Myrtle; Quantrix Modeler; Sphygmic Software Spreadsheet; OxygenOffice Professional Calc; IBM Lotus Symphony Spreadsheets; Corel Calculate; OOo4Kids Calc; Lotus Improv; Zoho Sheet; Simple Spreadsheet; Household Budget Worksheet; ThinkFree Office Calc; ResolverOne; DhtmlxSpreadsheet; Gnumeric; design spreadsheets; CellPro; Ability Office Spreadsheet; QT Calc Express; Dolphinity Planner; Microsoft Office Excel; PlanMaker; Accel Spreadsheet; Kingsoft Spreadsheet; wikiCalc; Sheetster; Google Sheets; Lotus 1-2-3; LibreOffice Calc. Use software tools to create and edit tabular data to carry out mathematical calculations, organise data and information, create diagrams based on data and to retrieve them.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> style sheet languages <http://data.europa.eu/esco/skill/c2999f0c-eb37-4cdf-b9b0-82107b628794>
+> statistics <http://data.europa.eu/esco/skill/7ee4c2ea-b349-4bd2-81a3-ec31475d4833>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E13 (esco, en)
+**Query:** image recognition  
+**Expected answer:** computer vision  
+**Gold:** `http://data.europa.eu/esco/skill/7b0d5000-00da-4864-b776-6de49a87a669`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> computer vision: computer vision. Also known as: tensorflow; openCV; OCR; cuda; keras; matlab; simpleCV. The definition and functioning of computer vision. Computer vision tools to allow computers to extract information from digital images such as photographs or video. Areas of application to solve real-world problems like security, autonomous driving, robotic manufacturing and inspection, digital image classification, medical image processing and diagnosis, and others.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> image formation <http://data.europa.eu/esco/skill/734b6025-0d14-499d-8e95-fdf512058e77>
+> digital image processing <http://data.europa.eu/esco/skill/945b8655-5577-4c3a-946a-842d4527afa8>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## E14 (esco, en)
+**Query:** Scrum and agile methodology  
+**Expected answer:** Agile project management / Agile development / ICT project management methodologies  
+**Gold:** `http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4 | http://data.europa.eu/esco/skill/dba46f87-0831-49cd-a1c7-340a653c0221 | http://data.europa.eu/esco/skill/bec4359e-cb92-468f-a997-8fb28e32fba9`  
+**Source:** ESCO v1.1.x (en), concept URI(s) in gold column
+
+**Supporting passage** (gold in [[ ]]):
+
+> Agile project management: Agile project management. The agile project management approach is a methodology for planning, managing and overseeing of ICT resources in order to meet specific goals and using project management ICT tools.
+> Agile development: Agile development. The agile development model is a methodology to design software systems and applications.
+> ICT project management methodologies: ICT project management methodologies. Also known as: Kanban; prince2; structured methodology; agile; Benefits realization management; Extreme project management; software development methodologies; scrum; Critical chain project management; Code and fix development. The methodologies or models for planning, managing and overseeing of ICT resources in order to meet specific goals, such methodologies are Waterfall, Incremental, V-Model, Scrum or Agile and using project management ICT tools.
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> software design methodologies <http://data.europa.eu/esco/skill/8ff015a0-98ea-4d80-a23e-1f68110a919e>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## N01 (none, en)
+**Query:** Kubernetes container orchestration  
+**Expected answer:** no_match: no ESCO concept should be returned  
+**Gold:** `(none)`  
+**Source:** ESCO subset (concept absent; see docs/esco_coverage.md)
+
+**Supporting passage** (gold in [[ ]]):
+
+> (none)
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> manage ICT virtualisation environments <http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce>
+> coordinate purchasing activities <http://data.europa.eu/esco/skill/650f44e2-cb4c-41ba-9095-581fe6bea4b1>
+> coordinate activities in audio recording studio <http://data.europa.eu/esco/skill/a3df9f73-7d84-4f3b-8581-fcdc5b02db3f>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## N02 (none, en)
+**Query:** Power BI dashboards  
+**Expected answer:** no_match: no ESCO concept should be returned  
+**Gold:** `(none)`  
+**Source:** ESCO subset (concept absent; see docs/esco_coverage.md)
+
+**Supporting passage** (gold in [[ ]]):
+
+> (none)
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> IBM InfoSphere DataStage <http://data.europa.eu/esco/skill/14fdac88-6d4a-4e47-9df5-02c6d1e86fdd>
+> database management systems <http://data.europa.eu/esco/skill/ab1e97ed-2319-4293-a8b7-072d2648822f>
+> business intelligence <http://data.europa.eu/esco/skill/143769cb-b61e-47d8-a61e-eedfbec1016c>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## N03 (none, en)
+**Query:** pastry baking and cake decoration  
+**Expected answer:** no_match: no ESCO concept should be returned  
+**Gold:** `(none)`  
+**Source:** ESCO subset (concept absent; see docs/esco_coverage.md)
+
+**Supporting passage** (gold in [[ ]]):
+
+> (none)
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> collaborate on costume and make-up for performances <http://data.europa.eu/esco/skill/c7d328f4-87a7-4091-8eb5-122f471bd954>
+> 3D texturing <http://data.europa.eu/esco/skill/3e7516dc-0f7c-4686-8b2f-fade4e5d21be>
+> develop design ideas cooperatively <http://data.europa.eu/esco/skill/fcc0a1c8-d36e-4f8e-b928-00d5bca10a47>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## N04 (none, en)
+**Query:** heavy truck driving licence  
+**Expected answer:** no_match: no ESCO concept should be returned  
+**Gold:** `(none)`  
+**Source:** ESCO subset (concept absent; see docs/esco_coverage.md)
+
+**Supporting passage** (gold in [[ ]]):
+
+> (none)
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> THC Hydra <http://data.europa.eu/esco/skill/f2c26cd0-f823-4549-a418-f84d23131308>
+> prepare licence agreements <http://data.europa.eu/esco/skill/0d4471ae-3820-4c23-8566-f44a7bd159b2>
+> demonstrate awareness of health risks  <http://data.europa.eu/esco/skill/c4180af3-befd-4bd8-9a65-6a496f9d9f15>
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J01 (job description, en)
+**Query:** which programming languages must the candidate know for statistical analysis  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `You must have experience working with programming languages such as: SQL, R, Python, SAS, SPSS or Stata to conduct statistical analyses, query or integrate data sets.`  
+**Source:** Data Scientist (Citizenship and Immigration Services), https://www.usajobs.gov/job/882803700; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...cation and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph A above, plus additional education or appropriate experience. Selective Placement Factor: [[You must have experience working with programming languages such as: SQL, R, Python, SAS, SPSS or Stata to conduct statistical analyses, query or integrate data sets.]] This experience must be documented in your resume. Failure to do so may result in an ineligible rating. GS-12 : You qualify at the GS-12 level if you possess one (1) year of specialized experience, w...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-882803700#structure-5 [Qualifications]: and, Developing and maintaining automated data pipelines or analytical tools using programming languages (such as Python, R, or SQL) and advanced data visualiza...
+> usajobs-882803700#structure-3 [Qualifications]: Qualifications
+> The qualifications for this position must be met by 11:59 PM (Eastern Time) on 09/07/2026. Time in Grade does not apply to Delegated Examining An...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J02 (job description, fr)
+**Query:** exigence de nationalité pour ce poste  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `You must be a U.S. Citizen or U.S. National to apply for this position`  
+**Source:** Data Scientist (Citizenship and Immigration Services), https://www.usajobs.gov/job/882803700; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...edibility of insights. Provide training and support teams in evidence-based decision-making and application of rigorous data validation techniques.
+> 
+> Conditions of employment
+> Conditions of Employment: [[You must be a U.S. Citizen or U.S. National to apply for this position]] Successfully pass a Background Investigation including financial disclosure You must pass a drug screening Males born after 12/31/1959 must be registered with the Selective Service Political appointe...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-882803700#structure-12 [Additional information]: If a SECRET or TOP SECRET clearance is needed or the position is designated a Sensitive National Security position, all selected candidates must meet the requir...
+> usajobs-882803700#structure-8 [Qualifications]: To determine if you need a RA, please review https://support-usahire.opm.gov/hc/en-us/articles/45424542500371-How-to-request-a-reasonable-accommodation . Backgr...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J03 (job description, en)
+**Query:** experience building data pipelines and dashboards with BI tools  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Developing and maintaining automated data pipelines or analytical tools using programming languages (such as Python, R, or SQL) and advanced data visualization platforms (such as Tableau or Power BI)`  
+**Source:** Data Scientist (Citizenship and Immigration Services), https://www.usajobs.gov/job/882803700; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...activities, and ensuring timely delivery of analytical products; Advising senior leadership and stakeholders on data-driven strategies, presenting complex technical findings in actionable terms; and, [[Developing and maintaining automated data pipelines or analytical tools using programming languages (such as Python, R, or SQL) and advanced data visualization platforms (such as Tableau or Power BI)]] to support large-scale data analysis and reporting. Please read the following important information to ensure you submit everything we need to consider your application: It is your responsibility to ...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-882803700#structure-4 [Qualifications]: Selective Placement Factor: You must have experience working with programming languages such as: SQL, R, Python, SAS, SPSS or Stata to conduct statistical analy...
+> usajobs-882803700#structure-1 [Duties]: Duties
+> The responsibilities described are for the full performance level. At developmental grade levels, assignments will be of more limited scope performed wit...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J04 (job description, en)
+**Query:** specialized experience required for the senior cloud AI engineer role  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions`  
+**Source:** IT Specialist (Senior Cloud AI Engineer) (Small Business Administration), https://www.usajobs.gov/job/883337000; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...job; advises others on technical issues. AND GS-14: One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. [[serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions]]; AND 2. designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads; AND 3. planning and...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-883337000#structure-1 [Duties]: Duties
+> As an IT Specialist (Senior Cloud AI Engineer) at the GS- 2210-14, some of your typical work assignments may include: Develop technical standards, refere...
+> usajobs-883337000#structure-0 [Summary]: Summary
+> This position is located in the Small Business Administration, Office of the Chief Information Officer in Washington, D.C. The position serves as a seni...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J05 (job description, en)
+**Query:** design architectures for AI workloads including model inference services and containers  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Develop target-state architectures for cloud-hosted AI workloads, including data pipelines, APIs, model development environments, inference services, containerized applications, and supporting infrastructure.`  
+**Source:** IT Specialist (Senior Cloud AI Engineer) (Small Business Administration), https://www.usajobs.gov/job/883337000; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...nclude: Develop technical standards, reference architecture, implementation patterns, responsible-AI guardrails, and reusable engineering playbooks for cloud-hosted AI and machine-learning workloads. [[Develop target-state architectures for cloud-hosted AI workloads, including data pipelines, APIs, model development environments, inference services, containerized applications, and supporting infrastructure.]] Lead or support pilots, proofs-of-concept, and engineering assessments of emerging cloud and AI technologies, and recommend adoption, refinement, or discontinuation based on mission value, security, ...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-883337000#structure-4 [Qualifications]: analyzes information and makes correct inferences or draws accurate conclusions. Teamwork - Encourages and facilitates cooperation, pride, trust, and group iden...
+> usajobs-883337000#structure-9 [Additional information]: Additional information
+> This is a bargaining unit position in Local 228. This is not a (drug) testing designated position (TDP). Reasonable Accommodation Request...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J06 (job description, en)
+**Query:** minimum experience needed to qualify at the GS-13 grade  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Have IT-related experience demonstrating EACH of the nine competencies`  
+**Source:** Al Software Engineer (Technology Transformation Service), https://www.usajobs.gov/job/883691200; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...st have at least one year of specialized experience equivalent to the GS-12 level or higher in the Federal service. Applicants applying for the GS-13 grade level must meet the following requirements: [[Have IT-related experience demonstrating EACH of the nine competencies]] AND one year of specialized experience equivalent to the GS-12 level in the Federal service as described below: Attention to Detail - Is thorough when performing work and conscientious about attendin...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-883691200#structure-3 [Qualifications]: Qualifications
+> To evaluate your qualifications, your resume must clearly demonstrate how you meet the specialized experience described below. Your resume must n...
+> usajobs-883691200#structure-5 [Qualifications]: Technical Competence – Uses knowledge that is acquired through formal training or on-the-job experience to perform one's job; works with, understands, and evalu...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J07 (job description, fr)
+**Query:** responsabilités principales : stratégie d'ingénierie pour les systèmes d'IA et le cloud  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Serves as a principal technical expert formulating and directing high level, enterprise-wide engineering strategies for Al-enabled systems`  
+**Source:** Al Software Engineer (Technology Transformation Service), https://www.usajobs.gov/job/883691200; occurs 2x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...l Acquisition Service (FAS), General Services Administration (GSA). We are currently filling multiple vacancies, but additional vacancies may be filled as needed. Learn more about this agency
+> 
+> Duties
+> [[Serves as a principal technical expert formulating and directing high level, enterprise-wide engineering strategies for Al-enabled systems]], computer hardware/software integration, and cloud-native architectures and platforms, delivering impactful solutions for the American people. Serves as a principal technical expert formulating and d...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-883691200#structure-5 [Qualifications]: Technical Competence – Uses knowledge that is acquired through formal training or on-the-job experience to perform one's job; works with, understands, and evalu...
+> usajobs-883691200#structure-9 [Additional information]: Expand Hide additional information Candidates should be committed to improving the efficiency of the Federal government, passionate about the ideals of our Amer...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J08 (job description, en)
+**Query:** degree and coursework in mathematics and statistics required  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics.`  
+**Source:** Mathematical Statistician (Data Scientist) (Internal Revenue Service), https://www.usajobs.gov/job/886071700; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...year, and indicate number of hours worked per week, on your resume. You must meet the following requirements by the closing date of this announcement. BASIC REQUIREMENTS (IOR) ALL GRADES: EDUCATION : [[A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics.]] OR COMBINATION OF EDUCATION AND EXPERIENCE : A combination of education and experience -- at least 24 semester hours of mathematics and statistics, including at least 12 hours in mathematics and 6 ho...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-886071700#structure-8 [Education]: Education
+> A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S. Department of Edu...
+> usajobs-886071700#structure-6 [Qualifications]: For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks. There is no TIG restriction for GS-02, 03, or 04 posit...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J09 (job description, en)
+**Query:** which deep learning frameworks does the role use  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Uses modern ML frameworks (e.g., PyTorch, TensorFlow) and scalable compute environments`  
+**Source:** Senior AI/ML Engineer (Consumer Product Safety Commission), https://www.usajobs.gov/job/886606600; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ... following duties: Designs, develops, tests, and deploys supervised, unsupervised, NLP, deep learning, and agent-enabled AI models that detect risks, surface signals, and identify leading indicators. [[Uses modern ML frameworks (e.g., PyTorch, TensorFlow) and scalable compute environments]] to build high-performance models that meet standards for accuracy, fairness, robustness, and transparency. Advises on high-quality data pipelines for ingestion, transformation, validation, quality en...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-886606600#structure-0 [Summary]: Summary
+> The Senior Artificial Intelligence (AI) / Machine Learning (ML) Engineer serves as the agency's senior technical data scientist providing mission critic...
+> usajobs-886606600#structure-4 [Qualifications]: Qualifications
+> In addition to the mandatory education requirement, all applicants must have 52 weeks of specialized experience equivalent to at least the next l...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J10 (job description, en)
+**Query:** specialized experience needed for the GS-14 AI/ML engineer  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Demonstrated experience advancing AI/ML and analytics initiatives`  
+**Source:** Senior AI/ML Engineer (Consumer Product Safety Commission), https://www.usajobs.gov/job/886606600; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...pped the candidate with the particular knowledge, skills, and abilities to perform successfully the duties of the position. Qualifying specialized experience must demonstrate the following: GS-14: 1) [[Demonstrated experience advancing AI/ML and analytics initiatives]] by leading components of model development, data preprocessing, feature engineering, model validation, and model monitoring; 2) improving data pipelines and cloud-based workflows to ensure scalable, ...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-886606600#structure-1 [Duties]: Duties
+> Help This position is officially titled Data Scientist (Artificial Intelligence). The working title is Senior AI/ML Engineer. The incumbent supports the ...
+> usajobs-886606600#structure-8 [Education]: Education
+> Mandatory Education Requirement. All applicants must meet one of the following requirements to qualify: A. A bachelor's or higher degree in mathematic...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J11 (job description, en)
+**Query:** day-to-day duties as technical advisor on projects and studies  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Serve as technical advisor for the administration and management of assigned projects and studies`  
+**Source:** Data Scientist (Centers for Disease Control and Prevention), https://www.usajobs.gov/job/882835500; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...PM, on the day that 150 applications have been received or on the closing date, whichever is first. Learn more about this agency
+> 
+> Duties
+> WHAT YOU'LL BE DOING DAY TO DAY As a Data Scientist, you will: [[Serve as technical advisor for the administration and management of assigned projects and studies]], including the direction and control of project planning, project review and findings; Research and investigate new or improved business and management practices for application to agency programs or...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-882835500#structure-4 [Qualifications]: In accordance with Office of Personnel Management policy, federal employees are assumed to have gained experience by performing duties and responsibilities appr...
+> usajobs-882835500#structure-5 [Qualifications]: OPM Qualification General Policies Website Education Foreign Education: If you are using education completed in foreign colleges or universities to meet the qua...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J12 (job description, en)
+**Query:** which degree fields qualify for the data scientist position  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Degree: Mathematics, statistics, computer science, data science or field directly related to the position`  
+**Source:** Data Scientist (Environmental Protection Agency), https://www.usajobs.gov/job/882960000; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...loyment, as determined by a background investigation May be required to successfully complete a probationary period
+> 
+> Qualifications
+> BASIC REQUIREMENTS FOR DATA SCIENTIST: You must have either A or B: [[Degree: Mathematics, statistics, computer science, data science or field directly related to the position]]. The degree must be in a major field of study (at least at the baccalaureate level) that is appropriate for the position. or Combination of education and experience: Courses equivalent to a major fie...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-882960000#structure-5 [Qualifications]: You may qualify for the GS-11 grade level , if you possess at least one year of specialized experience equivalent to the GS-09 grade level in the federal sector...
+> usajobs-882960000#structure-1 [Duties]: Duties
+> As a Data Scientist GS-1560-09 your typical work assignments may include the following under supervision: At the direction of the Director or Team Lead a...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J13 (job description, fr)
+**Query:** cours de mathématiques exigés comme le calcul différentiel et l'algèbre linéaire  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `differential calculus, integral calculus, advanced calculus, theory of equations, vector analysis, advanced algebra, linear algebra`  
+**Source:** Mathematical Statistician (National Agricultural Statistics Service), https://www.usajobs.gov/job/883048600; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...ce or additional education. Evaluation of Education: Courses acceptable toward meeting the mathematics course requirement of paragraphs A or B above must have included at least four of the following: [[differential calculus, integral calculus, advanced calculus, theory of equations, vector analysis, advanced algebra, linear algebra]], mathematical logic, differential equations, or any other advanced course in mathematics for which one of these was a prerequisite. Courses in mathematical statistics or probability theory with a pre...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-883048600#structure-4 [Qualifications]: calculation of totals, averages, percentages, or other arithmetic summations; preparation of simple tables or charts; or verification of data by simple comparis...
+> usajobs-883048600#structure-7 [Education]: Education
+> Please see above for education qualification requirement information.
+> 
+> Additional information
+> Career Transition Assistance Plan (CTAP), Reemployment P...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J14 (job description, en)
+**Query:** experience with regression and decision trees for supply chain risk  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis`  
+**Source:** Data Scientist (Supply Chain) (Defense Contract Management Agency), https://www.usajobs.gov/job/883161100; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...s only), time-after-competitive appointment, minimum qualifications, and any other regulatory requirements by the cut-off/closing date of the announcement. Creditable specialized experience includes: [[Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis]] to research and improve supply chain risk assessment processes. Providing technical direction, planning, and leadership to create and implement new agency data and supply chain risk assessment policy...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-883161100#structure-1 [Duties]: Duties
+> Performs professional work in data science, system analysis, risk analysis, predictive analysis, computer simulation, and program/project planning and co...
+> usajobs-883161100#structure-4 [Qualifications]: Or, if you are using education to qualify in lieu of specialized experience you MUST provide transcripts (unofficial are acceptable at the time of application) ...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J15 (job description, en)
+**Query:** develop AI and machine learning capabilities and edge computing  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Assist with the design, development, evaluation and application of Artificial Intelligence (AI) and Machine Learning (ML) capabilities, edge computing`  
+**Source:** Data Scientist (National Oceanic and Atmospheric Administration), https://www.usajobs.gov/job/883284100; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ... or Nationals. You must apply to each announcement if you want to be considered for that announcement. Learn more about this agency
+> 
+> Duties
+> As a Data Scientist, you will perform the following duties: [[Assist with the design, development, evaluation and application of Artificial Intelligence (AI) and Machine Learning (ML) capabilities, edge computing]], and new automated analytic workflows. Assist with researching integrated workflows. Apply data science languages and computational frameworks to analyze field-collected fisheries data. Work across r...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-883284100#structure-5 [Qualifications]: To qualify at the ZP-2 or GS-07 level: SPECIALIZED EXPERIENCE: In addition to meeting the Basic Requirements above, applicants must also possess one full year (...
+> usajobs-883284100#structure-7 [Qualifications]: or certification from the National Guard Bureau or Military Department that you are eligible for disability retirement; Copy of your SF-50 "Notification of Pers...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J16 (job description, en)
+**Query:** build and run production ML pipelines with data quality checks  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Design and operate production grade data and machine learning pipelines with data quality checks and documented lineage.`  
+**Source:** Data Scientist (Direct Hire) (Headquarters, NASA), https://www.usajobs.gov/job/883386100; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...ertised. Duties assigned at lower grade levels will be of more limited scope, performed with less independence and limited complexity; duties will be commensurate with the grade of selected employee. [[Design and operate production grade data and machine learning pipelines with data quality checks and documented lineage.]] Develop and deploy analytic models to meet mission needs and configure monitoring and alerting for performance. Prepare, transform, and integrate datasets from multiple sources and maintain reproduci...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-883386100#structure-3 [Qualifications]: Qualifications
+> Specialized experience is experience that has equipped you with the particular ability, skill, and knowledge to successfully perform the duties o...
+> usajobs-883386100#structure-4 [Qualifications]: OR Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus add...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J17 (job description, en)
+**Query:** original research in deep learning and natural language processing  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Conducting original research in machine learning, deep learning, and`  
+**Source:** AI Computer Scientist, ZP-1550-III/IV (National Institute of Standards and Technology), https://www.usajobs.gov/job/883511200; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...ncy
+> 
+> Duties
+> As a ZP-III AI Technical Expert, you will perform cutting-edge research and develop advanced evaluation tools to advance the Institute's measurement science mission. Major duties include: [[Conducting original research in machine learning, deep learning, and]] natural language processing to address critical standards challenges. Developing test software and innovative methodologies focused on AI computing to enable accurate measurement science. Designing a...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-883511200#structure-3 [Qualifications]: Qualifications
+> Basic Requirements: Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics...
+> usajobs-883511200#structure-4 [Qualifications]: The qualification requirements in this vacancy announcement are based on the U.S. Office of Personnel Management (OPM) Qualification Standards Handbook . If req...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J18 (job description, fr)
+**Query:** construire des pipelines de données avec SQL, Python ou Databricks  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Developing and maintaining data pipelines using SQL/T-SQL, Python, R, Databricks, or Synapse.`  
+**Source:** Data Scientist (Recent Graduate) (Federal Energy Regulatory Commission), https://www.usajobs.gov/job/883827900; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...ce of Enforcement and Regulatory Accounting. For more information visit: OERA Learn more about this agency
+> 
+> Duties
+> As a Data Scientist (Recent Graduate) some of your typical work assignments include: [[Developing and maintaining data pipelines using SQL/T-SQL, Python, R, Databricks, or Synapse.]] Using Power BI, R, Python, SQL to analyze data and implement quality control checks. Using GitHub for version control and collaborate with teammates. Clearly presenting findings orally and in writing...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-883827900#structure-3 [Qualifications]: Qualifications
+> Eligibility : In order to be eligible for our Recent Graduates Program, you must: Be a recent graduate who has completed, within the last two yea...
+> usajobs-883827900#structure-2 [Conditions of employment]: Conditions of employment
+> You must be a U.S. Citizen or National. A one-year probationary period may be required. A background investigation is required. This is...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J19 (job description, en)
+**Query:** is Python required for the AI engineer position  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Experience using modern programming languages standard to data science and AI engineering (Python required`  
+**Source:** Data Scientist - AI Engineer (Office of the Inspector General, USPS), https://www.usajobs.gov/job/884225200; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...ve field. AND Applicants must have one (1) year of specialized experience equivalent to the next lower grade level demonstrating the following technical competencies: Programming for AI/Data Science: [[Experience using modern programming languages standard to data science and AI engineering (Python required]]; experience with SQL, Scala, or Rust is a plus) to build data pipelines and integrate analytics applications. Generative AI & LLM Frameworks: Experience developing, configuring, or integrating machin...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-884225200#structure-6 [Qualifications]: an ineligible status, and you will not be referred for further consideration. Include your major accomplishments relevant to the position requirements in your r...
+> usajobs-884225200#structure-2 [Duties]: Only those candidates who meet all qualification and eligibility requirements and who submit the required information by 11:59 PM EST on 09/25/2026 will be cons...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J20 (job description, en)
+**Query:** design, develop and maintain software applications and AI solutions  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Independently designs, develops, tests, implements, and maintains software applications and artificial intelligence solutions`  
+**Source:** Computer Scientist (Artificial Intelligence) (Commerce, International Trade Administration), https://www.usajobs.gov/job/884501900; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...ou are interested in this career opportunity, we encourage you to apply! Learn more about this agency
+> 
+> Duties
+> As a Computer Scientist (Artificial Intelligence), you will perform the following duties: [[Independently designs, develops, tests, implements, and maintains software applications and artificial intelligence solutions]] supporting agency programs and enterprise modernization initiatives. Develops and implements machine learning models, predictive analytics solutions, and automation tools supporting organizational pr...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-884501900#structure-3 [Qualifications]: Qualifications
+> Basic Education Requirement Applicants must meet one of the following requirements: Degree in Computer Science: A bachelor's degree in computer s...
+> usajobs-884501900#structure-4 [Qualifications]: and Analyzing requirements and developing or implementing technical solutions for information technology, system modernization, or cloud-based projects, includi...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J21 (job description, en)
+**Query:** plan and implement data science applications and models  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Participates in planning, designing, developing, and implementing state-of-the-art data science applications, models, technologies`  
+**Source:** Data Scientist (Bureau of Labor Statistics), https://www.usajobs.gov/job/884783000; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...ditions, price changes, and productivity in the U.S. economy to support public and private decision making. Learn more about this agency
+> 
+> Duties
+> Duties include, but are not limited to, the following: [[Participates in planning, designing, developing, and implementing state-of-the-art data science applications, models, technologies]], and guiding principles for data use and analysis in direct support of the Bureau of Labor Statistics mission and programs Coordinates and integrates activities on the exploration, acquisition, devel...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-884783000#structure-3 [Qualifications]: Qualifications
+> Basic Requirement Data Scientist , 1560: A) Degree: Mathematics, statistics, computer science, data science or field directly related to the posi...
+> usajobs-884783000#structure-7 [Additional information]: Additional information
+> This position is being filled through the Direct Hire Authority. Traditional rating and ranking of applications does NOT apply. Veterans'...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J22 (job description, fr)
+**Query:** compétences informatiques exigées pour ce poste  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `must have IT-related experience demonstrating each of the four competencies listed below`  
+**Source:** Information Technology Specialist (Artificial Intelligence) (Customs and Border Protection), https://www.usajobs.gov/job/885581200; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ...d States. Learn more about E-Verify including your rights and responsibilities. Bargaining Unit: This position is not covered under the bargaining unit.
+> 
+> Qualifications
+> Basic Requirement: Individuals [[must have IT-related experience demonstrating each of the four competencies listed below]]. Attention to Detail - Is thorough when performing work and conscientious about attending to detail. Customer Service - Works with clients and customers (that is, any individuals who use or receive t...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-885581200#structure-4 [Qualifications]: Assisting in the review and development of AI policies to address technological advancements and security vulnerabilities. NOTE: Your resume must explicitly ind...
+> usajobs-885581200#structure-8 [Additional information]: Additional information
+> The vacancy questionnaire includes four short, free-response essay questions. This provides an opportunity for you to highlight your dedi...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J23 (job description, en)
+**Query:** solutions for collecting, processing and integrating complex data  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Develop and implement IT data science solutions for collecting, processing, storing, managing, and integrating complex data from diverse sources`  
+**Source:** IT Specialist (Data Science) (National Institutes of Health), https://www.usajobs.gov/job/885947600; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ... with scientists and IT professionals to improve data capabilities and advance research goals. Learn more about this agency
+> 
+> Duties
+> Help As an IT Specialist (Data Science) , your duties will include: [[Develop and implement IT data science solutions for collecting, processing, storing, managing, and integrating complex data from diverse sources]] to support organizational and research requirements. Analyze large and complex data sets using statistical software, programming languages, and analytical methods to identify trends, evaluate informa...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-885947600#structure-4 [Qualifications]: curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues; preparing or s...
+> usajobs-885947600#structure-0 [Summary]: Summary
+> Are you an IT professional interested in applying data science, AI, and emerging technologies to support biomedical research? Join NIDCR to develop and ...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J24 (job description, en)
+**Query:** lead the automation strategy of the survey group  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Lead the development, implementation, and maintenance of the Survey and Operations Group's automation strategy`  
+**Source:** Senior IT Specialist (Robotic Process Automation and AI) (Centers for Medicare & Medicaid Services), https://www.usajobs.gov/job/884301900; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ... you will report directly to the SOG Leadership and provide highly complex analysis, project management, and program direction for all Divisions within the Group. Learn more about this agency
+> 
+> Duties
+> [[Lead the development, implementation, and maintenance of the Survey and Operations Group's automation strategy]], ensuring seamless integration with national reporting systems. Design and manage large-scale automation studies, applying advanced data analysis techniques to interpret and evaluate complex Medicare...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-884301900#structure-0 [Summary]: Summary
+> This position is located in the Department of Health & Human Services (HHS), Centers for Medicare & Medicaid Services (CMS), Center for Clinical Standar...
+> usajobs-884301900#structure-4 [Qualifications]: AND In order to qualify for the GS-15 , you must meet the following: You must demonstrate in your resume at least one year (52 weeks) of qualifying specialized ...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**
+
+## J25 (job description, en)
+**Query:** experience with LLMs, RAG and cloud AI services  
+**Expected answer:** the gold quote below, from this posting  
+**Gold:** `Experience using LLMs, RAG, MCP servers, and other AI development resources, including cloud tools such as AWS Bedrock and Azure OpenAI.`  
+**Source:** AI Software Engineer (House of Representatives), https://www.usajobs.gov/job/883699600; occurs 1x in the posting
+
+**Supporting passage** (gold in [[ ]]):
+
+> ... to diverse audiences. Preferred Qualifications: Knowledge of secure authentication patterns such as OAuth2, OpenID Connect, and MSAL. Knowledge, Skill, and Ability (KSA) and Competency Requirements: [[Experience using LLMs, RAG, MCP servers, and other AI development resources, including cloud tools such as AWS Bedrock and Azure OpenAI.]] Strong experience working with Microsoft SQL Server (MSSQL), including schema design, performance tuning, and query optimization. Strong full‑stack development skills and proficiency with modern prog...
+
+**Alternative candidates:**
+
+> SYSTEM SUGGESTIONS, NOT VERIFIED:
+> usajobs-883699600#structure-1 [Duties]: Duties
+> Job Summary: The Office of the Chief Administrative Officer (CAO) provides operations support services and business solutions to the community of 10,000 ...
+> usajobs-883699600#structure-6 [Additional information]: Additional information
+> Candidates should be committed to improving the efficiency of the Federal government, passionate about the ideals of our American republi...
+
+**Decision:** ACCEPT / CORRECT / REJECT  
+**Corrected gold:**  
+**Notes:**

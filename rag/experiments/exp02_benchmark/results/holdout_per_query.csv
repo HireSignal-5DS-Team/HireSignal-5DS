@@ -1,0 +1,93 @@
+phase,chunker,retriever,qid,type,lang,setting,rank,returned,ms
+baseline,structure,dense:e5-small,HE01,esco,en,esco,1.0,10,116.04631399995924
+baseline,structure,dense:e5-small,HE02,esco,en,esco,1.0,10,47.8005300001314
+baseline,structure,dense:e5-small,HE03,esco,en,esco,3.0,10,31.9885260000774
+baseline,structure,dense:e5-small,HE04,esco,fr,esco,1.0,10,32.50320699999065
+baseline,structure,dense:e5-small,HE05,esco,fr,esco,2.0,10,47.36076700010017
+baseline,structure,dense:e5-small,HE06,esco,en,esco,1.0,10,35.886996000044746
+baseline,structure,dense:e5-small,HE07,esco,en,esco,1.0,10,36.00736699991103
+baseline,structure,dense:e5-small,HE08,esco,en,esco,1.0,10,31.916963000185206
+baseline,structure,dense:e5-small,HE09,esco,en,esco,1.0,10,40.026271999977325
+baseline,structure,dense:e5-small,HE10,esco,fr,esco,1.0,10,39.98370999988765
+baseline,structure,dense:e5-small,HJ01,job,en,scoped,1.0,10,59.75849600008587
+baseline,structure,dense:e5-small,HJ01,job,en,global,1.0,10,68.16800500018871
+baseline,structure,dense:e5-small,HJ02,job,en,scoped,5.0,10,51.739009999892005
+baseline,structure,dense:e5-small,HJ02,job,en,global,,10,119.93530199970337
+baseline,structure,dense:e5-small,HJ03,job,en,scoped,2.0,10,123.87838600034229
+baseline,structure,dense:e5-small,HJ03,job,en,global,2.0,10,120.05132700005561
+baseline,structure,dense:e5-small,HJ04,job,fr,scoped,2.0,10,119.76451600003202
+baseline,structure,dense:e5-small,HJ04,job,fr,global,2.0,10,110.20649900001445
+baseline,structure,dense:e5-small,HJ05,job,en,scoped,3.0,8,109.73331300010614
+baseline,structure,dense:e5-small,HJ05,job,en,global,,10,111.92348499980653
+baseline,structure,dense:e5-small,HJ06,job,en,scoped,2.0,10,96.04367700012517
+baseline,structure,dense:e5-small,HJ06,job,en,global,,10,104.67989500011754
+baseline,structure,dense:e5-small,HJ07,job,en,scoped,1.0,9,111.03301200000715
+baseline,structure,dense:e5-small,HJ07,job,en,global,,10,104.22044000006281
+baseline,structure,dense:e5-small,HJ08,job,en,scoped,1.0,8,67.74855800040314
+baseline,structure,dense:e5-small,HJ08,job,en,global,1.0,10,124.0737119996993
+baseline,structure,dense:e5-small,HJ09,job,en,scoped,1.0,10,111.62301500007743
+baseline,structure,dense:e5-small,HJ09,job,en,global,,10,116.01117000009253
+baseline,structure,dense:e5-small,HJ10,job,en,scoped,1.0,7,111.93100799982858
+baseline,structure,dense:e5-small,HJ10,job,en,global,1.0,10,115.97779100020489
+baseline,structure,dense:e5-small,HJ11,job,fr,scoped,1.0,10,95.39091800024835
+baseline,structure,dense:e5-small,HJ11,job,fr,global,,10,116.37224299965965
+baseline,structure,dense:e5-small,HJ12,job,en,scoped,1.0,10,39.94756800011601
+baseline,structure,dense:e5-small,HJ12,job,en,global,1.0,10,39.935698000135744
+baseline,structure,dense:e5-small,HJ13,job,en,scoped,1.0,10,111.87877300017135
+baseline,structure,dense:e5-small,HJ13,job,en,global,4.0,10,103.9850510001088
+baseline,structure,dense:e5-small,HJ14,job,en,scoped,2.0,9,106.48232900030052
+baseline,structure,dense:e5-small,HJ14,job,en,global,,10,109.31553199998234
+baseline,structure,dense:e5-small,HJ15,job,fr,scoped,2.0,10,99.74399900011122
+baseline,structure,dense:e5-small,HJ15,job,fr,global,,10,108.22877600003267
+baseline,structure,dense:e5-small,HJ16,job,en,scoped,1.0,10,127.92034599988256
+baseline,structure,dense:e5-small,HJ16,job,en,global,2.0,10,114.72657399963282
+baseline,structure,dense:e5-small,HN01,none,en,none,,10,123.9346059996933
+baseline,structure,dense:e5-small,HN02,none,en,none,,10,102.5876460003019
+baseline,structure,dense:e5-small,HN03,none,en,none,,10,120.1231610002651
+baseline,structure,dense:e5-small,HN04,none,en,none,,10,114.41199499995491
+2d-rerank,structure,dense:e5-small > rerank,HE01,esco,en,esco,1.0,10,3058.8443800002096
+2d-rerank,structure,dense:e5-small > rerank,HE02,esco,en,esco,1.0,10,5559.06080800014
+2d-rerank,structure,dense:e5-small > rerank,HE03,esco,en,esco,3.0,10,5569.892433999939
+2d-rerank,structure,dense:e5-small > rerank,HE04,esco,fr,esco,1.0,10,3322.4864969997725
+2d-rerank,structure,dense:e5-small > rerank,HE05,esco,fr,esco,2.0,10,5230.254303000038
+2d-rerank,structure,dense:e5-small > rerank,HE06,esco,en,esco,1.0,10,6807.760593000239
+2d-rerank,structure,dense:e5-small > rerank,HE07,esco,en,esco,1.0,10,3370.2490040000157
+2d-rerank,structure,dense:e5-small > rerank,HE08,esco,en,esco,1.0,10,6291.41715600008
+2d-rerank,structure,dense:e5-small > rerank,HE09,esco,en,esco,1.0,10,5582.715464000103
+2d-rerank,structure,dense:e5-small > rerank,HE10,esco,fr,esco,1.0,10,3104.725641999721
+2d-rerank,structure,dense:e5-small > rerank,HJ01,job,en,scoped,1.0,10,12196.02942399979
+2d-rerank,structure,dense:e5-small > rerank,HJ01,job,en,global,1.0,10,16639.36859400019
+2d-rerank,structure,dense:e5-small > rerank,HJ02,job,en,scoped,1.0,10,8658.567242999652
+2d-rerank,structure,dense:e5-small > rerank,HJ02,job,en,global,1.0,10,18201.84017199972
+2d-rerank,structure,dense:e5-small > rerank,HJ03,job,en,scoped,3.0,10,8481.49168000009
+2d-rerank,structure,dense:e5-small > rerank,HJ03,job,en,global,3.0,10,17451.80847599977
+2d-rerank,structure,dense:e5-small > rerank,HJ04,job,fr,scoped,1.0,10,7986.642938999921
+2d-rerank,structure,dense:e5-small > rerank,HJ04,job,fr,global,1.0,10,16943.929972000205
+2d-rerank,structure,dense:e5-small > rerank,HJ05,job,en,scoped,1.0,8,7797.732226000335
+2d-rerank,structure,dense:e5-small > rerank,HJ05,job,en,global,,10,16287.507182999889
+2d-rerank,structure,dense:e5-small > rerank,HJ06,job,en,scoped,2.0,10,8679.565420000017
+2d-rerank,structure,dense:e5-small > rerank,HJ06,job,en,global,10.0,10,17316.869793000023
+2d-rerank,structure,dense:e5-small > rerank,HJ07,job,en,scoped,1.0,9,8876.983898999697
+2d-rerank,structure,dense:e5-small > rerank,HJ07,job,en,global,1.0,10,17002.73037499983
+2d-rerank,structure,dense:e5-small > rerank,HJ08,job,en,scoped,1.0,8,7378.169584999796
+2d-rerank,structure,dense:e5-small > rerank,HJ08,job,en,global,1.0,10,17383.45549099995
+2d-rerank,structure,dense:e5-small > rerank,HJ09,job,en,scoped,1.0,10,7798.035810999863
+2d-rerank,structure,dense:e5-small > rerank,HJ09,job,en,global,,10,16264.272751000135
+2d-rerank,structure,dense:e5-small > rerank,HJ10,job,en,scoped,1.0,7,6928.650208999898
+2d-rerank,structure,dense:e5-small > rerank,HJ10,job,en,global,1.0,10,18764.59641199972
+2d-rerank,structure,dense:e5-small > rerank,HJ11,job,fr,scoped,1.0,10,8711.049131999971
+2d-rerank,structure,dense:e5-small > rerank,HJ11,job,fr,global,1.0,10,17545.590167000228
+2d-rerank,structure,dense:e5-small > rerank,HJ12,job,en,scoped,1.0,10,9650.302493000254
+2d-rerank,structure,dense:e5-small > rerank,HJ12,job,en,global,1.0,10,18953.88607399991
+2d-rerank,structure,dense:e5-small > rerank,HJ13,job,en,scoped,1.0,10,8480.56171899998
+2d-rerank,structure,dense:e5-small > rerank,HJ13,job,en,global,3.0,10,16267.972938000185
+2d-rerank,structure,dense:e5-small > rerank,HJ14,job,en,scoped,1.0,9,7776.766931000111
+2d-rerank,structure,dense:e5-small > rerank,HJ14,job,en,global,,10,18988.113032
+2d-rerank,structure,dense:e5-small > rerank,HJ15,job,fr,scoped,1.0,10,7920.077474000209
+2d-rerank,structure,dense:e5-small > rerank,HJ15,job,fr,global,,10,16862.127961999704
+2d-rerank,structure,dense:e5-small > rerank,HJ16,job,en,scoped,1.0,10,9063.458331999755
+2d-rerank,structure,dense:e5-small > rerank,HJ16,job,en,global,1.0,10,17722.064693999982
+2d-rerank,structure,dense:e5-small > rerank,HN01,none,en,none,,10,4658.837068000139
+2d-rerank,structure,dense:e5-small > rerank,HN02,none,en,none,,10,8663.649086000078
+2d-rerank,structure,dense:e5-small > rerank,HN03,none,en,none,,10,4411.736078000104
+2d-rerank,structure,dense:e5-small > rerank,HN04,none,en,none,,10,6489.683614000114

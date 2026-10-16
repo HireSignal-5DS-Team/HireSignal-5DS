@@ -1,0 +1,18 @@
+{
+  "arm": "none",
+  "knowledge_provider": "none",
+  "k": 3,
+  "label": "LIVE model run (REUSED from the evaluation session, not re-run by S1)",
+  "reused_from": {
+    "branch": "claude/kind-albattani-k7qlt9",
+    "commit": "46d24e1",
+    "path": "benchmark/results/qwen3-4b-q4+hslora-none-val"
+  },
+  "esco_sha256": "8c6a4b3d0f26b3fa524579ebfdffb45648ca754fa08ef43c6ac14926a93f4b29",
+  "adapter": {
+    "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+    "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a"
+  },
+  "server_peak_rss_mb": null,
+  "client_peak_rss_mb": 519.9
+}

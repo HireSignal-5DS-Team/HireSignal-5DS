@@ -1,0 +1,182 @@
+{
+  "n": 202,
+  "final": {
+    "macro_f1": 0.6487193661323015,
+    "accuracy": 0.6485148514851485,
+    "false_met_rate": 0.008620689655172414,
+    "per_class": {
+      "MET": {
+        "precision": 0.9795918367346939,
+        "recall": 0.5581395348837209,
+        "f1": 0.7111111111111112,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 0.8596491228070176,
+        "recall": 0.6363636363636364,
+        "f1": 0.7313432835820897,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 0.3541666666666667,
+        "recall": 0.8717948717948718,
+        "f1": 0.5037037037037037,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 48,
+        "MISSING": 4,
+        "UNCERTAIN": 34,
+        "null": 0
+      },
+      "MISSING": {
+        "MET": 0,
+        "MISSING": 49,
+        "UNCERTAIN": 28,
+        "null": 0
+      },
+      "UNCERTAIN": {
+        "MET": 1,
+        "MISSING": 4,
+        "UNCERTAIN": 34,
+        "null": 0
+      }
+    }
+  },
+  "raw_model": {
+    "macro_f1": 0.6624085455077553,
+    "accuracy": 0.6435643564356436,
+    "false_met_rate": 0.017241379310344827,
+    "per_class": {
+      "MET": {
+        "precision": 0.96,
+        "recall": 0.5581395348837209,
+        "f1": 0.7058823529411763,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 0.8596491228070176,
+        "recall": 0.6363636363636364,
+        "f1": 0.7313432835820897,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 0.4074074074074074,
+        "recall": 0.8461538461538461,
+        "f1": 0.5499999999999999,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 48,
+        "MISSING": 4,
+        "UNCERTAIN": 22,
+        "null": 12
+      },
+      "MISSING": {
+        "MET": 1,
+        "MISSING": 49,
+        "UNCERTAIN": 26,
+        "null": 1
+      },
+      "UNCERTAIN": {
+        "MET": 1,
+        "MISSING": 4,
+        "UNCERTAIN": 33,
+        "null": 1
+      }
+    }
+  },
+  "json_schema_validity": 0.9306930693069307,
+  "basis_accuracy": 0.5594059405940595,
+  "evidence": {
+    "raw_quotes": 128,
+    "raw_quote_validity": 1.0,
+    "raw_met_with_verified_quote": 1.0,
+    "attribution_vs_gold": 0.7857142857142857,
+    "attribution_n": 84
+  },
+  "validator_changed_decision": 0.07425742574257425,
+  "needs_human_review_rate": 0.7920792079207921,
+  "per_tag_accuracy": {
+    "ambiguous_duration": {
+      "n": 21,
+      "accuracy": 0.7619047619047619
+    },
+    "certification": {
+      "n": 13,
+      "accuracy": 0.5384615384615384
+    },
+    "contradictory_evidence": {
+      "n": 31,
+      "accuracy": 0.8064516129032258
+    },
+    "date_range": {
+      "n": 8,
+      "accuracy": 0.125
+    },
+    "direct_match": {
+      "n": 8,
+      "accuracy": 0.625
+    },
+    "distractor_details": {
+      "n": 74,
+      "accuracy": 0.6216216216216216
+    },
+    "education": {
+      "n": 10,
+      "accuracy": 0.9
+    },
+    "equivalent_skill_alias": {
+      "n": 21,
+      "accuracy": 0.2857142857142857
+    },
+    "implicit_project_evidence": {
+      "n": 15,
+      "accuracy": 0.4
+    },
+    "insufficient_experience": {
+      "n": 17,
+      "accuracy": 0.6470588235294118
+    },
+    "language": {
+      "n": 14,
+      "accuracy": 1.0
+    },
+    "missing_evidence": {
+      "n": 18,
+      "accuracy": 0.4444444444444444
+    },
+    "multi_requirement": {
+      "n": 117,
+      "accuracy": 0.6666666666666666
+    },
+    "negation_trap": {
+      "n": 22,
+      "accuracy": 0.7272727272727273
+    },
+    "partial_evidence": {
+      "n": 18,
+      "accuracy": 1.0
+    },
+    "rag_suggests_absent_skill": {
+      "n": 11,
+      "accuracy": 0.45454545454545453
+    },
+    "sufficient_experience": {
+      "n": 25,
+      "accuracy": 0.6
+    }
+  },
+  "latency_s": {
+    "mean": 11.104865346534654,
+    "p50": 10.5815,
+    "p95": 15.4266,
+    "max": 21.3348
+  },
+  "peak_rss_mb": 520.2,
+  "load_seconds": 2.36
+}

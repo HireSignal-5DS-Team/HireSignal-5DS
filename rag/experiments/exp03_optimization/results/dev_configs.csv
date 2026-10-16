@@ -1,0 +1,28 @@
+group,config,chunker,embedding,reranker,top_n,job_chunks,chunking_s,indexing_s,index_mb,embed_mem_mb,rerank_mem_mb
+A-chunk-tuning,structure@150 | e5-small,structure@150,e5-small,,,324,0.02,48.3,2.85,378,0
+A-chunk-tuning,structure@300 | e5-small,structure@300,e5-small,,,197,0.02,50.7,2.66,378,0
+A-chunk-tuning,structure@500 | e5-small,structure@500,e5-small,,,151,0.02,46.4,2.6,378,0
+A-chunk-tuning,sliding@100/15 | e5-small,sliding@100/15,e5-small,,,430,0.01,49.1,3.0,378,0
+A-chunk-tuning,sliding@200/30 | e5-small,sliding@200/30,e5-small,,,218,0.01,49.8,2.69,378,0
+A-chunk-tuning,sliding@300/45 | e5-small,sliding@300/45,e5-small,,,147,0.01,49.3,2.59,378,0
+A-chunk-tuning,pc@1s | e5-small,pc@1s,e5-small,,,1725,0.03,54.5,4.9,378,0
+A-chunk-tuning,pc@3s2 | e5-small,pc@3s2,e5-small,,,821,0.03,53.8,3.58,378,0
+B-embedding,structure@300 | e5-base,structure@300,e5-base,,,197,0.02,126.6,5.33,153,0
+B-embedding,pc@1s | e5-base,pc@1s,e5-base,,,1725,0.03,139.2,9.8,153,0
+C-rerank,structure@300 | e5-small > msmarco-l6@5,structure@300,e5-small,msmarco-l6,5.0,197,0.02,50.7,2.66,378,75
+C-rerank,structure@300 | e5-small > msmarco-l6@10,structure@300,e5-small,msmarco-l6,10.0,197,0.02,50.7,2.66,378,75
+C-rerank,structure@300 | e5-small > msmarco-l6@20,structure@300,e5-small,msmarco-l6,20.0,197,0.02,50.7,2.66,378,75
+C-rerank,structure@300 | e5-small > mmarco@5,structure@300,e5-small,mmarco,5.0,197,0.02,50.7,2.66,378,139
+C-rerank,structure@300 | e5-small > mmarco@10,structure@300,e5-small,mmarco,10.0,197,0.02,50.7,2.66,378,139
+C-rerank,structure@300 | e5-small > mmarco@20,structure@300,e5-small,mmarco,20.0,197,0.02,50.7,2.66,378,139
+C-rerank,structure@300 | e5-small > bge@5,structure@300,e5-small,bge,5.0,197,0.02,50.7,2.66,378,151
+C-rerank,structure@300 | e5-small > bge@10,structure@300,e5-small,bge,10.0,197,0.02,50.7,2.66,378,151
+C-rerank,structure@300 | e5-small > bge@20,structure@300,e5-small,bge,20.0,197,0.02,50.7,2.66,378,151
+C-rerank-int8,structure@300 | e5-small > mmarco-int8@10,structure@300,e5-small,mmarco-int8,10.0,197,0.02,50.7,2.66,378,204
+C-rerank-int8,structure@300 | e5-small > bge-int8@10,structure@300,e5-small,bge-int8,10.0,197,0.02,50.7,2.66,378,1704
+D-combination,pc@1s | e5-small > mmarco@10,pc@1s,e5-small,mmarco,10.0,1725,0.03,54.5,4.9,378,139
+D-combination,pc@1s | e5-small > bge@10,pc@1s,e5-small,bge,10.0,1725,0.03,54.5,4.9,378,151
+D-combination,pc@1s | e5-base > mmarco@10,pc@1s,e5-base,mmarco,10.0,1725,0.03,139.2,9.8,153,139
+D-combination,pc@1s | e5-base > bge@10,pc@1s,e5-base,bge,10.0,1725,0.03,139.2,9.8,153,151
+D-combination,structure@300 | e5-base > mmarco@10,structure@300,e5-base,mmarco,10.0,197,0.02,126.6,5.33,153,139
+D-combination,structure@300 | e5-base > bge@10,structure@300,e5-base,bge,10.0,197,0.02,126.6,5.33,153,151

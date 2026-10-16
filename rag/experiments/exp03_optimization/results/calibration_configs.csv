@@ -1,0 +1,14 @@
+group,config,chunker,embedding,reranker,top_n,job_chunks,chunking_s,indexing_s,index_mb,embed_mem_mb,rerank_mem_mb
+A-chunk-tuning,structure@300 | e5-small,structure@300,e5-small,,,197,0.02,43.3,2.66,378,0
+A-chunk-tuning,pc@1s | e5-small,pc@1s,e5-small,,,1725,0.03,54.6,4.9,378,0
+A-chunk-tuning,pc@3s2 | e5-small,pc@3s2,e5-small,,,821,0.06,47.3,3.58,378,0
+B-embedding,structure@300 | e5-base,structure@300,e5-base,,,197,0.02,113.7,5.33,181,0
+B-embedding,pc@1s | e5-base,pc@1s,e5-base,,,1725,0.03,131.7,9.8,181,0
+C-rerank,structure@300 | e5-small > mmarco@5,structure@300,e5-small,mmarco,5.0,197,0.02,43.3,2.66,378,134
+C-rerank,structure@300 | e5-small > mmarco@10,structure@300,e5-small,mmarco,10.0,197,0.02,43.3,2.66,378,134
+C-rerank,structure@300 | e5-small > mmarco@20,structure@300,e5-small,mmarco,20.0,197,0.02,43.3,2.66,378,134
+C-rerank,structure@300 | e5-small > bge@5,structure@300,e5-small,bge,5.0,197,0.02,43.3,2.66,378,141
+C-rerank-int8,structure@300 | e5-small > bge-int8@10,structure@300,e5-small,bge-int8,10.0,197,0.02,43.3,2.66,378,1727
+D-combination,pc@1s | e5-small > mmarco@10,pc@1s,e5-small,mmarco,10.0,1725,0.03,54.6,4.9,378,134
+D-combination,pc@1s | e5-base > mmarco@10,pc@1s,e5-base,mmarco,10.0,1725,0.03,131.7,9.8,181,134
+D-combination,structure@300 | e5-base > mmarco@10,structure@300,e5-base,mmarco,10.0,197,0.02,113.7,5.33,181,134
