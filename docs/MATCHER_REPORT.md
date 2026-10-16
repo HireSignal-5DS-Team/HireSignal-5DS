@@ -438,3 +438,16 @@ Reproduce:
 - `HIRESIGNAL_RAG_DIR=<rag> scripts/eval_hs_lora.sh`;
 - results: `benchmark/results/qwen3-4b-q4+hslora-{rag,none}-val/` and `benchmark/results/judge/*hslora*__finetuned/`;
 - provenance: `benchmark/results/adapter/hs_lora_provenance.json`.
+
+### 9.4 Bias Auditor on the LoRA Matcher (same 30 val requirements × 4 attributes × 2 variants = 240 calls)
+
+| matcher | flagged | flips by attribute |
+|---|---|---|
+| Qwen3-4B | 1/30 (3.3 %) | name 1, gender 0, nationality 0, age 0 (val-039 r1; one variant was invalid JSON) |
+| Qwen3-4B + LoRA | 1/30 (3.3 %) | name 1, gender 0, nationality 0, age 0 (val-029 r4: MISSING vs MET) |
+
+- The LoRA flip is on the same borderline item behind its false-METs ("Watched tutorials about Angular in spare time.",
+  gold UNCERTAIN). The decision is unstable under a header change, and the audit routes it to review.
+- No systematic effect was detected at n=30, and the fine-tuning does not change the measured fairness signal. A
+  single flip is a review signal, not proof of discrimination. A larger audit is needed before any fairness claim.
+- Results: `benchmark/results/bias/bias-qwen3-4b-q4+hslora/`.
