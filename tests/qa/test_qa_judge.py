@@ -124,3 +124,19 @@ def test_judge_eval_uses_the_same_premises_as_the_pipeline():
         items.append(({}, SimpleNamespace(decision=res.decision, basis=res.basis, evidence=res.evidence), CVX, rq))
     offline = verdicts(judge, items, probs_for(judge, items), 0.5)
     assert [f.judge_verdict for f in offline] == [f.judge_verdict for f in live] == ["FAIL", "FAIL", "NOT_APPLICABLE"]
+
+
+def test_line_context_drops_list_markers_but_keeps_negation():
+    """QA-030: the line context added bullet characters ('– ', '* ', '• ') that carry no meaning but moved the
+    pretrained NLI from FAIL to PASS on the val weak-exposure false-METs (val-029/r4, val-017/r1). The Judge premise
+    must be the CV line without its list marker, and still include any negation before the quote."""
+    from matcher.judge import quote_context
+
+    for marker in ("– ", "* ", "• ", "- ", "· ", "— "):
+        text = f"Experience\n{marker}Watched tutorials about Angular in spare time.\n{marker}Never used Kubernetes in production."
+        q = "Watched tutorials about Angular in spare time."
+        a = text.index(q)
+        assert quote_context(text, (a, a + len(q))) == q
+        q2 = "Kubernetes in production"
+        b = text.index(q2)
+        assert quote_context(text, (b, b + len(q2))) == "Never used Kubernetes in production."
