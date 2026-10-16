@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # One LIVE QA job (window 1+): takes the shared model queue lock, serves the LoRA Matcher (:8081) and the base
 # fallback (:8080) from the pinned Q4_K_M GGUF with llama.cpp, runs tests/live with provenance, stops the servers.
-#   tests/live/run_live.sh [out-dir]        (default benchmark/results/qa_live/<UTC timestamp>)
+#   tests/live/run_live.sh [out-dir]        (default docs/qa/live_runs/<UTC timestamp>)
 # Env: PYTHON (venv with llama-cpp-python 0.3.16 [server]), ADAPTER_DIR (PEFT adapter snapshot), GGUF, HS_RAG
 # (default none: the QA probes test the Matcher contracts; set bm25 + HIRESIGNAL_RAG_DIR to include retrieval).
 set -euo pipefail
 cd "$(dirname "$0")/../.."
-OUT=${1:-benchmark/results/qa_live/$(date -u +%Y%m%dT%H%M%SZ)}
+OUT=${1:-docs/qa/live_runs/$(date -u +%Y%m%dT%H%M%SZ)}
 P=${PYTHON:-/home/user/venv/bin/python}
 H=${HF_HOME:-/home/user/hf}
 ADAPTER_DIR=${ADAPTER_DIR:-$H/hub/models--HireSignal-5DS-Team--hiresignal-qwen3-4b-matcher-lora/snapshots/0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a}
