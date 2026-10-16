@@ -1,0 +1,60 @@
+{
+  "run": "qwen3-4b-q4+hslora-none-val",
+  "judge": "finetuned",
+  "judge_dir": "/home/user/judge_runs/deberta-hs-v1/best",
+  "tau": 0.85,
+  "n_applicable": 166,
+  "n_errors": 12,
+  "strict": {
+    "precision": 0.2777777777777778,
+    "recall": 0.4166666666666667,
+    "f1": 0.33333333333333337,
+    "false_positive_flag_rate": 0.08441558441558442,
+    "flags": 18
+  },
+  "broad": {
+    "precision": 0.20833333333333334,
+    "recall": 0.8333333333333334,
+    "f1": 0.33333333333333337,
+    "false_positive_flag_rate": 0.24675324675324675,
+    "flags": 48
+  },
+  "auroc_error_detection": 0.8395562770562771,
+  "ece_correctness": 0.21910602409638558,
+  "per_tag_error_detection": {
+    "ambiguous_duration": {
+      "errors": 5,
+      "detected_strict": 0.4
+    },
+    "date_range": {
+      "errors": 1,
+      "detected_strict": 1.0
+    },
+    "distractor_details": {
+      "errors": 6,
+      "detected_strict": 0.3333333333333333
+    },
+    "equivalent_skill_alias": {
+      "errors": 4,
+      "detected_strict": 0.25
+    },
+    "multi_requirement": {
+      "errors": 8,
+      "detected_strict": 0.125
+    },
+    "partial_evidence": {
+      "errors": 2,
+      "detected_strict": 0.5
+    },
+    "sufficient_experience": {
+      "errors": 1,
+      "detected_strict": 1.0
+    }
+  },
+  "verdicts": {
+    "PASS": 118,
+    "FAIL": 18,
+    "UNCERTAIN": 30,
+    "NOT_APPLICABLE": 36
+  }
+}
