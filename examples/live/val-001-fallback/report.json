@@ -1,0 +1,229 @@
+{
+  "cv_id": "cv-val-001",
+  "job_id": "job-val-001",
+  "parser": "structured-input (Parser Agent not integrated)",
+  "backend": {
+    "backend": "fallback",
+    "is_model": true,
+    "primary": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+      "label": "matcher-lora",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8099/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 2,
+      "prompt_version": "p1",
+      "adapter_id": null,
+      "revision": null
+    },
+    "fallback": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "label": "matcher-base-fallback",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8080/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 2,
+      "prompt_version": "p1",
+      "adapter_id": null,
+      "revision": null
+    },
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+    "prompt_version": "p1"
+  },
+  "knowledge": "rag.bm25",
+  "judge": "nli-judge-finetuned",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "requirement_text": "Django: 4 years of experience or more",
+      "kind": "must",
+      "final_decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        "Django in daily use for 6 years."
+      ],
+      "evidence_spans": [
+        [
+          196,
+          228
+        ]
+      ],
+      "explanation": "The CV explicitly states that Django is used in daily practice for 6 years, which meets the requirement of at least 4 years of experience.",
+      "rag_refs": [],
+      "validator": {
+        "review_priority": "low",
+        "reasons": []
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {}
+      },
+      "judge": {
+        "judge_verdict": "PASS",
+        "judge_score": 0.9995,
+        "judge_disagrees": false,
+        "requires_human_review": false,
+        "nli_probs": {
+          "entailment": 0.9995,
+          "neutral": 0.0004,
+          "contradiction": 0.0001
+        },
+        "premise_kind": "quotes",
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "matcher:fallback_model_used"
+      ],
+      "citations": [],
+      "matcher_call": {
+        "used": "fallback",
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "latency_s": 20.532,
+        "error": null,
+        "primary_error": "URLError: <urlopen error [Errno 111] Connection refused>"
+      }
+    },
+    {
+      "req_id": "r2",
+      "requirement_text": "Working knowledge of Vue.js",
+      "kind": "must",
+      "final_decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        "Led the migration of reporting jobs to Vue.js."
+      ],
+      "evidence_spans": [
+        [
+          93,
+          139
+        ]
+      ],
+      "explanation": "The CV explicitly states that the candidate led the migration of reporting jobs to Vue.js, demonstrating practical experience and thus working knowledge of Vue.js.",
+      "rag_refs": [],
+      "validator": {
+        "review_priority": "low",
+        "reasons": []
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {}
+      },
+      "judge": {
+        "judge_verdict": "PASS",
+        "judge_score": 0.9994,
+        "judge_disagrees": false,
+        "requires_human_review": false,
+        "nli_probs": {
+          "entailment": 0.9994,
+          "neutral": 0.0005,
+          "contradiction": 0.0001
+        },
+        "premise_kind": "quotes",
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "matcher:fallback_model_used"
+      ],
+      "citations": [],
+      "matcher_call": {
+        "used": "fallback",
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "latency_s": 9.363,
+        "error": null,
+        "primary_error": "URLError: <urlopen error [Errno 111] Connection refused>"
+      }
+    },
+    {
+      "req_id": "r3",
+      "requirement_text": "Pandas: 3 years of experience or more",
+      "kind": "nice",
+      "final_decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        "Pandas in daily use for 4 years."
+      ],
+      "evidence_spans": [
+        [
+          231,
+          263
+        ]
+      ],
+      "explanation": "The CV explicitly states that Pandas is used in daily practice for 4 years, which meets the requirement of at least 3 years of experience.",
+      "rag_refs": [],
+      "validator": {
+        "review_priority": "low",
+        "reasons": []
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {}
+      },
+      "judge": {
+        "judge_verdict": "PASS",
+        "judge_score": 0.999,
+        "judge_disagrees": false,
+        "requires_human_review": false,
+        "nli_probs": {
+          "entailment": 0.999,
+          "neutral": 0.0009,
+          "contradiction": 0.0001
+        },
+        "premise_kind": "quotes",
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "matcher:fallback_model_used"
+      ],
+      "citations": [],
+      "matcher_call": {
+        "used": "fallback",
+        "model": "Qwen/Qwen3-4B-Instruct-2507",
+        "latency_s": 9.943,
+        "error": null,
+        "primary_error": "URLError: <urlopen error [Errno 111] Connection refused>"
+      }
+    }
+  ],
+  "summary": {
+    "MET": 3,
+    "MISSING": 0,
+    "UNCERTAIN": 0,
+    "must_met": 2,
+    "must_total": 2,
+    "requires_human_review": 3,
+    "note": "Requirement-level screening aid. No automatic rejection or hiring decision."
+  }
+}

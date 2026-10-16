@@ -11,5 +11,8 @@ peft==0.21.2
 accelerate==1.15.0
 safetensors==0.8.0
 tokenizers==0.23.3
-huggingface_hub==2.2.0
+huggingface_hub==1.33.0  # sentence-transformers 6.1.0 needs <2; transformers 5.19 accepts >=1.31 (55 tests pass)
 lm-format-enforcer==0.11.3  # Kus-hal study only (--constrained); needs the import shim in matcher/backends.py
+# Dense Qdrant RAG (HS_RAG=qdrant, RAG team pins from rag/requirements.txt); not needed for HS_RAG=bm25|none
+qdrant-client==1.19.1
+sentence-transformers==6.1.0

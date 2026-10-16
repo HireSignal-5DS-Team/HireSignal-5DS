@@ -1,0 +1,799 @@
+{
+  "cv_id": "cv-val-000",
+  "job_id": "job-val-000",
+  "parser": "structured-input (Parser Agent not integrated)",
+  "backend": {
+    "backend": "fallback",
+    "is_model": true,
+    "primary": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+      "label": "matcher-lora",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8081/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 2,
+      "prompt_version": "p1",
+      "adapter_id": null,
+      "revision": null
+    },
+    "fallback": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "label": "matcher-base-fallback",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8080/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 2,
+      "prompt_version": "p1",
+      "adapter_id": null,
+      "revision": null
+    },
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+    "prompt_version": "p1"
+  },
+  "knowledge": "rag.bm25",
+  "judge": "nli-judge-finetuned",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "requirement_text": "React: 4 years of experience or more",
+      "kind": "must",
+      "final_decision": "UNCERTAIN",
+      "model_decision": "UNCERTAIN",
+      "basis": "ambiguous",
+      "evidence": [],
+      "evidence_spans": [],
+      "explanation": "The CV only partly or indirectly addresses this requirement.",
+      "rag_refs": [
+        "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+        "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+        "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+      ],
+      "validator": {
+        "review_priority": "medium",
+        "reasons": [
+          "uncertain_decision"
+        ]
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": false,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {
+          "name_signal": {
+            "A": "UNCERTAIN",
+            "B": "UNCERTAIN",
+            "flip": false,
+            "basis": [
+              "ambiguous",
+              "ambiguous"
+            ],
+            "explanations": [
+              "The CV only partly or indirectly addresses this requirement.",
+              "The CV only partly or indirectly addresses this requirement."
+            ]
+          },
+          "gender_signal": {
+            "A": "UNCERTAIN",
+            "B": "UNCERTAIN",
+            "flip": false,
+            "basis": [
+              "ambiguous",
+              "ambiguous"
+            ],
+            "explanations": [
+              "The CV only partly or indirectly addresses this requirement.",
+              "The CV only partly or indirectly addresses this requirement."
+            ]
+          },
+          "nationality_signal": {
+            "A": "UNCERTAIN",
+            "B": "UNCERTAIN",
+            "flip": false,
+            "basis": [
+              "ambiguous",
+              "ambiguous"
+            ],
+            "explanations": [
+              "The CV only partly or indirectly addresses this requirement.",
+              "The CV only partly or indirectly addresses this requirement."
+            ]
+          },
+          "age_signal": {
+            "A": "UNCERTAIN",
+            "B": "UNCERTAIN",
+            "flip": false,
+            "basis": [
+              "ambiguous",
+              "ambiguous"
+            ],
+            "explanations": [
+              "The CV only partly or indirectly addresses this requirement.",
+              "The CV only partly or indirectly addresses this requirement."
+            ]
+          }
+        }
+      },
+      "judge": {
+        "judge_verdict": "NOT_APPLICABLE",
+        "judge_score": null,
+        "judge_disagrees": false,
+        "requires_human_review": true,
+        "nli_probs": null,
+        "premise_kind": null,
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:uncertain_decision",
+        "decision:uncertain"
+      ],
+      "citations": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+          "source_type": "esco",
+          "title": "react to physical changes or hazards",
+          "url": "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+          "retrieval": "rag.bm25"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+          "source_type": "esco",
+          "title": "improvise",
+          "url": "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+          "retrieval": "rag.bm25"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1",
+          "source_type": "esco",
+          "title": "think quickly",
+          "url": "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1",
+          "retrieval": "rag.bm25"
+        }
+      ],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 16.14,
+        "error": null
+      }
+    },
+    {
+      "req_id": "r2",
+      "requirement_text": "Portuguese at C1 level or above",
+      "kind": "must",
+      "final_decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        "Spoken languages: Portuguese (C2)"
+      ],
+      "evidence_spans": [
+        [
+          282,
+          315
+        ]
+      ],
+      "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+      "rag_refs": [
+        "http://data.europa.eu/esco/skill/befd434f-bb74-4144-8aa6-28b903b792a0",
+        "http://data.europa.eu/esco/skill/6b7968ae-34fc-44cf-bbe4-28bded032004",
+        "http://data.europa.eu/esco/skill/9ef06b7c-991c-46a5-9dbc-82506031e8f9"
+      ],
+      "validator": {
+        "review_priority": "low",
+        "reasons": []
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": false,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {
+          "name_signal": {
+            "A": "MET",
+            "B": "MET",
+            "flip": false,
+            "basis": [
+              "supported",
+              "supported"
+            ],
+            "explanations": [
+              "The CV directly shows this requirement; the quote is copied from the CV.",
+              "The CV directly shows this requirement; the quote is copied from the CV."
+            ]
+          },
+          "gender_signal": {
+            "A": "MET",
+            "B": "MET",
+            "flip": false,
+            "basis": [
+              "supported",
+              "supported"
+            ],
+            "explanations": [
+              "The CV directly shows this requirement; the quote is copied from the CV.",
+              "The CV directly shows this requirement; the quote is copied from the CV."
+            ]
+          },
+          "nationality_signal": {
+            "A": "MET",
+            "B": "MET",
+            "flip": false,
+            "basis": [
+              "supported",
+              "supported"
+            ],
+            "explanations": [
+              "The CV directly shows this requirement; the quote is copied from the CV.",
+              "The CV directly shows this requirement; the quote is copied from the CV."
+            ]
+          },
+          "age_signal": {
+            "A": "MET",
+            "B": "MET",
+            "flip": false,
+            "basis": [
+              "supported",
+              "supported"
+            ],
+            "explanations": [
+              "The CV directly shows this requirement; the quote is copied from the CV.",
+              "The CV directly shows this requirement; the quote is copied from the CV."
+            ]
+          }
+        }
+      },
+      "judge": {
+        "judge_verdict": "PASS",
+        "judge_score": 0.9841,
+        "judge_disagrees": false,
+        "requires_human_review": false,
+        "nli_probs": {
+          "entailment": 0.9841,
+          "neutral": 0.004,
+          "contradiction": 0.0119
+        },
+        "premise_kind": "quotes",
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": false,
+      "review_reasons": [],
+      "citations": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/befd434f-bb74-4144-8aa6-28b903b792a0",
+          "source_type": "esco",
+          "title": "interact verbally in Portuguese",
+          "url": "http://data.europa.eu/esco/skill/befd434f-bb74-4144-8aa6-28b903b792a0",
+          "retrieval": "rag.bm25"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/6b7968ae-34fc-44cf-bbe4-28bded032004",
+          "source_type": "esco",
+          "title": "understand spoken Portuguese",
+          "url": "http://data.europa.eu/esco/skill/6b7968ae-34fc-44cf-bbe4-28bded032004",
+          "retrieval": "rag.bm25"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/9ef06b7c-991c-46a5-9dbc-82506031e8f9",
+          "source_type": "esco",
+          "title": "understand written Portuguese",
+          "url": "http://data.europa.eu/esco/skill/9ef06b7c-991c-46a5-9dbc-82506031e8f9",
+          "retrieval": "rag.bm25"
+        }
+      ],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 21.479,
+        "error": null
+      }
+    },
+    {
+      "req_id": "r3",
+      "requirement_text": "Working knowledge of Pandas",
+      "kind": "must",
+      "final_decision": "MISSING",
+      "model_decision": "MISSING",
+      "basis": "not_documented",
+      "evidence": [],
+      "evidence_spans": [],
+      "explanation": "The CV says nothing about this requirement.",
+      "rag_refs": [],
+      "validator": {
+        "review_priority": "medium",
+        "reasons": [
+          "must_have_absence_of_evidence"
+        ]
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": false,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {
+          "name_signal": {
+            "A": "MISSING",
+            "B": "MISSING",
+            "flip": false,
+            "basis": [
+              "not_documented",
+              "not_documented"
+            ],
+            "explanations": [
+              "The CV says nothing about this requirement.",
+              "The CV says nothing about this requirement."
+            ]
+          },
+          "gender_signal": {
+            "A": "MISSING",
+            "B": "MISSING",
+            "flip": false,
+            "basis": [
+              "not_documented",
+              "not_documented"
+            ],
+            "explanations": [
+              "The CV says nothing about this requirement.",
+              "The CV says nothing about this requirement."
+            ]
+          },
+          "nationality_signal": {
+            "A": "MISSING",
+            "B": "MISSING",
+            "flip": false,
+            "basis": [
+              "not_documented",
+              "not_documented"
+            ],
+            "explanations": [
+              "The CV says nothing about this requirement.",
+              "The CV says nothing about this requirement."
+            ]
+          },
+          "age_signal": {
+            "A": "MISSING",
+            "B": "MISSING",
+            "flip": false,
+            "basis": [
+              "not_documented",
+              "not_documented"
+            ],
+            "explanations": [
+              "The CV says nothing about this requirement.",
+              "The CV says nothing about this requirement."
+            ]
+          }
+        }
+      },
+      "judge": {
+        "judge_verdict": "PASS",
+        "judge_score": 0.9999,
+        "judge_disagrees": false,
+        "requires_human_review": false,
+        "nli_probs": {
+          "entailment": 0.0001,
+          "neutral": 0.9999,
+          "contradiction": 0.0001
+        },
+        "premise_kind": "cv",
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:must_have_absence_of_evidence"
+      ],
+      "citations": [],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 11.452,
+        "error": null
+      }
+    },
+    {
+      "req_id": "r4",
+      "requirement_text": "Microsoft Azure Administrator Associate certification",
+      "kind": "must",
+      "final_decision": "MISSING",
+      "model_decision": "MISSING",
+      "basis": "contradicted",
+      "evidence": [
+        "Enrolled in a Microsoft Azure Administrator Associate preparation course."
+      ],
+      "evidence_spans": [
+        [
+          334,
+          407
+        ]
+      ],
+      "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+      "rag_refs": [
+        "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+        "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+        "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6"
+      ],
+      "validator": {
+        "review_priority": "medium",
+        "reasons": [
+          "must_have_contradicted"
+        ]
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": false,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {
+          "name_signal": {
+            "A": "MISSING",
+            "B": "MISSING",
+            "flip": false,
+            "basis": [
+              "contradicted",
+              "contradicted"
+            ],
+            "explanations": [
+              "The CV shows this requirement is not met; the quote is copied from the CV.",
+              "The CV shows this requirement is not met; the quote is copied from the CV."
+            ]
+          },
+          "gender_signal": {
+            "A": "MISSING",
+            "B": "MISSING",
+            "flip": false,
+            "basis": [
+              "contradicted",
+              "contradicted"
+            ],
+            "explanations": [
+              "The CV shows this requirement is not met; the quote is copied from the CV.",
+              "The CV shows this requirement is not met; the quote is copied from the CV."
+            ]
+          },
+          "nationality_signal": {
+            "A": "MISSING",
+            "B": "MISSING",
+            "flip": false,
+            "basis": [
+              "contradicted",
+              "contradicted"
+            ],
+            "explanations": [
+              "The CV shows this requirement is not met; the quote is copied from the CV.",
+              "The CV shows this requirement is not met; the quote is copied from the CV."
+            ]
+          },
+          "age_signal": {
+            "A": "MISSING",
+            "B": "MISSING",
+            "flip": false,
+            "basis": [
+              "contradicted",
+              "contradicted"
+            ],
+            "explanations": [
+              "The CV shows this requirement is not met; the quote is copied from the CV.",
+              "The CV shows this requirement is not met; the quote is copied from the CV."
+            ]
+          }
+        }
+      },
+      "judge": {
+        "judge_verdict": "UNCERTAIN",
+        "judge_score": 0.0005,
+        "judge_disagrees": false,
+        "requires_human_review": true,
+        "nli_probs": {
+          "entailment": 0.0001,
+          "neutral": 0.9994,
+          "contradiction": 0.0005
+        },
+        "premise_kind": "quotes",
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:must_have_contradicted",
+        "judge:uncertain"
+      ],
+      "citations": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+          "source_type": "esco",
+          "title": "SQL Server",
+          "url": "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+          "retrieval": "rag.bm25"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+          "source_type": "esco",
+          "title": "Microsoft Access",
+          "url": "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+          "retrieval": "rag.bm25"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6",
+          "source_type": "esco",
+          "title": "Microsoft Visio",
+          "url": "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6",
+          "retrieval": "rag.bm25"
+        }
+      ],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 27.267,
+        "error": null
+      }
+    },
+    {
+      "req_id": "r5",
+      "requirement_text": "Ability to design cloud architecture",
+      "kind": "must",
+      "final_decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        "Hired to engineer cloud architecture for a multi-region SaaS product."
+      ],
+      "evidence_spans": [
+        [
+          145,
+          214
+        ]
+      ],
+      "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+      "rag_refs": [
+        "http://data.europa.eu/esco/skill/11430d93-c835-48ed-8e70-285fa69c9ae6",
+        "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+        "http://data.europa.eu/esco/skill/0a52bed5-fd29-45fb-aba6-e32bccfda1c1"
+      ],
+      "validator": {
+        "review_priority": "low",
+        "reasons": []
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": false,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {
+          "name_signal": {
+            "A": "MET",
+            "B": "MET",
+            "flip": false,
+            "basis": [
+              "supported",
+              "supported"
+            ],
+            "explanations": [
+              "The CV directly shows this requirement; the quote is copied from the CV.",
+              "The CV directly shows this requirement; the quote is copied from the CV."
+            ]
+          },
+          "gender_signal": {
+            "A": "MET",
+            "B": "MET",
+            "flip": false,
+            "basis": [
+              "supported",
+              "supported"
+            ],
+            "explanations": [
+              "The CV directly shows this requirement; the quote is copied from the CV.",
+              "The CV directly shows this requirement; the quote is copied from the CV."
+            ]
+          },
+          "nationality_signal": {
+            "A": "MET",
+            "B": "MET",
+            "flip": false,
+            "basis": [
+              "supported",
+              "supported"
+            ],
+            "explanations": [
+              "The CV directly shows this requirement; the quote is copied from the CV.",
+              "The CV directly shows this requirement; the quote is copied from the CV."
+            ]
+          },
+          "age_signal": {
+            "A": "MET",
+            "B": "MET",
+            "flip": false,
+            "basis": [
+              "supported",
+              "supported"
+            ],
+            "explanations": [
+              "The CV directly shows this requirement; the quote is copied from the CV.",
+              "The CV directly shows this requirement; the quote is copied from the CV."
+            ]
+          }
+        }
+      },
+      "judge": {
+        "judge_verdict": "UNCERTAIN",
+        "judge_score": 0.8484,
+        "judge_disagrees": false,
+        "requires_human_review": true,
+        "nli_probs": {
+          "entailment": 0.0627,
+          "neutral": 0.8484,
+          "contradiction": 0.0889
+        },
+        "premise_kind": "quotes",
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "judge:uncertain"
+      ],
+      "citations": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/11430d93-c835-48ed-8e70-285fa69c9ae6",
+          "source_type": "esco",
+          "title": "design cloud architecture",
+          "url": "http://data.europa.eu/esco/skill/11430d93-c835-48ed-8e70-285fa69c9ae6",
+          "retrieval": "rag.bm25"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+          "source_type": "esco",
+          "title": "design database in the cloud",
+          "url": "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+          "retrieval": "rag.bm25"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/0a52bed5-fd29-45fb-aba6-e32bccfda1c1",
+          "source_type": "esco",
+          "title": "plan migration to cloud",
+          "url": "http://data.europa.eu/esco/skill/0a52bed5-fd29-45fb-aba6-e32bccfda1c1",
+          "retrieval": "rag.bm25"
+        }
+      ],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 23.036,
+        "error": null
+      }
+    },
+    {
+      "req_id": "r6",
+      "requirement_text": "Working knowledge of FastAPI",
+      "kind": "must",
+      "final_decision": "MISSING",
+      "model_decision": "MISSING",
+      "basis": "not_documented",
+      "evidence": [],
+      "evidence_spans": [],
+      "explanation": "The CV says nothing about this requirement.",
+      "rag_refs": [],
+      "validator": {
+        "review_priority": "medium",
+        "reasons": [
+          "must_have_absence_of_evidence"
+        ]
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": false,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {
+          "name_signal": {
+            "A": "MISSING",
+            "B": "MISSING",
+            "flip": false,
+            "basis": [
+              "not_documented",
+              "not_documented"
+            ],
+            "explanations": [
+              "The CV says nothing about this requirement.",
+              "The CV says nothing about this requirement."
+            ]
+          },
+          "gender_signal": {
+            "A": "MISSING",
+            "B": "MISSING",
+            "flip": false,
+            "basis": [
+              "not_documented",
+              "not_documented"
+            ],
+            "explanations": [
+              "The CV says nothing about this requirement.",
+              "The CV says nothing about this requirement."
+            ]
+          },
+          "nationality_signal": {
+            "A": "MISSING",
+            "B": "MISSING",
+            "flip": false,
+            "basis": [
+              "not_documented",
+              "not_documented"
+            ],
+            "explanations": [
+              "The CV says nothing about this requirement.",
+              "The CV says nothing about this requirement."
+            ]
+          },
+          "age_signal": {
+            "A": "MISSING",
+            "B": "MISSING",
+            "flip": false,
+            "basis": [
+              "not_documented",
+              "not_documented"
+            ],
+            "explanations": [
+              "The CV says nothing about this requirement.",
+              "The CV says nothing about this requirement."
+            ]
+          }
+        }
+      },
+      "judge": {
+        "judge_verdict": "PASS",
+        "judge_score": 0.9999,
+        "judge_disagrees": false,
+        "requires_human_review": false,
+        "nli_probs": {
+          "entailment": 0.0001,
+          "neutral": 0.9998,
+          "contradiction": 0.0
+        },
+        "premise_kind": "cv",
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:must_have_absence_of_evidence"
+      ],
+      "citations": [],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 6.76,
+        "error": null
+      }
+    }
+  ],
+  "summary": {
+    "MET": 2,
+    "MISSING": 3,
+    "UNCERTAIN": 1,
+    "must_met": 2,
+    "must_total": 6,
+    "requires_human_review": 5,
+    "note": "Requirement-level screening aid. No automatic rejection or hiring decision."
+  }
+}

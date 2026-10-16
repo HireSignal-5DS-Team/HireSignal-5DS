@@ -1,0 +1,387 @@
+{
+  "cv_id": "cv-val-002",
+  "job_id": "job-val-002",
+  "parser": "structured-input (Parser Agent not integrated)",
+  "backend": {
+    "backend": "fallback",
+    "is_model": true,
+    "primary": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+      "label": "matcher-lora",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8081/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 2,
+      "prompt_version": "p1",
+      "adapter_id": null,
+      "revision": null
+    },
+    "fallback": {
+      "backend": "openai_compat",
+      "is_model": true,
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "label": "matcher-base-fallback",
+      "provider": "local",
+      "base_url": "http://127.0.0.1:8080/v1",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 192
+      },
+      "timeout_s": 300.0,
+      "max_retries": 2,
+      "prompt_version": "p1",
+      "adapter_id": null,
+      "revision": null
+    },
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+    "prompt_version": "p1"
+  },
+  "knowledge": "rag.qdrant.e5-small",
+  "judge": "nli-judge-finetuned",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "requirement_text": "Working knowledge of FastAPI",
+      "kind": "nice",
+      "final_decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        "Led the migration of reporting jobs to FastAPI."
+      ],
+      "evidence_spans": [
+        [
+          236,
+          283
+        ]
+      ],
+      "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+      "rag_refs": [
+        "http://data.europa.eu/esco/skill/a71577b2-7550-4222-88ee-dcbd2d881516",
+        "http://data.europa.eu/esco/skill/b8c01891-e3df-4a4b-948d-95b45e1788f5",
+        "http://data.europa.eu/esco/skill/5da8018b-ae85-4cde-ad93-0394369018f3"
+      ],
+      "validator": {
+        "review_priority": "low",
+        "reasons": []
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {}
+      },
+      "judge": {
+        "judge_verdict": "PASS",
+        "judge_score": 0.9977,
+        "judge_disagrees": false,
+        "requires_human_review": false,
+        "nli_probs": {
+          "entailment": 0.9977,
+          "neutral": 0.0022,
+          "contradiction": 0.0001
+        },
+        "premise_kind": "quotes",
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": false,
+      "review_reasons": [],
+      "citations": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/a71577b2-7550-4222-88ee-dcbd2d881516",
+          "source_type": "esco",
+          "title": "graphics editor software",
+          "url": "http://data.europa.eu/esco/skill/a71577b2-7550-4222-88ee-dcbd2d881516",
+          "retrieval": "rag.qdrant.e5-small"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/b8c01891-e3df-4a4b-948d-95b45e1788f5",
+          "source_type": "esco",
+          "title": "mobile device software frameworks",
+          "url": "http://data.europa.eu/esco/skill/b8c01891-e3df-4a4b-948d-95b45e1788f5",
+          "retrieval": "rag.qdrant.e5-small"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/5da8018b-ae85-4cde-ad93-0394369018f3",
+          "source_type": "esco",
+          "title": "SPARQL",
+          "url": "http://data.europa.eu/esco/skill/5da8018b-ae85-4cde-ad93-0394369018f3",
+          "retrieval": "rag.qdrant.e5-small"
+        }
+      ],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 20.755,
+        "error": null
+      }
+    },
+    {
+      "req_id": "r2",
+      "requirement_text": "Working knowledge of database design",
+      "kind": "nice",
+      "final_decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        "Modelled 40 relational tables with primary keys, foreign keys and indexes for the HR system."
+      ],
+      "evidence_spans": [
+        [
+          93,
+          185
+        ]
+      ],
+      "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+      "rag_refs": [
+        "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+        "http://data.europa.eu/esco/skill/6c08403c-a5bb-4868-b8c2-b7d039c0e511",
+        "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f"
+      ],
+      "validator": {
+        "review_priority": "medium",
+        "reasons": [
+          "semantic_inference_no_term_in_quote"
+        ]
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {}
+      },
+      "judge": {
+        "judge_verdict": "PASS",
+        "judge_score": 0.9993,
+        "judge_disagrees": false,
+        "requires_human_review": false,
+        "nli_probs": {
+          "entailment": 0.9993,
+          "neutral": 0.0006,
+          "contradiction": 0.0001
+        },
+        "premise_kind": "quotes",
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:semantic_inference_no_term_in_quote"
+      ],
+      "citations": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+          "source_type": "esco",
+          "title": "design database in the cloud",
+          "url": "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+          "retrieval": "rag.qdrant.e5-small"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/6c08403c-a5bb-4868-b8c2-b7d039c0e511",
+          "source_type": "esco",
+          "title": "design database scheme",
+          "url": "http://data.europa.eu/esco/skill/6c08403c-a5bb-4868-b8c2-b7d039c0e511",
+          "retrieval": "rag.qdrant.e5-small"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f",
+          "source_type": "esco",
+          "title": "create database diagrams",
+          "url": "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f",
+          "retrieval": "rag.qdrant.e5-small"
+        }
+      ],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 15.205,
+        "error": null
+      }
+    },
+    {
+      "req_id": "r3",
+      "requirement_text": "Hands-on Oracle Warehouse Builder experience",
+      "kind": "must",
+      "final_decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        "Built OWB mappings for the finance data mart."
+      ],
+      "evidence_spans": [
+        [
+          188,
+          233
+        ]
+      ],
+      "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+      "rag_refs": [
+        "http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e",
+        "http://data.europa.eu/esco/skill/3af687cb-8c7a-46ea-a730-32dbaed040c6",
+        "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655"
+      ],
+      "validator": {
+        "review_priority": "low",
+        "reasons": []
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {}
+      },
+      "judge": {
+        "judge_verdict": "PASS",
+        "judge_score": 0.9949,
+        "judge_disagrees": false,
+        "requires_human_review": false,
+        "nli_probs": {
+          "entailment": 0.9949,
+          "neutral": 0.0049,
+          "contradiction": 0.0002
+        },
+        "premise_kind": "quotes",
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": false,
+      "review_reasons": [],
+      "citations": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e",
+          "source_type": "esco",
+          "title": "Oracle Warehouse Builder",
+          "url": "http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e",
+          "retrieval": "rag.qdrant.e5-small"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/3af687cb-8c7a-46ea-a730-32dbaed040c6",
+          "source_type": "esco",
+          "title": "Oracle Data Integrator",
+          "url": "http://data.europa.eu/esco/skill/3af687cb-8c7a-46ea-a730-32dbaed040c6",
+          "retrieval": "rag.qdrant.e5-small"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655",
+          "source_type": "esco",
+          "title": "Oracle Relational Database",
+          "url": "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655",
+          "retrieval": "rag.qdrant.e5-small"
+        }
+      ],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 15.896,
+        "error": null
+      }
+    },
+    {
+      "req_id": "r4",
+      "requirement_text": "Microsoft Azure Administrator Associate certification",
+      "kind": "must",
+      "final_decision": "MISSING",
+      "model_decision": "MISSING",
+      "basis": "contradicted",
+      "evidence": [
+        "Enrolled in a Microsoft Azure Administrator Associate preparation course."
+      ],
+      "evidence_spans": [
+        [
+          356,
+          429
+        ]
+      ],
+      "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+      "rag_refs": [
+        "http://data.europa.eu/esco/skill/81086bb0-a110-470d-ba5a-2c68fc535407",
+        "http://data.europa.eu/esco/skill/1ce4cddd-4a74-458e-a2d4-152ca939475a",
+        "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e"
+      ],
+      "validator": {
+        "review_priority": "medium",
+        "reasons": [
+          "must_have_contradicted"
+        ]
+      },
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false,
+        "details": {}
+      },
+      "judge": {
+        "judge_verdict": "UNCERTAIN",
+        "judge_score": 0.0005,
+        "judge_disagrees": false,
+        "requires_human_review": true,
+        "nli_probs": {
+          "entailment": 0.0001,
+          "neutral": 0.9994,
+          "contradiction": 0.0005
+        },
+        "premise_kind": "quotes",
+        "model": "nli-judge-finetuned"
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:must_have_contradicted",
+        "judge:uncertain"
+      ],
+      "citations": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/81086bb0-a110-470d-ba5a-2c68fc535407",
+          "source_type": "esco",
+          "title": "manage flight data communications programme",
+          "url": "http://data.europa.eu/esco/skill/81086bb0-a110-470d-ba5a-2c68fc535407",
+          "retrieval": "rag.qdrant.e5-small"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/1ce4cddd-4a74-458e-a2d4-152ca939475a",
+          "source_type": "esco",
+          "title": "OWASP ZAP",
+          "url": "http://data.europa.eu/esco/skill/1ce4cddd-4a74-458e-a2d4-152ca939475a",
+          "retrieval": "rag.qdrant.e5-small"
+        },
+        {
+          "source_id": "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+          "source_type": "esco",
+          "title": "Microsoft Access",
+          "url": "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+          "retrieval": "rag.qdrant.e5-small"
+        }
+      ],
+      "matcher_call": {
+        "used": "primary",
+        "model": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "latency_s": 15.792,
+        "error": null
+      }
+    }
+  ],
+  "summary": {
+    "MET": 3,
+    "MISSING": 1,
+    "UNCERTAIN": 0,
+    "must_met": 1,
+    "must_total": 2,
+    "requires_human_review": 2,
+    "note": "Requirement-level screening aid. No automatic rejection or hiring decision."
+  }
+}
