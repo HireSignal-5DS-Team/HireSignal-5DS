@@ -1,0 +1,25 @@
+{
+  "arm": "gated",
+  "knowledge_provider": "rag.gated.v1+bm25",
+  "k": 3,
+  "label": "LIVE model run",
+  "esco_sha256": "8c6a4b3d0f26b3fa524579ebfdffb45648ca754fa08ef43c6ac14926a93f4b29",
+  "gated_thresholds_sha256": null,
+  "git_commit": "1b25fc3475988181cb80909268a78b5efb2e62ac",
+  "dataset_sha256": "37c60915f2db377f22c5b08f4b9e708e05cd9363709e9c39815d8e8d93545198",
+  "server_models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "Qwen/Qwen3-4B-Instruct-2507",
+        "object": "model",
+        "owned_by": "me",
+        "permissions": []
+      }
+    ]
+  },
+  "server_peak_rss_mb": 6186.8,
+  "client_peak_rss_mb": 547.5,
+  "adapter": null,
+  "wall_s": 3497.9
+}

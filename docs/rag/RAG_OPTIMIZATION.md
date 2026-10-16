@@ -28,9 +28,19 @@ this was written: **no LLM was run in this session.** Every number below names i
 4. REPLAY ESTIMATE for the base Matcher: Δ macro-F1 vs no-RAG **+0.004 [−0.014, +0.023]** (legacy BM25: −0.041
    [−0.083, −0.000]). The alias gain is kept (0.29 → 0.43), and certifications go back to their no-RAG level.
    This is not a measured gain: the live comparison is prepared and waits for window 1 (§6).
-5. The fine-tuned (LoRA) Matcher produced **0** template echoes in 138/202 recorded answers (partial checkpoint).
-   For that model the cost of RAG is mostly latency and decision quality, not JSON validity. Whether RAG helps it is
-   **unmeasured** until the window-1 run.
+5. **LIVE (window 1, §6.1), LoRA Matcher, val 202:** `rag.gated.v1` vs no-RAG Δ macro-F1 **−0.005 [−0.028, +0.014]**
+   (McNemar 2/2, p 1.0); vs a same-container no-RAG repeat −0.002 [−0.028, +0.020]. The run-to-run noise floor
+   (no-RAG vs its repeat) is −0.003. Legacy BM25 vs no-RAG is −0.011 [−0.047, +0.021] (4/4). Gated keeps false-MET at
+   the no-RAG level (0.026; legacy BM25 0.034) and raises alias accuracy 0.81 → 0.90, with 0 template echoes. None of
+   these differences is significant. The honest reading: on the LoRA Matcher, gated RAG is **safe (within noise)**,
+   removes BM25's false-MET increase and helps aliases, but it does **not** raise macro-F1 measurably on bench-v1 val.
+   It meets the pre-registered rule, so the recommendation is `HS_RAG=gated` as the production default (adopted by
+   the orchestrator, integration `e27c461`).
+6. **The replay estimates did not hold live.** For the LoRA Matcher the replay predicted gated vs no-RAG +0.012
+   [0.000, +0.028]; the live run measured **−0.005 [−0.028, +0.014]**, within the noise floor (−0.003). On the LoRA
+   Matcher RAG's measured value is **not macro-F1**. It is (a) alias handling (0.81 → 0.90) and (b) a lower human-review
+   load: review rate 0.663 → 0.589, −7.4 points [−11.4, −4.0], McNemar 15/0, p = 0.0001, under validator v1 and v2.
+   All 15 dropped reviews are on correct decisions (§6.1).
 
 ## 1. Reproduce (no LLM needed)
 
@@ -228,7 +238,14 @@ legacy answer (B′ or C, which had 3 longer references) stands in for the gated
 The absent-skill rows still use the old 3-reference answers. The gated prompt carries only the concept itself, so
 its effect on absent-skill items is unmeasured.
 
-## 6. End-to-end comparison: ready to run in window 1 (NOT RUN)
+**Outcome (window 1):** these estimates are for the base model. The same replay method on the LoRA Matcher predicted
++0.012 [0.000, +0.028]; the live run gave −0.005 [−0.028, +0.014] (§6.1). The estimate did **not** hold. It assumed
+the gated prompt (1 short reference) behaves like the legacy prompt (3 references) on the 51 requirements with a
+reference, and that assumption failed on 2 of them (val-021, val-028). The method stays useful for bounding the
+effect of abstentions, which reproduced exactly (151/151 byte-identical), and not for predicting the effect of
+the references that are injected.
+
+## 6. End-to-end comparison (prepared in window 0, run in window 1: results in §6.1)
 
 ```bash
 # after the orchestrator opens window 1 (the script checks STATUS.md and holds /home/user/hs_queue.lock)
@@ -260,10 +277,116 @@ than `bm25` (McNemar p ≥ 0.05 or better point estimate). RAG stays enabled in 
 `gated` is not better than `none` on val, the honest reading is "RAG is safe but not helpful on bench-v1". The
 alias and terminology cases it was designed for are 21 of 202 requirements.
 
+### 6.1 LIVE results, window 1 (LoRA Matcher; `rag_opt/results/e2e/e2e_report.md`)
+
+Serving: this container reproduced the evaluation's LoRA serving. It ran llama-cpp-python 0.3.16 `llama_cpp.server`
+with unsloth GGUF @a06e946b Q4_K_M, adapter `HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b`
+converted with the vendored `convert_lora_to_gguf.py` (f16, sha256 `083dc860…`), `n_ctx 4096`, 4 threads,
+temperature 0, 192 tokens, prompt p1, validator v1. A spot check on 9 requirements gave byte-identical raw outputs to
+the evaluation's run, so the evaluation's `none` and `bm25` arms (`claude/kind-albattani-k7qlt9` @ `46d24e1`) are
+reused (labelled REUSED in `provenance.json`). Only `gated` and `none-repeat` were run here.
+
+| arm | source | macro-F1 | false-MET | JSON valid | UNCERTAIN | alias acc. (n=21) | refs / req | prompt tokens |
+|---|---|---|---|---|---|---|---|---|
+| none | LIVE, reused (eval) | 0.908 | 0.026 | 1.000 | 0.178 | 0.81 | 0 | 315 |
+| bm25 (legacy) | LIVE, reused (eval) | 0.897 | 0.034 | 1.000 | 0.153 | 0.95 | 1.53 | 401 |
+| gated (rag.gated.v1+bm25) | LIVE, S1 | 0.903 | 0.026 | 1.000 | 0.178 | 0.90 | 0.25 | 327 |
+| none-repeat | LIVE, S1 | 0.905 | 0.026 | 1.000 | 0.188 | 0.76 | 0 | 315 |
+
+| comparison (paired, 202) | Δ macro-F1 | 95% CI | base-only / cand-only correct | McNemar p |
+|---|---|---|---|---|
+| none-repeat vs none (noise floor) | −0.003 | [−0.024, +0.018] | 2 / 1 | 1.0 |
+| bm25 vs none | −0.011 | [−0.047, +0.021] | 4 / 4 | 1.0 |
+| gated vs none | −0.005 | [−0.028, +0.014] | 2 / 2 | 1.0 |
+| gated vs none-repeat (same container) | −0.002 | [−0.028, +0.020] | 2 / 3 | 1.0 |
+| gated vs bm25 | +0.006 | [−0.032, +0.045] | 4 / 4 | 1.0 |
+
+Per requirement:
+- **Gated abstentions:** gated abstained on 151 requirements. All 151 raw outputs are byte-identical to `none-repeat`
+  (150/151 to the evaluation's `none`), so the gate is exactly neutral where it abstains.
+- **BM25's four losses vs no-RAG:** all are off-target references that gated does not inject: React → "react to
+  physical changes or hazards" (×2) and scikit-learn (×2). Gated answers these like no-RAG.
+- **Gains vs no-RAG:** the alias items Oracle Warehouse Builder (val-002) and OWASP ZAP (val-018).
+- **Losses vs no-RAG:** val-021 ("Angular: 2 years", gold UNCERTAIN; with the Angular concept the model said
+  MISSING) and val-006 (FastAPI, identical prompt to no-RAG, so this is server noise).
+- **Alias not recovered:** val-028 (Oracle Warehouse Builder; legacy BM25 got it with 3 references, gated with 1
+  did not).
+
+Latency (same container, same server): mean 14.0 s gated vs 13.8 s none-repeat (+2 %); on the 51 requirements
+with a reference, 15.1 s vs 13.3 s. Server peak RSS 4.24 GB in both arms. (The evaluation's own p50 of 8.9 s ran in a
+different container, so latency is compared only within this container.)
+
+Validator v2 (integration `4f38c97`, trial merge in a worktree; replay of the saved raw outputs with each arm's own
+references, `rag_opt/replay_validator.py`, `rag_opt/results/e2e/replay_validator_v{1,2}.md`). The v1 replay
+reproduces every saved decision (0 changes). Under v2, false-MET is 0.000 in every arm. Macro-F1 is none 0.929,
+none-repeat 0.925, bm25 0.926, gated 0.924; gated vs none −0.005 [−0.027, +0.014]; bm25 vs none −0.003
+[−0.033, +0.026]. Nothing is significant.
+
+**Human-review load** (paired, same 202 items; `rag_opt/review_rate.py`, `rag_opt/results/e2e/review_rate_v{1,2}.md`):
+
+| comparison | review rate | Δ | 95% CI | reviewed only base / only cand | McNemar p | dropped reviews: correct / wrong |
+|---|---|---|---|---|---|---|
+| gated vs none (v1) | 0.663 → 0.589 | −0.074 | [−0.114, −0.040] | 15 / 0 | 0.0001 | 15 / 0 |
+| gated vs none-repeat (v1) | 0.658 → 0.589 | −0.069 | [−0.104, −0.035] | 14 / 0 | 0.0001 | 14 / 0 |
+| bm25 vs none (v1) | 0.663 → 0.574 | −0.089 | [−0.134, −0.050] | 18 / 0 | < 0.0001 | 15 / 3 |
+| none-repeat vs none (v1, noise) | 0.663 → 0.658 | −0.005 | [−0.015, +0.000] | 1 / 0 | 1.0 | 0 / 1 |
+| gated vs none (v2) | 0.668 → 0.594 | −0.074 | [−0.114, −0.040] | 15 / 0 | 0.0001 | 15 / 0 |
+| bm25 vs none (v2) | 0.668 → 0.584 | −0.084 | [−0.124, −0.049] | 17 / 0 | < 0.0001 | 15 / 2 |
+
+Mechanism: the main change is the validator reason `semantic_inference_no_term_in_quote` (−13). When the model
+quotes a CV line that names the skill by an ESCO alias it was shown ("Zed Attack Proxy" for OWASP ZAP), the validator
+counts the alias as a requirement term and drops the flag. This is a validator rule acting on shown, verified ESCO
+aliases, not a model change. Gated drops reviews only on correct decisions (15/0). Legacy BM25 drops 3 reviews on
+decisions that are wrong, because its off-target references supply "terms" for unrelated concepts. The reduction
+is significant, but its value depends on the validator rule: it is review load saved, not accuracy gained.
+
+**Decision (pre-registered rule above):** gated's CI vs none is not entirely below 0, and gated is not worse than
+bm25 (+0.006, p 1.0) → recommend `HS_RAG=gated` as the production default. That RAG "helps" is **not** shown on this
+benchmark: macro-F1 is unchanged within noise. What is shown: no off-target knowledge, no false-MET increase
+(v1), alias accuracy +0.09/+0.14 vs the two no-RAG runs, and +2 % latency, while legacy BM25 adds +27 % prompt tokens (p50 latency +48 % in the evaluation's container)
+Confirmation on the locked test split is the orchestrator's call.
+
+### 6.2 LIVE results, window 1 (base model, the fallback; `rag_opt/results/e2e/e2e_report.md`)
+
+The evaluation's recorded base runs were **not** reproducible here (5/9 identical raw outputs in a spot check,
+another llama-cpp-python build), so all three base arms were run fresh, in this order, on one `llama_cpp.server`
+(llama-cpp-python 0.3.16, same GGUF, `n_ctx 4096`, 4 threads, validator v1). A first `none` attempt on a server that
+had defaulted to 2 threads was aborted after 6 requirements and discarded; thread count did not change outputs
+(9/9 identical), only speed.
+
+| arm | macro-F1 | false-MET | JSON valid | template echo | alias (21) | absent-skill (11) | certification (13) | p50 / p95 s | prompt tokens |
+|---|---|---|---|---|---|---|---|---|---|
+| none | 0.614 | 0.009 | 0.921 | 16 | 0.29 | 0.45 | 0.46 | 16.1 / 23.1 | 315 |
+| bm25 (legacy) | 0.590 | 0.009 | 0.876 | 25 | 0.43 | 0.27 | 0.15 | 18.8 / 26.3 | 401 |
+| gated | 0.599 | 0.009 | 0.906 | 19 | 0.38 | 0.09 | 0.46 | 16.6 / 23.5 | 327 |
+
+| comparison (paired, 202) | Δ macro-F1 | 95% CI | base-only / cand-only correct | McNemar p |
+|---|---|---|---|---|
+| bm25 vs none | −0.024 | [−0.061, +0.010] | 11 / 6 | 0.33 |
+| gated vs none | −0.014 | [−0.038, +0.008] | 5 / 2 | 0.45 |
+| gated vs bm25 | +0.009 | [−0.026, +0.045] | 7 / 9 | 0.80 |
+
+The legacy BM25 loss reproduces in direction (−0.024 here, −0.041 in the audit), with certification and JSON
+validity again the main damage. Gated restores certification (0.46) and most of the JSON validity (19 vs 25
+echoes, 16 without RAG). The 151 abstentions are byte-identical to `none`. Of gated's 5 losses, 4 are absent-skill
+traps that move from MISSING to UNCERTAIN, all 4 on "maintain information network hardware". The model sees the
+ESCO concept and then treats "maintained the team's information wiki" as ambiguous. The direction is conservative:
+the requirement goes to review, with no false MET. The fifth loss is a template echo. The 2 gains are alias items.
+So my §2.4 hypothesis ("neighbouring concepts cause the absent-skill loss") is **not confirmed** for the base model:
+even the single correct concept triggers it. On the LoRA Matcher the same items stay at 1.00.
+
+Review rate (paired; `rag_opt/results/e2e/review_rate_base_v{1,2}.md`; identical under v1 and v2): gated vs none
+0.802 → 0.767, −3.5 points [−6.4, −0.5], McNemar 8/1, p = 0.039 (8 dropped reviews, all on correct decisions);
+legacy BM25 vs none −2.5 points, p = 0.30. Validator v2 replay: false-MET 0 in all arms; macro-F1 none 0.619,
+bm25 0.595, gated 0.605; same paired conclusions. Note: a base (fallback) answer is routed to human review in the
+pipeline anyway (`matcher:fallback_model_used`), so its review rate matters less than the LoRA's.
+
 ## 7. Still unmeasured, and limits
 
-- **No live result of rag.gated.v1 exists.** §4 is retrieval-only and §5 is a replay estimate.
-- The LoRA Matcher with no RAG and with gated RAG: not run (window 1). The partial LoRA run is 138/202.
+- LIVE results exist for the LoRA Matcher only on val (§6.1). The locked test split is not run.
+- Absent-skill traps on the base model: a single correct ESCO concept still turns MISSING into UNCERTAIN (§6.2).
+  A requirement-time gate cannot detect these traps (they look like any skill requirement); unresolved.
+- Constrained JSON decoding (S2's `HS_JSON_SCHEMA`) combined with RAG on the base model is not measured.
 - Absent-skill traps with a single reference (the gated prompt): not measured.
 - All design choices were made from **val** error analysis, and the comparison is on val too, so there is a
   selection-on-val risk. Confirmation belongs to the orchestrator's single locked-test run of already-selected
@@ -276,18 +399,34 @@ alias and terminology cases it was designed for are 21 of 202 requirements.
   BM25 0.2). Gated Qdrant reaches 0.2 and legacy dense 0.4 (§4.1); 5 queries are too few for a conclusion.
 - Latency and peak RSS of the Matcher with each arm: measured only in window 1. Retrieval itself takes < 1 ms (BM25).
 
+## 7.1 QA-023 (S1): answer
+
+QA-023 asks that the BM25 provider drop hits that share only a generic token ("Apache Maven" for "Apache Kafka").
+The proposed fix, a score ratio ≥ 0.5 × the top hit, was measured on the retrieval benchmark (bench-v1 val, terms
+mode). It barely helps: off-target refs per requirement go from 1.28 to 1.19 (0.84 at ratio 0.7, 0.52 at 0.9). It
+cannot abstain, because the top hit always passes, and on the team queries recall@3 falls from 0.778 to 0.750 (0.639
+at 0.9). The production provider is now `rag.gated.v1` (`HS_RAG=gated`, integration `e27c461`). It solves the case
+by construction: a candidate needs a label with the same content words, so "Apache Kafka" never matches "Apache
+Maven" (0 off-target refs; test `rag/tests/test_gated_knowledge.py::test_qa023_shared_generic_token_is_not_relevance`).
+Legacy `RagKnowledge` stays unchanged on purpose: it is the reproducible "old BM25" arm of every recorded comparison
+(B, B′, eval LoRA+BM25). Proposed status: **fixed in the production provider; won't fix in the legacy arm**. The
+QA test should target the default provider (S5's file).
+
 ## 8. Tests
 
-`python -m pytest -q matcher benchmark/tests rag/tests`: **105 passed, 8 skipped** (MOCK / recorded data / BM25
-only; the skips are the team's real-model tests `RAG_REAL=1` and one matcher test that expects an external RAG checkout
-at `/home/user/ragsrc-latest`). New: `rag/tests/test_gated_knowledge.py` (21: gate, prompt identical to no-RAG,
-exact match, absent-skill neighbours dropped, cut-off cases, de-dup and k budget, compact text for all 1,621 entries,
-`rag_refs` equal to the refs shown in full, abstention cites nothing, no CV text in queries, job passage, dense τ)
+After merging the integration branch (`20dd327`): `python -m pytest -q matcher benchmark/tests rag/tests tests/qa`
+gives **288 passed, 12 skipped** (MOCK, recorded data and BM25 only; the skips are real-model tests that need
+`RAG_REAL=1` or a live server). Before the merge, `matcher benchmark/tests rag/tests` gave 107 passed, 8 skipped. One
+earlier single failure (1 of 15 runs, not reproduced) matches the known flaky API-backend test QA-024, fixed by S2.
+S1 tests: `rag/tests/test_gated_knowledge.py` (23: gate, prompt identical to no-RAG, exact match, absent-skill
+neighbours dropped, cut-off cases, QA-023, de-dup and k budget, compact text for all 1,621 entries, `rag_refs` equal to
+the refs shown in full, abstention cites nothing, no CV text in queries, job passage, dense τ, provider `version`)
 and `rag/tests/test_rag_opt_scripts.py` (4: MOCK arm runs with no leaking patch, test split refused, echo detector,
-audit numbers reproduced).
+audit numbers reproduced). LIVE: the five new arms (`lora__gated`, `lora__none-repeat`, `base__{none,gated,bm25}`)
+are committed with `config.json`, `predictions.jsonl` (raw outputs), `metrics.json` and `provenance.json`.
 
 ## 9. S1 status (copy; the orchestrator's STATUS.md is not edited)
 
 | session | branch | deliverable | blockers | tests |
 |---|---|---|---|---|
-| 1 RAG | `session/s1-rag-optimization` | team `rag/` merged; diagnosis (template echo, off-target refs, neighbours); `rag.gated.v1` provider; retrieval metrics (BM25 + dense); replay estimate; window-1 E2E script ready | live E2E (LoRA + base, 4 arms) waits for window 1; factory default needs S2; template-echo fix needs S2/S6 | 105 passed, 8 skipped (MOCK/recorded; no live model) |
+| 1 RAG | `session/s1-rag-optimization` | diagnosis; `rag.gated.v1` (now the production default, `e27c461`); retrieval metrics (BM25 + dense); **LIVE window-1 E2E on val**: LoRA (none/bm25 reused, gated + none-repeat run) and base (3 fresh arms), paired McNemar + bootstrap, validator v1 and v2 replays, review-rate test; QA-023 answered; provider `version` (QA-014) | none for S1 work; locked-test confirmation is the orchestrator's | mock: 288 passed, 12 skipped (`matcher benchmark/tests rag/tests tests/qa`, after merging the integration branch); LIVE: 5 new arms committed with provenance |

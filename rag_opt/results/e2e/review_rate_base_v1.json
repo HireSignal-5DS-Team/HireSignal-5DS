@@ -1,0 +1,47 @@
+{
+ "label": "validator v1",
+ "model": "base",
+ "n": 202,
+ "pairs": {
+  "bm25 vs none": {
+   "rate_base": 0.802,
+   "rate_cand": 0.7772,
+   "delta": -0.0248,
+   "ci95": [
+    -0.0595,
+    0.0099
+   ],
+   "reviewed_only_base": 10,
+   "reviewed_only_cand": 5,
+   "mcnemar_p": 0.3018,
+   "review_dropped_and_correct": 10,
+   "review_dropped_and_wrong": 0,
+   "reason_count_changes": {
+    "model_output_invalid": 9,
+    "semantic_inference_no_term_in_quote": -6,
+    "uncertain_decision": 4,
+    "inconsistent_decision_basis": 4
+   }
+  },
+  "gated vs none": {
+   "rate_base": 0.802,
+   "rate_cand": 0.7673,
+   "delta": -0.0347,
+   "ci95": [
+    -0.0644,
+    -0.005
+   ],
+   "reviewed_only_base": 8,
+   "reviewed_only_cand": 1,
+   "mcnemar_p": 0.0391,
+   "review_dropped_and_correct": 8,
+   "review_dropped_and_wrong": 0,
+   "reason_count_changes": {
+    "semantic_inference_no_term_in_quote": -6,
+    "uncertain_decision": 3,
+    "must_have_absence_of_evidence": -3,
+    "model_output_invalid": 3
+   }
+  }
+ }
+}
