@@ -136,7 +136,9 @@ def test_citations_are_the_ids_shown_in_the_prompt(servers):
     r2 = rows(out)["r2"]
     sent = next(b for b in lora.requests if req_id_of(b) == "r2")["messages"][1]["content"]
     assert r2["rag_refs"] == [c["source_id"] for c in r2["citations"]] == ["http://data.europa.eu/esco/skill/maven"]
-    assert all(f"[{c['shown_as']}]" in sent for c in r2["citations"])
+    from matcher.agent import shown_label
+    from matcher.schemas import KnowledgeRef
+    assert all(f"[{shown_label(KnowledgeRef(**{**c, 'text': ''}))}]" in sent for c in r2["citations"])
     r4 = rows(out)["r4"]  # nothing retrieved: nothing cited, prompt says so
     sent4 = next(b for b in lora.requests if req_id_of(b) == "r4")["messages"][1]["content"]
     assert r4["rag_refs"] == [] and r4["citations"] == [] and "(none retrieved)" in sent4
@@ -190,7 +192,7 @@ def test_malformed_json_paths(servers):
         assert {"validator:model_output_invalid", "matcher:output_unparseable"} <= set(r[k]["review_reasons"])
     assert r["r3"]["final_decision"] == "MISSING" and r["r3"]["basis"] == "contradicted"
     assert "matcher:output_repaired" in r["r3"]["review_reasons"] and r["r3"]["requires_human_review"]
-    assert r["r3"]["provenance"]["repairs"] == ["truncated_output"] and r["r3"]["explanation"].endswith("[truncated]")
+    assert r["r3"]["provenance"]["repairs"] == ["truncated_output"] and r["r3"]["explanation_model"].endswith("[truncated]")
     assert r["r3"]["matcher_call"]["finish_reason"] == "length"
     assert not base.requests  # a bad answer is not a transport failure: no silent switch to the other model
     MatchReport.model_validate(out["match_report"])
@@ -228,7 +230,7 @@ def test_matcher_report_routes_review_into_the_frozen_contract():
     assert r1.review_priority in ("medium", "high") and rep.summary.needs_human_review == 4
     assert set(MATCHER_REVIEW) == {"matcher:backend_unavailable", "matcher:output_unparseable",
                                    "matcher:served_model_mismatch", "matcher:fallback_model_used", "matcher:output_repaired",
-                                   "matcher:counterfactual_mixed_models", "matcher:met_weak_evidence"}
+                                   "matcher:counterfactual_mixed_models"}
 
 
 class FlakyFake(Fake):
@@ -305,39 +307,27 @@ def test_grounded_explanation_uses_only_validated_content():
     out = Pipeline(FallbackBackend(Fake("lora", bad), Fake("base", GOOD)), ESCO).run(CVX.model_dump(), JOB.model_dump())
     r = rows(out)
     for x in out["requirements"]:
-        g = x["explanation_grounded"]
+        g = x["explanation"]
         assert g.startswith(f'Requirement "{x["requirement_text"]}": {x["final_decision"]}.')
-        assert x["explanation"] == "scripted"  # the raw model text is kept
+        assert x["explanation_model"] == "scripted"  # the raw model text is kept
         for quoted in g.split('"')[3::2]:  # every quoted string after the requirement is a verified CV quote
             assert quoted in CVX.text
-    assert "10 years of Python at Google" not in r["r1"]["explanation_grounded"]
-    assert "the model said MET but none of its quotes is in the CV" in r["r1"]["explanation_grounded"]
-    assert "Set up Maven builds" in r["r2"]["explanation_grounded"] and "Terminology from: Apache Maven" in r["r2"]["explanation_grounded"]
-    assert "shows it is not met" in r["r3"]["explanation_grounded"]
-    assert "absence of evidence, not proof" in r["r4"]["explanation_grounded"]
+    assert "10 years of Python at Google" not in r["r1"]["explanation"]
+    assert "the model said MET but none of its quotes is in the CV" in r["r1"]["explanation"]
+    assert "Set up Maven builds" in r["r2"]["explanation"] and "Terminology from: Apache Maven" in r["r2"]["explanation"]
+    assert "shows it is not met" in r["r3"]["explanation"]
+    assert "absence of evidence, not proof" in r["r4"]["explanation"]
     md = write_report(out)
     assert "- Explanation: Requirement" in md and "- Model text: scripted" in md
 
 
-WEAK = {**GOOD, "r2": {"decision": "MET", "basis": "supported", "evidence": ["Watched tutorials about Maven in spare time."]}}
-
-
-def test_met_on_hedged_evidence_goes_to_review_decision_kept():
+def test_met_on_exposure_quote_is_validator_v2_uncertain():
+    """Weak-evidence cues live in matcher/validate.py (v2, QA-025); the grounded explanation says why."""
+    weak = {**GOOD, "r2": {"decision": "MET", "basis": "supported", "evidence": ["Watched tutorials about Maven in spare time."]}}
     cv = CVX.model_copy(update={"text": CVX.text + "\n- Watched tutorials about Maven in spare time."})
-    out = Pipeline(FallbackBackend(Fake("lora", WEAK), Fake("base", GOOD)), ESCO).run(cv.model_dump(), JOB.model_dump())
-    r2 = rows(out)["r2"]
-    assert r2["final_decision"] == "MET" and "matcher:met_weak_evidence" in r2["review_reasons"] and r2["requires_human_review"]
-    rep = MatchReport.model_validate(out["match_report"])
-    assert rep.results[1].review_priority == "high" and "matcher:met_weak_evidence" in rep.results[1].review_reasons
-    good = rows(Pipeline(FallbackBackend(Fake("lora", GOOD), Fake("base", GOOD)), ESCO).run(cv.model_dump(), JOB.model_dump()))
-    assert "matcher:met_weak_evidence" not in good["r2"]["review_reasons"]  # hands-on quote: no flag
-
-
-def test_weak_evidence_rule_never_fires_on_gold_met_quotes():
-    from benchmark.run import read_jsonl
-    from matcher.agent import WEAK_EVIDENCE
-    gold = [g for s in ("train", "val") for c in read_jsonl(ROOT / f"benchmark/data/{s}.jsonl") for g in c["gold"].values()]
-    assert not [q for g in gold if g["decision"] == "MET" for q in g["evidence"] if WEAK_EVIDENCE.search(q)]
+    r2 = rows(Pipeline(FallbackBackend(Fake("lora", weak), Fake("base", GOOD)), ESCO).run(cv.model_dump(), JOB.model_dump()))["r2"]
+    assert r2["final_decision"] == "UNCERTAIN" and r2["model_decision"] == "MET" and r2["requires_human_review"]
+    assert "validator:weak_evidence_cue" in r2["review_reasons"] and "exposure" in r2["explanation"]
 
 
 def test_benchmark_style_backend_records_pinned_adapter():

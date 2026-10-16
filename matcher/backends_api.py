@@ -70,7 +70,8 @@ class OpenAICompatBackend:
                 "max_retries": self.max_retries, "prompt_version": prompt.PROMPT_VERSION,
                 "adapter_id": (self.provenance_cfg.get("adapter") or {}).get("repo"),
                 "adapter_revision": (self.provenance_cfg.get("adapter") or {}).get("sha"),
-                "revision": os.environ.get("HS_LLM_REVISION"), "provenance": self.provenance()}
+                "revision": os.environ.get("HS_LLM_REVISION"), "base_revision": self.provenance_cfg.get("base_revision"),
+                "provenance": self.provenance()}
 
     def verify_alias(self, refresh=False):
         """Is `self.model` among the aliases the server lists at GET /v1/models? Cached; refresh=True re-checks."""
@@ -113,11 +114,14 @@ class OpenAICompatBackend:
         for attempt in range(1, self.max_retries + 2):
             try:
                 out = self._post(payload)
-                usage = out.get("usage") or {}
-                content = out["choices"][0]["message"]["content"] or ""
-                self._record(t0, attempt, None, usage, out.get("choices", [{}])[0].get("finish_reason"))
-                return content
-            except (urllib.error.URLError, TimeoutError, OSError, KeyError, IndexError, json.JSONDecodeError) as e:
+                choice = out["choices"][0]
+                content = choice["message"]["content"]
+                if content is not None and not isinstance(content, str):  # QA-015: e.g. a list; not a model answer
+                    raise TypeError(f"content is {type(content).__name__}, not text")
+                self._record(t0, attempt, None, out.get("usage") or {}, choice.get("finish_reason"))
+                return content or ""
+            except (urllib.error.URLError, TimeoutError, OSError, KeyError, IndexError, TypeError, AttributeError,
+                    ValueError) as e:  # ValueError covers JSONDecodeError; Type/Attribute: malformed body (QA-015)
                 err = f"{type(e).__name__}: {str(e)[:200]}"
                 if isinstance(e, urllib.error.HTTPError) and e.code in (400, 401, 403, 404):
                     break  # not retryable
@@ -167,13 +171,22 @@ class FallbackBackend:
         return {"model_id": getattr(b, "model", None) or info.get("model_id"), "adapter": None, "role": role,
                 "MOCK": not info.get("is_model", False)}
 
+    @staticmethod
+    def _call(b, task):
+        """b.generate(task); an exception is a transport failure recorded in last_call, never a crash (QA-015)."""
+        try:
+            return b.generate(task)
+        except Exception as e:  # noqa: BLE001  (any backend bug must route to fallback/review, not abort the run)
+            b.last_call = {**(getattr(b, "last_call", None) or {}), "error": f"{type(e).__name__}: {str(e)[:200]}"}
+            return ""
+
     def generate(self, task):
-        raw = self.primary.generate(task)
+        raw = self._call(self.primary, task)
         if not self.primary.last_call.get("error"):
             self.last_call = {**self.primary.last_call, "used": "primary", "model": self.primary.model,
                               "provenance": self._prov(self.primary, "primary")}
             return raw
-        raw = self.fallback.generate(task)
+        raw = self._call(self.fallback, task)
         self.last_call = {**self.fallback.last_call, "used": "fallback", "model": self.fallback.model,
                           "primary_error": self.primary.last_call["error"],
                           "provenance": self._prov(self.fallback, "fallback")}

@@ -5,7 +5,6 @@ Output path for one requirement: raw text -> parse_model_output (strict) -> if t
 review reasons (`MATCHER_REVIEW`) on top of the validator's, and records for every result which model answered
 (provenance). Review routing never rejects: it only sends a result to a human.
 """
-import re
 import time
 
 from . import prompt
@@ -22,16 +21,7 @@ MATCHER_REVIEW = {
     "matcher:fallback_model_used": "medium",  # the base model answered instead of the fine-tuned primary
     "matcher:output_repaired": "medium",      # the answer was readable only after a form repair (list in provenance)
     "matcher:counterfactual_mixed_models": "medium",  # live bias test variants not all answered by the same model
-    "matcher:met_weak_evidence": "high",      # MET whose verified quotes read as learning / hobby / intent only
 }
-# Hedged-exposure cues in a verified quote. A MET resting only on such a quote is sent to review (decision unchanged).
-# Built after the LoRA val false-METs ("Watched tutorials about React in spare time."); on bench train gold it fires on
-# 0 of 305 MET quotes. Synthetic data: the rate on real CVs is not measured.
-WEAK_EVIDENCE = re.compile(
-    r"\b(tutorials?|watched|course(?:s|work)?|bootcamp|enrolled|preparation|preparing|studying|learning|learned about"
-    r"|read about|interested in|interest in|familiar(?:ity)? with|exposure to|introduction to|introductory|basics? of"
-    r"|basic knowledge|planning to|plans? to|hobby|spare time|free time|side projects?|attended|aspiring|would like)\b",
-    re.I)
 _RANK = {"low": 0, "medium": 1, "high": 2}
 
 
@@ -48,11 +38,6 @@ def matcher_review(call, answer, repairs):
     if (call.get("provenance") or {}).get("alias_verified") is False:
         reasons.append("matcher:served_model_mismatch")
     return reasons
-
-
-def weak_met(res):
-    """MET whose every verified quote carries a hedged-exposure cue."""
-    return res.decision == "MET" and bool(res.evidence) and all(WEAK_EVIDENCE.search(q) for q in res.evidence)
 
 
 def route(res, reasons):
@@ -101,7 +86,7 @@ class Matcher:
         if answer is None and raw:
             answer, repairs = strict_repair(raw)
         res = validate(answer, cv, req, refs, self.ref_year)
-        review = matcher_review(call, answer, repairs) + (["matcher:met_weak_evidence"] if weak_met(res) else [])
+        review = matcher_review(call, answer, repairs)  # weak-evidence cues are the validator's (v2, weak_evidence_cue)
         info = {"raw": raw, "latency_s": latency, "parsed": answer is not None, "repairs": repairs, "refs": refs,
                 "call": call, "review": review, "provenance": self.result_provenance(call, repairs)}
         return res, info

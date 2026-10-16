@@ -10,7 +10,7 @@ CV/Job JSON (the contract in LOCAL_INTEGRATION_HANDOFF.md); a real parser must r
 Report Writer: deterministic renderer (no LLM, so no new claims); a teammate's LLM Report Writer can consume
 the same aggregated JSON.
 """
-from .agent import Matcher, shown_label
+from .agent import Matcher
 from .bias_audit import check_result, counterfactual, merge
 from .schemas import CV, Job
 
@@ -29,6 +29,8 @@ _WHY_UNCERTAIN = {  # validator reason -> plain words (no new claim: each restat
     "met_without_verified_evidence": "the model said MET but none of its quotes is in the CV",
     "years_below_minimum_in_evidence": "the quoted CV text shows fewer years than required",
     "evidence_not_in_cv": "a quote given by the model is not in the CV",
+    "weak_evidence_cue": "the quoted CV text shows exposure (e.g. tutorials or a course), not use",
+    "duration_not_verified": "the quoted CV text states no duration for the required years",
 }
 
 
@@ -114,9 +116,11 @@ class Pipeline:
             else [None] * len(results)  # Judge (after the auditor, on the same validated results)
         rows = [aggregate(res, b, j) for res, b, j in zip(results, audits, judged)]
         for row, (res, info), req in zip(rows, pairs, job.requirements):
-            row["explanation_grounded"] = grounded_explanation(res, req, info["refs"])  # shown first in reports
+            # QA-028: the report explains THIS requirement from validated content only; the model's text is kept
+            row["explanation_model"] = row["explanation"]
+            row["explanation"] = grounded_explanation(res, req, info["refs"])
             row["citations"] = [{"source_id": x.source_id, "source_type": x.source_type, "title": x.title, "url": x.url,
-                                 "retrieval": x.retrieval, "shown_as": shown_label(x)} for x in info["refs"]]
+                                 "retrieval": x.retrieval} for x in info["refs"]]
             call = info["call"]
             row["matcher_call"] = {k: call.get(k) for k in ("used", "model", "latency_s", "error", "primary_error",
                                                             "finish_reason") if k in call}
@@ -164,8 +168,8 @@ def write_report(out):
         lines += [f"## {r['req_id']} ({r['kind']}-have): {r['requirement_text']}",
                   f"- Decision: **{r['final_decision']}** ({r['basis']}); model said {r['model_decision']}",
                   *(f"- Evidence: \"{q}\" (chars {a}-{b})" for q, (a, b) in zip(r["evidence"], r["evidence_spans"])),
-                  f"- Explanation: {r.get('explanation_grounded') or r['explanation']}",
-                  f"- Model text: {r['explanation']}",
+                  f"- Explanation: {r['explanation']}",
+                  f"- Model text: {r.get('explanation_model', '')}",
                   f"- Validator: {', '.join(r['validator']['reasons']) or 'no issue'}",
                   f"- Bias audit: {r['bias_audit']['audit_status']}"
                   + (f" (flip on {r['bias_audit']['affected_attribute']})" if r["bias_audit"].get("counterfactual_flip") else ""),

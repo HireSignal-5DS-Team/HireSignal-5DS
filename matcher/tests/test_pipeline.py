@@ -2,7 +2,7 @@
 No model weights needed: the Judge mapping is tested with fixed NLI probabilities, the Matcher with mocks."""
 import json
 import threading
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 import pytest
 
@@ -158,7 +158,7 @@ class _H(BaseHTTPRequestHandler):
 
 @pytest.fixture(scope="module")
 def server():
-    s = HTTPServer(("127.0.0.1", 0), _H)
+    s = ThreadingHTTPServer(("127.0.0.1", 0), _H)  # QA-024: a slow request must not block the next one
     threading.Thread(target=s.serve_forever, daemon=True).start()
     yield f"http://127.0.0.1:{s.server_port}/v1"
     s.shutdown()
