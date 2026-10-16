@@ -93,3 +93,12 @@ Evaluation session (read-only): `claude/kind-albattani-k7qlt9` @ `e995669` — i
 - 13:05Z: final locked-test run plan committed (a1f7f6d) before any test access; serving stack installing in S6.
 - 2026-10-16 13:43Z: final run lora__gated 154/199 (~14 s/req). ETA: lora__gated ~13:55Z, lora__none ~14:40Z, base__gated ~15:30Z. S1 base arms and S4 new-attribute arms running in their containers.
 - 2026-10-16 14:55Z: final run lora__gated + lora__none done, base__gated running. Pre-registered v1/v2 replay on test exposed **QA-031** (validator v2 clause-scoping bug: 36 correct METs per arm downgraded); fixed in 309a33f, val replay unchanged. Full results after base__gated (FINAL_REPORT.md).
+- 2026-10-16 15:27Z: **final run recovered.** Cause of the stall: a `git stash`/`pop` in this worktree (~14:58Z) replaced
+  base__gated/predictions.jsonl under the running writer; rows 37-104 went to the unlinked file and were lost, then the
+  container restarted (~15:18Z). Recovery: the 36 saved rows verified (unique, test order, clean last line, equal to the
+  committed copy); 9 of them are genuine base-model template echoes ("MET|MISSING|UNCERTAIN"), kept. Live output moved
+  to /home/user/hs_final_run (outside git), LoRA arms checksummed and unchanged; resumed from a detached worktree pinned
+  to 852daa4 so all 3 arms use identical pipeline code (validator fixes QA-031/032 apply only in later replays). Resume
+  started at test-008/r1. Monitor: /home/user/hs_final_run_monitor.log, atomic snapshots in /home/user/hs_final_run_snapshots.
+- Fine-tuned Judge: trained in the eval session's container at /home/user/judge_runs/deberta-hs-v1/best and never pushed
+  (only metrics + train meta are in git). Recipe is committed (finetune/train_judge.py, train split, seed 13).
