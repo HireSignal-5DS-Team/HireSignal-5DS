@@ -1,0 +1,176 @@
+{
+  "pinned": {
+    "base": {
+      "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+      "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+      "weights": {
+        "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+        "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+        "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+        "quant": "Q4_K_M"
+      },
+      "runtime": "llama.cpp (llama-cpp-python 0.3.16 server), OpenAI-compatible"
+    },
+    "adapter": {
+      "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+      "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+      "r": 16,
+      "lora_alpha": 32,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ],
+      "served_as": "convert_lora_to_gguf.py --outtype f16, llama.cpp --lora_path on the Q4_K_M base"
+    }
+  },
+  "adapter_hub": {
+    "repo": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+    "sha": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+    "private": false,
+    "files": {
+      ".gitattributes": 1570,
+      "README.md": 960,
+      "adapter_config.json": 1183,
+      "adapter_model.safetensors": 132187888,
+      "chat_template.jinja": 2630,
+      "data_manifest.json": 2627,
+      "tokenizer.json": 11422650,
+      "tokenizer_config.json": 695,
+      "train_meta.json": 6305
+    }
+  },
+  "base_hub": {
+    "repo": "Qwen/Qwen3-4B-Instruct-2507",
+    "sha": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "private": false,
+    "files": {
+      ".gitattributes": 1570,
+      "LICENSE": 11343,
+      "README.md": 8168,
+      "config.json": 727,
+      "generation_config.json": 238,
+      "merges.txt": 1671839,
+      "model-00001-of-00003.safetensors": 3957900840,
+      "model-00002-of-00003.safetensors": 3987450520,
+      "model-00003-of-00003.safetensors": 99630640,
+      "model.safetensors.index.json": 32819,
+      "tokenizer.json": 11422654,
+      "tokenizer_config.json": 9377,
+      "vocab.json": 2776833
+    }
+  },
+  "gguf_hub": {
+    "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+    "sha": "a06e946bb6b655725eafa393f4a9745d460374c9",
+    "private": false,
+    "files": {
+      ".gitattributes": 2795,
+      "Qwen3-4B-Instruct-2507-Q4_K_M.gguf": 2497281120,
+      "README.md": 11207,
+      "imatrix_unsloth.gguf_file": 3872672,
+      "params": 178,
+      "template": 1492
+    }
+  },
+  "adapter_config": {
+    "peft_type": "LORA",
+    "base_model_name_or_path": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": null,
+    "r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": [
+      "o_proj",
+      "v_proj",
+      "q_proj",
+      "up_proj",
+      "down_proj",
+      "k_proj",
+      "gate_proj"
+    ],
+    "task_type": "CAUSAL_LM",
+    "use_dora": false,
+    "use_rslora": false,
+    "modules_to_save": null,
+    "peft_version": "0.21.2"
+  },
+  "train_meta": {
+    "base": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "steps": 50,
+    "n_train": 777,
+    "n_dev": 62,
+    "versions": {
+      "torch": "2.11.0+cu128",
+      "transformers": "5.19.0",
+      "peft": "0.21.2"
+    },
+    "best_checkpoint": "/kaggle/working/qwen3-4b-hs-lora/checkpoint-50",
+    "prompt_version": "p1",
+    "train_knowledge": "rag.bm25 (ESCO ICT), k=3",
+    "quantization": "QLoRA 4-bit NF4 (README); serving uses llama.cpp Q4_K_M"
+  },
+  "adapter_tensors": {
+    "count": 504,
+    "modules": [
+      "down_proj",
+      "gate_proj",
+      "k_proj",
+      "o_proj",
+      "q_proj",
+      "up_proj",
+      "v_proj"
+    ],
+    "layers": 36,
+    "ranks": [
+      16
+    ],
+    "dtypes": [
+      "F32"
+    ],
+    "non_lora": []
+  },
+  "tokenizer_note": "pre_tokenizer/decoder ByteLevel flags differ (trim_offsets, add_prefix_space: transformers 5 re-serialisation); they do not change token ids. llama.cpp uses the GGUF's own tokenizer.",
+  "chat_template": {
+    "adapter_equals_hf_base": true,
+    "gguf_equals_hf_base": false,
+    "gguf_sha256_16": "c979e0e71a3e21b8",
+    "p1_render_sha256_16": "872e305ce9842cfa",
+    "note": "the GGUF template differs from HF only in assistant-turn <think> handling"
+  },
+  "gguf_metadata": {
+    "general.architecture": "qwen3",
+    "general.basename": "Qwen3-4B-Instruct-2507",
+    "general.file_type": 15,
+    "qwen3.block_count": 36,
+    "qwen3.embedding_length": 2560,
+    "qwen3.attention.head_count_kv": 8,
+    "tokenizer.ggml.pre": "qwen2",
+    "tokenizer.ggml.eos_token_id": 151645,
+    "tokenizer.ggml.tokens": "<array len 151936>"
+  },
+  "checks": {
+    "adapter_sha_resolves": true,
+    "base_sha_resolves": true,
+    "gguf_sha_resolves": true,
+    "peft_lora": true,
+    "adapter_base_model": true,
+    "adapter_trained_on_pinned_base_revision": true,
+    "rank_alpha_targets": true,
+    "no_modules_to_save_or_dora": true,
+    "trained_with_prompt_p1": true,
+    "tensors_cover_all_layers_and_targets": true,
+    "tensor_rank": true,
+    "tensor_shapes_match_base": true,
+    "tokenizer_vocab_merges_special_tokens": true,
+    "chat_template_adapter_equals_base": true,
+    "p1_prompt_renders_identically_hf_adapter_gguf": true,
+    "gguf_arch_matches_base": true
+  },
+  "ok": true
+}
