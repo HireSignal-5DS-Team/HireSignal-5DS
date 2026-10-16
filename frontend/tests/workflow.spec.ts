@@ -78,17 +78,15 @@ test("recruiter completes a demo, reviews evidence, saves notes and exports repo
 });
 test("validates uploads and supports multiple candidates", async ({ page }) => {
   await page.goto("/analysis");
-  await page
-    .getByLabel("Upload CV text files")
-    .setInputFiles({
-      name: "cv.pdf",
-      mimeType: "application/pdf",
-      buffer: Buffer.from("not parsed"),
-    });
-  await expect(page.getByRole("alert")).toContainText("only UTF-8 .txt");
+  await page.getByLabel("Upload CV files").setInputFiles({
+    name: "cv.docx",
+    mimeType: "application/pdf",
+    buffer: Buffer.from("not parsed"),
+  });
+  await expect(page.getByRole("alert")).toContainText("supported types");
   await page.getByRole("button", { name: "Use sample" }).click();
   await page.getByLabel("Or paste CV content").fill("");
-  await page.getByLabel("Upload CV text files").setInputFiles([
+  await page.getByLabel("Upload CV files").setInputFiles([
     {
       name: "one.txt",
       mimeType: "text/plain",

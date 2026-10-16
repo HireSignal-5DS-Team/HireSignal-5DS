@@ -35,26 +35,7 @@ export function validateInput(input: AnalysisInput) {
   if (input.candidates.some((c) => !c.text.trim() || c.text.length > MAX_TEXT))
     throw new Error("Each CV needs text, up to 50,000 characters.");
 }
-export async function readCVFile(file: File): Promise<string> {
-  if (!file.name.toLowerCase().endsWith(".txt"))
-    throw new Error(
-      `${file.name}: only UTF-8 .txt files are supported. Paste extracted text for PDF or DOCX.`,
-    );
-  if (file.size > 200000)
-    throw new Error(`${file.name}: maximum file size is 200 KB.`);
-  const text = new TextDecoder("utf-8", { fatal: true }).decode(
-    await file.arrayBuffer(),
-  );
-  const hasBinary = Array.from(text).some((c) => {
-    const n = c.charCodeAt(0);
-    return n < 9 || (n > 13 && n < 32);
-  });
-  if (!text.trim() || text.length > MAX_TEXT || hasBinary)
-    throw new Error(
-      `${file.name}: use readable text between 1 and 50,000 characters.`,
-    );
-  return text;
-}
+export { readCVFile } from "./cv-files";
 export function demoJob(input: AnalysisInput): Job {
   return {
     job_id: "job-demo",

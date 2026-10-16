@@ -18,7 +18,7 @@ Open the printed URL (normally http://127.0.0.1:5173). MOCK is the default; no A
 
 1. The dashboard starts with one clearly labeled demonstration campaign and three fictional profiles.
 2. Select **New analysis**, then **Use sample**, or enter a role and one requirement per line.
-3. Paste anonymized CV text, or upload up to 10 UTF-8 `.txt` files. Each file is limited to 200 KB and 50,000 decoded characters. PDF, DOCX, images and OCR are deliberately unsupported until a verified parser is integrated.
+3. Paste anonymized CV text, or upload up to 10 PDF, PNG, JPG, WebP or UTF-8 `.txt` files. PDFs/images support up to 10 MB; TXT supports 200 KB. PDFs are limited to 10 pages and all extracted text to 50,000 characters. Text PDFs use PDF.js; images and scanned pages use English Tesseract OCR. Expand each candidate to review/correct extracted text and remove personal details. DOCX remains unsupported. Extraction can be cancelled and times out after two minutes per file.
 4. Confirm personal information has been removed; select **Run demo analysis**. A non-empty paste is included automatically; use **Add this candidate** to queue additional profiles.
 5. Watch the explicitly simulated workflow, then open candidate evidence. Review MET / MISSING / UNCERTAIN decisions and the exact source text.
 6. Save a review status and notes. Navigate to **Reports** and export JSON to retain the report and annotations.
@@ -77,3 +77,7 @@ Read [INTEGRATION.md](INTEGRATION.md). Matcher domain types mirror the inspected
 Feature branch: `feature/hiresignal-frontend`.
 Base: `claude/beautiful-galileo-o36bdv` at `fb68665b8b3586e379688c9e94e7efa0fccbd9ba`, as identified in `docs/orchestration/ORCHESTRATION.md`.
 Changes are confined to `frontend/`. Merge through the team integration PR; do not push directly to `main`.
+
+### PDF and image extraction
+
+Extraction runs locally in the browser. PDF.js and the OCR worker are lazy-loaded from the frontend build; Tesseract core and English language assets download from their configured public CDNs on first use. CV contents are not sent to those CDNs. An internet connection is required for uncached OCR assets. Text pages with fewer than 15 extracted characters use OCR; mixed text/image pages with an existing text layer require manual review. OCR is not guaranteed accurate. No backend matching capability is implied by file extraction.

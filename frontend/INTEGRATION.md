@@ -55,3 +55,7 @@ FastAPI must allow the exact frontend origin for the deployed Vercel domain and 
 ## Demo limitations
 
 Deterministic lexical illustration only: exact whole-line matches can produce MET; mentions within longer lines remain UNCERTAIN; no match is MISSING/not_documented. All results require review. No semantics, duration validation, retrieval, Judge, bias audit or model generation runs. Seed records are fictional. CVs and notes stay in memory until the browser is refreshed; export JSON explicitly includes their contents. There are no autonomous hiring actions.
+
+## Upload update
+
+The frontend now extracts PDF text with PDF.js and recognizes PNG/JPG/WebP images and scanned PDF pages with English Tesseract OCR in the browser. src/cv-files.ts owns validation, limits, timeout, cancellation and cleanup. Users can edit extracted text before matching; evidence offsets refer to that resulting text, not PDF page coordinates. REAL matching is still disabled pending the HTTP contract, provenance mapping and live tests. This replaces the earlier TXT-only upload limitation, without modifying backend parsing or anonymization.

@@ -104,21 +104,21 @@ describe("input and honest demo results", () => {
     await expect(readCVFile(new File(["React"], "cv.txt"))).resolves.toBe(
       "React",
     );
-    await expect(readCVFile(new File(["data"], "cv.pdf"))).rejects.toThrow(
-      "only UTF-8",
+    await expect(readCVFile(new File(["data"], "cv.docx"))).rejects.toThrow(
+      "supported types",
     );
     await expect(
       readCVFile(new File(["x".repeat(200001)], "cv.txt")),
     ).rejects.toThrow("200 KB");
     await expect(readCVFile(new File([" "], "cv.txt"))).rejects.toThrow(
-      "readable text",
+      "No usable text",
     );
     await expect(
       readCVFile(new File([new Uint8Array([0xff])], "cv.txt")),
     ).rejects.toThrow();
     await expect(
       readCVFile(new File(["text\0binary"], "cv.txt")),
-    ).rejects.toThrow("readable text");
+    ).rejects.toThrow("No usable text");
   });
 });
 describe("FastAPI transport", () => {

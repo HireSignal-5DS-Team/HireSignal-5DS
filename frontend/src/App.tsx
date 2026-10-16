@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
+import { CV_ACCEPT } from "./cv-files";
 import {
   Link,
   NavLink,
@@ -428,6 +429,9 @@ function NewAnalysis({
   const [candidates, setCandidates] = useState<CV[]>(initial?.candidates ?? []);
   const [error, setError] = useState("");
   const [reading, setReading] = useState(false);
+  const [readProgress, setReadProgress] = useState("");
+  const uploadController = useRef<AbortController | null>(null);
+  useEffect(() => () => uploadController.current?.abort(), []);
   const [confirmed, setConfirmed] = useState(false);
   function addText() {
     if (!text.trim()) {
@@ -446,28 +450,46 @@ function NewAnalysis({
     setError("");
   }
   async function upload(files: FileList | null) {
-    if (!files?.length) return;
+    if (!files?.length || uploadController.current) return;
+    const controller = new AbortController();
+    uploadController.current = controller;
     setReading(true);
+    setConfirmed(false);
     setError("");
     try {
       if (candidates.length + files.length > 10)
         throw new Error("You can analyze up to 10 candidates at a time.");
-      const added = await Promise.all(
-        Array.from(files).map(async (f) => ({
-          cv_id: crypto.randomUUID(),
-          text: await readCVFile(f),
-          structured: {},
-        })),
-      );
-      setCandidates((prev) => [...prev, ...added]);
+      const failures: string[] = [];
+      for (const file of Array.from(files)) {
+        if (controller.signal.aborted) break;
+        setReadProgress(`Reading ${file.name}…`);
+        try {
+          const extracted = await readCVFile(
+            file,
+            (message) => setReadProgress(`${file.name} · ${message}`),
+            controller.signal,
+          );
+          if (controller.signal.aborted) break;
+          setCandidates((prev) => [
+            ...prev,
+            { cv_id: crypto.randomUUID(), text: extracted, structured: {} },
+          ]);
+        } catch (e) {
+          failures.push((e as Error).message);
+        }
+      }
+      setError(failures.join("\n"));
     } catch (e) {
       setError((e as Error).message);
     } finally {
       setReading(false);
+      setReadProgress("");
+      uploadController.current = null;
     }
   }
   function submit(e: FormEvent) {
     e.preventDefault();
+    if (reading) return;
     setError("");
     try {
       const all = text.trim()
@@ -553,13 +575,13 @@ function NewAnalysis({
             <label className="upload-zone">
               <Upload size={26} />
               <strong>
-                {reading ? "Reading text files…" : "Choose CV text files"}
+                {reading ? "Extracting CV text…" : "Choose CV files"}
               </strong>
-              <span>UTF-8 .txt · up to 200 KB each · 50,000 characters</span>
+              <span>PDF, PNG, JPG, WebP · up to 10 MB · TXT up to 200 KB</span>
               <input
-                aria-label="Upload CV text files"
+                aria-label="Upload CV files"
                 type="file"
-                accept=".txt,text/plain"
+                accept={CV_ACCEPT}
                 multiple
                 disabled={reading}
                 onChange={(e) => {
@@ -568,9 +590,23 @@ function NewAnalysis({
                 }}
               />
             </label>
+            {reading && (
+              <div className="attached">
+                <span role="status">{readProgress}</span>
+                <button
+                  type="button"
+                  className="button secondary"
+                  onClick={() => uploadController.current?.abort()}
+                >
+                  Cancel extraction
+                </button>
+              </div>
+            )}
             <p className="field-hint">
-              PDF, image and DOCX parsing is not connected. Paste already
-              extracted text below.
+              PDFs support up to 10 pages. Images and scanned pages use English
+              OCR in your browser; OCR assets download on first use. Review
+              extracted text below and remove personal details before analysis.
+              Maximum 50,000 characters per CV. DOCX is not supported.
             </p>
             <label>
               Or paste CV content
@@ -592,25 +628,58 @@ function NewAnalysis({
               Add this candidate
             </button>
             {candidates.map((c, i) => (
-              <div className="attached" key={c.cv_id}>
-                <FileText size={18} />
-                <span>
-                  Candidate {String(i + 1).padStart(2, "0")}
-                  <small>
-                    {c.text.length.toLocaleString()} characters · text ready
-                  </small>
-                </span>
-                <button
-                  type="button"
-                  aria-label={`Remove candidate ${i + 1}`}
-                  className="icon-link"
-                  disabled={reading}
-                  onClick={() =>
-                    setCandidates(candidates.filter((x) => x.cv_id !== c.cv_id))
-                  }
-                >
-                  <X size={17} />
-                </button>
+              <div key={c.cv_id}>
+                <div className="attached">
+                  <FileText size={18} />
+                  <span>
+                    Candidate {String(i + 1).padStart(2, "0")}
+                    <small>
+                      {c.text.length.toLocaleString()} characters · text ready
+                    </small>
+                  </span>
+                  <button
+                    type="button"
+                    aria-label={`Remove candidate ${i + 1}`}
+                    className="icon-link"
+                    disabled={reading}
+                    onClick={() =>
+                      setCandidates(
+                        candidates.filter((x) => x.cv_id !== c.cv_id),
+                      )
+                    }
+                  >
+                    <X size={17} />
+                  </button>
+                </div>
+                <details className="source-text">
+                  <summary>
+                    Review / edit Candidate {String(i + 1).padStart(2, "0")}{" "}
+                    text
+                  </summary>
+                  <label>
+                    Extracted text for Candidate {i + 1}
+                    <textarea
+                      rows={7}
+                      maxLength={MAX_TEXT}
+                      disabled={reading}
+                      value={c.text}
+                      onChange={(e) => {
+                        setCandidates((prev) =>
+                          prev.map((item) =>
+                            item.cv_id === c.cv_id
+                              ? { ...item, text: e.target.value }
+                              : item,
+                          ),
+                        );
+                        setConfirmed(false);
+                      }}
+                    />
+                  </label>
+                  <p className="field-hint">
+                    Check reading order and OCR accuracy. This edited text
+                    becomes the evidence source.
+                  </p>
+                </details>
               </div>
             ))}
           </section>
