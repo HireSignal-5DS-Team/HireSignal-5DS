@@ -21,7 +21,8 @@ GGUF=/home/user/hf/hub/models--unsloth--Qwen3-4B-Instruct-2507-GGUF/snapshots/a0
 ADAPTER=/home/user/hf/hub/models--HireSignal-5DS-Team--hiresignal-qwen3-4b-matcher-lora/snapshots/0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a
 
 up() { [ "$(curl -s -m 5 -o /dev/null -w '%{http_code}' "http://127.0.0.1:$1/v1/models")" = 200 ]; }
-ours() { pgrep -f -- "llama_cpp.server .*--port $1( |\$)|serve_qwen4b_lora.sh .* $1\$"; }
+ours() {  # anchored on the executable, so a shell whose command line merely mentions the server is not matched
+  pgrep -f -- "^[^ ]*python[0-9.]* -m llama_cpp\.server .*--port $1( |\$)|^[^ ]*bash [^ ]*serve_qwen4b_lora\.sh .* $1\$"; }
 wait_up() { for _ in $(seq 1 60); do up "$1" && return 0; sleep 5; done; return 1; }
 
 ensure() {  # ensure <port> <log file> <command...>
