@@ -19,6 +19,7 @@ server process (sampled every 2 s; the client RSS is in metrics.json).
   python -m rag_opt.run_arm --arm gated --backend mock_gold --run-id MOCK-gated --limit 2   # plumbing check, MOCK
 """
 import argparse
+import os
 import hashlib
 import json
 import sys
@@ -102,7 +103,7 @@ def main(argv=None):
     a, rest = ap.parse_known_args(argv)
     if "--knowledge" in rest:
         ap.error("--knowledge is set by --arm")
-    if "--split" in rest and rest[rest.index("--split") + 1] == "test":
+    if "--split" in rest and rest[rest.index("--split") + 1] == "test" and os.environ.get("HS_S6_TEST_UNLOCK") != "1":
         ap.error("the test split stays locked for S1 runs (only the orchestrator unlocks it)")
     b = bench.parse_args([*rest, "--knowledge", "none" if a.arm == "none" else "rag"])
     factory, original = provider_factory(a.arm), bench.RagKnowledge
