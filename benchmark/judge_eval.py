@@ -41,17 +41,16 @@ def load(run):
 
 
 def probs_for(judge, items):
-    """NLI probabilities once per item (verdicts for any tau are derived from these)."""
+    """NLI probabilities once per item (verdicts for any tau are derived from these). Same premises as the pipeline
+    (quote line context, chunked whole CV: NLIJudge.premises / item_probs)."""
+    from matcher.judge import hypothesis
+
     kinds, pairs = [], []
     for _, res, cv, req in items:
-        kind, prem = judge.premise(res, cv)
+        kind, prems = judge.premises(res, cv)
         kinds.append(kind)
-        if kind:
-            from matcher.judge import hypothesis
-
-            pairs.append((prem, hypothesis(req)))
-    pr = iter(judge.probs(pairs))
-    return [(k, next(pr) if k else None) for k in kinds]
+        pairs.append([(p, hypothesis(req)) for p in prems])
+    return list(zip(kinds, judge.item_probs(pairs)))
 
 
 def verdicts(judge, items, kp, tau):

@@ -105,3 +105,22 @@ class _NoRefs:
 
     def lookup(self, req, k=3, job_id=None):
         return []
+
+
+def test_judge_eval_uses_the_same_premises_as_the_pipeline():
+    """benchmark/judge_eval.py must score exactly what the pipeline Judge sees (else its calibration is off)."""
+    from types import SimpleNamespace
+
+    from benchmark.judge_eval import probs_for, verdicts
+
+    judge = FakeJudge(keyword_nli)
+    cases = [("MET", "supported", ["Kubernetes in production"], K8S),
+             ("MISSING", "not_documented", [], req("r1", "Python", skill_terms=["Python"])),
+             ("UNCERTAIN", "ambiguous", [], K8S)]
+    items, live = [], []
+    for d, b, ev, rq in cases:
+        res = check(d, b, ev, CVX, rq)
+        live.append(judge.judge_many([(res, CVX, rq)])[0])
+        items.append(({}, SimpleNamespace(decision=res.decision, basis=res.basis, evidence=res.evidence), CVX, rq))
+    offline = verdicts(judge, items, probs_for(judge, items), 0.5)
+    assert [f.judge_verdict for f in offline] == [f.judge_verdict for f in live] == ["FAIL", "FAIL", "NOT_APPLICABLE"]
