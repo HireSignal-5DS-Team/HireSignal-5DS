@@ -61,14 +61,12 @@ def test_duplicate_quotes_are_deduplicated_with_one_span():
     assert r.evidence == [q] and len(r.evidence_spans) == 1
 
 
-@defect("QA-008", "S6")
 def test_trivial_quote_is_not_evidence():
     lead = req("r9", "Experience leading engineering teams", category="experience")
     r = check("MET", "supported", ["e"], CVX, lead)  # 'e' is a substring of the CV, but proves nothing
     assert r.decision != "MET" or r.needs_human_review
 
 
-@defect("QA-022", "S6")
 def test_quote_stitched_across_sections_does_not_create_years():
     cv = CV(cv_id="s", text="Skills\n- Python\n\nHobbies\n- 10 years of competitive chess")
     r = check("MET", "supported", ["Python\n\nHobbies\n- 10 years"], cv, PY5)
@@ -76,27 +74,23 @@ def test_quote_stitched_across_sections_does_not_create_years():
 
 
 # ---- false-MET traps --------------------------------------------------------------------------------------------
-@defect("QA-002", "S6")
 def test_partial_quote_that_drops_a_negation_is_flagged():
     # CV: "Never used Kubernetes in production; ..." -> model quotes only the tail
     r = check("MET", "supported", ["Kubernetes in production"], CVX, K8S)
     assert r.decision != "MET" or r.needs_human_review
 
 
-@defect("QA-002", "S6")
 def test_no_experience_with_x_is_not_met():
     r = check("MET", "supported", ["experience with Kafka"], CVX, KAFKA)  # CV: "No experience with Kafka so far."
     assert r.decision != "MET" or r.needs_human_review
 
 
-@defect("QA-002", "S6")
 def test_full_negated_quote_as_met_is_flagged_by_the_validator():
     # whole negated line, requirement term present: today only the Judge can catch it (see test_qa_judge.py)
     r = check("MET", "supported", ["No experience with Kafka so far."], CVX, KAFKA)
     assert r.decision != "MET" or r.needs_human_review
 
 
-@defect("QA-003", "S6")
 def test_related_but_different_skill_term_is_flagged():
     java = req("r5", "Java development", skill_terms=["Java"])
     r = check("MET", "supported", ["6 years of JavaScript development."], CVX, java)  # 'java' in 'javascript'
@@ -109,7 +103,6 @@ def test_absent_skill_without_knowledge_is_flagged_as_inference():
     assert "semantic_inference_no_term_in_quote" in r.review_reasons and r.needs_human_review
 
 
-@defect("QA-009", "S6")
 def test_related_esco_concept_in_rag_context_does_not_launder_absent_skill():
     cv = CV(cv_id="d", text="Built container images with Docker for CI.")
     docker = ref("esco/docker", "Docker", ["Docker Engine"], score=0.4)  # retrieved for "Kubernetes": related, not same
@@ -124,7 +117,6 @@ def test_alias_from_matching_esco_concept_is_accepted():
     assert r.decision == "MET" and not r.needs_human_review
 
 
-@defect("QA-005", "S6")
 def test_course_is_not_a_required_certification():
     cert = req("r6", "AWS Certified Solutions Architect", category="certification",
                skill_terms=["AWS Solutions Architect"])
@@ -132,7 +124,6 @@ def test_course_is_not_a_required_certification():
     assert r.decision != "MET" or r.needs_human_review
 
 
-@defect("QA-004", "S6")
 def test_years_of_another_skill_do_not_satisfy_min_years():
     cv = CV(cv_id="y", text="- 2 years of Python, 10 years of Java.")
     r = check("MET", "supported", ["- 2 years of Python, 10 years of Java."], cv, PY5)
@@ -153,7 +144,6 @@ def test_year_range_to_present_counts_and_unparseable_duration_is_flagged():
     assert "duration_not_verified" in r.review_reasons
 
 
-@defect("QA-012", "S6")
 def test_contradicted_claim_refuted_by_its_own_quote_is_flagged():
     nice = req("r7", "3 years of JavaScript", kind="nice", category="experience", skill_terms=["JavaScript"], min_years=3)
     r = check("MISSING", "contradicted", ["6 years of JavaScript development."], CVX, nice)
