@@ -1,0 +1,720 @@
+{
+  "run_id": "review-rules-deterministic",
+  "label": "DETERMINISTIC (rules only, no model)",
+  "reviewer": null,
+  "revision": null,
+  "testset_manifest": {
+    "version": "bias-testset-v1",
+    "generator": "bias/make_testset.py",
+    "counts": {
+      "dev": {
+        "items": 34,
+        "positive": 20,
+        "negative": 14,
+        "sha256": "2786d7c804b6bfaf49c045a14db1d08b290d951e987d8f9acf7d10664205e534"
+      },
+      "test": {
+        "items": 32,
+        "positive": 20,
+        "negative": 12,
+        "sha256": "7da707222d2eb65ce7d466275fa4d1878769ff620f634172639c59bc98b5bec7"
+      },
+      "holdout": {
+        "items": 44,
+        "positive": 26,
+        "negative": 18,
+        "sha256": "ccb7e890f1697498b68e5b6d28a5f22b340649a63f7cdd8d5169f34d913b1012"
+      }
+    }
+  },
+  "host": "vm",
+  "note": "fewshot items ['collision_race-0', 'culture_fit-0', 'evidence_birth_year-0'] appear in the reviewer prompt; they are excluded from the dev scores",
+  "scores": {
+    "dev": {
+      "rules_v1": {
+        "n": 31,
+        "positives": 18,
+        "negatives": 13,
+        "tp": 12,
+        "fp": 6,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "recall_ci95": [
+          0.4375,
+          0.8372
+        ],
+        "f1": 0.6666666666666666,
+        "false_positive_rate": 0.46153846153846156,
+        "fpr_ci95": [
+          0.2321,
+          0.7086
+        ],
+        "recall_by_reason": {
+          "demographic_evidence": {
+            "recall": 0.3333333333333333,
+            "n": 3
+          },
+          "explanation_leak": {
+            "recall": 0.8333333333333334,
+            "n": 12
+          },
+          "unsupported_judgment": {
+            "recall": 0.3333333333333333,
+            "n": 3
+          }
+        },
+        "recall_by_attribute": {
+          "address": {
+            "recall": 0.0,
+            "n": 2
+          },
+          "age": {
+            "recall": 0.75,
+            "n": 4
+          },
+          "career_gap": {
+            "recall": 0.0,
+            "n": 1
+          },
+          "disability": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "ethnicity": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "family": {
+            "recall": 0.6666666666666666,
+            "n": 3
+          },
+          "gender": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "name": {
+            "recall": 0.0,
+            "n": 1
+          },
+          "nationality": {
+            "recall": 1.0,
+            "n": 3
+          },
+          "religion": {
+            "recall": 1.0,
+            "n": 1
+          }
+        },
+        "fp_by_category": {
+          "neutral": 0,
+          "neutral_gap": 0,
+          "pronoun": 2,
+          "requirement_sanctioned": 1,
+          "word_collision": 3
+        }
+      },
+      "rules_v2": {
+        "n": 31,
+        "positives": 18,
+        "negatives": 13,
+        "tp": 18,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "recall_ci95": [
+          0.8241,
+          1.0
+        ],
+        "f1": 1.0,
+        "false_positive_rate": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.2281
+        ],
+        "recall_by_reason": {
+          "demographic_evidence": {
+            "recall": 1.0,
+            "n": 3
+          },
+          "explanation_leak": {
+            "recall": 1.0,
+            "n": 12
+          },
+          "unsupported_judgment": {
+            "recall": 1.0,
+            "n": 3
+          }
+        },
+        "recall_by_attribute": {
+          "address": {
+            "recall": 1.0,
+            "n": 2
+          },
+          "age": {
+            "recall": 1.0,
+            "n": 4
+          },
+          "career_gap": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "disability": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "ethnicity": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "family": {
+            "recall": 1.0,
+            "n": 3
+          },
+          "gender": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "name": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "nationality": {
+            "recall": 1.0,
+            "n": 3
+          },
+          "religion": {
+            "recall": 1.0,
+            "n": 1
+          }
+        },
+        "fp_by_category": {
+          "neutral": 0,
+          "neutral_gap": 0,
+          "pronoun": 0,
+          "requirement_sanctioned": 0,
+          "word_collision": 0
+        }
+      }
+    },
+    "test": {
+      "rules_v1": {
+        "n": 32,
+        "positives": 20,
+        "negatives": 12,
+        "tp": 11,
+        "fp": 3,
+        "precision": 0.7857142857142857,
+        "recall": 0.55,
+        "recall_ci95": [
+          0.3421,
+          0.7418
+        ],
+        "f1": 0.6470588235294117,
+        "false_positive_rate": 0.25,
+        "fpr_ci95": [
+          0.0889,
+          0.5323
+        ],
+        "recall_by_reason": {
+          "demographic_evidence": {
+            "recall": 0.5,
+            "n": 4
+          },
+          "explanation_leak": {
+            "recall": 0.5833333333333334,
+            "n": 12
+          },
+          "unsupported_judgment": {
+            "recall": 0.5,
+            "n": 4
+          }
+        },
+        "recall_by_attribute": {
+          "address": {
+            "recall": 0.0,
+            "n": 2
+          },
+          "age": {
+            "recall": 0.8,
+            "n": 5
+          },
+          "career_gap": {
+            "recall": 0.0,
+            "n": 1
+          },
+          "culture_fit": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "disability": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "ethnicity": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "family": {
+            "recall": 0.6666666666666666,
+            "n": 3
+          },
+          "gender": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "name": {
+            "recall": 0.0,
+            "n": 1
+          },
+          "nationality": {
+            "recall": 0.3333333333333333,
+            "n": 3
+          },
+          "religion": {
+            "recall": 0.0,
+            "n": 1
+          }
+        },
+        "fp_by_category": {
+          "neutral": 0,
+          "neutral_gap": 0,
+          "pronoun": 1,
+          "requirement_sanctioned": 0,
+          "word_collision": 2
+        }
+      },
+      "rules_v2": {
+        "n": 32,
+        "positives": 20,
+        "negatives": 12,
+        "tp": 20,
+        "fp": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "recall_ci95": [
+          0.8389,
+          1.0
+        ],
+        "f1": 1.0,
+        "false_positive_rate": 0.0,
+        "fpr_ci95": [
+          0.0,
+          0.2425
+        ],
+        "recall_by_reason": {
+          "demographic_evidence": {
+            "recall": 1.0,
+            "n": 4
+          },
+          "explanation_leak": {
+            "recall": 1.0,
+            "n": 12
+          },
+          "unsupported_judgment": {
+            "recall": 1.0,
+            "n": 4
+          }
+        },
+        "recall_by_attribute": {
+          "address": {
+            "recall": 1.0,
+            "n": 2
+          },
+          "age": {
+            "recall": 1.0,
+            "n": 5
+          },
+          "career_gap": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "culture_fit": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "disability": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "ethnicity": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "family": {
+            "recall": 1.0,
+            "n": 3
+          },
+          "gender": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "name": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "nationality": {
+            "recall": 1.0,
+            "n": 3
+          },
+          "religion": {
+            "recall": 1.0,
+            "n": 1
+          }
+        },
+        "fp_by_category": {
+          "neutral": 0,
+          "neutral_gap": 0,
+          "pronoun": 0,
+          "requirement_sanctioned": 0,
+          "word_collision": 0
+        }
+      }
+    },
+    "holdout": {
+      "rules_v1": {
+        "n": 44,
+        "positives": 26,
+        "negatives": 18,
+        "tp": 19,
+        "fp": 10,
+        "precision": 0.6551724137931034,
+        "recall": 0.7307692307692307,
+        "recall_ci95": [
+          0.5392,
+          0.863
+        ],
+        "f1": 0.6909090909090909,
+        "false_positive_rate": 0.5555555555555556,
+        "fpr_ci95": [
+          0.3372,
+          0.7544
+        ],
+        "recall_by_reason": {
+          "demographic_evidence": {
+            "recall": 0.5,
+            "n": 4
+          },
+          "explanation_leak": {
+            "recall": 0.7222222222222222,
+            "n": 18
+          },
+          "unsupported_judgment": {
+            "recall": 1.0,
+            "n": 4
+          }
+        },
+        "recall_by_attribute": {
+          "address": {
+            "recall": 0.0,
+            "n": 2
+          },
+          "age": {
+            "recall": 0.6,
+            "n": 5
+          },
+          "career_gap": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "culture_fit": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "disability": {
+            "recall": 1.0,
+            "n": 2
+          },
+          "ethnicity": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "family": {
+            "recall": 0.75,
+            "n": 4
+          },
+          "gender": {
+            "recall": 1.0,
+            "n": 2
+          },
+          "name": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "nationality": {
+            "recall": 0.8,
+            "n": 5
+          },
+          "religion": {
+            "recall": 0.5,
+            "n": 2
+          }
+        },
+        "fp_by_category": {
+          "neutral": 2,
+          "neutral_gap": 1,
+          "requirement_sanctioned": 1,
+          "word_collision": 6
+        }
+      },
+      "rules_v2": {
+        "n": 44,
+        "positives": 26,
+        "negatives": 18,
+        "tp": 19,
+        "fp": 1,
+        "precision": 0.95,
+        "recall": 0.7307692307692307,
+        "recall_ci95": [
+          0.5392,
+          0.863
+        ],
+        "f1": 0.8260869565217392,
+        "false_positive_rate": 0.05555555555555555,
+        "fpr_ci95": [
+          0.0099,
+          0.2576
+        ],
+        "recall_by_reason": {
+          "demographic_evidence": {
+            "recall": 1.0,
+            "n": 4
+          },
+          "explanation_leak": {
+            "recall": 0.7222222222222222,
+            "n": 18
+          },
+          "unsupported_judgment": {
+            "recall": 0.5,
+            "n": 4
+          }
+        },
+        "recall_by_attribute": {
+          "address": {
+            "recall": 1.0,
+            "n": 2
+          },
+          "age": {
+            "recall": 0.6,
+            "n": 5
+          },
+          "career_gap": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "culture_fit": {
+            "recall": 0.0,
+            "n": 1
+          },
+          "disability": {
+            "recall": 0.5,
+            "n": 2
+          },
+          "ethnicity": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "family": {
+            "recall": 0.75,
+            "n": 4
+          },
+          "gender": {
+            "recall": 1.0,
+            "n": 2
+          },
+          "name": {
+            "recall": 1.0,
+            "n": 1
+          },
+          "nationality": {
+            "recall": 0.6,
+            "n": 5
+          },
+          "religion": {
+            "recall": 1.0,
+            "n": 2
+          }
+        },
+        "fp_by_category": {
+          "neutral": 0,
+          "neutral_gap": 1,
+          "requirement_sanctioned": 0,
+          "word_collision": 0
+        }
+      }
+    },
+    "all_reported": {
+      "rules_v1": {
+        "n": 76,
+        "positives": 46,
+        "negatives": 30,
+        "tp": 30,
+        "fp": 13,
+        "precision": 0.6976744186046512,
+        "recall": 0.6521739130434783,
+        "recall_ci95": [
+          0.5077,
+          0.7732
+        ],
+        "f1": 0.6741573033707865,
+        "false_positive_rate": 0.43333333333333335,
+        "fpr_ci95": [
+          0.2738,
+          0.608
+        ],
+        "recall_by_reason": {
+          "demographic_evidence": {
+            "recall": 0.5,
+            "n": 8
+          },
+          "explanation_leak": {
+            "recall": 0.6666666666666666,
+            "n": 30
+          },
+          "unsupported_judgment": {
+            "recall": 0.75,
+            "n": 8
+          }
+        },
+        "recall_by_attribute": {
+          "address": {
+            "recall": 0.0,
+            "n": 4
+          },
+          "age": {
+            "recall": 0.7,
+            "n": 10
+          },
+          "career_gap": {
+            "recall": 0.5,
+            "n": 2
+          },
+          "culture_fit": {
+            "recall": 1.0,
+            "n": 2
+          },
+          "disability": {
+            "recall": 1.0,
+            "n": 3
+          },
+          "ethnicity": {
+            "recall": 1.0,
+            "n": 2
+          },
+          "family": {
+            "recall": 0.7142857142857143,
+            "n": 7
+          },
+          "gender": {
+            "recall": 1.0,
+            "n": 3
+          },
+          "name": {
+            "recall": 0.5,
+            "n": 2
+          },
+          "nationality": {
+            "recall": 0.625,
+            "n": 8
+          },
+          "religion": {
+            "recall": 0.3333333333333333,
+            "n": 3
+          }
+        },
+        "fp_by_category": {
+          "neutral": 2,
+          "neutral_gap": 1,
+          "pronoun": 1,
+          "requirement_sanctioned": 1,
+          "word_collision": 8
+        }
+      },
+      "rules_v2": {
+        "n": 76,
+        "positives": 46,
+        "negatives": 30,
+        "tp": 39,
+        "fp": 1,
+        "precision": 0.975,
+        "recall": 0.8478260869565217,
+        "recall_ci95": [
+          0.7178,
+          0.9243
+        ],
+        "f1": 0.9069767441860466,
+        "false_positive_rate": 0.03333333333333333,
+        "fpr_ci95": [
+          0.0059,
+          0.1667
+        ],
+        "recall_by_reason": {
+          "demographic_evidence": {
+            "recall": 1.0,
+            "n": 8
+          },
+          "explanation_leak": {
+            "recall": 0.8333333333333334,
+            "n": 30
+          },
+          "unsupported_judgment": {
+            "recall": 0.75,
+            "n": 8
+          }
+        },
+        "recall_by_attribute": {
+          "address": {
+            "recall": 1.0,
+            "n": 4
+          },
+          "age": {
+            "recall": 0.8,
+            "n": 10
+          },
+          "career_gap": {
+            "recall": 1.0,
+            "n": 2
+          },
+          "culture_fit": {
+            "recall": 0.5,
+            "n": 2
+          },
+          "disability": {
+            "recall": 0.6666666666666666,
+            "n": 3
+          },
+          "ethnicity": {
+            "recall": 1.0,
+            "n": 2
+          },
+          "family": {
+            "recall": 0.8571428571428571,
+            "n": 7
+          },
+          "gender": {
+            "recall": 1.0,
+            "n": 3
+          },
+          "name": {
+            "recall": 1.0,
+            "n": 2
+          },
+          "nationality": {
+            "recall": 0.75,
+            "n": 8
+          },
+          "religion": {
+            "recall": 1.0,
+            "n": 3
+          }
+        },
+        "fp_by_category": {
+          "neutral": 0,
+          "neutral_gap": 1,
+          "pronoun": 0,
+          "requirement_sanctioned": 0,
+          "word_collision": 0
+        }
+      }
+    }
+  }
+}
