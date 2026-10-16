@@ -1914,3 +1914,79 @@ body {
 .table-scroll {
   position: relative;
 }
+
+/* Diagnostics: read-only RAG visibility, no candidate data sent. */
+.rag-inspector { margin-top: 22px; padding: 25px; }
+.rag-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: end;
+  margin: 18px 0 10px;
+}
+.rag-controls label {
+  display: flex;
+  flex: 1 1 195px;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #3b5360;
+}
+.rag-controls input,
+.rag-controls select {
+  border: 1px solid #ccdcd9;
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px 12px;
+  color: #16343a;
+  font: inherit;
+  min-width: 0;
+}
+.rag-controls .button { align-self: end; min-height: 40px; }
+.rag-inline {
+  border: 0;
+  background: transparent;
+  color: #0d766b;
+  cursor: pointer;
+  text-decoration: underline;
+  font: inherit;
+  padding: 0;
+}
+.rag-results { margin-top: 18px; }
+.rag-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.rag-metrics span {
+  font-size: 11px;
+  background: #f0f7f5;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+.rag-source {
+  background: #f8fbfa;
+  border: 1px solid #deebe7;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+}
+.rag-source strong { color: #173d42; }
+.rag-source p { margin: 7px 0; line-height: 1.5; }
+.rag-source a { color: #08786d; }
+.rag-trace {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid #d8e7e2;
+  border-radius: 8px;
+  font-size: 11px;
+}
+.rag-trace summary { cursor: pointer; color: #145c56; font-weight: 600; }
+.rag-trace p { overflow-wrap: anywhere; }
+@media (max-width: 680px) {
+  .rag-controls { flex-direction: column; align-items: stretch; }
+  .rag-controls label { flex-basis: auto; }
+}

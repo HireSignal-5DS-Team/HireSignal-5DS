@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
 import { CV_ACCEPT } from "./cv-files";
 import { workflowStages } from "./workflow";
+import RagInspector from "./RagInspector";
 import {
   Link,
   NavLink,
@@ -945,13 +946,35 @@ function Detail({
                     </small>
                   )}
                   <small>
-                    Knowledge shown:{" "}
+                    Knowledge shown to Matcher:{" "}
                     {r.rag_refs.length
-                      ? r.rag_refs.join(", ")
+                      ? `${r.rag_refs.length} source(s)`
                       : campaign.mode === "MOCK"
-                        ? "None — retrieval not executed in DEMO"
-                        : "No matching ESCO entry for this term"}
+                        ? "None — DEMO, no retrieval"
+                        : "0 sources — strict RAG filter abstained"}
                   </small>
+                  {campaign.mode === "REAL" && (
+                    <details className="rag-trace">
+                      <summary>Inspect model & RAG retrieval trace</summary>
+                      <p><strong>Model:</strong> {r.provenance?.served_alias ?? "Not reported"}</p>
+                      <p><strong>Answered by:</strong> {r.provenance?.answered_by ?? "Not reported"} · <strong>Prompt:</strong> {r.provenance?.prompt_id ?? "Not reported"}</p>
+                      <p><strong>Knowledge provider:</strong> {r.provenance?.knowledge_provider ?? "Not reported"}</p>
+                      {typeof r.matcher_call?.latency_s === "number" && (
+                        <p><strong>Matcher inference:</strong> {r.matcher_call.latency_s.toFixed(2)} seconds · finish: {r.matcher_call.finish_reason ?? "Not reported"}</p>
+                      )}
+                      {r.citations?.length ? (
+                        r.citations.map((source) => (
+                          <div className="rag-source" key={source.source_id}>
+                            <strong>{source.title}</strong>
+                            <p><small>{source.source_type} · {source.retrieval}</small></p>
+                            {source.url?.startsWith("https://") && (
+                              <a href={source.url} target="_blank" rel="noopener noreferrer">View source ↗</a>
+                            )}
+                          </div>
+                        ))
+                      ) : <p>No ESCO knowledge passed the filter for this requirement. The Matcher still uses CV evidence.</p>}
+                    </details>
+                  )}
                   {campaign.mode === "REAL" && (
                     <div className="per-req-audit">
                       <Badge
@@ -1308,6 +1331,7 @@ function SystemStatus() {
           </section>
         ))}
       </div>
+      {mode === "REAL" && <RagInspector />}
     </>
   );
 }

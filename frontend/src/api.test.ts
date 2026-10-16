@@ -143,6 +143,18 @@ describe("FastAPI transport", () => {
       body: JSON.stringify({ cv: input.candidates[0] }),
     });
   });
+  it("inspects the configured RAG without sending any CV", async () => {
+    const fetch = vi.fn().mockResolvedValue(
+      new Response(JSON.stringify({ provider: "rag.gated.v1+bm25", retrieved: 1, references: [] })),
+    );
+    vi.stubGlobal("fetch", fetch);
+    const client = new ApiClient("http://127.0.0.1:8000");
+    await client.ragInspect("Python", "skill");
+    expect(fetch).toHaveBeenCalledWith(
+      "http://127.0.0.1:8000/api/v1/rag/inspect?term=Python&category=skill",
+      expect.objectContaining({ headers: expect.objectContaining({ Accept: "application/json" }) }),
+    );
+  });
   it("rejects missing or invalid configuration", async () => {
     await expect(new ApiClient("").health()).rejects.toThrow(
       "VITE_API_BASE_URL",

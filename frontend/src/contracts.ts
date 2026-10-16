@@ -62,6 +62,27 @@ export interface RequirementResult {
   judge?: JudgeInfo | null;
   bias_audit?: BiasInfo | null;
   validator?: ValidatorInfo | null;
+  citations?: Array<{
+    source_id: string;
+    source_type: string;
+    title: string;
+    url: string | null;
+    retrieval: string;
+  }>;
+  matcher_call?: {
+    used?: string;
+    model?: string;
+    latency_s?: number;
+    error?: string | null;
+    finish_reason?: string | null;
+  };
+  provenance?: {
+    served_alias?: string;
+    answered_by?: string | null;
+    prompt_id?: string;
+    knowledge_provider?: string;
+    finish_reason?: string | null;
+  };
 }
 export interface MatchReport {
   schema_version: string;

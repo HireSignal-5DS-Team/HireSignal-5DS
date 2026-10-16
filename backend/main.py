@@ -17,14 +17,14 @@ import sys
 import time
 from contextlib import asynccontextmanager
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 import httpx
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
@@ -133,6 +133,63 @@ async def models_status():
             "concurrency_limit": 1,
         },
         "contract_version": CONTRACT_VERSION,
+    }
+
+
+@app.get("/api/v1/rag/inspect")
+async def rag_inspect(
+    term: str = Query(min_length=1, max_length=120),
+    category: Literal["skill", "experience", "education", "certification", "language", "other"] = "skill",
+):
+    """Read-only knowledge retrieval check: no CV data and no Matcher inference.
+
+    Uses the SAME configured knowledge provider as /match. The query is a
+    requirement term, never submitted candidate text. Serialized against
+    active matching so shared retrieval trace metadata cannot be mixed up.
+    """
+    term = term.strip()
+    if not term:
+        raise HTTPException(status_code=422, detail="term must not be blank")
+    from matcher.schemas import Requirement
+
+    async with MATCH_SEMAPHORE:
+        try:
+            pipeline = _build_pipeline()
+            knowledge = pipeline.matcher.knowledge
+            req = Requirement(req_id="inspection", text=term, skill_terms=[term], category=category)
+            t0 = time.perf_counter()
+            def retrieve():
+                refs = knowledge.lookup(req, k=3)
+                # GatedKnowledge exposes the decision path for this lookup.
+                trace = getattr(knowledge, "last_trace", None)
+                return refs, trace
+            loop = asyncio.get_running_loop()
+            refs, trace = await loop.run_in_executor(None, retrieve)
+        except Exception as exc:
+            raise HTTPException(status_code=503, detail=f"retrieval unavailable: {type(exc).__name__}")
+        elapsed_ms = round((time.perf_counter() - t0) * 1000, 1)
+
+    return {
+        "query": term,
+        "category": category,
+        "provider": getattr(knowledge, "name", type(knowledge).__name__),
+        "corpus_esco": len(getattr(knowledge, "esco", {})) or None,
+        "elapsed_ms": elapsed_ms,
+        "retrieved": len(refs),
+        "trace": trace,
+        "references": [
+            {
+                "title": ref.title,
+                "source_type": ref.source_type,
+                "source_id": ref.source_id,
+                "url": ref.url,
+                "text": ref.text,
+                "retrieval": ref.retrieval,
+                "score": ref.relevance_score,
+            }
+            for ref in refs
+        ],
+        "meaning": "Knowledge helps interpret terms; it is NOT evidence of a candidate's skills.",
     }
 
 

@@ -227,6 +227,10 @@ export class ApiClient {
   models() {
     return this.request("/api/v1/models/status");
   }
+  ragInspect(term: string, category = "skill") {
+    const params = new URLSearchParams({ term, category });
+    return this.request(`/api/v1/rag/inspect?${params.toString()}`);
+  }
   // Deliberately unknown: an HTTP envelope is not defined on the integration branch.
   // Wire this transport through a verified FastAPI adapter before enabling REAL matching.
   match(payload: unknown) {
@@ -251,6 +255,9 @@ interface PipelineRequirementRow {
   judge?: JudgeInfo | null;
   bias_audit?: BiasInfo | null;
   validator?: ValidatorInfo | null;
+  citations?: RequirementResult["citations"];
+  matcher_call?: RequirementResult["matcher_call"];
+  provenance?: RequirementResult["provenance"];
 }
 interface PipelineOutput {
   contract_version?: string;
@@ -283,7 +290,8 @@ async function realMatch(
     results: data.match_report.results.map((r) => {
       const x = extras.get(r.req_id);
       return x
-        ? { ...r, judge: x.judge ?? null, bias_audit: x.bias_audit ?? null, validator: x.validator ?? null }
+        ? { ...r, judge: x.judge ?? null, bias_audit: x.bias_audit ?? null, validator: x.validator ?? null,
+            citations: x.citations ?? [], matcher_call: x.matcher_call, provenance: x.provenance }
         : r;
     }),
   };
