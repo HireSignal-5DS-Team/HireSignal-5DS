@@ -107,8 +107,9 @@ Evaluation session (read-only): `claude/kind-albattani-k7qlt9` @ `e995669` — i
 
 | component | owner | status | branch | session |
 |---|---|---|---|---|
-| NLI Judge (xsmall eval, calibration, provenance) | S7 | IN PROGRESS | `session/s7-judge-nli` | `session_0162eFFwGNh9LTqytiCUyHWm` |
-| Tiny SLM Report Writer (Qwen3-0.6B + deterministic fallback) | S8 | IN PROGRESS | `session/s8-slm-reporter` | `session_01SgDad1xET9FMM66nr7mdjH` |
+| NLI Judge (xsmall eval, calibration, provenance) | S7 | DONE, merged (default xsmall) | `session/s7-judge-nli` | `session_0162eFFwGNh9LTqytiCUyHWm` |
+| Tiny SLM Report Writer (Qwen3-0.6B + deterministic fallback) | S8 | DONE, merged | `session/s8-slm-reporter` | `session_01SgDad1xET9FMM66nr7mdjH` |
 | Integration contract v1.1 + adapters + handoffs | S6 | DONE (mock-tested) | `claude/beautiful-galileo-o36bdv` @ `cdd5cc0` | — |
 | Deployment (FastAPI/Docker) | Dali | NOT STARTED in repo (no branch yet) | — | local |
 | Upstream agents | Ayoub | PARTIAL: reader `2386e14`, job agent `985d14d` (Oct 15); Profile Agent not delivered | `feature/reader-agent`, `feature/job-agent` | local |
+- 2026-10-16 17:05Z: S7 + S8 merged; LIVE end-to-end run with all models real (f8e67d7); FINAL_REPORT.md written.
