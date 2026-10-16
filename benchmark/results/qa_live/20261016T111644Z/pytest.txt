@@ -1,8 +1,0 @@
-============================= test session starts ==============================
-platform linux -- Python 3.13.16, pytest-9.1.1, pluggy-1.7.0 -- /usr/bin/python
-rootdir: /home/user/HireSignal-5DS
-plugins: anyio-4.15.1
-collecting ... collected 22 items
-
-tests/live/test_live_contracts.py::test_servers_identify_their_models PASSED [  4%]
-tests/live/test_live_contracts.py::test_false_met_trap_is_never_an_unreviewed_met[negation-never] 
