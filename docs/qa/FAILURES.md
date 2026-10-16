@@ -47,10 +47,12 @@ cosmetic or a rare false alarm.
 | QA-028 | high | S2 | **fixed** S2 for the pipeline report (`971f6fd`); frozen MatchReport still carries the model text | LIVE: LoRA explanations are 4 fixed templates that never name the requirement; the final report shows them as the explanation |
 | QA-029 | medium | S4 (S2 model) | open, S4 analysis in progress (`docs/BIAS_AUDITOR.md` §5.2b, pre-registered flip analysis) | LIVE: counterfactual flip on the real LoRA: "At least 5 years of Python" is MISSING with header "Name: Emily Johnson", MET with "Name: Mohamed Ben Salah" (flagged correctly) |
 | QA-030 | medium | S5 | **fixed** `matcher/judge.py` | my QA-017 line context kept bullet markers ("– "), which flipped the pretrained Judge FAIL→PASS on the val weak-exposure false-METs |
+| QA-031 | high | S6 (root cause: S5's QA-004 patch) | **fixed** S6 `309a33f` | QA-004 comma scoping split "Over the last 6 years, Airflow was ..." so QA-026 demoted 36 correct METs per arm on the locked test run |
+| QA-032 | medium | S6 | open, patch `patches/S6-QA-032-duration-forms.patch` | QA-026 also demotes correct METs whose duration is "since 2018" or a word number ("Seven years of Python") |
 | QA-024 | medium | S2 (test) | **fixed** S2 (threaded stub); verified by S5: 0/20 isolated, 0/5 full-suite runs | existing `test_api_backend_success_timeout_and_unavailable` is flaky (2 failures in ~15 full runs) |
 
 QA-006 and QA-021 were merged into QA-002 and dropped as negligible (12-character ref id collisions in the prompt).
-Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-002/003/004/005/007/008/009/012/022/025/026 fixed (their xfail markers were removed by the orchestrator; the tests stay as regression tests). QA-010/011 closed by decision. Open defects by owner (after S1/S2/S4 merges into this branch): **S2 1** (QA-027, model-level: year arithmetic in the LoRA training data), **S4 1** (QA-029, analysis in progress). Everything else is fixed, closed by decision (QA-010/011) or fixed in the production provider with legacy won't-fix (QA-023).
+Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-002/003/004/005/007/008/009/012/022/025/026 fixed (their xfail markers were removed by the orchestrator; the tests stay as regression tests). QA-010/011 closed by decision. Open defects by owner (after S1/S2/S4 merges into this branch): **S6 1** (QA-032, patch ready), **S2 1** (QA-027, model-level: year arithmetic in the LoRA training data), **S4 1** (QA-029, analysis in progress). Everything else is fixed, closed by decision (QA-010/011) or fixed in the production provider with legacy won't-fix (QA-023).
 
 ## Details
 
@@ -371,6 +373,36 @@ residual: knowledge version), 1 skipped (Judge).**
 - That r1 example also shows the remaining model error. The LoRA still reads 2019 - present as below 5 years
   (QA-027), and the grounded explanation faithfully reports the model's decision; the validator flags the result.
 - The counterfactual flip on r1 (name signal, QA-029) reproduces: FLAGGED again, with the same attribute.
+
+### QA-031 · high · S6 (root cause in S5's own patch) · FIXED in `309a33f`
+- Found by the orchestrator's pre-registered v1/v2 replay of the final locked-test run (LIVE LoRA), not by this
+  suite. My QA-004 change scoped durations to comma clauses that name the skill. "Over the last 6 years, Airflow was
+  the main tool at work." then had no clause with both the skill and the years, so the result was
+  `duration_not_verified`, and my QA-026 rule demoted the MET to UNCERTAIN. That hit 36 correct METs per arm. Test
+  macro-F1 of v2 as pre-registered: 0.678, against 0.862 for the v1 replay. Val never used this phrasing, so the
+  val replay (and my "0 false-MET" result) could not show it.
+- **My error:** I tuned QA-004/026 on val only and did not test phrasing variants of durations. The val-based
+  numbers in this log are in-sample, as stated, and this is the cost of that.
+- Fix (S6): within the skill's sentence, use the term clauses if they state a duration, else the whole sentence.
+  Regression tests: `matcher/tests/test_evidence_years.py`, plus `tests/qa/test_qa_duration_variants.py`.
+- Lesson applied: `test_qa_duration_variants.py` adds 18 held-out-style variants, written from general CV phrasing
+  **without reading `benchmark/data/test.jsonl`**: duration before the skill, in a sibling clause, in parentheses,
+  after a dash, with "yrs", year ranges with "to", en dash and "present", plus negatives (years of another skill,
+  too few years). After `309a33f`, 15/15 pass.
+
+### QA-032 · medium · S6 · open (patch ready)
+- Tests: `tests/qa/test_qa_duration_variants.py::test_unparsed_duration_forms` (strict xfail, 3 cases): "Since
+  2018, Python has been my main language.", "Seven years of Python in production.", "Python since 2019.".
+- Root cause: `evidence_years` reads only digit counts ("7 years") and explicit ranges ("2018 - present"). With
+  QA-026 an unread duration demotes a correct MET to UNCERTAIN. It is reviewed, but counts as an error, the same
+  failure family as QA-031.
+- Patch: `patches/S6-QA-032-duration-forms.patch` normalises number words before "years" (zero to twenty) and
+  "since YYYY" to "YYYY - present" before parsing. Checks:
+  - all reproducing tests pass, and `pytest matcher benchmark/tests tests/qa` gives 231 passed;
+  - the val replay is unchanged in all 4 arms (0.640/0.635/0.929/0.926, false-MET 0);
+  - nothing was run on the test split. The orchestrator can measure it in the pre-registered replay.
+- Also changed: my older grounding test used "Five years of Python" as its example of an unparseable duration. It
+  now uses "Python for many years", which stays unparseable with or without the patch.
 
 ## Baseline note
 

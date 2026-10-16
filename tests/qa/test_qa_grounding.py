@@ -139,8 +139,8 @@ def test_years_below_minimum_downgrades_met():
 def test_year_range_to_present_counts_and_unparseable_duration_is_flagged():
     r = check("MET", "supported", ["Senior Python developer at a fintech scale-up (2019 - present)."], CVX, PY5)
     assert r.decision == "MET" and not r.needs_human_review  # 2019 -> 2026 = 7 >= 5
-    cv = CV(cv_id="y", text="- Five years of Python.")
-    r = check("MET", "supported", ["- Five years of Python."], cv, PY5)
+    cv = CV(cv_id="y", text="- Python for many years.")
+    r = check("MET", "supported", ["- Python for many years."], cv, PY5)
     assert "duration_not_verified" in r.review_reasons
 
 
