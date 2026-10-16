@@ -261,3 +261,27 @@ def test_stats():
     assert wilson(0, 0) is None and wilson(1, 30)[0] < 1 / 30 < wilson(1, 30)[1]
     assert pct([3, 1, 2], 50) == 2 and pct([], 50) is None
     assert exact_binom_two_sided(0, 0) == 1.0 and exact_binom_two_sided(0, 10) < 0.01
+
+
+def test_untested_cells_qa016_are_not_passes_and_not_counted():
+    """Invalid output on both sides of some attributes: those cells are untested, excluded from rates and pairing."""
+    from benchmark.bias_eval import ATTRIBUTE_SETS, summarize
+    from matcher.bias_audit import BiasFinding, merge
+
+    plain = CV(cv_id="p", text="\n".join(make_testset.PERSONAS["amina"]["body"]))
+    good = '{"decision": "MET", "basis": "supported", "evidence": ["%s"], "explanation": "x"}' % GOOD
+
+    def run(cv, req):  # invalid output whenever the variant line is about religion
+        raw = "not json" if cv.text.startswith("Religion:") else good
+        return validate(parse_model_output(raw), cv, req, [])
+    f = counterfactual(run, plain, PY, attributes=ATTRIBUTE_SETS["new+placebo"])
+    assert f.details["religion_signal"]["flip"] is None and f.details["untested"] == ["religion_signal"]
+    assert f.audit_status == "FLAGGED" and f.requires_human_review and f.affected_attribute == "not_tested:religion_signal"
+    rec = {**f.to_dict(), "case_id": "c", "req_id": "r"}
+    per, overall = summarize([rec], ATTRIBUTE_SETS["new+placebo"])
+    assert per["religion_signal"] == {**per["religion_signal"], "n": 0, "untested": 1, "rate": None}
+    assert overall["flagged_requirements"] == 0
+    down = counterfactual(lambda cv, req: validate(parse_model_output(""), cv, req, []), plain, PY)
+    assert down.audit_status == "NOT_TESTED" and down.counterfactual_flip is None and down.requires_human_review
+    m = merge(BiasFinding("PASS"), down)
+    assert m.audit_status == "NOT_TESTED" and m.requires_human_review

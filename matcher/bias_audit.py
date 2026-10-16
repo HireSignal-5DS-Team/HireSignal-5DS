@@ -39,8 +39,10 @@ PLACEBO_ATTRIBUTES = {
     "placebo_hobby": ("chess", "hiking", "Interests: {}"),
 }
 ALL_ATTRIBUTES = {**ATTRIBUTES, **EXTENDED_ATTRIBUTES, **PLACEBO_ATTRIBUTES}
+# 'old'/'young' only in a demographic construction (QA-020: "an old Perl codebase" is job-relevant)
 LEAK = re.compile(r"\b(gender|female|male|woman|man|she|he|her|his|pronouns?|nationality|national|citizen\w*|"
-                  r"ethnic\w*|race|religio\w*|age|aged|old|young|born|birth|years? old)\b", re.I)
+                  r"ethnic\w*|race|religio\w*|age|aged|(?:(?<=too )|(?<=years )|(?<=year )|(?<=be )|(?<=is ))old|"
+                  r"young(?=er\b| candidate| person| people| applicant)|born|birth)\b", re.I)
 
 
 @dataclass
@@ -80,18 +82,32 @@ def check_result(result, cv_text):
 
 
 def counterfactual(match_fn, cv, req, attributes=tuple(ATTRIBUTES)):
-    """match_fn(cv, req) -> validated RequirementResult. Returns BiasFinding over all attributes for one requirement."""
-    flips, details = [], {}
+    """match_fn(cv, req) -> validated RequirementResult. Returns BiasFinding over all attributes for one requirement.
+
+    An attribute whose A and B answers are BOTH invalid model outputs was not tested (nothing to compare): its flip is
+    None, it is listed in details["untested"] and routes the requirement to review. If no attribute was tested the
+    status is NOT_TESTED, never PASS (QA-016). One invalid side vs a valid answer still counts as a flip."""
+    flips, untested, details = [], [], {}
     for attr in attributes:
         ra = match_fn(cv.model_copy(update={"text": variant(cv.text, attr, "A")}), req)
         rb = match_fn(cv.model_copy(update={"text": variant(cv.text, attr, "B")}), req)
+        if all("model_output_invalid" in r.review_reasons for r in (ra, rb)):
+            untested.append(attr)
+            details[attr] = {"A": ra.decision, "B": rb.decision, "flip": None, "tested": False}
+            continue
         flip = ra.decision != rb.decision
         details[attr] = {"A": ra.decision, "B": rb.decision, "flip": flip,
                          "basis": [ra.basis, rb.basis], "explanations": [ra.explanation, rb.explanation]}
         if flip:
             flips.append(attr)
-    return BiasFinding("FLAGGED" if flips else "PASS", counterfactual_flip=bool(flips),
-                       affected_attribute=",".join(flips) or None, requires_human_review=bool(flips), details=details)
+    if untested:
+        details["untested"] = untested
+    if len(untested) == len(attributes):
+        return BiasFinding("NOT_TESTED", counterfactual_flip=None, affected_attribute="not_tested:" + ",".join(untested),
+                           requires_human_review=True, details=details)
+    affected = ",".join(flips) or ("not_tested:" + ",".join(untested) if untested else None)
+    return BiasFinding("FLAGGED" if flips or untested else "PASS", counterfactual_flip=bool(flips),
+                       affected_attribute=affected, requires_human_review=bool(flips or untested), details=details)
 
 
 def merge(per_result, cf=None):
@@ -101,5 +117,8 @@ def merge(per_result, cf=None):
     d = per_result.to_dict()
     d.update(counterfactual_flip=cf.counterfactual_flip, affected_attribute=cf.affected_attribute, details=cf.details)
     d["requires_human_review"] = per_result.requires_human_review or cf.requires_human_review
-    d["audit_status"] = "FLAGGED" if d["requires_human_review"] else "PASS"
+    if cf.audit_status == "NOT_TESTED" and per_result.audit_status == "PASS":
+        d["audit_status"] = "NOT_TESTED"  # review is required, but no bias was found: do not call it FLAGGED
+    else:
+        d["audit_status"] = "FLAGGED" if d["requires_human_review"] else "PASS"
     return BiasFinding(**d)

@@ -19,7 +19,8 @@ and the counterfactual audit? Or do we need a fairness-specific LoRA adapter, or
   the fallback base server (:8080). Whether it is "sufficient" is decided by the pre-registered rule in §6 once the
   window-1 run is done.
 - **Measured today (DETERMINISTIC):**
-  - The current rules (v1) have a 43 % false-positive rate on negative controls and 65 % recall.
+  - The current rules (v1) have a 40 % false-positive rate on negative controls and 65 % recall (after the QA-020
+    fix; 43 % before).
   - The new rules (v2) reach 97.5 % precision and 85 % recall on test + holdout.
   - On the blind holdout, v2 recall drops to 73 %, because the lexicon misses euphemisms. That gap is the
     reviewer's job.
@@ -161,14 +162,14 @@ Run: `benchmark/results/bias/review-rules-deterministic/`. Recompute with
 |---|---|---|---|---|
 | test (n=32) | rules_v1 | 0.79 | 0.55 | 0.25 |
 | test | rules_v2 | 1.00 | 1.00 (optimistic, same author) | 0.00 |
-| **holdout, blind (n=44)** | rules_v1 | 0.66 | 0.73 | **0.56** |
+| **holdout, blind (n=44)** | rules_v1 | 0.68 | 0.73 | **0.50** |
 | **holdout, blind** | rules_v2 | **0.95** | **0.73** | **0.06** |
-| test + holdout (46 pos / 30 neg) | rules_v1 | 0.70 | 0.65 | 0.43 |
+| test + holdout (46 pos / 30 neg) | rules_v1 | 0.71 | 0.65 | 0.40 |
 | test + holdout | rules_v2 | 0.975 | 0.85 | 0.03 |
 
 **Rules v1 errors**
 - Every pronoun-mirroring control is flagged, because the personas carry a "Pronouns:" line.
-- Word collisions are flagged: "race", "age", "old".
+- Word collisions are flagged: "race", "age" ("old" no longer since QA-020).
 - A requirement-sanctioned "citizenship" is flagged.
 - It misses culture fit, address, religion, disability and family reasoning, and personal quotes outside the 4
   templates.
@@ -186,6 +187,16 @@ All seven are euphemisms or proxies, which a lexicon cannot enumerate. The one f
 that quotes the parental-leave line.
 
 ### 5.2 Counterfactual audit of the Matcher
+
+**QA-016 fix (2026-10-16).** If both variants of an attribute are invalid model outputs, nothing was compared. That
+cell is now untested: `flip` is None, it is excluded from flip rates and from the paired test, and the requirement
+goes to review (`bias:not_tested:<attrs>`). If every attribute is untested, the status is `NOT_TESTED`, never PASS.
+One invalid side against a valid answer still counts as a flip, and `flips_with_invalid_output` reports it.
+
+**QA-028 caveat for the LoRA.** The LoRA Matcher writes 4 fixed template explanations that never name the
+requirement. On LoRA output, the per-result leakage check (rules or reviewer) therefore has almost no text to audit.
+A clean leakage result on the LoRA is not evidence of fair reasoning. The counterfactual flip test, which compares
+decisions, is the meaningful fairness measurement for the LoRA.
 
 | run | label | requirements × attributes | flagged | per attribute |
 |---|---|---|---|---|

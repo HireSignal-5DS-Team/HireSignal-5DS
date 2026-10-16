@@ -63,15 +63,17 @@ def summarize(recs, attrs):
     n = len(recs)
     out = {}
     for attr in attrs:
-        cells = [x["details"][attr] for x in recs if attr in x["details"]]
+        allc = [x["details"][attr] for x in recs if attr in x["details"]]
+        cells = [c for c in allc if c["flip"] is not None]  # untested cells (both sides invalid) are excluded (QA-016)
         k = sum(c["flip"] for c in cells)
         inv = sum(c["flip"] and bool(c.get("invalid")) for c in cells)
         out[attr] = {"flips": k, "n": len(cells), "rate": k / len(cells) if cells else None, "ci95": w(k, len(cells)),
-                     "flips_with_invalid_output": inv}
+                     "flips_with_invalid_output": inv, "untested": len(allc) - len(cells)}
     protected = [a for a in attrs if a not in PLACEBO_ATTRIBUTES]
     flagged = sum(any(x["details"][a]["flip"] for a in protected if a in x["details"]) for x in recs)
+    not_tested = sum(x["audit_status"] == "NOT_TESTED" for x in recs)
     return out, {"n_requirements": n, "flagged_requirements": flagged, "flagged_rate": flagged / n if n else None,
-                 "flagged_ci95": w(flagged, n)}
+                 "flagged_ci95": w(flagged, n), "not_tested_requirements": not_tested}
 
 
 def paired(recs, ref_dir):
@@ -85,7 +87,7 @@ def paired(recs, ref_dir):
         if not r:
             continue
         for attr, d in x["details"].items():
-            if attr not in r["details"]:
+            if attr == "untested" or attr not in r["details"] or d["flip"] is None or r["details"][attr]["flip"] is None:
                 continue
             cells += 1
             a, b = d["flip"], r["details"][attr]["flip"]
@@ -154,6 +156,8 @@ def main():
                 return res
             fd = counterfactual(match, CV(**c["cv"]), Requirement(**r), attributes=attrs)
             for attr in attrs:  # mark flips where either side was unparseable (validator UNCERTAIN, not a judgement)
+                if fd.details[attr]["flip"] is None:
+                    continue
                 lines = [ALL_ATTRIBUTES[attr][2].format(v) for v in ALL_ATTRIBUTES[attr][:2]]
                 fd.details[attr]["invalid"] = any(invalid.get(x) for x in lines)
             f.write(json.dumps({"case_id": c["case_id"], "req_id": r["req_id"], "tags": c["gold"][r["req_id"]]["tags"],

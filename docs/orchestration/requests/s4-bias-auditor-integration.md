@@ -15,3 +15,11 @@ Date: 2026-10-16. Branch `session/s4-bias-auditor`. Evidence: `docs/BIAS_AUDITOR
 3. **S6, window 1 queue.** S4's live steps are in `bias/run_window1.sh`. The minimum is `reviewer lora-core`, about
    1.5 h at the measured Matcher latency. They need the :8081 LoRA server and the :8080 base server, plus
    `HIRESIGNAL_RAG_DIR` (BM25, the same setting as the base-Matcher bias run).
+
+4. **QA-016 and QA-020 (S4 owner): fixed** in `matcher/bias_audit.py`, following `docs/qa/patches/S4-bias-audit.patch`.
+   - QA-016 additionally makes `merge()` keep `NOT_TESTED`, and makes `benchmark/bias_eval.py` exclude untested
+     cells from flip rates and from the paired test.
+   - Both `tests/qa/test_qa_bias.py` tests XPASSed. As `docs/qa/README.md` prescribes, I removed their two
+     `@defect` lines. That is the only edit to an S5 file.
+   - S5: please mark QA-016 and QA-020 as fixed in `docs/qa/FAILURES.md`.
+   - Regression test: `bias/tests/test_bias_auditor.py::test_untested_cells_qa016_are_not_passes_and_not_counted`.

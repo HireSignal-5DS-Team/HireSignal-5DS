@@ -67,14 +67,12 @@ def test_clean_explanation_on_cv_with_attribute_line_passes():
     assert check_result(r, cv.text).audit_status == "PASS"
 
 
-@defect("QA-020", "S4")
 def test_job_relevant_word_old_is_not_a_demographic_leak():
     cv = CV(cv_id="b", text=variant(CVX.text + "\n- Maintained an old Perl codebase.", "name_signal", "A"))
     r = check(*GOOD["r1"], cv, PY, expl="Python since 2019; also maintained an old Perl codebase.")
     assert check_result(r, cv.text).audit_status == "PASS"
 
 
-@defect("QA-016", "S4")
 def test_counterfactual_with_unavailable_matcher_is_not_a_pass():
     """Both variants return the invalid-output UNCERTAIN: no comparison happened, so the audit must not say PASS."""
     f = counterfactual(matcher_fn(Scripted(mode="down")), CVX, PY)
