@@ -11,6 +11,7 @@ Untested cells (both sides invalid output, QA-016) are excluded.
 Borderline (model-independent, from bench gold): gold decision UNCERTAIN, or a gold tag in BORDERLINE_TAGS (year
 arithmetic, partial or indirect evidence). Clear: every other requirement.
 
+  Run dirs may be git:<commit>:<dir> (read with git show, e.g. the evaluation session's LoRA core run).
   python -m bias.flip_analysis --arm base=benchmark/results/bias/bias-qwen3-4b-q4,benchmark/results/bias/bias-qwen3-4b-q4-new \
       --arm lora=<core run dir>,benchmark/results/bias/bias-qwen3-4b-q4+hslora-new --out benchmark/results/bias/flip-analysis
 """
@@ -57,8 +58,15 @@ def load_cells(dirs):
     """{(case_id, req_id, attr): flip(bool)} over the given run dirs; untested cells are skipped."""
     cells, sources = {}, []
     for d in dirs:
-        p = Path(d) / "findings.jsonl"
-        recs = [json.loads(x) for x in p.read_text().splitlines() if x.strip()]
+        if d.startswith("git:"):  # git:<commit>:<run dir>, e.g. a run committed on another session's branch
+            import subprocess
+
+            _, commit, path = d.split(":", 2)
+            text = subprocess.run(["git", "show", f"{commit}:{path}/findings.jsonl"], cwd=ROOT, check=True,
+                                  capture_output=True, text=True).stdout
+        else:
+            text = (Path(d) / "findings.jsonl").read_text()
+        recs = [json.loads(x) for x in text.splitlines() if x.strip()]
         sources.append({"dir": str(d), "n_requirements": len(recs)})
         for r in recs:
             for attr, v in r["details"].items():
