@@ -699,10 +699,14 @@ function NewAnalysis({
             </div>
           )}
           <div className="form-footer">
-            <span>Text stays in this session in MOCK mode.</span>
+            <span>
+              {mode === "MOCK"
+                ? "Text stays in this session in MOCK mode."
+                : "REAL mode: text is sent to the local FastAPI backend only."}
+            </span>
             <button
               className="button primary"
-              disabled={reading || mode === "REAL"}
+              disabled={reading}
               type="submit"
             >
               <Sparkles size={17} />
@@ -733,12 +737,12 @@ function NewAnalysis({
             <strong>
               {mode === "MOCK"
                 ? "You’re in demonstration mode"
-                : "REAL integration pending"}
+                : "REAL mode — live local backend"}
             </strong>
             <p>
               {mode === "MOCK"
                 ? "Progress and requirement decisions are simulated. No model, retrieval, Judge or fairness audit runs."
-                : "The repository defines Matcher domain schemas but no FastAPI transport contract. Matching is disabled until it is verified."}
+                : "Candidates are processed serially through POST /api/v1/match on the configured backend. Matcher, gated RAG, Bias Auditor and NLI Judge all run."}
             </p>
           </div>
         </aside>
@@ -1184,7 +1188,7 @@ function SystemStatus() {
         <p>
           {mode === "MOCK"
             ? "No model runs in the demo. Service checks below call the configured backend only when requested."
-            : "REAL matching remains disabled until the FastAPI transport contract is implemented and verified."}
+            : "REAL matching is live: the Analysis page calls POST /api/v1/match on the configured backend. Use the checks below to inspect readiness and model provenance."}
         </p>
       </div>
       <div className="system-grid">
@@ -1424,11 +1428,11 @@ export default function App() {
           <Zap size={14} />
           <span>
             <strong>
-              {mode === "MOCK" ? "MOCK / DEMO" : "REAL · integration pending"}
+              {mode === "MOCK" ? "MOCK / DEMO" : "REAL · live backend"}
             </strong>{" "}
             {mode === "MOCK"
               ? "Simulated analysis. No live AI models. Data and reviews reset on refresh."
-              : "Matching is disabled until the backend contract is verified."}
+              : "Candidates are matched on the local FastAPI backend. Reviews reset on refresh."}
           </span>
         </div>
         <main id="main" tabIndex={-1}>
