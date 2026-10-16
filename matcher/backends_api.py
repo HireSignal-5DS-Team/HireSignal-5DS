@@ -19,10 +19,36 @@ None (not checked / endpoint unreachable).
 import json
 import os
 import time
+from pathlib import Path
 import urllib.error
 import urllib.request
 
 from . import prompt
+
+MODELS_CONFIG = Path(__file__).resolve().parents[1] / "config" / "matcher_models.json"
+
+
+def pinned_provenance(env=None, path=None):
+    """(primary, fallback, cfg) provenance from config/matcher_models.json; HS_LORA_REPO / HS_LORA_SHA override."""
+    env = os.environ if env is None else env
+    cfg = json.loads(Path(path or env.get("HS_MODELS_CONFIG") or MODELS_CONFIG).read_text())
+    base = {k: cfg["base"][k] for k in ("model_id", "base_revision", "weights", "runtime")}
+    primary = {**base, "role": "primary", "adapter": dict(cfg["primary"]["adapter"])}
+    if env.get("HS_LORA_REPO") or env.get("HS_LORA_SHA"):
+        primary["adapter"] = {"repo": env.get("HS_LORA_REPO", primary["adapter"]["repo"]), "sha": env.get("HS_LORA_SHA")}
+    return primary, {**base, "role": "fallback", "adapter": None}, cfg
+
+
+def default_provenance(model, provider):
+    """For a backend built without provenance (e.g. benchmark.run): a LOCAL endpoint whose alias is one of the pinned
+    aliases gets that pin; anything else (hosted ids, other models) gets none rather than a guess."""
+    if provider != "local":
+        return {}
+    try:
+        p, f, cfg = pinned_provenance()
+    except (OSError, ValueError, KeyError):
+        return {}
+    return {cfg["primary"]["served_alias"]: p, cfg["fallback"]["served_alias"]: f}.get(model, {})
 
 
 class OpenAICompatBackend:
@@ -34,7 +60,7 @@ class OpenAICompatBackend:
         self.label, self.provider = label or self.model, provider
         self.price_per_mtok = price_per_mtok  # (input, output) USD per 1M tokens, only for cost estimates
         self.last_call, self.totals = {}, {"calls": 0, "errors": 0, "prompt_tokens": 0, "completion_tokens": 0}
-        self.provenance_cfg = dict(provenance or {})
+        self.provenance_cfg = dict(provenance if provenance is not None else default_provenance(self.model, provider))
         self._served, self._checks = None, 0  # cached result of verify_alias(): (verified, served_aliases)
 
     def info(self):
@@ -43,6 +69,7 @@ class OpenAICompatBackend:
                 "decoding": {"temperature": 0, "max_tokens": self.max_tokens}, "timeout_s": self.timeout,
                 "max_retries": self.max_retries, "prompt_version": prompt.PROMPT_VERSION,
                 "adapter_id": (self.provenance_cfg.get("adapter") or {}).get("repo"),
+                "adapter_revision": (self.provenance_cfg.get("adapter") or {}).get("sha"),
                 "revision": os.environ.get("HS_LLM_REVISION"), "provenance": self.provenance()}
 
     def verify_alias(self, refresh=False):

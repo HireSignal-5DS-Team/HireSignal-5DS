@@ -23,6 +23,43 @@ class StructuredInputParser:
         return CV.model_validate(cv_obj), Job.model_validate(job_obj)
 
 
+_WHY_UNCERTAIN = {  # validator reason -> plain words (no new claim: each restates a rule that fired)
+    "model_output_invalid": "the model's answer could not be read",
+    "inconsistent_decision_basis": "the model's decision and its basis contradict each other",
+    "met_without_verified_evidence": "the model said MET but none of its quotes is in the CV",
+    "years_below_minimum_in_evidence": "the quoted CV text shows fewer years than required",
+    "evidence_not_in_cv": "a quote given by the model is not in the CV",
+}
+
+
+def _q(quotes):
+    return " and ".join(f'"{q}"' for q in quotes)
+
+
+def grounded_explanation(res, req, refs):
+    """Deterministic explanation from the requirement text, the VALIDATED decision, the verified CV quotes and the
+    titles of the cited knowledge entries only. It adds no claim about the candidate beyond those quotes; the model's
+    own text stays in `explanation`."""
+    head = f'Requirement "{req.text}": {res.decision}.'
+    if res.decision == "MET":
+        body = f" The CV states {_q(res.evidence)}."
+        if req.min_years:
+            body += (f" The required {req.min_years:g} years could not be confirmed from the quoted text."
+                     if "duration_not_verified" in res.review_reasons else f" The quoted text covers the required {req.min_years:g} years.")
+    elif res.basis == "contradicted":
+        body = f" The CV text {_q(res.evidence)} shows it is not met."
+    elif res.basis == "not_documented":
+        body = " No statement in the CV addresses it. This is absence of evidence, not proof that the candidate lacks it."
+    else:
+        why = [_WHY_UNCERTAIN[r] for r in res.review_reasons if r in _WHY_UNCERTAIN]
+        body = (f" The model answered {res.model_decision}, but {'; '.join(why)}." if why and res.model_decision
+                else f" {why[0][0].upper() + why[0][1:]}." if why
+                else f" The CV evidence is partial or ambiguous{': ' + _q(res.evidence) if res.evidence else ''}.")
+    cited = list(dict.fromkeys(r.title for r in refs))
+    tail = f" Terminology from: {', '.join(cited)} (knowledge base, not candidate evidence)." if cited else ""
+    return head + body + tail
+
+
 def aggregate(res, bias, judge):
     """Transparent combination for one requirement. Review reasons are the union of every stage's reasons."""
     reasons = [f"validator:{r}" for r in res.review_reasons]
@@ -76,7 +113,8 @@ class Pipeline:
         judged = self.judge.judge_many([(res, cv, r) for res, r in zip(results, job.requirements)]) if self.judge \
             else [None] * len(results)  # Judge (after the auditor, on the same validated results)
         rows = [aggregate(res, b, j) for res, b, j in zip(results, audits, judged)]
-        for row, (_, info) in zip(rows, pairs):
+        for row, (res, info), req in zip(rows, pairs, job.requirements):
+            row["explanation_grounded"] = grounded_explanation(res, req, info["refs"])  # shown first in reports
             row["citations"] = [{"source_id": x.source_id, "source_type": x.source_type, "title": x.title, "url": x.url,
                                  "retrieval": x.retrieval, "shown_as": shown_label(x)} for x in info["refs"]]
             call = info["call"]
@@ -126,7 +164,8 @@ def write_report(out):
         lines += [f"## {r['req_id']} ({r['kind']}-have): {r['requirement_text']}",
                   f"- Decision: **{r['final_decision']}** ({r['basis']}); model said {r['model_decision']}",
                   *(f"- Evidence: \"{q}\" (chars {a}-{b})" for q, (a, b) in zip(r["evidence"], r["evidence_spans"])),
-                  f"- Explanation (model): {r['explanation']}",
+                  f"- Explanation: {r.get('explanation_grounded') or r['explanation']}",
+                  f"- Model text: {r['explanation']}",
                   f"- Validator: {', '.join(r['validator']['reasons']) or 'no issue'}",
                   f"- Bias audit: {r['bias_audit']['audit_status']}"
                   + (f" (flip on {r['bias_audit']['affected_attribute']})" if r["bias_audit"].get("counterfactual_flip") else ""),

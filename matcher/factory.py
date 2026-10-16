@@ -11,27 +11,20 @@ Judge   : HS_JUDGE_DIR (fine-tuned DeBERTa; if missing, the pretrained MoritzLau
           (calibrated on train-dev: 0.85 fine-tuned, 0.65 pretrained); HS_JUDGE=off disables
 Bias    : rules always; HS_LIVE_COUNTERFACTUAL=1 adds the inline counterfactual test (8 extra Matcher calls/requirement)
 """
-import json
 import os
 from pathlib import Path
 
-from .backends_api import FallbackBackend, OpenAICompatBackend
+from .backends_api import MODELS_CONFIG, FallbackBackend, OpenAICompatBackend, pinned_provenance  # noqa: F401
 from .knowledge import NoKnowledge, QdrantKnowledge, RagKnowledge
 from .pipeline import Pipeline
 
 PRETRAINED_JUDGE = ("MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli", 0.65)
 FINETUNED_JUDGE = ("/home/user/judge_runs/deberta-hs-v1/best", 0.85)
-MODELS_CONFIG = Path(__file__).resolve().parents[1] / "config" / "matcher_models.json"
 
 
 def model_provenance(env):
-    """(primary, fallback) provenance dicts for OpenAICompatBackend, from the pinned config + env overrides."""
-    cfg = json.loads(Path(env.get("HS_MODELS_CONFIG") or MODELS_CONFIG).read_text())
-    base = {k: cfg["base"][k] for k in ("model_id", "base_revision", "weights", "runtime")}
-    primary = {**base, "role": "primary", "adapter": dict(cfg["primary"]["adapter"])}
-    if env.get("HS_LORA_REPO") or env.get("HS_LORA_SHA"):
-        primary["adapter"] = {"repo": env.get("HS_LORA_REPO", primary["adapter"]["repo"]), "sha": env.get("HS_LORA_SHA")}
-    return primary, {**base, "role": "fallback", "adapter": None}, cfg
+    """(primary, fallback, cfg) provenance dicts for OpenAICompatBackend, from the pinned config + env overrides."""
+    return pinned_provenance(env)
 
 
 def judge_config(env):

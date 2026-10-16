@@ -228,7 +228,7 @@ def test_matcher_report_routes_review_into_the_frozen_contract():
     assert r1.review_priority in ("medium", "high") and rep.summary.needs_human_review == 4
     assert set(MATCHER_REVIEW) == {"matcher:backend_unavailable", "matcher:output_unparseable",
                                    "matcher:served_model_mismatch", "matcher:fallback_model_used", "matcher:output_repaired",
-                                   "matcher:counterfactual_mixed_models"}
+                                   "matcher:counterfactual_mixed_models", "matcher:met_weak_evidence"}
 
 
 class FlakyFake(Fake):
@@ -296,3 +296,54 @@ def test_production_default_keeps_rag_and_lora_primary(monkeypatch):
     assert b.fallback.base_url.endswith(":8080/v1") and b.fallback.model == BASE_ALIAS
     assert b.info()["primary"]["provenance"]["adapter"]["sha"] == LORA_SHA
     assert b.info()["fallback"]["provenance"]["adapter"] is None
+
+
+# --- orchestrator findings on the LIVE LoRA val run (2026-10-16): template explanations, false-MET, adapter n/a ---
+
+def test_grounded_explanation_uses_only_validated_content():
+    bad = {**GOOD, "r1": {"decision": "MET", "basis": "supported", "evidence": ["10 years of Python at Google"]}}
+    out = Pipeline(FallbackBackend(Fake("lora", bad), Fake("base", GOOD)), ESCO).run(CVX.model_dump(), JOB.model_dump())
+    r = rows(out)
+    for x in out["requirements"]:
+        g = x["explanation_grounded"]
+        assert g.startswith(f'Requirement "{x["requirement_text"]}": {x["final_decision"]}.')
+        assert x["explanation"] == "scripted"  # the raw model text is kept
+        for quoted in g.split('"')[3::2]:  # every quoted string after the requirement is a verified CV quote
+            assert quoted in CVX.text
+    assert "10 years of Python at Google" not in r["r1"]["explanation_grounded"]
+    assert "the model said MET but none of its quotes is in the CV" in r["r1"]["explanation_grounded"]
+    assert "Set up Maven builds" in r["r2"]["explanation_grounded"] and "Terminology from: Apache Maven" in r["r2"]["explanation_grounded"]
+    assert "shows it is not met" in r["r3"]["explanation_grounded"]
+    assert "absence of evidence, not proof" in r["r4"]["explanation_grounded"]
+    md = write_report(out)
+    assert "- Explanation: Requirement" in md and "- Model text: scripted" in md
+
+
+WEAK = {**GOOD, "r2": {"decision": "MET", "basis": "supported", "evidence": ["Watched tutorials about Maven in spare time."]}}
+
+
+def test_met_on_hedged_evidence_goes_to_review_decision_kept():
+    cv = CVX.model_copy(update={"text": CVX.text + "\n- Watched tutorials about Maven in spare time."})
+    out = Pipeline(FallbackBackend(Fake("lora", WEAK), Fake("base", GOOD)), ESCO).run(cv.model_dump(), JOB.model_dump())
+    r2 = rows(out)["r2"]
+    assert r2["final_decision"] == "MET" and "matcher:met_weak_evidence" in r2["review_reasons"] and r2["requires_human_review"]
+    rep = MatchReport.model_validate(out["match_report"])
+    assert rep.results[1].review_priority == "high" and "matcher:met_weak_evidence" in rep.results[1].review_reasons
+    good = rows(Pipeline(FallbackBackend(Fake("lora", GOOD), Fake("base", GOOD)), ESCO).run(cv.model_dump(), JOB.model_dump()))
+    assert "matcher:met_weak_evidence" not in good["r2"]["review_reasons"]  # hands-on quote: no flag
+
+
+def test_weak_evidence_rule_never_fires_on_gold_met_quotes():
+    from benchmark.run import read_jsonl
+    from matcher.agent import WEAK_EVIDENCE
+    gold = [g for s in ("train", "val") for c in read_jsonl(ROOT / f"benchmark/data/{s}.jsonl") for g in c["gold"].values()]
+    assert not [q for g in gold if g["decision"] == "MET" for q in g["evidence"] if WEAK_EVIDENCE.search(q)]
+
+
+def test_benchmark_style_backend_records_pinned_adapter():
+    lora = OpenAICompatBackend(base_url="http://127.0.0.1:8081/v1", model=LORA_ALIAS)  # as benchmark.run builds it
+    base = OpenAICompatBackend(base_url="http://127.0.0.1:8080/v1", model=BASE_ALIAS)
+    assert (lora.info()["adapter_id"], lora.info()["adapter_revision"]) == ("HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora", LORA_SHA)
+    assert base.info()["adapter_id"] is None and base.info()["provenance"]["base_revision"].startswith("cdbee75f")
+    hosted = OpenAICompatBackend(base_url="https://x/v1", model=LORA_ALIAS, provider="hosted")
+    assert hosted.info()["adapter_id"] is None  # no guess for a hosted endpoint
