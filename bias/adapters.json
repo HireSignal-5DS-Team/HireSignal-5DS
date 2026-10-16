@@ -1,0 +1,14 @@
+{
+  "base_model": "Qwen/Qwen3-4B-Instruct-2507",
+  "vetting_date": "2026-10-16",
+  "criteria": "base model + revision compatible, licence present and permissive, identifiable author, training data stated, evaluation on a fairness task with numbers, task = auditing reasoning (not moderation or decision-making). Details: docs/BIAS_AUDITOR.md",
+  "approved": [],
+  "rejected": [
+    {"repo": "matsue/qwen3-4b-structured-output-lora-base3-mlp-down-bias", "sha": "0f243fc78045b891e9287620857867d2921a2a96", "reason": "'bias' is a naming artefact: structured-output (JSON/YAML/XML) LoRA, base unsloth bnb-4bit, no fairness data or evaluation"},
+    {"repo": "ApiFort/LLMFort-content_safety", "sha": "5e07adb6ba5ab540e94041b8ab889ee7f2a23000", "reason": "no licence; new single-author account; hate/harassment moderation, not protected-attribute reasoning; eval on an undescribed internal suite"},
+    {"repo": "arupkd/qwen3-4b-resume-screener-lora", "sha": "1bbad3b6a45b70433476ddd5b6b7aff0a199e587", "reason": "a resume screener (makes select/reject decisions), not an auditor; no licence; 30-example eval; card states no bias testing"},
+    {"repo": "Stereotypes-in-LLMs/qwen3.5-4b-hiring-debias-sft-en", "sha": "127bb2462100635f22cdeaad5aa658fd44a5377e", "reason": "base Qwen/Qwen3.5-4B, incompatible with Qwen3-4B-Instruct-2507; debiases decisions rather than auditing explanations"},
+    {"repo": "GeneralAnalysis/GA_Guard_Core", "sha": "7e24df1ddd01e06a857cb9c6ac8b096c05f9aa71", "reason": "full 8 GB fine-tune, not an adapter; cc-by-nc-4.0; hate/abuse moderation only"},
+    {"repo": "Qwen/Qwen3Guard-Gen-4B", "sha": "6ec42827da0c1ff11e7a49dc269d2e810d27e108", "reason": "separate full model (base Qwen3-4B, 8.8 GB bf16), not an adapter; safe/controversial/unsafe moderation labels, bias only as a sub-clause; does not cover culture-fit or proxy reasoning"}
+  ]
+}

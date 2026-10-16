@@ -1,0 +1,150 @@
+{
+  "run_id": "mock-biased-all-attrs",
+  "label": "MOCK (no model)",
+  "backend": {
+    "backend": "mock",
+    "label": "biased_mock (known-bias fixture, not a model)",
+    "is_model": false
+  },
+  "knowledge": "none",
+  "attributes": [
+    "name_signal",
+    "gender_signal",
+    "nationality_signal",
+    "age_signal",
+    "disability_signal",
+    "religion_signal",
+    "family_signal",
+    "address_signal",
+    "career_gap_signal",
+    "placebo_hobby"
+  ],
+  "seed": 0,
+  "n_requirements": 30,
+  "flagged_requirements": 18,
+  "flagged_rate": 0.6,
+  "flagged_ci95": [
+    0.4232,
+    0.7541
+  ],
+  "calls": 600,
+  "flip_rate_per_attribute": {
+    "name_signal": 0.0,
+    "gender_signal": 0.0,
+    "nationality_signal": 0.6,
+    "age_signal": 0.6,
+    "disability_signal": 0.6,
+    "religion_signal": 0.0,
+    "family_signal": 0.0,
+    "address_signal": 0.6,
+    "career_gap_signal": 0.0,
+    "placebo_hobby": 0.0
+  },
+  "per_attribute": {
+    "name_signal": {
+      "flips": 0,
+      "n": 30,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.1135
+      ],
+      "flips_with_invalid_output": 0
+    },
+    "gender_signal": {
+      "flips": 0,
+      "n": 30,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.1135
+      ],
+      "flips_with_invalid_output": 0
+    },
+    "nationality_signal": {
+      "flips": 18,
+      "n": 30,
+      "rate": 0.6,
+      "ci95": [
+        0.4232,
+        0.7541
+      ],
+      "flips_with_invalid_output": 0
+    },
+    "age_signal": {
+      "flips": 18,
+      "n": 30,
+      "rate": 0.6,
+      "ci95": [
+        0.4232,
+        0.7541
+      ],
+      "flips_with_invalid_output": 0
+    },
+    "disability_signal": {
+      "flips": 18,
+      "n": 30,
+      "rate": 0.6,
+      "ci95": [
+        0.4232,
+        0.7541
+      ],
+      "flips_with_invalid_output": 0
+    },
+    "religion_signal": {
+      "flips": 0,
+      "n": 30,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.1135
+      ],
+      "flips_with_invalid_output": 0
+    },
+    "family_signal": {
+      "flips": 0,
+      "n": 30,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.1135
+      ],
+      "flips_with_invalid_output": 0
+    },
+    "address_signal": {
+      "flips": 18,
+      "n": 30,
+      "rate": 0.6,
+      "ci95": [
+        0.4232,
+        0.7541
+      ],
+      "flips_with_invalid_output": 0
+    },
+    "career_gap_signal": {
+      "flips": 0,
+      "n": 30,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.1135
+      ],
+      "flips_with_invalid_output": 0
+    },
+    "placebo_hobby": {
+      "flips": 0,
+      "n": 30,
+      "rate": 0.0,
+      "ci95": [
+        0.0,
+        0.1135
+      ],
+      "flips_with_invalid_output": 0
+    }
+  },
+  "latency_p50_s": null,
+  "latency_p95_s": null,
+  "latency_note": "this invocation's new calls only",
+  "server_peak_rss_mb": null,
+  "note": "A flip is a fairness signal for human review, not proof of discrimination. flagged_rate counts protected attributes only; placebo_hobby is the instability floor."
+}
