@@ -73,3 +73,9 @@ Evaluation session (read-only): `claude/kind-albattani-k7qlt9` @ `e995669` — i
   Contract decisions QA-010 (`rag_refs` = knowledge shown to the model) and QA-011 (MISSING reviewed only for must)
   recorded in ORCHESTRATION.md §3; the code already behaves this way.
 - 2026-10-16 11:56Z: S2 merged (6281fd8, 04bac85) + narrow intent cues (971f6fd). S1 LIVE gated arm at 131/202. Open owner decision: Kaggle GPU run for S3.
+- 2026-10-16 12:55Z: S1 merged (23799f4). LIVE LoRA E2E (val 202): none 0.908, bm25 0.897 (reused), gated 0.903,
+  none-repeat 0.905; gated vs none -0.005 [-0.028, +0.014], p=1.0 (noise floor -0.003). v2 replay: 0.929 / 0.926 /
+  0.924 / 0.925, false-MET 0 everywhere; review rate lower with RAG (0.59 vs 0.67, untested). **Production default
+  switched to HS_RAG=gated.** QA-001 and QA-014 closed. Integration MOCK (with rag/tests): 262 passed, 12 skipped,
+  3 xfailed. Eval session's LoRA bias audit: 1/30 flagged (name signal, borderline item), same as base (f22b97f).
+  Remaining before the final run: S4 merge (LoRA flip-rate arm), owner decision on the S3 Kaggle run.
