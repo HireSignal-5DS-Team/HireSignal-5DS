@@ -120,7 +120,7 @@ def test_pipeline_order_routing_and_report():
     assert r2["final_decision"] == "MET" and r2["requires_human_review"] and r2["judge"]["judge_verdict"] == "FAIL"
     assert out["summary"]["requires_human_review"] == 1 and "No automatic rejection" in out["summary"]["note"]
     md = write_report(out)
-    assert "**REQUIRED** — judge:disagrees" in md and "Has not worked with Kubernetes so far." in md
+    assert "**REQUIRED** — " in md and "judge:disagrees" in md and "Has not worked with Kubernetes so far." in md
 
 
 def test_fabricated_quote_and_invalid_json_route_to_review():

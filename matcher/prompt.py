@@ -23,9 +23,14 @@ def format_knowledge(refs, max_chars=300):
     return "\n".join(f"[{r.source_id.rsplit('/', 1)[-1][:12]}] {r.text[:max_chars]}" for r in refs)
 
 
+def fence_safe(text):
+    """CV text cannot close or reopen the CV block (prompt injection, QA-007): delimiter runs are neutralised."""
+    return text.replace("<<<", "\u2039\u2039\u2039").replace(">>>", "\u203a\u203a\u203a")
+
+
 def user_message(cv, req, refs):
     years = f" (minimum {req.min_years:g} years)" if req.min_years else ""
-    return (f"CV:\n<<<\n{cv.text}\n>>>\n\n"
+    return (f"CV:\n<<<\n{fence_safe(cv.text)}\n>>>\n\n"
             f"Requirement ({req.kind}-have, {req.category}){years}: {req.text}\n\n"
             f"Knowledge (terminology only, not candidate evidence):\n{format_knowledge(refs)}\n\nJSON:")
 
