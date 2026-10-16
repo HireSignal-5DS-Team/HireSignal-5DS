@@ -66,6 +66,22 @@ GOOD = {
 }
 
 
+REQUIRED_PROVENANCE = ("model_id", "base_revision", "adapter_id", "adapter_revision", "knowledge", "knowledge_version",
+                       "prompt_version")
+
+
+def provenance_problems(backend):
+    """Missing provenance items for the primary model of a MatchReport.backend / Pipeline output dict."""
+    primary = backend.get("primary", backend)
+    flat = {**primary, **{k: v for k, v in backend.items() if k != "primary"}}
+    out = [k for k in REQUIRED_PROVENANCE if k not in flat]
+    if "base_revision" in flat and not flat.get("base_revision"):
+        out.append("base_revision is empty")
+    if flat.get("model_id", "").endswith("+lora") and not (flat.get("adapter_id") and flat.get("adapter_revision")):
+        out.append("LoRA primary without adapter repo + sha")
+    return out
+
+
 class Scripted:
     """OpenAICompatBackend stand-in. mode: ok | down | raise. Records last_call like the real backend."""
 

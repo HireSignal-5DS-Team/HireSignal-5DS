@@ -10,7 +10,7 @@ import tempfile
 from pathlib import Path
 
 import pytest
-from _qa_support import CVX, GOOD, JOB, Scripted, ans, check, defect, ref
+from _qa_support import CVX, GOOD, JOB, Scripted, ans, check, defect, provenance_problems, ref
 
 from matcher import knowledge
 from matcher.agent import Matcher
@@ -142,22 +142,6 @@ def test_missing_evidence_is_never_met_and_never_contradicted():
 
 
 # ---- 4. provenance -----------------------------------------------------------------------------------------------
-REQUIRED_PROVENANCE = ("model_id", "base_revision", "adapter_id", "adapter_revision", "knowledge", "knowledge_version",
-                       "prompt_version")
-
-
-def provenance_problems(backend):
-    """Missing provenance items for the primary model of a MatchReport.backend / Pipeline output dict."""
-    primary = backend.get("primary", backend)
-    flat = {**primary, **{k: v for k, v in backend.items() if k != "primary"}}
-    out = [k for k in REQUIRED_PROVENANCE if k not in flat]
-    if "base_revision" in flat and not flat.get("base_revision"):
-        out.append("base_revision is empty")
-    if flat.get("model_id", "").endswith("+lora") and not (flat.get("adapter_id") and flat.get("adapter_revision")):
-        out.append("LoRA primary without adapter repo + sha")
-    return out
-
-
 def test_provenance_records_prompt_and_knowledge():
     rep = Matcher(Scripted(), SpyKnowledge()).match(CVX, JOB)
     assert rep.backend["knowledge"] == "spy"
