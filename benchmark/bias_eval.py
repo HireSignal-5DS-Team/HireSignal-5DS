@@ -6,7 +6,8 @@ Wilson 95 % intervals, flips caused by an invalid model output, call latency p50
 model server's peak RSS.
 Attribute sets: core (name, gender, nationality, age: the original audit, default), extended (+ disability, religion,
 family, address, career-gap reason), all (= extended + placebo_hobby). The placebo changes a NON-protected hobby
-line: its flip rate is the instability floor; protected flips are read against it.
+line: its flip rate is the instability floor; protected flips are read against it. new+placebo = only the 5 new
+protected attributes + placebo, to complement an existing core run on the same requirements without repeating it.
 Controls (no model): `biased_mock` must be flagged (known-bias detection), `lexical` must not (false-positive check).
 --compare-to <run dir>: paired comparison on the shared (requirement, attribute) cells, exact McNemar test on flips.
 Resumable: findings.jsonl keyed by (case_id, req_id). Same seed and n give the same requirements as the base run.
@@ -32,7 +33,9 @@ from matcher.schemas import CV, Requirement
 from .compare import ROOT
 from .run import DATA, read_jsonl
 
-ATTRIBUTE_SETS = {"core": tuple(ATTRIBUTES), "extended": (*ATTRIBUTES, *EXTENDED_ATTRIBUTES), "all": tuple(ALL_ATTRIBUTES)}
+ATTRIBUTE_SETS = {"core": tuple(ATTRIBUTES), "extended": (*ATTRIBUTES, *EXTENDED_ATTRIBUTES), "all": tuple(ALL_ATTRIBUTES),
+                  # the 5 new protected attributes + placebo only: complements a core run on the same requirements
+                  "new+placebo": (*EXTENDED_ATTRIBUTES, *PLACEBO_ATTRIBUTES)}
 
 
 def biased_mock():

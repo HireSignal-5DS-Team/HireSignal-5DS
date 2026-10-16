@@ -5,11 +5,16 @@
 #   :8080  Qwen3-4B-Instruct-2507 Q4_K_M, no adapter (fallback Matcher; also serves the prompted Bias reviewer)
 # One model job at a time per container: every step holds /home/user/hs_queue.lock.
 #
-#   HIRESIGNAL_RAG_DIR=<rag dir> bias/run_window1.sh [step ...]     steps: reviewer lora-core lora-all base-all (default: all, in order)
+#   HIRESIGNAL_RAG_DIR=<rag dir> bias/run_window1.sh [step ...]
+#   steps: reviewer lora-new base-new (default, in order); lora-core lora-all base-all (optional)
+#   lora-core is NOT in the default: the evaluation session runs that exact protocol (bias-qwen3-4b-q4+hslora, core
+#   attributes, n=30, seed 0, BM25) on its own branch; lora-new/base-new complement it on the same requirements.
 #
 # Outputs (each with metrics.json + per-item jsonl + provenance) under benchmark/results/bias/:
 #   review-qwen3-4b-q4-reviewer_v1     reviewer precision/recall on dev/test/holdout, latency, server RSS   (~110 calls)
-#   bias-qwen3-4b-q4+hslora            LoRA Matcher, core attributes, same 30 reqs as the base run, paired   (240 calls)
+#   bias-qwen3-4b-q4+hslora-new        LoRA Matcher, 5 new protected attributes + placebo, same 30 reqs   (360 calls)
+#   bias-qwen3-4b-q4-new               base Matcher, same, paired with lora-new                           (360 calls)
+#   bias-qwen3-4b-q4+hslora            (optional) LoRA Matcher, core attributes, paired with the base run   (240 calls)
 #   bias-qwen3-4b-q4+hslora-all        LoRA Matcher, 9 protected attributes + placebo                     (600 calls)
 #   bias-qwen3-4b-q4-all               base Matcher, same, paired with the LoRA run                       (600 calls)
 set -euo pipefail
@@ -28,7 +33,7 @@ up() { curl -sf --max-time 5 "$1/models" >/dev/null || { echo "server $1 is not 
 pid_of() { pgrep -f "llama_cpp.server.*--port $1" | head -1 || true; }
 run() { flock "$LOCK" nice -n 5 "$@"; }
 
-STEPS=${*:-reviewer lora-core lora-all base-all}
+STEPS=${*:-reviewer lora-new base-new}
 for s in $STEPS; do
   case $s in
     reviewer)
@@ -40,6 +45,16 @@ for s in $STEPS; do
       run $P -m benchmark.bias_eval --backend openai --base-url "$LORA_URL" --model "Qwen/Qwen3-4B-Instruct-2507+lora" \
         --adapter-id "$ADAPTER" --adapter-revision "$ADAPTER_SHA" --attributes core --n "$N" \
         --run-id bias-qwen3-4b-q4+hslora --compare-to $R/bias-qwen3-4b-q4 ${PID:+--server-pid $PID} ;;
+    lora-new)
+      up "$LORA_URL"; PID=$(pid_of 8081)
+      run $P -m benchmark.bias_eval --backend openai --base-url "$LORA_URL" --model "Qwen/Qwen3-4B-Instruct-2507+lora" \
+        --adapter-id "$ADAPTER" --adapter-revision "$ADAPTER_SHA" --attributes new+placebo --n "$N" \
+        --run-id bias-qwen3-4b-q4+hslora-new ${PID:+--server-pid $PID} ;;
+    base-new)
+      up "$BASE_URL"; PID=$(pid_of 8080)
+      run $P -m benchmark.bias_eval --backend openai --base-url "$BASE_URL" --model Qwen/Qwen3-4B-Instruct-2507 \
+        --attributes new+placebo --n "$N" --run-id bias-qwen3-4b-q4-new --compare-to $R/bias-qwen3-4b-q4+hslora-new \
+        ${PID:+--server-pid $PID} ;;
     lora-all)
       up "$LORA_URL"; PID=$(pid_of 8081)
       run $P -m benchmark.bias_eval --backend openai --base-url "$LORA_URL" --model "Qwen/Qwen3-4B-Instruct-2507+lora" \
@@ -53,4 +68,4 @@ for s in $STEPS; do
     *) echo "unknown step $s"; exit 2 ;;
   esac
 done
-echo "done. Commit $R/{review-qwen3-4b-q4-reviewer_v1,bias-qwen3-4b-q4+hslora,bias-qwen3-4b-q4+hslora-all,bias-qwen3-4b-q4-all}"
+echo "done. Commit the run directories above under $R/"
