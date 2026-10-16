@@ -285,3 +285,22 @@ def test_untested_cells_qa016_are_not_passes_and_not_counted():
     assert down.audit_status == "NOT_TESTED" and down.counterfactual_flip is None and down.requires_human_review
     m = merge(BiasFinding("PASS"), down)
     assert m.audit_status == "NOT_TESTED" and m.requires_human_review
+
+
+def test_flip_analysis_strata_placebo_and_mcnemar(tmp_path):
+    from bias.flip_analysis import BORDERLINE_TAGS, analyse_arm, fisher_two_sided, gold_index, is_borderline, mcnemar
+
+    assert round(fisher_two_sided(3, 1, 1, 3), 4) == 0.4857 and round(fisher_two_sided(8, 2, 1, 5), 3) == 0.035
+    gold = gold_index()
+    keys = list(gold)[:4]
+    assert is_borderline({"decision": "UNCERTAIN", "tags": []}) and not is_borderline({"decision": "MET", "tags": ["direct_match"]})
+    assert is_borderline({"decision": "MET", "tags": [sorted(BORDERLINE_TAGS)[0]]})
+    cells = {(*k, "name_signal"): i == 0 for i, k in enumerate(keys)}
+    cells.update({(*k, "placebo_hobby"): False for k in keys})
+    r = analyse_arm(cells, gold)
+    assert r["protected_pooled"]["flips"] == 1 and r["placebo"]["n"] == 4 and r["placebo"]["flips"] == 0
+    s = r["borderline_vs_clear_protected"]
+    assert s["borderline"]["n"] + s["clear"]["n"] == 4 and len(r["flipped_requirements"]) == 1
+    other = {k: False for k in cells}
+    m = mcnemar(cells, other)
+    assert m["flip_only_first"] == 1 and m["flip_only_second"] == 0 and m["shared_cells"] == 8

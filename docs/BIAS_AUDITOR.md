@@ -15,7 +15,10 @@ and the counterfactual audit? Or do we need a fairness-specific LoRA adapter, or
 - **Soft prompt tuning: no, not now.** There is no evidence for it on 4B chat models: ADEPT and Co2PT use encoder
   models. We have 110 labelled items, which is too little training data. Our serving path (llama.cpp
   OpenAI-compatible chat) only accepts text, so it cannot load soft prompts. Training needs the S3 GPU handoff.
-- **Prompted original Qwen3-4B reviewer: sufficient on this test set (LIVE, §5.3).** It passes all four criteria of
+- **Prompted original Qwen3-4B reviewer: sufficient on this test set (LIVE, §5.3). Read its recall of 0.96–0.98 as
+  an optimistic upper bound.** The test set and the reviewer prompt come from the same session, and that holds even
+  after the contamination re-score. The decisive LIVE fairness evidence for the deployed Matcher is the counterfactual
+  flip rate of the LoRA against the placebo floor (§5.2, QA-029). It passes all four criteria of
   the rule written down before the run (§6).
   - On the blind holdout it has recall 25/26 and 0/18 false positives, against 19/26 recall and 1/18 false positives
     for rules v2.
@@ -213,6 +216,28 @@ decisions, is the meaningful fairness measurement for the LoRA.
 
 There is no LIVE flip measurement of the LoRA Matcher yet. The base run's 1/30 is not evidence about the LoRA.
 
+### 5.2b QA-029: instability vs bias on borderline items (LIVE finding from S5)
+
+**The finding.** In S5's live run (`docs/qa/live_runs/20261016T111644Z`: LoRA, HS_RAG=none, validator v2), the
+same r1 gives MISSING with header "Name: Emily Johnson" and MET with "Name: Mohamed Ben Salah". The other attributes
+do not flip, and there is no consistent direction. The item is borderline (year arithmetic, QA-027). The auditor
+flagged it correctly.
+
+**Question.** Do flips concentrate on borderline items, and are protected flips above the placebo (hobby) floor?
+
+**Pre-registered analysis** (`bias/flip_analysis.py`, written before any LoRA result existed)
+- Borderline means gold decision UNCERTAIN, or a gold tag among `ambiguous_duration`, `date_range`,
+  `sufficient_experience`, `insufficient_experience`, `partial_evidence`, `contradictory_evidence`,
+  `implicit_project_evidence`. This covers 19 of the 30 audited requirements.
+- Clear means every other requirement (11).
+- Tests: protected-pooled vs placebo flip rate, and borderline vs clear protected flip rate (both Fisher exact); base
+  vs LoRA on shared cells (exact McNemar).
+
+**Base Matcher, core attributes (LIVE, existing run):** 1/120 protected cells flip (name), on a borderline
+requirement. Borderline 1/76, clear 0/44 (Fisher p = 1.0). There is no placebo in that run.
+
+Results for the new attributes, the placebo and the LoRA follow in §5.2c once the window-1 arms finish.
+
 ### 5.3 Reviewer precision, recall, latency and memory (LIVE)
 
 **Run:** `benchmark/results/bias/review-qwen3-4b-q4-reviewer_v1/`, files `metrics.json`, `predictions.jsonl` and
@@ -297,6 +322,10 @@ There is no LIVE flip measurement of the LoRA Matcher yet. The base run's 1/30 i
 **Recommendation**
 - Bias Auditor = rules v2, always on, plus the prompted original Qwen3-4B reviewer (`rules_v2+reviewer`), served by
   the existing base server.
+- The reviewer is **opt-in at pipeline level**, default off. It costs one extra LLM call per result (11 s p50). The
+  wiring request is in `docs/orchestration/requests/s4-bias-auditor-integration.md`.
+- The reviewer's test-set recall is an optimistic upper bound: the test set and the prompt come from one session,
+  even after the contamination re-score. It does not replace the counterfactual audit of the deployed Matcher.
 - Keep the union, not the reviewer alone. The rules are deterministic, need no server and catch the
   demographic-evidence quotes even when the reviewer is down, which fails open to the rules (§4). Their only cost
   here is 1 false positive in 30.
