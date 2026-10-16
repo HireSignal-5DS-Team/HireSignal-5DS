@@ -229,6 +229,9 @@ On the 202 val requirements. Every cell is labelled.
 - **Reference, different backend, not comparable to the table above:** untuned Qwen3-4B Q4_K_M through llama.cpp,
   `benchmark/results/qwen3-4b-q4-rag-val`, MEASURED by the team: macro-F1 0.630, false-MET 0.009, JSON valid 0.916,
   p50 16.4 s and p95 34.3 s on CPU.
+  - Also on llama.cpp Q4_K_M, 202 val requirements, without RAG, as reported by the orchestrator on 2026-10-16
+    (artefacts on `claude/kind-albattani-k7qlt9`, not re-checked here): base 0.634 and Matcher LoRA 0.908 macro-F1.
+    These are GGUF numbers. They are never mixed into the transformers-backend table above.
 
 **Pre-registered decision rule.** The soft prompt (or LoRA + soft prompt) is kept as an experimental candidate only
 if, against `base` and `lora` respectively under the same backend:
