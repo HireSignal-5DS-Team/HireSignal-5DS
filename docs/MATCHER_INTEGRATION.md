@@ -1,8 +1,27 @@
 # Fine-tuned Matcher integration (Session 2)
 
-Branch `session/s2-matcher-lora-integration`. Status on 2026-10-16: **code and mock tests done, compatibility verified
-from Hub metadata; nothing has run on a real model in this pipeline yet** (compute window 0). The live smoke test is
-ready for window 1 (`scripts/live_smoke.sh`).
+Branch `session/s2-matcher-lora-integration`. Status on 2026-10-16: code and mock tests done, compatibility verified
+from Hub metadata, and the **LIVE smoke test passed in window 1** (`benchmark/results/live_smoke/20261016T113444Z/`).
+
+## 0. Live smoke result (2026-10-16, window 1, LIVE, 3 val cases = 13 requirements; a smoke test, not a metric)
+
+- Setup: `scripts/live_smoke.sh` in a 4-vCPU / 15 GiB CPU container. The pinned adapter, base config and Q4_K_M GGUF
+  were fetched (16/16 compatibility checks on the downloaded files). The adapter was converted with the vendored
+  `convert_lora_to_gguf.py`. The servers: llama-cpp-python 0.3.16, `/v1/models` = `Qwen/Qwen3-4B-Instruct-2507+lora`
+  on :8081 and `Qwen/Qwen3-4B-Instruct-2507` on :8080. RAG = `rag.bm25` over the team ESCO index (`rag/` from
+  `claude/gracious-fermi-ncuem4`). Judge off.
+- `HS_LIVE=1 pytest matcher/tests/test_live_matcher.py`: **4 passed** (primary provenance, schema/spans/citations,
+  fallback with the primary unreachable, greedy determinism).
+- `scripts/live_smoke.py`: **14/14 checks pass**. Every result was answered by the LoRA primary, with the alias
+  verified and the pinned adapter sha, base revision and weights recorded. Both the frozen MatchReport model and the
+  JSON schema file validate. Evidence spans are verbatim; citations = `rag_refs`. Must-have MISSING is reviewed. A
+  forced fallback was answered by the base model, has `adapter: null`, and was routed to review.
+- Output: 13/13 parsed strictly (0 repairs, 0 truncations). 6/13 were routed to review. Latency p50 17.5 s, max
+  26.8 s (CPU). 13/13 agree with gold, but 3 cases are not an accuracy estimate (the 202-req eval is).
+- Seen live: on "React …", BM25 retrieves unrelated ESCO entries ("react to physical changes or hazards"). They are
+  cited faithfully in `citations` and in the grounded explanation. This is a retrieval-quality issue for S1.
+- Setup failures on the way (fixed, not results): the `download.pytorch.org` index is blocked by the proxy (use PyPI
+  `torch==2.14.1`), and the converter also needs `mistral_common`. `live_smoke.sh` now preflights both.
 
 ## 1. Models
 
@@ -181,11 +200,8 @@ harness works. It is not a model result, and nothing from it is committed as one
 
 ## 8. Not verified yet
 
-- Any live output of the LoRA Matcher through this pipeline: JSON-valid rate, repairs, latency, provenance on a real
-  server. Waits for window 1.
-- `convert_lora_to_gguf.py` on this adapter and llama.cpp loading it (the eval session did this in its own container;
-  this session did not).
-- That llama-cpp-python's `/v1/models` lists the `--model_alias` (read from the 0.3.16 source, not observed live).
+- JSON-valid rate, repair rate and latency at scale through this pipeline (the smoke covers 13 requirements; the
+  202-req eval covers the benchmark path).
 - The effect of the NF4-trained adapter on a Q4_K_M base (measured by the separate 202-requirement eval, not here).
 - The NLI Judge and the inline counterfactual audit on LoRA outputs (S5 / S4 live work).
 - `knowledge_version` (S1 request open).
