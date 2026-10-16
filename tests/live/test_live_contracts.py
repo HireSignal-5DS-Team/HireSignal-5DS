@@ -78,7 +78,6 @@ def test_evidence_is_verbatim_and_spans_exact(live, recorder):
         assert row["final_decision"] != "MET" or row["evidence"]
 
 
-@defect("QA-028", "S2")
 def test_live_explanations_name_the_requirement(live, recorder):
     from _qa_support import explanation_problems
 

@@ -27,6 +27,8 @@ until QA-002 and QA-004 are fixed.
 
 - `live_runs/20261016T111644Z/`: LoRA + base on llama.cpp, validator v2, no RAG. 19 passed, 2 xfailed (QA-014, QA-028), 1 skipped (Judge). Summary in `FAILURES.md` (Window 1: LIVE QA suite).
 
+- `live_runs/20261016T115840Z/`: rerun after the S2 merge (`4f50045`). 20 passed, 1 xfailed (QA-014 residual), 1 skipped (Judge).
+
 ## Markers
 
 `defect("QA-xxx", owner)` is a strict xfail that reproduces an open defect in `FAILURES.md`. When a fix lands, the

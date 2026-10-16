@@ -31,9 +31,9 @@ cosmetic or a rare false alarm.
 | QA-010 | medium | S6 (contract) | **closed by decision** (ORCHESTRATION §3.3: rag_refs = knowledge shown) | `rag_refs` = every retrieved ref, not the cited ones; `ModelAnswer` has no citation field |
 | QA-011 | medium | S6 (contract) | **closed by decision** (§3.3: nice-to-have MISSING unflagged) | nice-to-have MISSING/not_documented gets no review; §3.3 says missing evidence is UNCERTAIN + review |
 | QA-012 | low | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | MISSING/contradicted refuted by its own quote (6 ≥ 3 years) is not flagged |
-| QA-013 | high | S2 | open | `Matcher.match` (MatchReport path) does not route fallback answers to review; no per-result model |
-| QA-014 | high | S2 | open | provenance incomplete: no base revision, LoRA primary reports `adapter_id: null`, no adapter sha, no knowledge version |
-| QA-015 | high | S2 | open | malformed server body (`[]`, `{"choices": null}`, non-string content) or a backend exception crashes the pipeline; no fallback |
+| QA-013 | high | S2 | **fixed** S2 (`6281fd8`/`971f6fd`, merged) | `Matcher.match` (MatchReport path) does not route fallback answers to review; no per-result model |
+| QA-014 | high | S2 → S1 | S2 part fixed (`971f6fd`); open for S1: knowledge provider `version` | provenance incomplete: no base revision, LoRA primary reports `adapter_id: null`, no adapter sha, no knowledge version |
+| QA-015 | high | S2 | **fixed** S2 (`6281fd8`/`971f6fd`, merged) | malformed server body (`[]`, `{"choices": null}`, non-string content) or a backend exception crashes the pipeline; no fallback |
 | QA-016 | high | S4 | open | counterfactual audit says PASS when the Matcher was unavailable in both variants (nothing compared) |
 | QA-017 | high | S5 | **fixed** `matcher/judge.py` | Judge saw only the bare quote, so a negation cut out of a partial quote was invisible |
 | QA-018 | medium | S5 | **fixed** `matcher/judge.py` | Judge not_documented check truncated the CV to 512 tokens; skills late in a long CV invisible |
@@ -44,13 +44,13 @@ cosmetic or a rare false alarm.
 | QA-025 | high | S6 (S2 model) | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | LIVE: LoRA quotes weak exposure ("Watched tutorials about Angular") as MET; validator gives an **unreviewed** MET (val-029/r4, val-017/r1) |
 | QA-026 | medium | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | LIVE: MET kept when min_years is required but no duration is stated ("Applied Node.js in various side projects over time"; val-009/r3, val-016/r1) |
 | QA-027 | medium | S2 (model) | open | LIVE: LoRA answers MET despite years below the minimum 4x on val (base: 2x); caught by the validator (UNCERTAIN), never final MET |
-| QA-028 | high | S2 | open | LIVE: LoRA explanations are 4 fixed templates that never name the requirement; the final report shows them as the explanation |
+| QA-028 | high | S2 | **fixed** S2 for the pipeline report (`971f6fd`); frozen MatchReport still carries the model text | LIVE: LoRA explanations are 4 fixed templates that never name the requirement; the final report shows them as the explanation |
 | QA-029 | medium | S4 (S2 model) | open, finding | LIVE: counterfactual flip on the real LoRA: "At least 5 years of Python" is MISSING with header "Name: Emily Johnson", MET with "Name: Mohamed Ben Salah" (flagged correctly) |
 | QA-030 | medium | S5 | **fixed** `matcher/judge.py` | my QA-017 line context kept bullet markers ("– "), which flipped the pretrained Judge FAIL→PASS on the val weak-exposure false-METs |
-| QA-024 | medium | S2 (test) | open | existing `test_api_backend_success_timeout_and_unavailable` is flaky (2 failures in ~15 full runs) |
+| QA-024 | medium | S2 (test) | **fixed** S2 (threaded stub); verified by S5: 0/20 isolated, 0/5 full-suite runs | existing `test_api_backend_success_timeout_and_unavailable` is flaky (2 failures in ~15 full runs) |
 
 QA-006 and QA-021 were merged into QA-002 and dropped as negligible (12-character ref id collisions in the prompt).
-Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-002/003/004/005/007/008/009/012/022/025/026 fixed (their xfail markers were removed by the orchestrator; the tests stay as regression tests). QA-010/011 closed by decision. Open defects by owner: **S6 0**, **S2 6** (1 flaky existing test, 1 model-level), **S1 2**, **S4 2**. S5's 3 are fixed. Mock after merge: 153 passed, 15 xfailed, 2 skipped (RAG checkout absent here).
+Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-002/003/004/005/007/008/009/012/022/025/026 fixed (their xfail markers were removed by the orchestrator; the tests stay as regression tests). QA-010/011 closed by decision. Open defects by owner: **S6 0**, **S2 1** (QA-027 model-level; QA-013/015/024/028 and the S2 part of QA-014 fixed), **S1 +1** (QA-014 residual: knowledge `version`), **S1 2**, **S4 2**. S5's 3 are fixed. Mock after merge: 153 passed, 15 xfailed, 2 skipped (RAG checkout absent here).
 
 ## Details
 
@@ -150,7 +150,8 @@ Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-
 - Fix: in `match`, add `fallback_model_used`/`backend_unavailable` with review, and record the per-result call
   under `backend["calls"]`. Patch: `patches/S2-backend-provenance.patch`.
 
-### QA-014 · high · S2: provenance
+### QA-014 · high · S2: provenance · S2 PART FIXED, residual S1
+- After S2's merge, the factory backend records `base_revision`, `adapter_id` and `adapter_revision` (checked live in run 20261016T115840Z). The only remaining problem is `knowledge_version is empty`: the providers (`matcher/knowledge.py`, S1) have no `version` attribute. Patch: the `version` part of `patches/S1-knowledge.patch`. The strict xfail markers stay until S1 lands.
 - Tests: `test_qa_contracts.py::test_production_provenance_is_complete` (factory backend, HTTP stubbed),
   `tests/live/test_live_contracts.py::test_provenance_is_complete`.
 - Root cause: `backends_api.py:36` hard-codes `"adapter_id": None` (the LoRA primary claims to have no adapter).
@@ -298,7 +299,8 @@ the locked test split before quoting them as results. The replay also caught a b
 the clause splitter cut "Node.js" at the dot. It is fixed and pinned by
 `test_qa_grounding.py::test_years_with_a_dotted_skill_name_still_count`.
 
-### QA-028 · high · S2: template explanations in the final report
+### QA-028 · high · S2: template explanations in the final report · FIXED (pipeline report)
+- Fix (S2, merged): the pipeline row's `explanation` is a grounded text built from requirement + decision + verified quotes; the model text moves to `explanation_model`. The frozen `MatchReport` (v1) still carries the model text, so consumers of the MatchReport path still see templates. Live counterpart re-enabled as a normal test (targets pipeline rows).
 - Tests: `test_qa_val_regressions.py::test_final_report_explanations_are_requirement_specific_and_grounded` (mock
   replay of the LoRA's template), and `tests/live/test_live_contracts.py::test_live_explanations_name_the_requirement`.
 - Evidence: the LoRA uses 4 distinct explanations over 202 answers, e.g. 88x "The CV directly shows this requirement;
@@ -355,6 +357,17 @@ an accuracy estimate (that is the 202-requirement val run).
   "2019 - present") moves with an irrelevant header line. That is instability, a fairness risk whatever the cause.
 - Action: S4 includes this item in the LoRA counterfactual audit flip rates. S2 adds year-range examples to the
   LoRA's training data (same root cause as QA-027). The Bias Auditor worked as designed (FLAGGED, review).
+
+## Window 1: LIVE rerun after the S2 merge
+
+Run dir: `docs/qa/live_runs/20261016T115840Z/` (code `4f50045`, same models and setup as the first live run). **20 passed, 1 xfailed (QA-014
+residual: knowledge version), 1 skipped (Judge).**
+- QA-028 now passes live. The pipeline row explanations are grounded, e.g. r1: 'Requirement "At least 5 years of
+  Python": MISSING. The CV text "Senior Python developer at a fintech scale-up (2019 - present)." shows it is not
+  met.'
+- That r1 example also shows the remaining model error. The LoRA still reads 2019 - present as below 5 years
+  (QA-027), and the grounded explanation faithfully reports the model's decision; the validator flags the result.
+- The counterfactual flip on r1 (name signal, QA-029) reproduces: FLAGGED again, with the same attribute.
 
 ## Baseline note
 
