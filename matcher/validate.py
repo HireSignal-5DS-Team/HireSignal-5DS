@@ -59,6 +59,7 @@ _WEAK = re.compile(r"\b(tutorials?|watched|read (?:about|up on)|interested in|on
                    r"exposure to|introductory|attended (?:a |an )?(?:talk|webinar|workshop)|"
                    r"(?:preparing|studying) for|plans? to|enrolled in)\b", re.I)  # S2 cues: 0/305 train MET quotes
 _CLAUSE = re.compile(r"[,;\n]|\.(?=\s|$)")
+_SENT = re.compile(r"[;\n]|\.(?=\s|$)")
 
 
 def _has_term(text, terms):
@@ -78,7 +79,12 @@ def evidence_years(quotes, ref_year=2026, terms=None):
     """Largest of: explicit 'N years' mentions, merged span of year ranges. None if nothing parseable.
     With terms, only clauses naming a term count (years of another skill or another section do not)."""
     if terms:
-        quotes = [c for q in quotes for c in _CLAUSE.split(q) if _has_term(c, terms)]
+        scoped = []
+        for sent in (x for q in quotes for x in _SENT.split(q) if _has_term(x, terms)):
+            own = [c for c in _CLAUSE.split(sent) if _has_term(c, terms)]
+            # QA-031: "Over the last 6 years, Airflow was ..." puts the duration in another clause of the same sentence
+            scoped += own if any(_YEARS.search(c) or _RANGE.search(c) for c in own) else [sent]
+        quotes = scoped
     explicit = [float(m) for q in quotes for m in _YEARS.findall(q)]
     ranges = sorted((int(a), ref_year if not b.isdigit() else int(b)) for q in quotes for a, b in _RANGE.findall(q))
     merged = []

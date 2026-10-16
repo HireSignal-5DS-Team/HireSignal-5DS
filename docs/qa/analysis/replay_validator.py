@@ -36,7 +36,7 @@ def main():
     ap.add_argument("runs", nargs="+")
     a = ap.parse_args()
     esco = {e["doc_id"]: e for e in map(json.loads, open(a.esco))}
-    cases = {c["case_id"]: c for c in map(json.loads, open(ROOT / "benchmark/data/val.jsonl"))}
+    cases = {c["case_id"]: c for s in ("val", "test") for c in map(json.loads, open(ROOT / f"benchmark/data/{s}.jsonl"))}
     print("| run | macro-F1 | false-MET | unreviewed false-MET | MET reviewed | review rate | changed vs saved |")
     print("|---|---|---|---|---|---|---|")
     for run in a.runs:
