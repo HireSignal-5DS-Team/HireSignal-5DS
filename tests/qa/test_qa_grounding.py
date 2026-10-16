@@ -6,7 +6,7 @@ answer; whether the live models produce such answers is measured by tests/live/.
 Convention: a test that is not marked `defect(...)` pins behaviour that is correct today.
 """
 import pytest
-from _qa_support import CVX, check, defect, ref, req
+from _qa_support import CVX, check, ref, req
 
 from matcher import CV
 from matcher.validate import find_span
@@ -150,11 +150,12 @@ def test_contradicted_claim_refuted_by_its_own_quote_is_flagged():
     assert r.needs_human_review  # the quote shows 6 >= 3 years: the 'contradiction' is wrong
 
 
-@defect("QA-011", "S6")
-def test_no_evidence_nice_to_have_goes_to_review():
-    """ORCHESTRATION §3.3: missing evidence is UNCERTAIN + review, never NOT_MET by inference."""
+def test_no_evidence_nice_to_have_is_missing_without_review_flag():
+    """Decision on QA-011 (ORCHESTRATION §3.3): MISSING = not documented. Reviewed for must requirements only;
+    a nice-to-have MISSING carries no review flag (and never rejects anyone)."""
     r = check("MISSING", "not_documented", [], CVX, KAFKA.model_copy(update={"kind": "nice"}))
-    assert r.decision == "UNCERTAIN" or r.needs_human_review
+    assert r.decision == "MISSING" and r.basis == "not_documented"
+    assert not r.needs_human_review and r.review_reasons == []
 
 
 def test_no_evidence_must_have_goes_to_review():

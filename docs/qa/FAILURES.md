@@ -28,8 +28,8 @@ cosmetic or a rare false alarm.
 | QA-007 | high | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | prompt injection: CV can close the `>>>` CV block; an injected line naming the skill is accepted as unreviewed MET evidence |
 | QA-008 | medium | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | a 1-character quote ("e") is accepted as verified evidence (non-skill categories: no review) |
 | QA-009 | high | S6 (S1) | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | a related ESCO concept in the RAG context (Docker for Kubernetes) widens the accepted terms and launders an absent skill |
-| QA-010 | medium | S6 (contract) | open, decision | `rag_refs` = every retrieved ref, not the cited ones; `ModelAnswer` has no citation field |
-| QA-011 | medium | S6 (contract) | open, decision | nice-to-have MISSING/not_documented gets no review; §3.3 says missing evidence is UNCERTAIN + review |
+| QA-010 | medium | S6 (contract) | **closed by decision** (ORCHESTRATION §3.3: rag_refs = knowledge shown) | `rag_refs` = every retrieved ref, not the cited ones; `ModelAnswer` has no citation field |
+| QA-011 | medium | S6 (contract) | **closed by decision** (§3.3: nice-to-have MISSING unflagged) | nice-to-have MISSING/not_documented gets no review; §3.3 says missing evidence is UNCERTAIN + review |
 | QA-012 | low | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | MISSING/contradicted refuted by its own quote (6 ≥ 3 years) is not flagged |
 | QA-013 | high | S2 | open | `Matcher.match` (MatchReport path) does not route fallback answers to review; no per-result model |
 | QA-014 | high | S2 | open | provenance incomplete: no base revision, LoRA primary reports `adapter_id: null`, no adapter sha, no knowledge version |
@@ -49,7 +49,7 @@ cosmetic or a rare false alarm.
 | QA-024 | medium | S2 (test) | open | existing `test_api_backend_success_timeout_and_unavailable` is flaky (2 failures in ~15 full runs) |
 
 QA-006 and QA-021 were merged into QA-002 and dropped as negligible (12-character ref id collisions in the prompt).
-Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-002/003/004/005/007/008/009/012/022/025/026 fixed (their xfail markers were removed by the orchestrator; the tests stay as regression tests). Open defects by owner: **S6 2** (QA-010, QA-011: contract decisions), **S2 6** (1 flaky existing test, 1 model-level), **S1 2**, **S4 2**. S5's 3 are fixed. Mock after merge: 153 passed, 15 xfailed, 2 skipped (RAG checkout absent here).
+Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-002/003/004/005/007/008/009/012/022/025/026 fixed (their xfail markers were removed by the orchestrator; the tests stay as regression tests). QA-010/011 closed by decision. Open defects by owner: **S6 0**, **S2 6** (1 flaky existing test, 1 model-level), **S1 2**, **S4 2**. S5's 3 are fixed. Mock after merge: 153 passed, 15 xfailed, 2 skipped (RAG checkout absent here).
 
 ## Details
 
@@ -118,7 +118,8 @@ Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-
 - Fix: a ref contributes its names only if it is the required concept (one of its names equals a skill term or
   occurs in the requirement text). Patch: S6. S1 should also filter related-but-different concepts (QA-023).
 
-### QA-010 · medium · S6 (contract decision)
+### QA-010 · medium · S6 (contract decision) · CLOSED BY DECISION
+- Decision (ORCHESTRATION §3.3, 2026-10-16): `rag_refs` are the source_ids of the knowledge shown to the model after gating, and nothing else. No citation field in v1. Reports say "knowledge shown". Pinned by `test_qa_citations_injection.py::test_rag_refs_are_exactly_the_knowledge_shown_to_the_model` and `::test_report_does_not_call_shown_knowledge_cited_sources`. Original analysis below.
 - Test: `test_qa_citations_injection.py::test_rag_refs_are_the_cited_refs_not_every_retrieved_ref`.
 - Root cause: `validate.py:122` `rag_refs=[r.source_id for r in refs]`. `ModelAnswer` (frozen) has no field for the
   model to cite, so "cited" cannot be known, and irrelevant refs show up as citations in the report.
@@ -127,7 +128,8 @@ Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-
   "citations" to "knowledge shown" and rely on QA-023 filtering. Recommended: (2) now, (1) only if the LoRA is
   retrained. No patch until decided.
 
-### QA-011 · medium · S6 (contract decision)
+### QA-011 · medium · S6 (contract decision) · CLOSED BY DECISION
+- Decision (§3.3): MISSING means not documented. It is reviewed for must requirements only; a nice-to-have MISSING carries no flag. Pinned by `test_qa_grounding.py::test_no_evidence_nice_to_have_is_missing_without_review_flag` and `::test_no_evidence_must_have_goes_to_review`. Original analysis below.
 - Test: `test_qa_grounding.py::test_no_evidence_nice_to_have_goes_to_review`.
 - Root cause: `validate.py:114` flags only must-haves for `not_documented`. ORCHESTRATION §3.3 says "missing evidence
   is UNCERTAIN + review, never NOT_MET by inference", but `schemas.py` defines MISSING/not_documented as a valid
