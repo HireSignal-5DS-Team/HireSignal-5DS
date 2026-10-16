@@ -1,0 +1,102 @@
+{
+  "label": "SMOKE",
+  "setup": {
+    "dtype": "float32",
+    "device": "cpu",
+    "max_new_tokens": 48
+  },
+  "n_paired": 20,
+  "rows": [
+    {
+      "arm": "base",
+      "run_id": "smoke-base",
+      "label": "SMOKE",
+      "n": 20,
+      "macro_f1": 0.06060606060606061,
+      "false_met_rate": 0.0,
+      "json_valid": 0.0,
+      "uncertain_rate": 1.0,
+      "latency_p50": 0.0873,
+      "latency_p95": 0.1005,
+      "peak_rss_mb": 962.4,
+      "peak_vram_mb": null,
+      "config_hash": "7a42698dd4e7",
+      "soft_prompt_sha256": null
+    },
+    {
+      "arm": "lora",
+      "run_id": "smoke-lora",
+      "label": "SMOKE",
+      "n": 20,
+      "macro_f1": 0.06060606060606061,
+      "false_met_rate": 0.0,
+      "json_valid": 0.0,
+      "uncertain_rate": 1.0,
+      "latency_p50": 0.109,
+      "latency_p95": 0.1196,
+      "peak_rss_mb": 962.4,
+      "peak_vram_mb": null,
+      "config_hash": "b214560de36d",
+      "soft_prompt_sha256": null,
+      "mcnemar_vs_base": {
+        "a_only": 0,
+        "b_only": 0,
+        "p": 1.0
+      },
+      "delta_macro_f1_ci95": {
+        "lo": 0.0,
+        "hi": 0.0
+      }
+    },
+    {
+      "arm": "soft_prompt",
+      "run_id": "smoke-soft_prompt",
+      "label": "SMOKE",
+      "n": 20,
+      "macro_f1": 0.06060606060606061,
+      "false_met_rate": 0.0,
+      "json_valid": 0.0,
+      "uncertain_rate": 1.0,
+      "latency_p50": 0.0854,
+      "latency_p95": 0.1145,
+      "peak_rss_mb": 962.4,
+      "peak_vram_mb": null,
+      "config_hash": "fea7a31c27db",
+      "soft_prompt_sha256": "4f0a2c994f3f",
+      "mcnemar_vs_base": {
+        "a_only": 0,
+        "b_only": 0,
+        "p": 1.0
+      },
+      "delta_macro_f1_ci95": {
+        "lo": 0.0,
+        "hi": 0.0
+      }
+    },
+    {
+      "arm": "lora_soft_prompt",
+      "run_id": "smoke-lora_soft_prompt",
+      "label": "SMOKE",
+      "n": 20,
+      "macro_f1": 0.06060606060606061,
+      "false_met_rate": 0.0,
+      "json_valid": 0.0,
+      "uncertain_rate": 1.0,
+      "latency_p50": 0.0914,
+      "latency_p95": 0.1277,
+      "peak_rss_mb": 962.4,
+      "peak_vram_mb": null,
+      "config_hash": "97e190582176",
+      "soft_prompt_sha256": "a1a7fb07cde8",
+      "mcnemar_vs_base": {
+        "a_only": 0,
+        "b_only": 0,
+        "p": 1.0
+      },
+      "delta_macro_f1_ci95": {
+        "lo": 0.0,
+        "hi": 0.0
+      }
+    }
+  ]
+}

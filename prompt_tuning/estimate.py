@@ -85,6 +85,60 @@ def estimate(cfg, train_tok, val_tok, gflops, epochs, n_virtual, gpu_tflops):
     return out
 
 
+def probe(n_layers, dtype, seq, n_virtual, decode_tokens=8, train_reps=2, grad_ckpt=True):
+    """Time real fwd+bwd / prefill / decode steps of a RANDOM full-width Qwen3-4B slice with n_layers layers
+    (same hidden, MLP, heads, vocab and tied embeddings; random weights). Per-layer slope x 36 layers + intercept
+    extrapolates to the 4B model without loading it."""
+    import torch
+    from transformers import Qwen3Config, Qwen3ForCausalLM
+
+    from .model import new_soft_prompt
+
+    c = QWEN3_4B
+    cfg = Qwen3Config(vocab_size=c["vocab_size"], hidden_size=c["hidden_size"], intermediate_size=c["intermediate_size"],
+                      num_hidden_layers=n_layers, num_attention_heads=c["num_attention_heads"],
+                      num_key_value_heads=c["num_key_value_heads"], head_dim=c["head_dim"], tie_word_embeddings=True)
+    torch.manual_seed(0)
+    m = Qwen3ForCausalLM(cfg).to(getattr(torch, dtype)).eval()
+    for p in m.parameters():
+        p.requires_grad_(False)
+    if grad_ckpt:
+        m.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
+        m.config.use_cache = False
+    pm = new_soft_prompt(m, None, None, n_virtual, init="random")
+    pm.train()
+    ids = torch.randint(0, c["vocab_size"], (1, seq))
+    labels = ids.clone()
+    labels[:, : seq - 47] = -100
+    times = []
+    for _ in range(train_reps + 1):  # first rep is warm-up
+        t0 = time.perf_counter()
+        pm(input_ids=ids, attention_mask=torch.ones_like(ids), labels=labels).loss.float().backward()
+        times.append(time.perf_counter() - t0)
+    train_s = min(times[1:])
+    m.config.use_cache = True
+    m.gradient_checkpointing_disable()
+    pm.eval()
+    with torch.no_grad():
+        pm.generate(input_ids=ids[:, :16], max_new_tokens=2, do_sample=False)  # warm-up
+        t0 = time.perf_counter()
+        pm.generate(input_ids=ids, attention_mask=torch.ones_like(ids), max_new_tokens=1, do_sample=False)
+        prefill_s = time.perf_counter() - t0
+        t0 = time.perf_counter()
+        pm.generate(input_ids=ids, attention_mask=torch.ones_like(ids), max_new_tokens=1 + decode_tokens,
+                    min_new_tokens=1 + decode_tokens, do_sample=False)
+        decode_s = (time.perf_counter() - t0 - prefill_s) / decode_tokens
+    return {"layers": n_layers, "train_step_s": train_s, "prefill_s": prefill_s, "decode_s_per_token": decode_s}
+
+
+def extrapolate(p1, p3, layers=36):
+    out = {}
+    for k in ("train_step_s", "prefill_s", "decode_s_per_token"):
+        slope = (p3[k] - p1[k]) / (p3["layers"] - p1["layers"])
+        out[k] = p1[k] + slope * (layers - p1["layers"])
+    return out
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--tokenizer", required=True, help="dir or HF id of the Qwen3-4B-Instruct-2507 tokenizer (no weights)")
@@ -92,6 +146,8 @@ def main(argv=None):
     ap.add_argument("--epochs", type=float, default=3.0)
     ap.add_argument("--num-virtual-tokens", type=int, default=32)
     ap.add_argument("--out", default=str(RESULTS / "feasibility.json"))
+    ap.add_argument("--probe", action="store_true", help="also time a random full-width 1- and 3-layer slice")
+    ap.add_argument("--probe-dtypes", default="bfloat16,float32")
     a = ap.parse_args(argv)
     import torch
     from transformers import AutoTokenizer
@@ -105,6 +161,20 @@ def main(argv=None):
                         "train_tokens": tr, "val_tokens": va},
            "estimate": estimate(QWEN3_4B, tr, va, best, a.epochs, a.num_virtual_tokens, gpu_tflops=(8, 20)),
            "label": "ESTIMATE (measured GEMM rate + token counts; no 4B model was loaded)"}
+    if a.probe:
+        seq, gen = round(tr["mean"]) - a.num_virtual_tokens, 60
+        res["probe"] = {"label": "MEASURED on random full-width Qwen3 slices, EXTRAPOLATED to 36 layers",
+                        "seq_tokens": seq, "num_virtual_tokens": a.num_virtual_tokens, "grad_ckpt": True}
+        for dt in a.probe_dtypes.split(","):
+            p1, p3 = probe(1, dt, seq, a.num_virtual_tokens), probe(3, dt, seq, a.num_virtual_tokens)
+            x = extrapolate(p1, p3)
+            ex_per_run = tr["n"] * a.epochs
+            res["probe"][dt] = {
+                "slices": [p1, p3], "extrapolated_36_layers": x,
+                "train_hours": round(x["train_step_s"] * ex_per_run / 3600, 1),
+                "val_loss_hours": round(x["prefill_s"] * va["n"] * a.epochs / 3600, 1),
+                "eval_s_per_requirement": round(x["prefill_s"] + gen * x["decode_s_per_token"], 1),
+                "eval_hours_per_arm_202": round((x["prefill_s"] + gen * x["decode_s_per_token"]) * 202 / 3600, 1)}
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     Path(a.out).write_text(json.dumps(res, indent=2) + "\n")
     print(json.dumps(res, indent=2))

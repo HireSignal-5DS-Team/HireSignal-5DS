@@ -9,7 +9,7 @@ import json
 import re
 from pathlib import Path
 
-from .common import BASE, BASE_REVISION, LORA, LORA_REVISION, RESULTS, ROOT, SFT_TRAIN, read_jsonl
+from .common import BASE, BASE_REVISION, LORA, LORA_REVISION, RESULTS, ROOT, SFT_TRAIN, SFT_VAL, read_jsonl
 
 QWEN3_LINEAR = {"q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"}
 
@@ -47,6 +47,10 @@ def main(argv=None):
     with_flag = tok.apply_chat_template(ex["messages"][:2], tokenize=False, add_generation_prompt=True, enable_thinking=False)
     without = tok.apply_chat_template(ex["messages"][:2], tokenize=False, add_generation_prompt=True)
     base_tok_json = get(BASE, BASE_REVISION, "tokenizer.json")
+    ltok = AutoTokenizer.from_pretrained(LORA, revision=LORA_REVISION)
+    texts = [tok.apply_chat_template(e["messages"], tokenize=False) for e in read_jsonl(SFT_TRAIN) + read_jsonl(SFT_VAL)]
+    same_ids = sum(tok(t, add_special_tokens=False)["input_ids"] == ltok(t, add_special_tokens=False)["input_ids"]
+                   for t in texts)
     checks = {
         "base_architecture": base_cfg["architectures"],
         "hidden_size": base_cfg["hidden_size"], "tie_word_embeddings": base_cfg["tie_word_embeddings"],
@@ -55,7 +59,11 @@ def main(argv=None):
         "rendered_prompt_has_think_block": "<think>" in with_flag,
         "generation_prompt_suffix": with_flag[-len("<|im_start|>assistant\n"):] == "<|im_start|>assistant\n",
         "eos_token": tok.eos_token, "pad_token": tok.pad_token,
-        "lora_tokenizer_json_identical_to_base": fhash(ltok_json) == fhash(base_tok_json),
+        "lora_tokenizer_json_byte_identical_to_base": fhash(ltok_json) == fhash(base_tok_json),
+        "lora_tokenizer_same_vocab": ltok.get_vocab() == tok.get_vocab(),
+        "lora_tokenizer_same_special_tokens": [ltok.eos_token, ltok.pad_token] == [tok.eos_token, tok.pad_token],
+        "lora_tokenizer_identical_ids_on_sft_train_and_val": f"{same_ids}/{len(texts)}",
+        "_identical_ids_all": same_ids == len(texts),
         "lora_chat_template_identical_to_base": ltemplate.strip() == (tok.chat_template or "").strip(),
         "lora_peft_type": lcfg["peft_type"], "lora_base": lcfg["base_model_name_or_path"],
         "lora_base_matches": lcfg["base_model_name_or_path"] == BASE,
@@ -70,7 +78,8 @@ def main(argv=None):
         "peft_pin_matches_lora": pinned("peft") == lcfg.get("peft_version"),
     }
     ok = all(checks[k] for k in ("chat_template_enable_thinking_flag_is_noop", "generation_prompt_suffix",
-                                 "lora_tokenizer_json_identical_to_base", "lora_base_matches",
+                                 "lora_tokenizer_same_vocab", "lora_tokenizer_same_special_tokens",
+                                 "_identical_ids_all", "lora_base_matches",
                                  "lora_revision_matches_pinned_base", "lora_targets_are_qwen3_linears",
                                  "peft_pin_matches_lora")) and not checks["rendered_prompt_has_think_block"]
     res = {"base": BASE, "base_revision": BASE_REVISION, "lora": LORA, "lora_revision": LORA_REVISION,

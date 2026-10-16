@@ -108,15 +108,29 @@ def check_soft_prompt_backbone(path, backbone):
     return side
 
 
-def load_soft_prompt(model, path, backbone, trainable_=False):
+def load_soft_prompt(model, path, backbone):
+    """Inference: attach a saved soft prompt to its frozen backbone."""
     from peft import PeftConfig, PeftModel
 
     cfg = PeftConfig.from_pretrained(path)
     if cfg.peft_type.value != "PROMPT_TUNING":
         raise ValueError(f"{path} is {cfg.peft_type}, not a prompt tuning adapter")
     check_soft_prompt_backbone(path, backbone)
-    pm = PeftModel.from_pretrained(model, path, is_trainable=trainable_)
-    return pm.eval() if not trainable_ else pm
+    return PeftModel.from_pretrained(model, path).eval()
+
+
+def resume_soft_prompt(model, path, backbone):
+    """Training resume: PEFT refuses to load a prompt learning adapter as trainable, so build a fresh trainable soft
+    prompt of the same shape and copy the saved float32 tensor into it."""
+    from safetensors.torch import load_file
+
+    check_soft_prompt_backbone(path, backbone)
+    t = load_file(str(Path(path) / "soft_prompt.safetensors"))["soft_prompt"]
+    pm = new_soft_prompt(model, None, None, t.shape[0], init="random")
+    w = pm.prompt_encoder["default"].embedding.weight
+    with __import__("torch").no_grad():
+        w.copy_(t.to(w.dtype))
+    return pm
 
 
 def build_arm(arm, base, revision=None, lora=None, lora_revision=None, soft_prompt=None, dtype="float32",

@@ -1,0 +1,208 @@
+{
+  "n": 20,
+  "final": {
+    "macro_f1": 0.06060606060606061,
+    "accuracy": 0.1,
+    "false_met_rate": 0.0,
+    "per_class": {
+      "MET": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 12
+      },
+      "MISSING": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "UNCERTAIN": {
+        "precision": 0.1,
+        "recall": 1.0,
+        "f1": 0.18181818181818182,
+        "support": 2
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 12,
+        "null": 0
+      },
+      "MISSING": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 6,
+        "null": 0
+      },
+      "UNCERTAIN": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 2,
+        "null": 0
+      }
+    }
+  },
+  "raw_model": {
+    "macro_f1": 0.0,
+    "accuracy": 0.0,
+    "false_met_rate": 0.0,
+    "per_class": {
+      "MET": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 12
+      },
+      "MISSING": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "UNCERTAIN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 12
+      },
+      "MISSING": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 6
+      },
+      "UNCERTAIN": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 2
+      }
+    }
+  },
+  "json_schema_validity": 0.0,
+  "basis_accuracy": 0.1,
+  "evidence": {
+    "raw_quotes": 0,
+    "raw_quote_validity": null,
+    "raw_met_with_verified_quote": null,
+    "attribution_vs_gold": null,
+    "attribution_n": 0
+  },
+  "validator_changed_decision": 1.0,
+  "needs_human_review_rate": 1.0,
+  "per_tag_accuracy": {
+    "ambiguous_duration": {
+      "n": 1,
+      "accuracy": 1.0
+    },
+    "certification": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "contradictory_evidence": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "direct_match": {
+      "n": 3,
+      "accuracy": 0.0
+    },
+    "distractor_details": {
+      "n": 13,
+      "accuracy": 0.07692307692307693
+    },
+    "equivalent_skill_alias": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "implicit_project_evidence": {
+      "n": 1,
+      "accuracy": 0.0
+    },
+    "insufficient_experience": {
+      "n": 1,
+      "accuracy": 0.0
+    },
+    "language": {
+      "n": 1,
+      "accuracy": 0.0
+    },
+    "missing_evidence": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "multi_requirement": {
+      "n": 6,
+      "accuracy": 0.16666666666666666
+    },
+    "negation_trap": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "partial_evidence": {
+      "n": 1,
+      "accuracy": 1.0
+    },
+    "rag_suggests_absent_skill": {
+      "n": 1,
+      "accuracy": 0.0
+    },
+    "sufficient_experience": {
+      "n": 5,
+      "accuracy": 0.0
+    }
+  },
+  "latency_s": {
+    "mean": 0.09241,
+    "p50": 0.0914,
+    "p95": 0.1277,
+    "max": 0.1335
+  },
+  "label": "SMOKE",
+  "arm": "lora_soft_prompt",
+  "config_hash": "97e1905821764d2c717f6db494d7693b70d1a6c1bdd7a52d59d8c7d012a03599",
+  "peak_rss_mb": 962.4,
+  "peak_vram_mb": null,
+  "load_seconds": 0.05,
+  "backend": {
+    "backend": "transformers_softprompt",
+    "experimental": true,
+    "is_model": true,
+    "arm": "lora_soft_prompt",
+    "model_id": "/home/user/HireSignal-5DS/prompt_tuning/runs/smoke/tiny_qwen3",
+    "revision": null,
+    "adapter_id": "/home/user/HireSignal-5DS/prompt_tuning/runs/smoke/tiny_lora",
+    "adapter_revision": null,
+    "lora_merged": true,
+    "soft_prompt": {
+      "path": "/home/user/HireSignal-5DS/prompt_tuning/runs/smoke/runs/sp-lora/soft_prompt",
+      "shape": [
+        8,
+        64
+      ],
+      "sha256": "a1a7fb07cde8a9591fe4956578ea070eaf85715ed177cd8d0980a2f721434113",
+      "train_config_hash": "f360adff649f783bb59fadb68fe8720e28f97962d2b9dd3a78c6d099bb92afce"
+    },
+    "dtype": "float32",
+    "device": "cpu",
+    "n_params": 202112,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 48
+    },
+    "load_seconds": 0.05,
+    "prompt_version": "p1"
+  },
+  "uncertain_rate": 1.0
+}

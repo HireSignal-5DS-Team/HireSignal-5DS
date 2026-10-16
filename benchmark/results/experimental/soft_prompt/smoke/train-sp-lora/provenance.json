@@ -1,0 +1,33 @@
+{
+  "backbone": {
+    "base": "/home/user/HireSignal-5DS/prompt_tuning/runs/smoke/tiny_qwen3",
+    "base_revision": null,
+    "lora": "/home/user/HireSignal-5DS/prompt_tuning/runs/smoke/tiny_lora",
+    "lora_revision": null,
+    "lora_merged": true,
+    "base_commit_hash": null,
+    "dtype": "float32",
+    "n_params": 202112,
+    "lora_r": 4,
+    "lora_alpha": 8
+  },
+  "trainable_params": 512,
+  "num_virtual_tokens": 8,
+  "init": "text",
+  "init_text": "Check one job requirement against one anonymized CV. Answer with one JSON object: decision MET, MISSING or UNCERTAIN, basis, verbatim CV evidence, short explanation. Never invent evidence.",
+  "train_file": "/home/user/HireSignal-5DS/finetune/data/sft_train.jsonl",
+  "train_sha256": "1d944d2ffb067754a13aaac4379f6f84a7e945b997ca77e7304b1f01a30e296e",
+  "val_file": "/home/user/HireSignal-5DS/finetune/data/sft_val.jsonl",
+  "val_sha256": "3ff377fd11ef97881f639447305ef9a24cbde5b923b9d1e72b951c0bbd94ff52",
+  "manifest_sha256": "7ec449813a65d6c08e54e717c3815af741e4142bfcf2d959ff1f73f4d3f59e7d",
+  "n_train_examples": 681,
+  "n_skipped_too_long": 0,
+  "optimizer_steps": 6,
+  "selected": {
+    "on": "val",
+    "val_loss": 7.58756881064557,
+    "step": 6
+  },
+  "train_config_hash": "f360adff649f783bb59fadb68fe8720e28f97962d2b9dd3a78c6d099bb92afce",
+  "soft_prompt_sha256": "a1a7fb07cde8a9591fe4956578ea070eaf85715ed177cd8d0980a2f721434113"
+}

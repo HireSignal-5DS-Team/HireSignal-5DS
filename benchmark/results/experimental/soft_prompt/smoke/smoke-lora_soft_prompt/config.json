@@ -1,0 +1,52 @@
+{
+  "arm": "lora_soft_prompt",
+  "backend": {
+    "backend": "transformers_softprompt",
+    "experimental": true,
+    "is_model": true,
+    "arm": "lora_soft_prompt",
+    "model_id": "/home/user/HireSignal-5DS/prompt_tuning/runs/smoke/tiny_qwen3",
+    "revision": null,
+    "adapter_id": "/home/user/HireSignal-5DS/prompt_tuning/runs/smoke/tiny_lora",
+    "adapter_revision": null,
+    "lora_merged": true,
+    "soft_prompt": {
+      "path": "/home/user/HireSignal-5DS/prompt_tuning/runs/smoke/runs/sp-lora/soft_prompt",
+      "shape": [
+        8,
+        64
+      ],
+      "sha256": "a1a7fb07cde8a9591fe4956578ea070eaf85715ed177cd8d0980a2f721434113",
+      "train_config_hash": "f360adff649f783bb59fadb68fe8720e28f97962d2b9dd3a78c6d099bb92afce"
+    },
+    "dtype": "float32",
+    "device": "cpu",
+    "n_params": 202112,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 48
+    },
+    "load_seconds": 0.05,
+    "prompt_version": "p1"
+  },
+  "prompts_sha256": "b49708f2722cee38fefeafdbae72c4362d92d0c43b8947be10b29851a4d8ef82",
+  "gold_sha256": "37c60915f2db377f22c5b08f4b9e708e05cd9363709e9c39815d8e8d93545198",
+  "limit": 20,
+  "max_new_tokens": 48,
+  "dtype": "float32",
+  "device": "cpu",
+  "label": "SMOKE",
+  "config_hash": "97e1905821764d2c717f6db494d7693b70d1a6c1bdd7a52d59d8c7d012a03599",
+  "git_commit": "c3fea129f57657e0c54f28a1a7131c96ab5d241a",
+  "hardware": {
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "python": "3.13.16",
+    "cpu_count": 4,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "peft": "0.21.2",
+    "cuda": false,
+    "gpu": null
+  },
+  "command": "python -m prompt_tuning.evaluate --arm lora_soft_prompt --run-id smoke-lora_soft_prompt --base /home/user/HireSignal-5DS/prompt_tuning/runs/smoke/tiny_qwen3 --revision  --device cpu --label SMOKE --limit 20 --out-root /home/user/HireSignal-5DS/benchmark/results/experimental/soft_prompt/smoke --max-new-tokens 48 --lora /home/user/HireSignal-5DS/prompt_tuning/runs/smoke/tiny_lora --soft-prompt /home/user/HireSignal-5DS/prompt_tuning/runs/smoke/runs/sp-lora/soft_prompt"
+}

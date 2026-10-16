@@ -1,0 +1,200 @@
+{
+  "n": 20,
+  "final": {
+    "macro_f1": 0.06060606060606061,
+    "accuracy": 0.1,
+    "false_met_rate": 0.0,
+    "per_class": {
+      "MET": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 12
+      },
+      "MISSING": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "UNCERTAIN": {
+        "precision": 0.1,
+        "recall": 1.0,
+        "f1": 0.18181818181818182,
+        "support": 2
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 12,
+        "null": 0
+      },
+      "MISSING": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 6,
+        "null": 0
+      },
+      "UNCERTAIN": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 2,
+        "null": 0
+      }
+    }
+  },
+  "raw_model": {
+    "macro_f1": 0.0,
+    "accuracy": 0.0,
+    "false_met_rate": 0.0,
+    "per_class": {
+      "MET": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 12
+      },
+      "MISSING": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6
+      },
+      "UNCERTAIN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 2
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 12
+      },
+      "MISSING": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 6
+      },
+      "UNCERTAIN": {
+        "MET": 0,
+        "MISSING": 0,
+        "UNCERTAIN": 0,
+        "null": 2
+      }
+    }
+  },
+  "json_schema_validity": 0.0,
+  "basis_accuracy": 0.1,
+  "evidence": {
+    "raw_quotes": 0,
+    "raw_quote_validity": null,
+    "raw_met_with_verified_quote": null,
+    "attribution_vs_gold": null,
+    "attribution_n": 0
+  },
+  "validator_changed_decision": 1.0,
+  "needs_human_review_rate": 1.0,
+  "per_tag_accuracy": {
+    "ambiguous_duration": {
+      "n": 1,
+      "accuracy": 1.0
+    },
+    "certification": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "contradictory_evidence": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "direct_match": {
+      "n": 3,
+      "accuracy": 0.0
+    },
+    "distractor_details": {
+      "n": 13,
+      "accuracy": 0.07692307692307693
+    },
+    "equivalent_skill_alias": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "implicit_project_evidence": {
+      "n": 1,
+      "accuracy": 0.0
+    },
+    "insufficient_experience": {
+      "n": 1,
+      "accuracy": 0.0
+    },
+    "language": {
+      "n": 1,
+      "accuracy": 0.0
+    },
+    "missing_evidence": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "multi_requirement": {
+      "n": 6,
+      "accuracy": 0.16666666666666666
+    },
+    "negation_trap": {
+      "n": 2,
+      "accuracy": 0.0
+    },
+    "partial_evidence": {
+      "n": 1,
+      "accuracy": 1.0
+    },
+    "rag_suggests_absent_skill": {
+      "n": 1,
+      "accuracy": 0.0
+    },
+    "sufficient_experience": {
+      "n": 5,
+      "accuracy": 0.0
+    }
+  },
+  "latency_s": {
+    "mean": 0.08641499999999999,
+    "p50": 0.0873,
+    "p95": 0.1005,
+    "max": 0.1186
+  },
+  "label": "SMOKE",
+  "arm": "base",
+  "config_hash": "7a42698dd4e7dfd2fb2464234b13500c176493469fb46c9fa454b2b462c7e849",
+  "peak_rss_mb": 962.4,
+  "peak_vram_mb": null,
+  "load_seconds": 0.04,
+  "backend": {
+    "backend": "transformers_softprompt",
+    "experimental": true,
+    "is_model": true,
+    "arm": "base",
+    "model_id": "/home/user/HireSignal-5DS/prompt_tuning/runs/smoke/tiny_qwen3",
+    "revision": null,
+    "adapter_id": null,
+    "adapter_revision": null,
+    "lora_merged": false,
+    "soft_prompt": null,
+    "dtype": "float32",
+    "device": "cpu",
+    "n_params": 202112,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 48
+    },
+    "load_seconds": 0.04,
+    "prompt_version": "p1"
+  },
+  "uncertain_rate": 1.0
+}

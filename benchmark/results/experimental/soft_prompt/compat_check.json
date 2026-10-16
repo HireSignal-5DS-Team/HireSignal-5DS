@@ -1,0 +1,60 @@
+{
+  "base": "Qwen/Qwen3-4B-Instruct-2507",
+  "base_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "lora": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora",
+  "lora_revision": "0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a",
+  "all_ok": true,
+  "checks": {
+    "base_architecture": [
+      "Qwen3ForCausalLM"
+    ],
+    "hidden_size": 2560,
+    "tie_word_embeddings": true,
+    "soft_prompt_shape_for_32_tokens": [
+      32,
+      2560
+    ],
+    "chat_template_enable_thinking_flag_is_noop": true,
+    "rendered_prompt_has_think_block": false,
+    "generation_prompt_suffix": true,
+    "eos_token": "<|im_end|>",
+    "pad_token": "<|endoftext|>",
+    "lora_tokenizer_json_byte_identical_to_base": false,
+    "lora_tokenizer_same_vocab": true,
+    "lora_tokenizer_same_special_tokens": true,
+    "lora_tokenizer_identical_ids_on_sft_train_and_val": "883/883",
+    "_identical_ids_all": true,
+    "lora_chat_template_identical_to_base": true,
+    "lora_peft_type": "LORA",
+    "lora_base": "Qwen/Qwen3-4B-Instruct-2507",
+    "lora_base_matches": true,
+    "lora_trained_on_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "lora_revision_matches_pinned_base": true,
+    "lora_targets_are_qwen3_linears": true,
+    "lora_r_alpha": [
+      16,
+      32
+    ],
+    "lora_peft_version": "0.21.2",
+    "lora_training_quantisation": "4-bit NF4 + fp16 compute (QLoRA, Kaggle), per the adapter README",
+    "lora_training_data": {
+      "sha256": "f8eff94a9671a70b907522ef3e312b6cd75ed18b4c47ddb8b2fb822d2ebd121a",
+      "examples": 777,
+      "by_source": {
+        "bench_synthetic_sft": 505,
+        "contractnli": 272
+      },
+      "decisions": {
+        "MISSING": 335,
+        "MET": 359,
+        "UNCERTAIN": 83
+      }
+    },
+    "peft_pinned": "0.21.2",
+    "peft_installed": "0.21.2",
+    "transformers_pinned": "5.19.0",
+    "transformers_installed": "5.19.0",
+    "peft_pin_matches_lora": true
+  },
+  "label": "MEASURED (metadata + tokenizer only; no weights loaded)"
+}

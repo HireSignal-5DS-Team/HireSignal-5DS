@@ -46,7 +46,8 @@ class SoftPromptBackend:
                                       max_new_tokens=self.max_new_tokens, do_sample=False,
                                       pad_token_id=self.tok.pad_token_id or self.tok.eos_token_id)
         n_in = ids["input_ids"].shape[1]
-        new = out[0, n_in:] if out.shape[1] > n_in else out[0]  # PEFT returns input ids + new ids (no virtual ids)
+        assert torch.equal(out[0, :n_in], ids["input_ids"][0]), "expected generate() to echo the input ids"
+        new = out[0, n_in:]  # PEFT prompt tuning returns input ids + new ids (virtual tokens are not echoed)
         self.last_call = {"prompt_tokens": n_in, "completion_tokens": int(new.shape[0])}
         return self.tok.decode(new, skip_special_tokens=True)
 

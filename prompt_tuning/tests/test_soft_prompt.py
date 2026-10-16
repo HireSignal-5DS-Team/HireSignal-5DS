@@ -26,7 +26,8 @@ def env(tmp_path_factory):
     root = tmp_path_factory.mktemp("sp")
     build_sft.build("train", FIX, root / "sft", knowledge="none", test_file=root / "absent.jsonl")
     sft = root / "sft/sft_train.jsonl"
-    rows = build_sft.read_jsonl(sft)
+    rows = [{**r, "case_id": "train-" + r["case_id"]} for r in build_sft.read_jsonl(sft)]  # fixture ids are fx-*
+    sft.write_text("".join(json.dumps(r) + "\n" for r in rows))
     val = root / "sft/sft_valset.jsonl"  # val-like rows for the val-loss path (case_ids renamed to val-*)
     val.write_text("".join(json.dumps({**r, "case_id": "val-" + r["case_id"]}) + "\n" for r in rows))
     manifest = root / "manifest.json"
@@ -121,17 +122,40 @@ def test_shapes_only_soft_prompt_trains(env):
 # ---------------------------------------------------------------- training, resume, selection
 
 
+def interrupt(run, at_step):
+    """Simulate a crash right after checkpoint `at_step`: drop later checkpoints, outputs and log lines."""
+    import shutil
+
+    for ck in run.glob("checkpoint-*"):
+        if int(ck.name.split("-")[1]) > at_step:
+            shutil.rmtree(ck)
+    for d in ("soft_prompt", "best"):
+        shutil.rmtree(run / d, ignore_errors=True)
+    for f in ("provenance.json", "README.md", "environment.json"):
+        (run / f).unlink(missing_ok=True)
+    keep = [x for x in log(run) if x["step"] <= at_step]
+    (run / "loss_log.jsonl").write_text("".join(json.dumps(x) + "\n" for x in keep))
+
+
 def test_train_resume_select(env):
+    import shutil
+
     from safetensors.torch import load_file
 
     w0 = {n: p.clone() for n, p in M.load_backbone(env["base"])[0].named_parameters()}
-    run = train_soft_prompt.train(targs(env, "base-run", 2))
-    first = [r for r in log(run) if "loss" in r]
-    assert [r["step"] for r in first] == [1, 2] and all(r["loss"] == r["loss"] for r in first)
-    assert (run / "checkpoint-2/state.json").exists()
-    train_soft_prompt.train(targs(env, "base-run", 4))  # resume, not restart
+    straight = train_soft_prompt.train(targs(env, "straight", 4, "--keep-checkpoints", "10"))
+    recs = [r for r in log(straight) if "loss" in r]
+    assert [r["step"] for r in recs] == [1, 2, 3, 4] and all(r["loss"] == r["loss"] for r in recs)
+    run = straight.parent / "base-run"
+    shutil.copytree(straight, run)
+    (run / "training_args.json").write_text((straight / "training_args.json").read_text().replace("straight", "base-run"))
+    interrupt(run, 2)
+    train_soft_prompt.train(targs(env, "base-run", 4, "--keep-checkpoints", "10"))  # resumes at 2, not restart
     assert [r["step"] for r in log(run) if "loss" in r] == [1, 2, 3, 4]
-    train_soft_prompt.train(targs(env, "base-run", 4))  # finished: no-op
+    sp = lambda r, d="soft_prompt": load_file(str(r / d / "soft_prompt.safetensors"))["soft_prompt"]  # noqa: E731
+    assert torch.equal(sp(run, "checkpoint-4/soft_prompt"), sp(straight, "checkpoint-4/soft_prompt"))  # exact
+    assert [r["loss"] for r in log(run) if "loss" in r] == [r["loss"] for r in recs]
+    train_soft_prompt.train(targs(env, "base-run", 4, "--keep-checkpoints", "10"))  # finished: no-op
     assert [r["step"] for r in log(run) if "loss" in r] == [1, 2, 3, 4]
     vals = [r for r in log(run) if "val_loss" in r]
     assert [r["step"] for r in vals] == [2, 4]
@@ -140,15 +164,40 @@ def test_train_resume_select(env):
     assert prov["selected"]["step"] == best["step"] and prov["selected"]["on"] == "val"
     side = json.loads((run / "soft_prompt" / M.SIDE_FILE).read_text())
     assert side["selected_step"] == best["step"] and side["train_config_hash"] == prov["train_config_hash"]
-    t = load_file(str(run / "soft_prompt/soft_prompt.safetensors"))["soft_prompt"]
+    t = sp(run)
     assert t.shape == (4, 64) and prov["soft_prompt_sha256"] == common.sha256(run / "soft_prompt/soft_prompt.safetensors")
+    assert torch.equal(t, sp(run, f"checkpoint-{best['step']}/soft_prompt"))
     # the backbone on disk is untouched; the soft prompt moved away from its init
     bb, tok, _ = M.load_backbone(env["base"])
     assert all(torch.equal(w0[n], p) for n, p in bb.named_parameters())
     init = M.new_soft_prompt(bb, env["base"], None, 4, "text", common.INIT_TEXT)
     assert not torch.allclose(M.soft_prompt_tensor(init).float(), t)
-    with pytest.raises(SystemExit, match="different args"):
-        train_soft_prompt.train(targs(env, "base-run", 4, "--lr", "1e-3"))
+    for change in (["--lr", "1e-3"], []):  # any result-affecting change, including the step budget, is refused
+        steps = 4 if change else 6
+        with pytest.raises(SystemExit, match="different args"):
+            train_soft_prompt.train(targs(env, "base-run", steps, "--keep-checkpoints", "10", *change))
+
+
+@pytest.mark.parametrize("ckpt", [False, True])
+def test_gradient_reaches_soft_prompt_only(env, ckpt):
+    bb, tok, _ = M.load_backbone(env["base"])
+    if ckpt:  # what the Kaggle run uses for the 4B model
+        bb.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant": False})
+        bb.config.use_cache = False
+    pm = M.new_soft_prompt(bb, env["base"], None, 4, "text", common.INIT_TEXT).train()
+    ids = tok("hello world, this is a CV", return_tensors="pt")
+    pm(**ids, labels=ids["input_ids"]).loss.backward()
+    g = M.trainable(pm)[0].grad
+    assert g is not None and g.abs().sum() > 0
+    assert all(p.grad is None for n, p in pm.named_parameters() if "prompt_encoder" not in n)
+
+
+def test_fp16_gradscaler_path(env):
+    run = train_soft_prompt.train(targs(env, "fp16", 2, "--dtype", "float16", "--grad-ckpt"))
+    recs = [r for r in log(run) if "loss" in r]
+    assert len(recs) == 2 and all(r["loss"] == r["loss"] for r in recs)
+    side = json.loads((run / "soft_prompt" / M.SIDE_FILE).read_text())
+    assert side["backbone"]["dtype"] == "float16" and side["shape"] == [4, 64]
 
 
 def test_cpu_guard(env, monkeypatch):

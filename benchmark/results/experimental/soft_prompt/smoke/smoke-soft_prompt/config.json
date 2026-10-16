@@ -1,0 +1,52 @@
+{
+  "arm": "soft_prompt",
+  "backend": {
+    "backend": "transformers_softprompt",
+    "experimental": true,
+    "is_model": true,
+    "arm": "soft_prompt",
+    "model_id": "/home/user/HireSignal-5DS/prompt_tuning/runs/smoke/tiny_qwen3",
+    "revision": null,
+    "adapter_id": null,
+    "adapter_revision": null,
+    "lora_merged": false,
+    "soft_prompt": {
+      "path": "/home/user/HireSignal-5DS/prompt_tuning/runs/smoke/runs/sp-base/soft_prompt",
+      "shape": [
+        8,
+        64
+      ],
+      "sha256": "4f0a2c994f3f8582182876a97e1fc78baa11f7f9b4762774e32f005b2963aed2",
+      "train_config_hash": "b0df0d5377f404f930d0964753f9936ad59686e1451c30e7095169ba97471b43"
+    },
+    "dtype": "float32",
+    "device": "cpu",
+    "n_params": 202112,
+    "decoding": {
+      "do_sample": false,
+      "max_new_tokens": 48
+    },
+    "load_seconds": 0.04,
+    "prompt_version": "p1"
+  },
+  "prompts_sha256": "b49708f2722cee38fefeafdbae72c4362d92d0c43b8947be10b29851a4d8ef82",
+  "gold_sha256": "37c60915f2db377f22c5b08f4b9e708e05cd9363709e9c39815d8e8d93545198",
+  "limit": 20,
+  "max_new_tokens": 48,
+  "dtype": "float32",
+  "device": "cpu",
+  "label": "SMOKE",
+  "config_hash": "fea7a31c27db292f9080ec927342371cefe2b4cfdf7c959620b4a90f6a3dea9f",
+  "git_commit": "c3fea129f57657e0c54f28a1a7131c96ab5d241a",
+  "hardware": {
+    "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "python": "3.13.16",
+    "cpu_count": 4,
+    "torch": "2.14.1+cu130",
+    "transformers": "5.19.0",
+    "peft": "0.21.2",
+    "cuda": false,
+    "gpu": null
+  },
+  "command": "python -m prompt_tuning.evaluate --arm soft_prompt --run-id smoke-soft_prompt --base /home/user/HireSignal-5DS/prompt_tuning/runs/smoke/tiny_qwen3 --revision  --device cpu --label SMOKE --limit 20 --out-root /home/user/HireSignal-5DS/benchmark/results/experimental/soft_prompt/smoke --max-new-tokens 48 --soft-prompt /home/user/HireSignal-5DS/prompt_tuning/runs/smoke/runs/sp-base/soft_prompt"
+}

@@ -1,0 +1,115 @@
+{
+  "measured": {
+    "gemm_gflops_2048": {
+      "float32": 425.6,
+      "bfloat16": 2360.0
+    },
+    "cpu_count": 4,
+    "torch": "2.14.1+cu130",
+    "train_tokens": {
+      "n": 681,
+      "mean": 485.62701908957416,
+      "max": 686,
+      "total": 330712
+    },
+    "val_tokens": {
+      "n": 202,
+      "mean": 480.41584158415844,
+      "max": 686,
+      "total": 97044
+    }
+  },
+  "estimate": {
+    "params": {
+      "total": 4022468096,
+      "non_embedding": 3633509376,
+      "embedding": 388956160
+    },
+    "soft_prompt_params": 81920,
+    "train_tokens_per_epoch": 330712,
+    "epochs": 3.0,
+    "train_pflop": 26.29,
+    "cpu_train_hours_at_measured_gemm_rate": 3.1,
+    "gpu_train_hours": {
+      "8_tflops_effective": 0.91,
+      "20_tflops_effective": 0.37
+    },
+    "memory_gb": {
+      "weights_fp32": 16.1,
+      "weights_bf16_fp16": 8.0,
+      "logits_fp32_one_example_max_len": 0.42,
+      "activations_16bit_no_ckpt": 4.86,
+      "activations_16bit_grad_ckpt": 0.126
+    },
+    "cpu_eval": {
+      "prefill_s_per_req": 1.6,
+      "gen_tokens_assumed": 60,
+      "note": "decode is memory-bandwidth bound: bf16 weights 8 GB per token; at ~10-20 GB/s effective on 4 vCPU that is ~0.4-0.8 s/token",
+      "s_per_req_range": [
+        26,
+        50
+      ],
+      "hours_per_arm_202_range": [
+        1.4,
+        2.8
+      ]
+    }
+  },
+  "label": "ESTIMATE (measured GEMM rate + token counts; no 4B model was loaded)",
+  "probe": {
+    "label": "MEASURED on random full-width Qwen3 slices, EXTRAPOLATED to 36 layers",
+    "seq_tokens": 454,
+    "num_virtual_tokens": 32,
+    "grad_ckpt": true,
+    "bfloat16": {
+      "slices": [
+        {
+          "layers": 1,
+          "train_step_s": 1.0146250299999338,
+          "prefill_s": 0.11215312200010885,
+          "decode_s_per_token": 0.04157073687497359
+        },
+        {
+          "layers": 3,
+          "train_step_s": 1.7305056539998986,
+          "prefill_s": 0.3703695730000618,
+          "decode_s_per_token": 0.048319421125029294
+        }
+      ],
+      "extrapolated_36_layers": {
+        "train_step_s": 13.54253594999932,
+        "prefill_s": 4.630941014499285,
+        "decode_s_per_token": 0.1596727112509484
+      },
+      "train_hours": 7.7,
+      "val_loss_hours": 0.8,
+      "eval_s_per_requirement": 14.2,
+      "eval_hours_per_arm_202": 0.8
+    },
+    "float32": {
+      "slices": [
+        {
+          "layers": 1,
+          "train_step_s": 3.440479681999932,
+          "prefill_s": 0.25679333100015356,
+          "decode_s_per_token": 0.05100038274997587
+        },
+        {
+          "layers": 3,
+          "train_step_s": 4.649943382999936,
+          "prefill_s": 0.8425488749999204,
+          "decode_s_per_token": 0.06119601712498479
+        }
+      ],
+      "extrapolated_36_layers": {
+        "train_step_s": 24.606094449500006,
+        "prefill_s": 10.507515350996073,
+        "decode_s_per_token": 0.229423984312632
+      },
+      "train_hours": 14.0,
+      "val_loss_hours": 1.8,
+      "eval_s_per_requirement": 24.3,
+      "eval_hours_per_arm_202": 1.4
+    }
+  }
+}

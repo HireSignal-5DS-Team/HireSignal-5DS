@@ -28,8 +28,8 @@ from .common import (BASE, BASE_REVISION, INIT_TEXT, MANIFEST, ROOT, SFT_TRAIN, 
                      config_hash, held_out_ids, read_jsonl, sha256)
 
 CPU_PARAM_LIMIT = 200_000_000  # above this, CPU training is refused unless --allow-large-cpu (see README feasibility)
-NON_RESULT_ARGS = ("max_steps", "epochs", "device", "save_every", "keep_checkpoints", "log_every", "eval_every",
-                   "allow_large_cpu", "eval_limit")
+NON_RESULT_ARGS = ("device", "save_every", "keep_checkpoints", "log_every",
+                   "allow_large_cpu")  # eval_every/eval_limit change which step is selected
 
 
 def parse_args(argv=None):
@@ -163,7 +163,7 @@ def train(a):
         backbone.config.use_cache = False
     ck = latest_checkpoint(run_dir)
     if ck:
-        pm = M.load_soft_prompt(backbone, ck / "soft_prompt", prov, trainable_=True)
+        pm = M.resume_soft_prompt(backbone, ck / "soft_prompt", prov)
     else:
         pm = M.new_soft_prompt(backbone, a.base, a.revision, a.num_virtual_tokens, a.init, a.init_text)
     pm.prompt_encoder["default"].float()
@@ -264,7 +264,6 @@ def finalize(run_dir, a, pm, tok, prov, n_train, n_ex, n_skip, total, best, env)
     side.update(train_config_hash=chash, selected_step=best["step"] if a.select_on == "val" else total,
                 selected_val_loss=best["val_loss"] if a.select_on == "val" else None, select_on=a.select_on)
     (out / M.SIDE_FILE).write_text(json.dumps(side, indent=2) + "\n")
-    tok.save_pretrained(out)
     provenance = {"backbone": prov, "trainable_params": n_train, "num_virtual_tokens": a.num_virtual_tokens,
                   "init": a.init, "init_text": a.init_text if a.init == "text" else None,
                   "train_file": str(Path(a.train).resolve()), "train_sha256": sha256(a.train),
