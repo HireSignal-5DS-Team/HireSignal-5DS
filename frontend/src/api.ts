@@ -1,6 +1,7 @@
 import type {
   AnalysisInput,
   Campaign,
+  CandidateRecord,
   CV,
   Job,
   MatchReport,
@@ -235,13 +236,62 @@ export class ApiClient {
 export interface AnalysisAdapter {
   run(input: AnalysisInput): Promise<Campaign>;
 }
+
+// POST /api/v1/match expects {cv, job} and returns a PipelineOutput (contract 1.1.0).
+// Its match_report field is a MatchReport (schema 1.0.0) — exactly what the UI consumes.
+interface PipelineOutput {
+  contract_version: string;
+  cv_id: string;
+  job_id: string;
+  match_report: MatchReport;
+  _meta?: Record<string, unknown>;
+}
+
+function isMatchReport(x: unknown): x is MatchReport {
+  if (!x || typeof x !== "object") return false;
+  const o = x as Record<string, unknown>;
+  return typeof o.schema_version === "string" && Array.isArray(o.results) && typeof o.summary === "object";
+}
+
+async function realMatch(
+  client: ApiClient,
+  cv: CV,
+  job: Job,
+): Promise<MatchReport> {
+  const data = (await client.match({ cv, job })) as PipelineOutput;
+  if (!data || typeof data !== "object" || !isMatchReport(data.match_report))
+    throw new ApiError("Backend response is missing a valid match_report.");
+  return data.match_report;
+}
+
 export const adapter: AnalysisAdapter = {
   async run(input) {
     validateInput(input);
-    if (mode === "REAL")
-      throw new ApiError(
-        "REAL matching is not enabled: the FastAPI request/response contract and CV parser are not yet supplied. Use MOCK mode for the demonstration.",
-      );
-    return demoCampaign(input, crypto.randomUUID(), new Date().toISOString());
+    if (mode !== "REAL")
+      return demoCampaign(input, crypto.randomUUID(), new Date().toISOString());
+    const client = new ApiClient(undefined, 600_000);
+    const job = demoJob(input);
+    const id = crypto.randomUUID();
+    const candidates: CandidateRecord[] = [];
+    // Serialize: concurrency = 1 on the backend (RTX 4050, 6 GB VRAM).
+    for (let i = 0; i < input.candidates.length; i++) {
+      const cv = input.candidates[i];
+      const report = await realMatch(client, cv, job);
+      candidates.push({
+        id: `${id}-${i + 1}`,
+        label: `Candidate ${String(i + 1).padStart(2, "0")}`,
+        cv,
+        report,
+        review: "Pending review",
+        note: "",
+      });
+    }
+    return {
+      id,
+      title: input.title,
+      created: new Date().toISOString(),
+      mode: "REAL",
+      candidates,
+    };
   },
 };
