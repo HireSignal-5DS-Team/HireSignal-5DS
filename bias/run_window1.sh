@@ -30,7 +30,8 @@ N=${N:-30}
 R=benchmark/results/bias
 
 up() { curl -sf --max-time 5 "$1/models" >/dev/null || { echo "server $1 is not up; start it first (docs/AGENT_PIPELINE.md)"; exit 1; }; }
-pid_of() { pgrep -f "llama_cpp.server.*--port $1" | head -1 || true; }
+# the server's own python process (a wrapper shell's command line can contain the same text)
+pid_of() { for p in $(pgrep -f "llama_cpp.server.*--port $1"); do readlink "/proc/$p/exe" | grep -q python && { echo "$p"; return; }; done; true; }
 run() { flock "$LOCK" nice -n 5 "$@"; }
 
 STEPS=${*:-reviewer lora-new base-new}

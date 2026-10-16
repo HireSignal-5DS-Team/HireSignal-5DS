@@ -67,10 +67,21 @@ class RssSampler(threading.Thread):
     def run(self):
         while not self.stop.is_set():
             try:
-                self.peak = max(self.peak, self.proc.memory_info().rss)
+                self.peak = max(self.peak, self.proc.memory_info().rss, hwm(self.proc.pid))
             except Exception:
                 return
             time.sleep(0.5)
+
+
+def hwm(pid):
+    """Kernel peak-RSS high-water mark (VmHWM, bytes) of a process since it started; 0 if unavailable."""
+    try:
+        for line in Path(f"/proc/{pid}/status").read_text().splitlines():
+            if line.startswith("VmHWM:"):
+                return int(line.split()[1]) * 1024
+    except OSError:
+        pass
+    return 0
 
 
 def load(splits):
@@ -181,7 +192,9 @@ def main():
         m["reviewer_ops"] = {"calls": len(rows), "json_valid_rate": sum(r["reviewer_error"] is None for r in rows) / len(rows),
                              "errors": sum(r["reviewer_error"] is not None for r in rows),
                              "latency_p50_s": pct(lat, 50), "latency_p95_s": pct(lat, 95),
-                             "server_peak_rss_mb": round(sampler.peak / 2**20, 1) if sampler else None}
+                             "server_peak_rss_mb": round(sampler.peak / 2**20, 1) if sampler else None,
+                             "server_rss_note": "peak RSS of the whole llama.cpp server process (VmHWM since server start), "
+                                                "shared with the base Matcher fallback; not a reviewer-only cost"}
     (out / "metrics.json").write_text(json.dumps(m, indent=2) + "\n")
     brief = {s: {v: {k: (round(x[k], 3) if isinstance(x[k], float) else x[k]) for k in ("precision", "recall", "false_positive_rate")}
                  for v, x in sc.items()} for s, sc in m["scores"].items()}
