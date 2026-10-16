@@ -27,7 +27,7 @@ until QA-002 and QA-004 are fixed.
 
 Since the gated RAG became the default (`HS_RAG=gated`), the mock gate needs `bm25s` (in `requirements-matcher.txt`).
 The S1 suites (`rag/tests`) also need `fastapi`, `qdrant-client`, `httpx` and `uvicorn` (`rag/requirements.txt`).
-Without them they fail with `ModuleNotFoundError`, which is a container issue, not a code failure. On `9ad6c0f`-era
+Without them they fail with `ModuleNotFoundError`, which is a container issue, not a code failure. At `31da8f5`
 code with those installed: `pytest matcher benchmark/tests tests/qa` gives 210 passed, 5 skipped;
 `pytest rag/tests bias rag_opt finetune/tests` gives 81 passed, 8 skipped.
 
