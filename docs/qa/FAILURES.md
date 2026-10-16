@@ -293,7 +293,7 @@ the clause splitter cut "Node.js" at the dot. It is fixed and pinned by
 ## Window 1: LIVE QA suite on the real models
 
 Run dir: `docs/qa/live_runs/20261016T111644Z/`. It contains `provenance.json`, `results.jsonl` (raw model text plus
-the validated row per probe), `pytest.txt` and both server logs. Setup:
+the validated row per probe), and `pytest.txt`. The server logs stay in the container (`*.log` is gitignored). Setup:
 - Servers, llama.cpp via llama-cpp-python 0.3.16, all in this container under `flock /home/user/hs_queue.lock`,
   one job:
   - `:8081` `Qwen/Qwen3-4B-Instruct-2507+lora`: Q4_K_M GGUF `unsloth/...-GGUF@a06e946b` + adapter
