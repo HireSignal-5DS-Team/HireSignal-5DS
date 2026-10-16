@@ -133,7 +133,7 @@ Artefacts: `reporter/results/val_replay/` (`metrics.json`, `sections.jsonl` with
 | rejection reasons (all attempts) | decision_claim 31, count_mismatch 26, json_key_in_text 25, term_not_in_facts 24, quote_not_in_facts 6, review_claim_mismatch 6, number_not_in_facts 3 |
 | latency per section p50 / p95 | 4.2 s / 13.4 s (note 3.1 / 6.7 s; summary 11.4 / 14.5 s; includes the retry when there is one) |
 | latency per report p50 / p95 / mean | 30.3 s / 37.8 s / 29.7 s (4–6 requirements; all sections, in sequence) |
-| model load | 0.4 s (warm page cache) |
+| model load | 0.9 s (file in page cache) |
 | peak RSS (whole process: pipeline + model) | 1276 MB (1159 MB right after model load) |
 | unsupported claims in the 25 final reports (independent audit) | **0** |
 | injected hallucinations rejected | 527/530 (99.4 %): new skill 106/106, new number 106/106, new employer 106/106, verdict 106/106, flipped decision 103/106 |
