@@ -4,7 +4,7 @@ Live counterpart (does the real Matcher obey an injected instruction?) is tests/
 """
 import re
 
-from _qa_support import CVX, JOB, Scripted, ans, check, defect, ref, req
+from _qa_support import CVX, JOB, Scripted, ans, check, ref, req
 
 from matcher import CV
 from matcher.backends import Task
@@ -105,12 +105,30 @@ def test_rag_provider_drops_zero_score_hits():
     assert [r.source_id for r in rk.lookup(req("r4", "Apache Kafka", skill_terms=["Apache Kafka"]))] == ["kafka"]
 
 
-@defect("QA-023", "S1")
-def test_rag_provider_filters_lexically_irrelevant_hits():
-    # BM25 matched only the shared token "Apache": Maven is not Kafka and must not be passed to the Matcher
+def test_legacy_bm25_provider_keeps_generic_token_hits_wont_fix():
+    """QA-023 is won't-fix in the legacy RagKnowledge (kept unchanged so the old BM25 arm stays reproducible).
+    This pins that legacy behaviour; the production default is tested below."""
     rk = _rag([(_chunk("kafka", "Apache Kafka", "Apache Kafka. Stream processing."), 7.1),
                (_chunk("maven", "Apache Maven", "Apache Maven. Also known as: Maven. Build tool."), 0.9)])
-    assert [r.source_id for r in rk.lookup(req("r4", "Apache Kafka", skill_terms=["Apache Kafka"]))] == ["kafka"]
+    assert [r.source_id for r in rk.lookup(req("r4", "Apache Kafka", skill_terms=["Apache Kafka"]))] == ["kafka", "maven"]
+
+
+def test_default_provider_drops_generic_token_hits():
+    """QA-023, fixed in the production provider: the factory default (HS_RAG unset -> rag.gated.v1) must not hand the
+    Matcher "Apache Maven" for an "Apache Kafka" requirement (shared generic token only), and still finds Maven."""
+    import pytest
+
+    from matcher.factory import build
+    try:
+        k = build({"HS_JUDGE": "off"}).matcher.knowledge
+    except (FileNotFoundError, ImportError) as e:  # needs rag/ data and bm25s
+        pytest.skip(f"default knowledge provider unavailable: {e}")
+    assert k.name.startswith("rag.gated")
+    kafka = k.lookup(req("r4", "Experience with Apache Kafka", skill_terms=["Apache Kafka"]))
+    assert all("maven" not in r.title.casefold() for r in kafka)
+    assert all({"apache", "kafka"} <= set(" ".join([r.title, *r.aliases]).casefold().split()) for r in kafka)
+    maven = k.lookup(req("r2", "Experience with Apache Maven", skill_terms=["Apache Maven"]))
+    assert [r.title for r in maven] == ["Apache Maven"]
 
 
 # ---- prompt injection inside the CV ------------------------------------------------------------------------------

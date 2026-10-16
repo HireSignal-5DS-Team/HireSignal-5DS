@@ -23,6 +23,14 @@ Cite that directory for any live claim. The harness was self-tested against a st
 lexical baseline (MOCK, not committed). It runs end to end and fails on the negation and years traps, as expected
 until QA-002 and QA-004 are fixed.
 
+## Environment note
+
+Since the gated RAG became the default (`HS_RAG=gated`), the mock gate needs `bm25s` (in `requirements-matcher.txt`).
+The S1 suites (`rag/tests`) also need `fastapi`, `qdrant-client`, `httpx` and `uvicorn` (`rag/requirements.txt`).
+Without them they fail with `ModuleNotFoundError`, which is a container issue, not a code failure. At `31da8f5`
+code with those installed: `pytest matcher benchmark/tests tests/qa` gives 210 passed, 5 skipped;
+`pytest rag/tests bias rag_opt finetune/tests` gives 81 passed, 8 skipped.
+
 ## Live runs
 
 - `live_runs/20261016T111644Z/`: LoRA + base on llama.cpp, validator v2, no RAG. 19 passed, 2 xfailed (QA-014, QA-028), 1 skipped (Judge). Summary in `FAILURES.md` (Window 1: LIVE QA suite).

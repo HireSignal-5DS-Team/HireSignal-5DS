@@ -20,7 +20,7 @@ cosmetic or a rare false alarm.
 
 | id | sev | owner | status | one line |
 |---|---|---|---|---|
-| QA-001 | medium | S1 | open | `FixtureKnowledge/RagKnowledge/NoKnowledge.lookup` lack the frozen `job_id=None` parameter |
+| QA-001 | medium | S1 | **fixed** S1 (merged; all providers have `job_id=None`) | `FixtureKnowledge/RagKnowledge/NoKnowledge.lookup` lack the frozen `job_id=None` parameter |
 | QA-002 | high | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | negation around or inside a quote ("Never used \| Kubernetes in production", "No experience with Kafka") passes as unreviewed MET |
 | QA-003 | high | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | term check is a raw substring: `java` in "JavaScript" suppresses the inference flag |
 | QA-004 | high | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | min_years satisfied by another skill's years ("2 years of Python, 10 years of Java") |
@@ -32,25 +32,25 @@ cosmetic or a rare false alarm.
 | QA-011 | medium | S6 (contract) | **closed by decision** (§3.3: nice-to-have MISSING unflagged) | nice-to-have MISSING/not_documented gets no review; §3.3 says missing evidence is UNCERTAIN + review |
 | QA-012 | low | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | MISSING/contradicted refuted by its own quote (6 ≥ 3 years) is not flagged |
 | QA-013 | high | S2 | **fixed** S2 (`6281fd8`/`971f6fd`, merged) | `Matcher.match` (MatchReport path) does not route fallback answers to review; no per-result model |
-| QA-014 | high | S2 → S1 | S2 part fixed (`971f6fd`); open for S1: knowledge provider `version` | provenance incomplete: no base revision, LoRA primary reports `adapter_id: null`, no adapter sha, no knowledge version |
+| QA-014 | high | S2 → S1 | **fixed** S2 + S1 (backend revisions/adapter sha; provider `version`) | provenance incomplete: no base revision, LoRA primary reports `adapter_id: null`, no adapter sha, no knowledge version |
 | QA-015 | high | S2 | **fixed** S2 (`6281fd8`/`971f6fd`, merged) | malformed server body (`[]`, `{"choices": null}`, non-string content) or a backend exception crashes the pipeline; no fallback |
-| QA-016 | high | S4 | open | counterfactual audit says PASS when the Matcher was unavailable in both variants (nothing compared) |
+| QA-016 | high | S4 | **fixed** S4 (`dbac925`, NOT_TESTED status) | counterfactual audit says PASS when the Matcher was unavailable in both variants (nothing compared) |
 | QA-017 | high | S5 | **fixed** `matcher/judge.py` | Judge saw only the bare quote, so a negation cut out of a partial quote was invisible |
 | QA-018 | medium | S5 | **fixed** `matcher/judge.py` | Judge not_documented check truncated the CV to 512 tokens; skills late in a long CV invisible |
 | QA-019 | high | S5 | **fixed** `matcher/judge.py` | an NLI exception crashed the whole pipeline |
-| QA-020 | low | S4 | open | leakage rule flags job-relevant "old" ("an old Perl codebase") when the CV has an attribute line |
+| QA-020 | low | S4 | **fixed** S4 (`dbac925`) | leakage rule flags job-relevant "old" ("an old Perl codebase") when the CV has an attribute line |
 | QA-022 | medium | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | quote stitched across sections ("Python\n\nHobbies\n- 10 years") creates years of Python |
-| QA-023 | medium | S1 | open | BM25 provider keeps hits that share only a generic token ("Apache" Maven for an "Apache Kafka" query) |
+| QA-023 | medium | S1 | **fixed in production provider (gated), won't-fix legacy** | BM25 provider keeps hits that share only a generic token ("Apache" Maven for an "Apache Kafka" query) |
 | QA-025 | high | S6 (S2 model) | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | LIVE: LoRA quotes weak exposure ("Watched tutorials about Angular") as MET; validator gives an **unreviewed** MET (val-029/r4, val-017/r1) |
 | QA-026 | medium | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | LIVE: MET kept when min_years is required but no duration is stated ("Applied Node.js in various side projects over time"; val-009/r3, val-016/r1) |
 | QA-027 | medium | S2 (model) | open | LIVE: LoRA answers MET despite years below the minimum 4x on val (base: 2x); caught by the validator (UNCERTAIN), never final MET |
 | QA-028 | high | S2 | **fixed** S2 for the pipeline report (`971f6fd`); frozen MatchReport still carries the model text | LIVE: LoRA explanations are 4 fixed templates that never name the requirement; the final report shows them as the explanation |
-| QA-029 | medium | S4 (S2 model) | open, finding | LIVE: counterfactual flip on the real LoRA: "At least 5 years of Python" is MISSING with header "Name: Emily Johnson", MET with "Name: Mohamed Ben Salah" (flagged correctly) |
+| QA-029 | medium | S4 (S2 model) | open, S4 analysis in progress (`docs/BIAS_AUDITOR.md` §5.2b, pre-registered flip analysis) | LIVE: counterfactual flip on the real LoRA: "At least 5 years of Python" is MISSING with header "Name: Emily Johnson", MET with "Name: Mohamed Ben Salah" (flagged correctly) |
 | QA-030 | medium | S5 | **fixed** `matcher/judge.py` | my QA-017 line context kept bullet markers ("– "), which flipped the pretrained Judge FAIL→PASS on the val weak-exposure false-METs |
 | QA-024 | medium | S2 (test) | **fixed** S2 (threaded stub); verified by S5: 0/20 isolated, 0/5 full-suite runs | existing `test_api_backend_success_timeout_and_unavailable` is flaky (2 failures in ~15 full runs) |
 
 QA-006 and QA-021 were merged into QA-002 and dropped as negligible (12-character ref id collisions in the prompt).
-Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-002/003/004/005/007/008/009/012/022/025/026 fixed (their xfail markers were removed by the orchestrator; the tests stay as regression tests). QA-010/011 closed by decision. Open defects by owner: **S6 0**, **S2 1** (QA-027 model-level; QA-013/015/024/028 and the S2 part of QA-014 fixed), **S1 +1** (QA-014 residual: knowledge `version`), **S1 2**, **S4 2**. S5's 3 are fixed. Mock after merge: 153 passed, 15 xfailed, 2 skipped (RAG checkout absent here).
+Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-002/003/004/005/007/008/009/012/022/025/026 fixed (their xfail markers were removed by the orchestrator; the tests stay as regression tests). QA-010/011 closed by decision. Open defects by owner (after S1/S2/S4 merges into this branch): **S2 1** (QA-027, model-level: year arithmetic in the LoRA training data), **S4 1** (QA-029, analysis in progress). Everything else is fixed, closed by decision (QA-010/011) or fixed in the production provider with legacy won't-fix (QA-023).
 
 ## Details
 
@@ -229,7 +229,10 @@ Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-
 - Test: `test_qa_grounding.py::test_quote_stitched_across_sections_does_not_create_years`. Fixed by the QA-004
   change: a clause without the term gives no years, so the result becomes `duration_not_verified`.
 
-### QA-023 · medium · S1
+### QA-023 · medium · S1 · FIXED IN PRODUCTION PROVIDER (gated), WON'T-FIX LEGACY
+- Decision (orchestrator): the factory default is now `rag.gated.v1` (`HS_RAG=gated`), which requires the label to contain every query token. Legacy `RagKnowledge` stays unchanged so the old BM25 arm stays reproducible. Tests: `test_qa_citations_injection.py::test_default_provider_drops_generic_token_hits` (factory default: Kafka gets no Maven ref, Maven is still found) and `::test_legacy_bm25_provider_keeps_generic_token_hits_wont_fix` (pins the legacy behaviour). S1's own pin: `rag/tests/test_gated_knowledge.py::test_qa023_shared_generic_token_is_not_relevance`.
+
+#### Original analysis
 - Test: `test_qa_citations_injection.py::test_rag_provider_filters_lexically_irrelevant_hits`.
 - Root cause: `RagKnowledge` keeps every hit with BM25 score > 0 (`knowledge.py:62`).
 - Fix: also require score ≥ `min_rel_score` (0.5) × the top hit's score. Patch: S1. S1 should tune the ratio on the

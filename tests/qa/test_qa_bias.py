@@ -2,7 +2,7 @@
 unbiased ones (negative controls) must stay clean. Real flip rates of the LoRA Matcher are a window-1 measurement.
 """
 import pytest
-from _qa_support import CVX, GOOD, JOB, Scripted, ans, check, defect
+from _qa_support import CVX, GOOD, JOB, Scripted, ans, check
 
 from matcher import CV
 from matcher.agent import Matcher
