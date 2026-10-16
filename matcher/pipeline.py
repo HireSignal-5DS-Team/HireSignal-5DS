@@ -10,7 +10,7 @@ CV/Job JSON (the contract in LOCAL_INTEGRATION_HANDOFF.md); a real parser must r
 Report Writer: deterministic renderer (no LLM, so no new claims); a teammate's LLM Report Writer can consume
 the same aggregated JSON.
 """
-from .agent import Matcher
+from .agent import Matcher, shown_label
 from .bias_audit import check_result, counterfactual, merge
 from .schemas import CV, Job
 
@@ -71,18 +71,19 @@ class Pipeline:
         rows = [aggregate(res, b, j) for res, b, j in zip(results, audits, judged)]
         for row, (_, info) in zip(rows, pairs):
             row["citations"] = [{"source_id": x.source_id, "source_type": x.source_type, "title": x.title, "url": x.url,
-                                 "retrieval": x.retrieval} for x in info["refs"]]
+                                 "retrieval": x.retrieval, "shown_as": shown_label(x)} for x in info["refs"]]
             call = info["call"]
-            row["matcher_call"] = {k: call.get(k) for k in ("used", "model", "latency_s", "error", "primary_error") if k in call}
-            if call.get("error"):  # every backend failed: the decision is the validator's invalid-output UNCERTAIN
-                row["review_reasons"].append("matcher:backend_unavailable")
-                row["requires_human_review"] = True
-            elif call.get("used") == "fallback":
-                row["review_reasons"].append("matcher:fallback_model_used")
+            row["matcher_call"] = {k: call.get(k) for k in ("used", "model", "latency_s", "error", "primary_error",
+                                                            "finish_reason") if k in call}
+            row["provenance"] = info["provenance"]  # the model that answered THIS requirement
+            if info["review"]:  # fallback answer, backend down, unparseable/repaired output, wrong served model
+                row["review_reasons"] = list(dict.fromkeys(row["review_reasons"] + info["review"]))
                 row["requires_human_review"] = True
         musts = [r for r in rows if r["kind"] == "must"]
+        report = self.matcher.build_report(cv, job, pairs)  # frozen MatchReport contract (validated by pydantic)
         return {"cv_id": cv.cv_id, "job_id": job.job_id, "parser": self.parser.name,
-                "backend": self.matcher.backend.info(), "knowledge": self.matcher.knowledge.name,
+                "backend": report.backend, "knowledge": self.matcher.knowledge.name,
+                "match_report": report.model_dump(mode="json"),
                 "judge": getattr(self.judge, "name", None), "requirements": rows,
                 "summary": {"MET": sum(r["final_decision"] == "MET" for r in rows),
                             "MISSING": sum(r["final_decision"] == "MISSING" for r in rows),
@@ -92,13 +93,24 @@ class Pipeline:
                             "note": "Requirement-level screening aid. No automatic rejection or hiring decision."}}
 
 
+def _who(p):
+    if not p or p.get("answered_by") is None:
+        return "no model (all Matcher endpoints failed)"
+    a = p.get("adapter")
+    return (f"{p['answered_by']} · {p.get('served_alias') or p.get('model_id')}"
+            + (f" · adapter {a['repo']}@{a['sha'][:8]}" if a else " · no adapter") + (" · MOCK" if p.get("MOCK") else ""))
+
+
 def write_report(out):
     """Report Writer (deterministic): markdown from the aggregated pipeline output. Adds no claims of its own."""
     s = out["summary"]
     lines = [f"# Matching report — CV `{out['cv_id']}` vs job `{out['job_id']}`", "",
              f"MET {s['MET']} · MISSING {s['MISSING']} · UNCERTAIN {s['UNCERTAIN']} · must-have met "
              f"{s['must_met']}/{s['must_total']} · **{s['requires_human_review']} requirement(s) need human review**", "",
-             f"_{s['note']}_", ""]
+             f"_{s['note']}_", "",
+             f"Prompt `{out['backend'].get('prompt_id')}` · knowledge `{out['backend'].get('knowledge_provider')}`"
+             + (" · **MOCK backend: not a model result**" if any((r.get("provenance") or {}).get("MOCK")
+                                                                for r in out["requirements"]) else ""), ""]
     for r in out["requirements"]:
         j = r["judge"] or {}
         lines += [f"## {r['req_id']} ({r['kind']}-have): {r['requirement_text']}",
@@ -109,6 +121,7 @@ def write_report(out):
                   f"- Bias audit: {r['bias_audit']['audit_status']}"
                   + (f" (flip on {r['bias_audit']['affected_attribute']})" if r["bias_audit"].get("counterfactual_flip") else ""),
                   f"- NLI judge: {j.get('judge_verdict', 'not run')}" + (f" (score {j['judge_score']})" if j.get("judge_score") is not None else ""),
+                  f"- Answered by: {_who(r.get('provenance') or {})}",
                   f"- Human review: {'**REQUIRED** — ' + ', '.join(r['review_reasons']) if r['requires_human_review'] else 'not required'}",
                   ""]
     return "\n".join(lines)
