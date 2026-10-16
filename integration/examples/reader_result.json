@@ -1,0 +1,16 @@
+{
+  "file_name": "cv-ex-1.pdf",
+  "file_type": "pdf",
+  "text": "Software engineer\nExperience\n- Backend developer, Acme (2019 - present): Java and Spring Boot services.\n- Built REST APIs with PostgreSQL.\nSkills: Java, Spring Boot, SQL, Docker\nLanguages: English (C1)",
+  "sections": {
+    "experience": "- Backend developer, Acme (2019 - present): Java and Spring Boot services.\n- Built REST APIs with PostgreSQL.\n"
+  },
+  "pages": 1,
+  "page_routes": [
+    "text"
+  ],
+  "layout": "single_column",
+  "ocr_confidence": null,
+  "needs_human_review": false,
+  "warnings": []
+}

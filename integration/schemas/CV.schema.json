@@ -1,0 +1,27 @@
+{
+  "additionalProperties": false,
+  "description": "Anonymized CV. `text` is the single source of truth for evidence quotes.",
+  "properties": {
+    "cv_id": {
+      "title": "Cv Id",
+      "type": "string"
+    },
+    "text": {
+      "minLength": 1,
+      "title": "Text",
+      "type": "string"
+    },
+    "structured": {
+      "additionalProperties": true,
+      "description": "optional parsed fields from the CV reader; never used as evidence",
+      "title": "Structured",
+      "type": "object"
+    }
+  },
+  "required": [
+    "cv_id",
+    "text"
+  ],
+  "title": "CV",
+  "type": "object"
+}

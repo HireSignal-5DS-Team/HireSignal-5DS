@@ -53,6 +53,8 @@ def to_markdown(rep):
          f"> **{rep.disclaimer}**", "",
          f"MET {o.counts['MET']} · MISSING {o.counts['MISSING']} · UNCERTAIN {o.counts['UNCERTAIN']} · must-have met "
          f"{o.must_met}/{o.must_total} · **{o.requires_human_review} requirement(s) need human review**", ""]
+    if o.requires_human_review:
+        L += [f"**⚠ HUMAN REVIEW REQUIRED for {o.requires_human_review} requirement(s)** (see flags below).", ""]
     if p.any_mock:
         L += ["**MOCK backend in the pipeline: decisions are not model results.**", ""]
     L += ["## Summary", "", _md(rep.executive_summary.text), "", f"_Written by: {_md(_writer(rep.executive_summary))}_", ""]
@@ -102,6 +104,8 @@ def to_html(rep):
          f"<h1>Requirement check: CV {e(o.cv_id)} vs job {e(o.job_id)}"
          + (f" ({e(o.job_title)})" if o.job_title else "") + "</h1>",
          f"<p class=disc>{e(rep.disclaimer)}</p>"]
+    if o.requires_human_review:
+        H.append(f"<p class=review>HUMAN REVIEW REQUIRED for {o.requires_human_review} requirement(s) (see flags below).</p>")
     if p.any_mock:
         H.append("<p class=mock>MOCK backend in the pipeline: decisions are not model results.</p>")
     H += ["<table><tr><th>MET</th><th>MISSING</th><th>UNCERTAIN</th><th>must-have met</th><th>need review</th></tr>",

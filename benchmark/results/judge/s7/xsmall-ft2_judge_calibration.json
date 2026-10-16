@@ -1,0 +1,7 @@
+{
+  "tau_pass": 0.3,
+  "tau_fail": 0.3,
+  "hypothesis": "v1",
+  "revision": "local:/home/user/judge_runs/xsmall-hs-v2/best#sha256:bc6f1b352c0f9e71",
+  "source": "judge/experiment.py, train-dev of lexical-rag-train (train case % 5 == 0)"
+}
