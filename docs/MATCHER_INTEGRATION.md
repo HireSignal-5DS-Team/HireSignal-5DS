@@ -113,12 +113,31 @@ are added to the validator's reasons in both the MatchReport (`review_reasons`, 
 | `matcher:fallback_model_used` | the base model answered instead of the fine-tuned primary | medium |
 | `matcher:output_repaired` | the answer needed a form repair beyond code fence / think block | medium |
 | `matcher:counterfactual_mixed_models` | live counterfactual variants were not all answered by the same model, so a flip may be a model switch | medium |
+| `matcher:met_weak_evidence` | MET whose every verified quote reads as learning, hobby or intent only (`agent.WEAK_EVIDENCE`) | high |
 
 The validator's own reasons (`matcher/validate.py`) still apply: fabricated or non-verbatim evidence, MET without
 evidence, years below the minimum, inconsistent decision/basis, UNCERTAIN, and a must-have MISSING (absence of
 evidence is not proof of absence). Bias Auditor and Judge findings are added in `matcher/pipeline.py:aggregate`.
 Citations: `rag_refs` = the `source_id`s of exactly the knowledge entries placed in the prompt (same list object).
 `citations[].shown_as` is the label the prompt shows.
+
+## 5b. Follow-ups to the LIVE LoRA val evaluation (eval branch `claude/kind-albattani-k7qlt9` @ `46d24e1`)
+
+- **Template explanations.** The LoRA writes fixed explanations that never name the requirement. The aggregator now adds
+  `explanation_grounded`, built only from the requirement text, the validated decision, the verified CV quotes and the
+  titles of the cited knowledge entries. The model's text stays in `explanation`; the report shows both. The
+  consolidated "on topic" proxy is satisfied by construction, because the text names the requirement. It is **not**
+  a quality gain. What the test checks is that every quoted string is a verified CV substring.
+- **False-MET (0.009 base -> 0.026/0.034 LoRA).** In the committed LIVE predictions, 2 of the LoRA false-METs were
+  already routed by `duration_not_verified`. The rest rest on hedged quotes ("Watched tutorials about React in spare
+  time."). `matcher:met_weak_evidence` sends such a MET to review and keeps the decision. **Val-tuned; held-out effect
+  unmeasured.** The rule was designed after seeing these val errors, so it routing 3/3 (no RAG) and 4/4 (RAG) of them is
+  in-sample. Out-of-sample false-alarm check on train gold: it fires on **0 of 305** MET requirements (0/305 quotes). The
+  held-out effect will come from the locked test split in the orchestrator's final run.
+- **Adapter `n/a` in the consolidated table.** `benchmark.run` builds `OpenAICompatBackend` without provenance. A local
+  endpoint serving a pinned alias now takes the pin (`backends_api.default_provenance`), so `info()` carries
+  `adapter_id` and `adapter_revision`. Hosted or unknown aliases get none, not a guess. The orchestrator regenerates
+  the table.
 
 ## 6. Contracts used (unchanged)
 
@@ -129,7 +148,7 @@ validated results and never change a decision; the Judge (S5) adds findings only
 
 ## 7. Tests
 
-Mock (run anywhere): `pytest matcher benchmark/tests` gives **71 passed, 6 skipped**. The skips are 2 tests that need
+Mock (run anywhere): `pytest matcher benchmark/tests` gives **75 passed, 6 skipped**. The skips are 2 tests that need
 the RAG checkout or torch, and 4 live tests. `matcher/tests/test_matcher_integration.py` runs the real
 `OpenAICompatBackend` / `FallbackBackend` / factory over HTTP against fake llama.cpp servers that mimic llama-cpp-python
 (alias echo, `/v1/models`). It covers provenance per result, the JSON-schema-file validation of the MatchReport,
