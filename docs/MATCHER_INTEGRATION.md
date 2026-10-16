@@ -170,6 +170,21 @@ The label the prompt shows for an entry is `agent.shown_label(ref)`.
   `MatchReport.backend["bias_auditor"]` records the auditor's `info()`. The default stays `rules_v1` until S6 merges S4
   and decides; S4 proposes `rules_v2`.
 
+- **S1 requests.** `HS_RAG` also accepts `gated` and `gated-qdrant` (S1's `rag.gated.v1`; `gated-qdrant` is built
+  as in `rag_opt/run_arm.py`, using the exp03 ESCO cosine threshold). Both fail loudly until S1 is merged. The default
+  stays `bm25` until S1's window-1 E2E comparison supports a change (S1's own condition). `HS_JSON_SCHEMA` = `off`
+  (default) | `fallback` | `all` sends llama.cpp `response_format {"type": "json_object", "schema": <ModelAnswer>}`
+  (the form llama-cpp-python 0.3.16 accepts; `json_schema` is rejected there). Provenance records it as
+  `constrained_decoding: json_schema:ModelAnswer@<sha12>`. Trade-off: decision and basis can only be valid labels.
+  The label is still the model's choice, but the "unparseable -> UNCERTAIN + review" safety path disappears, so it
+  stays off until measured on val. LIVE functional check on the base model, val-000 (6 requirements): the server
+  accepts it, and free and constrained decoding give the same 6 decisions, all parsed. That is not a measurement,
+  and there were no template echoes in the sample.
+- **QA-027 (model level, open).** The LoRA answers MET with fewer years than required 4 times on val (base: 2). The
+  validator catches every case (`years_below_minimum_in_evidence`, or `duration_not_verified` when no duration is
+  stated), so no such MET reaches a final decision: it becomes UNCERTAIN and is routed to review. A model-level fix
+  (training targets for year arithmetic) needs retraining and is out of scope here.
+
 ## 6. Contracts used (unchanged)
 
 Frozen files are untouched: `matcher/schemas.py`, `matcher/json_schemas/`, `matcher/validate.py`, `matcher/prompt.py`.
@@ -179,7 +194,7 @@ validated results and never change a decision; the Judge (S5) adds findings only
 
 ## 7. Tests
 
-Mock (run anywhere): `pytest matcher benchmark/tests` gives the merge gate `pytest matcher benchmark/tests tests/qa` gives **191 passed, 6 skipped, 7 xfailed**. The skips are 2 tests that need
+Mock (run anywhere): `pytest matcher benchmark/tests` gives the merge gate `pytest matcher benchmark/tests tests/qa` gives **201 passed, 6 skipped, 7 xfailed**. The skips are 2 tests that need
 the RAG checkout or torch, and 4 live tests. `matcher/tests/test_matcher_integration.py` runs the real
 `OpenAICompatBackend` / `FallbackBackend` / factory over HTTP against fake llama.cpp servers that mimic llama-cpp-python
 (alias echo, `/v1/models`). It covers provenance per result, the JSON-schema-file validation of the MatchReport,

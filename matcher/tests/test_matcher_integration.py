@@ -402,3 +402,39 @@ def test_injected_auditor_gets_requirement_text_and_reviewer_failure_is_reviewed
         assert "bias:reviewer_unavailable" in x["review_reasons"] and x["requires_human_review"]
     assert [x["final_decision"] for x in out["requirements"]] == ["MET", "MET", "MISSING", "MISSING"]  # findings only
     assert all("bias:reviewer_unavailable" in r["review_reasons"] for r in out["match_report"]["results"])
+
+
+
+# --- S1 requests: HS_RAG gated providers, optional constrained decoding (both opt-in) ---
+
+def test_hs_rag_gated_selects_s1_provider_and_fails_loudly_without_it(monkeypatch):
+    import matcher.knowledge as k
+
+    class Gated:
+        name, uses_job = "rag.gated.v1+bm25", True
+
+        def lookup(self, req, k=3, job_id=None):
+            return []
+    if hasattr(k, "GatedKnowledge"):
+        monkeypatch.delattr(k, "GatedKnowledge")
+    with pytest.raises(ImportError, match="S1"):
+        build({"HS_JUDGE": "off", "HS_RAG": "gated"})
+    monkeypatch.setattr(k, "GatedKnowledge", Gated, raising=False)
+    assert build({"HS_JUDGE": "off", "HS_RAG": "gated"}).matcher.knowledge.name == "rag.gated.v1+bm25"
+    with pytest.raises(ValueError, match="HS_RAG"):
+        build({"HS_JUDGE": "off", "HS_RAG": "typo"})
+
+
+def test_json_schema_constraint_is_opt_in_and_recorded(servers):
+    lora, base = servers([LORA_ALIAS], GOOD), servers([BASE_ALIAS], GOOD)
+    out = pipeline(lora.url, base.url).run(CVX.model_dump(), JOB.model_dump())
+    assert "response_format" not in lora.requests[0] and out["requirements"][0]["provenance"]["constrained_decoding"] is None
+    p = build({"HS_JUDGE": "off", "HS_JSON_SCHEMA": "fallback", "HS_MATCHER_URL": DEAD, "HS_FALLBACK_URL": base.url,
+               "HS_MAX_RETRIES": "0"}, knowledge=ESCO)
+    assert p.matcher.backend.primary.response_schema is None
+    x = p.run(CVX.model_dump(), JOB.model_dump())["requirements"][0]
+    rf = base.requests[-1]["response_format"]
+    assert rf["type"] == "json_object" and set(rf["schema"]["required"]) >= {"decision", "basis", "explanation"}
+    assert x["provenance"]["constrained_decoding"].startswith("json_schema:ModelAnswer@")
+    with pytest.raises(ValueError):
+        build({"HS_JUDGE": "off", "HS_JSON_SCHEMA": "yes"}, knowledge=ESCO)
