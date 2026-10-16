@@ -56,6 +56,7 @@ def test_faithful_notes_are_accepted(rid, text):
     ("r1", "MET: the CV states Python; a human reviewer must check it.", "review_claim_mismatch"),        # review
     ("r3", "MISSING: the CV does not mention Terraform; no review is needed.", "review_claim_mismatch"),
     ("r1", "MET: the evidence_quotes show Python.", "json_key_in_text"),
+    ("r4", "UNCERTAIN: the CV does not provide evidence about Docker.", "decision_claim:NOT_DOCUMENTED"),
 ])
 def test_hallucinated_notes_are_rejected(rid, text, reason):
     got, errs = validate(note(text), F[rid], "note")
@@ -90,6 +91,9 @@ def test_faithful_summary_is_accepted():
     ("Of 4 requirements, 1 is MET. We recommend an interview.", "hiring_verdict"),
     ("Of 4 requirements, 1 is MET, including Python at 9 years.", "number_not_in_facts:9"),
     ("Of 4 requirements, 1 is MET; Kubernetes and AWS are MISSING.", "term_not_in_facts:AWS"),
+    ("Of 4 requirements, all are MISSING.", "count_mismatch"),
+    ("All must-have requirements are MET.", "count_mismatch"),
+    ("All requirements need human review.", "count_mismatch"),
 ])
 def test_hallucinated_summaries_are_rejected(text, reason):
     got, errs = validate(summ(text), S, "summary")

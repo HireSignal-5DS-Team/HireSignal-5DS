@@ -56,7 +56,9 @@ CLAIM_PATTERNS = [  # (regex, claimed decision)
                 re.I), "MET"),
     (re.compile(r"\bmissing\b", re.I), "MISSING"),
     (re.compile(r"\b(?:does|do|did)\s+not\s+(?:mention|state|document|list|describe|say)|\bnot\s+(?:mentioned|documented|"
-                r"stated|listed)\b|\bno\s+(?:mention|statement|evidence)\b|\bsays\s+nothing\b", re.I), "NOT_DOCUMENTED"),
+                r"stated|listed)\b|\bno\s+(?:mention|statement|evidence)\b|\bsays\s+nothing\b|"
+                r"\b(?:does|do|did)\s+not\s+(?:provide|contain|include|show|give|offer|have)\s+(?:any\s+)?"
+                r"(?:evidence|information|proof|support)", re.I), "NOT_DOCUMENTED"),
     (re.compile(r"\b(?:uncertain|unclear|ambiguous)\b", re.I), "UNCERTAIN"),
 ]
 DECISION_WORD = re.compile(r"\b(MET|MISSING|UNCERTAIN)\b")
@@ -200,9 +202,19 @@ def _summary_errors(text, facts):
     for clause in _CLAUSE.split(text):
         toks = re.findall(r"\d+|[A-Za-z][A-Za-z-]*", clause)
         nums = [(i, _num(t)) for i, t in enumerate(toks) if _num(t) is not None]
+        low = clause.lower()
+        if not nums and re.search(r"\b(?:all|every|each)\b", low):  # "all are MET" = count equals the pool size
+            decs = [d for d, rx in _DEC_WORDS.items() if rx.search(clause)]
+            pool = [r for r in reqs if ("must" not in low or r["kind"] == "must-have")
+                    and ("nice" not in low or r["kind"] != "must-have")]
+            for d in decs:
+                if sum(r["decision"] == d for r in pool) != len(pool):
+                    errs.append(f"count_mismatch:'{clause.strip()}' but not all are {d}")
+            if "review" in low and facts["need_human_review"] != len(pool):
+                errs.append(f"count_mismatch:'{clause.strip()}' but {facts['need_human_review']} need review")
+            continue
         if not nums:
             continue
-        low = clause.lower()
         decs = [d for d, rx in _DEC_WORDS.items() if rx.search(clause)]
         if "must" in low:
             pool, scope = [r for r in reqs if r["kind"] == "must-have"], "must-have"
