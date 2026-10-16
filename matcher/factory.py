@@ -4,6 +4,7 @@ Matcher : HS_MATCHER_URL / HS_MATCHER_MODEL   primary   (default: fine-tuned LoR
           HS_FALLBACK_URL / HS_FALLBACK_MODEL fallback  (default: original Qwen3-4B server, :8080); HS_FALLBACK=off disables
           Pinned provenance (model, base revision, GGUF weights, adapter repo + sha) from config/matcher_models.json
           (HS_MODELS_CONFIG); HS_LORA_REPO / HS_LORA_SHA override the adapter actually served on the primary.
+          HS_TIMEOUT (s, default 300), HS_MAX_RETRIES (default 2) per endpoint before falling back.
 RAG     : HS_RAG = none | bm25 | qdrant (default bm25: the measured best ESCO provider is still "none" or "bm25", see
           docs; qdrant = team dense index, persisted under HIRESIGNAL_RAG_DIR/index)
 Judge   : HS_JUDGE_DIR (fine-tuned DeBERTa; if missing, the pretrained MoritzLaurer model) and HS_JUDGE_TAU
@@ -48,13 +49,14 @@ def build(env=None, knowledge=None, judge=None):
     prov_p, prov_f, cfg = model_provenance(env)
     primary = OpenAICompatBackend(base_url=env.get("HS_MATCHER_URL", cfg["primary"]["url"]),
                                   model=env.get("HS_MATCHER_MODEL", cfg["primary"]["served_alias"]),
-                                  timeout=float(env.get("HS_TIMEOUT", 300)), label="matcher-lora", provenance=prov_p)
+                                  timeout=float(env.get("HS_TIMEOUT", 300)), max_retries=int(env.get("HS_MAX_RETRIES", 2)),
+                                  label="matcher-lora", provenance=prov_p)
     backend = primary
     if env.get("HS_FALLBACK", "on") != "off":
         backend = FallbackBackend(primary, OpenAICompatBackend(
             base_url=env.get("HS_FALLBACK_URL", cfg["fallback"]["url"]),
             model=env.get("HS_FALLBACK_MODEL", cfg["fallback"]["served_alias"]), timeout=float(env.get("HS_TIMEOUT", 300)),
-            label="matcher-base-fallback", provenance=prov_f))
+            max_retries=int(env.get("HS_MAX_RETRIES", 2)), label="matcher-base-fallback", provenance=prov_f))
     if knowledge is None:
         rag = env.get("HS_RAG", "bm25")
         knowledge = {"none": NoKnowledge, "bm25": RagKnowledge, "qdrant": QdrantKnowledge}[rag]()

@@ -134,8 +134,11 @@ class FallbackBackend:
 
     @staticmethod
     def _prov(b, role):
-        p = b.provenance() if hasattr(b, "provenance") else {"model_id": getattr(b, "model", None), "adapter": None}
-        return {**p, "role": role}
+        if hasattr(b, "provenance"):
+            return {**b.provenance(), "role": role}
+        info = b.info() if hasattr(b, "info") else {}  # not an HTTP model endpoint (scripted / baseline backend)
+        return {"model_id": getattr(b, "model", None) or info.get("model_id"), "adapter": None, "role": role,
+                "MOCK": not info.get("is_model", False)}
 
     def generate(self, task):
         raw = self.primary.generate(task)
