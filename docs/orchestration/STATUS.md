@@ -43,9 +43,30 @@ Ownership check at 11:00Z: no session edited a file outside its ownership or a f
 
 No session branch has been merged into the integration branch yet.
 
+## Integration branch
+
+- `e3aa6c8`: merged `session/s5-qa-contracts` @ `a4379ed` (QA suites, Judge fixes QA-017/018/019, failure log).
+- `4f38c97`: **validator v2 + prompt fence** (S5 patch to frozen files `matcher/validate.py`, `matcher/prompt.py`).
+  Fixes QA-002/003/004/005/007/008/009/012/022/025/026. Decision changes go only MET to UNCERTAIN (human review).
+  MOCK: `pytest matcher benchmark/tests tests/qa` gives 154 passed, 1 skipped, 15 xfailed.
+  Orchestrator replay of the committed LIVE val raw outputs (no model call; v1 replay reproduces the saved decisions
+  with 0 changes):
+
+  | arm | v1 macro-F1 / false-MET | v2 macro-F1 / false-MET | review rate v1 / v2 |
+  |---|---|---|---|
+  | LoRA, no RAG | 0.908 / 0.026 | 0.929 / 0.000 | 0.663 / 0.668 |
+  | LoRA, BM25 RAG | 0.897 / 0.034 | 0.926 / 0.000 | 0.574 / 0.584 |
+  | base, no RAG | 0.634 / 0.009 | 0.640 / 0.000 | 0.782 / 0.782 |
+  | base, BM25 RAG | 0.630 / 0.009 | 0.635 / 0.000 | 0.743 / 0.743 |
+
+  **In-sample:** the QA-025/026 rules were written after inspecting val errors. Held-out effect is measured once in
+  the locked-test final run, with v1 and v2 replays reported side by side.
+- All session branches must merge `claude/beautiful-galileo-o36bdv` before their next merge request.
+
 ## Log
 
 - 2026-10-16: audit done, branches and worktrees created, contracts frozen (v1).
 - 2026-10-16 10:05Z: sessions S1–S5 launched as independent cloud sessions (tag `hiresignal-orchestra`), each on its own branch and container.
 - 2026-10-16 11:05Z: LoRA evaluation complete (202/202). Window 1 opened. First review of all branches; S3 test defect found.
 - 2026-10-16 11:10Z: S3 fixture defect fixed and verified. S3 4B training waits on a Kaggle GPU run by the owner (not approved on CPU).
+- 2026-10-16 11:25Z: S5 merged; validator v2 applied and replay-verified on val (in-sample).
