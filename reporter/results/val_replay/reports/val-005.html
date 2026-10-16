@@ -1,0 +1,76 @@
+<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content='width=device-width,initial-scale=1'>
+<title>Requirement check cv-val-005 / job-val-005</title><style>body{font-family:system-ui,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem;color:#1a1a1a;background:#fff}
+.disc{border:2px solid #b45309;background:#fffbeb;padding:.75rem 1rem;font-weight:600}
+.req{border:1px solid #d4d4d8;border-radius:6px;padding:.5rem 1rem;margin:1rem 0}
+.MET{color:#166534}.MISSING{color:#991b1b}.UNCERTAIN{color:#92400e}
+.who{color:#52525b;font-size:.85em}.review{color:#991b1b;font-weight:600}.mock{background:#fee2e2;padding:.5rem}
+blockquote{margin:.25rem 0;padding-left:.75rem;border-left:3px solid #a1a1aa}
+.kn{color:#52525b}table{border-collapse:collapse}td,th{border:1px solid #d4d4d8;padding:.2rem .5rem;text-align:left}</style></head><body>
+<h1>Requirement check: CV cv-val-005 vs job job-val-005 (Synthetic technical role)</h1>
+<p class=disc>Decision support only. This report checks job requirements against the text of an anonymised CV. It is not a hiring decision and makes no recommendation about the person. A human reviewer makes every decision, and must check each item flagged for review.</p>
+<table><tr><th>MET</th><th>MISSING</th><th>UNCERTAIN</th><th>must-have met</th><th>need review</th></tr>
+<tr><td>4</td><td>1</td><td>0</td><td>3/4</td><td>2</td></tr></table>
+<h2>Summary</h2><p>5 requirement(s) were checked against the CV: 4 MET, 1 MISSING and 0 UNCERTAIN. 3 of 4 must-have requirement(s) are MET. 2 requirement(s) need human review.</p><p class=who>Written by: deterministic fallback (SLM text failed the fact check); failed checks: count_mismatch</p>
+<section class=req><h2>r1 (must-have): Working knowledge of Pandas</h2>
+<p>Decision: <strong class=MET>MET</strong> (basis: supported); Matcher model said MET</p>
+<p>MET: the CV states &quot;Led the migration of reporting jobs to Pandas.&quot; <span class=who>(written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf)</span></p>
+<p>Requirement &quot;Working knowledge of Pandas&quot;: MET. The CV states &quot;Led the migration of reporting jobs to Pandas.&quot;. <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Led the migration of reporting jobs to Pandas. <span class=who>verbatim CV quote, chars 93-139</span></blockquote>
+<ul>
+<li>Validator: no issue</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: not required</li></ul></section>
+<section class=req><h2>r2 (must-have): Working knowledge of database design</h2>
+<p>Decision: <strong class=MET>MET</strong> (basis: supported); Matcher model said MET</p>
+<p>MET: the CV states &quot;Modelled 40 relational tables with primary keys, foreign keys and indexes for the HR system.&quot; A human reviewer must check it. <span class=who>(written by: deterministic fallback (SLM text failed the fact check); failed checks: quote_not_in_facts)</span></p>
+<p>Requirement &quot;Working knowledge of database design&quot;: MET. The CV states &quot;Modelled 40 relational tables with primary keys, foreign keys and indexes for the HR system.&quot;. <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Modelled 40 relational tables with primary keys, foreign keys and indexes for the HR system. <span class=who>verbatim CV quote, chars 142-234</span></blockquote>
+<ul>
+<li>Validator: semantic_inference_no_term_in_quote</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: <span class=review>REQUIRED: validator:semantic_inference_no_term_in_quote</span></li></ul></section>
+<section class=req><h2>r3 (nice-have): Spanish at C1 level or above</h2>
+<p>Decision: <strong class=MET>MET</strong> (basis: supported); Matcher model said MET</p>
+<p>MET: the CV states &quot;Spoken languages: Spanish (C2).&quot; <span class=who>(written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf)</span></p>
+<p>Requirement &quot;Spanish at C1 level or above&quot;: MET. The CV states &quot;Spoken languages: Spanish (C2)&quot;. <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Spoken languages: Spanish (C2) <span class=who>verbatim CV quote, chars 346-376</span></blockquote>
+<ul>
+<li>Validator: no issue</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: not required</li></ul></section>
+<section class=req><h2>r4 (must-have): Postgraduate (master) degree in a computing field</h2>
+<p>Decision: <strong class=MISSING>MISSING</strong> (basis: contradicted); Matcher model said MISSING</p>
+<p>MISSING: the CV states &quot;Bachelor&#x27;s degree in Marketing (2012).&quot; <span class=who>(written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf)</span></p>
+<p>Requirement &quot;Postgraduate (master) degree in a computing field&quot;: MISSING. The CV text &quot;Bachelor&#x27;s degree in Marketing (2012).&quot; shows it is not met. <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Bachelor&#x27;s degree in Marketing (2012). <span class=who>verbatim CV quote, chars 294-332</span></blockquote>
+<ul>
+<li>Validator: must_have_contradicted</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: <span class=review>REQUIRED: validator:must_have_contradicted</span></li></ul></section>
+<section class=req><h2>r5 (must-have): Angular: 2 years of experience or more</h2>
+<p>Decision: <strong class=MET>MET</strong> (basis: supported); Matcher model said MET</p>
+<p>MET: the CV states &quot;Angular in daily use for 5 years.&quot; <span class=who>(written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf)</span></p>
+<p>Requirement &quot;Angular: 2 years of experience or more&quot;: MET. The CV states &quot;Angular in daily use for 5 years.&quot;. The quoted text covers the required 2 years. Terminology from: Angular (knowledge base, not candidate evidence). <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Angular in daily use for 5 years. <span class=who>verbatim CV quote, chars 237-270</span></blockquote>
+<p class=kn>Knowledge shown to the model (terminology, NOT candidate evidence): Angular [http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146]</p>
+<ul>
+<li>Validator: no issue</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: not required</li></ul></section>
+<h2>Provenance</h2><ul>
+<li>Report schema 1.0.0, renderer reporter.deterministic.v1</li>
+<li>SLM layer: on; Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf, prompt reporter-slm-p1 (sha256 7cc19a3d93f0)</li>
+<li>Text sections: 6 total, 4 written by the SLM, 2 deterministic fallback after a failed fact check</li>
+<li>Matcher prompt p1 · knowledge rag.gated.v1+bm25 · judge None</li></ul>
+<p class=disc>Decision support only. This report checks job requirements against the text of an anonymised CV. It is not a hiring decision and makes no recommendation about the person. A human reviewer makes every decision, and must check each item flagged for review.</p></body></html>

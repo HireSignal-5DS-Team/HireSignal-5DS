@@ -1,0 +1,498 @@
+{
+  "schema_version": "1.0.0",
+  "disclaimer": "Decision support only. This report checks job requirements against the text of an anonymised CV. It is not a hiring decision and makes no recommendation about the person. A human reviewer makes every decision, and must check each item flagged for review.",
+  "overview": {
+    "cv_id": "cv-val-006",
+    "job_id": "job-val-006",
+    "job_title": "Synthetic technical role",
+    "counts": {
+      "MET": 0,
+      "MISSING": 4,
+      "UNCERTAIN": 2
+    },
+    "must_met": 0,
+    "must_total": 5,
+    "requires_human_review": 5
+  },
+  "executive_summary": {
+    "text": "6 requirement(s) were checked against the CV: 0 MET, 4 MISSING and 2 UNCERTAIN. 0 of 5 must-have requirement(s) are MET. 5 requirement(s) need human review.",
+    "writer": "deterministic_fallback",
+    "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+    "attempts": 2,
+    "rejections": [
+      "term_not_in_facts:well; count_mismatch:'5 of 5 must-have requirements are missing' but the facts give must-have MISSING = 3; count_mismatch:'1 is missing as well' but the facts give all MISSING = 4; count_mismatch:'1 requirement is missing as well for a human review' but the facts give need human review = 5",
+      "count_mismatch:'1 is UNCERTAIN' but the facts give all UNCERTAIN = 2; count_mismatch:'1 must-have requirement is missing' but the facts give must-have MISSING = 3; count_mismatch:'1 is missing for human review' but the facts give need human review = 5"
+    ],
+    "rejected_outputs": [
+      "{\"summary\": \"Of 6 requirements, 0 are MET, 4 are MISSING, and 2 are UNCERTAIN. 5 of 5 must-have requirements are missing, and 1 is missing as well. 1 requirement is missing as well for a human review.\"}",
+      "{\"summary\": \"Of 6 requirements, 0 are MET, 4 are MISSING, and 1 is UNCERTAIN. 1 must-have requirement is missing, and 1 is missing for human review.\"}"
+    ],
+    "latency_s": 14.068
+  },
+  "requirements": [
+    {
+      "req_id": "r1",
+      "requirement_text": "FastAPI: 2 years of experience or more",
+      "kind": "must",
+      "decision": "UNCERTAIN",
+      "model_decision": "MET",
+      "basis": "ambiguous",
+      "evidence": [
+        {
+          "quote": "FastAPI in daily use for 1 year.",
+          "span": [
+            292,
+            324
+          ]
+        }
+      ],
+      "knowledge_shown": [],
+      "validator_reasons": [
+        "years_below_minimum_in_evidence",
+        "uncertain_decision"
+      ],
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false
+      },
+      "judge": {
+        "verdict": "not run",
+        "score": null,
+        "nli_probs": null,
+        "model": null,
+        "disagrees": null,
+        "error": null
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:years_below_minimum_in_evidence",
+        "validator:uncertain_decision",
+        "decision:uncertain"
+      ],
+      "model": {
+        "answered_by": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "adapter": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1",
+        "prompt_id": "p1",
+        "knowledge_provider": "rag.gated.v1+bm25",
+        "mock": false,
+        "replayed_from": "rag_opt/results/e2e/lora__gated"
+      },
+      "explanation": {
+        "text": "Requirement \"FastAPI: 2 years of experience or more\": UNCERTAIN. The model answered MET, but the quoted CV text shows fewer years than required.",
+        "writer": "deterministic",
+        "model": null,
+        "attempts": 0,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": null
+      },
+      "plain_note": {
+        "text": "UNCERTAIN: the quoted CV text shows fewer years than required; a human reviewer must check it.",
+        "writer": "slm",
+        "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+        "attempts": 1,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": 4.285
+      }
+    },
+    {
+      "req_id": "r2",
+      "requirement_text": "Pandas: 2 years of experience or more",
+      "kind": "must",
+      "decision": "UNCERTAIN",
+      "model_decision": "UNCERTAIN",
+      "basis": "ambiguous",
+      "evidence": [],
+      "knowledge_shown": [],
+      "validator_reasons": [
+        "uncertain_decision"
+      ],
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false
+      },
+      "judge": {
+        "verdict": "not run",
+        "score": null,
+        "nli_probs": null,
+        "model": null,
+        "disagrees": null,
+        "error": null
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:uncertain_decision",
+        "decision:uncertain"
+      ],
+      "model": {
+        "answered_by": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "adapter": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1",
+        "prompt_id": "p1",
+        "knowledge_provider": "rag.gated.v1+bm25",
+        "mock": false,
+        "replayed_from": "rag_opt/results/e2e/lora__gated"
+      },
+      "explanation": {
+        "text": "Requirement \"Pandas: 2 years of experience or more\": UNCERTAIN. The CV evidence is partial or ambiguous.",
+        "writer": "deterministic",
+        "model": null,
+        "attempts": 0,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": null
+      },
+      "plain_note": {
+        "text": "UNCERTAIN: the CV evidence is unclear or partial. A human reviewer must check it.",
+        "writer": "deterministic_fallback",
+        "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+        "attempts": 2,
+        "rejections": [
+          "json_key_in_text:evidence_quotes; term_not_in_facts:empty",
+          "term_not_in_facts:information; decision_claim:NOT_DOCUMENTED"
+        ],
+        "rejected_outputs": [
+          "{\"note\": \"UNCERTAIN: the evidence_quotes are empty, and the requirement is ambiguous.\"}",
+          "{\"note\": \"UNCERTAIN: the evidence does not provide any supporting information; a human reviewer must check it.\"}"
+        ],
+        "latency_s": 4.688
+      }
+    },
+    {
+      "req_id": "r3",
+      "requirement_text": "Working knowledge of Django",
+      "kind": "must",
+      "decision": "MISSING",
+      "model_decision": "MISSING",
+      "basis": "contradicted",
+      "evidence": [
+        {
+          "quote": "Did not use Django; the team chose other tools.",
+          "span": [
+            93,
+            140
+          ]
+        }
+      ],
+      "knowledge_shown": [],
+      "validator_reasons": [
+        "must_have_contradicted"
+      ],
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false
+      },
+      "judge": {
+        "verdict": "not run",
+        "score": null,
+        "nli_probs": null,
+        "model": null,
+        "disagrees": null,
+        "error": null
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:must_have_contradicted"
+      ],
+      "model": {
+        "answered_by": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "adapter": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1",
+        "prompt_id": "p1",
+        "knowledge_provider": "rag.gated.v1+bm25",
+        "mock": false,
+        "replayed_from": "rag_opt/results/e2e/lora__gated"
+      },
+      "explanation": {
+        "text": "Requirement \"Working knowledge of Django\": MISSING. The CV text \"Did not use Django; the team chose other tools.\" shows it is not met.",
+        "writer": "deterministic",
+        "model": null,
+        "attempts": 0,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": null
+      },
+      "plain_note": {
+        "text": "MISSING: the CV states \"Did not use Django; the team chose other tools.\"",
+        "writer": "slm",
+        "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+        "attempts": 1,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": 2.442
+      }
+    },
+    {
+      "req_id": "r4",
+      "requirement_text": "Postgraduate (master) degree in a computing field",
+      "kind": "must",
+      "decision": "MISSING",
+      "model_decision": "MISSING",
+      "basis": "contradicted",
+      "evidence": [
+        {
+          "quote": "Bachelor's degree in Marketing (2018).",
+          "span": [
+            348,
+            386
+          ]
+        }
+      ],
+      "knowledge_shown": [],
+      "validator_reasons": [
+        "must_have_contradicted"
+      ],
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false
+      },
+      "judge": {
+        "verdict": "not run",
+        "score": null,
+        "nli_probs": null,
+        "model": null,
+        "disagrees": null,
+        "error": null
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:must_have_contradicted"
+      ],
+      "model": {
+        "answered_by": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "adapter": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1",
+        "prompt_id": "p1",
+        "knowledge_provider": "rag.gated.v1+bm25",
+        "mock": false,
+        "replayed_from": "rag_opt/results/e2e/lora__gated"
+      },
+      "explanation": {
+        "text": "Requirement \"Postgraduate (master) degree in a computing field\": MISSING. The CV text \"Bachelor's degree in Marketing (2018).\" shows it is not met.",
+        "writer": "deterministic",
+        "model": null,
+        "attempts": 0,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": null
+      },
+      "plain_note": {
+        "text": "MISSING: the CV states \"Bachelor's degree in Marketing (2018).\"",
+        "writer": "slm",
+        "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+        "attempts": 1,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": 2.568
+      }
+    },
+    {
+      "req_id": "r5",
+      "requirement_text": "CISSP certification",
+      "kind": "nice",
+      "decision": "MISSING",
+      "model_decision": "MISSING",
+      "basis": "contradicted",
+      "evidence": [
+        {
+          "quote": "Enrolled in a CISSP preparation course.",
+          "span": [
+            405,
+            444
+          ]
+        }
+      ],
+      "knowledge_shown": [],
+      "validator_reasons": [],
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false
+      },
+      "judge": {
+        "verdict": "not run",
+        "score": null,
+        "nli_probs": null,
+        "model": null,
+        "disagrees": null,
+        "error": null
+      },
+      "requires_human_review": false,
+      "review_reasons": [],
+      "model": {
+        "answered_by": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "adapter": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1",
+        "prompt_id": "p1",
+        "knowledge_provider": "rag.gated.v1+bm25",
+        "mock": false,
+        "replayed_from": "rag_opt/results/e2e/lora__gated"
+      },
+      "explanation": {
+        "text": "Requirement \"CISSP certification\": MISSING. The CV text \"Enrolled in a CISSP preparation course.\" shows it is not met.",
+        "writer": "deterministic",
+        "model": null,
+        "attempts": 0,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": null
+      },
+      "plain_note": {
+        "text": "MISSING: the CV states \"Enrolled in a CISSP preparation course.\"",
+        "writer": "slm",
+        "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+        "attempts": 1,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": 2.248
+      }
+    },
+    {
+      "req_id": "r6",
+      "requirement_text": "Ability to maintain information network hardware",
+      "kind": "must",
+      "decision": "MISSING",
+      "model_decision": "MISSING",
+      "basis": "not_documented",
+      "evidence": [],
+      "knowledge_shown": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/19c0e68e-6e6c-4698-85dc-ef66a9de2c37",
+          "source_type": "esco",
+          "title": "maintain information network hardware",
+          "url": "http://data.europa.eu/esco/skill/19c0e68e-6e6c-4698-85dc-ef66a9de2c37",
+          "retrieval": "rag.gated.v1+bm25:exact",
+          "label": "knowledge shown to the model"
+        }
+      ],
+      "validator_reasons": [
+        "must_have_absence_of_evidence"
+      ],
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false
+      },
+      "judge": {
+        "verdict": "not run",
+        "score": null,
+        "nli_probs": null,
+        "model": null,
+        "disagrees": null,
+        "error": null
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:must_have_absence_of_evidence"
+      ],
+      "model": {
+        "answered_by": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "adapter": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1",
+        "prompt_id": "p1",
+        "knowledge_provider": "rag.gated.v1+bm25",
+        "mock": false,
+        "replayed_from": "rag_opt/results/e2e/lora__gated"
+      },
+      "explanation": {
+        "text": "Requirement \"Ability to maintain information network hardware\": MISSING. No statement in the CV addresses it. This is absence of evidence, not proof that the candidate lacks it. Terminology from: maintain information network hardware (knowledge base, not candidate evidence).",
+        "writer": "deterministic",
+        "model": null,
+        "attempts": 0,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": null
+      },
+      "plain_note": {
+        "text": "MISSING: the CV does not mention any evidence of maintaining information network hardware; a human reviewer must check it.",
+        "writer": "slm",
+        "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+        "attempts": 1,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": 2.961
+      }
+    }
+  ],
+  "provenance": {
+    "report_schema_version": "1.0.0",
+    "renderer": "reporter.deterministic.v1",
+    "slm": {
+      "model_id": "Qwen/Qwen3-0.6B",
+      "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "gguf_repo": "Qwen/Qwen3-0.6B-GGUF",
+      "gguf_revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
+      "gguf_file": "Qwen3-0.6B-Q8_0.gguf",
+      "gguf_sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+      "licence": "apache-2.0",
+      "params": "0.6B (0.44B non-embedding), 28 layers",
+      "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+      "verified_sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+      "runtime": "llama-cpp-python 0.3.16, CPU, 4 threads, n_ctx 4096",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 160,
+        "grammar": "JSON schema per section",
+        "thinking": "disabled (empty <think></think>, enable_thinking=False)",
+        "timeout_s": 30.0
+      },
+      "load_s": 0.9,
+      "mock": false,
+      "prompt_id": "reporter-slm-p1",
+      "prompt_sha256": "7cc19a3d93f054c9ca1c71195a9d0c249a2f5ae28225573216eab05267d213ce",
+      "max_attempts": 2
+    },
+    "slm_status": "on",
+    "sections_total": 7,
+    "sections_slm": 5,
+    "sections_fallback": 2,
+    "pipeline": {
+      "backend": {
+        "backend": "replay-of-live",
+        "label": "replay rag_opt/results/e2e/lora__gated",
+        "is_model": true,
+        "knowledge": "rag.gated.v1+bm25",
+        "knowledge_provider": "rag.gated.v1+bm25",
+        "knowledge_version": "rag.gated.v1;retriever=bm25s-0.3.13;esco=8c6a4b3d0f26;tau=None;max_extra=0;per_term=1;sentence_min_cover=1.0;gate=certification,education,language;max_chars=280",
+        "prompt_id": "p1",
+        "bias_auditor": {
+          "variant": "rules_v2"
+        }
+      },
+      "knowledge": "rag.gated.v1+bm25",
+      "judge": null,
+      "parser": "structured-input (Parser Agent not integrated)"
+    },
+    "any_mock": false
+  }
+}

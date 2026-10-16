@@ -1,0 +1,66 @@
+<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content='width=device-width,initial-scale=1'>
+<title>Requirement check cv-val-029 / job-val-029</title><style>body{font-family:system-ui,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem;color:#1a1a1a;background:#fff}
+.disc{border:2px solid #b45309;background:#fffbeb;padding:.75rem 1rem;font-weight:600}
+.req{border:1px solid #d4d4d8;border-radius:6px;padding:.5rem 1rem;margin:1rem 0}
+.MET{color:#166534}.MISSING{color:#991b1b}.UNCERTAIN{color:#92400e}
+.who{color:#52525b;font-size:.85em}.review{color:#991b1b;font-weight:600}.mock{background:#fee2e2;padding:.5rem}
+blockquote{margin:.25rem 0;padding-left:.75rem;border-left:3px solid #a1a1aa}
+.kn{color:#52525b}table{border-collapse:collapse}td,th{border:1px solid #d4d4d8;padding:.2rem .5rem;text-align:left}</style></head><body>
+<h1>Requirement check: CV cv-val-029 vs job job-val-029 (Synthetic technical role)</h1>
+<p class=disc>Decision support only. This report checks job requirements against the text of an anonymised CV. It is not a hiring decision and makes no recommendation about the person. A human reviewer makes every decision, and must check each item flagged for review.</p>
+<table><tr><th>MET</th><th>MISSING</th><th>UNCERTAIN</th><th>must-have met</th><th>need review</th></tr>
+<tr><td>2</td><td>0</td><td>2</td><td>2/2</td><td>4</td></tr></table>
+<h2>Summary</h2><p>4 requirement(s) were checked against the CV: 2 MET, 0 MISSING and 2 UNCERTAIN. 2 of 2 must-have requirement(s) are MET. 4 requirement(s) need human review.</p><p class=who>Written by: deterministic fallback (SLM text failed the fact check); failed checks: count_mismatch, number_not_in_facts</p>
+<section class=req><h2>r1 (must-have): Working knowledge of agile methodology</h2>
+<p>Decision: <strong class=MET>MET</strong> (basis: supported); Matcher model said MET</p>
+<p>MET: the CV states &quot;Ran two-week sprints with daily stand-ups and retrospectives for a team of six.&quot; <span class=who>(written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf)</span></p>
+<p>Requirement &quot;Working knowledge of agile methodology&quot;: MET. The CV states &quot;Ran two-week sprints with daily stand-ups and retrospectives for a team of six.&quot;. <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Ran two-week sprints with daily stand-ups and retrospectives for a team of six. <span class=who>verbatim CV quote, chars 264-343</span></blockquote>
+<ul>
+<li>Validator: semantic_inference_no_term_in_quote</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: <span class=review>REQUIRED: validator:semantic_inference_no_term_in_quote</span></li></ul></section>
+<section class=req><h2>r2 (must-have): Working knowledge of natural language processing</h2>
+<p>Decision: <strong class=MET>MET</strong> (basis: supported); Matcher model said MET</p>
+<p>MET: the CV states &quot;Built a model that sorts support tickets by topic from their text.&quot; <span class=who>(written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf)</span></p>
+<p>Requirement &quot;Working knowledge of natural language processing&quot;: MET. The CV states &quot;Built a model that sorts support tickets by topic from their text.&quot;. Terminology from: natural language processing (knowledge base, not candidate evidence). <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Built a model that sorts support tickets by topic from their text. <span class=who>verbatim CV quote, chars 146-212</span></blockquote>
+<p class=kn>Knowledge shown to the model (terminology, NOT candidate evidence): natural language processing [http://data.europa.eu/esco/skill/fff0e2cd-d0bd-4b02-9daf-158b79d9688a]</p>
+<ul>
+<li>Validator: semantic_inference_no_term_in_quote</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: <span class=review>REQUIRED: validator:semantic_inference_no_term_in_quote</span></li></ul></section>
+<section class=req><h2>r3 (nice-have): Django: 2 years of experience or more</h2>
+<p>Decision: <strong class=UNCERTAIN>UNCERTAIN</strong> (basis: ambiguous); Matcher model said UNCERTAIN</p>
+<p>UNCERTAIN: the CV evidence is unclear or partial. A human reviewer must check it. <span class=who>(written by: deterministic fallback (SLM text failed the fact check); failed checks: decision_claim, json_key_in_text)</span></p>
+<p>Requirement &quot;Django: 2 years of experience or more&quot;: UNCERTAIN. The CV evidence is partial or ambiguous. <span class=who>(deterministic, from validated fields)</span></p>
+<p>Evidence: none quoted</p>
+<ul>
+<li>Validator: uncertain_decision</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: <span class=review>REQUIRED: validator:uncertain_decision, decision:uncertain</span></li></ul></section>
+<section class=req><h2>r4 (nice-have): Working knowledge of Angular</h2>
+<p>Decision: <strong class=UNCERTAIN>UNCERTAIN</strong> (basis: ambiguous); Matcher model said MET</p>
+<p>UNCERTAIN: the quoted CV text shows exposure (e.g. tutorials or a course), not use <span class=who>(written by: tiny SLM (validated), Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf)</span></p>
+<p>Requirement &quot;Working knowledge of Angular&quot;: UNCERTAIN. The model answered MET, but the quoted CV text shows exposure (e.g. tutorials or a course), not use. Terminology from: Angular (knowledge base, not candidate evidence). <span class=who>(deterministic, from validated fields)</span></p>
+<blockquote>Watched tutorials about Angular in spare time. <span class=who>verbatim CV quote, chars 215-261</span></blockquote>
+<p class=kn>Knowledge shown to the model (terminology, NOT candidate evidence): Angular [http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146]</p>
+<ul>
+<li>Validator: weak_evidence_cue, uncertain_decision</li>
+<li>Bias audit: PASS</li>
+<li>NLI Judge: not run</li>
+<li>Matcher model: primary · Qwen/Qwen3-4B-Instruct-2507+lora · adapter HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1 · replayed LIVE output from rag_opt/results/e2e/lora__gated</li>
+<li>Human review: <span class=review>REQUIRED: validator:weak_evidence_cue, validator:uncertain_decision, decision:uncertain</span></li></ul></section>
+<h2>Provenance</h2><ul>
+<li>Report schema 1.0.0, renderer reporter.deterministic.v1</li>
+<li>SLM layer: on; Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf, prompt reporter-slm-p1 (sha256 7cc19a3d93f0)</li>
+<li>Text sections: 5 total, 3 written by the SLM, 2 deterministic fallback after a failed fact check</li>
+<li>Matcher prompt p1 · knowledge rag.gated.v1+bm25 · judge None</li></ul>
+<p class=disc>Decision support only. This report checks job requirements against the text of an anonymised CV. It is not a hiring decision and makes no recommendation about the person. A human reviewer makes every decision, and must check each item flagged for review.</p></body></html>

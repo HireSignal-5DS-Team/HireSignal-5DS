@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.0.0",
+  "disclaimer": "Decision support only. This report checks job requirements against the text of an anonymised CV. It is not a hiring decision and makes no recommendation about the person. A human reviewer makes every decision, and must check each item flagged for review.",
+  "overview": {
+    "cv_id": "cv-val-029",
+    "job_id": "job-val-029",
+    "job_title": "Synthetic technical role",
+    "counts": {
+      "MET": 2,
+      "MISSING": 0,
+      "UNCERTAIN": 2
+    },
+    "must_met": 2,
+    "must_total": 2,
+    "requires_human_review": 4
+  },
+  "executive_summary": {
+    "text": "4 requirement(s) were checked against the CV: 2 MET, 0 MISSING and 2 UNCERTAIN. 2 of 2 must-have requirement(s) are MET. 4 requirement(s) need human review.",
+    "writer": "deterministic_fallback",
+    "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+    "attempts": 2,
+    "rejections": [
+      "number_not_in_facts:1; count_mismatch:'1 requirement needs human review' but the facts give need human review = 4",
+      "number_not_in_facts:1; count_mismatch:'1 requirement needs human review' but the facts give need human review = 4"
+    ],
+    "rejected_outputs": [
+      "{\"summary\": \"Of 4 requirements, 2 are MET, 2 are UNCERTAIN, and 2 are nice-to-have. 2 of the must-have requirements are MET, and 1 requirement needs human review.\"}",
+      "{\"summary\": \"Of 4 requirements, 2 are MET, 2 are UNCERTAIN, and 2 are nice-to-have. 2 of the must-have requirements are MET, and 1 requirement needs human review.\"}"
+    ],
+    "latency_s": 11.408
+  },
+  "requirements": [
+    {
+      "req_id": "r1",
+      "requirement_text": "Working knowledge of agile methodology",
+      "kind": "must",
+      "decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        {
+          "quote": "Ran two-week sprints with daily stand-ups and retrospectives for a team of six.",
+          "span": [
+            264,
+            343
+          ]
+        }
+      ],
+      "knowledge_shown": [],
+      "validator_reasons": [
+        "semantic_inference_no_term_in_quote"
+      ],
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false
+      },
+      "judge": {
+        "verdict": "not run",
+        "score": null,
+        "nli_probs": null,
+        "model": null,
+        "disagrees": null,
+        "error": null
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:semantic_inference_no_term_in_quote"
+      ],
+      "model": {
+        "answered_by": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "adapter": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1",
+        "prompt_id": "p1",
+        "knowledge_provider": "rag.gated.v1+bm25",
+        "mock": false,
+        "replayed_from": "rag_opt/results/e2e/lora__gated"
+      },
+      "explanation": {
+        "text": "Requirement \"Working knowledge of agile methodology\": MET. The CV states \"Ran two-week sprints with daily stand-ups and retrospectives for a team of six.\".",
+        "writer": "deterministic",
+        "model": null,
+        "attempts": 0,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": null
+      },
+      "plain_note": {
+        "text": "MET: the CV states \"Ran two-week sprints with daily stand-ups and retrospectives for a team of six.\"",
+        "writer": "slm",
+        "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+        "attempts": 1,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": 4.455
+      }
+    },
+    {
+      "req_id": "r2",
+      "requirement_text": "Working knowledge of natural language processing",
+      "kind": "must",
+      "decision": "MET",
+      "model_decision": "MET",
+      "basis": "supported",
+      "evidence": [
+        {
+          "quote": "Built a model that sorts support tickets by topic from their text.",
+          "span": [
+            146,
+            212
+          ]
+        }
+      ],
+      "knowledge_shown": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/fff0e2cd-d0bd-4b02-9daf-158b79d9688a",
+          "source_type": "esco",
+          "title": "natural language processing",
+          "url": "http://data.europa.eu/esco/skill/fff0e2cd-d0bd-4b02-9daf-158b79d9688a",
+          "retrieval": "rag.gated.v1+bm25:exact",
+          "label": "knowledge shown to the model"
+        }
+      ],
+      "validator_reasons": [
+        "semantic_inference_no_term_in_quote"
+      ],
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false
+      },
+      "judge": {
+        "verdict": "not run",
+        "score": null,
+        "nli_probs": null,
+        "model": null,
+        "disagrees": null,
+        "error": null
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:semantic_inference_no_term_in_quote"
+      ],
+      "model": {
+        "answered_by": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "adapter": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1",
+        "prompt_id": "p1",
+        "knowledge_provider": "rag.gated.v1+bm25",
+        "mock": false,
+        "replayed_from": "rag_opt/results/e2e/lora__gated"
+      },
+      "explanation": {
+        "text": "Requirement \"Working knowledge of natural language processing\": MET. The CV states \"Built a model that sorts support tickets by topic from their text.\". Terminology from: natural language processing (knowledge base, not candidate evidence).",
+        "writer": "deterministic",
+        "model": null,
+        "attempts": 0,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": null
+      },
+      "plain_note": {
+        "text": "MET: the CV states \"Built a model that sorts support tickets by topic from their text.\"",
+        "writer": "slm",
+        "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+        "attempts": 1,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": 2.48
+      }
+    },
+    {
+      "req_id": "r3",
+      "requirement_text": "Django: 2 years of experience or more",
+      "kind": "nice",
+      "decision": "UNCERTAIN",
+      "model_decision": "UNCERTAIN",
+      "basis": "ambiguous",
+      "evidence": [],
+      "knowledge_shown": [],
+      "validator_reasons": [
+        "uncertain_decision"
+      ],
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false
+      },
+      "judge": {
+        "verdict": "not run",
+        "score": null,
+        "nli_probs": null,
+        "model": null,
+        "disagrees": null,
+        "error": null
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:uncertain_decision",
+        "decision:uncertain"
+      ],
+      "model": {
+        "answered_by": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "adapter": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1",
+        "prompt_id": "p1",
+        "knowledge_provider": "rag.gated.v1+bm25",
+        "mock": false,
+        "replayed_from": "rag_opt/results/e2e/lora__gated"
+      },
+      "explanation": {
+        "text": "Requirement \"Django: 2 years of experience or more\": UNCERTAIN. The CV evidence is partial or ambiguous.",
+        "writer": "deterministic",
+        "model": null,
+        "attempts": 0,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": null
+      },
+      "plain_note": {
+        "text": "UNCERTAIN: the CV evidence is unclear or partial. A human reviewer must check it.",
+        "writer": "deterministic_fallback",
+        "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+        "attempts": 2,
+        "rejections": [
+          "json_key_in_text:evidence_quotes; decision_claim:MISSING; decision_claim:NOT_DOCUMENTED",
+          "json_key_in_text:evidence_quotes; decision_claim:MISSING"
+        ],
+        "rejected_outputs": [
+          "{\"note\": \"UNCERTAIN: the CV does not mention Django experience, and evidence_quotes are missing.\"}",
+          "{\"note\": \"UNCERTAIN: the evidence_quotes are missing, and the requirement is ambiguous.\"}"
+        ],
+        "latency_s": 4.789
+      }
+    },
+    {
+      "req_id": "r4",
+      "requirement_text": "Working knowledge of Angular",
+      "kind": "nice",
+      "decision": "UNCERTAIN",
+      "model_decision": "MET",
+      "basis": "ambiguous",
+      "evidence": [
+        {
+          "quote": "Watched tutorials about Angular in spare time.",
+          "span": [
+            215,
+            261
+          ]
+        }
+      ],
+      "knowledge_shown": [
+        {
+          "source_id": "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146",
+          "source_type": "esco",
+          "title": "Angular",
+          "url": "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146",
+          "retrieval": "rag.gated.v1+bm25:exact",
+          "label": "knowledge shown to the model"
+        }
+      ],
+      "validator_reasons": [
+        "weak_evidence_cue",
+        "uncertain_decision"
+      ],
+      "bias_audit": {
+        "audit_status": "PASS",
+        "counterfactual_flip": null,
+        "affected_attribute": null,
+        "leakage_terms": [],
+        "demographic_evidence": false,
+        "requires_human_review": false
+      },
+      "judge": {
+        "verdict": "not run",
+        "score": null,
+        "nli_probs": null,
+        "model": null,
+        "disagrees": null,
+        "error": null
+      },
+      "requires_human_review": true,
+      "review_reasons": [
+        "validator:weak_evidence_cue",
+        "validator:uncertain_decision",
+        "decision:uncertain"
+      ],
+      "model": {
+        "answered_by": "primary",
+        "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+        "served_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+        "adapter": "HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1",
+        "prompt_id": "p1",
+        "knowledge_provider": "rag.gated.v1+bm25",
+        "mock": false,
+        "replayed_from": "rag_opt/results/e2e/lora__gated"
+      },
+      "explanation": {
+        "text": "Requirement \"Working knowledge of Angular\": UNCERTAIN. The model answered MET, but the quoted CV text shows exposure (e.g. tutorials or a course), not use. Terminology from: Angular (knowledge base, not candidate evidence).",
+        "writer": "deterministic",
+        "model": null,
+        "attempts": 0,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": null
+      },
+      "plain_note": {
+        "text": "UNCERTAIN: the quoted CV text shows exposure (e.g. tutorials or a course), not use",
+        "writer": "slm",
+        "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+        "attempts": 1,
+        "rejections": [],
+        "rejected_outputs": [],
+        "latency_s": 2.777
+      }
+    }
+  ],
+  "provenance": {
+    "report_schema_version": "1.0.0",
+    "renderer": "reporter.deterministic.v1",
+    "slm": {
+      "model_id": "Qwen/Qwen3-0.6B",
+      "model_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+      "gguf_repo": "Qwen/Qwen3-0.6B-GGUF",
+      "gguf_revision": "23749fefcc72300e3a2ad315e1317431b06b590a",
+      "gguf_file": "Qwen3-0.6B-Q8_0.gguf",
+      "gguf_sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+      "licence": "apache-2.0",
+      "params": "0.6B (0.44B non-embedding), 28 layers",
+      "model": "Qwen/Qwen3-0.6B-GGUF@23749fef/Qwen3-0.6B-Q8_0.gguf",
+      "verified_sha256": "9465e63a22add5354d9bb4b99e90117043c7124007664907259bd16d043bb031",
+      "runtime": "llama-cpp-python 0.3.16, CPU, 4 threads, n_ctx 4096",
+      "decoding": {
+        "temperature": 0,
+        "max_tokens": 160,
+        "grammar": "JSON schema per section",
+        "thinking": "disabled (empty <think></think>, enable_thinking=False)",
+        "timeout_s": 30.0
+      },
+      "load_s": 0.9,
+      "mock": false,
+      "prompt_id": "reporter-slm-p1",
+      "prompt_sha256": "7cc19a3d93f054c9ca1c71195a9d0c249a2f5ae28225573216eab05267d213ce",
+      "max_attempts": 2
+    },
+    "slm_status": "on",
+    "sections_total": 5,
+    "sections_slm": 3,
+    "sections_fallback": 2,
+    "pipeline": {
+      "backend": {
+        "backend": "replay-of-live",
+        "label": "replay rag_opt/results/e2e/lora__gated",
+        "is_model": true,
+        "knowledge": "rag.gated.v1+bm25",
+        "knowledge_provider": "rag.gated.v1+bm25",
+        "knowledge_version": "rag.gated.v1;retriever=bm25s-0.3.13;esco=8c6a4b3d0f26;tau=None;max_extra=0;per_term=1;sentence_min_cover=1.0;gate=certification,education,language;max_chars=280",
+        "prompt_id": "p1",
+        "bias_auditor": {
+          "variant": "rules_v2"
+        }
+      },
+      "knowledge": "rag.gated.v1+bm25",
+      "judge": null,
+      "parser": "structured-input (Parser Agent not integrated)"
+    },
+    "any_mock": false
+  }
+}
