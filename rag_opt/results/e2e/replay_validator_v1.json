@@ -1,0 +1,80 @@
+{
+ "lora": {
+  "runs": {
+   "bm25": {
+    "n": 202,
+    "macro_f1": 0.8968,
+    "false_met": 0.0345,
+    "review_rate": 0.5743,
+    "changed_vs_saved": 0,
+    "refs_mismatch": 0
+   },
+   "gated": {
+    "n": 202,
+    "macro_f1": 0.903,
+    "false_met": 0.0259,
+    "review_rate": 0.5891,
+    "changed_vs_saved": 0,
+    "refs_mismatch": 0
+   },
+   "none": {
+    "n": 202,
+    "macro_f1": 0.9082,
+    "false_met": 0.0259,
+    "review_rate": 0.6634,
+    "changed_vs_saved": 0,
+    "refs_mismatch": 0
+   },
+   "none-repeat": {
+    "n": 202,
+    "macro_f1": 0.9051,
+    "false_met": 0.0259,
+    "review_rate": 0.6584,
+    "changed_vs_saved": 0,
+    "refs_mismatch": 0
+   }
+  },
+  "paired": {
+   "bm25 vs none": {
+    "delta": -0.0113,
+    "ci95": [
+     -0.0468,
+     0.0208
+    ],
+    "base_only": 4,
+    "cand_only": 4,
+    "mcnemar_p": 1.0
+   },
+   "gated vs none": {
+    "delta": -0.0052,
+    "ci95": [
+     -0.0279,
+     0.0138
+    ],
+    "base_only": 2,
+    "cand_only": 2,
+    "mcnemar_p": 1.0
+   },
+   "none-repeat vs none": {
+    "delta": -0.0031,
+    "ci95": [
+     -0.0237,
+     0.0175
+    ],
+    "base_only": 2,
+    "cand_only": 1,
+    "mcnemar_p": 1.0
+   },
+   "gated vs bm25": {
+    "delta": 0.0062,
+    "ci95": [
+     -0.0317,
+     0.0455
+    ],
+    "base_only": 4,
+    "cand_only": 4,
+    "mcnemar_p": 1.0
+   }
+  }
+ }
+}
