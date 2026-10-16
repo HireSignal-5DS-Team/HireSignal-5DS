@@ -1,0 +1,182 @@
+{
+  "n": 202,
+  "final": {
+    "macro_f1": 0.6137056332870672,
+    "accuracy": 0.6089108910891089,
+    "false_met_rate": 0.008620689655172414,
+    "per_class": {
+      "MET": {
+        "precision": 0.9787234042553191,
+        "recall": 0.5348837209302325,
+        "f1": 0.6917293233082706,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 0.86,
+        "recall": 0.5584415584415584,
+        "f1": 0.6771653543307087,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 0.3238095238095238,
+        "recall": 0.8717948717948718,
+        "f1": 0.4722222222222222,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 46,
+        "MISSING": 3,
+        "UNCERTAIN": 37,
+        "null": 0
+      },
+      "MISSING": {
+        "MET": 0,
+        "MISSING": 43,
+        "UNCERTAIN": 34,
+        "null": 0
+      },
+      "UNCERTAIN": {
+        "MET": 1,
+        "MISSING": 4,
+        "UNCERTAIN": 34,
+        "null": 0
+      }
+    }
+  },
+  "raw_model": {
+    "macro_f1": 0.627485453207238,
+    "accuracy": 0.6039603960396039,
+    "false_met_rate": 0.02586206896551724,
+    "per_class": {
+      "MET": {
+        "precision": 0.9387755102040817,
+        "recall": 0.5348837209302325,
+        "f1": 0.6814814814814815,
+        "support": 86
+      },
+      "MISSING": {
+        "precision": 0.86,
+        "recall": 0.5584415584415584,
+        "f1": 0.6771653543307087,
+        "support": 77
+      },
+      "UNCERTAIN": {
+        "precision": 0.3793103448275862,
+        "recall": 0.8461538461538461,
+        "f1": 0.5238095238095238,
+        "support": 39
+      }
+    },
+    "confusion": {
+      "MET": {
+        "MET": 46,
+        "MISSING": 3,
+        "UNCERTAIN": 23,
+        "null": 14
+      },
+      "MISSING": {
+        "MET": 2,
+        "MISSING": 43,
+        "UNCERTAIN": 31,
+        "null": 1
+      },
+      "UNCERTAIN": {
+        "MET": 1,
+        "MISSING": 4,
+        "UNCERTAIN": 33,
+        "null": 1
+      }
+    }
+  },
+  "json_schema_validity": 0.9207920792079208,
+  "basis_accuracy": 0.5396039603960396,
+  "evidence": {
+    "raw_quotes": 129,
+    "raw_quote_validity": 1.0,
+    "raw_met_with_verified_quote": 1.0,
+    "attribution_vs_gold": 0.8181818181818182,
+    "attribution_n": 77
+  },
+  "validator_changed_decision": 0.0891089108910891,
+  "needs_human_review_rate": 0.801980198019802,
+  "per_tag_accuracy": {
+    "ambiguous_duration": {
+      "n": 21,
+      "accuracy": 0.7619047619047619
+    },
+    "certification": {
+      "n": 13,
+      "accuracy": 0.46153846153846156
+    },
+    "contradictory_evidence": {
+      "n": 31,
+      "accuracy": 0.7419354838709677
+    },
+    "date_range": {
+      "n": 8,
+      "accuracy": 0.125
+    },
+    "direct_match": {
+      "n": 8,
+      "accuracy": 0.625
+    },
+    "distractor_details": {
+      "n": 74,
+      "accuracy": 0.5675675675675675
+    },
+    "education": {
+      "n": 10,
+      "accuracy": 0.9
+    },
+    "equivalent_skill_alias": {
+      "n": 21,
+      "accuracy": 0.2857142857142857
+    },
+    "implicit_project_evidence": {
+      "n": 15,
+      "accuracy": 0.3333333333333333
+    },
+    "insufficient_experience": {
+      "n": 17,
+      "accuracy": 0.47058823529411764
+    },
+    "language": {
+      "n": 14,
+      "accuracy": 0.8571428571428571
+    },
+    "missing_evidence": {
+      "n": 18,
+      "accuracy": 0.3888888888888889
+    },
+    "multi_requirement": {
+      "n": 117,
+      "accuracy": 0.6239316239316239
+    },
+    "negation_trap": {
+      "n": 22,
+      "accuracy": 0.6818181818181818
+    },
+    "partial_evidence": {
+      "n": 18,
+      "accuracy": 1.0
+    },
+    "rag_suggests_absent_skill": {
+      "n": 11,
+      "accuracy": 0.45454545454545453
+    },
+    "sufficient_experience": {
+      "n": 25,
+      "accuracy": 0.6
+    }
+  },
+  "latency_s": {
+    "mean": 17.062931683168316,
+    "p50": 16.0969,
+    "p95": 23.1048,
+    "max": 35.575
+  },
+  "peak_rss_mb": 523.8,
+  "load_seconds": 2.35
+}
