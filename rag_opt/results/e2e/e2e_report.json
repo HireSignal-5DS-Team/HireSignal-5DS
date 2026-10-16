@@ -1,0 +1,226 @@
+{
+ "lora": {
+  "dirs": {
+   "bm25": "rag_opt/results/e2e/lora__bm25",
+   "gated": "rag_opt/results/e2e/lora__gated",
+   "none": "rag_opt/results/e2e/lora__none",
+   "none-repeat": "rag_opt/results/e2e/lora__none-repeat"
+  },
+  "runs": {
+   "none": {
+    "backend": "Qwen/Qwen3-4B-Instruct-2507+lora @ http://127.0.0.1:8081/v1",
+    "revision": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M + HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a (llama.cpp --lora_path)",
+    "knowledge": "none",
+    "label": "LIVE model run (REUSED from the evaluation session, not re-run by S1)",
+    "n": 202,
+    "macro_f1": 0.9082,
+    "accuracy": 0.9208,
+    "false_met_rate": 0.0259,
+    "json_valid": 1.0,
+    "template_echo": 0,
+    "uncertain_rate": 0.1782,
+    "human_review_rate": 0.6634,
+    "latency_p50_s": 8.87,
+    "latency_p95_s": 13.9,
+    "client_peak_rss_mb": 519.9,
+    "server_peak_rss_mb": null,
+    "refs_per_req": 0.0,
+    "prompt_tokens_mean": 314.7,
+    "tag_accuracy": {
+     "equivalent_skill_alias": {
+      "n": 21,
+      "accuracy": 0.8095238095238095
+     },
+     "rag_suggests_absent_skill": {
+      "n": 11,
+      "accuracy": 1.0
+     },
+     "certification": {
+      "n": 13,
+      "accuracy": 1.0
+     },
+     "missing_evidence": {
+      "n": 18,
+      "accuracy": 1.0
+     },
+     "negation_trap": {
+      "n": 22,
+      "accuracy": 1.0
+     }
+    }
+   },
+   "bm25": {
+    "backend": "Qwen/Qwen3-4B-Instruct-2507+lora @ http://127.0.0.1:8081/v1",
+    "revision": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M + HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a (llama.cpp --lora_path)",
+    "knowledge": "rag.bm25",
+    "label": "LIVE model run (REUSED from the evaluation session, not re-run by S1)",
+    "n": 202,
+    "macro_f1": 0.8968,
+    "accuracy": 0.9208,
+    "false_met_rate": 0.0345,
+    "json_valid": 1.0,
+    "template_echo": 0,
+    "uncertain_rate": 0.1535,
+    "human_review_rate": 0.5743,
+    "latency_p50_s": 13.09,
+    "latency_p95_s": 21.46,
+    "client_peak_rss_mb": 524.1,
+    "server_peak_rss_mb": null,
+    "refs_per_req": 1.53,
+    "prompt_tokens_mean": 401.0,
+    "tag_accuracy": {
+     "equivalent_skill_alias": {
+      "n": 21,
+      "accuracy": 0.9523809523809523
+     },
+     "rag_suggests_absent_skill": {
+      "n": 11,
+      "accuracy": 1.0
+     },
+     "certification": {
+      "n": 13,
+      "accuracy": 1.0
+     },
+     "missing_evidence": {
+      "n": 18,
+      "accuracy": 1.0
+     },
+     "negation_trap": {
+      "n": 22,
+      "accuracy": 1.0
+     }
+    }
+   },
+   "gated": {
+    "backend": "Qwen/Qwen3-4B-Instruct-2507+lora @ http://127.0.0.1:8081/v1",
+    "revision": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M + HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora (llama.cpp --lora_path)",
+    "knowledge": "rag.gated.v1+bm25",
+    "label": "LIVE model run",
+    "n": 202,
+    "macro_f1": 0.903,
+    "accuracy": 0.9208,
+    "false_met_rate": 0.0259,
+    "json_valid": 1.0,
+    "template_echo": 0,
+    "uncertain_rate": 0.1782,
+    "human_review_rate": 0.5891,
+    "latency_p50_s": 14.67,
+    "latency_p95_s": 17.25,
+    "client_peak_rss_mb": 547.5,
+    "server_peak_rss_mb": 4236.6,
+    "refs_per_req": 0.252,
+    "prompt_tokens_mean": 326.7,
+    "tag_accuracy": {
+     "equivalent_skill_alias": {
+      "n": 21,
+      "accuracy": 0.9047619047619048
+     },
+     "rag_suggests_absent_skill": {
+      "n": 11,
+      "accuracy": 1.0
+     },
+     "certification": {
+      "n": 13,
+      "accuracy": 1.0
+     },
+     "missing_evidence": {
+      "n": 18,
+      "accuracy": 1.0
+     },
+     "negation_trap": {
+      "n": 22,
+      "accuracy": 1.0
+     }
+    }
+   },
+   "none-repeat": {
+    "backend": "Qwen/Qwen3-4B-Instruct-2507+lora @ http://127.0.0.1:8081/v1",
+    "revision": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M + HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora (llama.cpp --lora_path)",
+    "knowledge": "none",
+    "label": "LIVE model run",
+    "n": 202,
+    "macro_f1": 0.9051,
+    "accuracy": 0.9158,
+    "false_met_rate": 0.0259,
+    "json_valid": 1.0,
+    "template_echo": 0,
+    "uncertain_rate": 0.1881,
+    "human_review_rate": 0.6584,
+    "latency_p50_s": 14.26,
+    "latency_p95_s": 17.5,
+    "client_peak_rss_mb": 523.5,
+    "server_peak_rss_mb": 4239.4,
+    "refs_per_req": 0.0,
+    "prompt_tokens_mean": 314.7,
+    "tag_accuracy": {
+     "equivalent_skill_alias": {
+      "n": 21,
+      "accuracy": 0.7619047619047619
+     },
+     "rag_suggests_absent_skill": {
+      "n": 11,
+      "accuracy": 1.0
+     },
+     "certification": {
+      "n": 13,
+      "accuracy": 1.0
+     },
+     "missing_evidence": {
+      "n": 18,
+      "accuracy": 1.0
+     },
+     "negation_trap": {
+      "n": 22,
+      "accuracy": 1.0
+     }
+    }
+   }
+  },
+  "paired": {
+   "bm25 vs none": {
+    "n": 202,
+    "delta_macro_f1": -0.0113,
+    "ci95": [
+     -0.0468,
+     0.0208
+    ],
+    "base_only_correct": 4,
+    "cand_only_correct": 4,
+    "mcnemar_p": 1.0
+   },
+   "gated vs none": {
+    "n": 202,
+    "delta_macro_f1": -0.0052,
+    "ci95": [
+     -0.0279,
+     0.0138
+    ],
+    "base_only_correct": 2,
+    "cand_only_correct": 2,
+    "mcnemar_p": 1.0
+   },
+   "none-repeat vs none": {
+    "n": 202,
+    "delta_macro_f1": -0.0031,
+    "ci95": [
+     -0.0237,
+     0.0175
+    ],
+    "base_only_correct": 2,
+    "cand_only_correct": 1,
+    "mcnemar_p": 1.0
+   },
+   "gated vs bm25": {
+    "n": 202,
+    "delta_macro_f1": 0.0062,
+    "ci95": [
+     -0.0317,
+     0.0455
+    ],
+    "base_only_correct": 4,
+    "cand_only_correct": 4,
+    "mcnemar_p": 1.0
+   }
+  }
+ }
+}
