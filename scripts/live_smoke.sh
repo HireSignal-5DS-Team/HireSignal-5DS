@@ -15,8 +15,8 @@ P=${PYTHON:-/home/user/venv/bin/python}
 export HS_MODELS_DIR=${HS_MODELS_DIR:-/home/user/hs_models} HS_RAG=${HS_RAG:-bm25}
 CONV=${LLAMA_CPP_SRC:-/home/user/llamacpp_src/llama_cpp_python-0.3.16/vendor/llama.cpp}/convert_lora_to_gguf.py
 [ -f "$CONV" ] || { echo "preflight: $CONV missing (set LLAMA_CPP_SRC)"; exit 1; }
-$P -c "import llama_cpp, torch, safetensors, gguf, huggingface_hub, jinja2" \
-  || { echo "preflight: install llama-cpp-python[server]==0.3.16, torch, safetensors, gguf, huggingface_hub, jinja2"; exit 1; }
+$P -c "import llama_cpp, torch, safetensors, gguf, mistral_common, huggingface_hub, jinja2" \
+  || { echo "preflight: install llama-cpp-python[server]==0.3.16, torch, safetensors, gguf, mistral_common, huggingface_hub, jinja2"; exit 1; }
 RUN=benchmark/results/live_smoke/$(date -u +%Y%m%dT%H%M%SZ); mkdir -p "$RUN"
 exec 9>/home/user/hs_queue.lock; flock -n 9 || { echo "another model job holds /home/user/hs_queue.lock"; exit 1; }
 for port in 8080 8081; do
