@@ -79,3 +79,8 @@ Evaluation session (read-only): `claude/kind-albattani-k7qlt9` @ `e995669` — i
   switched to HS_RAG=gated.** QA-001 and QA-014 closed. Integration MOCK (with rag/tests): 262 passed, 12 skipped,
   3 xfailed. Eval session's LoRA bias audit: 1/30 flagged (name signal, borderline item), same as base (f22b97f).
   Remaining before the final run: S4 merge (LoRA flip-rate arm), owner decision on the S3 Kaggle run.
+- 2026-10-16 13:05Z: S4 merged (013189e, from 95dd5e3; its LoRA new-attribute + placebo arm keeps running, ETA 16:15Z).
+  Core-4 LIVE flips: base 1/120, LoRA 1/120 (different borderline items, both name signal), McNemar p=1.0.
+  **Production default switched to HS_BIAS_AUDITOR=rules_v2** (orchestrator-verified blind holdout n=44: recall 19/26
+  for v1 and v2, FPR 9/18 vs 1/18). Reviewer (`rules_v2+reviewer`) stays opt-in (+11 s p50 per result).
+  Integration MOCK (matcher, benchmark, qa, rag, bias): 289 passed, 12 skipped, 1 xfailed.
