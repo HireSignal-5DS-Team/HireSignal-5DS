@@ -304,3 +304,49 @@ def test_flip_analysis_strata_placebo_and_mcnemar(tmp_path):
     other = {k: False for k in cells}
     m = mcnemar(cells, other)
     assert m["flip_only_first"] == 1 and m["flip_only_second"] == 0 and m["shared_cells"] == 8
+
+
+def test_factory_wiring_with_real_bias_auditor():
+    """HS_BIAS_AUDITOR through matcher/factory.py with THIS package (not a fake): rules_v2, the opt-in reviewer on a stub
+    base-model server, fail-closed review when the reviewer is down, and the refusal to run it on the LoRA endpoint."""
+    from matcher.backends import MockBackend
+    from matcher.factory import build
+    from matcher.knowledge import NoKnowledge
+    from matcher.pipeline import Pipeline
+    from matcher.schemas import Job
+
+    job = Job(job_id="j", title="t", requirements=[PY])
+    biased = MockBackend(lambda t: json.dumps({"decision": "MET", "basis": "supported", "evidence": [GOOD],
+                                               "explanation": "8 years of Python; she may not be a long-term investment."}), "m")
+    env = {"HS_JUDGE": "off"}
+    assert build(env, knowledge=NoKnowledge()).auditor is None  # rules_v1 stays the factory default until S6 decides
+    v2 = build({**env, "HS_BIAS_AUDITOR": "rules_v2"}, knowledge=NoKnowledge()).auditor
+    assert isinstance(v2, BiasAuditor) and v2.reviewer is None
+    out = Pipeline(biased, NoKnowledge(), auditor=v2).run(CVX.model_dump(), job.model_dump())
+    assert out["requirements"][0]["bias_audit"]["audit_status"] == "PASS"  # the lexicon misses this euphemism
+    decision = out["requirements"][0]["final_decision"]
+
+    _H.seen = []
+    srv = HTTPServer(("127.0.0.1", 0), _H)
+    threading.Thread(target=srv.serve_forever, daemon=True).start()
+    try:
+        url = f"http://127.0.0.1:{srv.server_port}/v1"
+        aud = build({**env, "HS_BIAS_AUDITOR": "rules_v2+reviewer", "HS_BIAS_REVIEWER_URL": url}, knowledge=NoKnowledge()).auditor
+        assert isinstance(aud.reviewer, LLMReviewer) and aud.reviewer.backend.max_tokens == 160
+        out = Pipeline(biased, NoKnowledge(), auditor=aud).run(CVX.model_dump(), job.model_dump())
+    finally:
+        srv.shutdown()
+    row = out["requirements"][0]
+    assert row["final_decision"] == decision and row["bias_audit"]["audit_status"] == "FLAGGED"  # finding only
+    assert row["bias_audit"]["details"]["flag_sources"] == ["reviewer"] and row["requires_human_review"]
+    assert out["match_report"]["backend"]["bias_auditor"]["variant"] == "rules_v2+reviewer"
+    assert PY.text in _H.seen[0]["messages"][1]["content"]
+
+    down = build({**env, "HS_BIAS_AUDITOR": "rules_v2+reviewer", "HS_BIAS_REVIEWER_URL": "http://127.0.0.1:9/v1"},
+                 knowledge=NoKnowledge()).auditor
+    down.reviewer.backend.max_retries, down.reviewer.backend.timeout = 0, 2
+    row = Pipeline(biased, NoKnowledge(), auditor=down).run(CVX.model_dump(), job.model_dump())["requirements"][0]
+    assert row["bias_audit"]["details"]["reviewer"]["error"] and "bias:reviewer_unavailable" in row["review_reasons"]
+    with pytest.raises(ValueError, match="LoRA"):
+        build({**env, "HS_BIAS_AUDITOR": "rules_v2+reviewer", "HS_BIAS_REVIEWER_URL": "http://127.0.0.1:8081/v1"},
+              knowledge=NoKnowledge())

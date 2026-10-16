@@ -58,6 +58,10 @@ class LLMReviewer:
     def __init__(self, client, prompt_id=PROMPT_ID, max_tokens=160):
         self.client, self.prompt_id, self.max_tokens = client, prompt_id, max_tokens
 
+    @property
+    def backend(self):  # alias used by matcher/factory.py and its tests
+        return self.client
+
     def info(self):
         return {"reviewer": "llm", "prompt_id": self.prompt_id, "max_tokens": self.max_tokens, "client": self.client.info()}
 
