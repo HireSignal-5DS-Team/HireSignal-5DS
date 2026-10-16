@@ -4,15 +4,16 @@ from html import escape
 WRITER_LABEL = {"deterministic": "deterministic template",
                 "slm": "tiny SLM (validated)",
                 "slm_mock": "scripted test double (MOCK, not a model)",
-                "deterministic_fallback": "deterministic fallback (SLM text rejected)"}
+                "deterministic_fallback": "deterministic fallback (SLM text failed the fact check)"}
 
 
 def _writer(t):
     lab = WRITER_LABEL[t.writer]
     if t.writer == "slm" and t.model:
         lab += f", {t.model}"
-    if t.writer == "deterministic_fallback" and t.rejections:
-        lab += f"; rejected: {'; '.join(t.rejections)}"
+    if t.writer == "deterministic_fallback" and t.rejections:  # check names only; the details (which may contain
+        codes = {c.split(":")[0] for r in t.rejections for c in r.split("; ")}  # the unsupported words) stay in JSON
+        lab += f"; failed checks: {', '.join(sorted(codes))}"
     return lab
 
 
@@ -76,7 +77,7 @@ def to_markdown(rep):
           + (f"; {_md(p.slm['model'])}, prompt `{p.slm['prompt_id']}` (sha256 {p.slm['prompt_sha256'][:12]})"
              if p.slm else ""),
           f"- Text sections: {p.sections_total} total, {p.sections_slm} written by the SLM, "
-          f"{p.sections_fallback} deterministic fallback after SLM rejection",
+          f"{p.sections_fallback} deterministic fallback after a failed fact check",
           f"- Matcher prompt `{_md(str(p.pipeline['backend'].get('prompt_id')))}` · knowledge "
           f"`{_md(str(p.pipeline.get('knowledge')))}` · judge `{_md(str(p.pipeline.get('judge')))}`", "",
           f"_{rep.disclaimer}_", ""]
@@ -129,7 +130,7 @@ def to_html(rep):
     H += ["<h2>Provenance</h2><ul>", f"<li>Report schema {e(p.report_schema_version)}, renderer {e(p.renderer)}</li>",
           f"<li>SLM layer: {e(p.slm_status)}{slm}</li>",
           f"<li>Text sections: {p.sections_total} total, {p.sections_slm} written by the SLM, "
-          f"{p.sections_fallback} deterministic fallback after SLM rejection</li>",
+          f"{p.sections_fallback} deterministic fallback after a failed fact check</li>",
           f"<li>Matcher prompt {e(p.pipeline['backend'].get('prompt_id'))} · knowledge {e(p.pipeline.get('knowledge'))}"
           f" · judge {e(p.pipeline.get('judge'))}</li></ul>",
           f"<p class=disc>{e(rep.disclaimer)}</p></body></html>"]

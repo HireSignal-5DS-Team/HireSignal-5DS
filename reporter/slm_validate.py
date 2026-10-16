@@ -22,7 +22,7 @@ shown mention mentions mentioned mentioning document documented documents docume
 describes described describe refer refers referred notes note noted checked check checks result results summary
 must must-have nice nice-to-have have-to have human reviewer reviewers review reviewed reviewing needs need needed
 required requires require requiring flagged flag flags manual manually reading read
-met missing uncertain unclear ambiguous partial partially supported support supports contradicted contradicts
+meet meets satisfy satisfies met missing uncertain unclear ambiguous partial partially supported support supports contradicted contradicts
 contradict absent absence proof proves prove meaning means mean evidence-based clear clearly directly explicit
 explicitly enough sufficient insufficient further confirm confirmed confirms cannot can could may might would should
 which where when how whether there here out total overall count counted among other others remaining rest
@@ -34,6 +34,7 @@ please see seen given give gives found find finds
 indicate indicates indicated assess assessed evaluate evaluated determine determined verify verified establish
 established specify specified explain explains explained provide provides provided include includes included
 contain contains contained appear appears appeared mark marked
+anything nothing something related regarding concerning specific specifically
 """.split())
 
 NUMBER_WORDS = {w: i for i, w in enumerate("zero one two three four five six seven eight nine ten eleven twelve "

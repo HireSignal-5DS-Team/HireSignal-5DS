@@ -39,7 +39,11 @@ def main():
     d.mkdir(parents=True, exist_ok=True)
     (d / "report.json").write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n")
     (d / "report.md").write_text(write_report(out))
-    print(f"wrote {d / 'report.json'} and {d / 'report.md'}; human review needed for {out['summary']['requires_human_review']} requirement(s)")
+    from reporter import slm_from_env, write_files  # S8 Report Writer: JSON/HTML/MD; HS_REPORTER_SLM=on adds SLM text
+
+    slm, status = slm_from_env(env)
+    write_files(out, d, slm=slm, slm_status=status, job_title=job.get("title"))
+    print(f"wrote {d / 'report.json'}, {d / 'report.md'} and report.report.json/.html/.slm.md (SLM {status}); human review needed for {out['summary']['requires_human_review']} requirement(s)")
 
 
 if __name__ == "__main__":

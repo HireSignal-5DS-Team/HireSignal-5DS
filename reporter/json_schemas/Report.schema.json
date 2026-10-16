@@ -1,0 +1,685 @@
+{
+  "$defs": {
+    "BiasView": {
+      "additionalProperties": false,
+      "properties": {
+        "audit_status": {
+          "title": "Audit Status",
+          "type": "string"
+        },
+        "counterfactual_flip": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Counterfactual Flip"
+        },
+        "affected_attribute": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Affected Attribute"
+        },
+        "leakage_terms": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Leakage Terms",
+          "type": "array"
+        },
+        "demographic_evidence": {
+          "default": false,
+          "title": "Demographic Evidence",
+          "type": "boolean"
+        },
+        "requires_human_review": {
+          "default": false,
+          "title": "Requires Human Review",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "audit_status"
+      ],
+      "title": "BiasView",
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "quote": {
+          "description": "verbatim substring of the CV text (verified by the Matcher validator)",
+          "title": "Quote",
+          "type": "string"
+        },
+        "span": {
+          "description": "[start, end) character offsets in the CV text",
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Span",
+          "type": "array"
+        }
+      },
+      "required": [
+        "quote",
+        "span"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "JudgeView": {
+      "additionalProperties": false,
+      "properties": {
+        "verdict": {
+          "description": "PASS | FAIL | UNCERTAIN | NOT_APPLICABLE | not run",
+          "title": "Verdict",
+          "type": "string"
+        },
+        "score": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Score"
+        },
+        "nli_probs": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Nli Probs"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model"
+        },
+        "disagrees": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Disagrees"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        }
+      },
+      "required": [
+        "verdict"
+      ],
+      "title": "JudgeView",
+      "type": "object"
+    },
+    "KnowledgeShown": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Type"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Title"
+        },
+        "url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Url"
+        },
+        "retrieval": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Retrieval"
+        },
+        "label": {
+          "const": "knowledge shown to the model",
+          "default": "knowledge shown to the model",
+          "title": "Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id"
+      ],
+      "title": "KnowledgeShown",
+      "type": "object"
+    },
+    "ModelView": {
+      "additionalProperties": false,
+      "properties": {
+        "answered_by": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "primary | fallback | single | None (no model answered)",
+          "title": "Answered By"
+        },
+        "model_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Model Id"
+        },
+        "served_alias": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Served Alias"
+        },
+        "adapter": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "adapter repo@sha, or None",
+          "title": "Adapter"
+        },
+        "prompt_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Prompt Id"
+        },
+        "knowledge_provider": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Knowledge Provider"
+        },
+        "mock": {
+          "default": false,
+          "title": "Mock",
+          "type": "boolean"
+        },
+        "replayed_from": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "set when a saved LIVE model output was replayed (no new call)",
+          "title": "Replayed From"
+        }
+      },
+      "required": [
+        "answered_by"
+      ],
+      "title": "ModelView",
+      "type": "object"
+    },
+    "Overview": {
+      "additionalProperties": false,
+      "properties": {
+        "cv_id": {
+          "title": "Cv Id",
+          "type": "string"
+        },
+        "job_id": {
+          "title": "Job Id",
+          "type": "string"
+        },
+        "job_title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "only when given by the caller; the pipeline output has none",
+          "title": "Job Title"
+        },
+        "counts": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "title": "Counts",
+          "type": "object"
+        },
+        "must_met": {
+          "title": "Must Met",
+          "type": "integer"
+        },
+        "must_total": {
+          "title": "Must Total",
+          "type": "integer"
+        },
+        "requires_human_review": {
+          "title": "Requires Human Review",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "cv_id",
+        "job_id",
+        "counts",
+        "must_met",
+        "must_total",
+        "requires_human_review"
+      ],
+      "title": "Overview",
+      "type": "object"
+    },
+    "ReporterProvenance": {
+      "additionalProperties": false,
+      "properties": {
+        "report_schema_version": {
+          "default": "1.0.0",
+          "title": "Report Schema Version",
+          "type": "string"
+        },
+        "renderer": {
+          "title": "Renderer",
+          "type": "string"
+        },
+        "slm": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "model id, revision, file, sha256, licence, runtime, decoding, prompt id + sha256; None when the SLM layer is off",
+          "title": "Slm"
+        },
+        "slm_status": {
+          "description": "off | on | unavailable: <reason>",
+          "title": "Slm Status",
+          "type": "string"
+        },
+        "sections_total": {
+          "title": "Sections Total",
+          "type": "integer"
+        },
+        "sections_slm": {
+          "title": "Sections Slm",
+          "type": "integer"
+        },
+        "sections_fallback": {
+          "title": "Sections Fallback",
+          "type": "integer"
+        },
+        "pipeline": {
+          "additionalProperties": true,
+          "description": "pipeline backend / knowledge / judge / parser as given in the input",
+          "title": "Pipeline",
+          "type": "object"
+        },
+        "any_mock": {
+          "title": "Any Mock",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "renderer",
+        "slm_status",
+        "sections_total",
+        "sections_slm",
+        "sections_fallback",
+        "pipeline",
+        "any_mock"
+      ],
+      "title": "ReporterProvenance",
+      "type": "object"
+    },
+    "RequirementSection": {
+      "additionalProperties": false,
+      "properties": {
+        "req_id": {
+          "title": "Req Id",
+          "type": "string"
+        },
+        "requirement_text": {
+          "title": "Requirement Text",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "must",
+            "nice"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "decision": {
+          "enum": [
+            "MET",
+            "MISSING",
+            "UNCERTAIN"
+          ],
+          "title": "Decision",
+          "type": "string"
+        },
+        "model_decision": {
+          "anyOf": [
+            {
+              "enum": [
+                "MET",
+                "MISSING",
+                "UNCERTAIN"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Model Decision"
+        },
+        "basis": {
+          "title": "Basis",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "knowledge_shown": {
+          "items": {
+            "$ref": "#/$defs/KnowledgeShown"
+          },
+          "title": "Knowledge Shown",
+          "type": "array"
+        },
+        "validator_reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Validator Reasons",
+          "type": "array"
+        },
+        "bias_audit": {
+          "$ref": "#/$defs/BiasView"
+        },
+        "judge": {
+          "$ref": "#/$defs/JudgeView"
+        },
+        "requires_human_review": {
+          "title": "Requires Human Review",
+          "type": "boolean"
+        },
+        "review_reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Review Reasons",
+          "type": "array"
+        },
+        "model": {
+          "$ref": "#/$defs/ModelView"
+        },
+        "explanation": {
+          "$ref": "#/$defs/TextSection",
+          "description": "deterministic grounded explanation from the pipeline"
+        },
+        "plain_note": {
+          "$ref": "#/$defs/TextSection",
+          "description": "one-sentence plain-language note (SLM if validated, else template)"
+        }
+      },
+      "required": [
+        "req_id",
+        "requirement_text",
+        "kind",
+        "decision",
+        "model_decision",
+        "basis",
+        "evidence",
+        "knowledge_shown",
+        "validator_reasons",
+        "bias_audit",
+        "judge",
+        "requires_human_review",
+        "review_reasons",
+        "model",
+        "explanation",
+        "plain_note"
+      ],
+      "title": "RequirementSection",
+      "type": "object"
+    },
+    "TextSection": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "title": "Text",
+          "type": "string"
+        },
+        "writer": {
+          "description": "who wrote `text`: deterministic template, validated SLM output, a scripted test double (slm_mock, never a model), or the deterministic fallback used after the SLM output was rejected",
+          "enum": [
+            "deterministic",
+            "slm",
+            "slm_mock",
+            "deterministic_fallback"
+          ],
+          "title": "Writer",
+          "type": "string"
+        },
+        "model": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "SLM id@revision when writer == 'slm' (or attempted for a fallback)",
+          "title": "Model"
+        },
+        "attempts": {
+          "default": 0,
+          "description": "SLM generations tried for this section (0 = SLM not used)",
+          "title": "Attempts",
+          "type": "integer"
+        },
+        "rejections": {
+          "description": "validator reasons for each rejected SLM attempt",
+          "items": {
+            "type": "string"
+          },
+          "title": "Rejections",
+          "type": "array"
+        },
+        "rejected_outputs": {
+          "description": "raw SLM text of each rejected attempt (audit only, never shown as report text)",
+          "items": {
+            "type": "string"
+          },
+          "title": "Rejected Outputs",
+          "type": "array"
+        },
+        "latency_s": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Latency S"
+        }
+      },
+      "required": [
+        "text",
+        "writer"
+      ],
+      "title": "TextSection",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1.0.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "disclaimer": {
+      "default": "Decision support only. This report checks job requirements against the text of an anonymised CV. It is not a hiring decision and makes no recommendation about the person. A human reviewer makes every decision, and must check each item flagged for review.",
+      "title": "Disclaimer",
+      "type": "string"
+    },
+    "overview": {
+      "$ref": "#/$defs/Overview"
+    },
+    "executive_summary": {
+      "$ref": "#/$defs/TextSection"
+    },
+    "requirements": {
+      "items": {
+        "$ref": "#/$defs/RequirementSection"
+      },
+      "title": "Requirements",
+      "type": "array"
+    },
+    "provenance": {
+      "$ref": "#/$defs/ReporterProvenance"
+    }
+  },
+  "required": [
+    "overview",
+    "executive_summary",
+    "requirements",
+    "provenance"
+  ],
+  "title": "Report",
+  "type": "object"
+}
