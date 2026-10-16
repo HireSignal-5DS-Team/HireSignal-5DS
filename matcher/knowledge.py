@@ -27,12 +27,32 @@ def esco_aliases(text):
     return [a.strip() for a in m.group(1).split(";") if a.strip()] if m else []
 
 
+def file_sha12(path):
+    """First 12 hex chars of the SHA-256 of a data file (provider `version` strings for provenance)."""
+    import hashlib
+
+    try:
+        return hashlib.sha256(Path(path).read_bytes()).hexdigest()[:12]
+    except OSError:
+        return "missing"
+
+
+def _bm25s_version():
+    try:
+        from importlib.metadata import version
+
+        return version("bm25s")
+    except Exception:  # noqa: BLE001 - provenance only
+        return "unknown"
+
+
 def query_for(req):
     return " ".join(req.skill_terms) if req.skill_terms else req.text
 
 
 class FixtureKnowledge:
     name = "fixture"
+    version = "fixture"
 
     def __init__(self, entries):
         """entries: list of dicts {source_id, title, aliases, text}; matched when title or alias occurs in the query."""
@@ -61,6 +81,7 @@ class RagKnowledge:
         chunks = [{**e, "chunk_id": e["doc_id"], "section": None, "start": None, "end": None} for e in esco]
         self.retriever = Retriever(chunks)  # model=None -> BM25 only, no embedding model
         self.min_score = min_score
+        self.version = f"bm25s-{_bm25s_version()};esco={file_sha12(rag_dir / 'data/esco/esco_ict_skills.jsonl')};min_score={min_score}"
 
     def lookup(self, req, k=3, job_id=None):
         out = self.retriever.search(query_for(req), k=k, mode="bm25", filters={"source_type": "esco"})
@@ -71,6 +92,7 @@ class RagKnowledge:
 
 class NoKnowledge:
     name = "none"
+    version = "none"
 
     def lookup(self, req, k=3, job_id=None):
         return []
@@ -98,6 +120,8 @@ class QdrantKnowledge:
             retriever = Retriever(build_chunks("structure"), model="e5-small", store_path=Path(index_dir or rag_dir / "index"))
         self.retriever = retriever
         self.job_ids = {c["doc_id"] for c in retriever.chunks if c.get("source_type") == "job"}
+        self.version = (f"e5-small;index={getattr(retriever, 'collection', 'n/a')};"
+                        f"esco={file_sha12(rag_dir / 'data/esco/esco_ict_skills.jsonl')};k_job={k_job}")
 
     def lookup(self, req, k=3, job_id=None):
         out = self.retriever.search(query_for(req), k=k, mode="dense", filters={"source_type": "esco"})
@@ -234,6 +258,10 @@ class GatedKnowledge:
         self.form_tokens = {e["doc_id"]: [content_tokens(x) for x in [e["title"], *esco_aliases(e["text"])]] for e in esco}
         self.job_ids = {c["doc_id"] for c in retriever.chunks if c.get("source_type") == "job"}
         self.name = f"{GATED_VERSION}+{'bm25' if mode == 'bm25' else 'qdrant.' + str(getattr(retriever, 'collection', mode))}"
+        self.version = (f"{GATED_VERSION};retriever={'bm25s-' + _bm25s_version() if mode == 'bm25' else 'qdrant.' + str(getattr(retriever, 'collection', mode))};"
+                        f"esco={file_sha12(rag_dir / 'data/esco/esco_ict_skills.jsonl')};tau={dense_tau};max_extra={max_extra};"
+                        f"per_term={per_term};sentence_min_cover={sentence_min_cover};gate={','.join(sorted(self.gate))};"
+                        f"max_chars={MAX_TEXT_CHARS}")
         self.last_trace = None
 
     # -- concept selection --

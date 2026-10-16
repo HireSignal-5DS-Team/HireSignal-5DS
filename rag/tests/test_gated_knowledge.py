@@ -187,3 +187,12 @@ def test_dense_candidate_needs_tau(gated):
     assert GatedKnowledge(retriever=FakeDense(gated.retriever.chunks, ml, 0.80), mode="dense", dense_tau=0.85).lookup(req) == []
     with pytest.raises(ValueError):
         GatedKnowledge(retriever=gated.retriever, mode="dense")
+
+
+def test_every_provider_has_a_version_for_provenance(gated):
+    from matcher.knowledge import FixtureKnowledge
+
+    for p in (gated, RagKnowledge(), NoKnowledge(), FixtureKnowledge([])):
+        assert isinstance(p.version, str) and p.version
+    assert gated.version.startswith("rag.gated.v1;retriever=bm25s-") and "esco=8c6a4b3d0f26" in gated.version
+    assert "esco=8c6a4b3d0f26" in RagKnowledge().version
