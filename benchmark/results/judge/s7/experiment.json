@@ -1,0 +1,2412 @@
+{
+  "protocol": "S7 Judge experiment: calibrate on train-dev, evaluate on val with REAL LoRA Matcher outputs (no Matcher call).\n\nProtocol (fixed before any val number was looked at; docs/JUDGE.md \u00a74):\n1. Calibration items: `benchmark/results/lexical-rag-train` (lexical baseline outputs on TRAIN), train-dev cases only\n   (case index % 5 == 0), re-validated by the current validator. The only Matcher predictions on train in the repo.\n2. Per model: hypothesis template chosen by train-dev AUROC of the wrongness score (ties -> v1);\n   then tau_fail = argmax train-dev strict-FAIL F1, tau_pass = argmin 5*missed + extra reviews (calibrate_two).\n3. Val items: saved LIVE LoRA Matcher outputs (rag_opt/results/e2e/lora__*), raw outputs re-validated by the current\n   validator with the provider of each arm (what the pipeline Judge sees). Same pairs for every Judge model.\n4. Latency: per requirement, batch size 1, fp32 CPU, torch threads = 4, on the val items of one arm.",
+  "calibration_set": {
+    "run": "lexical-rag-train",
+    "split": "train-dev (train case index % 5 == 0)",
+    "n_items": 142,
+    "n_errors": 37
+  },
+  "val_sets": {
+    "gated/replay-v2": {
+      "run_dir": "rag_opt/results/e2e/lora__gated",
+      "split": "val",
+      "n_items": 202,
+      "matcher": "LIVE Qwen3-4B-Instruct-2507 Q4_K_M + HireSignal LoRA @0b6925b1 (saved raw outputs)",
+      "validator": "current matcher/validate.py (replay of the raw outputs)"
+    },
+    "gated/saved-v1": {
+      "run_dir": "rag_opt/results/e2e/lora__gated",
+      "split": "val",
+      "n_items": 202,
+      "matcher": "LIVE Qwen3-4B-Instruct-2507 Q4_K_M + HireSignal LoRA @0b6925b1 (saved raw outputs)",
+      "validator": "decisions as saved by the live run (validator v1, before QA-025/026)"
+    },
+    "none/replay-v2": {
+      "run_dir": "rag_opt/results/e2e/lora__none",
+      "split": "val",
+      "n_items": 202,
+      "matcher": "LIVE Qwen3-4B-Instruct-2507 Q4_K_M + HireSignal LoRA @0b6925b1 (saved raw outputs)",
+      "validator": "current matcher/validate.py (replay of the raw outputs)"
+    },
+    "none/saved-v1": {
+      "run_dir": "rag_opt/results/e2e/lora__none",
+      "split": "val",
+      "n_items": 202,
+      "matcher": "LIVE Qwen3-4B-Instruct-2507 Q4_K_M + HireSignal LoRA @0b6925b1 (saved raw outputs)",
+      "validator": "decisions as saved by the live run (validator v1, before QA-025/026)"
+    },
+    "bm25/replay-v2": {
+      "run_dir": "rag_opt/results/e2e/lora__bm25",
+      "split": "val",
+      "n_items": 202,
+      "matcher": "LIVE Qwen3-4B-Instruct-2507 Q4_K_M + HireSignal LoRA @0b6925b1 (saved raw outputs)",
+      "validator": "current matcher/validate.py (replay of the raw outputs)"
+    },
+    "bm25/saved-v1": {
+      "run_dir": "rag_opt/results/e2e/lora__bm25",
+      "split": "val",
+      "n_items": 202,
+      "matcher": "LIVE Qwen3-4B-Instruct-2507 Q4_K_M + HireSignal LoRA @0b6925b1 (saved raw outputs)",
+      "validator": "decisions as saved by the live run (validator v1, before QA-025/026)"
+    },
+    "none-repeat/replay-v2": {
+      "run_dir": "rag_opt/results/e2e/lora__none-repeat",
+      "split": "val",
+      "n_items": 202,
+      "matcher": "LIVE Qwen3-4B-Instruct-2507 Q4_K_M + HireSignal LoRA @0b6925b1 (saved raw outputs)",
+      "validator": "current matcher/validate.py (replay of the raw outputs)"
+    },
+    "none-repeat/saved-v1": {
+      "run_dir": "rag_opt/results/e2e/lora__none-repeat",
+      "split": "val",
+      "n_items": 202,
+      "matcher": "LIVE Qwen3-4B-Instruct-2507 Q4_K_M + HireSignal LoRA @0b6925b1 (saved raw outputs)",
+      "validator": "decisions as saved by the live run (validator v1, before QA-025/026)"
+    }
+  },
+  "models": {
+    "xsmall": {
+      "model_id": "cross-encoder/nli-deberta-v3-xsmall",
+      "revision": "a150876415327c80daeff35ca6f68f5ed8cf5c24",
+      "params_m": 70.8,
+      "label_index": {
+        "entailment": 1,
+        "neutral": 2,
+        "contradiction": 0
+      },
+      "load_s": 5.03,
+      "template_auroc_traindev": {
+        "v1": 0.5695099818511796,
+        "v2": 0.6475499092558984
+      },
+      "hypothesis": "v2",
+      "calibration": {
+        "tau_fail": 0.85,
+        "tau_pass": 0.75,
+        "strict_f1_grid": {
+          "0.3": 0.4210526315789474,
+          "0.35": 0.4210526315789474,
+          "0.4": 0.4210526315789474,
+          "0.45": 0.4210526315789474,
+          "0.5": 0.4210526315789474,
+          "0.55": 0.4210526315789474,
+          "0.6": 0.4086021505376344,
+          "0.65": 0.41758241758241765,
+          "0.7": 0.40449438202247195,
+          "0.75": 0.39999999999999997,
+          "0.8": 0.4047619047619047,
+          "0.85": 0.425,
+          "0.9": 0.3733333333333333,
+          "0.95": 0.35294117647058826
+        },
+        "pass_cost_grid": {
+          "0.3": 96.0,
+          "0.35": 91.0,
+          "0.4": 92.0,
+          "0.45": 93.0,
+          "0.5": 94.0,
+          "0.55": 84.0,
+          "0.6": 82.0,
+          "0.65": 83.0,
+          "0.7": 85.0,
+          "0.75": 81.0,
+          "0.8": 83.0,
+          "0.85": 84.0,
+          "0.9": 86.0,
+          "0.95": 85.0
+        },
+        "w_miss": 5.0,
+        "tau_pass_if_w_miss": {
+          "2.0": 0.55,
+          "10.0": 0.95
+        }
+      },
+      "traindev": {
+        "n_items": 142,
+        "n_applicable": 124,
+        "n_errors_applicable": 29,
+        "fail_precision": 0.333,
+        "fail_recall": 0.586,
+        "fail_f1": 0.425,
+        "fail_tp_fp_fn": [
+          17,
+          34,
+          12
+        ],
+        "false_positive_flag_rate": 0.358,
+        "broad_recall": 0.828,
+        "wrong_met": 16,
+        "false_approvals": 0,
+        "false_approvals_unreviewed_by_validator": 0,
+        "false_approval_items": [],
+        "judge_review_rate": 0.69,
+        "validator_review_rate": 0.415,
+        "validator_or_judge_review_rate": 0.866,
+        "auroc": 0.648,
+        "ece": 0.404,
+        "verdicts": {
+          "PASS": 44,
+          "FAIL": 51,
+          "UNCERTAIN": 29,
+          "NOT_APPLICABLE": 18
+        }
+      },
+      "legacy_single_tau": 0.85,
+      "val": {
+        "gated/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 8,
+          "fail_precision": 0.0,
+          "fail_recall": 0.0,
+          "fail_f1": 0.0,
+          "fail_tp_fp_fn": [
+            0,
+            46,
+            8
+          ],
+          "false_positive_flag_rate": 0.297,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.748,
+          "validator_review_rate": 0.594,
+          "validator_or_judge_review_rate": 0.901,
+          "auroc": 0.746,
+          "ece": 0.584,
+          "verdicts": {
+            "PASS": 51,
+            "FAIL": 46,
+            "UNCERTAIN": 66,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "gated/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 11,
+          "fail_precision": 0.042,
+          "fail_recall": 0.182,
+          "fail_f1": 0.068,
+          "fail_tp_fp_fn": [
+            2,
+            46,
+            9
+          ],
+          "false_positive_flag_rate": 0.297,
+          "broad_recall": 1.0,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.748,
+          "validator_review_rate": 0.589,
+          "validator_or_judge_review_rate": 0.901,
+          "auroc": 0.781,
+          "ece": 0.573,
+          "verdicts": {
+            "PASS": 51,
+            "FAIL": 48,
+            "UNCERTAIN": 67,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "none/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.0,
+          "fail_recall": 0.0,
+          "fail_f1": 0.0,
+          "fail_tp_fp_fn": [
+            0,
+            45,
+            9
+          ],
+          "false_positive_flag_rate": 0.292,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.733,
+          "validator_review_rate": 0.668,
+          "validator_or_judge_review_rate": 0.921,
+          "auroc": 0.593,
+          "ece": 0.567,
+          "verdicts": {
+            "PASS": 54,
+            "FAIL": 45,
+            "UNCERTAIN": 64,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "none/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.043,
+          "fail_recall": 0.167,
+          "fail_f1": 0.068,
+          "fail_tp_fp_fn": [
+            2,
+            45,
+            10
+          ],
+          "false_positive_flag_rate": 0.292,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.733,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.921,
+          "auroc": 0.664,
+          "ece": 0.557,
+          "verdicts": {
+            "PASS": 54,
+            "FAIL": 47,
+            "UNCERTAIN": 65,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "bm25/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 167,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.0,
+          "fail_recall": 0.0,
+          "fail_f1": 0.0,
+          "fail_tp_fp_fn": [
+            0,
+            46,
+            9
+          ],
+          "false_positive_flag_rate": 0.291,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.738,
+          "validator_review_rate": 0.584,
+          "validator_or_judge_review_rate": 0.901,
+          "auroc": 0.757,
+          "ece": 0.573,
+          "verdicts": {
+            "PASS": 53,
+            "FAIL": 46,
+            "UNCERTAIN": 68,
+            "NOT_APPLICABLE": 35
+          }
+        },
+        "bm25/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 171,
+          "n_errors_applicable": 13,
+          "fail_precision": 0.042,
+          "fail_recall": 0.154,
+          "fail_f1": 0.066,
+          "fail_tp_fp_fn": [
+            2,
+            46,
+            11
+          ],
+          "false_positive_flag_rate": 0.291,
+          "broad_recall": 1.0,
+          "wrong_met": 4,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.738,
+          "validator_review_rate": 0.574,
+          "validator_or_judge_review_rate": 0.901,
+          "auroc": 0.774,
+          "ece": 0.559,
+          "verdicts": {
+            "PASS": 53,
+            "FAIL": 48,
+            "UNCERTAIN": 70,
+            "NOT_APPLICABLE": 31
+          }
+        },
+        "none-repeat/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 161,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.0,
+          "fail_recall": 0.0,
+          "fail_f1": 0.0,
+          "fail_tp_fp_fn": [
+            0,
+            45,
+            9
+          ],
+          "false_positive_flag_rate": 0.296,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.738,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.921,
+          "auroc": 0.528,
+          "ece": 0.569,
+          "verdicts": {
+            "PASS": 53,
+            "FAIL": 45,
+            "UNCERTAIN": 63,
+            "NOT_APPLICABLE": 41
+          }
+        },
+        "none-repeat/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 164,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.043,
+          "fail_recall": 0.167,
+          "fail_f1": 0.068,
+          "fail_tp_fp_fn": [
+            2,
+            45,
+            10
+          ],
+          "false_positive_flag_rate": 0.296,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.738,
+          "validator_review_rate": 0.658,
+          "validator_or_judge_review_rate": 0.921,
+          "auroc": 0.615,
+          "ece": 0.558,
+          "verdicts": {
+            "PASS": 53,
+            "FAIL": 47,
+            "UNCERTAIN": 64,
+            "NOT_APPLICABLE": 38
+          }
+        }
+      },
+      "val_other_template": {
+        "gated/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 8,
+          "fail_precision": 0.0,
+          "fail_recall": 0.0,
+          "fail_f1": 0.0,
+          "fail_tp_fp_fn": [
+            0,
+            65,
+            8
+          ],
+          "false_positive_flag_rate": 0.419,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.698,
+          "validator_review_rate": 0.594,
+          "validator_or_judge_review_rate": 0.911,
+          "auroc": 0.56,
+          "ece": 0.543,
+          "verdicts": {
+            "PASS": 61,
+            "FAIL": 65,
+            "UNCERTAIN": 37,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "gated/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 11,
+          "fail_precision": 0.044,
+          "fail_recall": 0.273,
+          "fail_f1": 0.076,
+          "fail_tp_fp_fn": [
+            3,
+            65,
+            8
+          ],
+          "false_positive_flag_rate": 0.419,
+          "broad_recall": 1.0,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.698,
+          "validator_review_rate": 0.589,
+          "validator_or_judge_review_rate": 0.911,
+          "auroc": 0.635,
+          "ece": 0.533,
+          "verdicts": {
+            "PASS": 61,
+            "FAIL": 68,
+            "UNCERTAIN": 37,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "none/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.0,
+          "fail_recall": 0.0,
+          "fail_f1": 0.0,
+          "fail_tp_fp_fn": [
+            0,
+            64,
+            9
+          ],
+          "false_positive_flag_rate": 0.416,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.688,
+          "validator_review_rate": 0.668,
+          "validator_or_judge_review_rate": 0.931,
+          "auroc": 0.431,
+          "ece": 0.526,
+          "verdicts": {
+            "PASS": 63,
+            "FAIL": 64,
+            "UNCERTAIN": 36,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "none/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.045,
+          "fail_recall": 0.25,
+          "fail_f1": 0.076,
+          "fail_tp_fp_fn": [
+            3,
+            64,
+            9
+          ],
+          "false_positive_flag_rate": 0.416,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.688,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.931,
+          "auroc": 0.531,
+          "ece": 0.516,
+          "verdicts": {
+            "PASS": 63,
+            "FAIL": 67,
+            "UNCERTAIN": 36,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "bm25/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 167,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.0,
+          "fail_recall": 0.0,
+          "fail_f1": 0.0,
+          "fail_tp_fp_fn": [
+            0,
+            65,
+            9
+          ],
+          "false_positive_flag_rate": 0.411,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.693,
+          "validator_review_rate": 0.584,
+          "validator_or_judge_review_rate": 0.911,
+          "auroc": 0.549,
+          "ece": 0.542,
+          "verdicts": {
+            "PASS": 62,
+            "FAIL": 65,
+            "UNCERTAIN": 40,
+            "NOT_APPLICABLE": 35
+          }
+        },
+        "bm25/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 171,
+          "n_errors_applicable": 13,
+          "fail_precision": 0.058,
+          "fail_recall": 0.308,
+          "fail_f1": 0.098,
+          "fail_tp_fp_fn": [
+            4,
+            65,
+            9
+          ],
+          "false_positive_flag_rate": 0.411,
+          "broad_recall": 1.0,
+          "wrong_met": 4,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.693,
+          "validator_review_rate": 0.574,
+          "validator_or_judge_review_rate": 0.911,
+          "auroc": 0.623,
+          "ece": 0.529,
+          "verdicts": {
+            "PASS": 62,
+            "FAIL": 69,
+            "UNCERTAIN": 40,
+            "NOT_APPLICABLE": 31
+          }
+        },
+        "none-repeat/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 161,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.0,
+          "fail_recall": 0.0,
+          "fail_f1": 0.0,
+          "fail_tp_fp_fn": [
+            0,
+            64,
+            9
+          ],
+          "false_positive_flag_rate": 0.421,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.688,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.931,
+          "auroc": 0.411,
+          "ece": 0.522,
+          "verdicts": {
+            "PASS": 63,
+            "FAIL": 64,
+            "UNCERTAIN": 34,
+            "NOT_APPLICABLE": 41
+          }
+        },
+        "none-repeat/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 164,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.045,
+          "fail_recall": 0.25,
+          "fail_f1": 0.076,
+          "fail_tp_fp_fn": [
+            3,
+            64,
+            9
+          ],
+          "false_positive_flag_rate": 0.421,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.688,
+          "validator_review_rate": 0.658,
+          "validator_or_judge_review_rate": 0.931,
+          "auroc": 0.516,
+          "ece": 0.512,
+          "verdicts": {
+            "PASS": 63,
+            "FAIL": 67,
+            "UNCERTAIN": 34,
+            "NOT_APPLICABLE": 38
+          }
+        }
+      },
+      "latency": {
+        "n_items_with_nli": 163,
+        "n_pairs": 163,
+        "p50_s": 0.0379,
+        "p95_s": 0.062,
+        "mean_s": 0.0405,
+        "batch_size": 1,
+        "dtype": "float32",
+        "device": "cpu",
+        "torch_threads": 4
+      }
+    },
+    "base": {
+      "model_id": "MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli",
+      "revision": "6f5cf0a2b59cabb106aca4c287eed12e357e90eb",
+      "params_m": 184.4,
+      "label_index": {
+        "entailment": 0,
+        "neutral": 1,
+        "contradiction": 2
+      },
+      "load_s": 1.06,
+      "template_auroc_traindev": {
+        "v1": 0.8509981851179673,
+        "v2": 0.803448275862069
+      },
+      "hypothesis": "v1",
+      "calibration": {
+        "tau_fail": 0.65,
+        "tau_pass": 0.4,
+        "strict_f1_grid": {
+          "0.3": 0.6086956521739131,
+          "0.35": 0.6086956521739131,
+          "0.4": 0.6086956521739131,
+          "0.45": 0.6086956521739131,
+          "0.5": 0.6086956521739131,
+          "0.55": 0.6222222222222222,
+          "0.6": 0.6136363636363636,
+          "0.65": 0.6352941176470589,
+          "0.7": 0.6352941176470589,
+          "0.75": 0.6265060240963856,
+          "0.8": 0.564102564102564,
+          "0.85": 0.5205479452054794,
+          "0.9": 0.5,
+          "0.95": 0.49122807017543857
+        },
+        "pass_cost_grid": {
+          "0.3": 39.0,
+          "0.35": 40.0,
+          "0.4": 37.0,
+          "0.45": 39.0,
+          "0.5": 41.0,
+          "0.55": 45.0,
+          "0.6": 49.0,
+          "0.65": 50.0,
+          "0.7": 46.0,
+          "0.75": 49.0,
+          "0.8": 53.0,
+          "0.85": 58.0,
+          "0.9": 63.0,
+          "0.95": 71.0
+        },
+        "w_miss": 5.0,
+        "tau_pass_if_w_miss": {
+          "2.0": 0.3,
+          "10.0": 0.4
+        }
+      },
+      "traindev": {
+        "n_items": 142,
+        "n_applicable": 124,
+        "n_errors_applicable": 29,
+        "fail_precision": 0.482,
+        "fail_recall": 0.931,
+        "fail_f1": 0.635,
+        "fail_tp_fp_fn": [
+          27,
+          29,
+          2
+        ],
+        "false_positive_flag_rate": 0.305,
+        "broad_recall": 0.966,
+        "wrong_met": 16,
+        "false_approvals": 1,
+        "false_approvals_unreviewed_by_validator": 1,
+        "false_approval_items": [
+          "train-035/r1"
+        ],
+        "judge_review_rate": 0.549,
+        "validator_review_rate": 0.415,
+        "validator_or_judge_review_rate": 0.711,
+        "auroc": 0.851,
+        "ece": 0.297,
+        "verdicts": {
+          "PASS": 64,
+          "FAIL": 56,
+          "UNCERTAIN": 4,
+          "NOT_APPLICABLE": 18
+        }
+      },
+      "legacy_single_tau": 0.65,
+      "val": {
+        "gated/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 8,
+          "fail_precision": 0.016,
+          "fail_recall": 0.125,
+          "fail_f1": 0.028,
+          "fail_tp_fp_fn": [
+            1,
+            63,
+            7
+          ],
+          "false_positive_flag_rate": 0.406,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.698,
+          "validator_review_rate": 0.594,
+          "validator_or_judge_review_rate": 0.876,
+          "auroc": 0.936,
+          "ece": 0.552,
+          "verdicts": {
+            "PASS": 61,
+            "FAIL": 64,
+            "UNCERTAIN": 38,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "gated/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 11,
+          "fail_precision": 0.045,
+          "fail_recall": 0.273,
+          "fail_f1": 0.078,
+          "fail_tp_fp_fn": [
+            3,
+            63,
+            8
+          ],
+          "false_positive_flag_rate": 0.406,
+          "broad_recall": 1.0,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.698,
+          "validator_review_rate": 0.589,
+          "validator_or_judge_review_rate": 0.876,
+          "auroc": 0.802,
+          "ece": 0.536,
+          "verdicts": {
+            "PASS": 61,
+            "FAIL": 66,
+            "UNCERTAIN": 39,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "none/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.016,
+          "fail_recall": 0.111,
+          "fail_f1": 0.028,
+          "fail_tp_fp_fn": [
+            1,
+            61,
+            8
+          ],
+          "false_positive_flag_rate": 0.396,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.688,
+          "validator_review_rate": 0.668,
+          "validator_or_judge_review_rate": 0.871,
+          "auroc": 0.777,
+          "ece": 0.536,
+          "verdicts": {
+            "PASS": 63,
+            "FAIL": 62,
+            "UNCERTAIN": 38,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "none/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.047,
+          "fail_recall": 0.25,
+          "fail_f1": 0.079,
+          "fail_tp_fp_fn": [
+            3,
+            61,
+            9
+          ],
+          "false_positive_flag_rate": 0.396,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.688,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.871,
+          "auroc": 0.695,
+          "ece": 0.521,
+          "verdicts": {
+            "PASS": 63,
+            "FAIL": 64,
+            "UNCERTAIN": 39,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "bm25/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 167,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.015,
+          "fail_recall": 0.111,
+          "fail_f1": 0.027,
+          "fail_tp_fp_fn": [
+            1,
+            64,
+            8
+          ],
+          "false_positive_flag_rate": 0.405,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.698,
+          "validator_review_rate": 0.584,
+          "validator_or_judge_review_rate": 0.876,
+          "auroc": 0.942,
+          "ece": 0.553,
+          "verdicts": {
+            "PASS": 61,
+            "FAIL": 65,
+            "UNCERTAIN": 41,
+            "NOT_APPLICABLE": 35
+          }
+        },
+        "bm25/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 171,
+          "n_errors_applicable": 13,
+          "fail_precision": 0.059,
+          "fail_recall": 0.308,
+          "fail_f1": 0.099,
+          "fail_tp_fp_fn": [
+            4,
+            64,
+            9
+          ],
+          "false_positive_flag_rate": 0.405,
+          "broad_recall": 1.0,
+          "wrong_met": 4,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.698,
+          "validator_review_rate": 0.574,
+          "validator_or_judge_review_rate": 0.876,
+          "auroc": 0.784,
+          "ece": 0.533,
+          "verdicts": {
+            "PASS": 61,
+            "FAIL": 68,
+            "UNCERTAIN": 42,
+            "NOT_APPLICABLE": 31
+          }
+        },
+        "none-repeat/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 161,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.016,
+          "fail_recall": 0.111,
+          "fail_f1": 0.029,
+          "fail_tp_fp_fn": [
+            1,
+            60,
+            8
+          ],
+          "false_positive_flag_rate": 0.395,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.688,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.871,
+          "auroc": 0.779,
+          "ece": 0.533,
+          "verdicts": {
+            "PASS": 63,
+            "FAIL": 61,
+            "UNCERTAIN": 37,
+            "NOT_APPLICABLE": 41
+          }
+        },
+        "none-repeat/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 164,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.048,
+          "fail_recall": 0.25,
+          "fail_f1": 0.08,
+          "fail_tp_fp_fn": [
+            3,
+            60,
+            9
+          ],
+          "false_positive_flag_rate": 0.395,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.688,
+          "validator_review_rate": 0.658,
+          "validator_or_judge_review_rate": 0.871,
+          "auroc": 0.698,
+          "ece": 0.518,
+          "verdicts": {
+            "PASS": 63,
+            "FAIL": 63,
+            "UNCERTAIN": 38,
+            "NOT_APPLICABLE": 38
+          }
+        }
+      },
+      "val_other_template": {
+        "gated/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 8,
+          "fail_precision": 0.0,
+          "fail_recall": 0.0,
+          "fail_f1": 0.0,
+          "fail_tp_fp_fn": [
+            0,
+            50,
+            8
+          ],
+          "false_positive_flag_rate": 0.323,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.589,
+          "validator_review_rate": 0.594,
+          "validator_or_judge_review_rate": 0.777,
+          "auroc": 0.966,
+          "ece": 0.484,
+          "verdicts": {
+            "PASS": 83,
+            "FAIL": 50,
+            "UNCERTAIN": 30,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "gated/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 11,
+          "fail_precision": 0.057,
+          "fail_recall": 0.273,
+          "fail_f1": 0.094,
+          "fail_tp_fp_fn": [
+            3,
+            50,
+            8
+          ],
+          "false_positive_flag_rate": 0.323,
+          "broad_recall": 1.0,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.589,
+          "validator_review_rate": 0.589,
+          "validator_or_judge_review_rate": 0.777,
+          "auroc": 0.943,
+          "ece": 0.474,
+          "verdicts": {
+            "PASS": 83,
+            "FAIL": 53,
+            "UNCERTAIN": 30,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "none/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.0,
+          "fail_recall": 0.0,
+          "fail_f1": 0.0,
+          "fail_tp_fp_fn": [
+            0,
+            48,
+            9
+          ],
+          "false_positive_flag_rate": 0.312,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.574,
+          "validator_review_rate": 0.668,
+          "validator_or_judge_review_rate": 0.797,
+          "auroc": 0.774,
+          "ece": 0.472,
+          "verdicts": {
+            "PASS": 86,
+            "FAIL": 48,
+            "UNCERTAIN": 29,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "none/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.059,
+          "fail_recall": 0.25,
+          "fail_f1": 0.095,
+          "fail_tp_fp_fn": [
+            3,
+            48,
+            9
+          ],
+          "false_positive_flag_rate": 0.312,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.574,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.797,
+          "auroc": 0.802,
+          "ece": 0.462,
+          "verdicts": {
+            "PASS": 86,
+            "FAIL": 51,
+            "UNCERTAIN": 29,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "bm25/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 167,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.0,
+          "fail_recall": 0.0,
+          "fail_f1": 0.0,
+          "fail_tp_fp_fn": [
+            0,
+            51,
+            9
+          ],
+          "false_positive_flag_rate": 0.323,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.579,
+          "validator_review_rate": 0.584,
+          "validator_or_judge_review_rate": 0.777,
+          "auroc": 0.96,
+          "ece": 0.476,
+          "verdicts": {
+            "PASS": 85,
+            "FAIL": 51,
+            "UNCERTAIN": 31,
+            "NOT_APPLICABLE": 35
+          }
+        },
+        "bm25/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 171,
+          "n_errors_applicable": 13,
+          "fail_precision": 0.073,
+          "fail_recall": 0.308,
+          "fail_f1": 0.118,
+          "fail_tp_fp_fn": [
+            4,
+            51,
+            9
+          ],
+          "false_positive_flag_rate": 0.323,
+          "broad_recall": 1.0,
+          "wrong_met": 4,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.579,
+          "validator_review_rate": 0.574,
+          "validator_or_judge_review_rate": 0.777,
+          "auroc": 0.916,
+          "ece": 0.462,
+          "verdicts": {
+            "PASS": 85,
+            "FAIL": 55,
+            "UNCERTAIN": 31,
+            "NOT_APPLICABLE": 31
+          }
+        },
+        "none-repeat/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 161,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.0,
+          "fail_recall": 0.0,
+          "fail_f1": 0.0,
+          "fail_tp_fp_fn": [
+            0,
+            47,
+            9
+          ],
+          "false_positive_flag_rate": 0.309,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.579,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.797,
+          "auroc": 0.774,
+          "ece": 0.474,
+          "verdicts": {
+            "PASS": 85,
+            "FAIL": 47,
+            "UNCERTAIN": 29,
+            "NOT_APPLICABLE": 41
+          }
+        },
+        "none-repeat/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 164,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.06,
+          "fail_recall": 0.25,
+          "fail_f1": 0.097,
+          "fail_tp_fp_fn": [
+            3,
+            47,
+            9
+          ],
+          "false_positive_flag_rate": 0.309,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.579,
+          "validator_review_rate": 0.658,
+          "validator_or_judge_review_rate": 0.797,
+          "auroc": 0.802,
+          "ece": 0.464,
+          "verdicts": {
+            "PASS": 85,
+            "FAIL": 50,
+            "UNCERTAIN": 29,
+            "NOT_APPLICABLE": 38
+          }
+        }
+      },
+      "latency": {
+        "n_items_with_nli": 163,
+        "n_pairs": 163,
+        "p50_s": 0.0924,
+        "p95_s": 0.1359,
+        "mean_s": 0.0981,
+        "batch_size": 1,
+        "dtype": "float32",
+        "device": "cpu",
+        "torch_threads": 4
+      }
+    },
+    "xsmall-ft1": {
+      "model_id": "/home/user/judge_runs/xsmall-hs-v1/best",
+      "revision": "local:/home/user/judge_runs/xsmall-hs-v1/best#sha256:188ded4a760e5307",
+      "params_m": 70.8,
+      "label_index": {
+        "entailment": 1,
+        "neutral": 2,
+        "contradiction": 0
+      },
+      "load_s": 1.39,
+      "template_auroc_traindev": {
+        "v1": 0.8206896551724138,
+        "v2": 0.8421052631578947
+      },
+      "hypothesis": "v2",
+      "calibration": {
+        "tau_fail": 0.8,
+        "tau_pass": 0.85,
+        "strict_f1_grid": {
+          "0.3": 0.6363636363636365,
+          "0.35": 0.6363636363636365,
+          "0.4": 0.6363636363636365,
+          "0.45": 0.6363636363636365,
+          "0.5": 0.6363636363636365,
+          "0.55": 0.6363636363636365,
+          "0.6": 0.6461538461538462,
+          "0.65": 0.6349206349206349,
+          "0.7": 0.6451612903225807,
+          "0.75": 0.6451612903225807,
+          "0.8": 0.6666666666666667,
+          "0.85": 0.6666666666666667,
+          "0.9": 0.6666666666666667,
+          "0.95": 0.6296296296296295
+        },
+        "pass_cost_grid": {
+          "0.3": 59.0,
+          "0.35": 59.0,
+          "0.4": 56.0,
+          "0.45": 56.0,
+          "0.5": 56.0,
+          "0.55": 56.0,
+          "0.6": 57.0,
+          "0.65": 53.0,
+          "0.7": 53.0,
+          "0.75": 51.0,
+          "0.8": 51.0,
+          "0.85": 47.0,
+          "0.9": 50.0,
+          "0.95": 58.0
+        },
+        "w_miss": 5.0,
+        "tau_pass_if_w_miss": {
+          "2.0": 0.3,
+          "10.0": 0.85
+        }
+      },
+      "traindev": {
+        "n_items": 142,
+        "n_applicable": 124,
+        "n_errors_applicable": 29,
+        "fail_precision": 0.645,
+        "fail_recall": 0.69,
+        "fail_f1": 0.667,
+        "fail_tp_fp_fn": [
+          20,
+          11,
+          9
+        ],
+        "false_positive_flag_rate": 0.116,
+        "broad_recall": 0.828,
+        "wrong_met": 16,
+        "false_approvals": 0,
+        "false_approvals_unreviewed_by_validator": 0,
+        "false_approval_items": [],
+        "judge_review_rate": 0.451,
+        "validator_review_rate": 0.415,
+        "validator_or_judge_review_rate": 0.641,
+        "auroc": 0.842,
+        "ece": 0.145,
+        "verdicts": {
+          "PASS": 78,
+          "FAIL": 31,
+          "UNCERTAIN": 15,
+          "NOT_APPLICABLE": 18
+        }
+      },
+      "legacy_single_tau": 0.8,
+      "val": {
+        "gated/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 8,
+          "fail_precision": 0.056,
+          "fail_recall": 0.125,
+          "fail_f1": 0.077,
+          "fail_tp_fp_fn": [
+            1,
+            17,
+            7
+          ],
+          "false_positive_flag_rate": 0.11,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.629,
+          "validator_review_rate": 0.594,
+          "validator_or_judge_review_rate": 0.792,
+          "auroc": 0.94,
+          "ece": 0.321,
+          "verdicts": {
+            "PASS": 75,
+            "FAIL": 18,
+            "UNCERTAIN": 70,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "gated/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 11,
+          "fail_precision": 0.15,
+          "fail_recall": 0.273,
+          "fail_f1": 0.194,
+          "fail_tp_fp_fn": [
+            3,
+            17,
+            8
+          ],
+          "false_positive_flag_rate": 0.11,
+          "broad_recall": 1.0,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.629,
+          "validator_review_rate": 0.589,
+          "validator_or_judge_review_rate": 0.792,
+          "auroc": 0.945,
+          "ece": 0.315,
+          "verdicts": {
+            "PASS": 75,
+            "FAIL": 20,
+            "UNCERTAIN": 71,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "none/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.059,
+          "fail_recall": 0.111,
+          "fail_f1": 0.077,
+          "fail_tp_fp_fn": [
+            1,
+            16,
+            8
+          ],
+          "false_positive_flag_rate": 0.104,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.599,
+          "validator_review_rate": 0.668,
+          "validator_or_judge_review_rate": 0.812,
+          "auroc": 0.746,
+          "ece": 0.292,
+          "verdicts": {
+            "PASS": 81,
+            "FAIL": 17,
+            "UNCERTAIN": 65,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "none/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.158,
+          "fail_recall": 0.25,
+          "fail_f1": 0.194,
+          "fail_tp_fp_fn": [
+            3,
+            16,
+            9
+          ],
+          "false_positive_flag_rate": 0.104,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.599,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.812,
+          "auroc": 0.8,
+          "ece": 0.286,
+          "verdicts": {
+            "PASS": 81,
+            "FAIL": 19,
+            "UNCERTAIN": 66,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "bm25/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 167,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.056,
+          "fail_recall": 0.111,
+          "fail_f1": 0.074,
+          "fail_tp_fp_fn": [
+            1,
+            17,
+            8
+          ],
+          "false_positive_flag_rate": 0.108,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.604,
+          "validator_review_rate": 0.584,
+          "validator_or_judge_review_rate": 0.792,
+          "auroc": 0.961,
+          "ece": 0.306,
+          "verdicts": {
+            "PASS": 80,
+            "FAIL": 18,
+            "UNCERTAIN": 69,
+            "NOT_APPLICABLE": 35
+          }
+        },
+        "bm25/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 171,
+          "n_errors_applicable": 13,
+          "fail_precision": 0.15,
+          "fail_recall": 0.231,
+          "fail_f1": 0.182,
+          "fail_tp_fp_fn": [
+            3,
+            17,
+            10
+          ],
+          "false_positive_flag_rate": 0.108,
+          "broad_recall": 1.0,
+          "wrong_met": 4,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.604,
+          "validator_review_rate": 0.574,
+          "validator_or_judge_review_rate": 0.792,
+          "auroc": 0.957,
+          "ece": 0.298,
+          "verdicts": {
+            "PASS": 80,
+            "FAIL": 20,
+            "UNCERTAIN": 71,
+            "NOT_APPLICABLE": 31
+          }
+        },
+        "none-repeat/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 161,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.059,
+          "fail_recall": 0.111,
+          "fail_f1": 0.077,
+          "fail_tp_fp_fn": [
+            1,
+            16,
+            8
+          ],
+          "false_positive_flag_rate": 0.105,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.609,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.812,
+          "auroc": 0.732,
+          "ece": 0.295,
+          "verdicts": {
+            "PASS": 79,
+            "FAIL": 17,
+            "UNCERTAIN": 65,
+            "NOT_APPLICABLE": 41
+          }
+        },
+        "none-repeat/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 164,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.158,
+          "fail_recall": 0.25,
+          "fail_f1": 0.194,
+          "fail_tp_fp_fn": [
+            3,
+            16,
+            9
+          ],
+          "false_positive_flag_rate": 0.105,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.609,
+          "validator_review_rate": 0.658,
+          "validator_or_judge_review_rate": 0.812,
+          "auroc": 0.789,
+          "ece": 0.289,
+          "verdicts": {
+            "PASS": 79,
+            "FAIL": 19,
+            "UNCERTAIN": 66,
+            "NOT_APPLICABLE": 38
+          }
+        }
+      },
+      "val_other_template": {
+        "gated/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 8,
+          "fail_precision": 0.077,
+          "fail_recall": 0.125,
+          "fail_f1": 0.095,
+          "fail_tp_fp_fn": [
+            1,
+            12,
+            7
+          ],
+          "false_positive_flag_rate": 0.077,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.673,
+          "validator_review_rate": 0.594,
+          "validator_or_judge_review_rate": 0.856,
+          "auroc": 0.974,
+          "ece": 0.339,
+          "verdicts": {
+            "PASS": 66,
+            "FAIL": 13,
+            "UNCERTAIN": 84,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "gated/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 11,
+          "fail_precision": 0.2,
+          "fail_recall": 0.273,
+          "fail_f1": 0.231,
+          "fail_tp_fp_fn": [
+            3,
+            12,
+            8
+          ],
+          "false_positive_flag_rate": 0.077,
+          "broad_recall": 1.0,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.673,
+          "validator_review_rate": 0.589,
+          "validator_or_judge_review_rate": 0.856,
+          "auroc": 0.968,
+          "ece": 0.332,
+          "verdicts": {
+            "PASS": 66,
+            "FAIL": 15,
+            "UNCERTAIN": 85,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "none/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.077,
+          "fail_recall": 0.111,
+          "fail_f1": 0.091,
+          "fail_tp_fp_fn": [
+            1,
+            12,
+            8
+          ],
+          "false_positive_flag_rate": 0.078,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.644,
+          "validator_review_rate": 0.668,
+          "validator_or_judge_review_rate": 0.876,
+          "auroc": 0.766,
+          "ece": 0.319,
+          "verdicts": {
+            "PASS": 72,
+            "FAIL": 13,
+            "UNCERTAIN": 78,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "none/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.2,
+          "fail_recall": 0.25,
+          "fail_f1": 0.222,
+          "fail_tp_fp_fn": [
+            3,
+            12,
+            9
+          ],
+          "false_positive_flag_rate": 0.078,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.644,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.876,
+          "auroc": 0.812,
+          "ece": 0.313,
+          "verdicts": {
+            "PASS": 72,
+            "FAIL": 15,
+            "UNCERTAIN": 79,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "bm25/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 167,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.077,
+          "fail_recall": 0.111,
+          "fail_f1": 0.091,
+          "fail_tp_fp_fn": [
+            1,
+            12,
+            8
+          ],
+          "false_positive_flag_rate": 0.076,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.649,
+          "validator_review_rate": 0.584,
+          "validator_or_judge_review_rate": 0.856,
+          "auroc": 0.932,
+          "ece": 0.315,
+          "verdicts": {
+            "PASS": 71,
+            "FAIL": 13,
+            "UNCERTAIN": 83,
+            "NOT_APPLICABLE": 35
+          }
+        },
+        "bm25/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 171,
+          "n_errors_applicable": 13,
+          "fail_precision": 0.2,
+          "fail_recall": 0.231,
+          "fail_f1": 0.214,
+          "fail_tp_fp_fn": [
+            3,
+            12,
+            10
+          ],
+          "false_positive_flag_rate": 0.076,
+          "broad_recall": 1.0,
+          "wrong_met": 4,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.649,
+          "validator_review_rate": 0.574,
+          "validator_or_judge_review_rate": 0.856,
+          "auroc": 0.932,
+          "ece": 0.306,
+          "verdicts": {
+            "PASS": 71,
+            "FAIL": 15,
+            "UNCERTAIN": 85,
+            "NOT_APPLICABLE": 31
+          }
+        },
+        "none-repeat/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 161,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.077,
+          "fail_recall": 0.111,
+          "fail_f1": 0.091,
+          "fail_tp_fp_fn": [
+            1,
+            12,
+            8
+          ],
+          "false_positive_flag_rate": 0.079,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.653,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.876,
+          "auroc": 0.763,
+          "ece": 0.327,
+          "verdicts": {
+            "PASS": 70,
+            "FAIL": 13,
+            "UNCERTAIN": 78,
+            "NOT_APPLICABLE": 41
+          }
+        },
+        "none-repeat/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 164,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.2,
+          "fail_recall": 0.25,
+          "fail_f1": 0.222,
+          "fail_tp_fp_fn": [
+            3,
+            12,
+            9
+          ],
+          "false_positive_flag_rate": 0.079,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.653,
+          "validator_review_rate": 0.658,
+          "validator_or_judge_review_rate": 0.876,
+          "auroc": 0.81,
+          "ece": 0.32,
+          "verdicts": {
+            "PASS": 70,
+            "FAIL": 15,
+            "UNCERTAIN": 79,
+            "NOT_APPLICABLE": 38
+          }
+        }
+      },
+      "latency": {
+        "n_items_with_nli": 163,
+        "n_pairs": 163,
+        "p50_s": 0.0335,
+        "p95_s": 0.0489,
+        "mean_s": 0.0358,
+        "batch_size": 1,
+        "dtype": "float32",
+        "device": "cpu",
+        "torch_threads": 4
+      }
+    },
+    "xsmall-ft2": {
+      "model_id": "/home/user/judge_runs/xsmall-hs-v2/best",
+      "revision": "local:/home/user/judge_runs/xsmall-hs-v2/best#sha256:bc6f1b352c0f9e71",
+      "params_m": 70.8,
+      "label_index": {
+        "entailment": 1,
+        "neutral": 2,
+        "contradiction": 0
+      },
+      "load_s": 1.59,
+      "template_auroc_traindev": {
+        "v1": 0.8542649727767695,
+        "v2": 0.8294010889292196
+      },
+      "hypothesis": "v1",
+      "calibration": {
+        "tau_fail": 0.3,
+        "tau_pass": 0.3,
+        "strict_f1_grid": {
+          "0.3": 0.8400000000000001,
+          "0.35": 0.8400000000000001,
+          "0.4": 0.8400000000000001,
+          "0.45": 0.8400000000000001,
+          "0.5": 0.8400000000000001,
+          "0.55": 0.8400000000000001,
+          "0.6": 0.8400000000000001,
+          "0.65": 0.8400000000000001,
+          "0.7": 0.8163265306122449,
+          "0.75": 0.8163265306122449,
+          "0.8": 0.8163265306122449,
+          "0.85": 0.8163265306122449,
+          "0.9": 0.8163265306122449,
+          "0.95": 0.8163265306122449
+        },
+        "pass_cost_grid": {
+          "0.3": 40.0,
+          "0.35": 40.0,
+          "0.4": 40.0,
+          "0.45": 40.0,
+          "0.5": 40.0,
+          "0.55": 40.0,
+          "0.6": 40.0,
+          "0.65": 40.0,
+          "0.7": 40.0,
+          "0.75": 40.0,
+          "0.8": 40.0,
+          "0.85": 40.0,
+          "0.9": 40.0,
+          "0.95": 40.0
+        },
+        "w_miss": 5.0,
+        "tau_pass_if_w_miss": {
+          "2.0": 0.3,
+          "10.0": 0.3
+        }
+      },
+      "traindev": {
+        "n_items": 142,
+        "n_applicable": 124,
+        "n_errors_applicable": 29,
+        "fail_precision": 1.0,
+        "fail_recall": 0.724,
+        "fail_f1": 0.84,
+        "fail_tp_fp_fn": [
+          21,
+          0,
+          8
+        ],
+        "false_positive_flag_rate": 0.0,
+        "broad_recall": 0.724,
+        "wrong_met": 16,
+        "false_approvals": 0,
+        "false_approvals_unreviewed_by_validator": 0,
+        "false_approval_items": [],
+        "judge_review_rate": 0.275,
+        "validator_review_rate": 0.415,
+        "validator_or_judge_review_rate": 0.507,
+        "auroc": 0.854,
+        "ece": 0.066,
+        "verdicts": {
+          "PASS": 103,
+          "FAIL": 21,
+          "UNCERTAIN": 0,
+          "NOT_APPLICABLE": 18
+        }
+      },
+      "legacy_single_tau": 0.3,
+      "val": {
+        "gated/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 8,
+          "fail_precision": 0.105,
+          "fail_recall": 0.25,
+          "fail_f1": 0.148,
+          "fail_tp_fp_fn": [
+            2,
+            17,
+            6
+          ],
+          "false_positive_flag_rate": 0.11,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.356,
+          "validator_review_rate": 0.594,
+          "validator_or_judge_review_rate": 0.658,
+          "auroc": 0.971,
+          "ece": 0.155,
+          "verdicts": {
+            "PASS": 130,
+            "FAIL": 19,
+            "UNCERTAIN": 14,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "gated/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 11,
+          "fail_precision": 0.19,
+          "fail_recall": 0.364,
+          "fail_f1": 0.25,
+          "fail_tp_fp_fn": [
+            4,
+            17,
+            7
+          ],
+          "false_positive_flag_rate": 0.11,
+          "broad_recall": 0.909,
+          "wrong_met": 3,
+          "false_approvals": 1,
+          "false_approvals_unreviewed_by_validator": 1,
+          "false_approval_items": [
+            "val-029/r4"
+          ],
+          "judge_review_rate": 0.351,
+          "validator_review_rate": 0.589,
+          "validator_or_judge_review_rate": 0.653,
+          "auroc": 0.962,
+          "ece": 0.157,
+          "verdicts": {
+            "PASS": 131,
+            "FAIL": 21,
+            "UNCERTAIN": 14,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "none/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.118,
+          "fail_recall": 0.222,
+          "fail_f1": 0.154,
+          "fail_tp_fp_fn": [
+            2,
+            15,
+            7
+          ],
+          "false_positive_flag_rate": 0.097,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.327,
+          "validator_review_rate": 0.668,
+          "validator_or_judge_review_rate": 0.678,
+          "auroc": 0.77,
+          "ece": 0.126,
+          "verdicts": {
+            "PASS": 136,
+            "FAIL": 17,
+            "UNCERTAIN": 10,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "none/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.211,
+          "fail_recall": 0.333,
+          "fail_f1": 0.258,
+          "fail_tp_fp_fn": [
+            4,
+            15,
+            8
+          ],
+          "false_positive_flag_rate": 0.097,
+          "broad_recall": 0.75,
+          "wrong_met": 3,
+          "false_approvals": 1,
+          "false_approvals_unreviewed_by_validator": 1,
+          "false_approval_items": [
+            "val-029/r4"
+          ],
+          "judge_review_rate": 0.322,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.673,
+          "auroc": 0.815,
+          "ece": 0.129,
+          "verdicts": {
+            "PASS": 137,
+            "FAIL": 19,
+            "UNCERTAIN": 10,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "bm25/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 167,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.182,
+          "fail_recall": 0.444,
+          "fail_f1": 0.258,
+          "fail_tp_fp_fn": [
+            4,
+            18,
+            5
+          ],
+          "false_positive_flag_rate": 0.114,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.332,
+          "validator_review_rate": 0.584,
+          "validator_or_judge_review_rate": 0.658,
+          "auroc": 0.951,
+          "ece": 0.139,
+          "verdicts": {
+            "PASS": 135,
+            "FAIL": 22,
+            "UNCERTAIN": 10,
+            "NOT_APPLICABLE": 35
+          }
+        },
+        "bm25/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 171,
+          "n_errors_applicable": 13,
+          "fail_precision": 0.25,
+          "fail_recall": 0.462,
+          "fail_f1": 0.324,
+          "fail_tp_fp_fn": [
+            6,
+            18,
+            7
+          ],
+          "false_positive_flag_rate": 0.114,
+          "broad_recall": 0.846,
+          "wrong_met": 4,
+          "false_approvals": 2,
+          "false_approvals_unreviewed_by_validator": 2,
+          "false_approval_items": [
+            "val-017/r1",
+            "val-029/r4"
+          ],
+          "judge_review_rate": 0.322,
+          "validator_review_rate": 0.574,
+          "validator_or_judge_review_rate": 0.649,
+          "auroc": 0.943,
+          "ece": 0.145,
+          "verdicts": {
+            "PASS": 137,
+            "FAIL": 24,
+            "UNCERTAIN": 10,
+            "NOT_APPLICABLE": 31
+          }
+        },
+        "none-repeat/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 161,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.125,
+          "fail_recall": 0.222,
+          "fail_f1": 0.16,
+          "fail_tp_fp_fn": [
+            2,
+            14,
+            7
+          ],
+          "false_positive_flag_rate": 0.092,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.337,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.678,
+          "auroc": 0.769,
+          "ece": 0.128,
+          "verdicts": {
+            "PASS": 134,
+            "FAIL": 16,
+            "UNCERTAIN": 11,
+            "NOT_APPLICABLE": 41
+          }
+        },
+        "none-repeat/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 164,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.222,
+          "fail_recall": 0.333,
+          "fail_f1": 0.267,
+          "fail_tp_fp_fn": [
+            4,
+            14,
+            8
+          ],
+          "false_positive_flag_rate": 0.092,
+          "broad_recall": 0.75,
+          "wrong_met": 3,
+          "false_approvals": 1,
+          "false_approvals_unreviewed_by_validator": 1,
+          "false_approval_items": [
+            "val-029/r4"
+          ],
+          "judge_review_rate": 0.332,
+          "validator_review_rate": 0.658,
+          "validator_or_judge_review_rate": 0.673,
+          "auroc": 0.814,
+          "ece": 0.13,
+          "verdicts": {
+            "PASS": 135,
+            "FAIL": 18,
+            "UNCERTAIN": 11,
+            "NOT_APPLICABLE": 38
+          }
+        }
+      },
+      "val_other_template": {
+        "gated/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 8,
+          "fail_precision": 0.056,
+          "fail_recall": 0.125,
+          "fail_f1": 0.077,
+          "fail_tp_fp_fn": [
+            1,
+            17,
+            7
+          ],
+          "false_positive_flag_rate": 0.11,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.337,
+          "validator_review_rate": 0.594,
+          "validator_or_judge_review_rate": 0.653,
+          "auroc": 0.99,
+          "ece": 0.145,
+          "verdicts": {
+            "PASS": 134,
+            "FAIL": 18,
+            "UNCERTAIN": 11,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "gated/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 11,
+          "fail_precision": 0.19,
+          "fail_recall": 0.364,
+          "fail_f1": 0.25,
+          "fail_tp_fp_fn": [
+            4,
+            17,
+            7
+          ],
+          "false_positive_flag_rate": 0.11,
+          "broad_recall": 1.0,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.337,
+          "validator_review_rate": 0.589,
+          "validator_or_judge_review_rate": 0.653,
+          "auroc": 0.986,
+          "ece": 0.142,
+          "verdicts": {
+            "PASS": 134,
+            "FAIL": 21,
+            "UNCERTAIN": 11,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "none/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 163,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.062,
+          "fail_recall": 0.111,
+          "fail_f1": 0.08,
+          "fail_tp_fp_fn": [
+            1,
+            15,
+            8
+          ],
+          "false_positive_flag_rate": 0.097,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.307,
+          "validator_review_rate": 0.668,
+          "validator_or_judge_review_rate": 0.673,
+          "auroc": 0.782,
+          "ece": 0.115,
+          "verdicts": {
+            "PASS": 140,
+            "FAIL": 16,
+            "UNCERTAIN": 7,
+            "NOT_APPLICABLE": 39
+          }
+        },
+        "none/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 166,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.211,
+          "fail_recall": 0.333,
+          "fail_f1": 0.258,
+          "fail_tp_fp_fn": [
+            4,
+            15,
+            8
+          ],
+          "false_positive_flag_rate": 0.097,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.307,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.673,
+          "auroc": 0.833,
+          "ece": 0.113,
+          "verdicts": {
+            "PASS": 140,
+            "FAIL": 19,
+            "UNCERTAIN": 7,
+            "NOT_APPLICABLE": 36
+          }
+        },
+        "bm25/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 167,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.053,
+          "fail_recall": 0.111,
+          "fail_f1": 0.071,
+          "fail_tp_fp_fn": [
+            1,
+            18,
+            8
+          ],
+          "false_positive_flag_rate": 0.114,
+          "broad_recall": 1.0,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.312,
+          "validator_review_rate": 0.584,
+          "validator_or_judge_review_rate": 0.653,
+          "auroc": 0.992,
+          "ece": 0.129,
+          "verdicts": {
+            "PASS": 139,
+            "FAIL": 19,
+            "UNCERTAIN": 9,
+            "NOT_APPLICABLE": 35
+          }
+        },
+        "bm25/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 171,
+          "n_errors_applicable": 13,
+          "fail_precision": 0.217,
+          "fail_recall": 0.385,
+          "fail_f1": 0.278,
+          "fail_tp_fp_fn": [
+            5,
+            18,
+            8
+          ],
+          "false_positive_flag_rate": 0.114,
+          "broad_recall": 1.0,
+          "wrong_met": 4,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.312,
+          "validator_review_rate": 0.574,
+          "validator_or_judge_review_rate": 0.653,
+          "auroc": 0.984,
+          "ece": 0.126,
+          "verdicts": {
+            "PASS": 139,
+            "FAIL": 23,
+            "UNCERTAIN": 9,
+            "NOT_APPLICABLE": 31
+          }
+        },
+        "none-repeat/replay-v2": {
+          "n_items": 202,
+          "n_applicable": 161,
+          "n_errors_applicable": 9,
+          "fail_precision": 0.067,
+          "fail_recall": 0.111,
+          "fail_f1": 0.083,
+          "fail_tp_fp_fn": [
+            1,
+            14,
+            8
+          ],
+          "false_positive_flag_rate": 0.092,
+          "broad_recall": 0.778,
+          "wrong_met": 0,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.317,
+          "validator_review_rate": 0.663,
+          "validator_or_judge_review_rate": 0.673,
+          "auroc": 0.781,
+          "ece": 0.117,
+          "verdicts": {
+            "PASS": 138,
+            "FAIL": 15,
+            "UNCERTAIN": 8,
+            "NOT_APPLICABLE": 41
+          }
+        },
+        "none-repeat/saved-v1": {
+          "n_items": 202,
+          "n_applicable": 164,
+          "n_errors_applicable": 12,
+          "fail_precision": 0.222,
+          "fail_recall": 0.333,
+          "fail_f1": 0.267,
+          "fail_tp_fp_fn": [
+            4,
+            14,
+            8
+          ],
+          "false_positive_flag_rate": 0.092,
+          "broad_recall": 0.833,
+          "wrong_met": 3,
+          "false_approvals": 0,
+          "false_approvals_unreviewed_by_validator": 0,
+          "false_approval_items": [],
+          "judge_review_rate": 0.317,
+          "validator_review_rate": 0.658,
+          "validator_or_judge_review_rate": 0.673,
+          "auroc": 0.833,
+          "ece": 0.114,
+          "verdicts": {
+            "PASS": 138,
+            "FAIL": 18,
+            "UNCERTAIN": 8,
+            "NOT_APPLICABLE": 38
+          }
+        }
+      },
+      "latency": {
+        "n_items_with_nli": 163,
+        "n_pairs": 163,
+        "p50_s": 0.0379,
+        "p95_s": 0.0581,
+        "mean_s": 0.0408,
+        "batch_size": 1,
+        "dtype": "float32",
+        "device": "cpu",
+        "torch_threads": 4
+      }
+    }
+  }
+}

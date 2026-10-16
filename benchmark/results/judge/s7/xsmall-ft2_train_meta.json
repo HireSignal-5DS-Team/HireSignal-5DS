@@ -1,0 +1,96 @@
+{
+  "base": "cross-encoder/nli-deberta-v3-xsmall",
+  "base_revision": "a150876415327c80daeff35ca6f68f5ed8cf5c24",
+  "hypothesis": "v1",
+  "args": {
+    "out": "/home/user/judge_runs/xsmall-hs-v2",
+    "epochs": 4,
+    "lr": 5e-05,
+    "batch": 16,
+    "max_len": 320,
+    "seed": 13,
+    "base": "cross-encoder/nli-deberta-v3-xsmall",
+    "base_rev": "a150876415327c80daeff35ca6f68f5ed8cf5c24",
+    "hypothesis": "v1"
+  },
+  "n_train_pairs": 770,
+  "n_dev_pairs": 208,
+  "train_pair_types": {
+    "wrong_evidence": 231,
+    "contradicted": 136,
+    "ambiguous": 87,
+    "met": 237,
+    "not_documented": 79
+  },
+  "dataset_sha256": "d0206264f093be7c1b41b7fd9e71868ded006ee997ad7e0f8007710511231a77",
+  "splits_used": [
+    "train (index % 5 != 0) for training",
+    "train (index % 5 == 0) for dev"
+  ],
+  "log": [
+    {
+      "epoch": 0,
+      "dev_acc": 0.4423076923076923,
+      "dev_per_type": {
+        "met": 0.0,
+        "wrong_evidence": 0.727,
+        "contradicted": 0.467,
+        "not_documented": 0.536,
+        "ambiguous": 0.938
+      }
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.5472559343491282,
+      "dev_acc": 0.9567307692307693,
+      "dev_per_type": {
+        "met": 0.971,
+        "wrong_evidence": 0.939,
+        "contradicted": 0.967,
+        "not_documented": 0.964,
+        "ambiguous": 0.938
+      },
+      "elapsed_s": 99.4
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.04433289874696686,
+      "dev_acc": 0.9951923076923077,
+      "dev_per_type": {
+        "met": 1.0,
+        "wrong_evidence": 0.985,
+        "contradicted": 1.0,
+        "not_documented": 1.0,
+        "ambiguous": 1.0
+      },
+      "elapsed_s": 194.9
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.003952306071628949,
+      "dev_acc": 0.9951923076923077,
+      "dev_per_type": {
+        "met": 1.0,
+        "wrong_evidence": 0.985,
+        "contradicted": 1.0,
+        "not_documented": 1.0,
+        "ambiguous": 1.0
+      },
+      "elapsed_s": 283.3
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.005625763299817942,
+      "dev_acc": 0.9951923076923077,
+      "dev_per_type": {
+        "met": 1.0,
+        "wrong_evidence": 0.985,
+        "contradicted": 1.0,
+        "not_documented": 1.0,
+        "ambiguous": 1.0
+      },
+      "elapsed_s": 368.2
+    }
+  ],
+  "best_dev_acc": 0.9951923076923077
+}

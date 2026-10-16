@@ -175,13 +175,20 @@ def precheck(result, cv):
 
 
 def _revision_of(model_dir, revision):
-    """Best-effort pinned revision for provenance: the explicit one, a HF snapshot directory name, or 'local'."""
+    """Pinned revision for provenance: the explicit one, a HF snapshot directory name, or for any other local dir
+    'local:<path>#sha256:<first 16 hex of the weights file>' (a fine-tuned checkpoint has no Hub commit)."""
     if revision:
         return revision
     p = Path(str(model_dir))
-    if p.exists():
-        return p.name if p.parent.name == "snapshots" else "local:" + str(p)
-    return None
+    if not p.exists():
+        return None
+    if p.parent.name == "snapshots":
+        return p.name
+    import hashlib
+
+    w = next((p / n for n in ("model.safetensors", "pytorch_model.bin") if (p / n).exists()), None)
+    digest = hashlib.sha256(w.read_bytes()).hexdigest()[:16] if w else "none"
+    return f"local:{p}#sha256:{digest}"
 
 
 class NLIJudge:
@@ -208,7 +215,8 @@ class NLIJudge:
         self.tau_pass, self.tau_fail, self.device, self.max_length = tau_pass, tau_fail, device, max_length
         self.hypothesis_template = hypothesis_template
         self.model_id = str(model_dir)
-        self.revision = _revision_of(model_dir, revision or getattr(self.model.config, "_commit_hash", None))
+        local = Path(str(model_dir)).exists()
+        self.revision = _revision_of(model_dir, revision or (None if local else getattr(self.model.config, "_commit_hash", None)))
         self.name = name or str(model_dir)
 
     def provenance(self):

@@ -226,7 +226,7 @@ def test_tiny_model_loads_fp32_maps_labels_and_records_local_revision(tiny_dir):
     j = NLIJudge(str(tiny_dir), tau_pass=0.6, tau_fail=0.7, max_length=64, name="tiny")
     assert next(j.model.parameters()).dtype == j.torch.float32
     assert j.idx == {"entailment": 1, "neutral": 2, "contradiction": 0}
-    assert j.revision == f"local:{tiny_dir}"
+    assert j.revision.startswith(f"local:{tiny_dir}#sha256:") and len(j.revision.split(":")[-1]) == 16
     pr = j.probs([("never used kubernetes", "the candidate has kubernetes")] * 3)
     assert len(pr) == 3 and all(abs(sum(p.values()) - 1) < 1e-5 for p in pr)
     res = validated(ans("MET", "supported", ["5 years of professional Python experience."]), PY, CVX)
