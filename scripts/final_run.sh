@@ -8,7 +8,7 @@ cd "$(dirname "$0")/.."
 P=${PYTHON:-/home/user/venv-orch/bin/python}
 M=${HS_MODELS_DIR:-/home/user/hs_models}; GGUF=$M/gguf/Qwen3-4B-Instruct-2507-Q4_K_M.gguf
 ARMS=${ARMS:-"lora:gated lora:none base:gated"}
-OUT=benchmark/results/final; mkdir -p $OUT/logs
+OUT=${HS_FINAL_OUT:-benchmark/results/final}; mkdir -p $OUT/logs  # live runs: set HS_FINAL_OUT outside the git worktree
 log() { echo "=== $(date -u +%FT%TZ) $*"; }
 up() { curl -s -m 3 "http://127.0.0.1:$1/v1/models" > /dev/null; }
 exec 9>/home/user/hs_queue.lock; flock -n 9 || { log "another model job holds /home/user/hs_queue.lock"; exit 1; }
