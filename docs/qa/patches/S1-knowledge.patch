@@ -1,0 +1,74 @@
+diff --git a/matcher/knowledge.py b/matcher/knowledge.py
+index 413d087..c1c2e8b 100644
+--- a/matcher/knowledge.py
++++ b/matcher/knowledge.py
+@@ -26,12 +26,13 @@ def query_for(req):
+ 
+ class FixtureKnowledge:
+     name = "fixture"
++    version = "fixture"
+ 
+     def __init__(self, entries):
+         """entries: list of dicts {source_id, title, aliases, text}; matched when title or alias occurs in the query."""
+         self.entries = entries
+ 
+-    def lookup(self, req, k=3):
++    def lookup(self, req, k=3, job_id=None):
+         q = (query_for(req) + " " + req.text).casefold()
+         hits = [e for e in self.entries if any(t.casefold() in q for t in [e["title"], *e.get("aliases", [])])]
+         return [KnowledgeRef(source_type=e.get("source_type", "fixture"), source_id=e["source_id"], title=e["title"],
+@@ -42,7 +43,7 @@ class FixtureKnowledge:
+ class RagKnowledge:
+     name = "rag.bm25"
+ 
+-    def __init__(self, rag_dir=None, min_score=0.0):
++    def __init__(self, rag_dir=None, min_score=0.0, min_rel_score=0.5):
+         rag_dir = Path(rag_dir or os.environ.get("HIRESIGNAL_RAG_DIR") or Path(__file__).parents[1] / "rag")
+         if not (rag_dir / "retrieval.py").exists():
+             raise FileNotFoundError(f"RAG code not found in {rag_dir}; set HIRESIGNAL_RAG_DIR")
+@@ -50,22 +51,32 @@ class RagKnowledge:
+         from corpus import load_esco  # noqa: E402  (RAG modules)
+         from retrieval import Retriever
+ 
+-        esco = load_esco(rag_dir / "data/esco/esco_ict_skills.jsonl")
++        corpus = rag_dir / "data/esco/esco_ict_skills.jsonl"
++        import hashlib
++
++        self.version = f"bm25:{corpus.name}@sha256:{hashlib.sha256(corpus.read_bytes()).hexdigest()[:12]}"
++        esco = load_esco(corpus)
+         chunks = [{**e, "chunk_id": e["doc_id"], "section": None, "start": None, "end": None} for e in esco]
+         self.retriever = Retriever(chunks)  # model=None -> BM25 only, no embedding model
+-        self.min_score = min_score
++        self.min_score, self.min_rel_score = min_score, min_rel_score
+ 
+-    def lookup(self, req, k=3):
++    def lookup(self, req, k=3, job_id=None):
++        """BM25 hits scoring above min_score AND at least min_rel_score x the top hit (drops hits that share only a
++        generic token such as "Apache" with the query, QA-023)."""
+         out = self.retriever.search(query_for(req), k=k, mode="bm25", filters={"source_type": "esco"})
++        hits = [(c, s) for c, s in out["results"] if s > self.min_score]
++        top = max((s for _, s in hits), default=0.0)
++        rel = getattr(self, "min_rel_score", 0.5)
+         return [KnowledgeRef(source_type="esco", source_id=c["doc_id"], title=c["title"], text=c["text"], url=c["url"],
+                              aliases=esco_aliases(c["text"]), relevance_score=round(s, 4), retrieval=self.name)
+-                for c, s in out["results"] if s > self.min_score]
++                for c, s in hits if s >= rel * top]
+ 
+ 
+ class NoKnowledge:
+     name = "none"
++    version = "none"
+ 
+-    def lookup(self, req, k=3):
++    def lookup(self, req, k=3, job_id=None):
+         return []
+ 
+ 
+@@ -90,6 +101,7 @@ class QdrantKnowledge:
+ 
+             retriever = Retriever(build_chunks("structure"), model="e5-small", store_path=Path(index_dir or rag_dir / "index"))
+         self.retriever = retriever
++        self.version = f"qdrant:e5-small:{index_dir or rag_dir / 'index'}"  # TODO S1: index manifest hash
+         self.job_ids = {c["doc_id"] for c in retriever.chunks if c.get("source_type") == "job"}
+ 
+     def lookup(self, req, k=3, job_id=None):

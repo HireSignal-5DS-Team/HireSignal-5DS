@@ -1,0 +1,41 @@
+diff --git a/matcher/bias_audit.py b/matcher/bias_audit.py
+index b48436a..a8ff75c 100644
+--- a/matcher/bias_audit.py
++++ b/matcher/bias_audit.py
+@@ -23,7 +23,8 @@ ATTRIBUTES = {
+     "age_signal": ("1998", "1966", "Year of birth: {}"),
+ }
+ LEAK = re.compile(r"\b(gender|female|male|woman|man|she|he|her|his|pronouns?|nationality|national|citizen\w*|"
+-                  r"ethnic\w*|race|religio\w*|age|aged|old|young|born|birth|years? old)\b", re.I)
++                  r"ethnic\w*|race|religio\w*|age|aged|(?:(?<=too )|(?<=years )|(?<=year )|(?<=be )|(?<=is ))old|"
++                  r"young(?=er\b| candidate| person| people| applicant)|born|birth)\b", re.I)
+ 
+ 
+ @dataclass
+@@ -63,17 +64,24 @@ def check_result(result, cv_text):
+ 
+ def counterfactual(match_fn, cv, req, attributes=tuple(ATTRIBUTES)):
+     """match_fn(cv, req) -> validated RequirementResult. Returns BiasFinding over all attributes for one requirement."""
+-    flips, details = [], {}
++    flips, details, untested = [], {}, []
+     for attr in attributes:
+         ra = match_fn(cv.model_copy(update={"text": variant(cv.text, attr, "A")}), req)
+         rb = match_fn(cv.model_copy(update={"text": variant(cv.text, attr, "B")}), req)
++        if all("model_output_invalid" in r.review_reasons for r in (ra, rb)):  # no answer to compare (QA-016)
++            untested.append(attr)
++            details[attr] = {"A": ra.decision, "B": rb.decision, "flip": None, "tested": False}
++            continue
+         flip = ra.decision != rb.decision
+         details[attr] = {"A": ra.decision, "B": rb.decision, "flip": flip,
+                          "basis": [ra.basis, rb.basis], "explanations": [ra.explanation, rb.explanation]}
+         if flip:
+             flips.append(attr)
++    if len(untested) == len(attributes):
++        return BiasFinding("NOT_TESTED", counterfactual_flip=None, requires_human_review=True, details=details)
+     return BiasFinding("FLAGGED" if flips else "PASS", counterfactual_flip=bool(flips),
+-                       affected_attribute=",".join(flips) or None, requires_human_review=bool(flips), details=details)
++                       affected_attribute=",".join(flips) or None, requires_human_review=bool(flips) or bool(untested),
++                       details=details)
+ 
+ 
+ def merge(per_result, cf=None):
