@@ -21,16 +21,16 @@ cosmetic or a rare false alarm.
 | id | sev | owner | status | one line |
 |---|---|---|---|---|
 | QA-001 | medium | S1 | open | `FixtureKnowledge/RagKnowledge/NoKnowledge.lookup` lack the frozen `job_id=None` parameter |
-| QA-002 | high | S6 | open | negation around or inside a quote ("Never used \| Kubernetes in production", "No experience with Kafka") passes as unreviewed MET |
-| QA-003 | high | S6 | open | term check is a raw substring: `java` in "JavaScript" suppresses the inference flag |
-| QA-004 | high | S6 | open | min_years satisfied by another skill's years ("2 years of Python, 10 years of Java") |
-| QA-005 | high | S6 | open | certification requirement MET by an online course, no review |
-| QA-007 | high | S6 | open | prompt injection: CV can close the `>>>` CV block; an injected line naming the skill is accepted as unreviewed MET evidence |
-| QA-008 | medium | S6 | open | a 1-character quote ("e") is accepted as verified evidence (non-skill categories: no review) |
-| QA-009 | high | S6 (S1) | open | a related ESCO concept in the RAG context (Docker for Kubernetes) widens the accepted terms and launders an absent skill |
+| QA-002 | high | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | negation around or inside a quote ("Never used \| Kubernetes in production", "No experience with Kafka") passes as unreviewed MET |
+| QA-003 | high | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | term check is a raw substring: `java` in "JavaScript" suppresses the inference flag |
+| QA-004 | high | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | min_years satisfied by another skill's years ("2 years of Python, 10 years of Java") |
+| QA-005 | high | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | certification requirement MET by an online course, no review |
+| QA-007 | high | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | prompt injection: CV can close the `>>>` CV block; an injected line naming the skill is accepted as unreviewed MET evidence |
+| QA-008 | medium | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | a 1-character quote ("e") is accepted as verified evidence (non-skill categories: no review) |
+| QA-009 | high | S6 (S1) | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | a related ESCO concept in the RAG context (Docker for Kubernetes) widens the accepted terms and launders an absent skill |
 | QA-010 | medium | S6 (contract) | open, decision | `rag_refs` = every retrieved ref, not the cited ones; `ModelAnswer` has no citation field |
 | QA-011 | medium | S6 (contract) | open, decision | nice-to-have MISSING/not_documented gets no review; §3.3 says missing evidence is UNCERTAIN + review |
-| QA-012 | low | S6 | open | MISSING/contradicted refuted by its own quote (6 ≥ 3 years) is not flagged |
+| QA-012 | low | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | MISSING/contradicted refuted by its own quote (6 ≥ 3 years) is not flagged |
 | QA-013 | high | S2 | open | `Matcher.match` (MatchReport path) does not route fallback answers to review; no per-result model |
 | QA-014 | high | S2 | open | provenance incomplete: no base revision, LoRA primary reports `adapter_id: null`, no adapter sha, no knowledge version |
 | QA-015 | high | S2 | open | malformed server body (`[]`, `{"choices": null}`, non-string content) or a backend exception crashes the pipeline; no fallback |
@@ -39,16 +39,16 @@ cosmetic or a rare false alarm.
 | QA-018 | medium | S5 | **fixed** `matcher/judge.py` | Judge not_documented check truncated the CV to 512 tokens; skills late in a long CV invisible |
 | QA-019 | high | S5 | **fixed** `matcher/judge.py` | an NLI exception crashed the whole pipeline |
 | QA-020 | low | S4 | open | leakage rule flags job-relevant "old" ("an old Perl codebase") when the CV has an attribute line |
-| QA-022 | medium | S6 | open | quote stitched across sections ("Python\n\nHobbies\n- 10 years") creates years of Python |
+| QA-022 | medium | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | quote stitched across sections ("Python\n\nHobbies\n- 10 years") creates years of Python |
 | QA-023 | medium | S1 | open | BM25 provider keeps hits that share only a generic token ("Apache" Maven for an "Apache Kafka" query) |
-| QA-025 | high | S6 (S2 model) | open | LIVE: LoRA quotes weak exposure ("Watched tutorials about Angular") as MET; validator gives an **unreviewed** MET (val-029/r4, val-017/r1) |
-| QA-026 | medium | S6 | open | LIVE: MET kept when min_years is required but no duration is stated ("Applied Node.js in various side projects over time"; val-009/r3, val-016/r1) |
+| QA-025 | high | S6 (S2 model) | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | LIVE: LoRA quotes weak exposure ("Watched tutorials about Angular") as MET; validator gives an **unreviewed** MET (val-029/r4, val-017/r1) |
+| QA-026 | medium | S6 | **fixed** `4f38c97` (validator v2; in-sample on val, held-out pending) | LIVE: MET kept when min_years is required but no duration is stated ("Applied Node.js in various side projects over time"; val-009/r3, val-016/r1) |
 | QA-027 | medium | S2 (model) | open | LIVE: LoRA answers MET despite years below the minimum 4x on val (base: 2x); caught by the validator (UNCERTAIN), never final MET |
 | QA-028 | high | S2 | open | LIVE: LoRA explanations are 4 fixed templates that never name the requirement; the final report shows them as the explanation |
 | QA-024 | medium | S2 (test) | open | existing `test_api_backend_success_timeout_and_unavailable` is flaky (2 failures in ~15 full runs) |
 
 QA-006 and QA-021 were merged into QA-002 and dropped as negligible (12-character ref id collisions in the prompt).
-Open defects by owner: **S6 13** (2 of them contract decisions), **S2 6** (1 flaky existing test, 1 model-level), **S1 2**, **S4 2**. S5's 3 are fixed.
+Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-002/003/004/005/007/008/009/012/022/025/026 fixed (their xfail markers were removed by the orchestrator; the tests stay as regression tests). Open defects by owner: **S6 2** (QA-010, QA-011: contract decisions), **S2 6** (1 flaky existing test, 1 model-level), **S1 2**, **S4 2**. S5's 3 are fixed. Mock after merge: 153 passed, 15 xfailed, 2 skipped (RAG checkout absent here).
 
 ## Details
 
@@ -59,7 +59,7 @@ Open defects by owner: **S6 13** (2 of them contract decisions), **S2 6** (1 fla
   `lookup(req, k, job_id=...)` gets a TypeError.
 - Fix: add `job_id=None` (ignored) to the three providers. Patch: `patches/S1-knowledge.patch`.
 
-### QA-002 · high · S6: negation in the evidence context
+### QA-002 · high · S6: negation in the evidence context · FIXED in `4f38c97` (in-sample on val, held-out pending)
 - Tests: `test_qa_grounding.py::test_partial_quote_that_drops_a_negation_is_flagged`,
   `::test_no_experience_with_x_is_not_met`, `::test_full_negated_quote_as_met_is_flagged_by_the_validator`. Live
   probes: `negation-never` and `negation-no-experience` in `tests/live/live_cases.py`.
@@ -71,25 +71,25 @@ Open defects by owner: **S6 13** (2 of them contract decisions), **S2 6** (1 fla
   decision; a negation cue can also be benign ("no downtime"), so it goes to review rather than overriding.
   Patch: `patches/S6-validator-prompt.patch`. Defence in depth: QA-017 (Judge) is fixed.
 
-### QA-003 · high · S6: substring term match
+### QA-003 · high · S6: substring term match · FIXED in `4f38c97` (in-sample on val, held-out pending)
 - Test: `test_qa_grounding.py::test_related_but_different_skill_term_is_flagged`; live `java-vs-javascript`.
 - Root cause: `validate.py:110` `t in q.casefold()`, so "java" ⊂ "javascript", "sql" ⊂ "nosql", "go" ⊂ "django".
 - Fix: word-bounded match `(?<!\w)term(?!\w)` (the lexical baseline already does this). Patch: S6.
 
-### QA-004 · high · S6: years of another skill
+### QA-004 · high · S6: years of another skill · FIXED in `4f38c97` (in-sample on val, held-out pending)
 - Test: `test_qa_grounding.py::test_years_of_another_skill_do_not_satisfy_min_years`; live `years-mismatch`.
 - Root cause: `evidence_years` (`validate.py:54`) takes the max over every "N years" in the quotes, whatever skill
   it refers to.
 - Fix: with requirement terms, count only clauses (split on `, ; newline` and on `.` not followed by a digit)
   that name a term. Patch: S6. The same change fixes QA-022.
 
-### QA-005 · high · S6: certification vs course
+### QA-005 · high · S6: certification vs course · FIXED in `4f38c97` (in-sample on val, held-out pending)
 - Test: `test_qa_grounding.py::test_course_is_not_a_required_certification`; live `cert-vs-course`.
 - Root cause: no rule for `category == "certification"`. The term check runs only for `skill`.
 - Fix: a MET certification needs a cue (`certif|licen[cs]|accredit|credential`) in a quote, else
   `certification_not_evidenced` (HIGH). Patch: S6.
 
-### QA-007 · high · S6: prompt injection
+### QA-007 · high · S6: prompt injection · FIXED in `4f38c97` (in-sample on val, held-out pending)
 - Tests: `test_qa_citations_injection.py::test_cv_cannot_close_the_cv_block_in_the_prompt`,
   `::test_injection_quote_containing_the_term_is_flagged`; live `injection`, `injection-delimiter`.
 - Root cause: (a) `prompt.py:28` inserts `cv.text` raw between `<<<`/`>>>`, so a CV line `>>>` ends the block and
@@ -101,14 +101,14 @@ Open defects by owner: **S6 13** (2 of them contract decisions), **S2 6** (1 fla
   (HIGH) on every result of a CV that matches instruction patterns. Patch: S6. Live measurement: does the LoRA obey?
   (`tests/live`).
 
-### QA-008 · medium · S6: trivial quotes
+### QA-008 · medium · S6: trivial quotes · FIXED in `4f38c97` (in-sample on val, held-out pending)
 - Test: `test_qa_grounding.py::test_trivial_quote_is_not_evidence`.
 - Root cause: any non-empty substring is accepted. For `experience/education/language/other` there is no term check,
   so `["e"]` gives an unreviewed MET.
 - Fix: a verified quote needs at least 3 alphanumeric characters, else `evidence_too_short` (and MET without
   evidence becomes UNCERTAIN). Patch: S6.
 
-### QA-009 · high · S6 (S1 for retrieval): related concept launders an absent skill
+### QA-009 · high · S6 (S1 for retrieval): related concept launders an absent skill · FIXED in `4f38c97` (in-sample on val, held-out pending)
 - Test: `test_qa_grounding.py::test_related_esco_concept_in_rag_context_does_not_launder_absent_skill`; live
   `absent-related-skill`.
 - Root cause: `_terms` (`validate.py:67`) adds the title and aliases of every retrieved ref. A Docker ref retrieved
@@ -134,7 +134,7 @@ Open defects by owner: **S6 13** (2 of them contract decisions), **S2 6** (1 fla
 - Options: amend §3.3 to "must-have" (the current behaviour), or add a nice-to-have review reason. Either way, update
   this test.
 
-### QA-012 · low · S6
+### QA-012 · low · S6 · FIXED in `4f38c97` (in-sample on val, held-out pending)
 - Test: `test_qa_grounding.py::test_contradicted_claim_refuted_by_its_own_quote_is_flagged`.
 - Fix: MISSING/contradicted with `min_years` whose quote shows ≥ min years becomes
   `contradiction_refuted_by_evidence` (HIGH). Patch: S6.
@@ -202,7 +202,7 @@ Open defects by owner: **S6 13** (2 of them contract decisions), **S2 6** (1 fla
 - Fix: `old` only after `too/years/year/be/is`, and `young` only before `er/candidate/person/people/applicant`.
   Patch: S4. The existing `test_leakage_and_demographic_evidence` still passes.
 
-### QA-022 · medium · S6
+### QA-022 · medium · S6 · FIXED in `4f38c97` (in-sample on val, held-out pending)
 - Test: `test_qa_grounding.py::test_quote_stitched_across_sections_does_not_create_years`. Fixed by the QA-004
   change: a clause without the term gives no years, so the result becomes `duration_not_verified`.
 
