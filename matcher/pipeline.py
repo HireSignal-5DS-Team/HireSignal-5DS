@@ -62,9 +62,16 @@ class Pipeline:
         pairs = [self.matcher.match_requirement(cv, r, job_id=job.job_id) for r in job.requirements]  # Matcher + Validator
         results = [res for res, _ in pairs]
         cf = dict(self.counterfactual)
+        cf_models = {}  # req_id -> set of models that answered the counterfactual variants
         if self.live_counterfactual:  # Bias Auditor tests the deployed Matcher itself (it is the system under audit)
             for res, r in zip(results, job.requirements):
-                cf[res.req_id] = counterfactual(lambda c, q: self.matcher.match_requirement(c, q, job_id=job.job_id)[0], cv, r)
+                seen = cf_models.setdefault(res.req_id, set())
+
+                def fn(c, q, seen=seen):
+                    out, info = self.matcher.match_requirement(c, q, job_id=job.job_id)
+                    seen.add(info["provenance"].get("answered_by"))
+                    return out
+                cf[res.req_id] = counterfactual(fn, cv, r)
         audits = [merge(check_result(res, cv.text), cf.get(res.req_id)) for res in results]  # Bias
         judged = self.judge.judge_many([(res, cv, r) for res, r in zip(results, job.requirements)]) if self.judge \
             else [None] * len(results)  # Judge (after the auditor, on the same validated results)
@@ -76,6 +83,9 @@ class Pipeline:
             row["matcher_call"] = {k: call.get(k) for k in ("used", "model", "latency_s", "error", "primary_error",
                                                             "finish_reason") if k in call}
             row["provenance"] = info["provenance"]  # the model that answered THIS requirement
+            if cf_models.get(row["req_id"], set()) - {info["provenance"].get("answered_by")}:
+                # a counterfactual variant was answered by another model (or none): a flip may be a model switch
+                info["review"] = info["review"] + ["matcher:counterfactual_mixed_models"]
             if info["review"]:  # fallback answer, backend down, unparseable/repaired output, wrong served model
                 row["review_reasons"] = list(dict.fromkeys(row["review_reasons"] + info["review"]))
                 row["requires_human_review"] = True

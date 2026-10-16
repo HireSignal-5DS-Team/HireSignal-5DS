@@ -227,7 +227,33 @@ def test_matcher_report_routes_review_into_the_frozen_contract():
     assert r1.decision == "MET" and r1.needs_human_review and "matcher:fallback_model_used" in r1.review_reasons
     assert r1.review_priority in ("medium", "high") and rep.summary.needs_human_review == 4
     assert set(MATCHER_REVIEW) == {"matcher:backend_unavailable", "matcher:output_unparseable",
-                                   "matcher:served_model_mismatch", "matcher:fallback_model_used", "matcher:output_repaired"}
+                                   "matcher:served_model_mismatch", "matcher:fallback_model_used", "matcher:output_repaired",
+                                   "matcher:counterfactual_mixed_models"}
+
+
+class FlakyFake(Fake):
+    """Primary that goes down after `n` calls (an outage in the middle of a live counterfactual audit)."""
+
+    def __init__(self, model, answers, n):
+        super().__init__(model, answers)
+        self.n = n
+
+    def generate(self, task):
+        self.down = self.calls >= self.n
+        return super().generate(task)
+
+
+def test_counterfactual_answered_by_another_model_is_flagged():
+    one = JOB.model_copy(update={"requirements": JOB.requirements[:1]})
+    out = Pipeline(FallbackBackend(FlakyFake("lora", GOOD, n=3), Fake("base", GOOD)), ESCO,
+                   live_counterfactual=True).run(CVX.model_dump(), one.model_dump())
+    x = out["requirements"][0]
+    assert x["provenance"]["answered_by"] == "primary" and "matcher:counterfactual_mixed_models" in x["review_reasons"]
+    assert x["final_decision"] == "MET"  # flagged only
+    assert "matcher:counterfactual_mixed_models" in out["match_report"]["results"][0]["review_reasons"]
+    steady = Pipeline(FallbackBackend(Fake("lora", GOOD), Fake("base", GOOD)), ESCO,
+                      live_counterfactual=True).run(CVX.model_dump(), one.model_dump())
+    assert "matcher:counterfactual_mixed_models" not in steady["requirements"][0]["review_reasons"]
 
 
 @pytest.mark.parametrize("raw,decision,repairs", [

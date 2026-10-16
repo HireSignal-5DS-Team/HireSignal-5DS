@@ -20,6 +20,7 @@ MATCHER_REVIEW = {
     "matcher:served_model_mismatch": "high",  # the endpoint does not list the alias we asked for (/v1/models)
     "matcher:fallback_model_used": "medium",  # the base model answered instead of the fine-tuned primary
     "matcher:output_repaired": "medium",      # the answer was readable only after a form repair (list in provenance)
+    "matcher:counterfactual_mixed_models": "medium",  # live bias test variants not all answered by the same model
 }
 _RANK = {"low": 0, "medium": 1, "high": 2}
 
