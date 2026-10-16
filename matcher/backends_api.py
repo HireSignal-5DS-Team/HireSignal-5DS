@@ -53,7 +53,7 @@ def default_provenance(model, provider):
 
 class OpenAICompatBackend:
     def __init__(self, base_url=None, model=None, api_key_env="HS_LLM_API_KEY", timeout=120.0, max_retries=2,
-                 max_tokens=192, label=None, price_per_mtok=None, provider="local", provenance=None):
+                 max_tokens=192, label=None, price_per_mtok=None, provider="local", provenance=None, response_schema=None):
         self.base_url = (base_url or os.environ.get("HS_LLM_BASE_URL", "http://127.0.0.1:8080/v1")).rstrip("/")
         self.model = model or os.environ.get("HS_LLM_MODEL", "Qwen/Qwen3-4B-Instruct-2507")
         self.api_key_env, self.timeout, self.max_retries, self.max_tokens = api_key_env, timeout, max_retries, max_tokens
@@ -61,6 +61,11 @@ class OpenAICompatBackend:
         self.price_per_mtok = price_per_mtok  # (input, output) USD per 1M tokens, only for cost estimates
         self.last_call, self.totals = {}, {"calls": 0, "errors": 0, "prompt_tokens": 0, "completion_tokens": 0}
         self.provenance_cfg = dict(provenance if provenance is not None else default_provenance(self.model, provider))
+        # Constrained decoding (S1 request s1-template-echo-json): llama-cpp-python 0.3.16 compiles
+        # response_format {"type": "json_object", "schema": ...} to a grammar, so decision/basis can only take a valid
+        # label. The label is still the model's choice, but the "unparseable -> UNCERTAIN" path disappears: off by
+        # default, recorded in provenance, to be measured on val before use.
+        self.response_schema = response_schema
         self._served, self._checks = None, 0  # cached result of verify_alias(): (verified, served_aliases)
 
     def info(self):
@@ -92,7 +97,15 @@ class OpenAICompatBackend:
         return {"role": c.get("role"), "model_id": c.get("model_id", self.model), "served_alias": self.model,
                 "base_revision": c.get("base_revision"), "weights": c.get("weights"), "adapter": c.get("adapter"),
                 "runtime": c.get("runtime"), "endpoint": self.base_url if self.provider == "local" else "<hosted>",
-                "alias_verified": verified, "served_aliases": served, "prompt_id": prompt.PROMPT_VERSION}
+                "alias_verified": verified, "served_aliases": served, "prompt_id": prompt.PROMPT_VERSION,
+                "constrained_decoding": self._schema_id()}
+
+    def _schema_id(self):
+        if not self.response_schema:
+            return None
+        import hashlib
+        h = hashlib.sha256(json.dumps(self.response_schema, sort_keys=True).encode()).hexdigest()[:12]
+        return f"json_schema:{self.response_schema.get('title', 'schema')}@{h}"
 
     def _headers(self):
         headers = {"Content-Type": "application/json"}
@@ -110,6 +123,8 @@ class OpenAICompatBackend:
     def chat(self, messages, max_tokens=None):
         payload = {"model": self.model, "messages": messages, "temperature": 0, "top_p": 1,
                    "max_tokens": max_tokens or self.max_tokens, "seed": 0}
+        if self.response_schema:
+            payload["response_format"] = {"type": "json_object", "schema": self.response_schema}
         t0, err = time.perf_counter(), None
         for attempt in range(1, self.max_retries + 2):
             try:
