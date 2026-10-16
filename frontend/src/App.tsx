@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
 import { CV_ACCEPT } from "./cv-files";
+import { workflowStages } from "./workflow";
 import {
   Link,
   NavLink,
@@ -765,6 +766,7 @@ function Processing({
   campaign: Campaign | null;
   retry: () => void;
 }) {
+  const verifiedStages = workflowStages(mode, campaign, running, step, error);
   return (
     <>
       <PageHeading
@@ -787,49 +789,30 @@ function Processing({
               {error
                 ? "Analysis could not complete"
                 : running
-                  ? "Preparing your demo report…"
-                  : "Your report is ready for review."}
+                  ? mode === "REAL" ? "Running real analysis…" : "Preparing your demo report…"
+                  : "Your analysis is ready for review."}
             </h2>
             <p>
               {input.title} · {input.candidates.length} candidate
               {input.candidates.length === 1 ? "" : "s"}
             </p>
-            <Badge tone="amber">MOCK / DEMO · simulated progress</Badge>
+            <Badge tone={mode === "REAL" ? "green" : "amber"}>
+              {mode === "REAL" ? "REAL · backend results" : "MOCK / DEMO · simulated progress"}
+            </Badge>
           </div>
           <div className="pipeline" aria-live="polite">
-            {stages.map((s, i) => {
-              const state = error
-                ? i === step
-                  ? "Failed"
-                  : i < step
-                    ? "Completed"
-                    : "Pending"
-                : !running || i < step
-                  ? "Completed"
-                  : i === step
-                    ? "Running"
-                    : "Pending";
-              return (
-                <div key={s} className={`pipeline-step ${state.toLowerCase()}`}>
-                  <span>
-                    {state === "Completed" ? <Check size={18} /> : i + 1}
-                  </span>
-                  <div>
-                    <strong>{s}</strong>
-                    <small>
-                      {state === "Completed"
-                        ? "Demo stage complete · no model executed"
-                        : state === "Running"
-                          ? "Simulating workflow responsibility"
-                          : "Demo stage"}
-                    </small>
-                  </div>
-                  <Badge tone={state === "Completed" ? "green" : ""}>
-                    {state}
-                  </Badge>
+            {verifiedStages.map(({ name, state, detail }, i) => (
+              <div key={name} className={`pipeline-step ${state.toLowerCase().replace(/ /g, "-")}`}>
+                <span>{state === "Completed" ? <Check size={18} /> : i + 1}</span>
+                <div>
+                  <strong>{name}</strong>
+                  <small>{detail}</small>
                 </div>
-              );
-            })}
+                <Badge tone={state === "Completed" ? "green" : state === "Failed" ? "red" : state === "Not integrated" ? "amber" : ""}>
+                  {state}
+                </Badge>
+              </div>
+            ))}
           </div>
           {error ? (
             <>
@@ -849,7 +832,9 @@ function Processing({
             </Link>
           ) : (
             <p className="muted">
-              You can navigate elsewhere while this demo completes.
+              {mode === "REAL"
+                ? "Awaiting FastAPI results. No per-stage progress is available from the API."
+                : "You can navigate elsewhere while this demo completes."}
             </p>
           )}
         </section>
@@ -1376,26 +1361,35 @@ export default function App() {
     setError("");
     setLastCampaign(null);
     navigate("/processing");
-    let current = 0;
-    timer.current = setInterval(() => {
-      current++;
-      if (current < stages.length) {
-        setStep(current);
-        return;
-      }
-      if (timer.current) clearInterval(timer.current);
+    const execute = () => {
       void adapter
         .run(next)
         .then((c) => {
           setCampaigns((prev) => [c, ...prev]);
           setLastCampaign(c);
         })
-        .catch((e) => setError(e.message))
+        .catch((e) => setError(e instanceof Error ? e.message : "Analysis failed."))
         .finally(() => {
           setRunning(false);
           busy.current = false;
         });
-    }, 450);
+    };
+    if (timer.current) clearInterval(timer.current);
+    if (mode === "REAL") {
+      // REAL requests start immediately. The API does not stream stage progress.
+      execute();
+    } else {
+      let current = 0;
+      timer.current = setInterval(() => {
+        current++;
+        if (current < stages.length) {
+          setStep(current);
+        } else {
+          if (timer.current) clearInterval(timer.current);
+          execute();
+        }
+      }, 450);
+    }
   }
   function updateReview(
     id: string,
@@ -1520,7 +1514,7 @@ export default function App() {
                   <>
                     <PageHeading
                       eyebrow="ANALYSIS IN PROGRESS"
-                      title="Your demo is running."
+                      title={mode === "REAL" ? "Your real analysis is running." : "Your demo is running."}
                       description="Finish this analysis before starting another."
                     />
                     <Link className="button primary" to="/processing">
