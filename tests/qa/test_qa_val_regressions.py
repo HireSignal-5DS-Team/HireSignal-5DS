@@ -53,14 +53,12 @@ def test_lora_met_with_years_below_minimum_is_caught(cid, rid, quote):
     assert "years_below_minimum_in_evidence" in res.review_reasons
 
 
-@defect("QA-025", "S6")
 @pytest.mark.parametrize("cid,rid,quote", WEAK_EXPOSURE, ids=[f"{c}/{r}" for c, r, _ in WEAK_EXPOSURE])
 def test_weak_exposure_quote_is_not_an_unreviewed_met(cid, rid, quote):
     res, _ = replay(cid, rid, lora_raw(quote))
     assert res.decision != "MET" or res.needs_human_review
 
 
-@defect("QA-026", "S6")
 @pytest.mark.parametrize("cid,rid,quote", NO_DURATION, ids=[f"{c}/{r}" for c, r, _ in NO_DURATION])
 def test_min_years_without_any_duration_is_not_met(cid, rid, quote):
     res, _ = replay(cid, rid, lora_raw(quote))

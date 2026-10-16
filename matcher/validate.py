@@ -15,7 +15,13 @@ REASONS = {
     "inconsistent_decision_basis": HIGH,
     "met_without_verified_evidence": HIGH,
     "years_below_minimum_in_evidence": HIGH,
+    "negation_in_evidence_context": HIGH,
+    "certification_not_evidenced": HIGH,
+    "contradiction_refuted_by_evidence": HIGH,
+    "possible_prompt_injection": HIGH,
+    "weak_evidence_cue": HIGH,
     "evidence_not_in_cv": MEDIUM,
+    "evidence_too_short": MEDIUM,
     "contradiction_without_evidence": MEDIUM,
     "duration_not_verified": MEDIUM,
     "semantic_inference_no_term_in_quote": MEDIUM,
@@ -45,12 +51,33 @@ def find_span(cv_text, quote):
     return (i, i + len(q)) if i >= 0 else None
 
 
+_NEG = re.compile(r"\b(never|no|not|without|lacks?|lacking|none|nor|cannot)\b|n't\b", re.I)
+_CERT = re.compile(r"certif|licen[cs]|accredit|credential", re.I)
+_INJECT = re.compile(r"ignore\s+(all\s+)?(the\s+)?(previous|prior|above|earlier)\s+instructions|^\W*system\s*:|"
+                     r"mark\s+(every|all|each|this)\s+requirements?\s+(as\s+)?met", re.I | re.M)
+_WEAK = re.compile(r"\b(tutorials?|watched|read (?:about|up on)|interested in|online course|bootcamp|familiar with|"
+                   r"exposure to|introductory|attended (?:a |an )?(?:talk|webinar|workshop))\b", re.I)
+_CLAUSE = re.compile(r"[,;\n]|\.(?=\s|$)")
+
+
+def _has_term(text, terms):
+    return any(re.search(rf"(?<!\w){re.escape(t)}(?!\w)", text, re.I) for t in terms)
+
+
+def line_context(cv_text, span):
+    """CV text from the start of the span's line to the end of the span (what precedes the quote on its line)."""
+    return cv_text[cv_text.rfind("\n", 0, span[0]) + 1:span[1]]
+
+
 _YEARS = re.compile(r"(\d+(?:\.\d+)?)\s*\+?\s*(?:years?|yrs?)\b", re.I)
 _RANGE = re.compile(r"\b((?:19|20)\d\d)\s*(?:-|–|—|to)\s*((?:19|20)\d\d|present|now|current|today)\b", re.I)
 
 
-def evidence_years(quotes, ref_year=2026):
-    """Largest of: explicit 'N years' mentions, merged span of year ranges. None if nothing parseable."""
+def evidence_years(quotes, ref_year=2026, terms=None):
+    """Largest of: explicit 'N years' mentions, merged span of year ranges. None if nothing parseable.
+    With terms, only clauses naming a term count (years of another skill or another section do not)."""
+    if terms:
+        quotes = [c for q in quotes for c in _CLAUSE.split(q) if _has_term(c, terms)]
     explicit = [float(m) for q in quotes for m in _YEARS.findall(q)]
     ranges = sorted((int(a), ref_year if not b.isdigit() else int(b)) for q in quotes for a, b in _RANGE.findall(q))
     merged = []
@@ -65,9 +92,14 @@ def evidence_years(quotes, ref_year=2026):
 
 
 def _terms(req, refs):
+    """Requirement terms plus the names of retrieved concepts that ARE the required skill (a ref whose title or alias
+    equals a skill term, or occurs in the requirement text). A merely related concept does not widen the set."""
+    own = {t.casefold() for t in req.skill_terms}
     terms = list(req.skill_terms)
     for r in refs:
-        terms += [r.title, *r.aliases]
+        names = [r.title, *r.aliases]
+        if any(n.casefold() in own or _has_term(req.text, [n]) for n in names if len(n) >= 2):
+            terms += names
     return {t.casefold() for t in terms if len(t) >= 2}
 
 
@@ -85,7 +117,9 @@ def validate(answer, cv, req, refs, ref_year=2026):
         quotes = []
         for q in answer.evidence:
             span = find_span(cv.text, q)
-            if span:
+            if span and sum(ch.isalnum() for ch in cv.text[span[0]:span[1]]) < 3:
+                reasons.append("evidence_too_short")
+            elif span:
                 quotes.append(cv.text[span[0]:span[1]])
             else:
                 reasons.append("evidence_not_in_cv")
@@ -98,16 +132,30 @@ def validate(answer, cv, req, refs, ref_year=2026):
     if decision == "MISSING" and basis == "contradicted" and not quotes:
         basis = "not_documented"
         reasons.append("contradiction_without_evidence")
+    terms = _terms(req, refs)
+    if decision == "MET" and any(_NEG.search(line_context(cv.text, sp)) for sp in spans):
+        reasons.append("negation_in_evidence_context")
+    if decision == "MET" and quotes and all(_WEAK.search(q) for q in quotes):  # QA-025: exposure is not ability
+        decision, basis = "UNCERTAIN", "ambiguous"
+        reasons.append("weak_evidence_cue")
+    if decision == "MET" and req.category == "certification" and not any(_CERT.search(q) for q in quotes):
+        reasons.append("certification_not_evidenced")
+    if _INJECT.search(cv.text):
+        reasons.append("possible_prompt_injection")
+    if decision == "MISSING" and basis == "contradicted" and req.min_years:
+        years = evidence_years(quotes, ref_year, terms)
+        if years is not None and years >= req.min_years:
+            reasons.append("contradiction_refuted_by_evidence")
     if decision == "MET" and req.min_years:
-        years = evidence_years(quotes, ref_year)
-        if years is None:
+        years = evidence_years(quotes, ref_year, terms)
+        if years is None:  # QA-026: a minimum duration that the evidence does not state is not verified
+            decision, basis = "UNCERTAIN", "ambiguous"
             reasons.append("duration_not_verified")
         elif years < req.min_years:
             decision, basis = "UNCERTAIN", "ambiguous"
             reasons.append("years_below_minimum_in_evidence")
     if decision == "MET" and req.category == "skill":
-        terms = _terms(req, refs)
-        if terms and not any(t in q.casefold() for q in quotes for t in terms):
+        if terms and not any(_has_term(q, terms) for q in quotes):
             reasons.append("semantic_inference_no_term_in_quote")
     if decision == "UNCERTAIN":
         reasons.append("uncertain_decision")
