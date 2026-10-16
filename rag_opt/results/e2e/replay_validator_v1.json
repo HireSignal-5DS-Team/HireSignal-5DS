@@ -1,4 +1,64 @@
 {
+ "base": {
+  "runs": {
+   "bm25": {
+    "n": 202,
+    "macro_f1": 0.5901,
+    "false_met": 0.0086,
+    "review_rate": 0.7772,
+    "changed_vs_saved": 0,
+    "refs_mismatch": 0
+   },
+   "gated": {
+    "n": 202,
+    "macro_f1": 0.5994,
+    "false_met": 0.0086,
+    "review_rate": 0.7673,
+    "changed_vs_saved": 0,
+    "refs_mismatch": 0
+   },
+   "none": {
+    "n": 202,
+    "macro_f1": 0.6137,
+    "false_met": 0.0086,
+    "review_rate": 0.802,
+    "changed_vs_saved": 0,
+    "refs_mismatch": 0
+   }
+  },
+  "paired": {
+   "bm25 vs none": {
+    "delta": -0.0236,
+    "ci95": [
+     -0.0612,
+     0.0102
+    ],
+    "base_only": 11,
+    "cand_only": 6,
+    "mcnemar_p": 0.3323
+   },
+   "gated vs none": {
+    "delta": -0.0143,
+    "ci95": [
+     -0.0382,
+     0.0076
+    ],
+    "base_only": 5,
+    "cand_only": 2,
+    "mcnemar_p": 0.4531
+   },
+   "gated vs bm25": {
+    "delta": 0.0093,
+    "ci95": [
+     -0.0262,
+     0.0446
+    ],
+    "base_only": 7,
+    "cand_only": 9,
+    "mcnemar_p": 0.8036
+   }
+  }
+ },
  "lora": {
   "runs": {
    "bm25": {

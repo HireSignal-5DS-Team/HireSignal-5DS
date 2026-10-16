@@ -346,12 +346,46 @@ benchmark: macro-F1 is unchanged within noise. What is shown: no off-target know
 (v1), alias accuracy +0.09/+0.14 vs the two no-RAG runs, and +2 % latency, while legacy BM25 adds +27 % prompt tokens (p50 latency +48 % in the evaluation's container)
 Confirmation on the locked test split is the orchestrator's call.
 
-BASE_LIVE_PLACEHOLDER
+### 6.2 LIVE results, window 1 (base model, the fallback; `rag_opt/results/e2e/e2e_report.md`)
+
+The evaluation's recorded base runs were **not** reproducible here (5/9 identical raw outputs in a spot check,
+another llama-cpp-python build), so all three base arms were run fresh, in this order, on one `llama_cpp.server`
+(llama-cpp-python 0.3.16, same GGUF, `n_ctx 4096`, 4 threads, validator v1). A first `none` attempt on a server that
+had defaulted to 2 threads was aborted after 6 requirements and discarded; thread count did not change outputs
+(9/9 identical), only speed.
+
+| arm | macro-F1 | false-MET | JSON valid | template echo | alias (21) | absent-skill (11) | certification (13) | p50 / p95 s | prompt tokens |
+|---|---|---|---|---|---|---|---|---|---|
+| none | 0.614 | 0.009 | 0.921 | 16 | 0.29 | 0.45 | 0.46 | 16.1 / 23.1 | 315 |
+| bm25 (legacy) | 0.590 | 0.009 | 0.876 | 25 | 0.43 | 0.27 | 0.15 | 18.8 / 26.3 | 401 |
+| gated | 0.599 | 0.009 | 0.906 | 19 | 0.38 | 0.09 | 0.46 | 16.6 / 23.5 | 327 |
+
+| comparison (paired, 202) | Δ macro-F1 | 95% CI | base-only / cand-only correct | McNemar p |
+|---|---|---|---|---|
+| bm25 vs none | −0.024 | [−0.061, +0.010] | 11 / 6 | 0.33 |
+| gated vs none | −0.014 | [−0.038, +0.008] | 5 / 2 | 0.45 |
+| gated vs bm25 | +0.009 | [−0.026, +0.045] | 7 / 9 | 0.80 |
+
+The legacy BM25 loss reproduces in direction (−0.024 here, −0.041 in the audit), with certification and JSON
+validity again the main damage. Gated restores certification (0.46) and most of the JSON validity (19 vs 25
+echoes, 16 without RAG). The 151 abstentions are byte-identical to `none`. Of gated's 5 losses, 4 are absent-skill
+traps that move from MISSING to UNCERTAIN, all 4 on "maintain information network hardware". The model sees the
+ESCO concept and then treats "maintained the team's information wiki" as ambiguous. The direction is conservative:
+the requirement goes to review, with no false MET. The fifth loss is a template echo. The 2 gains are alias items.
+So my §2.4 hypothesis ("neighbouring concepts cause the absent-skill loss") is **not confirmed** for the base model:
+even the single correct concept triggers it. On the LoRA Matcher the same items stay at 1.00.
+
+Review rate (paired; `rag_opt/results/e2e/review_rate_base_v{1,2}.md`; identical under v1 and v2): gated vs none
+0.802 → 0.767, −3.5 points [−6.4, −0.5], McNemar 8/1, p = 0.039 (8 dropped reviews, all on correct decisions);
+legacy BM25 vs none −2.5 points, p = 0.30. Validator v2 replay: false-MET 0 in all arms; macro-F1 none 0.619,
+bm25 0.595, gated 0.605; same paired conclusions. Note: a base (fallback) answer is routed to human review in the
+pipeline anyway (`matcher:fallback_model_used`), so its review rate matters less than the LoRA's.
 
 ## 7. Still unmeasured, and limits
 
 - LIVE results exist for the LoRA Matcher only on val (§6.1). The locked test split is not run.
-- The base-model E2E rows are in §6.1 only once their arms finish (see that section).
+- Absent-skill traps on the base model: a single correct ESCO concept still turns MISSING into UNCERTAIN (§6.2).
+  A requirement-time gate cannot detect these traps (they look like any skill requirement); unresolved.
 - Constrained JSON decoding (S2's `HS_JSON_SCHEMA`) combined with RAG on the base model is not measured.
 - Absent-skill traps with a single reference (the gated prompt): not measured.
 - All design choices were made from **val** error analysis, and the comparison is on val too, so there is a
@@ -380,16 +414,19 @@ QA test should target the default provider (S5's file).
 
 ## 8. Tests
 
-`python -m pytest -q matcher benchmark/tests rag/tests`: **105 passed, 8 skipped** (MOCK / recorded data / BM25
-only; the skips are the team's real-model tests `RAG_REAL=1` and one matcher test that expects an external RAG checkout
-at `/home/user/ragsrc-latest`). New: `rag/tests/test_gated_knowledge.py` (21: gate, prompt identical to no-RAG,
-exact match, absent-skill neighbours dropped, cut-off cases, de-dup and k budget, compact text for all 1,621 entries,
-`rag_refs` equal to the refs shown in full, abstention cites nothing, no CV text in queries, job passage, dense τ)
+After merging the integration branch (`20dd327`): `python -m pytest -q matcher benchmark/tests rag/tests tests/qa`
+gives **288 passed, 12 skipped** (MOCK, recorded data and BM25 only; the skips are real-model tests that need
+`RAG_REAL=1` or a live server). Before the merge, `matcher benchmark/tests rag/tests` gave 107 passed, 8 skipped. One
+earlier single failure (1 of 15 runs, not reproduced) matches the known flaky API-backend test QA-024, fixed by S2.
+S1 tests: `rag/tests/test_gated_knowledge.py` (23: gate, prompt identical to no-RAG, exact match, absent-skill
+neighbours dropped, cut-off cases, QA-023, de-dup and k budget, compact text for all 1,621 entries, `rag_refs` equal to
+the refs shown in full, abstention cites nothing, no CV text in queries, job passage, dense τ, provider `version`)
 and `rag/tests/test_rag_opt_scripts.py` (4: MOCK arm runs with no leaking patch, test split refused, echo detector,
-audit numbers reproduced).
+audit numbers reproduced). LIVE: the five new arms (`lora__gated`, `lora__none-repeat`, `base__{none,gated,bm25}`)
+are committed with `config.json`, `predictions.jsonl` (raw outputs), `metrics.json` and `provenance.json`.
 
 ## 9. S1 status (copy; the orchestrator's STATUS.md is not edited)
 
 | session | branch | deliverable | blockers | tests |
 |---|---|---|---|---|
-| 1 RAG | `session/s1-rag-optimization` | team `rag/` merged; diagnosis (template echo, off-target refs, neighbours); `rag.gated.v1` provider; retrieval metrics (BM25 + dense); replay estimate; window-1 E2E script ready | live E2E (LoRA + base, 4 arms) waits for window 1; factory default needs S2; template-echo fix needs S2/S6 | 105 passed, 8 skipped (MOCK/recorded; no live model) |
+| 1 RAG | `session/s1-rag-optimization` | diagnosis; `rag.gated.v1` (now the production default, `e27c461`); retrieval metrics (BM25 + dense); **LIVE window-1 E2E on val**: LoRA (none/bm25 reused, gated + none-repeat run) and base (3 fresh arms), paired McNemar + bootstrap, validator v1 and v2 replays, review-rate test; QA-023 answered; provider `version` (QA-014) | none for S1 work; locked-test confirmation is the orchestrator's | mock: 288 passed, 12 skipped (`matcher benchmark/tests rag/tests tests/qa`, after merging the integration branch); LIVE: 5 new arms committed with provenance |
