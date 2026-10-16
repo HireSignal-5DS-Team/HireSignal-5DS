@@ -46,6 +46,7 @@ cosmetic or a rare false alarm.
 | QA-027 | medium | S2 (model) | open | LIVE: LoRA answers MET despite years below the minimum 4x on val (base: 2x); caught by the validator (UNCERTAIN), never final MET |
 | QA-028 | high | S2 | open | LIVE: LoRA explanations are 4 fixed templates that never name the requirement; the final report shows them as the explanation |
 | QA-029 | medium | S4 (S2 model) | open, finding | LIVE: counterfactual flip on the real LoRA: "At least 5 years of Python" is MISSING with header "Name: Emily Johnson", MET with "Name: Mohamed Ben Salah" (flagged correctly) |
+| QA-030 | medium | S5 | **fixed** `matcher/judge.py` | my QA-017 line context kept bullet markers ("– "), which flipped the pretrained Judge FAIL→PASS on the val weak-exposure false-METs |
 | QA-024 | medium | S2 (test) | open | existing `test_api_backend_success_timeout_and_unavailable` is flaky (2 failures in ~15 full runs) |
 
 QA-006 and QA-021 were merged into QA-002 and dropped as negligible (12-character ref id collisions in the prompt).
@@ -183,9 +184,27 @@ Status after validator v2 (`4f38c97`, merged into this branch at `78c9c62`): QA-
 - Fix: each quote is widened to its CV line, bounded to 300 characters each side at a sentence boundary
   (`quote_context`). `benchmark/judge_eval.py` uses the same premises
   (`test_judge_eval_uses_the_same_premises_as_the_pipeline`).
-- **Follow-up (window 1):** τ was calibrated on quote-only premises (0.85 fine-tuned, 0.65 pretrained). Re-run
-  `benchmark.judge_eval --calibrate-only` on train-dev and `tests/live` with `HS_LIVE_JUDGE=1`. Most quotes are
-  whole lines already, so the expected shift is small, but it is unmeasured.
+- **Recalibration done (window 1).** Tool: `docs/qa/analysis/recalibrate_judge.py`. Output:
+  `judge_recalibration_pretrained.json`. Protocol: lexical-rag-train, train-dev only (142 items), same grid and
+  objective as `judge_eval --calibrate-only`.
+  - **Pretrained:** old τ 0.65 reproduced exactly with the old premises (strict F1 0.655, AUROC 0.793).
+    **New τ 0.65**: unchanged, identical grid.
+  - **Fine-tuned:** the checkpoint is not in this container. All 142 train-dev premises are byte-identical under
+    the old and new code (`premises_changed: 0`; the lexical baseline quotes whole lines, and every CV is ≤ 626
+    characters, below the 1500 chunk size). NLI scores, grid and τ are therefore identical: **τ stays 0.85**.
+    This follows from the identical inputs; it was not re-measured.
+  - **Effect at fixed τ 0.65 on real LLM outputs** (val, evaluation only, nothing fitted;
+    `judge_premise_effect.py`, output `judge_premise_effect_pretrained.json`): after QA-030, 0 verdict changes in
+    any of the 4 arms (808 items). On this data the new premises behave exactly like the old ones, while still
+    catching the partial-quote negation case (QA-017).
+
+### QA-030 · medium · S5 · FIXED (`matcher/judge.py`)
+- Test: `test_qa_judge.py::test_line_context_drops_list_markers_but_keeps_negation` (failed first in `d0c4a13`).
+- Found by measuring QA-017 on real outputs: LLM quotes omit the CV bullet, so the line context added "– ", "* " or
+  "• ". That changed 27 to 32 pretrained verdicts per LoRA arm at τ 0.65. Most changes were benign (FAIL→UNCERTAIN
+  on correct decisions), but val-029/r4 and val-017/r1, the weak-exposure false-METs, went FAIL→PASS.
+- Fix: `quote_context` drops a leading list marker when it widens a quote. After the fix there are 0 verdict
+  changes against the old premises on all 808 val outputs.
 
 ### QA-018 · medium · S5 · FIXED
 - Test: `test_qa_judge.py::test_long_cv_not_documented_check_reads_the_whole_cv`,
