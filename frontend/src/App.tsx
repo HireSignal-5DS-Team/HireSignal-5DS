@@ -886,14 +886,17 @@ function Detail({
         All candidates
       </Link>
       <PageHeading
-        eyebrow={`${campaign.mode} / DEMO ANALYSIS`}
+        eyebrow={`${campaign.mode} ANALYSIS`}
         title={candidate.label}
         description={`${campaign.title} · Anonymized candidate profile`}
         action={<Badge tone="amber">{candidate.review}</Badge>}
       />
       <div className="detail-summary">
         <div>
-          <span className="eyebrow">REQUIREMENT SIGNALS · SIMULATED</span>
+          <span className="eyebrow">
+            REQUIREMENT SIGNALS{" "}
+            {campaign.mode === "MOCK" ? "· SIMULATED" : "· LIVE BACKEND"}
+          </span>
           <Counts candidate={candidate} />
         </div>
         <p>
@@ -951,12 +954,47 @@ function Detail({
                     </div>
                   )}
                   <p>{r.explanation}</p>
+                  {(r.review_reasons?.length ?? 0) > 0 && (
+                    <small className="review-reasons">
+                      <strong>Review flags:</strong> {r.review_reasons.join("; ")}
+                    </small>
+                  )}
                   <small>
                     Knowledge shown:{" "}
                     {r.rag_refs.length
                       ? r.rag_refs.join(", ")
-                      : "None — retrieval not executed in DEMO"}
+                      : campaign.mode === "MOCK"
+                        ? "None — retrieval not executed in DEMO"
+                        : "No matching ESCO entry for this term"}
                   </small>
+                  {campaign.mode === "REAL" && (
+                    <div className="per-req-audit">
+                      <Badge
+                        tone={
+                          r.judge
+                            ? r.judge.judge_verdict === "PASS"
+                              ? "green"
+                              : r.judge.judge_verdict === "FAIL"
+                                ? "red"
+                                : "amber"
+                            : ""
+                        }
+                      >
+                        Judge: {r.judge?.judge_verdict ?? "Not executed"}
+                      </Badge>
+                      <Badge
+                        tone={
+                          r.bias_audit?.audit_status === "PASS"
+                            ? "green"
+                            : r.bias_audit?.audit_status === "FLAGGED"
+                              ? "red"
+                              : ""
+                        }
+                      >
+                        Bias: {r.bias_audit?.audit_status ?? "Not executed"}
+                      </Badge>
+                    </div>
+                  )}
                 </article>
               ))}
             </div>
@@ -970,27 +1008,64 @@ function Detail({
           <section className="panel">
             <ShieldCheck className="teal" size={25} />
             <h2>Verification & fairness</h2>
-            <div className="review-check">
-              <strong>Judge verification</strong>
-              <Badge>Not executed</Badge>
-              <p>No NLI or independent model verification ran in this demo.</p>
-            </div>
-            <div className="review-check">
-              <strong>Bias Auditor</strong>
-              <Badge>Not executed</Badge>
-              <p>
-                Fairness is not established. Check for irrelevant personal
-                attributes, proxy signals, and uneven evidence standards.
-              </p>
-            </div>
-            <div className="notice">
-              <strong>Recommended next step</strong>
-              <p>
-                Review every requirement and seek clarification on missing or
-                uncertain evidence. Do not use simulated outcomes to select or
-                reject a candidate.
-              </p>
-            </div>
+            {(() => {
+              const judges = candidate.report.results.map((r) => r.judge?.judge_verdict).filter(Boolean) as string[];
+              const biases = candidate.report.results.map((r) => r.bias_audit?.audit_status).filter(Boolean) as string[];
+              const judgeModel = candidate.report.results.find((r) => r.judge)?.judge?.model;
+              const anyFlag = (vs: string[], neg: string[]) => vs.some((v) => neg.includes(v));
+              const judgeTone = judges.length
+                ? anyFlag(judges, ["FAIL"])
+                  ? "red"
+                  : anyFlag(judges, ["UNCERTAIN"])
+                    ? "amber"
+                    : "green"
+                : "";
+              const biasTone = biases.length
+                ? anyFlag(biases, ["FLAGGED"])
+                  ? "red"
+                  : "green"
+                : "";
+              return (
+                <>
+                  <div className="review-check">
+                    <strong>Judge verification</strong>
+                    <Badge tone={judgeTone}>
+                      {judges.length
+                        ? `${judges.filter((v) => v === "PASS").length} PASS · ${judges.filter((v) => v === "FAIL").length} FAIL · ${judges.filter((v) => v === "UNCERTAIN").length} UNCERTAIN`
+                        : "Not executed"}
+                    </Badge>
+                    <p>
+                      {judges.length
+                        ? `NLI entailment check (${judgeModel}). FAIL/UNCERTAIN requirements are flagged for human review; they never become automatic rejections.`
+                        : "No NLI or independent model verification ran in this demo."}
+                    </p>
+                  </div>
+                  <div className="review-check">
+                    <strong>Bias Auditor</strong>
+                    <Badge tone={biasTone}>
+                      {biases.length
+                        ? `${biases.filter((v) => v === "PASS").length} PASS · ${biases.filter((v) => v === "FLAGGED").length} FLAGGED${biases.filter((v) => v === "NOT_TESTED").length ? ` · ${biases.filter((v) => v === "NOT_TESTED").length} NOT_TESTED` : ""}`
+                        : "Not executed"}
+                    </Badge>
+                    <p>
+                      {biases.length
+                        ? "Rules-based auditor (rules_v2) over the matcher output; flags protected-attribute mentions and proxy signals per requirement."
+                        : "Fairness is not established. Check for irrelevant personal attributes, proxy signals, and uneven evidence standards."}
+                    </p>
+                  </div>
+                  <div className="notice">
+                    <strong>Recommended next step</strong>
+                    <p>
+                      Review every requirement and seek clarification on
+                      missing or uncertain evidence.{" "}
+                      {campaign.mode === "MOCK"
+                        ? "Do not use simulated outcomes to select or reject a candidate."
+                        : "Automated decisions are review aids; never auto-reject."}
+                    </p>
+                  </div>
+                </>
+              );
+            })()}
           </section>
           <section className="panel">
             <h2>Your review</h2>

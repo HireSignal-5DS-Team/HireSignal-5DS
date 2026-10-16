@@ -1,12 +1,15 @@
 import type {
   AnalysisInput,
+  BiasInfo,
   Campaign,
   CandidateRecord,
   CV,
   Job,
+  JudgeInfo,
   MatchReport,
   Mode,
   RequirementResult,
+  ValidatorInfo,
 } from "./contracts";
 
 export const mode: Mode =
@@ -239,11 +242,21 @@ export interface AnalysisAdapter {
 
 // POST /api/v1/match expects {cv, job} and returns a PipelineOutput (contract 1.1.0).
 // Its match_report field is a MatchReport (schema 1.0.0) — exactly what the UI consumes.
+// Its requirements[] field (contract 1.1.0 RequirementRow[]) carries Judge, Bias and
+// validator findings that are NOT in match_report; we merge them by req_id so the UI
+// renders real verification instead of static "Not executed" placeholders.
+interface PipelineRequirementRow {
+  req_id: string;
+  judge?: JudgeInfo | null;
+  bias_audit?: BiasInfo | null;
+  validator?: ValidatorInfo | null;
+}
 interface PipelineOutput {
-  contract_version: string;
+  contract_version?: string;
   cv_id: string;
   job_id: string;
   match_report: MatchReport;
+  requirements?: PipelineRequirementRow[];
   _meta?: Record<string, unknown>;
 }
 
@@ -261,7 +274,18 @@ async function realMatch(
   const data = (await client.match({ cv, job })) as PipelineOutput;
   if (!data || typeof data !== "object" || !isMatchReport(data.match_report))
     throw new ApiError("Backend response is missing a valid match_report.");
-  return data.match_report;
+  const extras = new Map<string, PipelineRequirementRow>();
+  for (const row of data.requirements ?? []) extras.set(row.req_id, row);
+  const merged: MatchReport = {
+    ...data.match_report,
+    results: data.match_report.results.map((r) => {
+      const x = extras.get(r.req_id);
+      return x
+        ? { ...r, judge: x.judge ?? null, bias_audit: x.bias_audit ?? null, validator: x.validator ?? null }
+        : r;
+    }),
+  };
+  return merged;
 }
 
 export const adapter: AnalysisAdapter = {
