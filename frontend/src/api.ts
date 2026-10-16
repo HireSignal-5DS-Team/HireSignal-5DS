@@ -9,6 +9,7 @@ import type {
   MatchReport,
   Mode,
   RequirementResult,
+  ReporterData,
   ValidatorInfo,
 } from "./contracts";
 
@@ -19,8 +20,8 @@ export const stages = [
   "Profile & Job Analysis",
   "RAG Retrieval",
   "Matcher",
-  "Judge",
   "Bias Auditor",
+  "Judge",
   "Report Writer",
 ];
 export const sampleJob =
@@ -256,6 +257,7 @@ interface PipelineOutput {
   cv_id: string;
   job_id: string;
   match_report: MatchReport;
+  reporter?: ReporterData;
   requirements?: PipelineRequirementRow[];
   _meta?: Record<string, unknown>;
 }
@@ -270,7 +272,7 @@ async function realMatch(
   client: ApiClient,
   cv: CV,
   job: Job,
-): Promise<MatchReport> {
+): Promise<{ report: MatchReport; reporter?: ReporterData }> {
   const data = (await client.match({ cv, job })) as PipelineOutput;
   if (!data || typeof data !== "object" || !isMatchReport(data.match_report))
     throw new ApiError("Backend response is missing a valid match_report.");
@@ -285,7 +287,7 @@ async function realMatch(
         : r;
     }),
   };
-  return merged;
+  return { report: merged, reporter: data.reporter };
 }
 
 export const adapter: AnalysisAdapter = {
@@ -300,12 +302,13 @@ export const adapter: AnalysisAdapter = {
     // Serialize: concurrency = 1 on the backend (RTX 4050, 6 GB VRAM).
     for (let i = 0; i < input.candidates.length; i++) {
       const cv = input.candidates[i];
-      const report = await realMatch(client, cv, job);
+      const { report, reporter } = await realMatch(client, cv, job);
       candidates.push({
         id: `${id}-${i + 1}`,
         label: `Candidate ${String(i + 1).padStart(2, "0")}`,
         cv,
         report,
+        reporter,
         review: "Pending review",
         note: "",
       });

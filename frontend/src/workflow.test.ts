@@ -64,6 +64,26 @@ describe("honest workflow telemetry", () => {
     expect(stages[6].detail).toContain("/api/v1/match");
   });
 
+  it("confirms the Report Writer only when the API returns its grounded report", () => {
+    const campaign = realCampaign();
+    campaign.candidates[0].reporter = {
+      schema_version: "1.0.0",
+      executive_summary: { text: "Verified summary", writer: "deterministic_fallback" },
+      requirements: [],
+      provenance: {
+        slm_status: "on",
+        sections_total: 2,
+        sections_slm: 1,
+        sections_fallback: 1,
+        model: "Qwen3-0.6B",
+        any_mock: false,
+      },
+    };
+    const stages = workflowStages("REAL", campaign, false, 0, "");
+    expect(stages[6].state).toBe("Completed");
+    expect(stages[6].detail).toContain("1 SLM-written sections");
+  });
+
   it("never calls an unreported Judge or Bias audit completed", () => {
     const campaign = realCampaign();
     delete campaign.candidates[0].report.results[0].judge;

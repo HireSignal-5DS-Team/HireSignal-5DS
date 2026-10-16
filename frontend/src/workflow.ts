@@ -130,8 +130,12 @@ export function workflowStages(
     ),
     {
       name: names[6],
-      state: "Not reported",
-      detail: "SLM report generation is not confirmed by the current /api/v1/match response",
+      state: responseAvailable && campaign!.candidates.every((candidate) => candidate.reporter)
+        ? "Completed"
+        : "Not reported",
+      detail: responseAvailable && campaign!.candidates.every((candidate) => candidate.reporter)
+        ? `Grounded report returned for ${campaign!.candidates.length} candidate(s); ${campaign!.candidates.reduce((sum, candidate) => sum + (candidate.reporter?.provenance.sections_slm ?? 0), 0)} SLM-written sections accepted; deterministic fallback where needed`
+        : "SLM report generation is not confirmed by the current /api/v1/match response",
     },
   ];
 }

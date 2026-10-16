@@ -984,6 +984,36 @@ function Detail({
               ))}
             </div>
           </section>
+          {candidate.reporter && (
+            <section className="panel">
+              <div className="panel-title">
+                <div>
+                  <h2>Validated Report Writer</h2>
+                  <p>
+                    Grounded summary and requirement notes. Every SLM-written section
+                    is checked against the verified pipeline facts.
+                  </p>
+                </div>
+              </div>
+              <p>{candidate.reporter.executive_summary.text}</p>
+              <p className="field-hint">
+                Summary writer: {candidate.reporter.executive_summary.writer} ·
+                SLM: {candidate.reporter.provenance.sections_slm}/
+                {candidate.reporter.provenance.sections_total} sections accepted ·
+                Fallback: {candidate.reporter.provenance.sections_fallback} ·
+                Status: {candidate.reporter.provenance.slm_status}
+              </p>
+              <div className="requirements">
+                {candidate.reporter.requirements.map((item) => (
+                  <div className="requirement" key={item.req_id}>
+                    <strong>{item.req_id}</strong>
+                    <p>{item.plain_note.text}</p>
+                    <small>Writer: {item.plain_note.writer}</small>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
           <details className="panel source-text">
             <summary>Inspect original CV text</summary>
             <pre>{candidate.cv.text}</pre>
@@ -1135,7 +1165,7 @@ function Reports({ campaigns }: { campaigns: Campaign[] }) {
       <div className="report-principles">
         {[
           ["01", "Source evidence", "Exact CV text and quote offsets."],
-          ["02", "Interpretation", "DEMO decisions; no model executed."],
+          ["02", "Interpretation", "Real model decisions or clearly labeled demo outputs."],
           ["03", "Human review", "Your notes, separately recorded."],
         ].map(([n, title, text]) => (
           <div key={n}>
@@ -1158,7 +1188,7 @@ function Reports({ campaigns }: { campaigns: Campaign[] }) {
                 <FileText size={26} />
               </div>
               <div>
-                <Badge tone="amber">{c.mode} / DEMO</Badge>
+                <Badge tone={c.mode === "REAL" ? "green" : "amber"}>{c.mode === "REAL" ? "REAL / LIVE BACKEND" : "MOCK / DEMO"}</Badge>
                 <h2>{c.title}</h2>
                 <p>
                   {c.candidates.length} candidate reports ·{" "}
@@ -1166,7 +1196,7 @@ function Reports({ campaigns }: { campaigns: Campaign[] }) {
                   awaiting review
                 </p>
                 <small>
-                  Source evidence + simulated interpretation + human annotations
+                  {c.mode === "MOCK" ? "Source evidence + simulated interpretation + human annotations" : "Real evidence, Judge and Bias findings, plus a verified report where available"}
                 </small>
               </div>
               <div className="report-actions">

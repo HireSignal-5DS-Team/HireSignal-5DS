@@ -78,6 +78,26 @@ export interface MatchReport {
     note: string;
   };
 }
+// Optional HTTP presentation envelope from the Report Writer.
+// This is not part of the Matcher domain MatchReport contract.
+export interface ReporterData {
+  schema_version: string;
+  executive_summary: { text: string; writer: string };
+  requirements: Array<{
+    req_id: string;
+    plain_note: { text: string; writer: string };
+  }>;
+  provenance: {
+    slm_status: string;
+    sections_total: number;
+    sections_slm: number;
+    sections_fallback: number;
+    model: string | null;
+    any_mock: boolean;
+  };
+  html?: string;
+  markdown?: string;
+}
 export type Mode = "MOCK" | "REAL";
 export interface AnalysisInput {
   title: string;
@@ -89,6 +109,7 @@ export interface CandidateRecord {
   label: string;
   cv: CV;
   report: MatchReport;
+  reporter?: ReporterData | null;
   review: "Pending review" | "Reviewed" | "Follow-up needed";
   note: string;
 }

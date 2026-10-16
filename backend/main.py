@@ -32,6 +32,7 @@ from integration.contract import CONTRACT_VERSION, validate_output
 from matcher.schemas import CV, Job
 
 MATCH_SEMAPHORE = asyncio.Semaphore(1)
+REPORTER_SEMAPHORE = asyncio.Semaphore(1)
 _PIPELINE: dict[str, Any] = {"obj": None, "err": None}
 
 
@@ -165,4 +166,18 @@ async def match(request: Request):
         raise HTTPException(status_code=500, detail=f"pipeline produced invalid output: {e}")
 
     out.setdefault("_meta", {})["elapsed_s"] = round(elapsed, 2)
+    # The existing matcher pipeline does not call the Report Writer itself.
+    # Add the verified, grounded report as an optional presentation envelope.
+    # Keep the Matcher contract unchanged and do not fabricate SLM success.
+    try:
+        from backend.reporter_adapter import render_report
+        reporter_t0 = time.perf_counter()
+        async with REPORTER_SEMAPHORE:
+            loop = asyncio.get_running_loop()
+            out["reporter"] = await loop.run_in_executor(
+                None, render_report, out, job.get("title", "")
+            )
+        out["_meta"]["reporter_elapsed_s"] = round(time.perf_counter() - reporter_t0, 2)
+    except Exception as exc:
+        out["_meta"]["reporter_error"] = f"{type(exc).__name__}: {str(exc)[:120]}"
     return out
