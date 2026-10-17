@@ -15,6 +15,20 @@ job paragraph --Job Agent (job-q1, plain Qwen3-4B)--> requirements (must / nice,
 
 New endpoint: `POST /api/v2/analyze`. The V1 endpoint `POST /api/v1/match` is unchanged and still works.
 
+## Quick start (one command)
+
+After the one-time setup below (worktree, `.v2deps`, LoRA GGUF in the V1 cache):
+
+```powershell
+.\scripts\start_v2_windows.ps1        # or double-click scripts\start_v2_windows.cmd
+.\scripts\start_v2_windows.ps1 -Stop  # stop the three services
+```
+
+It starts the model server (8082), backend (8001) and frontend (5174), each in its own window, reuses any that
+already answer, waits for `/ready`, and opens Chrome on `http://127.0.0.1:5174/analysis`. The V1 ports
+8081/8000/5173 stay free. It refuses to start a second `llama_cpp.server` (two 4B models do not fit in 6 GB):
+stop the V1 LoRA server first. Ports, V1 folder and GPU layers are parameters (`-ModelPort`, `-V1Repo`, ...).
+
 ## 1. Keep V1 intact: use a second worktree
 
 Run every command in PowerShell. Do not switch the V1 checkout to another branch.
@@ -36,6 +50,14 @@ Reuse the V1 virtual environment. The new packages are additive: they do not cha
 cd C:\Users\semah\HireSignal-Integration\repo-v2
 ..\repo\.venv\Scripts\Activate.ps1
 pip install "pymupdf>=1.24" "python-docx>=1.1" "pytesseract>=0.3.10" "pillow>=10.0"
+```
+
+To leave the V1 venv untouched instead (what `start_v2_windows.ps1` expects), install them into the
+Git-ignored `.v2deps` folder; the backend then needs `.v2deps` on `PYTHONPATH`, or the Reader fails with
+`ModuleNotFoundError: No module named 'pymupdf'` (HTTP 422):
+
+```powershell
+..\repo\.venv\Scripts\python.exe -m pip install --target .v2deps "pymupdf>=1.24" "python-docx>=1.1" "pytesseract>=0.3.10" "pillow>=10.0"
 ```
 
 Optional NER detectors for the Profile Agent (CPU, about 1.5 GB download). The rule-based anonymiser works
@@ -132,7 +154,7 @@ $env:HS_JUDGE_MODEL="cross-encoder/nli-deberta-v3-xsmall"
 $env:HS_REPORTER_SLM="on"
 $env:HS_REPORTER_MODEL_PATH=(Get-ChildItem -Recurse "..\repo\.cache\hf\hub" -Filter "Qwen3-0.6B-Q8_0.gguf" | Select-Object -First 1).FullName
 $env:TESSERACT_CMD="C:\Program Files\Tesseract-OCR\tesseract.exe"
-$env:PYTHONPATH="$PWD"
+$env:PYTHONPATH="$PWD;$PWD\.v2deps"  # .v2deps: V2 packages installed with pip --target (see below)
 python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
 ```
 
