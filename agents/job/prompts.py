@@ -385,7 +385,8 @@ STRATEGY = {"job-v1": "whole", "job-v2": "whole", "job-v3": "sections", "job-v4"
             "job-q1": "sections"}
 # Versions that ask for the skill names in a second call per requirement sentence.
 TERMS_PASS = {"job-v4"}
-PROMPT_VERSION = "job-v4"  # active version: best measured on the 10 real offers (PROMPT_LIBRARY.md, run 3)
+PROMPT_VERSION = "job-q1"  # active since 2026-10-17: better than job-v4 on all three scores in the same run
+                           # (PROMPT_LIBRARY.md, run 5) and shares the Matcher's plain Qwen (no extra GPU memory)
 
 
 def get_prompt(version: str | None = None) -> tuple[str, list[dict]]:

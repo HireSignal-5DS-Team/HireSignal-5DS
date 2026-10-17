@@ -16,7 +16,7 @@ job offer ─► NuExtract fills the template ─► parse JSON ─┬─► che
 
 | File | Role |
 |---|---|
-| `prompts.py` | the template + solved examples per version (`job-v1` … `job-v4`, **`job-v4` active**: requirement sentences by chunk, then one skill-names call per sentence), documented in [`prompts/PROMPT_LIBRARY.md`](../../prompts/PROMPT_LIBRARY.md) |
+| `prompts.py` | the template + solved examples per version (`job-v1` … `job-v4` for NuExtract, **`job-q1` active**: the team's plain Qwen3-4B with written instructions, see below), documented in [`prompts/PROMPT_LIBRARY.md`](../../prompts/PROMPT_LIBRARY.md) |
 | `backend.py` | talks to NuExtract (llama.cpp server, vLLM or an API), plus a fake for tests |
 | `validate.py` | the guardrails: quotes really in the offer, years, must/nice, skill terms; splits "Java and Spring Boot" into one requirement per skill |
 | `agent.py` | the loop: extract → retry if unreadable → check → build the card → flag for review |
@@ -75,7 +75,10 @@ Ollama needs `--mode inline`, and a context of 8192 tokens for long job offers
 (set once: `[Environment]::SetEnvironmentVariable("OLLAMA_CONTEXT_LENGTH", "8192", "User")`, then restart Ollama).
 
 **Compare prompt versions** (for the prompt library): add `--prompt job-v1` … `--prompt job-v4`
-(default: the active version); on the 10 real offers use `scripts/eval_job_agent.py --prompts job-v3 job-v4`.
+or `--prompt job-q1` (default: the active version, **job-q1**, which needs the Qwen settings below);
+on the 10 real offers use `scripts/eval_job_agent.py --prompts job-v4 job-q1`.
+
+> Since job-q1 is the default, the NuExtract commands above need `--prompt job-v4`.
 
 ## Tests
 
@@ -85,7 +88,10 @@ python -m pytest -q tests/test_job_agent.py tests/test_job_contract.py
 
 They use a fake NuExtract, so they run without the model or a GPU.
 
-## job-q1: the team's Qwen instead of NuExtract
+## job-q1: the team's Qwen instead of NuExtract (active version)
+
+Run 5, same run, 10 real offers: sentences F1 0.659 (v4 0.623), skill names F1 0.670 (0.596),
+strict F1 0.578 (0.523); 113 s per offer on the GTX 1650 (v4: 42 s). Details in the prompt library.
 
 `job-q1` uses the **plain Qwen3-4B-Instruct-2507** that the Matcher already runs
 (`config/matcher_models.json` on the release branch), so on a shared machine it adds **no GPU

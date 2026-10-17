@@ -5,7 +5,7 @@ the failures observed, and the fix. Code is the source of truth; this file expla
 
 | Prompt | Agent | Model | Current | Code |
 |---|---|---|---|---|
-| Job requirements extraction | Job Agent | NuExtract-2.0-2B | `job-v4` (since 2026-10-17: best strict F1 0.43 on the 10 real offers) | [`agents/job/prompts.py`](../agents/job/prompts.py) |
+| Job requirements extraction | Job Agent | Qwen3-4B-Instruct-2507 (the team's, plain) | `job-q1` (since 2026-10-17: best on all three scores vs job-v4 in the same run; NuExtract versions job-v1…v4 kept) | [`agents/job/prompts.py`](../agents/job/prompts.py) |
 
 ---
 
@@ -433,5 +433,36 @@ what NOT to extract:
 - Unchanged guardrails: sections, chunks, exact-quote check, not-a-requirement filter, years,
   must/nice cues, compound split.
 
-**Results:** *to measure in one run against job-v4 (`--prompts job-v4 job-q1`). Expected trade-off:
-better at skipping non-requirements (it can read rules), slower per call (4B vs 2B).*
+**Run 5: job-v4 vs job-q1** (2026-10-17, laptop GTX 1650 4 GB, Ollama, both models Q4_K_M,
+same run, repeat 1; `eval/job_agent/results/v4-vs-q1/`):
+
+| Measure | `job-v4` (NuExtract 2B) | `job-q1` (Qwen3-4B) |
+|---|---|---|
+| Sentences: precision / recall | 0.576 / 0.679 | 0.651 / 0.667 |
+| **Sentences F1** | 0.623 | **0.659** |
+| Found / extra / missed | 57 / 42 / 27 | 56 / 30 / 28 |
+| **Skill names F1** (P / R) | 0.596 (0.461 / 0.844) | **0.670** (0.578 / 0.797) |
+| **Strict F1** | 0.523 | **0.578** |
+| kind / category / years accuracy (on found) | 0.86 / 0.807 / 0.947 | 0.821 / 0.786 / 0.929 |
+| Invented quotes dropped | 10 | **1** |
+| Sentences dropped by the not-a-requirement filter | 107 | **36** |
+| Mean latency per offer | **41.5 s** | 112.7 s |
+
+**What it shows**
+- **Instructions work where examples could not.** NuExtract cannot be told what to skip; Qwen
+  can. The filter had to remove 107 non-requirement sentences from job-v4's answers but only 36
+  from job-q1's, and Qwen almost never misquotes (1 invented quote vs 10).
+- Skill names: fewer wrong terms (43 vs 76) for a similar number found, in one call instead of two.
+- Slower: 113 s per offer on the 4 GB GTX 1650, where the 4B model does not fit entirely on the GPU.
+  Acceptable because the Job Agent runs once per job offer, not per CV.
+- **Remaining errors, both versions:** alternative qualifying paths ("OR a Ph.D.", "OR a combination
+  of education and experience") and higher grade levels ("To qualify for GS-13…", "For ZP-IV…").
+  The rule "only the first path" is in the instructions, but each chunk is small, so the model often
+  cannot see that a line is an alternative or a higher grade.
+
+**Limits.** One run (repeat 1), on the same 10 offers used during development; the gaps are
+moderate (sentences +0.036, skill names +0.074, strict +0.055). Enough to choose job-q1, not to
+claim a large improvement. The final measure must be on offers not used during development.
+
+**Decision.** job-q1 is the active version (`PROMPT_VERSION`). NuExtract versions stay in the code
+and can be selected with `--prompt job-v4`.
