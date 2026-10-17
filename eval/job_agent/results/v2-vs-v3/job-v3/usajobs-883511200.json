@@ -1,0 +1,265 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883511200",
+  "title": "AI Technical Expert",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science",
+      "evidence": "Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "At least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus",
+      "evidence": "At least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "All academic degrees and coursework must be from accredited or pre-accredited institutions",
+      "evidence": "All academic degrees and coursework must be from accredited or pre-accredited institutions.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Applicants must have one year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST)",
+      "evidence": "applicants must have one year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST).",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges",
+      "evidence": "Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Experience with core AI technical skills such as machine learning and deep learning",
+      "evidence": "Experience with core AI technical skills such as machine learning and deep learning",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Experience with statistical data analysis and experimental design",
+      "evidence": "Experience with statistical data analysis and experimental design",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "3 years of progressively higher-level graduate education leading to a Ph.D. degree",
+      "evidence": "3 years of progressively higher-level graduate education leading to a Ph.D. degree",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": 3.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Ph.D. or equivalent doctoral degree",
+      "evidence": "Ph.D. or equivalent doctoral degree",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "A combination of education and experience",
+      "evidence": "A combination of education and experience",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges",
+      "evidence": "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional, philanthropic, religious, spiritual, community, student, social).",
+      "evidence": "Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional, philanthropic, religious, spiritual, community, student, social).",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment.",
+      "evidence": "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment.",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "You will receive credit for all qualifying experience, including volunteer experience.",
+      "evidence": "You will receive credit for all qualifying experience, including volunteer experience.",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r15",
+      "text": "The qualification requirements in this vacancy announcement are based on the U.S. Office of Personnel Management (OPM) Qualification Standards Handbook .",
+      "evidence": "The qualification requirements in this vacancy announcement are based on the U.S. Office of Personnel Management (OPM) Qualification Standards Handbook .",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r16",
+      "text": "If requesting reconsideration of your qualification determination, please refer to the following site: Applicant Reconsideration Education",
+      "evidence": "If requesting reconsideration of your qualification determination, please refer to the following site: Applicant Reconsideration Education",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r17",
+      "text": "An accredited organization must evaluate education completed outside of the U.S.",
+      "evidence": "An accredited organization must evaluate education completed outside of the U.S.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r18",
+      "text": "A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application.",
+      "evidence": "A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r19",
+      "text": "Transcripts must be submitted to validate that the education requirement has been met.",
+      "evidence": "Transcripts must be submitted to validate that the education requirement has been met.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r20",
+      "text": "Unofficial transcripts will be accepted in the application package.",
+      "evidence": "Unofficial transcripts will be accepted in the application package.",
+      "kind": "nice",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r21",
+      "text": "an official copy will be required before a final offer of employment.",
+      "evidence": "an official copy will be required before a final offer of employment.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r22",
+      "text": "Use of foreign education for qualifications.",
+      "evidence": "Use of foreign education for qualifications.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r23",
+      "text": "An accredited organization must evaluate education completed outside of the U.S. to ensure that it is comparable to education received in accredited institutions in the U.S.",
+      "evidence": "An accredited organization must evaluate education completed outside of the U.S. to ensure that it is comparable to education received in accredited institutions in the U.S.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r24",
+      "text": "Click here to view a listing of accredited organizations from the Department of Education's website.",
+      "evidence": "Click here to view a listing of accredited organizations from the Department of Education's website.",
+      "kind": "nice",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r25",
+      "text": "A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application.",
+      "evidence": "A copy of the foreign education evaluation (containing the results with a course-by-course listing)",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'Applicants must have one year (52 weeks) of specia': quote repaired (spacing)",
+    "'Experience in providing technical leadership for A': quote not found (closest 0.46) in the job offer, dropped as invented (model quoted: \"Experience in providing technical leadership for AI experts in areas involving core AI technical ski\")",
+    "'Experience in leading and implementing projects in': quote not found (closest 0.39) in the job offer, dropped as invented (model quoted: \"Experience in leading and implementing projects involving statistical data analysis and experimental\")"
+  ]
+}

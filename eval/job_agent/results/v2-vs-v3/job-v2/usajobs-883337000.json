@@ -1,0 +1,168 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883337000",
+  "title": "Summary",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "You must be a U.S. Citizen",
+      "evidence": "U.S. Citizen",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "You must successfully complete a background investigation.",
+      "evidence": "background investigation",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "GS-14",
+      "evidence": "GS-14",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions; AND 2. designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads; AND 3. planning and executing pilots or proofs-of-concept to evaluate emerging cloud and AI technologies, and advising leadership on whether to adopt, refine, or discontinue those solutions based on mission impact, security, and implementation risk; AND 4. routinely explaining complex technical issues, risks, and tradeoffs to both technical and non-technical stakeholders in ways that build consensus and secure acceptance of recommended technical approaches, priorities, and standards within a federal IT and AI policy and governance context.",
+      "evidence": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "GS-13"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Attention to Detail - Is thorough when performing work and conscientious about attending to detail.",
+      "evidence": "Attention to Detail - Is thorough when performing work and conscientious about attending to detail.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Customer Service - Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations; knows about available products and services; is committed to providing quality products and services.",
+      "evidence": "Customer Service - Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations; knows about available products and services; is committed to providing quality products and services.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Decision Making - Makes sound, well-informed, and objective decisions; perceives the impact and implications of decisions; commits to action, even in uncertain situations, to accomplish organizational goals; causes change.",
+      "evidence": "Decision Making - Makes sound, well-informed, and objective decisions; perceives the impact and implications of decisions; commits to action, even in uncertain situations, to accomplish organizational goals; causes change.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Identifies a need for and knows where or how to gather information; organizes and maintains information or information management systems.",
+      "evidence": "Information Management - Identifies a need for and knows where or how to gather information; organizes and maintains information or information management systems.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Shows understanding, friendliness, courtesy, tact, empathy, concern, and politeness to others; develops and maintains effective relationships with others; may include effectively dealing with individuals who are difficult, hostile, or distressed; relates well to people from varied backgrounds and different situations",
+      "evidence": "Interpersonal Skills - Shows understanding, friendliness, courtesy, tact, empathy, concern, and politeness to others; develops and maintains effective relationships with others; may include effectively dealing with individuals who are difficult, hostile, or distressed; relates well to people from varied backgrounds and different situations",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations.",
+      "evidence": "Problem Solving - Identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Identifies rules, principles, or relationships that explain facts, data, or other information; analyzes information and makes correct inferences or draws accurate conclusions.",
+      "evidence": "Reasoning - Identifies rules, principles, or relationships that explain facts, data, or other information; analyzes information and makes correct inferences or draws accurate conclusions.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "Uses knowledge that is acquired through formal training or on-the-job experience to perform one's job; works with, understands, and evaluates technical information related to the job; advises others on technical issues.",
+      "evidence": "Technical Competence - Uses knowledge that is acquired through formal training or on-the-job experience to perform one's job; works with, understands, and evaluates technical information related to the job; advises others on technical issues.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "GS-14 grade level in the Federal service, obtained in either the private or public sector",
+      "evidence": "GS-14: One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "GS-14"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "GS-13 grade level in the Federal service, obtained in either the private or public sector",
+      "evidence": "GS-14: One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "GS-13"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "answer cut off at the token limit",
+    "answer was cut off; kept the 15 complete items",
+    "'serving as a senior cloud and AI engineer, that le': skill term 'GS-14' not in the quote, removed",
+    "item 6: no valid kind, defaulted to 'must'",
+    "item 6: unknown category 'None', inferred 'skill'",
+    "'GS-14 grade level in the Federal service, obtained': duplicate, dropped",
+    "'GS-13 grade level in the Federal service, obtained': duplicate, dropped",
+    "'GS-14 grade level in the Federal service, obtained': duplicate, dropped",
+    "'GS-13 grade level in the Federal service, obtained': duplicate, dropped",
+    "title 'Senior Technical Expert' not found in the job offer, used the first line"
+  ]
+}
