@@ -11,8 +11,21 @@ Identity values (name, e-mail, ...) never leave this function: only the privacy 
 Every stage reports what really ran; a failed stage is never replaced by a fake success.
 """
 import os
+import re
 import time
 import uuid
+
+from matcher.validate import _INJECT
+
+# V1's injection pattern plus instructions addressed to the model ("assistant, ignore your rules").
+_INJECT_EXTRA = re.compile(r"\b(ignore|disregard|forget)\s+(all\s+)?(your|the|these|previous|prior)\s+(rules|instructions|prompt)|"
+                           r"\b(assistant|AI|model|system)\s*[,:]\s*(ignore|disregard|forget|add|mark|output)", re.I)
+
+
+def injected_sentences(text):
+    """Sentences (or lines) of untrusted text that address instructions to the model."""
+    parts = re.split(r"(?<=[.!?])\s+|\n+", text)
+    return [p for p in parts if _INJECT.search(p) or _INJECT_EXTRA.search(p)]
 
 MAX_CV_BYTES = 10 * 1024 * 1024
 CV_EXTENSIONS = {".pdf", ".docx", ".png", ".jpg", ".jpeg", ".tif", ".tiff", ".bmp", ".webp", ".txt", ".text", ".md"}
@@ -85,6 +98,16 @@ def analyze_documents(pipeline, job_text, cv_bytes=None, file_name=None, cv_text
     stages[-1].update(requirements=len(card.requirements), must=sum(r.kind == "must" for r in card.requirements),
                       needs_human_review=card.needs_human_review)
     job = card.to_matcher_job()
+    # Untrusted job text: a requirement quoted from an instruction to the model is not a job requirement.
+    job_inj = injected_sentences(job_text)
+    dropped = [r for r in card.requirements if any(r.evidence and r.evidence in s for s in job_inj)]
+    if dropped:
+        ids = {r.req_id for r in dropped}
+        job["requirements"] = [r for r in job["requirements"] if r["req_id"] not in ids]
+        stages[-1].update(dropped_injected=len(dropped))
+    if not job["requirements"]:
+        stages[-1].update(status="failed", error="all requirements came from injected instructions")
+        raise StageError("job_agent", "no requirement left after removing injected instructions", stages)
     out = _stage(stages, "matcher_pipeline", lambda: pipeline.run(cv, job))
     validate_output(out)
     review = []
@@ -94,8 +117,13 @@ def analyze_documents(pipeline, job_text, cv_bytes=None, file_name=None, cv_text
         review.append("profile:identity_leak_left")
     if card.needs_human_review or card.warnings:
         review.append("job_agent:validation_warnings")
+    if job_inj:
+        review.append("job_agent:possible_prompt_injection")
+    if injected_sentences(reader["text"]):
+        review.append("profile:possible_prompt_injection")  # parsed skills may come from the injected text
     out["stages"] = stages
     out["upstream"] = {"reader": cv["structured"].get("reader", {}),  # identity-scrubbed by the Profile Agent
                        "privacy": prof.report.model_dump(), "profile": prof.profile.model_dump() if prof.profile else None,
-                       "job_card": card.model_dump(), "job_title": card.title, "review_reasons": review}
+                       "job_card": card.model_dump(), "job_title": card.title, "review_reasons": review,
+                       "dropped_injected_requirements": [r.model_dump() for r in dropped]}
     return out
