@@ -48,8 +48,8 @@ class ReaderError(Exception):
 
 @dataclass
 class ReaderResult:
-    file_name: str
-    file_type: str                      # "pdf" | "docx" | "image"
+    # no file_name on purpose: it often holds the candidate's name ("Sami_Trabelsi_CV.pdf")
+    file_type: str                      # "pdf" | "docx" | "image" | "text"
     text: str                           # full clean text
     sections: dict[str, str]            # {"header": ..., "experience": ..., ...}
     pages: int
@@ -414,7 +414,32 @@ def _detect_type(data: bytes, name: str) -> str:
         return "image"
     except Exception:
         pass
-    raise ReaderError(f"Unsupported file type: {name}. Use PDF, DOCX, JPG or PNG.")
+    if _decode_text(data) is not None and (
+            Path(name).suffix.lower() in TEXT_EXTENSIONS or len(data) >= MIN_TEXT_FILE_BYTES):
+        return "text"
+    ext = Path(name).suffix.lower() or "no extension"
+    raise ReaderError(f"Unsupported file type ({ext}). Use PDF, DOCX, JPG, PNG or TXT.")
+
+
+TEXT_EXTENSIONS = {".txt", ".text", ".md"}
+MIN_TEXT_FILE_BYTES = 200   # without a .txt name, only accept real text, not a few random bytes
+
+
+def _decode_text(data: bytes) -> str | None:
+    """UTF-8 (with or without BOM), UTF-16 with BOM, else Windows-1252. None if it is not text."""
+    if data[:2] in (b"\xff\xfe", b"\xfe\xff"):
+        candidates = ["utf-16"]
+    else:
+        candidates = ["utf-8-sig", "cp1252"]
+    for encoding in candidates:
+        try:
+            text = data.decode(encoding)
+        except UnicodeDecodeError:
+            continue
+        printable = sum(c.isprintable() or c in "\n\r\t" for c in text)
+        if text.strip() and printable / len(text) >= 0.97:
+            return text
+    return None
 
 
 # ------------------------------------------------------------- entry point ---
@@ -440,6 +465,8 @@ def read_cv(source: str | Path | bytes, file_name: str | None = None) -> ReaderR
         raw, routes, layout, ocr_conf = _read_pdf(data, warnings)
     elif file_type == "docx":
         raw, routes = _read_docx(data, warnings), ["text"]
+    elif file_type == "text":
+        raw, routes = _decode_text(data), ["text"]
     else:
         raw, ocr_conf, layout = _read_image(data, warnings)
         routes = ["ocr"]
@@ -459,7 +486,6 @@ def read_cv(source: str | Path | bytes, file_name: str | None = None) -> ReaderR
     )
 
     return ReaderResult(
-        file_name=file_name,
         file_type=file_type,
         text=text,
         sections=sections,

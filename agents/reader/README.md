@@ -8,14 +8,15 @@ Turns any CV file into **clean text + sections**. No AI model, only tools.
 | Scanned PDF | PyMuPDF renders the page, Tesseract reads it | A page with < 50 characters of text is treated as a scan |
 | Word `.docx` | python-docx | Also reads page headers, tables and text boxes (sidebars) |
 | Photo / image | Pillow cleans it, Tesseract reads it | Fixes rotation, transparency, contrast, small size; crops columns before OCR; denoises bad scans |
+| Text `.txt` | read as is | UTF-8, UTF-16 or Windows-1252 (Notepad) |
 
 The file type is detected from the file's **content**, not its extension.
+The file name is **not** kept in the result: it often contains the candidate's name.
 
 ## Output (`ReaderResult`)
 
 ```json
 {
-  "file_name": "cv.pdf",
   "file_type": "pdf",
   "text": "full clean text ...",
   "sections": {

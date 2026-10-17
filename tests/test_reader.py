@@ -183,3 +183,42 @@ def test_tools_line_inside_a_job_does_not_switch_section():
 def test_lines_that_are_not_inline_headings(line):
     from agents.reader.sections import detect_inline_heading
     assert detect_inline_heading(line) is None
+
+
+# --------------------------------------------------- text files, privacy ---
+
+TXT_CV = "Sami Trabelsi\nsami@example.com\n\nEXPÉRIENCE\nData Engineer — Vermeg 2022 - 2024\n\nCOMPÉTENCES\nPython, SQL\n"
+
+
+@pytest.mark.parametrize("encoding", ["utf-8", "utf-8-sig", "cp1252", "utf-16"])
+def test_txt_cv_any_windows_encoding(encoding):
+    r = read_cv(TXT_CV.encode(encoding), "cv.txt")
+    assert r.file_type == "text" and r.page_routes == ["text"] and r.ocr_confidence is None
+    assert "EXPÉRIENCE" in r.text and "Vermeg" in r.sections["experience"]
+
+
+def test_txt_without_extension_needs_real_text():
+    assert read_cv((TXT_CV * 3).encode("utf-8"), "upload").file_type == "text"
+    with pytest.raises(ReaderError):
+        read_cv(b"just some random bytes", "upload")
+
+
+def test_txt_from_a_path(tmp_path):
+    path = tmp_path / "Sami_Trabelsi_CV.txt"
+    path.write_text(TXT_CV, encoding="utf-8")
+    r = read_cv(path)
+    assert r.file_type == "text"
+
+
+def test_file_name_is_never_kept(tmp_path, text_pdf):
+    path = tmp_path / "Sami_Trabelsi_CV.pdf"
+    path.write_bytes(text_pdf)
+    result = read_cv(path).to_dict()
+    assert "file_name" not in result
+    assert "Sami_Trabelsi" not in str(result)
+
+
+def test_unsupported_error_does_not_repeat_the_file_name():
+    with pytest.raises(ReaderError) as exc:
+        read_cv(b"\x00\x01\x02 binary", "Sami_Trabelsi_CV.bin")
+    assert "Sami" not in str(exc.value) and ".bin" in str(exc.value)
