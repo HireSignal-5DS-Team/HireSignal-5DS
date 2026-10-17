@@ -128,10 +128,17 @@ export interface AnalysisInput {
 /** One upstream/downstream stage as it really ran on the backend (POST /api/v2/analyze). */
 export interface StageInfo {
   stage: string;
-  status: "ok" | "failed";
+  status: "running" | "ok" | "failed";
   elapsed_s?: number;
   error?: string;
   [key: string]: unknown;
+}
+export interface LiveV2Progress {
+  candidate_index: number;
+  candidate_total: number;
+  status: "queued" | "running" | "failed" | "completed";
+  stages: StageInfo[];
+  elapsed_s: number;
 }
 export interface UpstreamInfo {
   job_title?: string;

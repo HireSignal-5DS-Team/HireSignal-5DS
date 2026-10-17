@@ -55,6 +55,7 @@ import type {
   CandidateRecord,
   CV,
   Decision,
+  LiveV2Progress,
 } from "./contracts";
 
 type UpdateReview = (
@@ -787,6 +788,7 @@ function Processing({
   error,
   campaign,
   retry,
+  liveProgress,
 }: {
   input: AnalysisInput | null;
   running: boolean;
@@ -794,8 +796,9 @@ function Processing({
   error: string;
   campaign: Campaign | null;
   retry: () => void;
+  liveProgress: LiveV2Progress | null;
 }) {
-  const verifiedStages = workflowStages(mode, campaign, running, step, error, flow);
+  const verifiedStages = workflowStages(mode, campaign, running, step, error, flow, liveProgress);
   return (
     <>
       <PageHeading
@@ -825,6 +828,13 @@ function Processing({
               {input.title} · {input.candidates.length} candidate
               {input.candidates.length === 1 ? "" : "s"}
             </p>
+            {mode === "REAL" && flow === "v2" && running && liveProgress && (
+              <p role="status">
+                Candidate {liveProgress.candidate_index}/{liveProgress.candidate_total}
+                {" · "}{liveProgress.status === "queued" ? "Waiting for GPU availability" : "Backend processing"}
+                {" · "}{Math.round(liveProgress.elapsed_s)} seconds elapsed
+              </p>
+            )}
             <Badge tone={mode === "REAL" ? "green" : "amber"}>
               {mode === "REAL" ? "REAL · backend results" : "MOCK / DEMO · simulated progress"}
             </Badge>
@@ -863,7 +873,7 @@ function Processing({
             <p className="muted">
               {mode === "REAL"
                 ? flow === "v2"
-                  ? "Awaiting FastAPI results. Reader, Profile, Job Agent, Matcher and Reporter run on the server; their real stage statuses appear on each candidate when it finishes."
+                  ? "Polling the backend for actual Reader, Profile, Job Agent, Matcher and Reporter stage timings; RAG, Bias and Judge details are verified when the analysis finishes."
                   : "Awaiting FastAPI results. No per-stage progress is available from the API."
                 : "You can navigate elsewhere while this demo completes."}
             </p>
@@ -1451,6 +1461,7 @@ export default function App() {
   const [step, setStep] = useState(0);
   const [error, setError] = useState("");
   const [lastCampaign, setLastCampaign] = useState<Campaign | null>(null);
+  const [liveProgress, setLiveProgress] = useState<LiveV2Progress | null>(null);
   const [menu, setMenu] = useState(false);
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
   const busy = useRef(false);
@@ -1477,10 +1488,11 @@ export default function App() {
     setStep(0);
     setError("");
     setLastCampaign(null);
+    setLiveProgress(null);
     navigate("/processing");
     const execute = () => {
       void adapter
-        .run(next)
+        .run(next, (progress) => setLiveProgress(progress))
         .then((c) => {
           setCampaigns((prev) => [c, ...prev]);
           setLastCampaign(c);
@@ -1653,6 +1665,7 @@ export default function App() {
                   error={error}
                   campaign={lastCampaign}
                   retry={() => input && start(input)}
+                  liveProgress={liveProgress}
                 />
               }
             />

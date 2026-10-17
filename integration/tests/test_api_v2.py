@@ -69,3 +69,47 @@ def test_v1_match_still_works(client):
     from integration.contract import validate_output
     validate_output(r.json())
     assert "stages" not in r.json() and len(r.json()["requirements"]) == 3
+
+def test_v2_progress_tracks_stages_without_storing_candidate_text(client):
+    import uuid
+    token = str(uuid.uuid4())
+    before = client.get(f"/api/v2/progress/{token}")
+    assert before.status_code == 404
+    response = client.post("/api/v2/analyze", json={"cv_text": CV, "job_text": JOB, "progress_id": token})
+    assert response.status_code == 200, response.text
+    progress = client.get(f"/api/v2/progress/{token}")
+    assert progress.status_code == 200, progress.text
+    data = progress.json()
+    assert data["status"] == "completed"
+    assert [x["stage"] for x in data["stages"]] == [
+        "reader", "profile", "job_agent", "matcher_pipeline", "reporter"
+    ]
+    assert all(x["status"] == "ok" for x in data["stages"])
+    assert "Amira" not in progress.text and "Python" not in progress.text
+
+
+def test_v2_progress_rejects_invalid_tokens(client):
+    response = client.post("/api/v2/analyze", json={
+        "cv_text": CV, "job_text": JOB, "progress_id": "fake"
+    })
+    assert response.status_code == 422
+    assert client.get("/api/v2/progress/fake").status_code == 404
+
+
+def test_v2_progress_records_failure_without_cv_content(client, monkeypatch):
+    import uuid
+    from agents.job.backend import BackendError
+    class Down:
+        def extract(self, *_args):
+            raise BackendError("connection refused")
+    monkeypatch.setattr(upstream, "upstream_llm", lambda env=None: Down())
+    token = str(uuid.uuid4())
+    response = client.post("/api/v2/analyze", json={
+        "cv_text": CV, "job_text": JOB, "progress_id": token,
+    })
+    assert response.status_code == 502
+    progress = client.get(f"/api/v2/progress/{token}").json()
+    assert progress["status"] == "failed"
+    assert progress["stages"][0]["stage"] == "reader"
+    assert progress["stages"][1]["status"] == "failed"
+    assert "Amira" not in str(progress)

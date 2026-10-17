@@ -128,7 +128,7 @@ describe("V2 upstream workflow telemetry", () => {
       "Matcher", "Bias Auditor", "Judge", "Report Writer",
     ]);
     expect(rows.every((s) => s.state === "Pending")).toBe(true);
-    expect(rows.every((s) => s.detail.includes("does not stream"))).toBe(true);
+    expect(rows.every((s) => s.detail.includes("first backend progress event"))).toBe(true);
     expect(rows.some((s) => s.state === "Not integrated")).toBe(false);
   });
 
@@ -174,5 +174,43 @@ describe("V2 upstream workflow telemetry", () => {
     const rows = workflowStages("REAL", null, false, 0, "503", "v2");
     expect(rows.every((s) => s.state === "Not reported")).toBe(true);
     expect(rows[0].detail).toContain("Analysis failed");
+  });
+});
+
+describe("real V2 polling telemetry", () => {
+  it("shows Reader completed, Profile running with elapsed seconds, not imaginary steps", () => {
+    const rows = workflowStages("REAL", null, true, 0, "", "v2", {
+      candidate_index: 1,
+      candidate_total: 2,
+      status: "running",
+      elapsed_s: 85,
+      stages: [
+        { stage: "reader", status: "ok", elapsed_s: 1.2 },
+        { stage: "profile", status: "running", elapsed_s: 83.8 },
+      ],
+    });
+    expect(rows[0].state).toBe("Completed");
+    expect(rows[1].state).toBe("Running");
+    expect(rows[1].detail).toContain("83.8 s");
+    expect(rows[1].detail).toContain("Candidate 1/2");
+    expect(rows[2].state).toBe("Pending");
+    expect(rows[3].state).toBe("Pending"); // RAG awaits Matcher evidence
+    expect(rows[4].state).toBe("Pending");
+  });
+
+  it("propagates real backend failure while preserving stages that succeeded", () => {
+    const rows = workflowStages("REAL", null, false, 0, "Backend returned HTTP 502", "v2", {
+      candidate_index: 1,
+      candidate_total: 1,
+      status: "failed",
+      elapsed_s: 300,
+      stages: [
+        { stage: "reader", status: "ok", elapsed_s: 0.3 },
+        { stage: "profile", status: "failed", elapsed_s: 300 },
+      ],
+    });
+    expect(rows[0].state).toBe("Completed");
+    expect(rows[1].state).toBe("Failed");
+    expect(rows[2].state).toBe("Pending");
   });
 });

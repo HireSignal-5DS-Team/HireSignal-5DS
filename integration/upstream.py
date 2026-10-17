@@ -47,15 +47,21 @@ def upstream_llm(env=None):
                           timeout=float(env.get("HS_UPSTREAM_TIMEOUT", 300)))  # CPU-only runs need ~1800
 
 
-def _stage(stages, name, fn, **meta):
+def _stage(stages, name, fn, progress=None, **meta):
     t0 = time.perf_counter()
+    if progress is not None:
+        progress({"stage": name, "status": "running"})
     try:
         out = fn()
     except Exception as e:  # noqa: BLE001  report, then stop: no fake success
         stages.append({"stage": name, "status": "failed", "error": f"{type(e).__name__}: {str(e)[:300]}",
                        "elapsed_s": round(time.perf_counter() - t0, 2), **meta})
+        if progress is not None:
+            progress(stages[-1])
         raise StageError(name, f"{type(e).__name__}: {e}", stages) from e
     stages.append({"stage": name, "status": "ok", "elapsed_s": round(time.perf_counter() - t0, 2), **meta})
+    if progress is not None:
+        progress(stages[-1])
     return out
 
 
@@ -77,7 +83,7 @@ def read_cv_input(cv_bytes=None, file_name=None, cv_text=None):
 
 
 def analyze_documents(pipeline, job_text, cv_bytes=None, file_name=None, cv_text=None, job_id=None,
-                      llm=None, detectors=()):
+                      llm=None, detectors=(), progress=None):
     """Run the full V2 flow. Returns the V1 PipelineOutput plus `stages` and `upstream` (no identity values)."""
     from agents.job import run_job_agent
     from agents.profile import new_cv_id, run_profile_agent
@@ -85,16 +91,16 @@ def analyze_documents(pipeline, job_text, cv_bytes=None, file_name=None, cv_text
 
     stages = []
     llm = llm or upstream_llm()
-    reader = _stage(stages, "reader", lambda: read_cv_input(cv_bytes, file_name, cv_text))
+    reader = _stage(stages, "reader", lambda: read_cv_input(cv_bytes, file_name, cv_text), progress=progress)
     stages[-1].update(file_type=reader.get("file_type"), pages=reader.get("pages"), ocr=reader.get("ocr_confidence") is not None,
                       needs_human_review=reader.get("needs_human_review"))
     cv_id = new_cv_id()
     prof = _stage(stages, "profile", lambda: run_profile_agent(reader["text"], cv_id=cv_id, backend=llm,
-                                                              sections=reader.get("sections"), detectors=detectors))
+                                                              sections=reader.get("sections"), detectors=detectors), progress=progress)
     stages[-1].update(prompt_version=prof.profile.prompt_version if prof.profile else None,
                       leaks_left=prof.report.leaks_left, parsed=prof.profile is not None)
     cv = prof.to_matcher_cv(reader)
-    card = _stage(stages, "job_agent", lambda: run_job_agent(job_text, job_id or f"job-{uuid.uuid4().hex[:8]}", llm))
+    card = _stage(stages, "job_agent", lambda: run_job_agent(job_text, job_id or f"job-{uuid.uuid4().hex[:8]}", llm), progress=progress)
     stages[-1].update(requirements=len(card.requirements), must=sum(r.kind == "must" for r in card.requirements),
                       needs_human_review=card.needs_human_review)
     job = card.to_matcher_job()
@@ -108,7 +114,7 @@ def analyze_documents(pipeline, job_text, cv_bytes=None, file_name=None, cv_text
     if not job["requirements"]:
         stages[-1].update(status="failed", error="all requirements came from injected instructions")
         raise StageError("job_agent", "no requirement left after removing injected instructions", stages)
-    out = _stage(stages, "matcher_pipeline", lambda: pipeline.run(cv, job))
+    out = _stage(stages, "matcher_pipeline", lambda: pipeline.run(cv, job), progress=progress)
     validate_output(out)
     review = []
     if reader.get("needs_human_review"):

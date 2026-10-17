@@ -31,6 +31,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from integration.contract import CONTRACT_VERSION, validate_output
+from backend import v2_progress
 from matcher.schemas import CV, Job
 
 MATCH_SEMAPHORE = asyncio.Semaphore(1)
@@ -247,6 +248,17 @@ async def match(request: Request):
 MAX_V2_BODY_CHARS = 15 * 1024 * 1024  # base64 of a 10 MB CV plus the job text
 
 
+@app.get("/api/v2/progress/{progress_id}")
+async def analyze_progress(progress_id: str):
+    """Read-only stage timing for one analysis. No CV, job text, or model output is retained."""
+    if not v2_progress.valid_token(progress_id):
+        raise HTTPException(status_code=404, detail="Unknown analysis progress token")
+    result = v2_progress.snapshot(progress_id)
+    if result is None:
+        raise HTTPException(status_code=404, detail="Analysis progress unavailable or expired")
+    return result
+
+
 @app.post("/api/v2/analyze")
 async def analyze(request: Request):
     """Document flow (integration/upstream.py). Stage statuses are what really ran; on a failed stage the response
@@ -265,6 +277,9 @@ async def analyze(request: Request):
         raise HTTPException(status_code=400, detail="request body must be JSON")
     if not isinstance(body, dict) or not isinstance(body.get("job_text"), str) or not body["job_text"].strip():
         raise HTTPException(status_code=400, detail="job_text (the full job description) is required")
+    progress_id = body.get("progress_id")
+    if progress_id is not None and not v2_progress.valid_token(progress_id):
+        raise HTTPException(status_code=422, detail="progress_id must be a UUIDv4")
     cv_bytes = None
     if body.get("cv_file_b64") is not None:
         if body.get("cv_text") is not None:
@@ -273,33 +288,44 @@ async def analyze(request: Request):
             cv_bytes = base64.b64decode(body["cv_file_b64"], validate=True)
         except (binascii.Error, TypeError, ValueError):
             raise HTTPException(status_code=400, detail="cv_file_b64 is not valid base64")
+    if progress_id is not None:
+        v2_progress.start(progress_id)
     async with MATCH_SEMAPHORE:
+        v2_progress.set_status(progress_id, "running")
         t0 = time.perf_counter()
         try:
             pipeline = _build_pipeline()
             loop = asyncio.get_running_loop()
             out = await loop.run_in_executor(None, lambda: analyze_documents(
                 pipeline, body["job_text"], cv_bytes=cv_bytes, file_name=body.get("cv_file_name"),
-                cv_text=body.get("cv_text"), job_id=body.get("job_id")))
+                cv_text=body.get("cv_text"), job_id=body.get("job_id"),
+                progress=(lambda event: v2_progress.update(progress_id, event)) if progress_id else None))
         except StageError as e:
+            v2_progress.set_status(progress_id, "failed")
             code = 422 if e.stage in ("reader", "job_agent") and "Backend" not in e.message else 502
             return JSONResponse(status_code=code, content={"detail": f"{e.stage} failed: {e.message[:300]}",
                                                            "stages": e.stages})
         except ValueError as e:
+            v2_progress.set_status(progress_id, "failed")
             raise HTTPException(status_code=422, detail=str(e))
         except Exception as e:
+            v2_progress.set_status(progress_id, "failed")
             raise HTTPException(status_code=500, detail=f"analysis failed: {type(e).__name__}: {e}")
         elapsed = time.perf_counter() - t0
     out.setdefault("_meta", {})["elapsed_s"] = round(elapsed, 2)
     try:
         from backend.reporter_adapter import render_report
         t1 = time.perf_counter()
+        v2_progress.update(progress_id, {"stage": "reporter", "status": "running"})
         async with REPORTER_SEMAPHORE:
             loop = asyncio.get_running_loop()
             out["reporter"] = await loop.run_in_executor(None, render_report, out, out["upstream"].get("job_title") or "")
         out["_meta"]["reporter_elapsed_s"] = round(time.perf_counter() - t1, 2)
         out["stages"].append({"stage": "reporter", "status": "ok", "elapsed_s": out["_meta"]["reporter_elapsed_s"]})
+        v2_progress.update(progress_id, out["stages"][-1])
     except Exception as exc:
         out["_meta"]["reporter_error"] = f"{type(exc).__name__}: {str(exc)[:120]}"
         out["stages"].append({"stage": "reporter", "status": "failed", "error": out["_meta"]["reporter_error"]})
+        v2_progress.update(progress_id, out["stages"][-1])
+    v2_progress.set_status(progress_id, "completed")
     return out

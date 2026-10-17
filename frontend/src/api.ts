@@ -8,6 +8,7 @@ import type {
   JudgeInfo,
   MatchReport,
   Mode,
+  LiveV2Progress,
   RequirementResult,
   ReporterData,
   StageInfo,
@@ -255,7 +256,12 @@ export class ApiClient {
   }
   // Deliberately unknown: an HTTP envelope is not defined on the integration branch.
   // Wire this transport through a verified FastAPI adapter before enabling REAL matching.
-  analyze(payload: { cv_text?: string; cv_file_b64?: string; cv_file_name?: string; job_text: string }) {
+  progress(progressId: string): Promise<{status: LiveV2Progress["status"]; stages: StageInfo[]; elapsed_s: number}> {
+    return this.request(`/api/v2/progress/${encodeURIComponent(progressId)}`) as Promise<{
+      status: LiveV2Progress["status"]; stages: StageInfo[]; elapsed_s: number;
+    }>;
+  }
+  analyze(payload: { cv_text?: string; cv_file_b64?: string; cv_file_name?: string; job_text: string; progress_id?: string }) {
     return this.request("/api/v2/analyze", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -271,7 +277,7 @@ export class ApiClient {
   }
 }
 export interface AnalysisAdapter {
-  run(input: AnalysisInput): Promise<Campaign>;
+  run(input: AnalysisInput, onProgress?: (progress: LiveV2Progress) => void): Promise<Campaign>;
 }
 
 // POST /api/v1/match expects {cv, job} and returns a PipelineOutput (contract 1.1.0).
@@ -333,30 +339,70 @@ async function realMatch(client: ApiClient, cv: CV, job: Job) {
   return mergeOutput((await client.match({ cv, job })) as PipelineOutput);
 }
 
-/** V2: the original upload (if any) goes to the server-side Reader; otherwise the CV text. */
-async function realAnalyze(client: ApiClient, cv: CV, jobText: string) {
+/** V2: original CV upload goes to the server-side Reader. Progress is metadata-only.
+ *  The POST can be long-running: polling is separate and never fabricates stage completion.
+ */
+async function realAnalyze(
+  client: ApiClient,
+  cv: CV,
+  jobText: string,
+  onProgress?: (progress: Pick<LiveV2Progress, "status" | "stages" | "elapsed_s">) => void,
+) {
   const file = cv.structured?.source_file as { name?: string; b64?: string } | undefined;
+  const progressId = crypto.randomUUID();
   const payload = file?.b64
-    ? { cv_file_b64: file.b64, cv_file_name: file.name, job_text: jobText }
-    : { cv_text: cv.text, job_text: jobText };
-  return mergeOutput((await client.analyze(payload)) as PipelineOutput);
+    ? { cv_file_b64: file.b64, cv_file_name: file.name, job_text: jobText, progress_id: progressId }
+    : { cv_text: cv.text, job_text: jobText, progress_id: progressId };
+  const pollingClient = new ApiClient(undefined, 10_000);
+  let active = true;
+  let polling = false;
+  const timer = onProgress
+    ? setInterval(() => {
+        if (!active || polling) return;
+        polling = true;
+        void pollingClient.progress(progressId).then((snapshot) => {
+          if (active) onProgress(snapshot);
+        }).catch(() => {
+          // The POST response is authoritative. Transient polling errors do not abort inference.
+        }).finally(() => { polling = false; });
+      }, 1800)
+    : null;
+  try {
+    const merged = mergeOutput((await client.analyze(payload)) as PipelineOutput);
+    onProgress?.({status: "completed", stages: merged.stages ?? [], elapsed_s: 0});
+    return merged;
+  } catch (error) {
+    if (error instanceof ApiError && error.stages) {
+      onProgress?.({status: "failed", stages: error.stages, elapsed_s: 0});
+    }
+    throw error;
+  } finally {
+    active = false;
+    if (timer !== null) clearInterval(timer);
+  }
 }
 
 export const adapter: AnalysisAdapter = {
-  async run(input) {
+  async run(input, onProgress) {
     validateInput(input);
     if (mode !== "REAL")
       return demoCampaign(input, crypto.randomUUID(), new Date().toISOString());
-    const client = new ApiClient(undefined, 600_000);
+    // Real V2 may process long CVs over many model calls. The original 10-minute
+    // browser cutoff canceled legitimate requests while backend inference continued.
+    const client = new ApiClient(undefined, flow === "v2" ? 1_800_000 : 600_000);
     const job = flow === "v1" ? demoJob(input) : null;
     const id = crypto.randomUUID();
     const candidates: CandidateRecord[] = [];
     // Serialize: concurrency = 1 on the backend (RTX 4050, 6 GB VRAM).
     for (let i = 0; i < input.candidates.length; i++) {
       const cv = input.candidates[i];
+      if (!job) onProgress?.({candidate_index: i + 1, candidate_total: input.candidates.length,
+        status: "queued", stages: [], elapsed_s: 0});
       const { report, reporter, stages, upstream } = job
         ? await realMatch(client, cv, job)
-        : await realAnalyze(client, cv, input.description);
+        : await realAnalyze(client, cv, input.description, (snapshot) => onProgress?.({
+            candidate_index: i + 1, candidate_total: input.candidates.length, ...snapshot,
+          }));
       candidates.push({
         id: `${id}-${i + 1}`,
         label: `Candidate ${String(i + 1).padStart(2, "0")}`,

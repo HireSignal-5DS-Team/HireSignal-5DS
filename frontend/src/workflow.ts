@@ -1,4 +1,4 @@
-import type { Campaign, Mode, RequirementResult } from "./contracts";
+import type { Campaign, LiveV2Progress, Mode, RequirementResult } from "./contracts";
 
 // The backend returns a completed pipeline result, not per-stage streaming
 // telemetry. Never invent per-stage progress for REAL analyses.
@@ -33,6 +33,7 @@ export function workflowStages(
   step: number,
   error: string,
   apiFlow: "v1" | "v2" = "v1",
+  liveProgress: LiveV2Progress | null = null,
 ): WorkflowStage[] {
   if (executionMode === "MOCK") {
     return names.map((name, i) => {
@@ -63,7 +64,7 @@ export function workflowStages(
 
   // V2 has real upstream agents; its server returns their individual stage
   // statuses after each candidate completes. Never reuse the V1 placeholders.
-  if (apiFlow === "v2") return workflowStagesV2(campaign, running, error);
+  if (apiFlow === "v2") return workflowStagesV2(liveProgress, campaign, running, error);
 
   const results: RequirementResult[] =
     campaign?.mode === "REAL"
@@ -150,15 +151,42 @@ export function workflowStages(
  *  The API is synchronous: there is NO live stage streaming during inference.
  */
 function workflowStagesV2(
+  liveProgress: LiveV2Progress | null,
   campaign: Campaign | null,
   running: boolean,
   error: string,
 ): WorkflowStage[] {
   const candidates = campaign?.mode === "REAL" ? campaign.candidates : [];
+  // A running V2 analysis reports real stage events from FastAPI, per candidate.
+  if (!candidates.length && liveProgress?.stages.length) {
+    const candidateLabel = "Candidate " + liveProgress.candidate_index + "/" + liveProgress.candidate_total;
+    const fromBackend = (name: string, key: string): WorkflowStage => {
+      const event = liveProgress.stages.find((item) => item.stage === key);
+      if (!event) return { name, state: "Pending", detail: candidateLabel + ": waiting for this stage" };
+      const state: WorkflowState = event.status === "ok" ? "Completed"
+        : event.status === "failed" ? "Failed" : "Running";
+      const seconds = typeof event.elapsed_s === "number" ? " · " + event.elapsed_s.toFixed(1) + " s" : "";
+      return { name, state, detail: candidateLabel + ": " + key + " " + event.status + seconds };
+    };
+    const afterMatcher = (name: string): WorkflowStage => ({
+      name, state: "Pending",
+      detail: candidateLabel + ": final RAG, Bias and Judge evidence is verified after the Matcher returns",
+    });
+    return [
+      fromBackend("CV Reader", "reader"),
+      fromBackend("Profile Agent", "profile"),
+      fromBackend("Job Agent", "job_agent"),
+      afterMatcher("RAG Retrieval"),
+      fromBackend("Matcher", "matcher_pipeline"),
+      afterMatcher("Bias Auditor"),
+      afterMatcher("Judge"),
+      fromBackend("Report Writer", "reporter"),
+    ];
+  }
   const awaitingDetail = error
     ? "Analysis failed; no verified stage results were returned. See the error above."
     : running
-      ? "Awaiting /api/v2/analyze response; the API does not stream live stage progress."
+      ? "Awaiting the first backend progress event; no agent has been confirmed yet."
       : "No completed V2 analysis has been received yet.";
 
   const pending = (name: string): WorkflowStage => ({
