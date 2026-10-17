@@ -61,6 +61,10 @@ def chunks(text: str, size: int = 1200) -> list[tuple[int, str]]:
 
 class _Detector:
     name = "ner"
+    # Only names and places come from the models: emails, phones and links are found more
+    # cleanly by the rules (resume-ner writes "x. y @ gmail. com"). Places are only trusted
+    # in the header / contact block (anonymise.py), elsewhere they are CV facts ("IHEC Carthage").
+    KINDS = {"NAME", "ADDRESS"}
 
     def __init__(self, threshold: float):
         self.threshold = threshold
@@ -85,11 +89,21 @@ class _Detector:
         for offset, piece in chunks(text):
             for s, e, label, score in self._predict(piece):
                 kind = map_label(label)
-                if kind and score >= self.threshold:
-                    s, e = _trim(piece, s, e)
-                    if e > s:
-                        out.append(Span(offset + s, offset + e, kind, piece[s:e], self.name, round(float(score), 3)))
+                if kind not in self.KINDS or score < self.threshold:
+                    continue
+                s, e = _trim(piece, s, e)
+                if _usable(piece, s, e):
+                    out.append(Span(offset + s, offset + e, kind, piece[s:e], self.name, round(float(score), 3)))
         return out
+
+
+def _usable(piece: str, s: int, e: int) -> bool:
+    """Drop word pieces ('##s'), tiny spans and spans that cut a word in half ('Analy|s|te')."""
+    if e <= s or sum(c.isalpha() for c in piece[s:e]) < 3:
+        return False
+    if s > 0 and piece[s - 1].isalnum() or e < len(piece) and piece[e].isalnum():
+        return False
+    return "##" not in piece[s:e]
 
 
 def _trim(piece: str, s: int, e: int) -> tuple[int, int]:

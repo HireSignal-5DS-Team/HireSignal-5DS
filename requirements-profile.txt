@@ -3,3 +3,6 @@
 transformers>=4.40      # oksomu/resume-ner
 torch>=2.2              # CPU build is fine
 gliner>=0.2.13          # urchade/gliner_multi_pii-v1
+tiktoken                # needed by GLiNER's tokenizer
+sentencepiece           # same
+protobuf                # same

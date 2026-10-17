@@ -332,3 +332,67 @@ def test_privacy_eval_rules_only(tmp_path):
     assert summary["leaks"] == 0, [r["leaks"] for r in summary["per_cv"]]
     assert summary["facts_kept"] == summary["facts"], [r["facts_lost"] for r in summary["per_cv"]]
     assert summary["other_people_readable"] == 0
+
+
+# ------------------------------------- real resume-ner output (laptop, p06) ---
+
+# What oksomu/resume-ner returned on p06_fr_proxies.txt (run on the laptop, 17 Oct):
+# (text found, label, score, which occurrence). "s" stands for its "##s" word piece.
+P06_RESUME_NER = [
+    ("Mme Yasmine Khelifi", "NAME", 1.0, 0), ("Analyste financière", "TITLE", 0.97, 0),
+    ("Femme, âgée", "LOCATION", 0.93, 0), ("27", "LOCATION", 0.87, 0), ("s", "LOCATION", 0.89, 0),
+    ("Divorcée\nTunis, Tunisie", "LOCATION", 1.0, 0), ("+216 20 333 444", "PHONE", 1.0, 0),
+    ("yasmine.khelifi@gmail.com", "EMAIL", 1.0, 0), ("BIAT", "COMPANY", 0.81, 0), ("2019", "DATE", 1.0, 0),
+    ("Excel", "SKILL", 1.0, 0), ("BA.", "SKILL", 0.83, 0), ("Master en Finance", "DEGREE", 0.77, 0),
+    ("IHEC", "COMPANY", 0.8, 0), ("Carthage,", "LOCATION", 0.92, 0), ("SQL", "SKILL", 1.0, 0),
+]
+
+
+class _ReplayPipe:
+    def __init__(self, found):
+        self.found = found
+
+    def __call__(self, piece):
+        out = []
+        for text, label, score, nth in self.found:
+            pos = -1
+            for _ in range(nth + 1):
+                pos = piece.find(text, pos + 1)
+            if pos >= 0:
+                out.append({"start": pos, "end": pos + len(text), "entity_group": label, "score": score})
+        return out
+
+
+def test_real_resume_ner_output_does_not_break_the_cv():
+    text = (ROOT / "eval/profile_agent/cvs/p06_fr_proxies.txt").read_text(encoding="utf-8")
+    det = ResumeNER()
+    det._model = _ReplayPipe(P06_RESUME_NER)
+    result = anonymise_cv(text, cv_id="cv-x", detectors=[det])
+    anon = result.text
+    assert "[ADDRE" not in anon.replace("[ADDRESS]", "")            # no placeholder inside a placeholder
+    for fact in ("Analyste financière", "5 ans d'expérience", "IHEC Carthage, 2019", "Excel, VBA, Power BI, SQL"):
+        assert fact in anon, fact
+    for secret in ("Yasmine", "Khelifi", "Femme", "27 ans", "Divorcée", "Tunis, Tunisie", "333 444"):
+        assert secret not in anon, secret
+    assert all(len(a) >= 3 for a in result.identity.addresses)
+    assert result.report.leaks_left == 0
+
+
+def test_ner_word_pieces_and_cut_words_are_dropped():
+    det = ResumeNER()
+    det._model = _ReplayPipe([("s", "NAME", 0.99, 0), ("lake", "LOCATION", 0.99, 0), ("Snowflake", "NAME", 0.4, 0)])
+    assert det("Analyste on Snowflake\n") == []
+
+
+def test_ner_emails_and_phones_are_left_to_the_rules():
+    det = ResumeNER()
+    det._model = _ReplayPipe([("a@b.com", "EMAIL", 1.0, 0), ("22 333 444", "PHONE", 1.0, 0)])
+    assert det("mail a@b.com tel 22 333 444\n") == []
+
+
+def test_ner_places_outside_the_header_are_kept():
+    text = "Omar Haddad\nTunis, Tunisia\n\nEDUCATION\nIHEC Carthage, 2019\n"
+    det = ResumeNER()
+    det._model = _ReplayPipe([("Carthage", "LOCATION", 0.95, 0), ("Tunis", "LOCATION", 0.95, 0)])
+    anon = anonymise_cv(text, cv_id="cv-x", detectors=[det]).text
+    assert "IHEC Carthage, 2019" in anon and "Tunis" not in anon

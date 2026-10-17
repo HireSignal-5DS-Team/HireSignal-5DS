@@ -97,7 +97,7 @@
       "other_people_readable": [],
       "facts_lost": [],
       "needs_human_review": false,
-      "seconds": 0.01,
+      "seconds": 0.0,
       "report": {
         "schema_version": "0.1.0",
         "placeholders": {
@@ -172,7 +172,7 @@
       "other_people_readable": [],
       "facts_lost": [],
       "needs_human_review": false,
-      "seconds": 0.01,
+      "seconds": 0.0,
       "report": {
         "schema_version": "0.1.0",
         "placeholders": {

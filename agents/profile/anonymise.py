@@ -21,7 +21,7 @@ from contracts.profile import Identity, PersonalItem, PrivacyReport
 
 from .detect import (AGE_RES, DOB_RE, HONORIFIC_RE, PLACEHOLDER, PRIORITY, Span, _digits, _is_particle,
                      detect_rules, find_emails, find_phones, find_urls, fold, header_region, name_parts,
-                     references_region)
+                     private_regions, references_region)
 
 PROXY_KINDS = ("DOB", "AGE", "GENDER", "HONORIFIC", "NATIONALITY", "MARITAL", "BIRTHPLACE", "RELIGION")
 _PLACEHOLDER_RE = re.compile(r"\[(?:NAME|EMAIL|PHONE|URL|ADDRESS|PERSONAL)\]")
@@ -118,10 +118,17 @@ def value_spans(text: str, identity: Identity, source: str = "variant") -> list[
 
 
 def _exact(text: str, value: str, kind: str, source: str) -> list[Span]:
+    """Every whole occurrence of value (never part of a longer word; 3+ letters or digits)."""
     low, v = fold(text), fold(value.strip())
-    out, pos = [], low.find(v) if v else -1
-    while v and pos >= 0:
-        out.append(Span(pos, pos + len(v), kind, text[pos:pos + len(v)], source))
+    if sum(c.isalnum() for c in v) < 3:
+        return []
+    out, pos = [], low.find(v)
+    while pos >= 0:
+        end = pos + len(v)
+        cut = (pos > 0 and low[pos - 1].isalnum() and v[0].isalnum()) or (
+            end < len(low) and low[end].isalnum() and v[-1].isalnum())
+        if not cut:
+            out.append(Span(pos, end, kind, text[pos:end], source))
         pos = low.find(v, pos + 1)
     return out
 
@@ -194,6 +201,9 @@ def leak_check(anon: str, identity: Identity) -> list[Span]:
                     urlish and any(len(p) >= 4 and p in token for p in real)):
                 if not _PLACEHOLDER_RE.fullmatch(m.group(0).strip(".,;:()")):
                     hits.append(Span(m.start(), m.end(), "NAME", m.group(0), "leak-check"))
+    # never inside a placeholder: the "S" of "[ADDRESS]" is not a leak
+    boxes = [m.span() for m in _PLACEHOLDER_RE.finditer(anon)]
+    hits = [h for h in hits if not any(h.start < b1 and b0 < h.end for b0, b1 in boxes)]
     return merge(hits, anon)
 
 
@@ -243,7 +253,9 @@ def anonymise_cv(text: str, cv_id: str | None = None, sections: dict | None = No
             warnings.append(f"{getattr(det, 'name', 'ner')} did not run (model or library missing)")
         else:
             used.append(getattr(det, "name", "ner"))
-            spans += found
+            regions = private_regions(text, sections)
+            spans += [sp for sp in found if sp.kind != "ADDRESS"
+                      or any(r0 <= sp.start < r1 for r0, r1 in regions)]
     name = _pick_name(spans, header)
     if not name:
         warnings.append("candidate name not found: check the anonymised text by hand")
