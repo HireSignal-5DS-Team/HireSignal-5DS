@@ -6,6 +6,7 @@ the failures observed, and the fix. Code is the source of truth; this file expla
 | Prompt | Agent | Model | Current | Code |
 |---|---|---|---|---|
 | Job requirements extraction | Job Agent | Qwen3-4B-Instruct-2507 (the team's, plain) | `job-q1` (since 2026-10-17: best on all three scores vs job-v4 in the same run; NuExtract versions job-v1…v4 kept) | [`agents/job/prompts.py`](../agents/job/prompts.py) |
+| CV reading (skills / education / experience) | Profile Agent, step 4 | Qwen3-4B-Instruct-2507 (the team's, plain) | `profile-q1` (first version, not yet run on the laptop) | [`agents/profile/prompts.py`](../agents/profile/prompts.py) |
 
 ---
 
@@ -466,3 +467,56 @@ claim a large improvement. The final measure must be on offers not used during d
 
 **Decision.** job-q1 is the active version (`PROMPT_VERSION`). NuExtract versions stay in the code
 and can be selected with `--prompt job-v4`.
+
+
+---
+
+## CV reading (Profile Agent, step 4)
+
+**Role.** Turns the **anonymised** CV text (after steps 1-3 hid name, contacts and personal details)
+into a `ParsedCV` (`contracts/profile.py`): skills, education, experience, each with an exact quote.
+It goes to the Matcher in `structured.profile` (the Matcher's evidence stays the CV `text`).
+
+**Model.** The team's plain Qwen3-4B-Instruct-2507, same server and settings as job-q1
+(`HS_LLM_BASE_URL`, `HS_LLM_MODEL`; never the Matcher's LoRA). Temperature 0, seed 0, JSON mode.
+The model never sees the original CV: only the anonymised text (tested).
+
+### profile-q1
+
+**Technique.** Same recipe that worked for job-q1:
+- **written instructions** (`SYSTEM_P1`): the JSON shape, 7 numbered rules (exact one-line evidence,
+  one item per skill, what is not a skill, degree / field / institution, jobs not projects,
+  dates copied as written, null instead of inventing);
+- **2 solved examples** as chat turns: an English experience part (with `[NAME]` inside a line, a
+  "present" end date, a month/year internship) and a French education + skills part (with a
+  "Soft skills" line that must NOT give skills) — the EN/FR mix of our CVs;
+- **one call per group of CV sections** (~1500 characters), with `Section: <heading>` on top;
+  header, contact, references and hobbies are not sent (nothing to extract, only placeholders).
+
+**Placeholders in the prompt.** The instructions say what `[NAME]`, `[PERSONAL]`… mean and that they
+are never values: the model must not guess the hidden data.
+
+**Checks after every call (code, not prompt).**
+
+| Check | Repair |
+|---|---|
+| evidence not in the anonymised CV (exact / spacing / contained / fuzzy ≥ 0.90, Job Agent's locator) | item dropped |
+| a value (skill, title, company, school, degree, field) not written in its evidence | value removed |
+| a value with a placeholder | value removed |
+| a date whose year is not in the evidence; "present" without a present word | date removed |
+| "2019 – 2023" given as start | split into start + end |
+| no dates given but the line has a range | dates taken from the line |
+| same skill twice (summary + skills list) | merged |
+| unreadable answer | asked once more |
+
+Dates are **normalised by code**, not by the model ("06/2020" → `2020-06`, "mars 2019" → `2019-03`,
+"depuis 2022" → `present`): the model only copies, which is what small models do best.
+Every repair is written in `uncertain`.
+
+**Evaluation.** 10 synthetic CVs (`eval/profile_agent`, EN + FR), gold in `parse_gold/`
+(rules in `PARSE_RULES.md`). Skills F1; experience and education F1 + field accuracy.
+A perfect fake model scores 1.0 everywhere, so the checks never drop a correct answer (test).
+
+    python scripts/eval_profile_parse.py --llm-url http://127.0.0.1:11434/v1
+
+Results: _to be filled after the first laptop run._

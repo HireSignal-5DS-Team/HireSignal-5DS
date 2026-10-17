@@ -1,0 +1,63 @@
+{
+ "cv": "p09_en_years_and_handles",
+ "skills": [
+  [
+   "Splunk"
+  ],
+  [
+   "QRadar"
+  ],
+  [
+   "Burp Suite"
+  ],
+  [
+   "Wireshark"
+  ],
+  [
+   "Python"
+  ],
+  [
+   "Linux"
+  ],
+  [
+   "OWASP ZAP"
+  ],
+  [
+   "CEH",
+   "CEH v11"
+  ],
+  [
+   "CompTIA Security+",
+   "Security+",
+   "CompTIA Security+ SY0-601"
+  ]
+ ],
+ "skills_optional": [
+  "Incident response",
+  "Web pentests",
+  "pentests",
+  "SOC"
+ ],
+ "education": [
+  {
+   "degree": "National Engineering Diploma",
+   "field": "Telecommunications",
+   "institution": "SUP'COM",
+   "end": "2021"
+  }
+ ],
+ "experience": [
+  {
+   "title": "SOC Analyst",
+   "company": "Orange Business",
+   "start": "2021",
+   "end": "2023"
+  },
+  {
+   "title": "Pentester Intern",
+   "company": "Wevioo",
+   "start": "2020-06",
+   "end": "2020-09"
+  }
+ ]
+}

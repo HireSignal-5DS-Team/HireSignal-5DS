@@ -17,7 +17,7 @@ import re
 import secrets
 from dataclasses import dataclass, field
 
-from contracts.profile import Identity, PersonalItem, PrivacyReport
+from contracts.profile import Identity, ParsedCV, PersonalItem, PrivacyReport
 
 from .detect import (AGE_RES, DOB_RE, HONORIFIC_RE, PLACEHOLDER, PRIORITY, Span, _digits, _is_particle,
                      detect_rules, find_emails, find_phones, find_urls, fold, header_region, name_parts,
@@ -217,10 +217,13 @@ class AnonymisedCV:
     identity: Identity              # local only
     report: PrivacyReport
     spans: list[Span] = field(default_factory=list, repr=False)   # first-pass findings, for debugging
+    profile: ParsedCV | None = None   # step 4, from the anonymised text only
 
     def to_matcher_cv(self, reader: dict | None = None) -> dict:
         """The team's Matcher CV {cv_id, text, structured}. Replaces integration.contract.cv_from_reader."""
         structured: dict = {"privacy": self.report.model_dump()}
+        if self.profile is not None:
+            structured["profile"] = self.profile.model_dump()
         if reader:
             keep = ("file_type", "pages", "page_routes", "layout", "ocr_confidence", "needs_human_review")
             structured["reader"] = {k: reader.get(k) for k in keep if k in reader}

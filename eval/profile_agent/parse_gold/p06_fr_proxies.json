@@ -1,0 +1,39 @@
+{
+ "cv": "p06_fr_proxies",
+ "skills": [
+  [
+   "Excel"
+  ],
+  [
+   "VBA"
+  ],
+  [
+   "Power BI"
+  ],
+  [
+   "SQL"
+  ]
+ ],
+ "skills_optional": [
+  "modélisation financière",
+  "Reporting",
+  "Modèles de valorisation",
+  "valorisation"
+ ],
+ "education": [
+  {
+   "degree": "Master",
+   "field": "Finance",
+   "institution": "IHEC Carthage",
+   "end": "2019"
+  }
+ ],
+ "experience": [
+  {
+   "title": "Analyste financière",
+   "company": "BIAT",
+   "start": "2019",
+   "end": "2024"
+  }
+ ]
+}

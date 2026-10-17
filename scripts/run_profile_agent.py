@@ -1,9 +1,13 @@
-"""Run the Profile Agent (steps 1-3: privacy) on a CV and save the two files.
+"""Run the Profile Agent on a CV and save the two files.
+
+Steps 1-3 (privacy) always run; step 4 (skills / education / experience) uses the team's plain Qwen
+(HS_LLM_BASE_URL / HS_LLM_MODEL, like job-q1). Add --no-parse to skip it.
 
     python scripts/run_profile_agent.py eval/profile_agent/cvs/p01_en_classic.txt
     python scripts/run_profile_agent.py out/cv01.reader.json            (a saved ReaderResult)
     python scripts/run_profile_agent.py samples/cv02.pdf                (through the Reader, once merged)
     python scripts/run_profile_agent.py cv.txt --ner gliner resume-ner  (add the NER models, CPU)
+    python scripts/run_profile_agent.py cv.txt --no-parse               (privacy only, no Qwen)
 
 Writes:
     out/<cv_id>.cv.json            -> for n8n / the Matcher: anonymised text + privacy report
@@ -17,7 +21,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from agents.profile import anonymise_cv, make_detectors  # noqa: E402
+from agents.job.backend import BackendError, QwenChatClient  # noqa: E402
+from agents.profile import PROMPT_VERSION, make_detectors, run_profile_agent  # noqa: E402
 
 
 def load(path: Path) -> tuple[str, dict | None]:
@@ -42,6 +47,8 @@ def main() -> None:
     parser.add_argument("file", type=Path, help=".txt, a Reader .json, or a CV file (pdf/docx/image)")
     parser.add_argument("--cv-id", help="default: random (never the file name, it often holds the name)")
     parser.add_argument("--ner", nargs="*", default=[], help="resume-ner and/or gliner")
+    parser.add_argument("--no-parse", action="store_true", help="skip step 4 (no Qwen needed)")
+    parser.add_argument("--llm-url", help="Qwen server (default HS_LLM_BASE_URL)")
     parser.add_argument("--out", type=Path, default=Path("out"))
     parser.add_argument("--private", type=Path, default=Path("private"))
     args = parser.parse_args()
@@ -51,7 +58,18 @@ def main() -> None:
         detectors = make_detectors(args.ner)
     except ValueError as exc:
         sys.exit(f"CONFIG ERROR: {exc}")
-    result = anonymise_cv(text, cv_id=args.cv_id, sections=(reader or {}).get("sections"), detectors=detectors)
+    backend = None
+    if not args.no_parse:
+        try:
+            backend = QwenChatClient(base_url=args.llm_url, max_tokens=3072)
+        except ValueError as exc:
+            sys.exit(f"CONFIG ERROR: {exc}")
+        print(f"Step 4 ({PROMPT_VERSION}) -> {backend.info()}")
+    try:
+        result = run_profile_agent(text, cv_id=args.cv_id, backend=backend,
+                                   sections=(reader or {}).get("sections"), detectors=detectors)
+    except BackendError as exc:
+        sys.exit(f"MODEL ERROR: {exc}  (use --no-parse to run the privacy steps only)")
 
     print(result.text)
     print("\n" + "-" * 60)
@@ -62,6 +80,16 @@ def main() -> None:
         print(f"  ! {w}")
     if r.needs_human_review:
         print(">> needs_human_review = True")
+
+    if result.profile is not None:
+        p = result.profile
+        print(f"\nSkills ({len(p.skills)}): " + ", ".join(sk.name for sk in p.skills))
+        for x in p.experience:
+            print(f"  job  {x.title} @ {x.company}  {x.start} -> {x.end}")
+        for e in p.education:
+            print(f"  edu  {e.degree} | {e.field} | {e.institution}  {e.end}")
+        for n in p.uncertain:
+            print(f"  ? {n}")
 
     args.out.mkdir(parents=True, exist_ok=True)
     args.private.mkdir(parents=True, exist_ok=True)
