@@ -1,0 +1,167 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883511200",
+  "title": "AI Technical Expert",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science.",
+      "evidence": "Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [
+        "computer science"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "At least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus.",
+      "evidence": "At least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [
+        "mathematics",
+        "statistics"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Experience with computer programming to solve key Artificial Intelligence (AI) measurement science challenges",
+      "evidence": "Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "computer programming"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Experience with tool development to solve key Artificial Intelligence (AI) measurement science challenges",
+      "evidence": "Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "tool development"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Experience with core AI technical skills such as machine learning and deep learning",
+      "evidence": "Experience with core AI technical skills such as machine learning and deep learning",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "machine learning",
+        "deep learning"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Experience with statistical data analysis",
+      "evidence": "Experience with statistical data analysis and experimental design",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "statistical data analysis"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Experience with experimental design",
+      "evidence": "Experience with statistical data analysis and experimental design",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "experimental design"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Experience in leading computer programming efforts to solve key Artificial Intelligence (AI) measurement science challenges",
+      "evidence": "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "computer programming"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Experience in leading tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges",
+      "evidence": "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "tool development"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Experience in providing technical leadership for AI experts in areas involving core AI technical skills such as machine learning and deep learning",
+      "evidence": "Experience in providing technical leadership for AI experts in areas involving core AI technical skills such as machine learning and deep learning",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "machine learning",
+        "deep learning"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Experience in leading and implementing projects involving statistical data analysis",
+      "evidence": "Experience in leading and implementing projects involving statistical data analysis and experimental design",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "statistical data analysis"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "Experience in leading and implementing projects involving experimental design",
+      "evidence": "Experience in leading and implementing projects involving statistical data analysis and experimental design",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "experimental design"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'Bachelor's degree in computer science or bachelor'': min_years 3.0 removed (no years in the quote)",
+    "'At least 15 of the 30 semester hours must have inc': min_years 3.0 removed (no years in the quote)",
+    "'Experience with computer programming and tool deve': min_years 1.0 removed (no years in the quote)",
+    "'Experience with core AI technical skills such as m': min_years 1.0 removed (no years in the quote)",
+    "'Experience with statistical data analysis and expe': min_years 1.0 removed (no years in the quote)",
+    "'Experience in leading computer programming and too': min_years 1.0 removed (no years in the quote)",
+    "'Experience in providing technical leadership for A': min_years 1.0 removed (no years in the quote)",
+    "'Experience in leading and implementing projects in': min_years 1.0 removed (no years in the quote)"
+  ]
+}

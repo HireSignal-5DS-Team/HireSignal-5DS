@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883386100",
+  "title": "Data Scientist",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "One year of directly related specialized experience equivalent to the GS-11 level",
+      "evidence": "Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects. Assisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues. Writing, testing, and documenting code for data analysis or modeling and producing basic visualizations.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": true,
+  "warnings": [
+    "'One year of directly related specialized experienc': min_years 1.0 removed (no years in the quote)",
+    "'One year of directly related specialized experienc': skill term 'GS-11' not in the quote, removed",
+    "'Completed all requirements for a doctoral degree (': quote not found (closest 0.43) in the job offer, dropped as invented (model quoted: \"Ph.D. or equivalent in an appropriate field.\")"
+  ]
+}

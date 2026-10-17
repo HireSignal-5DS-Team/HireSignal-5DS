@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-884783000",
+  "title": "Summary",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Must be at least 16 years old.",
+      "evidence": "Must be at least 16 years old.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Must be a U.S. Citizen.",
+      "evidence": "Must be a U.S. Citizen.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Candidate required to obtain the necessary security/investigation level.",
+      "evidence": "Candidate required to obtain the necessary security/investigation level.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Requires a probationary period if the requirement has not been met.",
+      "evidence": "Requires a probationary period if the requirement has not been met.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'Must be at least 16 years old.': unknown category 'age', set to 'other'",
+    "'Must be a U.S. Citizen.': unknown category 'citizenship', set to 'other'",
+    "'Candidate required to obtain the necessary securit': unknown category 'security', set to 'other'",
+    "'Requires a probationary period if the requirement ': unknown category 'employment', set to 'other'",
+    "'Basic Requirement Data Scientist , 1560: A) Degree': quote empty in the job offer, dropped as invented (model quoted: \"\")"
+  ]
+}

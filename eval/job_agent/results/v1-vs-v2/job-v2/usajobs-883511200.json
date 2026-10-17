@@ -1,0 +1,188 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883511200",
+  "title": "AI Technical Expert",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science",
+      "evidence": "Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [
+        "computer science",
+        "mathematics",
+        "statistics"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "At least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus",
+      "evidence": "At least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "All academic degrees and coursework must be from accredited or pre-accredited institutions",
+      "evidence": "All academic degrees and coursework must be from accredited or pre-accredited institutions.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Applicants must have one year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST).",
+      "evidence": "applicants must have one year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST).",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "GS-12"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Applicants must have one year (52 weeks) of specialized experience at the GS-14 level (ZP-IV at NIST).",
+      "evidence": "applicants must have one year (52 weeks) of specialized experience at the GS-14 level (ZP-IV at NIST).",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "GS-14"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges",
+      "evidence": "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Experience in providing technical leadership for AI experts in areas involving core AI technical skills such as machine learning and deep learning",
+      "evidence": "Experience in providing technical leadership for AI experts in areas involving core AI technical skills such as machine learning and deep learning",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "machine learning",
+        "deep learning"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Experience in leading and implementing projects involving statistical data analysis",
+      "evidence": "Experience in leading and implementing projects involving statistical data analysis and experimental design",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "statistical data analysis"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Experience in leading and implementing projects involving experimental design",
+      "evidence": "Experience in leading and implementing projects involving statistical data analysis and experimental design",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "experimental design"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional, philanthropic, religious, spiritual, community, student, social).",
+      "evidence": "Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional, philanthropic, religious, spiritual, community, student, social).",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "You will receive credit for all qualifying experience, including volunteer experience.",
+      "evidence": "You will receive credit for all qualifying experience, including volunteer experience.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "The qualification requirements in this vacancy announcement are based on the U.S. Office of Personnel Management (OPM) Qualification Standards Handbook .",
+      "evidence": "The qualification requirements in this vacancy announcement are based on the U.S. Office of Personnel Management (OPM) Qualification Standards Handbook .",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "An accredited organization must evaluate education completed outside of the U.S. to ensure that it is comparable to education received in accredited institutions in the U.S.",
+      "evidence": "An accredited organization must evaluate education completed outside of the U.S. to ensure that it is comparable to education received in accredited institutions in the U.S.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application.",
+      "evidence": "A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r15",
+      "text": "Additional information",
+      "evidence": "Additional information",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'Bachelor's degree in computer science or bachelor'': min_years 30.0 removed (no years in the quote)",
+    "'Bachelor's degree in computer science or bachelor'': skill term 'computer science' not in the quote, removed",
+    "'At least 15 of the 30 semester hours must have inc': min_years 30.0 removed (no years in the quote)",
+    "'Applicants must have one year (52 weeks) of specia': quote repaired (spacing)",
+    "'Applicants must have one year (52 weeks) of specia': min_years 12.0 -> 1.0 (from the quote)",
+    "'Applicants must have one year (52 weeks) of specia': quote repaired (spacing)",
+    "'Applicants must have one year (52 weeks) of specia': min_years 14.0 -> 1.0 (from the quote)",
+    "'Experience in leading computer programming and too': skill term 'machine learning' not in the quote, removed",
+    "'Experience in leading computer programming and too': skill term 'deep learning' not in the quote, removed",
+    "'Experience in leading computer programming and too': skill term 'statistical data analysis' not in the quote, removed",
+    "'Experience in leading computer programming and too': skill term 'experimental design' not in the quote, removed"
+  ]
+}

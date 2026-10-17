@@ -1,0 +1,113 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883827900",
+  "title": "Data Scientist (Recent Graduate)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "U.S. Citizen or National",
+      "evidence": "U.S. Citizen or National.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "one-year probationary period",
+      "evidence": "one-year probationary period may be required.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "background investigation",
+      "evidence": "background investigation is required.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "bargaining unit position (AFGE Local 421)",
+      "evidence": "This is a bargaining unit position (AFGE Local 421).",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Generally, male applicants must be registered with the Selective Service",
+      "evidence": "Generally, male applicants must be registered with the Selective Service.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "This position has an education requirement",
+      "evidence": "This position has an education requirement;",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "transcripts",
+      "evidence": "transcripts are required.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Duties",
+      "evidence": "Duties",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": true,
+  "warnings": [
+    "'This position has an education requirement': quote repaired (fuzzy 0.98)",
+    "'Eligibility : In order to be eligible for our Rece': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'Veterans unable to apply within two years of recei': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'You must meet the qualification (experience and/or': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'To view the eligibility and qualification requirem': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'GS-1560': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'GS-07': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'GS-09': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'Complete a Declaration for Federal Employment (OF-': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'Have your Federal salary payments made by direct d': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'Go through a Personal Identity Verification (PIV) ': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'Federal law requires verification of the identity ': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'FERC also participates in the USCIS Electronic Emp': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'Attend a mandatory ethics training.': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'We are governed by the Office of Government Ethics': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'To comply with these regulations and statutes, div': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'See 5 C.F.R. 2634-41; 18 U.S.C. 201-208; 5 C.F.R. ': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'If selected, you may also be required to file a fi': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'Receive authorization from OPM on any job offer yo': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'As a condition of employment for accepting this po': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'In determining if your employment advances the pub': quote empty in the job offer, dropped as invented (model quoted: \"\")"
+  ]
+}
