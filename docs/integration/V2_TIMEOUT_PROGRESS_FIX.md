@@ -116,3 +116,44 @@ in **199 seconds**, returning **25 grounded skill entries, 2 education entries,
 This direct-Profile test measures extraction functionality for a synthetic
 example, not general accuracy. The model still needs time proportional to
 the number of CV chunks; long production CVs may require human review.
+
+
+## Follow-up: intermittent upstream Qwen HTTP 500 on second CV
+
+A two-CV browser analysis returned `profile failed: BackendError: Qwen server error 500:
+Internal Server Error` on candidate 2. The historical llama.cpp traceback was not
+available after the PC shutdown. The exact trigger is therefore **not proven**.
+
+The local model server uses a dual-alias configuration on port 8082. Profile and
+Job use plain `Qwen/Qwen3-4B-Instruct-2507`; Matcher uses the LoRA alias.
+The server swaps between them rather than keeping both in GPU memory.
+
+Reproduction on 2026-10-17:
+- Five real inference probes (plain, plain, LoRA, plain, Job) all returned HTTP
+  200, including plain→LoRA→plain switching. No universal switching bug found.
+- Repeated the application's sequential flow using two short **synthetic PDF
+  CVs**, the AI Engineer job description, and real Reader, Profile, Job, LoRA
+  Matcher+RAG, Bias, Judge and Reporter on the local RTX 4050:
+  - Candidate 1: HTTP 200, 168.6s, all five top-level stages `ok`
+  - Candidate 2: HTTP 200, 248.6s, all five top-level stages `ok`
+- Candidate 2 had five `MISSING` results; this is not evidence of screening
+  accuracy, only confirmation that the model did not invent MET decisions.
+- During these controlled runs, the newly captured llama.cpp log contained
+  successful HTTP 200 completions and no Qwen HTTP 500. Some Windows logging
+  callbacks emitted UnicodeDecodeError warnings, which did not break inference.
+
+Hardening (V2 only, no changes to Ayoub's prompts/model implementations):
+- The `integration.qwen_retry.ResilientQwenChatClient` wraps the existing
+  `QwenChatClient` with **one** retry and a **2-second wait** only for
+  `Qwen server error 500`, `502` or `503` responses.
+- All 4xx, inference timeouts, schema failures and persistent 5xx errors
+  continue failing honestly, without a fabricated result.
+- `profile` and `job_agent` stage metadata expose the count of successful
+  retry attempts through `transient_server_retries`.
+- Mocked tests verify that a one-time HTTP 500 recovers and a persistent
+  HTTP 500 still returns HTTP 502 from the V2 backend.
+- Tests: 173 Python tests passed across integration and Profile, 30 frontend
+  tests passed, ESLint and production build passed.
+- This is **failure recovery**, not a confirmed fix for a specific llama.cpp
+  defect, and does not guarantee that the original failing CV will succeed.
+  Examine a retained server traceback if HTTP 500 recurs.

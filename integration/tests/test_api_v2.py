@@ -113,3 +113,56 @@ def test_v2_progress_records_failure_without_cv_content(client, monkeypatch):
     assert progress["stages"][0]["stage"] == "reader"
     assert progress["stages"][1]["status"] == "failed"
     assert "Amira" not in str(progress)
+
+
+def test_v2_recovers_from_one_qwen_500_with_real_adapter_contract(client, monkeypatch):
+    from agents.job.backend import QwenChatClient
+    from integration.qwen_retry import ResilientQwenChatClient
+
+    calls = []
+    def transient_then_valid(self, text, template, examples):
+        calls.append(1)
+        if len(calls) == 1:
+            raise BackendError("Qwen server error 500: Internal Server Error")
+        self.last_call = {"finish_reason": "stop"}
+        return fake_llm(text, template)
+
+    monkeypatch.setattr(QwenChatClient, "extract", transient_then_valid)
+    monkeypatch.setattr(upstream, "upstream_llm",
+                        lambda env=None: ResilientQwenChatClient(
+                            base_url="http://127.0.0.1:8082/v1",
+                            model="Qwen/Qwen3-4B-Instruct-2507",
+                            retry_wait_s=0,
+                        ))
+    response = client.post("/api/v2/analyze", json={"cv_text": CV, "job_text": JOB})
+    assert response.status_code == 200, response.text
+    body = response.json()
+    assert body["stages"][1]["status"] == "ok"
+    assert body["stages"][1]["transient_server_retries"] == 1
+    assert body["stages"][2]["transient_server_retries"] == 0
+    assert all(stage["status"] == "ok" for stage in body["stages"])
+    assert "Amira" not in response.text
+
+
+def test_v2_still_fails_on_persistent_qwen_500(client, monkeypatch):
+    from agents.job.backend import QwenChatClient
+    from integration.qwen_retry import ResilientQwenChatClient
+
+    calls = []
+    def always_fails(self, text, template, examples):
+        calls.append(1)
+        raise BackendError("Qwen server error 500: Internal Server Error")
+
+    monkeypatch.setattr(QwenChatClient, "extract", always_fails)
+    monkeypatch.setattr(upstream, "upstream_llm",
+                        lambda env=None: ResilientQwenChatClient(
+                            base_url="http://127.0.0.1:8082/v1",
+                            model="Qwen/Qwen3-4B-Instruct-2507",
+                            retry_wait_s=0,
+                        ))
+    response = client.post("/api/v2/analyze", json={"cv_text": CV, "job_text": JOB})
+    assert response.status_code == 502
+    assert len(calls) == 2
+    body = response.json()
+    assert body["stages"][1]["status"] == "failed"
+    assert not body.get("requirements")

@@ -39,9 +39,9 @@ class StageError(Exception):
 
 def upstream_llm(env=None):
     """The shared plain Qwen3-4B (no adapter) used by the Profile and Job agents."""
-    from agents.job.backend import QwenChatClient
+    from integration.qwen_retry import ResilientQwenChatClient
     env = os.environ if env is None else env
-    return QwenChatClient(base_url=env.get("HS_UPSTREAM_LLM_URL") or env.get("HS_LLM_BASE_URL") or "http://127.0.0.1:8080/v1",
+    return ResilientQwenChatClient(base_url=env.get("HS_UPSTREAM_LLM_URL") or env.get("HS_LLM_BASE_URL") or "http://127.0.0.1:8080/v1",
                           model=env.get("HS_UPSTREAM_LLM_MODEL") or "Qwen/Qwen3-4B-Instruct-2507",
                           max_tokens=int(env.get("HS_UPSTREAM_MAX_TOKENS", 768)),
                           timeout=float(env.get("HS_UPSTREAM_TIMEOUT", 180)))  # bounded Qwen output avoids >300s model timeout with 8 GPU layers
@@ -95,6 +95,7 @@ def analyze_documents(pipeline, job_text, cv_bytes=None, file_name=None, cv_text
     stages[-1].update(file_type=reader.get("file_type"), pages=reader.get("pages"), ocr=reader.get("ocr_confidence") is not None,
                       needs_human_review=reader.get("needs_human_review"))
     cv_id = new_cv_id()
+    profile_retries_before = getattr(llm, "transient_retry_attempts", 0)
     prof = _stage(stages, "profile", lambda: run_profile_agent(reader["text"], cv_id=cv_id, backend=llm,
                                                               sections=reader.get("sections"), detectors=detectors,
                                                               chunk_chars=int(os.environ.get("HS_V2_PROFILE_CHUNK_CHARS", 800))), progress=progress)
@@ -103,11 +104,14 @@ def analyze_documents(pipeline, job_text, cv_bytes=None, file_name=None, cv_text
                           for note in profile_notes)
     stages[-1].update(prompt_version=prof.profile.prompt_version if prof.profile else None,
                       leaks_left=prof.report.leaks_left, parsed=prof.profile is not None,
-                      extraction_incomplete=profile_partial)
+                      extraction_incomplete=profile_partial,
+                      transient_server_retries=getattr(llm, "transient_retry_attempts", 0) - profile_retries_before)
     cv = prof.to_matcher_cv(reader)
+    job_retries_before = getattr(llm, "transient_retry_attempts", 0)
     card = _stage(stages, "job_agent", lambda: run_job_agent(job_text, job_id or f"job-{uuid.uuid4().hex[:8]}", llm), progress=progress)
     stages[-1].update(requirements=len(card.requirements), must=sum(r.kind == "must" for r in card.requirements),
-                      needs_human_review=card.needs_human_review)
+                      needs_human_review=card.needs_human_review,
+                      transient_server_retries=getattr(llm, "transient_retry_attempts", 0) - job_retries_before)
     job = card.to_matcher_job()
     # Untrusted job text: a requirement quoted from an instruction to the model is not a job requirement.
     job_inj = injected_sentences(job_text)
