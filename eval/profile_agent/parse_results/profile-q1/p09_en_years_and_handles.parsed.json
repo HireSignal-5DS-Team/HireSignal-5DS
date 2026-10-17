@@ -1,0 +1,56 @@
+{
+ "schema_version": "0.1.0",
+ "candidate_id": "p09_en_years_and_handles",
+ "skills": [
+  {
+   "name": "Splunk",
+   "evidence": "- Incident response with Splunk and QRadar; 2000 alerts triaged per month."
+  },
+  {
+   "name": "QRadar",
+   "evidence": "- Incident response with Splunk and QRadar; 2000 alerts triaged per month."
+  },
+  {
+   "name": "Burp Suite",
+   "evidence": "- Web pentests with Burp Suite and OWASP ZAP."
+  },
+  {
+   "name": "Wireshark",
+   "evidence": "Wireshark"
+  },
+  {
+   "name": "Python",
+   "evidence": "Python"
+  },
+  {
+   "name": "Linux",
+   "evidence": "Linux"
+  }
+ ],
+ "education": [
+  {
+   "degree": "National Engineering Diploma",
+   "field": "Telecommunications",
+   "institution": "SUP'COM",
+   "end": "2021",
+   "evidence": "National Engineering Diploma in Telecommunications, SUP'COM, 2021"
+  }
+ ],
+ "experience": [
+  {
+   "title": "SOC Analyst",
+   "company": "Orange Business",
+   "start": "2021",
+   "end": "2023",
+   "evidence": "SOC Analyst, Orange Business, 2021 2022 2023"
+  }
+ ],
+ "uncertain": [
+  "experience 'Pentester Intern': title 'Pentester Intern' is not written in its evidence, removed",
+  "experience 'Pentester Intern': company 'Wevioo' is not written in its evidence, removed",
+  "experience 'Pentester Intern': start '06/2020' not found in its evidence, removed",
+  "experience 'Pentester Intern': end '09/2020' not found in its evidence, removed",
+  "experience 'Pentester Intern': neither title nor company, dropped"
+ ],
+ "prompt_version": "profile-q1"
+}

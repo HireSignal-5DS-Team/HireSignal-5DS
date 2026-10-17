@@ -1,0 +1,456 @@
+{
+ "prompt": "profile-q1",
+ "backend": {
+  "model": "hf.co/unsloth/Qwen3-4B-Instruct-2507-GGUF:Q4_K_M",
+  "mode": "chat",
+  "base_url": "http://127.0.0.1:11434/v1"
+ },
+ "cvs": 10,
+ "skills": {
+  "tp": 56,
+  "fp": 0,
+  "fn": 13,
+  "precision": 1.0,
+  "recall": 0.812,
+  "f1": 0.896
+ },
+ "experience": {
+  "tp": 12,
+  "fp": 0,
+  "fn": 1,
+  "precision": 1.0,
+  "recall": 0.923,
+  "f1": 0.96
+ },
+ "education": {
+  "tp": 11,
+  "fp": 0,
+  "fn": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0
+ },
+ "field_accuracy": {
+  "experience": {
+   "title": 1.0,
+   "start": 1.0,
+   "end": 1.0
+  },
+  "education": {
+   "degree": 1.0,
+   "field": 1.0,
+   "end": 1.0
+  }
+ },
+ "seconds_per_cv": 25.9,
+ "per_cv": [
+  {
+   "cv": "p01_en_classic",
+   "seconds": 48.2,
+   "calls": 1,
+   "skills": {
+    "tp": 7,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "missed": [],
+    "extra": []
+   },
+   "experience": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "title_accuracy": 1.0,
+    "start_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   },
+   "education": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "degree_accuracy": 1.0,
+    "field_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   }
+  },
+  {
+   "cv": "p02_fr_classic",
+   "seconds": 34.0,
+   "calls": 1,
+   "skills": {
+    "tp": 9,
+    "fp": 0,
+    "fn": 3,
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1": 0.857,
+    "missed": [
+     "ci/cd",
+     "prometheus",
+     "grafana"
+    ],
+    "extra": []
+   },
+   "experience": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "title_accuracy": 1.0,
+    "start_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   },
+   "education": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "degree_accuracy": 1.0,
+    "field_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   }
+  },
+  {
+   "cv": "p03_en_two_column",
+   "seconds": 27.5,
+   "calls": 1,
+   "skills": {
+    "tp": 5,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "missed": [],
+    "extra": []
+   },
+   "experience": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "title_accuracy": 1.0,
+    "start_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   },
+   "education": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "degree_accuracy": 1.0,
+    "field_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   }
+  },
+  {
+   "cv": "p04_fr_labelled",
+   "seconds": 20.6,
+   "calls": 1,
+   "skills": {
+    "tp": 5,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "missed": [],
+    "extra": []
+   },
+   "experience": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "title_accuracy": 1.0,
+    "start_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   },
+   "education": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "degree_accuracy": 1.0,
+    "field_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   }
+  },
+  {
+   "cv": "p05_en_name_in_footer",
+   "seconds": 18.5,
+   "calls": 1,
+   "skills": {
+    "tp": 5,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "missed": [],
+    "extra": []
+   },
+   "experience": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "title_accuracy": 1.0,
+    "start_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   },
+   "education": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "degree_accuracy": 1.0,
+    "field_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   }
+  },
+  {
+   "cv": "p06_fr_proxies",
+   "seconds": 18.6,
+   "calls": 1,
+   "skills": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "missed": [],
+    "extra": []
+   },
+   "experience": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "title_accuracy": 1.0,
+    "start_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   },
+   "education": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "degree_accuracy": 1.0,
+    "field_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   }
+  },
+  {
+   "cv": "p07_en_personal_details",
+   "seconds": 20.0,
+   "calls": 1,
+   "skills": {
+    "tp": 5,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.833,
+    "f1": 0.909,
+    "missed": [
+     "socket io"
+    ],
+    "extra": []
+   },
+   "experience": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "title_accuracy": 1.0,
+    "start_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   },
+   "education": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "degree_accuracy": 1.0,
+    "field_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   }
+  },
+  {
+   "cv": "p08_fr_particle",
+   "seconds": 23.6,
+   "calls": 1,
+   "skills": {
+    "tp": 6,
+    "fp": 0,
+    "fn": 4,
+    "precision": 1.0,
+    "recall": 0.6,
+    "f1": 0.75,
+    "missed": [
+     "s3",
+     "glue",
+     "redshift",
+     "next js"
+    ],
+    "extra": []
+   },
+   "experience": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "title_accuracy": 1.0,
+    "start_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   },
+   "education": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "degree_accuracy": 1.0,
+    "field_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   }
+  },
+  {
+   "cv": "p09_en_years_and_handles",
+   "seconds": 26.9,
+   "calls": 1,
+   "skills": {
+    "tp": 6,
+    "fp": 0,
+    "fn": 3,
+    "precision": 1.0,
+    "recall": 0.667,
+    "f1": 0.8,
+    "missed": [
+     "owasp zap",
+     "ceh",
+     "comptia security+"
+    ],
+    "extra": []
+   },
+   "experience": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.667,
+    "title_accuracy": 1.0,
+    "start_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   },
+   "education": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "degree_accuracy": 1.0,
+    "field_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   }
+  },
+  {
+   "cv": "p10_fr_header_and_refs",
+   "seconds": 20.9,
+   "calls": 1,
+   "skills": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 2,
+    "precision": 1.0,
+    "recall": 0.667,
+    "f1": 0.8,
+    "missed": [
+     "ccna",
+     "ccnp"
+    ],
+    "extra": []
+   },
+   "experience": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "title_accuracy": 1.0,
+    "start_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   },
+   "education": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "degree_accuracy": 1.0,
+    "field_accuracy": 1.0,
+    "end_accuracy": 1.0,
+    "field_errors": []
+   }
+  }
+ ]
+}

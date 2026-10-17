@@ -1,0 +1,11 @@
+[
+ {
+  "input": "Section: SUMMARY\nData scientist with 3 years of experience. [NAME] built ML pipelines in Python for banking clients.\n\nSection: EXPERIENCE\nData Scientist, Vermeg — Tunis    2021 - 2024\n- Built churn models (XGBoost, scikit-learn) for 2 million clients.\n- Deployed models with Docker and FastAPI.\n\nData Analyst Intern, Sofrecom    2020 - 2021\n- Dashboards in Power BI and SQL.\n\nSection: EDUCATION\nEngineering degree in Computer Science, ESPRIT, 2021\n\nSection: SKILLS\nPython, SQL, XGBoost, scikit-learn, Docker, FastAPI, Power BI",
+  "answer": "{\"skills\": [{\"name\": \"Python\", \"evidence\": \"Data scientist with 3 years of experience. [NAME] built ML pipelines in Python for banking clients.\"}, {\"name\": \"SQL\", \"evidence\": \"Data Analyst Intern, Sofrecom    2020 - 2021\\n- Dashboards in Power BI and SQL.\"}, {\"name\": \"XGBoost\", \"evidence\": \"- Built churn models (XGBoost, scikit-learn) for 2 million clients.\"}, {\"name\": \"scikit-learn\", \"evidence\": \"- Built churn models (XGBoost, scikit-learn) for 2 million clients.\"}, {\"name\": \"Docker\", \"evidence\": \"- Deployed models with Docker and FastAPI.\"}, {\"name\": \"FastAPI\", \"evidence\": \"- Deployed models with Docker and FastAPI.\"}, {\"name\": \"Power BI\", \"evidence\": \"- Dashboards in Power BI and SQL.\"}], \"education\": [{\"degree\": \"Engineering degree\", \"field\": \"Computer Science\", \"institution\": \"ESPRIT\", \"end\": \"2021\", \"evidence\": \"Engineering degree in Computer Science, ESPRIT, 2021\"}], \"experience\": [{\"title\": \"Data Scientist\", \"company\": \"Vermeg\", \"start\": \"2021\", \"end\": \"2024\", \"evidence\": \"Data Scientist, Vermeg — Tunis    2021 - 2024\\n- Built churn models (XGBoost, scikit-learn) for 2 million clients.\\n- Deployed models with Docker and FastAPI.\"}, {\"title\": \"Data Analyst Intern\", \"company\": \"Sofrecom\", \"start\": \"2020\", \"end\": \"2021\", \"evidence\": \"Data Analyst Intern, Sofrecom    2020 - 2021\\n- Dashboards in Power BI and SQL.\"}]}",
+  "latency_s": 48.16,
+  "prompt_tokens": 1363,
+  "completion_tokens": 430,
+  "mode": "chat",
+  "finish_reason": "stop"
+ }
+]

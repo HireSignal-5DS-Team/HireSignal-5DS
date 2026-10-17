@@ -1,0 +1,46 @@
+{
+ "schema_version": "0.1.0",
+ "candidate_id": "p10_fr_header_and_refs",
+ "skills": [
+  {
+   "name": "Cisco",
+   "evidence": "Administration Cisco et Fortinet, 300 sites."
+  },
+  {
+   "name": "Fortinet",
+   "evidence": "Administration Cisco et Fortinet, 300 sites."
+  },
+  {
+   "name": "Ansible",
+   "evidence": "Automatisation avec Ansible et Python."
+  },
+  {
+   "name": "Python",
+   "evidence": "Automatisation avec Ansible et Python."
+  },
+  {
+   "name": "cloud networking",
+   "evidence": "Ingénieur réseaux à la recherche d'un poste en cloud networking."
+  }
+ ],
+ "education": [
+  {
+   "degree": "Ingénieur",
+   "field": "Réseaux et Télécommunications",
+   "institution": "ENIT",
+   "end": "2018",
+   "evidence": "Ingénieur en Réseaux et Télécommunications, ENIT, 2018"
+  }
+ ],
+ "experience": [
+  {
+   "title": "Ingénieur Réseaux",
+   "company": "Ooredoo Tunisie",
+   "start": "2018",
+   "end": "2024",
+   "evidence": "Ingénieur Réseaux — Ooredoo Tunisie (2018 – 2024)"
+  }
+ ],
+ "uncertain": [],
+ "prompt_version": "profile-q1"
+}

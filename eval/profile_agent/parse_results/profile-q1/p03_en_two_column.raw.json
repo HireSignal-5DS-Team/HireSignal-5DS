@@ -1,0 +1,11 @@
+[
+ {
+  "input": "Section: EXPERIENCE\nML Engineer, InstaDeep                2022 - present\n- Trained transformer models in PyTorch on GPU clusters.\n- Wrote data pipelines with Spark.\nResearch Intern, Inria                2021 - 2022\n- Computer vision with OpenCV.\n\nSection: EDUCATION\nMSc in Artificial Intelligence, Université Paris-Saclay, 2022\nBSc in Mathematics, Faculty of Sciences of Tunis, 2020\n\nSection: SKILLS\nPyTorch, Spark, OpenCV, Python, C++",
+  "answer": "{\"skills\": [{\"name\": \"PyTorch\", \"evidence\": \"Trained transformer models in PyTorch on GPU clusters.\"}, {\"name\": \"Spark\", \"evidence\": \"Wrote data pipelines with Spark.\"}, {\"name\": \"OpenCV\", \"evidence\": \"Computer vision with OpenCV.\"}, {\"name\": \"Python\", \"evidence\": \"PyTorch, Spark, OpenCV, Python, C++\"}, {\"name\": \"C++\", \"evidence\": \"PyTorch, Spark, OpenCV, Python, C++\"}], \"education\": [{\"degree\": \"MSc\", \"field\": \"Artificial Intelligence\", \"institution\": \"Université Paris-Saclay\", \"end\": \"2022\", \"evidence\": \"MSc in Artificial Intelligence, Université Paris-Saclay, 2022\"}, {\"degree\": \"BSc\", \"field\": \"Mathematics\", \"institution\": \"Faculty of Sciences of Tunis\", \"end\": \"2020\", \"evidence\": \"BSc in Mathematics, Faculty of Sciences of Tunis, 2020\"}], \"experience\": [{\"title\": \"ML Engineer\", \"company\": \"InstaDeep\", \"start\": \"2022\", \"end\": \"present\", \"evidence\": \"ML Engineer, InstaDeep                2022 - present\"}, {\"title\": \"Research Intern\", \"company\": \"Inria\", \"start\": \"2021\", \"end\": \"2022\", \"evidence\": \"Research Intern, Inria                2021 - 2022\"}]}",
+  "latency_s": 27.52,
+  "prompt_tokens": 1333,
+  "completion_tokens": 347,
+  "mode": "chat",
+  "finish_reason": "stop"
+ }
+]
