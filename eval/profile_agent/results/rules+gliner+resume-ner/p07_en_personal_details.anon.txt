@@ -1,0 +1,21 @@
+[NAME]
+Full Stack Developer
+[EMAIL] | [EMAIL] | [PHONE]
+
+PERSONAL DETAILS
+Age: [PERSONAL]
+Gender: [PERSONAL]
+Nationality: [PERSONAL]
+Marital Status: [PERSONAL]
+Address: [ADDRESS]
+
+EXPERIENCE
+Full Stack Developer, Capgemini Morocco, 2016 - 2024
+- Node.js and Vue.js applications for insurance clients.
+- REST APIs with Express and MongoDB; ASP.NET maintenance.
+
+EDUCATION
+Engineering degree, ENSIAS, 2016
+
+SKILLS
+Node.js, Vue.js, Express, MongoDB, ASP.NET, Socket.io

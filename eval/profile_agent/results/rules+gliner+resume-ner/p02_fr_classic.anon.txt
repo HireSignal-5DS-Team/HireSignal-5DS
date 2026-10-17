@@ -1,0 +1,22 @@
+[NAME]
+Ingénieure DevOps
+Adresse : [ADDRESS]
+Tél : [PHONE] | E-mail : [EMAIL]
+Née le [PERSONAL] | Nationalité : [ADDRESS] | Situation familiale : [PERSONAL]
+
+PROFIL
+Ingénieure DevOps avec 4 ans d'expérience en CI/CD et Kubernetes.
+
+EXPÉRIENCE PROFESSIONNELLE
+Ingénieure DevOps — Telnet, Tu[ADDRESS] (2020 – 2024)
+- Mise en place de pipelines GitLab CI et de clusters Kubernetes.
+- Supervision avec Prometheus et Grafana.
+
+FORMATION
+Diplôme d'ingénieur en Génie Logiciel, INSAT, 2020
+
+COMPÉTENCES
+Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux
+
+LANGUES
+Arabe, Français, Anglais (B2)

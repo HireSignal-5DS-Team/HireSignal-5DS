@@ -1,0 +1,20 @@
+[NAME]
+
+Prénom : [NAME]
+Nom : [NAME]
+Date de naissance : [PERSONAL]
+Lieu de naissance : [ADDRESS]
+Sexe : [PERSONAL]
+Téléphone : [PHONE]
+Email : [EMAIL]
+
+EXPÉRIENCE
+Développeur Java — Sopra HR Software (2019 – 2023)
+- Développement de microservices Spring Boot.
+- Base de données Oracle et PostgreSQL.
+
+FORMATION
+Licence en Informatique de Gestion, ISG [ADDRESS], 2018
+
+COMPÉTENCES
+Java, Spring Boot, Oracle, PostgreSQL, Angular
