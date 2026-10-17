@@ -10,8 +10,7 @@ Reader text → **two files**, kept apart on purpose:
 It replaces the team's `cv_from_reader` adapter, which sent the CV **with** the name to the Matcher.
 `cv_id` is random (`cv-1a2b3c4d`): the file name often holds the person's name, so it is never used.
 
-> Status: steps 1-3 (privacy) done and tested on the laptop. Step 4 (skills / education /
-> experience with the shared plain Qwen) built and tested with fake models; first real run pending.
+> Status: steps 1-4 done and run on the laptop (privacy: 0 leaks; reading: F1 0.90 / 0.96 / 1.00).
 
 ## How it works
 
@@ -86,6 +85,18 @@ from the agent's own leak check, so the agent does not grade itself.
 On this set the models add nothing (the rules already catch everything), so they stay optional
 (`--ner`). The first model run hid every "s" of a French CV (word pieces taken as places); the
 guards added since are tested with that real output.
+
+**Step 4** (`profile-q1`, Qwen3-4B Q4_K_M on the GTX 1650, 26 s per CV):
+
+| | Precision | Recall | F1 |
+|---|---|---|---|
+| Skills | 1.00 | 0.81 | 0.90 |
+| Experience | 1.00 | 0.92 | 0.96 |
+| Education | 1.00 | 1.00 | 1.00 |
+
+No invented item; dates, titles, degrees all right on the items found. Misses: skills written only in
+job bullets, brackets or certifications, and 2 items quoted with the wrong line (error analysis in
+`prompts/PROMPT_LIBRARY.md`).
 
 Limits: 10 CVs written by us (a second, unseen set is needed for the final report); gendered words in
 running text ("Ingénieure", "she") are not hidden; a company sharing the candidate's surname is hidden too.

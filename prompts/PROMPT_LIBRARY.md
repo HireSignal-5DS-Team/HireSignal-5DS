@@ -6,7 +6,7 @@ the failures observed, and the fix. Code is the source of truth; this file expla
 | Prompt | Agent | Model | Current | Code |
 |---|---|---|---|---|
 | Job requirements extraction | Job Agent | Qwen3-4B-Instruct-2507 (the team's, plain) | `job-q1` (since 2026-10-17: best on all three scores vs job-v4 in the same run; NuExtract versions job-v1…v4 kept) | [`agents/job/prompts.py`](../agents/job/prompts.py) |
-| CV reading (skills / education / experience) | Profile Agent, step 4 | Qwen3-4B-Instruct-2507 (the team's, plain) | `profile-q1` (first version, not yet run on the laptop) | [`agents/profile/prompts.py`](../agents/profile/prompts.py) |
+| CV reading (skills / education / experience) | Profile Agent, step 4 | Qwen3-4B-Instruct-2507 (the team's, plain) | `profile-q1` (since 2026-10-17: skills F1 0.90, experience 0.96, education 1.00, no wrong item; kept as final) | [`agents/profile/prompts.py`](../agents/profile/prompts.py) |
 
 ---
 
@@ -519,4 +519,27 @@ A perfect fake model scores 1.0 everywhere, so the checks never drop a correct a
 
     python scripts/eval_profile_parse.py --llm-url http://127.0.0.1:11434/v1
 
-Results: _to be filled after the first laptop run._
+**Run 1 (2026-10-17, laptop GTX 1650, Ollama `unsloth/Qwen3-4B-Instruct-2507` Q4_K_M, 10 CVs).**
+One call per CV (the CVs fit in one part), 26 s per CV, 260-420 tokens per answer, no answer cut off.
+
+| | Precision | Recall | F1 |
+|---|---|---|---|
+| Skills (69 in gold) | 1.00 | 0.81 | **0.90** |
+| Experience (13 jobs) | 1.00 | 0.92 | **0.96** |
+| Education (11 degrees) | 1.00 | 1.00 | **1.00** |
+
+Field accuracy on the items found: title, start, end, degree, field, end year: **1.00** each.
+No item was invented: every error is a missed item.
+
+**Error analysis.**
+
+| # | Error | Cases | Example | Where it is fixed |
+|---|---|---|---|---|
+| E1 | right values, wrong quote: the check drops a correct item | 2 | Wevioo internship quoted with the bullet *under* the job line; "Socket.io" quoted with the Node.js line | not fixed (possible code repair: re-anchor the quote on the line that contains the values) |
+| E2 | skills outside the Skills list not given | 11 | "Supervision avec Prometheus et Grafana", "AWS (S3, Glue, Redshift)", CEH / CCNA in Certifications, "en Next.js" in Projects | not fixed (possible profile-q2: rule "read every line" + an example with certifications and a list in brackets) |
+
+**Decision.** profile-q1 is kept as the final version: its answers are always right (precision 1.00
+everywhere) and the misses are skills that the Matcher still finds, because it reads the CV `text`
+itself (`structured.profile` is never its evidence). E1 and E2 are reported as known limits.
+
+Results: `eval/profile_agent/parse_results/profile-q1/`.
