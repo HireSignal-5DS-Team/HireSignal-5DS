@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-886071700",
+  "title": "Large Business & International (LB&I)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "One year of experience refers to full-time work; part-timework is considered on a prorated basis.",
+      "evidence": "You must meet the following requirements by the closing date of this announcement.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S. Department of Education.",
+      "evidence": "For a list of schools which meet these criteria, please refer to Department of Education Accreditation page .",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Education completed in foreign colleges or universities may be used to meet the requirements.",
+      "evidence": "You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'A college or university degree generally must be f': quote repaired (fuzzy 1.00)"
+  ]
+}

@@ -1,0 +1,31 @@
+### call 1 - input starts: 'MINIMUM QUALICATIONS: To be considered minimally qualified for this position, yo'
+{"requirements": [{"evidence": "To be considered minimally qualified for this position, you must show that you have the required IT-related experience for the grade level to which your are applying: GS-14, Required Competencies: Attention to Detail - Is thorough when performing work and conscientious about attending to detail.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "To be considered minimally qualified for this position, you must show that you have the required IT-related experience for the grade level to which your are applying: GS-14, Required Competencies: Attention to Detail - Is thorough when performing work and conscientious about attending to detail"}]}
+
+### call 2 - input starts: 'Customer Service - Works with clients and customers (that is, any individuals wh'
+{"requirements": []}
+
+### call 3 - input starts: 'Decision Making - Makes sound, well-informed, and objective decisions; perceives'
+{"requirements": []}
+
+### call 4 - input starts: 'Interpersonal Skills - Shows understanding, friendliness, courtesy, tact, empath'
+{"requirements": []}
+
+### call 5 - input starts: 'Problem Solving - Identifies problems; determines accuracy and relevance of info'
+{"requirements": []}
+
+### call 6 - input starts: 'Technical Competence - Uses knowledge that is acquired through formal training o'
+{"requirements": [{"evidence": "Uses knowledge that is acquired through formal training or on-the-job experience to perform one's job; works with, understands, and evaluates technical information related to the job; advises others on technical issues.", "skill_terms": [], "kind": "must", "category": "other", "min_years": null, "text": "Uses knowledge that is acquired through formal training or on-the-job experience to perform one's job; works with, understands, and evaluates technical information related to the job; advises others on technical issues"}, {"evidence": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions;", "skill_terms": ["cloud", "AI", "technical standards", "reference architectures", "cloud-hosted AI solutions"], "kind": "must", "category": "experience", "min_years": 1, "text": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions"}]}
+
+### call 7 - input starts: 'AND 2. designing and implementing end-to-end AI platforms that incorporate secur'
+{"requirements": [{"evidence": "designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads", "skill_terms": ["secure data pipelines", "APIs", "model development", "inference environments", "containerized workloads"], "kind": "must", "category": "skill", "min_years": null, "text": "Designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads"}, {"evidence": "planning and executing pilots or proofs-of-concept to evaluate emerging cloud and AI technologies, and advising leadership on whether to adopt, refine, or discontinue those solutions based on mission impact, security, and implementation risk", "skill_terms": ["pilots or proofs-of-concept", "evaluating emerging cloud and AI technologies", "advising leadership", "mission impact", "security", "implementation risk"], "kind": "must", "category": "skill", "min_years": null, "text": "Planning and executing pilots or proofs-of-concept to evaluate emerging cloud and AI technologies, and advising leadership on whether to adopt, refine, or discontinue those solutions based on mission impact, security, and implementation risk"}]}
+
+### call 8 - input starts: 'AND 4. routinely explaining complex technical issues, risks, and tradeoffs to bo'
+{"requirements": [{"evidence": "AND 4. routinely explaining complex technical issues, risks, and tradeoffs to both technical and non-technical stakeholders in ways that build consensus and secure acceptance of recommended technical approaches, priorities, and standards within a federal IT and AI policy and governance context.", "skill_terms": [], "kind": "must", "category": "other", "min_years": null, "text": "Routinely explaining complex technical issues, risks, and tradeoffs to both technical and non-technical stakeholders in ways that build consensus and secure acceptance of recommended technical approaches, priorities, and standards within a federal IT and AI policy and governance context"}, {"evidence": "These qualifications must be clearly referenced in your resume.", "skill_terms": [], "kind": "must", "category": "other", "min_years": null, "text": "These qualifications must be clearly referenced in your resume"}, {"evidence": "If you are a current career or career-conditional federal employee applying for promotion under Merit Promotion you must have completed a minimum of 52 weeks in positions at the next level lower than the position being filled.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": 1, "text": "Completed a minimum of 52 weeks in positions at the next level lower than the position being filled"}]}
+
+### call 9 - input starts: 'There is no education substitution for this grade level.'
+{"requirements": []}
+
+### call 10 - input starts: 'Summary This position is located in the Small Business Administration, Office of'
+{
+    "job_title": "IT Specialist (Senior Cloud AI Engineer)"
+}

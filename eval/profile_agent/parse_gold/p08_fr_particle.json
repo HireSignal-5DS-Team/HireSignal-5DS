@@ -1,0 +1,57 @@
+{
+ "cv": "p08_fr_particle",
+ "skills": [
+  [
+   "Airflow"
+  ],
+  [
+   "dbt"
+  ],
+  [
+   "Snowflake"
+  ],
+  [
+   "AWS",
+   "Amazon Web Services"
+  ],
+  [
+   "Python"
+  ],
+  [
+   "SQL"
+  ],
+  [
+   "S3"
+  ],
+  [
+   "Glue"
+  ],
+  [
+   "Redshift"
+  ],
+  [
+   "Next.js"
+  ]
+ ],
+ "skills_optional": [
+  "cloud",
+  "API",
+  "Pipelines Airflow"
+ ],
+ "education": [
+  {
+   "degree": "Diplôme d'ingénieur",
+   "field": "Data Science",
+   "institution": "ESPRIT",
+   "end": "2022"
+  }
+ ],
+ "experience": [
+  {
+   "title": "Data Engineer",
+   "company": "Talan Tunisie",
+   "start": "2022",
+   "end": "2024"
+  }
+ ]
+}

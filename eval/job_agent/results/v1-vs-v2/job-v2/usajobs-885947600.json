@@ -1,0 +1,153 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-885947600",
+  "title": "IT Specialist (Data Science)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "U.S. Citizenship requirement or proof of being a U.S. National must be met by closing date.",
+      "evidence": "U.S. Citizenship requirement or proof of being a U.S. National must be met by closing date.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Employment is subject to the successful completion of a background investigation, verification of qualifications, completion of onboarding forms, submission of required documents, and any other job-related requirement before or after appointment.",
+      "evidence": "Employment is subject to the successful completion of a background investigation, verification of qualifications, completion of onboarding forms, submission of required documents, and any other job-related requirement before or after appointment.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Applicants must meet all qualifications requirements within thirty (30) calendar days of the closing date of this announcement, including time in grade.",
+      "evidence": "Applicants must meet all qualifications requirements within thirty (30) calendar days of the closing date of this announcement, including time in grade.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Males born after December 31, 1959 must be registered with the Selective Service.",
+      "evidence": "Males born after December 31, 1959 must be registered with the Selective Service.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "The National Institutes of Health participates in the USCIS Electronic Employment Eligibility Verification Program (E-Verify).",
+      "evidence": "The National Institutes of Health participates in the USCIS Electronic Employment Eligibility Verification Program (E-Verify).",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "The NIH maintains a tobacco free work environment and campus.",
+      "evidence": "The NIH maintains a tobacco free work environment and campus.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Must be able to perform the essential duties of the position, with or without reasonable accommodation.",
+      "evidence": "Must be able to perform the essential duties of the position, with or without reasonable accommodation.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Based on your appointment, a one or two-year trial/probationary period may be required.",
+      "evidence": "Based on your appointment, a one or two-year trial/probationary period may be required.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "A decision regarding your continued employment with NIH will be made as you near the end of this period.",
+      "evidence": "A decision regarding your continued employment with NIH will be made as you near the end of this period.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Inflated or unsupported qualifications may affect your rating.",
+      "evidence": "Inflated or unsupported qualifications may affect your rating.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Any misrepresentation or material omission of facts may be sufficient cause to end further consideration of your candidacy.",
+      "evidence": "Any misrepresentation or material omission of facts may be sufficient cause to end further consideration of your candidacy.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "Persons listed as knowing your past accomplishments or experience in your application may be contacted for verification purposes at any time.",
+      "evidence": "Persons listed as knowing your past accomplishments or experience in your application may be contacted for verification purposes at any time.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "Verification may, but need not, begin before receiving an offer.",
+      "evidence": "Verification may, but need not, begin before receiving an offer.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "Preview application questionnaire before you apply: https://apply.usastaffing.gov/ViewQuestionnaire/13062893",
+      "evidence": "Preview application questionnaire before you apply: https://apply.usastaffing.gov/ViewQuestionnaire/13062893",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'Applicants must meet all qualifications requiremen': min_years 30.0 removed (no years in the quote)"
+  ]
+}

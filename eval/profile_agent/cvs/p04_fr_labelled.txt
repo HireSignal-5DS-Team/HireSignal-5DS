@@ -1,0 +1,20 @@
+CURRICULUM VITAE
+
+Prénom : Mohamed Ali
+Nom : Ben Salah
+Date de naissance : 21/09/1995
+Lieu de naissance : Sousse
+Sexe : Masculin
+Téléphone : +216 55 111 222
+Email : medali.bensalah@gmail.com
+
+EXPÉRIENCE
+Développeur Java — Sopra HR Software (2019 – 2023)
+- Développement de microservices Spring Boot.
+- Base de données Oracle et PostgreSQL.
+
+FORMATION
+Licence en Informatique de Gestion, ISG Sousse, 2018
+
+COMPÉTENCES
+Java, Spring Boot, Oracle, PostgreSQL, Angular

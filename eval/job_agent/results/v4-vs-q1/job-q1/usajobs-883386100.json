@@ -1,0 +1,171 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883386100",
+  "title": "Data Scientist",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "One year of directly related specialized experience equivalent to the GS-11 level: Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects",
+      "evidence": "To qualify for GS-12, you must have: a) One year of directly related specialized experience equivalent to the GS-11 level: Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Assisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues",
+      "evidence": "Assisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Writing, testing, and documenting code for data analysis or modeling and producing basic visualizations",
+      "evidence": "Writing, testing, and documenting code for data analysis or modeling and producing basic visualizations.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+      "evidence": "OR b) Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "One year of directly related specialized experience equivalent to the GS-12 level: Preparing, transforming, and integrating datasets from multiple sources and maintaining reproducible documentation",
+      "evidence": "To qualify for GS-13, you must have one year of directly related specialized experience equivalent to the GS-12 level: Preparing, transforming, and integrating datasets from multiple sources and maintaining reproducible documentation.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Designing and operating data and machine learning pipelines",
+      "evidence": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "data and machine learning pipelines"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Designing and operating data quality checks",
+      "evidence": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "data quality checks"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Designing and operating lineage tracking",
+      "evidence": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "lineage tracking"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Conducting model validation to diverse audiences",
+      "evidence": "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "model validation"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Conducting testing to diverse audiences",
+      "evidence": "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "testing"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Conducting performance evaluation to diverse audiences",
+      "evidence": "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "performance evaluation"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "Conducting presenting results to diverse audiences",
+      "evidence": "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "presenting results"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position",
+      "evidence": "You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience",
+      "evidence": "OR Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'U.S. degrees must have been awarded from colleges ': not a requirement (application instructions), dropped",
+    "'You must have successfully completed a full 4-year': min_years 4.0 removed (no years in the quote)",
+    "'You must have successfully completed a full 4-year': duplicate, dropped",
+    "'Have a combination of education and experience equ': duplicate, dropped",
+    "'U.S. degrees must have been awarded from colleges ': not a requirement (application instructions), dropped"
+  ]
+}

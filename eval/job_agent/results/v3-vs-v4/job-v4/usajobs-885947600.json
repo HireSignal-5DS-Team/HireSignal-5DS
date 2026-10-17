@@ -1,0 +1,232 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-885947600",
+  "title": "IT Specialist (Data Science)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Attention to Detail - is thorough when performing work and conscientious about attending to detail; and 2.",
+      "evidence": "IT related experience demonstrated by paid or unpaid experience obtained in either the private or public sector, and/or completion of specific, intensive training that demonstrates all of the following four competencies",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Works with clients",
+      "evidence": "Works with clients and customers",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "clients"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Works with customers",
+      "evidence": "Works with clients and customers",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "customers"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "1 year of specialized experience equivalent to at least the GS-11 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data",
+      "evidence": "1 year of specialized experience equivalent to at least the GS-11 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "IT field",
+        "performing IT related tasks",
+        "data"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues",
+      "evidence": "curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "data issues"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "identifying and resolving routine data performance and management issues",
+      "evidence": "identifying and resolving routine data performance and management issues",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "data performance"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "and analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements",
+      "evidence": "and analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "statistical software",
+        "programming languages"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making. (Federal service)",
+      "evidence": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "Federal service"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making. (GS-12)",
+      "evidence": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "GS-12"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making. (IT field)",
+      "evidence": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "IT field"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making. (data collection)",
+      "evidence": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "data collection"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making. (data quality)",
+      "evidence": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "data quality"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making. (data performance)",
+      "evidence": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "data performance"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making. (R)",
+      "evidence": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "R"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r15",
+      "text": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making. (Python)",
+      "evidence": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "Python"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r16",
+      "text": "Persons listed as knowing your past accomplishments or experience in your application may be contacted for verification purposes at any time.",
+      "evidence": "Persons listed as knowing your past accomplishments or experience in your application may be contacted for verification purposes at any time.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r17",
+      "text": "Verification may, but need not, begin before receiving an offer.",
+      "evidence": "Verification may, but need not, begin before receiving an offer.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r18",
+      "text": "Education This job does not have an education qualification requirement.",
+      "evidence": "Preview application questionnaire before you apply: https://apply.usastaffing.gov/ViewQuestionnaire/13062893 Education This job does not have an education qualification requirement.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'works with clients and customers': quote repaired (spacing)",
+    "'Oral Communication - Expresses information (for ex': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'1 year of specialized experience equivalent to at ': skill term 'data dissemination' not in the quote, removed",
+    "'1 year of specialized experience equivalent to at ': skill term 'data management' not in the quote, removed",
+    "'1 year of specialized experience equivalent to at ': skill term 'data analysis' not in the quote, removed",
+    "'1 year of specialized experience equivalent to at ': skill term 'data management' not in the quote, removed",
+    "'1 year of specialized experience equivalent to at ': skill term 'data dissemination' not in the quote, removed",
+    "'1 year of specialized experience equivalent to at ': skill term 'data analysis' not in the quote, removed",
+    "'This job does not have an education qualification ': quote empty in the job offer, dropped as invented (model quoted: \"\")"
+  ]
+}

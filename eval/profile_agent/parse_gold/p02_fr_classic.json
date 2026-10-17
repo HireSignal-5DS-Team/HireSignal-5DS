@@ -1,0 +1,63 @@
+{
+ "cv": "p02_fr_classic",
+ "skills": [
+  [
+   "CI/CD"
+  ],
+  [
+   "Kubernetes"
+  ],
+  [
+   "GitLab CI"
+  ],
+  [
+   "Prometheus"
+  ],
+  [
+   "Grafana"
+  ],
+  [
+   "Docker"
+  ],
+  [
+   "Terraform"
+  ],
+  [
+   "Ansible"
+  ],
+  [
+   "Linux"
+  ],
+  [
+   "Arabe"
+  ],
+  [
+   "Français"
+  ],
+  [
+   "Anglais"
+  ]
+ ],
+ "skills_optional": [
+  "DevOps",
+  "pipelines",
+  "clusters Kubernetes",
+  "Supervision"
+ ],
+ "education": [
+  {
+   "degree": "Diplôme d'ingénieur",
+   "field": "Génie Logiciel",
+   "institution": "INSAT",
+   "end": "2020"
+  }
+ ],
+ "experience": [
+  {
+   "title": "Ingénieure DevOps",
+   "company": "Telnet",
+   "start": "2020",
+   "end": "2024"
+  }
+ ]
+}

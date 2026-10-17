@@ -1,0 +1,18 @@
+[NAME]
+[EMAIL] | [PHONE]
+
+PROFESSIONAL SUMMARY
+Front-end developer focused on accessible React applications.
+
+WORK EXPERIENCE
+Front-end Developer, Shopify, 2019 - 2024
+- Built React and TypeScript components used by 1M merchants.
+- Improved Lighthouse accessibility score from 70 to 98.
+
+EDUCATION
+BSc Computer Science, University of Toronto, 2019
+
+SKILLS
+React, TypeScript, CSS, Jest, Figma
+
+[NAME] - references available on request

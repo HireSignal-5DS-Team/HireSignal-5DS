@@ -1,0 +1,92 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-884783000",
+  "title": "Summary",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Degree in Mathematics, statistics, computer science, data science or field directly related to the position, in a major field of study (at least at the baccalaureate level) that is appropriate for the position",
+      "evidence": "A) Degree: Mathematics, statistics, computer science, data science or field directly related to the position. The degree must be in a major field of study (at least at the baccalaureate level) that is appropriate for the position.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph A above, plus additional education or appropriate experience",
+      "evidence": "OR B) Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph A above, plus additional education or appropriate experience.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "At least 52 weeks of specialized experience at a level of difficulty and responsibility equivalent to the GS-11 in the federal service",
+      "evidence": "In addition to the basic requirements above, applicants must have at least 52 weeks of specialized experience at a level of difficulty and responsibility equivalent to the GS-11 in the federal service.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Experience maintaining machine learning, natural language processing, and/or artificial intelligence systems in production",
+      "evidence": "Experience for this position includes at least three of the following: Maintaining machine learning, natural language processing, and/or artificial intelligence systems in production;",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "machine learning",
+        "natural language processing",
+        "artificial intelligence"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Assisting in research and evaluation of state-of-the-art topics in data science, such as deep learning and large language models",
+      "evidence": "Assisting in research and evaluation of the state-of-the-art topics in data science, such as deep learning and large language models;",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "deep learning",
+        "large language models"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Using data engineering techniques to process large, complex datasets into structured formats for record matching, anomaly detection, data analysis, and/or estimation",
+      "evidence": "Using data engineering techniques to process large, complex datasets into structured formats for record matching, anomaly detection, data analysis, and/or estimation;",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "data engineering"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Writing high-quality, maintainable code for analytics and applications using the Python programming language",
+      "evidence": "Writing high-quality, maintainable code for analytics and applications using the Python programming language.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Python"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": []
+}

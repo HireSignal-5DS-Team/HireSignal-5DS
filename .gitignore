@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# upstream agents (feature/profile-agent)
+# HireSignal local data (never commit real CVs)
+samples/
+out/
+# Profile Agent identity files: personal data, never commit
+private/

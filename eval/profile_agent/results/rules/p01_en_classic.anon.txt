@@ -1,0 +1,23 @@
+[NAME] | Data Scientist
+[EMAIL] • [PHONE] • [URL] • [URL]
+[ADDRESS] | [PERSONAL] | Born on [PERSONAL] | [PERSONAL]
+
+SUMMARY
+Data scientist with 3 years of experience. [NAME] built ML pipelines in Python for banking clients.
+
+EXPERIENCE
+Data Scientist, Vermeg — Tunis    2021 - 2024
+- Built churn models (XGBoost, scikit-learn) for 2 million clients.
+- Deployed models with Docker and FastAPI.
+
+Data Analyst Intern, Sofrecom    2020 - 2021
+- Dashboards in Power BI and SQL.
+
+EDUCATION
+Engineering degree in Computer Science, ESPRIT, 2021
+
+SKILLS
+Python, SQL, XGBoost, scikit-learn, Docker, FastAPI, Power BI
+
+REFERENCES
+Dr. [NAME], ESPRIT, [EMAIL]

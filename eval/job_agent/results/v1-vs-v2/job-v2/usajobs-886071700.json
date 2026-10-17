@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-886071700",
+  "title": "Large Business & International (LB&I)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics.",
+      "evidence": "A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [
+        "mathematics",
+        "statistics"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "A combination of education and experience -- at least 24 semester hours of mathematics and statistics, including at least 12 hours in mathematics and 6 hours in statistics, as shown in A above, plus appropriate experience or additional education.",
+      "evidence": "A combination of education and experience -- at least 24 semester hours of mathematics and statistics, including at least 12 hours in mathematics and 6 hours in statistics, as shown in A above, plus appropriate experience or additional education.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [
+        "education",
+        "experience"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "One year (52 weeks) at the next lower grade level is required to meet the time-in-grade requirements for the grade you are applying for.",
+      "evidence": "One year (52 weeks) at the next lower grade level is required to meet the time-in-grade requirements for the grade you are applying for.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": true,
+  "warnings": [
+    "'A degree that included 24 semester hours of mathem': min_years 24.0 removed (no years in the quote)",
+    "'A combination of education and experience -- at le': min_years 24.0 removed (no years in the quote)",
+    "'One year of specialized experience at a level of d': quote not found (closest 0.63) in the job offer, dropped as invented (model quoted: \"One year of specialized experience at a level of difficulty and responsibility equivalent to the GS-\")",
+    "'Current civilian employees must have completed at ': quote not found (closest 0.75) in the job offer, dropped as invented (model quoted: \"Current civilian employees must have completed at least 90 days of federal civilian service since th\")",
+    "'One year (52 weeks) at the next lower grade level ': unknown category 'qualifications', set to 'other'",
+    "'One year (52 weeks) at the next lower grade level ': min_years 52.0 -> 1.0 (from the quote)",
+    "'One year (52 weeks) at the next lower grade level ': skill term 'time_in_grade' not in the quote, removed"
+  ]
+}

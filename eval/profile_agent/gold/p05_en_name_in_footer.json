@@ -1,0 +1,26 @@
+{
+  "cv": "p05_en_name_in_footer",
+  "language": "en",
+  "must_hide": [
+    {
+      "kind": "NAME",
+      "value": "Sarah Connolly"
+    },
+    {
+      "kind": "EMAIL",
+      "value": "sarah.connolly@outlook.com"
+    },
+    {
+      "kind": "PHONE",
+      "value": "(555) 123-4567"
+    }
+  ],
+  "other_people": [],
+  "must_keep": [
+    "Shopify, 2019 - 2024",
+    "TypeScript",
+    "from 70 to 98",
+    "University of Toronto, 2019",
+    "Jest"
+  ]
+}

@@ -1,0 +1,506 @@
+{
+  "meta": {
+    "date": "2026-10-17",
+    "offers": 10,
+    "gold_requirements": 104,
+    "model": "hf.co/numind/NuExtract-2.0-2B-GGUF:Q4_K_M",
+    "mode": "inline",
+    "repeat": 2,
+    "active_prompt": "job-v2"
+  },
+  "results": {
+    "job-v3": {
+      "sentences": {
+        "precision": 0.393,
+        "recall": 0.679,
+        "f1": 0.498,
+        "tp": 57,
+        "fp": 88,
+        "fn": 27,
+        "kind_accuracy": 0.86,
+        "category_accuracy": 0.807,
+        "years_accuracy": 0.965
+      },
+      "skills": {
+        "precision": 1.0,
+        "recall": 0.039,
+        "f1": 0.076,
+        "tp": 3,
+        "fp": 0,
+        "fn": 73
+      },
+      "strict": {
+        "precision": 0.135,
+        "recall": 0.192,
+        "f1": 0.159,
+        "tp": 20,
+        "fp": 128,
+        "fn": 84
+      },
+      "invented_dropped": 10,
+      "repairs": 10,
+      "needs_human_review": 0,
+      "failed_offers": 0,
+      "mean_latency_s": 34.0,
+      "stable_offers": "10/10",
+      "per_offer": {
+        "usajobs-883161100": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.476,
+          "skills_f1": 0.0,
+          "strict_f1": 0.2,
+          "missed_sentences": [
+            "Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis to research and improve supply chain risk assessment processes."
+          ],
+          "extra_sentences": [
+            "Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience.",
+            "OR Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience.",
+            "One year of specialized experience that equipped you with the particular competencies to successfully perform the duties of the position and is directly in or related to this position.",
+            "Applicants must meet eligibility requirements including time-in-grade (General Schedule (GS) positions only), time-after-competitive appointment, minimum qualifications, and any other regulatory requirements by the cut-off/closing date of the announcement.",
+            "transcripts",
+            "Licenses must be current at time of application.",
+            "One academic year of graduate education is considered to be the number of credits hours that your graduate school has determined to represent one academic year of full-time study.",
+            "Such study may have been performed on a full-time or part-time basis.",
+            "If you cannot obtain your graduate school's definition of one year of graduate study, 18 semester hours (or 27 quarter hours) should be considered as satisfying the requirement for one year of full-time graduate study.",
+            "education completed in foreign colleges or universities"
+          ]
+        },
+        "usajobs-883337000": {
+          "gold_sentences": 16,
+          "sentences_f1": 0.462,
+          "skills_f1": 0.0,
+          "strict_f1": 0.231,
+          "missed_sentences": [
+            "you must show that you have the required IT-related experience for the grade level to which your are applying",
+            "Decision Making",
+            "Information Management",
+            "Interpersonal Skills",
+            "Oral Communication",
+            "Problem Solving",
+            "Reasoning",
+            "Teamwork",
+            "Technical Competence",
+            "serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions"
+          ],
+          "extra_sentences": [
+            "Shows understanding, friendliness, courtesy, tact, empathy, concern, and politeness to others; develops and maintains effective relationships with others; may include effectively dealing with individuals who are difficult, hostile, or distressed; relates well to people from varied backgrounds and different situations",
+            "Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately.",
+            "These qualifications must be clearly referenced in your resume.",
+            "If you are a current career or career-conditional federal employee applying for promotion under Merit Promotion you must have completed a minimum of 52 weeks in positions at the next level lower than the position being filled."
+          ]
+        },
+        "usajobs-883386100": {
+          "gold_sentences": 5,
+          "sentences_f1": 0.222,
+          "skills_f1": 0.0,
+          "strict_f1": 0.105,
+          "missed_sentences": [
+            "Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects.",
+            "Assisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues.",
+            "Writing, testing, and documenting code for data analysis or modeling and producing basic visualizations."
+          ],
+          "extra_sentences": [
+            "Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+            "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+            "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+            "Your resume must include a clear and detailed narrative description, in your own words, of how you meet the required specialized experience.",
+            "Experience statements copied from a position description, vacancy announcement or other reference material constitutes plagiarism and may result in disqualification and losing consideration for the job.",
+            "Please visit https://www.nasa.gov/careers/how-to-apply/#Artificial-Intelligence to review NASA's guidance on the use of artificial intelligent (AI) or AI-assisted tools during the application process.",
+            "Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience.",
+            "U.S. degrees must have been awarded from colleges or universities that are accredited by recognized accrediting organizations.",
+            "education completed in foreign colleges or universities",
+            "All degrees must have been received in the year of, or any year subsequent to the original date of accreditation.",
+            "For a list of schools that meet this criteria, go to http://ope.ed.gov/accreditation/ ."
+          ]
+        },
+        "usajobs-883511200": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.414,
+          "skills_f1": 0.0,
+          "strict_f1": 0.194,
+          "missed_sentences": [],
+          "extra_sentences": [
+            "All academic degrees and coursework must be from accredited or pre-accredited institutions.",
+            "3 years of progressively higher-level graduate education leading to a Ph.D. degree",
+            "Ph.D. or equivalent doctoral degree",
+            "A combination of education and experience",
+            "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges.",
+            "Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional, philanthropic, religious, spiritual, community, student, social).",
+            "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment.",
+            "The qualification requirements in this vacancy announcement are based on the U.S.",
+            "Transcripts must be submitted to validate that the education requirement has been met.",
+            "An accredited organization must evaluate education completed outside of the U.S.",
+            "A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application.",
+            "Unofficial transcripts will be accepted in the application package.",
+            "an official copy will be required before a final offer of employment.",
+            "Use of foreign education for qualifications.",
+            "An accredited organization must evaluate education completed outside of the U.S. to ensure that it is comparable to education received in accredited institutions in the U.S.",
+            "Click here to view a listing of accredited organizations from the Department of Education's website.",
+            "A copy of the foreign education evaluation (containing the results with a course-by-course listing)"
+          ]
+        },
+        "usajobs-883699600": {
+          "gold_sentences": 18,
+          "sentences_f1": 0.973,
+          "skills_f1": 0.167,
+          "strict_f1": 0.125,
+          "missed_sentences": [],
+          "extra_sentences": [
+            "Continued employment is contingent upon satisfactorily completing a criminal history records check (or other applicable security clearance) and a pre-employment drug-test (pre-identified position only)."
+          ]
+        },
+        "usajobs-883827900": {
+          "gold_sentences": 3,
+          "sentences_f1": 0.25,
+          "skills_f1": 0.0,
+          "strict_f1": 0.125,
+          "missed_sentences": [
+            "you must have one full year of specialized experience at or equivalent to the GS-05 level."
+          ],
+          "extra_sentences": [
+            "Veterans unable to apply within two years of receiving their degree, due to military service obligations, have as much as six years after degree completion to apply.",
+            "You must meet the qualification (experience and/or education) and eligibility requirements by the closing date of this announcement.",
+            "Data Scientist For the GS-07",
+            "Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional; philanthropic; religious; spiritual; community, student, social).",
+            "transcripts",
+            "If more than 10 percent of your undergraduate course work (credit hours) were taken on a pass/fail basis, your claim of superior academic achievement must be based upon class standing or membership in an honor society.",
+            "One academic year of graduate education is the number of credits hours your graduate school has determined to represent one academic year of full-time study.",
+            "18 semester hours (or 27 quarter hours)",
+            "Failure to submit a copy of your transcripts at the time of application will result in your application being marked incomplete and you will not receive further consideration.",
+            "Such study may have been performed on a full-time or part-time basis.",
+            "If you cannot obtain your graduate school's definition of one year of graduate study, 18 semester hours (or 27 quarter hours) should be considered as satisfying the requirement for one year of full-time graduate study."
+          ]
+        },
+        "usajobs-884301900": {
+          "gold_sentences": 10,
+          "sentences_f1": 0.667,
+          "skills_f1": 0.0,
+          "strict_f1": 0.083,
+          "missed_sentences": [
+            "Customer Service",
+            "at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level"
+          ],
+          "extra_sentences": [
+            "Evidence of copying and pasting directly from the vacancy announcement without clearly documenting supplemental information to describe your experience will result in an ineligible rating.",
+            "This will prevent you from being considered further.",
+            "Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations;",
+            "knows about available products and services;",
+            "is committed to providing quality products and services;",
+            "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment."
+          ]
+        },
+        "usajobs-884783000": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.667,
+          "skills_f1": 0.0,
+          "strict_f1": 0.222,
+          "missed_sentences": [],
+          "extra_sentences": [
+            "B) Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph A above, plus additional education or appropriate experience.",
+            "Specialized experience is the experience that equipped the applicant with the particular knowledge, skills, and abilities (KSA's) to perform the duties of the position successfully, and that is typically in or related to the position to be filled.",
+            "specialized experience must have been equivalent to at least the next lower grade level.",
+            "Any applicant falsely claiming an academic degree from an accredited school will be subject to actions ranging from disqualification from federal employment to removal from federal service.",
+            "If your education was completed at a foreign college or university, you must show comparability to education received in accredited educational institutions in the United States and comparability to applicable minimum course work requirements for this position.",
+            "Click Evaluation of Foreign Education for more information."
+          ]
+        },
+        "usajobs-885947600": {
+          "gold_sentences": 12,
+          "sentences_f1": 0.211,
+          "skills_f1": 0.0,
+          "strict_f1": 0.105,
+          "missed_sentences": [
+            "Attention to Detail",
+            "Customer Service",
+            "Oral Communication",
+            "Problem Solving",
+            "you must have 1 year of specialized experience equivalent to at least the GS-11 level in the Federal service",
+            "collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data",
+            "curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues",
+            "preparing or supporting the dissemination of data",
+            "identifying and resolving routine data performance and management issues",
+            "storing and managing high-quality data from diverse sources for use by decision makers"
+          ],
+          "extra_sentences": [
+            "Works with clients and customers",
+            "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+            "Persons listed as knowing your past accomplishments or experience in your application may be contacted for verification purposes at any time.",
+            "Verification may, but need not, begin before receiving an offer.",
+            "Preview application questionnaire before you apply: https://apply.usastaffing.gov/ViewQuestionnaire/13062893 Education This job does not have an education qualification requirement."
+          ]
+        },
+        "usajobs-886071700": {
+          "gold_sentences": 2,
+          "sentences_f1": 0.19,
+          "skills_f1": 0.0,
+          "strict_f1": 0.19,
+          "missed_sentences": [],
+          "extra_sentences": [
+            "A combination of education and experience",
+            "Courses acceptable toward meeting the mathematics course requirement of paragraphs A or B above must have included at least four of the following: differential calculus, integral calculus, advanced calculus, theory of equations, vector analysis, advanced algebra, linear algebra, mathematical logic, differential equations, or any other advanced course in mathematics for which one of these was a prerequisite.",
+            "Courses in mathematical statistics or probability theory with a prerequisite of elementary calculus or more advanced courses",
+            "applying known statistical techniques to data",
+            "work required in the processing of numerical or quantified information by other than statistical methods",
+            "Examples of such nonqualifying work include statistical clerical work; statistical drafting; calculation of totals, averages, percentages, or other arithmetic summations; preparation of simple tables or charts; or verification of data by simple comparison or proofreading.",
+            "For positions above the GS-05,applicants must meet applicable time-in-\u00adgrade requirements to be considered eligible.",
+            "One year (52 weeks) at the next lower grade level is required to meet the time-in-grade requirements for the grade you are applying for.",
+            "For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks.",
+            "There is no TIG restriction for GS-02, 03, or 04 positions.",
+            "For more information on qualifications please refer to OPM's Qualifications Standards .",
+            "Education completed in foreign colleges or universities may be used to meet the requirements.",
+            "You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.",
+            "It is your responsibility to provide such evidence when applying.",
+            "Click here (Section 3, Explanation of Terms) or here for Foreign Education Credentialing instructions.",
+            "We recommend choosing an evaluator from a member organization of one of the following national associations of credential evaluation services: National Association of Credential Evaluation Services (NACES) or Association of International Credentials Evaluators (AICE) .",
+            "education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program."
+          ]
+        }
+      }
+    },
+    "job-v4": {
+      "sentences": {
+        "precision": 0.405,
+        "recall": 0.714,
+        "f1": 0.517,
+        "tp": 60,
+        "fp": 88,
+        "fn": 24,
+        "kind_accuracy": 0.817,
+        "category_accuracy": 0.817,
+        "years_accuracy": 0.967
+      },
+      "skills": {
+        "precision": 0.404,
+        "recall": 0.776,
+        "f1": 0.532,
+        "tp": 59,
+        "fp": 87,
+        "fn": 17
+      },
+      "strict": {
+        "precision": 0.314,
+        "recall": 0.587,
+        "f1": 0.409,
+        "tp": 61,
+        "fp": 133,
+        "fn": 43
+      },
+      "invented_dropped": 10,
+      "repairs": 10,
+      "needs_human_review": 0,
+      "failed_offers": 0,
+      "mean_latency_s": 40.2,
+      "stable_offers": "10/10",
+      "per_offer": {
+        "usajobs-883161100": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.476,
+          "skills_f1": 0.667,
+          "strict_f1": 0.258,
+          "missed_sentences": [
+            "Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis to research and improve supply chain risk assessment processes."
+          ],
+          "extra_sentences": [
+            "Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience.",
+            "OR Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience.",
+            "One year of specialized experience that equipped you with the particular competencies to successfully perform the duties of the position and is directly in or related to this position.",
+            "Applicants must meet eligibility requirements including time-in-grade (General Schedule (GS) positions only), time-after-competitive appointment, minimum qualifications, and any other regulatory requirements by the cut-off/closing date of the announcement.",
+            "transcripts",
+            "Licenses must be current at time of application.",
+            "One academic year of graduate education is considered to be the number of credits hours that your graduate school has determined to represent one academic year of full-time study.",
+            "Such study may have been performed on a full-time or part-time basis.",
+            "If you cannot obtain your graduate school's definition of one year of graduate study, 18 semester hours (or 27 quarter hours) should be considered as satisfying the requirement for one year of full-time graduate study.",
+            "education completed in foreign colleges or universities"
+          ]
+        },
+        "usajobs-883337000": {
+          "gold_sentences": 16,
+          "sentences_f1": 0.462,
+          "skills_f1": 0.167,
+          "strict_f1": 0.25,
+          "missed_sentences": [
+            "you must show that you have the required IT-related experience for the grade level to which your are applying",
+            "Decision Making",
+            "Information Management",
+            "Interpersonal Skills",
+            "Oral Communication",
+            "Problem Solving",
+            "Reasoning",
+            "Teamwork",
+            "Technical Competence",
+            "serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions"
+          ],
+          "extra_sentences": [
+            "Shows understanding, friendliness, courtesy, tact, empathy, concern, and politeness to others; develops and maintains effective relationships with others; may include effectively dealing with individuals who are difficult, hostile, or distressed; relates well to people from varied backgrounds and different situations",
+            "Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately.",
+            "These qualifications must be clearly referenced in your resume.",
+            "If you are a current career or career-conditional federal employee applying for promotion under Merit Promotion you must have completed a minimum of 52 weeks in positions at the next level lower than the position being filled."
+          ]
+        },
+        "usajobs-883386100": {
+          "gold_sentences": 5,
+          "sentences_f1": 0.222,
+          "skills_f1": 0.0,
+          "strict_f1": 0.087,
+          "missed_sentences": [
+            "Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects.",
+            "Assisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues.",
+            "Writing, testing, and documenting code for data analysis or modeling and producing basic visualizations."
+          ],
+          "extra_sentences": [
+            "Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+            "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+            "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+            "Your resume must include a clear and detailed narrative description, in your own words, of how you meet the required specialized experience.",
+            "Experience statements copied from a position description, vacancy announcement or other reference material constitutes plagiarism and may result in disqualification and losing consideration for the job.",
+            "Please visit https://www.nasa.gov/careers/how-to-apply/#Artificial-Intelligence to review NASA's guidance on the use of artificial intelligent (AI) or AI-assisted tools during the application process.",
+            "Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience.",
+            "U.S. degrees must have been awarded from colleges or universities that are accredited by recognized accrediting organizations.",
+            "education completed in foreign colleges or universities",
+            "All degrees must have been received in the year of, or any year subsequent to the original date of accreditation.",
+            "For a list of schools that meet this criteria, go to http://ope.ed.gov/accreditation/ ."
+          ]
+        },
+        "usajobs-883511200": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.414,
+          "skills_f1": 0.706,
+          "strict_f1": 0.485,
+          "missed_sentences": [],
+          "extra_sentences": [
+            "All academic degrees and coursework must be from accredited or pre-accredited institutions.",
+            "3 years of progressively higher-level graduate education leading to a Ph.D. degree",
+            "Ph.D. or equivalent doctoral degree",
+            "A combination of education and experience",
+            "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges.",
+            "Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional, philanthropic, religious, spiritual, community, student, social).",
+            "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment.",
+            "The qualification requirements in this vacancy announcement are based on the U.S.",
+            "Transcripts must be submitted to validate that the education requirement has been met.",
+            "An accredited organization must evaluate education completed outside of the U.S.",
+            "A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application.",
+            "Unofficial transcripts will be accepted in the application package.",
+            "an official copy will be required before a final offer of employment.",
+            "Use of foreign education for qualifications.",
+            "An accredited organization must evaluate education completed outside of the U.S. to ensure that it is comparable to education received in accredited institutions in the U.S.",
+            "Click here to view a listing of accredited organizations from the Department of Education's website.",
+            "A copy of the foreign education evaluation (containing the results with a course-by-course listing)"
+          ]
+        },
+        "usajobs-883699600": {
+          "gold_sentences": 18,
+          "sentences_f1": 0.973,
+          "skills_f1": 0.622,
+          "strict_f1": 0.746,
+          "missed_sentences": [],
+          "extra_sentences": [
+            "Continued employment is contingent upon satisfactorily completing a criminal history records check (or other applicable security clearance) and a pre-employment drug-test (pre-identified position only)."
+          ]
+        },
+        "usajobs-883827900": {
+          "gold_sentences": 3,
+          "sentences_f1": 0.25,
+          "skills_f1": 1.0,
+          "strict_f1": 0.25,
+          "missed_sentences": [
+            "you must have one full year of specialized experience at or equivalent to the GS-05 level."
+          ],
+          "extra_sentences": [
+            "Veterans unable to apply within two years of receiving their degree, due to military service obligations, have as much as six years after degree completion to apply.",
+            "You must meet the qualification (experience and/or education) and eligibility requirements by the closing date of this announcement.",
+            "Data Scientist For the GS-07",
+            "Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional; philanthropic; religious; spiritual; community, student, social).",
+            "transcripts",
+            "If more than 10 percent of your undergraduate course work (credit hours) were taken on a pass/fail basis, your claim of superior academic achievement must be based upon class standing or membership in an honor society.",
+            "One academic year of graduate education is the number of credits hours your graduate school has determined to represent one academic year of full-time study.",
+            "18 semester hours (or 27 quarter hours)",
+            "Failure to submit a copy of your transcripts at the time of application will result in your application being marked incomplete and you will not receive further consideration.",
+            "Such study may have been performed on a full-time or part-time basis.",
+            "If you cannot obtain your graduate school's definition of one year of graduate study, 18 semester hours (or 27 quarter hours) should be considered as satisfying the requirement for one year of full-time graduate study."
+          ]
+        },
+        "usajobs-884301900": {
+          "gold_sentences": 10,
+          "sentences_f1": 0.667,
+          "skills_f1": 0.327,
+          "strict_f1": 0.462,
+          "missed_sentences": [
+            "Customer Service",
+            "at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level"
+          ],
+          "extra_sentences": [
+            "Evidence of copying and pasting directly from the vacancy announcement without clearly documenting supplemental information to describe your experience will result in an ineligible rating.",
+            "This will prevent you from being considered further.",
+            "Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations;",
+            "knows about available products and services;",
+            "is committed to providing quality products and services;",
+            "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment."
+          ]
+        },
+        "usajobs-884783000": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.667,
+          "skills_f1": 0.7,
+          "strict_f1": 0.667,
+          "missed_sentences": [],
+          "extra_sentences": [
+            "B) Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph A above, plus additional education or appropriate experience.",
+            "Specialized experience is the experience that equipped the applicant with the particular knowledge, skills, and abilities (KSA's) to perform the duties of the position successfully, and that is typically in or related to the position to be filled.",
+            "specialized experience must have been equivalent to at least the next lower grade level.",
+            "Any applicant falsely claiming an academic degree from an accredited school will be subject to actions ranging from disqualification from federal employment to removal from federal service.",
+            "If your education was completed at a foreign college or university, you must show comparability to education received in accredited educational institutions in the United States and comparability to applicable minimum course work requirements for this position.",
+            "Click Evaluation of Foreign Education for more information."
+          ]
+        },
+        "usajobs-885947600": {
+          "gold_sentences": 12,
+          "sentences_f1": 0.455,
+          "skills_f1": 0.0,
+          "strict_f1": 0.2,
+          "missed_sentences": [
+            "Attention to Detail",
+            "Customer Service",
+            "Oral Communication",
+            "Problem Solving",
+            "you must have 1 year of specialized experience equivalent to at least the GS-11 level in the Federal service",
+            "preparing or supporting the dissemination of data",
+            "storing and managing high-quality data from diverse sources for use by decision makers"
+          ],
+          "extra_sentences": [
+            "Works with clients and customers",
+            "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+            "Persons listed as knowing your past accomplishments or experience in your application may be contacted for verification purposes at any time.",
+            "Verification may, but need not, begin before receiving an offer.",
+            "Preview application questionnaire before you apply: https://apply.usastaffing.gov/ViewQuestionnaire/13062893 Education This job does not have an education qualification requirement."
+          ]
+        },
+        "usajobs-886071700": {
+          "gold_sentences": 2,
+          "sentences_f1": 0.19,
+          "skills_f1": 0.0,
+          "strict_f1": 0.182,
+          "missed_sentences": [],
+          "extra_sentences": [
+            "A combination of education and experience",
+            "Courses acceptable toward meeting the mathematics course requirement of paragraphs A or B above must have included at least four of the following: differential calculus, integral calculus, advanced calculus, theory of equations, vector analysis, advanced algebra, linear algebra, mathematical logic, differential equations, or any other advanced course in mathematics for which one of these was a prerequisite.",
+            "Courses in mathematical statistics or probability theory with a prerequisite of elementary calculus or more advanced courses",
+            "applying known statistical techniques to data",
+            "work required in the processing of numerical or quantified information by other than statistical methods",
+            "Examples of such nonqualifying work include statistical clerical work; statistical drafting; calculation of totals, averages, percentages, or other arithmetic summations; preparation of simple tables or charts; or verification of data by simple comparison or proofreading.",
+            "For positions above the GS-05,applicants must meet applicable time-in-\u00adgrade requirements to be considered eligible.",
+            "One year (52 weeks) at the next lower grade level is required to meet the time-in-grade requirements for the grade you are applying for.",
+            "For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks.",
+            "There is no TIG restriction for GS-02, 03, or 04 positions.",
+            "For more information on qualifications please refer to OPM's Qualifications Standards .",
+            "Education completed in foreign colleges or universities may be used to meet the requirements.",
+            "You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.",
+            "It is your responsibility to provide such evidence when applying.",
+            "Click here (Section 3, Explanation of Terms) or here for Foreign Education Credentialing instructions.",
+            "We recommend choosing an evaluator from a member organization of one of the following national associations of credential evaluation services: National Association of Credential Evaluation Services (NACES) or Association of International Credentials Evaluators (AICE) .",
+            "education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program."
+          ]
+        }
+      }
+    }
+  }
+}

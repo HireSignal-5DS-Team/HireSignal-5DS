@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883827900",
+  "title": "Data Scientist (Recent Graduate)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Be a recent graduate who has completed, within the last two years, a qualifying associates, bachelors, masters, professional, doctorate, vocational, or technical degree or certificate from a qualifying educational institution",
+      "evidence": "Be a recent graduate who has completed, within the last two years, a qualifying associates, bachelors, masters, professional, doctorate, vocational, or technical degree or certificate from a qualifying educational institution",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": 2.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Meet the qualification standards (e.g., series and grade)",
+      "evidence": "Meet the qualification standards (e.g., series and grade).",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "One full year of specialized experience at or equivalent to the GS-05 level, involving assisting in the aggregation and cleaning of data from multiple sources using Python, R, or SQL to support the development of standardized datasets for analysis",
+      "evidence": "In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-05 level.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "R"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "One full year of specialized experience at or equivalent to the GS-07 level, involving assisting in the aggregation and cleaning of data from multiple sources using Python, R, or SQL to support the development of standardized datasets for analysis",
+      "evidence": "In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-07 level.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "R"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "You will receive credit for all qualifying experience, including any volunteer experience",
+      "evidence": "You will receive credit for all qualifying experience, including any volunteer experience.",
+      "kind": "nice",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "If more than 10 percent of your undergraduate course work (credit hours) were taken on a pass/fail basis, your claim of superior academic achievement must be based upon class standing or membership in an honor society",
+      "evidence": "PASS/FAIL COURSES: If more than 10 percent of your undergraduate course work (credit hours) were taken on a pass/fail basis, your claim of superior academic achievement must be based upon class standing or membership in an honor society.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'Veterans unable to apply within two years of recei': not a requirement (administrative condition), dropped",
+    "'One full year of specialized experience at or equi': skill term 'Python' not in the quote, removed",
+    "'One full year of specialized experience at or equi': skill term 'SQL' not in the quote, removed",
+    "'One full year of specialized experience at or equi': skill term 'Python' not in the quote, removed",
+    "'One full year of specialized experience at or equi': skill term 'SQL' not in the quote, removed",
+    "'Do not cut and paste the Duties section, specializ': not a requirement (application instructions), dropped",
+    "'Transcripts are required for this position': not a requirement (application instructions), dropped",
+    "'Failure to submit transcripts at the time of appli': not a requirement (application instructions), dropped",
+    "'Transcripts are required': not a requirement (application instructions), dropped",
+    "'Failure to submit a copy of your transcripts at th': not a requirement (application instructions), dropped",
+    "'One academic year of graduate education is the num': quote repaired (fuzzy 1.00)",
+    "'One academic year of graduate education is the num': not a requirement (definition), dropped"
+  ]
+}

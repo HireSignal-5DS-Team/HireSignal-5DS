@@ -1,0 +1,54 @@
+{
+ "cv": "p01_en_classic",
+ "skills": [
+  [
+   "Python"
+  ],
+  [
+   "SQL"
+  ],
+  [
+   "XGBoost"
+  ],
+  [
+   "scikit-learn"
+  ],
+  [
+   "Docker"
+  ],
+  [
+   "FastAPI"
+  ],
+  [
+   "Power BI"
+  ]
+ ],
+ "skills_optional": [
+  "ML pipelines",
+  "churn models",
+  "Dashboards",
+  "banking"
+ ],
+ "education": [
+  {
+   "degree": "Engineering degree",
+   "field": "Computer Science",
+   "institution": "ESPRIT",
+   "end": "2021"
+  }
+ ],
+ "experience": [
+  {
+   "title": "Data Scientist",
+   "company": "Vermeg",
+   "start": "2021",
+   "end": "2024"
+  },
+  {
+   "title": "Data Analyst Intern",
+   "company": "Sofrecom",
+   "start": "2020",
+   "end": "2021"
+  }
+ ]
+}

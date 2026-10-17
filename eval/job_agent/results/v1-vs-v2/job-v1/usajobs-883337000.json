@@ -1,0 +1,150 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883337000",
+  "title": "Summary",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "U.S. Citizen",
+      "evidence": "You must be a U.S.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Attention to Detail",
+      "evidence": "Attention to Detail - Is thorough when performing work and conscientious about attending to detail.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Attention to Detail"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Customer Service",
+      "evidence": "Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations; knows about available products and services; is committed to providing quality products and services.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Decision Making",
+      "evidence": "Makes sound, well-informed, and objective decisions; perceives the impact and implications of decisions; commits to action, even in uncertain situations, to accomplish organizational goals; causes change.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Information Management",
+      "evidence": "Identifies a need for and knows where or how to gather information; organizes and maintains information or information management systems.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Information Management"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Interpersonal Skills",
+      "evidence": "Shows understanding, friendliness, courtesy, tact, empathy, concern, and politeness to others; develops and maintains effective relationships with others; may include effectively dealing with individuals who are difficult, hostile, or distressed; relates well to people from varied backgrounds and different situations",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Oral Communication",
+      "evidence": "Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Problem Solving",
+      "evidence": "Identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Reasoning",
+      "evidence": "Identifies rules, principles, or relationships that explain facts, data, or other information; analyzes information and makes correct inferences or draws accurate conclusions.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Teamwork",
+      "evidence": "Encourages and facilitates cooperation, pride, trust, and group identity; fosters commitment and team spirit; works with others to achieve goals.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Technical Competence",
+      "evidence": "Uses knowledge that is acquired through formal training or on-the-job experience to perform one's job; works with, understands, and evaluates technical information related to the job; advises others on technical issues.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "GS-14",
+      "evidence": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "GS-13"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'U.S. Citizen': quote repaired (contained)",
+    "'GS-2210-14': quote not found (closest 0.20) in the job offer, dropped as invented (model quoted: \"GS-2210-14\")",
+    "'Customer Service': skill term 'Customer Service' not in the quote, removed",
+    "'Decision Making': skill term 'Decision Making' not in the quote, removed",
+    "'Interpersonal Skills': skill term 'Interpersonal Skills' not in the quote, removed",
+    "'Oral Communication': skill term 'Oral Communication' not in the quote, removed",
+    "'Problem Solving': skill term 'Problem Solving' not in the quote, removed",
+    "'Reasoning': skill term 'Reasoning' not in the quote, removed",
+    "'Teamwork': skill term 'Teamwork' not in the quote, removed",
+    "'Technical Competence': skill term 'Technical Competence' not in the quote, removed",
+    "'GS-14': skill term 'GS-14' not in the quote, removed",
+    "title 'Senior Technical Expert' not found in the job offer, used the first line"
+  ]
+}

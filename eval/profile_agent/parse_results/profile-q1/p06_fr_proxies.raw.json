@@ -1,0 +1,11 @@
+[
+ {
+  "input": "Section: PROFIL\nAnalyste avec 5 ans d'expérience en modélisation financière.\n\nSection: EXPÉRIENCES\nAnalyste financière — BIAT (2019 – 2024)\n- Modèles de valorisation sous Excel et VBA.\n- Reporting mensuel avec Power BI.\n\nSection: FORMATION\nMaster en Finance, IHEC Carthage, 2019\n\nSection: COMPÉTENCES\nExcel, VBA, Power BI, SQL",
+  "answer": "{\"skills\": [{\"name\": \"Excel\", \"evidence\": \"Excel, VBA, Power BI, SQL\"}, {\"name\": \"VBA\", \"evidence\": \"Excel, VBA, Power BI, SQL\"}, {\"name\": \"Power BI\", \"evidence\": \"Excel, VBA, Power BI, SQL\"}, {\"name\": \"SQL\", \"evidence\": \"Excel, VBA, Power BI, SQL\"}], \"education\": [{\"degree\": \"Master\", \"field\": \"Finance\", \"institution\": \"IHEC Carthage\", \"end\": \"2019\", \"evidence\": \"Master en Finance, IHEC Carthage, 2019\"}], \"experience\": [{\"title\": \"Analyste financière\", \"company\": \"BIAT\", \"start\": \"2019\", \"end\": \"2024\", \"evidence\": \"Analyste financière — BIAT (2019 – 2024)\\n- Modèles de valorisation sous Excel et VBA.\\n- Reporting mensuel avec Power BI.\"}]}",
+  "latency_s": 18.62,
+  "prompt_tokens": 1315,
+  "completion_tokens": 236,
+  "mode": "chat",
+  "finish_reason": "stop"
+ }
+]

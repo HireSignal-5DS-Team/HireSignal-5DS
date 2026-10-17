@@ -1,0 +1,59 @@
+### call 1 - input starts: 'MINIMUM QUALICATIONS: To be considered minimally qualified for this position, yo'
+{"requirements": [{"evidence": "Attention to Detail - Is thorough when performing work and conscientious about attending to detail.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Attention to Detail - Is thorough when performing work and conscientious about attending to detail."}]}
+
+### call 2 - input starts: 'Customer Service - Works with clients and customers (that is, any individuals wh'
+{"requirements": [{"evidence": "Customer Service", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations; knows about available products and services; is committed to providing quality products and services."}]}
+
+### call 3 - input starts: 'Decision Making - Makes sound, well-informed, and objective decisions; perceives'
+{"requirements": []}
+
+### call 4 - input starts: 'Interpersonal Skills - Shows understanding, friendliness, courtesy, tact, empath'
+{"requirements": [{"evidence": "Shows understanding, friendliness, courtesy, tact, empathy, concern, and politeness to others; develops and maintains effective relationships with others; may include effectively dealing with individuals who are difficult, hostile, or distressed; relates well to people from varied backgrounds and different situations", "skill_terms": [], "kind": "must", "category": "other", "min_years": null, "text": "Shows understanding, friendliness, courtesy, tact, empathy, concern, and politeness to others; develops and maintains effective relationships with others; may include effectively dealing with individuals who are difficult, hostile, or distressed; relates well to people from varied backgrounds and different situations"}, {"evidence": "Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately.", "skill_terms": [], "kind": "must", "category": "other", "min_years": null, "text": "Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately"}]}
+
+### call 5 - input starts: 'Problem Solving - Identifies problems; determines accuracy and relevance of info'
+{"requirements": []}
+
+### call 6 - input starts: 'Technical Competence - Uses knowledge that is acquired through formal training o'
+{"requirements": [{"evidence": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector", "skill_terms": [], "kind": "must", "category": "experience", "min_years": 1, "text": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector"}]}
+
+### call 7 - input starts: 'AND 2. designing and implementing end-to-end AI platforms that incorporate secur'
+{"requirements": [{"evidence": "designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads", "skill_terms": [], "kind": "must", "category": "skill", "min_years": null, "text": "designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads"}, {"evidence": "planning and executing pilots or proofs-of-concept to evaluate emerging cloud and AI technologies, and advising leadership on whether to adopt, refine, or discontinue those solutions based on mission impact, security, and implementation risk", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "planning and executing pilots or proofs-of-concept to evaluate emerging cloud and AI technologies, and advising leadership on whether to adopt, refine, or discontinue those solutions based on mission impact, security, and implementation risk"}]}
+
+### call 8 - input starts: 'AND 4. routinely explaining complex technical issues, risks, and tradeoffs to bo'
+{"requirements": [{"evidence": "routinely explaining complex technical issues, risks, and tradeoffs to both technical and non-technical stakeholders in ways that build consensus and secure acceptance of recommended technical approaches, priorities, and standards within a federal IT and AI policy and governance context.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "routinely explaining complex technical issues, risks, and tradeoffs to both technical and non-technical stakeholders in ways that build consensus and secure acceptance of recommended technical approaches, priorities, and standards within a federal IT and AI policy and governance context"}, {"evidence": "These qualifications must be clearly referenced in your resume.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "These qualifications must be clearly referenced in your resume."}, {"evidence": "If you are a current career or career-conditional federal employee applying for promotion under Merit Promotion you must have completed a minimum of 52 weeks in positions at the next level lower than the position being filled.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": 52, "text": "If you are a current career or career-conditional federal employee applying for promotion under Merit Promotion you must have completed a minimum of 52 weeks in positions at the next level lower than the position being filled."}]}
+
+### call 9 - input starts: 'There is no education substitution for this grade level.'
+{"requirements": [{"evidence": null, "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "There is no education substitution for this grade level."}]}
+
+### call 10 - input starts: 'Summary This position is located in the Small Business Administration, Office of'
+{"job_title": "Senior Cloud AI Engineer"}
+
+### call 11 - input starts: 'Attention to Detail - Is thorough when performing work and conscientious about a'
+{"skill_terms": ["Attention to Detail"]}
+
+### call 12 - input starts: 'Customer Service'
+{"skill_terms": []}
+
+### call 13 - input starts: 'Shows understanding, friendliness, courtesy, tact, empathy, concern, and politen'
+{"skill_terms": ["understanding", "friendliness", "courtesy", "tact", "empathy", "concern", "politeness", "effective relationships", "difficult", "hostile", "distressed", "varied backgrounds", "different situations"]}
+
+### call 14 - input starts: 'Expresses information (for example, ideas or facts) to individuals or groups eff'
+{"skill_terms": ["expresses information", "audience", "information", "technical", "sensitive", "controversial", "oral presentations", "nonverbal cues", "responds"]}
+
+### call 15 - input starts: 'One year of specialized experience, equivalent to the GS-13 grade level in the F'
+{"skill_terms": ["GS-13"]}
+
+### call 16 - input starts: 'designing and implementing end-to-end AI platforms that incorporate secure data '
+{"skill_terms": ["designing", "implementing", "secure data pipelines", "APIs", "model development", "inference environments", "containerized workloads"]}
+
+### call 17 - input starts: 'planning and executing pilots or proofs-of-concept to evaluate emerging cloud an'
+{"skill_terms": []}
+
+### call 18 - input starts: 'routinely explaining complex technical issues, risks, and tradeoffs to both tech'
+{"skill_terms": []}
+
+### call 19 - input starts: 'These qualifications must be clearly referenced in your resume.'
+{"skill_terms": []}
+
+### call 20 - input starts: 'If you are a current career or career-conditional federal employee applying for '
+{"skill_terms": []}

@@ -1,0 +1,23 @@
+JOHN SMITH | Data Scientist
+john.smith92@gmail.com • +216 22 345 678 • linkedin.com/in/johnsmith • github.com/jsmith
+12 Rue de Marseille, Tunis 1002 | Tunisian | Born on 12/03/1999 | Single
+
+SUMMARY
+Data scientist with 3 years of experience. Smith built ML pipelines in Python for banking clients.
+
+EXPERIENCE
+Data Scientist, Vermeg — Tunis    2021 - 2024
+- Built churn models (XGBoost, scikit-learn) for 2 million clients.
+- Deployed models with Docker and FastAPI.
+
+Data Analyst Intern, Sofrecom    2020 - 2021
+- Dashboards in Power BI and SQL.
+
+EDUCATION
+Engineering degree in Computer Science, ESPRIT, 2021
+
+SKILLS
+Python, SQL, XGBoost, scikit-learn, Docker, FastAPI, Power BI
+
+REFERENCES
+Dr. Leila Haddad, ESPRIT, leila.haddad@esprit.tn

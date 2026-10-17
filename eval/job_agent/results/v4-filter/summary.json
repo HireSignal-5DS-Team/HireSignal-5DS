@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "date": "2026-10-17",
+    "offers": 10,
+    "gold_requirements": 104,
+    "model": "hf.co/numind/NuExtract-2.0-2B-GGUF:Q4_K_M",
+    "mode": "inline",
+    "repeat": 2,
+    "active_prompt": "job-v4"
+  },
+  "results": {
+    "job-v4": {
+      "sentences": {
+        "precision": 0.576,
+        "recall": 0.679,
+        "f1": 0.623,
+        "tp": 57,
+        "fp": 42,
+        "fn": 27,
+        "kind_accuracy": 0.86,
+        "category_accuracy": 0.807,
+        "years_accuracy": 0.947
+      },
+      "skills": {
+        "precision": 0.461,
+        "recall": 0.844,
+        "f1": 0.596,
+        "tp": 65,
+        "fp": 76,
+        "fn": 12
+      },
+      "strict": {
+        "precision": 0.436,
+        "recall": 0.654,
+        "f1": 0.523,
+        "tp": 68,
+        "fp": 88,
+        "fn": 36
+      },
+      "invented_dropped": 10,
+      "repairs": 8,
+      "needs_human_review": 0,
+      "failed_offers": 0,
+      "mean_latency_s": 45.0,
+      "stable_offers": "10/10",
+      "per_offer": {
+        "usajobs-883161100": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.667,
+          "skills_f1": 0.667,
+          "strict_f1": 0.364,
+          "missed_sentences": [
+            "Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis to research and improve supply chain risk assessment processes."
+          ],
+          "extra_sentences": [
+            "Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience.",
+            "OR Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience.",
+            "One year of specialized experience that equipped you with the particular competencies to successfully perform the duties of the position and is directly in or related to this position.",
+            "Licenses must be current at time of application."
+          ]
+        },
+        "usajobs-883337000": {
+          "gold_sentences": 16,
+          "sentences_f1": 0.5,
+          "skills_f1": 0.308,
+          "strict_f1": 0.333,
+          "missed_sentences": [
+            "you must show that you have the required IT-related experience for the grade level to which your are applying",
+            "Decision Making",
+            "Information Management",
+            "Interpersonal Skills",
+            "Oral Communication",
+            "Problem Solving",
+            "Reasoning",
+            "Teamwork",
+            "Technical Competence",
+            "serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions"
+          ],
+          "extra_sentences": [
+            "Shows understanding, friendliness, courtesy, tact, empathy, concern, and politeness to others; develops and maintains effective relationships with others; may include effectively dealing with individuals who are difficult, hostile, or distressed; relates well to people from varied backgrounds and different situations",
+            "Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately."
+          ]
+        },
+        "usajobs-883386100": {
+          "gold_sentences": 5,
+          "sentences_f1": 0.364,
+          "skills_f1": 0.0,
+          "strict_f1": 0.105,
+          "missed_sentences": [
+            "Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects.",
+            "Assisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues.",
+            "Writing, testing, and documenting code for data analysis or modeling and producing basic visualizations."
+          ],
+          "extra_sentences": [
+            "Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+            "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+            "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+            "Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience."
+          ]
+        },
+        "usajobs-883511200": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.667,
+          "skills_f1": 0.706,
+          "strict_f1": 0.727,
+          "missed_sentences": [],
+          "extra_sentences": [
+            "3 years of progressively higher-level graduate education leading to a Ph.D. degree",
+            "Ph.D. or equivalent doctoral degree",
+            "A combination of education and experience",
+            "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges.",
+            "You will receive credit for all qualifying experience, including volunteer experience.",
+            "an official copy will be required before a final offer of employment."
+          ]
+        },
+        "usajobs-883699600": {
+          "gold_sentences": 18,
+          "sentences_f1": 1.0,
+          "skills_f1": 0.653,
+          "strict_f1": 0.788,
+          "missed_sentences": [],
+          "extra_sentences": []
+        },
+        "usajobs-883827900": {
+          "gold_sentences": 3,
+          "sentences_f1": 0.5,
+          "skills_f1": 1.0,
+          "strict_f1": 0.5,
+          "missed_sentences": [
+            "you must have one full year of specialized experience at or equivalent to the GS-05 level."
+          ],
+          "extra_sentences": [
+            "Data Scientist For the GS-07",
+            "If more than 10 percent of your undergraduate course work (credit hours) were taken on a pass/fail basis, your claim of superior academic achievement must be based upon class standing or membership in an honor society.",
+            "18 semester hours (or 27 quarter hours)"
+          ]
+        },
+        "usajobs-884301900": {
+          "gold_sentences": 10,
+          "sentences_f1": 0.696,
+          "skills_f1": 0.457,
+          "strict_f1": 0.56,
+          "missed_sentences": [
+            "Customer Service",
+            "at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level"
+          ],
+          "extra_sentences": [
+            "This will prevent you from being considered further.",
+            "Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations;",
+            "knows about available products and services;",
+            "is committed to providing quality products and services;",
+            "You will receive credit for all qualifying experience, including volunteer experience."
+          ]
+        },
+        "usajobs-884783000": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.923,
+          "skills_f1": 0.609,
+          "strict_f1": 0.75,
+          "missed_sentences": [],
+          "extra_sentences": [
+            "B) Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph A above, plus additional education or appropriate experience."
+          ]
+        },
+        "usajobs-885947600": {
+          "gold_sentences": 12,
+          "sentences_f1": 0.2,
+          "skills_f1": 0.364,
+          "strict_f1": 0.389,
+          "missed_sentences": [
+            "Attention to Detail",
+            "Customer Service",
+            "Oral Communication",
+            "Problem Solving",
+            "you must have 1 year of specialized experience equivalent to at least the GS-11 level in the Federal service",
+            "collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data",
+            "curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues",
+            "preparing or supporting the dissemination of data",
+            "identifying and resolving routine data performance and management issues",
+            "storing and managing high-quality data from diverse sources for use by decision makers"
+          ],
+          "extra_sentences": [
+            "Works with clients and customers",
+            "assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations",
+            "knows about available products and services",
+            "is committed to providing quality products and services",
+            "3",
+            "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making."
+          ]
+        },
+        "usajobs-886071700": {
+          "gold_sentences": 2,
+          "sentences_f1": 0.267,
+          "skills_f1": 0.0,
+          "strict_f1": 0.25,
+          "missed_sentences": [],
+          "extra_sentences": [
+            "A combination of education and experience",
+            "Courses acceptable toward meeting the mathematics course requirement of paragraphs A or B above must have included at least four of the following: differential calculus, integral calculus, advanced calculus, theory of equations, vector analysis, advanced algebra, linear algebra, mathematical logic, differential equations, or any other advanced course in mathematics for which one of these was a prerequisite.",
+            "Courses in mathematical statistics or probability theory with a prerequisite of elementary calculus or more advanced courses",
+            "applying known statistical techniques to data",
+            "work required in the processing of numerical or quantified information by other than statistical methods",
+            "For positions above the GS-05,applicants must meet applicable time-in-\u00adgrade requirements to be considered eligible.",
+            "For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks.",
+            "For more information on qualifications please refer to OPM's Qualifications Standards .",
+            "You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.",
+            "It is your responsibility to provide such evidence when applying.",
+            "education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program."
+          ]
+        }
+      }
+    }
+  }
+}

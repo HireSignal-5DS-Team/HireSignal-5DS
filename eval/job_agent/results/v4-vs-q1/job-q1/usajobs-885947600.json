@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-885947600",
+  "title": "IT Specialist (Data Science)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "IT related experience demonstrated by paid or unpaid experience obtained in either the private or public sector, and/or completion of specific, intensive training that demonstrates all of the following four competencies: 1. Attention to Detail - is thorough when performing work and conscientious about attending to detail; and 2.",
+      "evidence": "IT related experience demonstrated by paid or unpaid experience obtained in either the private or public sector, and/or completion of specific, intensive training that demonstrates all of the following four competencies: 1. Attention to Detail - is thorough when performing work and conscientious about attending to detail; and 2.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "1 year of specialized experience equivalent to at least the GS-11 level in the Federal service, typically gained in the IT field or through performing IT-related tasks such as collecting and generating data, curating and processing data, preparing or supporting dissemination of data, identifying and resolving routine data performance and management issues, storing and managing high-quality data from diverse sources, and analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements",
+      "evidence": "and analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "R",
+        "Python"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Problem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations",
+      "evidence": "Problem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making",
+      "evidence": "and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "R",
+        "Python"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'1 year of specialized experience equivalent to at ': quote repaired (contained)",
+    "'1 year of specialized experience equivalent to at ': min_years 1.0 removed (no years in the quote)",
+    "'1 year of specialized experience equivalent to at ': quote repaired (contained)",
+    "'1 year of specialized experience equivalent to at ': min_years 1.0 removed (no years in the quote)"
+  ]
+}

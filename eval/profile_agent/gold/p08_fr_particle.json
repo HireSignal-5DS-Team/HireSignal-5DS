@@ -1,0 +1,36 @@
+{
+  "cv": "p08_fr_particle",
+  "language": "fr",
+  "must_hide": [
+    {
+      "kind": "NAME",
+      "value": "Yasmine El Amri"
+    },
+    {
+      "kind": "URL",
+      "value": "yasmineelamri.com"
+    },
+    {
+      "kind": "URL",
+      "value": "yelamri"
+    },
+    {
+      "kind": "EMAIL",
+      "value": "yasmine.elamri@esprit.tn"
+    },
+    {
+      "kind": "PHONE",
+      "value": "22 456 789"
+    }
+  ],
+  "other_people": [],
+  "must_keep": [
+    "Talan Tunisie (2022 – 2024)",
+    "Airflow",
+    "Snowflake",
+    "Next.js",
+    "ESPRIT, 2022",
+    "2 ans d'expérience",
+    "Data Engineer"
+  ]
+}

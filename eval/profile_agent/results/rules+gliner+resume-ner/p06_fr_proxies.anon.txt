@@ -1,0 +1,16 @@
+[NAME]
+Analyste financière | [ADDRESS] | [ADDRESS] | [PHONE] | [EMAIL]
+
+PROFIL
+Analyste avec 5 ans d'expérience en modélisation financière.
+
+EXPÉRIENCES
+Analyste financière — BIAT (2019 – 2024)
+- Modèles de valorisation sous Excel et VBA.
+- Reporting mensuel avec Power BI.
+
+FORMATION
+Master en Finance, IHEC Carthage, 2019
+
+COMPÉTENCES
+Excel, VBA, Power BI, SQL

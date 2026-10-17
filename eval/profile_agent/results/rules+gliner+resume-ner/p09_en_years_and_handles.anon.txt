@@ -1,0 +1,20 @@
+[NAME]
+Cybersecurity Analyst · [ADDRESS] · [URL] · [EMAIL] · [PHONE]
+
+SUMMARY
+Security analyst. Certified CEH (2021) and CompTIA Security+ (2020).
+
+EXPERIENCE
+SOC Analyst, Orange Business, 2021 2022 2023
+- Incident response with Splunk and QRadar; 2000 alerts triaged per month.
+Pentester Intern, Wevioo, 06/2020 - 09/2020
+- Web pentests with Burp Suite and OWASP ZAP.
+
+EDUCATION
+National Engineering Diploma in Telecommunications, SUP'COM, 2021
+
+CERTIFICATIONS
+CEH v11 (2021), CompTIA Security+ SY0-601 (2020)
+
+SKILLS
+Splunk, QRadar, Burp Suite, Wireshark, Python, Linux

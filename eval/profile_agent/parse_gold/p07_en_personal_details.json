@@ -1,0 +1,43 @@
+{
+ "cv": "p07_en_personal_details",
+ "skills": [
+  [
+   "Node.js"
+  ],
+  [
+   "Vue.js"
+  ],
+  [
+   "Express"
+  ],
+  [
+   "MongoDB"
+  ],
+  [
+   "ASP.NET"
+  ],
+  [
+   "Socket.io"
+  ]
+ ],
+ "skills_optional": [
+  "REST APIs",
+  "REST"
+ ],
+ "education": [
+  {
+   "degree": "Engineering degree",
+   "field": null,
+   "institution": "ENSIAS",
+   "end": "2016"
+  }
+ ],
+ "experience": [
+  {
+   "title": "Full Stack Developer",
+   "company": "Capgemini Morocco",
+   "start": "2016",
+   "end": "2024"
+  }
+ ]
+}

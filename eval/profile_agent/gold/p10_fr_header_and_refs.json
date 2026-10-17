@@ -1,0 +1,45 @@
+{
+  "cv": "p10_fr_header_and_refs",
+  "language": "fr",
+  "must_hide": [
+    {
+      "kind": "NAME",
+      "value": "Omar Haddad"
+    },
+    {
+      "kind": "URL",
+      "value": "linkedin.com/in/omar-haddad-12345"
+    },
+    {
+      "kind": "EMAIL",
+      "value": "omar.haddad@hotmail.com"
+    },
+    {
+      "kind": "PHONE",
+      "value": "50 222 333"
+    }
+  ],
+  "other_people": [
+    {
+      "kind": "NAME",
+      "value": "Sami Gharbi"
+    },
+    {
+      "kind": "EMAIL",
+      "value": "sami.gharbi@ooredoo.tn"
+    },
+    {
+      "kind": "PHONE",
+      "value": "71 000 111"
+    }
+  ],
+  "must_keep": [
+    "Ooredoo Tunisie (2018 – 2024)",
+    "300 sites",
+    "Ansible",
+    "ENIT, 2018",
+    "CCNA (2017)",
+    "CCNP Enterprise (2020)",
+    "Directeur technique"
+  ]
+}

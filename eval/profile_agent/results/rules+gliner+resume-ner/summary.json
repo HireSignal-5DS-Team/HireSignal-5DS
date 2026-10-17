@@ -1,0 +1,294 @@
+{
+  "detectors": [
+    "rules",
+    "gliner",
+    "resume-ner"
+  ],
+  "detector_errors": [],
+  "cvs": 10,
+  "identity_pieces": 65,
+  "leaks": 0,
+  "leak_rate": 0.0,
+  "other_people_pieces": 5,
+  "other_people_readable": 0,
+  "facts": 67,
+  "facts_kept": 67,
+  "facts_kept_rate": 1.0,
+  "per_cv": [
+    {
+      "cv": "p01_en_classic",
+      "leaks": [],
+      "other_people_readable": [],
+      "facts_lost": [],
+      "needs_human_review": false,
+      "seconds": 16.07,
+      "report": {
+        "schema_version": "0.1.0",
+        "placeholders": {
+          "[NAME]": 3,
+          "[EMAIL]": 2,
+          "[PHONE]": 1,
+          "[URL]": 2,
+          "[ADDRESS]": 1,
+          "[PERSONAL]": 3
+        },
+        "detectors": [
+          "rules",
+          "gliner",
+          "resume-ner"
+        ],
+        "name_found": true,
+        "leaks_fixed": 0,
+        "leaks_left": 0,
+        "needs_human_review": false,
+        "warnings": []
+      }
+    },
+    {
+      "cv": "p02_fr_classic",
+      "leaks": [],
+      "other_people_readable": [],
+      "facts_lost": [],
+      "needs_human_review": false,
+      "seconds": 0.44,
+      "report": {
+        "schema_version": "0.1.0",
+        "placeholders": {
+          "[NAME]": 1,
+          "[ADDRESS]": 1,
+          "[PHONE]": 1,
+          "[EMAIL]": 1,
+          "[PERSONAL]": 3
+        },
+        "detectors": [
+          "rules",
+          "gliner",
+          "resume-ner"
+        ],
+        "name_found": true,
+        "leaks_fixed": 0,
+        "leaks_left": 0,
+        "needs_human_review": false,
+        "warnings": []
+      }
+    },
+    {
+      "cv": "p03_en_two_column",
+      "leaks": [],
+      "other_people_readable": [],
+      "facts_lost": [],
+      "needs_human_review": false,
+      "seconds": 0.3,
+      "report": {
+        "schema_version": "0.1.0",
+        "placeholders": {
+          "[NAME]": 1,
+          "[EMAIL]": 1,
+          "[PHONE]": 1,
+          "[ADDRESS]": 1
+        },
+        "detectors": [
+          "rules",
+          "gliner",
+          "resume-ner"
+        ],
+        "name_found": true,
+        "leaks_fixed": 0,
+        "leaks_left": 0,
+        "needs_human_review": false,
+        "warnings": []
+      }
+    },
+    {
+      "cv": "p04_fr_labelled",
+      "leaks": [],
+      "other_people_readable": [],
+      "facts_lost": [],
+      "needs_human_review": false,
+      "seconds": 0.32,
+      "report": {
+        "schema_version": "0.1.0",
+        "placeholders": {
+          "[NAME]": 3,
+          "[PERSONAL]": 4,
+          "[PHONE]": 1,
+          "[EMAIL]": 1
+        },
+        "detectors": [
+          "rules",
+          "gliner",
+          "resume-ner"
+        ],
+        "name_found": true,
+        "leaks_fixed": 0,
+        "leaks_left": 0,
+        "needs_human_review": false,
+        "warnings": []
+      }
+    },
+    {
+      "cv": "p05_en_name_in_footer",
+      "leaks": [],
+      "other_people_readable": [],
+      "facts_lost": [],
+      "needs_human_review": false,
+      "seconds": 0.27,
+      "report": {
+        "schema_version": "0.1.0",
+        "placeholders": {
+          "[NAME]": 2,
+          "[EMAIL]": 1,
+          "[PHONE]": 1
+        },
+        "detectors": [
+          "rules",
+          "gliner",
+          "resume-ner"
+        ],
+        "name_found": true,
+        "leaks_fixed": 0,
+        "leaks_left": 0,
+        "needs_human_review": false,
+        "warnings": []
+      }
+    },
+    {
+      "cv": "p06_fr_proxies",
+      "leaks": [],
+      "other_people_readable": [],
+      "facts_lost": [],
+      "needs_human_review": false,
+      "seconds": 0.32,
+      "report": {
+        "schema_version": "0.1.0",
+        "placeholders": {
+          "[NAME]": 1,
+          "[ADDRESS]": 2,
+          "[PHONE]": 1,
+          "[EMAIL]": 1
+        },
+        "detectors": [
+          "rules",
+          "gliner",
+          "resume-ner"
+        ],
+        "name_found": true,
+        "leaks_fixed": 0,
+        "leaks_left": 0,
+        "needs_human_review": false,
+        "warnings": []
+      }
+    },
+    {
+      "cv": "p07_en_personal_details",
+      "leaks": [],
+      "other_people_readable": [],
+      "facts_lost": [],
+      "needs_human_review": false,
+      "seconds": 0.33,
+      "report": {
+        "schema_version": "0.1.0",
+        "placeholders": {
+          "[NAME]": 1,
+          "[URL]": 1,
+          "[EMAIL]": 1,
+          "[PHONE]": 1,
+          "[PERSONAL]": 4,
+          "[ADDRESS]": 1
+        },
+        "detectors": [
+          "rules",
+          "gliner",
+          "resume-ner"
+        ],
+        "name_found": true,
+        "leaks_fixed": 0,
+        "leaks_left": 0,
+        "needs_human_review": false,
+        "warnings": []
+      }
+    },
+    {
+      "cv": "p08_fr_particle",
+      "leaks": [],
+      "other_people_readable": [],
+      "facts_lost": [],
+      "needs_human_review": false,
+      "seconds": 0.37,
+      "report": {
+        "schema_version": "0.1.0",
+        "placeholders": {
+          "[NAME]": 2,
+          "[URL]": 3,
+          "[EMAIL]": 1,
+          "[PHONE]": 1
+        },
+        "detectors": [
+          "rules",
+          "gliner",
+          "resume-ner"
+        ],
+        "name_found": true,
+        "leaks_fixed": 0,
+        "leaks_left": 0,
+        "needs_human_review": false,
+        "warnings": []
+      }
+    },
+    {
+      "cv": "p09_en_years_and_handles",
+      "leaks": [],
+      "other_people_readable": [],
+      "facts_lost": [],
+      "needs_human_review": false,
+      "seconds": 0.38,
+      "report": {
+        "schema_version": "0.1.0",
+        "placeholders": {
+          "[NAME]": 1,
+          "[ADDRESS]": 1,
+          "[URL]": 1,
+          "[EMAIL]": 1,
+          "[PHONE]": 1
+        },
+        "detectors": [
+          "rules",
+          "gliner",
+          "resume-ner"
+        ],
+        "name_found": true,
+        "leaks_fixed": 0,
+        "leaks_left": 0,
+        "needs_human_review": false,
+        "warnings": []
+      }
+    },
+    {
+      "cv": "p10_fr_header_and_refs",
+      "leaks": [],
+      "other_people_readable": [],
+      "facts_lost": [],
+      "needs_human_review": false,
+      "seconds": 0.37,
+      "report": {
+        "schema_version": "0.1.0",
+        "placeholders": {
+          "[NAME]": 3,
+          "[URL]": 1,
+          "[EMAIL]": 2,
+          "[PHONE]": 2
+        },
+        "detectors": [
+          "rules",
+          "gliner",
+          "resume-ner"
+        ],
+        "name_found": true,
+        "leaks_fixed": 0,
+        "leaks_left": 0,
+        "needs_human_review": false,
+        "warnings": []
+      }
+    }
+  ]
+}

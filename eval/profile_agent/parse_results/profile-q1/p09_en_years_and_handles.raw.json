@@ -1,0 +1,11 @@
+[
+ {
+  "input": "Section: SUMMARY\nSecurity analyst. Certified CEH (2021) and CompTIA Security+ (2020).\n\nSection: EXPERIENCE\nSOC Analyst, Orange Business, 2021 2022 2023\n- Incident response with Splunk and QRadar; 2000 alerts triaged per month.\nPentester Intern, Wevioo, 06/2020 - 09/2020\n- Web pentests with Burp Suite and OWASP ZAP.\n\nSection: EDUCATION\nNational Engineering Diploma in Telecommunications, SUP'COM, 2021\n\nSection: CERTIFICATIONS\nCEH v11 (2021), CompTIA Security+ SY0-601 (2020)\n\nSection: SKILLS\nSplunk, QRadar, Burp Suite, Wireshark, Python, Linux",
+  "answer": "{\"skills\": [{\"name\": \"Splunk\", \"evidence\": \"- Incident response with Splunk and QRadar; 2000 alerts triaged per month.\"}, {\"name\": \"QRadar\", \"evidence\": \"- Incident response with Splunk and QRadar; 2000 alerts triaged per month.\"}, {\"name\": \"Burp Suite\", \"evidence\": \"- Web pentests with Burp Suite and OWASP ZAP.\"}, {\"name\": \"Wireshark\", \"evidence\": \"Wireshark\"}, {\"name\": \"Python\", \"evidence\": \"Python\"}, {\"name\": \"Linux\", \"evidence\": \"Linux\"}], \"education\": [{\"degree\": \"National Engineering Diploma\", \"field\": \"Telecommunications\", \"institution\": \"SUP'COM\", \"end\": \"2021\", \"evidence\": \"National Engineering Diploma in Telecommunications, SUP'COM, 2021\"}], \"experience\": [{\"title\": \"SOC Analyst\", \"company\": \"Orange Business\", \"start\": \"2021\", \"end\": \"2023\", \"evidence\": \"SOC Analyst, Orange Business, 2021 2022 2023\"}, {\"title\": \"Pentester Intern\", \"company\": \"Wevioo\", \"start\": \"06/2020\", \"end\": \"09/2020\", \"evidence\": \"- Web pentests with Burp Suite and OWASP ZAP.\"}]}",
+  "latency_s": 26.94,
+  "prompt_tokens": 1402,
+  "completion_tokens": 322,
+  "mode": "chat",
+  "finish_reason": "stop"
+ }
+]

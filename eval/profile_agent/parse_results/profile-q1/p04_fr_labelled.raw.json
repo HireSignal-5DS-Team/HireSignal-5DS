@@ -1,0 +1,11 @@
+[
+ {
+  "input": "Section: EXPÉRIENCE\nDéveloppeur Java — Sopra HR Software (2019 – 2023)\n- Développement de microservices Spring Boot.\n- Base de données Oracle et PostgreSQL.\n\nSection: FORMATION\nLicence en Informatique de Gestion, ISG [PERSONAL], 2018\n\nSection: COMPÉTENCES\nJava, Spring Boot, Oracle, PostgreSQL, Angular",
+  "answer": "{\"skills\": [{\"name\": \"Java\", \"evidence\": \"Développeur Java — Sopra HR Software (2019 – 2023)\"}, {\"name\": \"Spring Boot\", \"evidence\": \"Développement de microservices Spring Boot.\"}, {\"name\": \"Oracle\", \"evidence\": \"Base de données Oracle et PostgreSQL.\"}, {\"name\": \"PostgreSQL\", \"evidence\": \"Base de données Oracle et PostgreSQL.\"}, {\"name\": \"Angular\", \"evidence\": \"Java, Spring Boot, Oracle, PostgreSQL, Angular\"}], \"education\": [{\"degree\": \"Licence\", \"field\": \"Informatique de Gestion\", \"institution\": \"ISG [PERSONAL]\", \"end\": \"2018\", \"evidence\": \"Licence en Informatique de Gestion, ISG [PERSONAL], 2018\"}], \"experience\": [{\"title\": \"Développeur Java\", \"company\": \"Sopra HR Software\", \"start\": \"2019\", \"end\": \"2023\", \"evidence\": \"Développeur Java — Sopra HR Software (2019 – 2023)\"}]}",
+  "latency_s": 20.61,
+  "prompt_tokens": 1301,
+  "completion_tokens": 263,
+  "mode": "chat",
+  "finish_reason": "stop"
+ }
+]

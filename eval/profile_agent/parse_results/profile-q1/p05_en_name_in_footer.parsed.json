@@ -1,0 +1,46 @@
+{
+ "schema_version": "0.1.0",
+ "candidate_id": "p05_en_name_in_footer",
+ "skills": [
+  {
+   "name": "React",
+   "evidence": "React, TypeScript, CSS, Jest, Figma"
+  },
+  {
+   "name": "TypeScript",
+   "evidence": "React, TypeScript, CSS, Jest, Figma"
+  },
+  {
+   "name": "CSS",
+   "evidence": "React, TypeScript, CSS, Jest, Figma"
+  },
+  {
+   "name": "Jest",
+   "evidence": "React, TypeScript, CSS, Jest, Figma"
+  },
+  {
+   "name": "Figma",
+   "evidence": "React, TypeScript, CSS, Jest, Figma"
+  }
+ ],
+ "education": [
+  {
+   "degree": "BSc",
+   "field": "Computer Science",
+   "institution": "University of Toronto",
+   "end": "2019",
+   "evidence": "BSc Computer Science, University of Toronto, 2019"
+  }
+ ],
+ "experience": [
+  {
+   "title": "Front-end Developer",
+   "company": "Shopify",
+   "start": "2019",
+   "end": "2024",
+   "evidence": "Front-end Developer, Shopify, 2019 - 2024"
+  }
+ ],
+ "uncertain": [],
+ "prompt_version": "profile-q1"
+}

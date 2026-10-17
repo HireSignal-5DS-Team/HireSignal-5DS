@@ -1,0 +1,11 @@
+[
+ {
+  "input": "Section: Resume\n[EMAIL] | [PHONE]\n\nSection: PROFESSIONAL SUMMARY\nFront-end developer focused on accessible React applications.\n\nSection: WORK EXPERIENCE\nFront-end Developer, Shopify, 2019 - 2024\n- Built React and TypeScript components used by 1M merchants.\n- Improved Lighthouse accessibility score from 70 to 98.\n\nSection: EDUCATION\nBSc Computer Science, University of Toronto, 2019\n\nSection: SKILLS\nReact, TypeScript, CSS, Jest, Figma\n\n[NAME] - references available on request",
+  "answer": "{\"skills\": [{\"name\": \"React\", \"evidence\": \"React, TypeScript, CSS, Jest, Figma\"}, {\"name\": \"TypeScript\", \"evidence\": \"React, TypeScript, CSS, Jest, Figma\"}, {\"name\": \"CSS\", \"evidence\": \"React, TypeScript, CSS, Jest, Figma\"}, {\"name\": \"Jest\", \"evidence\": \"React, TypeScript, CSS, Jest, Figma\"}, {\"name\": \"Figma\", \"evidence\": \"React, TypeScript, CSS, Jest, Figma\"}], \"education\": [{\"degree\": \"BSc\", \"field\": \"Computer Science\", \"institution\": \"University of Toronto\", \"end\": \"2019\", \"evidence\": \"BSc Computer Science, University of Toronto, 2019\"}], \"experience\": [{\"title\": \"Front-end Developer\", \"company\": \"Shopify\", \"start\": \"2019\", \"end\": \"2024\", \"evidence\": \"Front-end Developer, Shopify, 2019 - 2024\"}]}",
+  "latency_s": 18.54,
+  "prompt_tokens": 1332,
+  "completion_tokens": 233,
+  "mode": "chat",
+  "finish_reason": "stop"
+ }
+]

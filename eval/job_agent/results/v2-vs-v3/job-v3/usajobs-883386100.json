@@ -1,0 +1,161 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883386100",
+  "title": "Data Scientist",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+      "evidence": "Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "one year of directly related specialized experience equivalent to the GS-12 level",
+      "evidence": "one year of directly related specialized experience equivalent to the GS-12 level",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Preparing, transforming, and integrating datasets from multiple sources and maintaining reproducible documentation",
+      "evidence": "Preparing, transforming, and integrating datasets from multiple sources and maintaining reproducible documentation.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking",
+      "evidence": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences",
+      "evidence": "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Your resume must include a clear and detailed narrative description, in your own words, of how you meet the required specialized experience.",
+      "evidence": "Your resume must include a clear and detailed narrative description, in your own words, of how you meet the required specialized experience.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Experience statements copied from a position description, vacancy announcement or other reference material constitutes plagiarism and may result in disqualification and losing consideration for the job.",
+      "evidence": "Experience statements copied from a position description, vacancy announcement or other reference material constitutes plagiarism and may result in disqualification and losing consideration for the job.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Please visit https://www.nasa.gov/careers/how-to-apply/#Artificial-Intelligence to review NASA's guidance on the use of artificial intelligent (AI) or AI-assisted tools during the application process.",
+      "evidence": "Please visit https://www.nasa.gov/careers/how-to-apply/#Artificial-Intelligence to review NASA's guidance on the use of artificial intelligent (AI) or AI-assisted tools during the application process.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position.",
+      "evidence": "You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience.",
+      "evidence": "Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "U.S. degrees must have been awarded from colleges or universities that are accredited by recognized accrediting organizations.",
+      "evidence": "U.S. degrees must have been awarded from colleges or universities that are accredited by recognized accrediting organizations.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "education completed in foreign colleges or universities",
+      "evidence": "education completed in foreign colleges or universities",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "All degrees must have been received in the year of, or any year subsequent to the original date of accreditation.",
+      "evidence": "All degrees must have been received in the year of, or any year subsequent to the original date of accreditation.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "For a list of schools that meet this criteria, go to http://ope.ed.gov/accreditation/ .",
+      "evidence": "For a list of schools that meet this criteria, go to http://ope.ed.gov/accreditation/ .",
+      "kind": "nice",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'One year of directly related specialized experienc': quote not found (closest 0.53) in the job offer, dropped as invented (model quoted: \"One year of directly related specialized experience equivalent to the GS-11 level.\")",
+    "'You must have successfully completed a full 4-year': min_years 4.0 removed (no years in the quote)",
+    "'Have a combination of education and experience equ': min_years 30.0 removed (no years in the quote)",
+    "'You must have successfully completed a full 4-year': min_years 4.0 removed (no years in the quote)",
+    "'You must have successfully completed a full 4-year': duplicate, dropped",
+    "'Have a combination of education and experience equ': min_years 30.0 removed (no years in the quote)",
+    "'Have a combination of education and experience equ': duplicate, dropped",
+    "'U.S. degrees must have been awarded from colleges ': duplicate, dropped",
+    "'education completed in foreign colleges or univers': duplicate, dropped"
+  ]
+}

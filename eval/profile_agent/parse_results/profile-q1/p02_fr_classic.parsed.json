@@ -1,0 +1,62 @@
+{
+ "schema_version": "0.1.0",
+ "candidate_id": "p02_fr_classic",
+ "skills": [
+  {
+   "name": "Docker",
+   "evidence": "Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux"
+  },
+  {
+   "name": "Kubernetes",
+   "evidence": "Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux"
+  },
+  {
+   "name": "GitLab CI",
+   "evidence": "Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux"
+  },
+  {
+   "name": "Terraform",
+   "evidence": "Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux"
+  },
+  {
+   "name": "Ansible",
+   "evidence": "Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux"
+  },
+  {
+   "name": "Linux",
+   "evidence": "Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux"
+  },
+  {
+   "name": "Arabe",
+   "evidence": "Arabe, Français, Anglais (B2)"
+  },
+  {
+   "name": "Français",
+   "evidence": "Arabe, Français, Anglais (B2)"
+  },
+  {
+   "name": "Anglais",
+   "evidence": "Arabe, Français, Anglais (B2)"
+  }
+ ],
+ "education": [
+  {
+   "degree": "Diplôme d'ingénieur",
+   "field": "Génie Logiciel",
+   "institution": "INSAT",
+   "end": "2020",
+   "evidence": "Diplôme d'ingénieur en Génie Logiciel, INSAT, 2020"
+  }
+ ],
+ "experience": [
+  {
+   "title": "Ingénieure DevOps",
+   "company": "Telnet",
+   "start": "2020",
+   "end": "2024",
+   "evidence": "Ingénieure DevOps — Telnet, Tunis (2020 – 2024)\n- Mise en place de pipelines GitLab CI et de clusters Kubernetes.\n- Supervision avec Prometheus et Grafana."
+  }
+ ],
+ "uncertain": [],
+ "prompt_version": "profile-q1"
+}

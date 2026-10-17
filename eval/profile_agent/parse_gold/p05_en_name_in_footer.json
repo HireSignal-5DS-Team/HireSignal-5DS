@@ -1,0 +1,42 @@
+{
+ "cv": "p05_en_name_in_footer",
+ "skills": [
+  [
+   "React"
+  ],
+  [
+   "TypeScript"
+  ],
+  [
+   "CSS"
+  ],
+  [
+   "Jest"
+  ],
+  [
+   "Figma"
+  ]
+ ],
+ "skills_optional": [
+  "Lighthouse",
+  "accessibility",
+  "accessible React applications",
+  "Front-end"
+ ],
+ "education": [
+  {
+   "degree": "BSc",
+   "field": "Computer Science",
+   "institution": "University of Toronto",
+   "end": "2019"
+  }
+ ],
+ "experience": [
+  {
+   "title": "Front-end Developer",
+   "company": "Shopify",
+   "start": "2019",
+   "end": "2024"
+  }
+ ]
+}

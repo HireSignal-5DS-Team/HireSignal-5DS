@@ -1,0 +1,181 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883337000",
+  "title": "IT Specialist (Senior Cloud AI Engineer)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "To be considered minimally qualified for this position, you must show that you have the required IT-related experience for the grade level to which your are applying: GS-14, Required Competencies: Attention to Detail - Is thorough when performing work and conscientious about attending to detail",
+      "evidence": "To be considered minimally qualified for this position, you must show that you have the required IT-related experience for the grade level to which your are applying: GS-14, Required Competencies: Attention to Detail - Is thorough when performing work and conscientious about attending to detail.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Uses knowledge that is acquired through formal training or on-the-job experience to perform one's job; works with, understands, and evaluates technical information related to the job; advises others on technical issues",
+      "evidence": "Uses knowledge that is acquired through formal training or on-the-job experience to perform one's job; works with, understands, and evaluates technical information related to the job; advises others on technical issues.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior cloud",
+      "evidence": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions;",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "cloud"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior AI",
+      "evidence": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions;",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "AI"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior technical standards",
+      "evidence": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions;",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "technical standards"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior reference architectures",
+      "evidence": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions;",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "reference architectures"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior cloud-hosted AI solutions",
+      "evidence": "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions;",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "cloud-hosted AI solutions"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "designing and implementing end-to-end AI platforms that incorporate secure data pipelines",
+      "evidence": "designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "secure data pipelines"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "designing and implementing end-to-end AI platforms that incorporate APIs",
+      "evidence": "designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "APIs"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "designing and implementing end-to-end AI platforms that incorporate model development",
+      "evidence": "designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "model development"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "designing and implementing end-to-end AI platforms that incorporate inference environments",
+      "evidence": "designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "inference environments"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "designing and implementing end-to-end AI platforms that incorporate containerized workloads",
+      "evidence": "designing and implementing end-to-end AI platforms that incorporate secure data pipelines, APIs, model development and inference environments, and containerized workloads",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "containerized workloads"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "Planning and executing pilots or proofs-of-concept to evaluate emerging cloud and AI technologies, and advising leadership on whether to adopt, refine, or discontinue those solutions based on mission impact, security, and implementation risk",
+      "evidence": "planning and executing pilots or proofs-of-concept to evaluate emerging cloud and AI technologies, and advising leadership on whether to adopt, refine, or discontinue those solutions based on mission impact, security, and implementation risk",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "pilots or proofs-of-concept",
+        "advising leadership",
+        "mission impact",
+        "security",
+        "implementation risk"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "Routinely explaining complex technical issues, risks, and tradeoffs to both technical and non-technical stakeholders in ways that build consensus and secure acceptance of recommended technical approaches, priorities, and standards within a federal IT and AI policy and governance context",
+      "evidence": "AND 4. routinely explaining complex technical issues, risks, and tradeoffs to both technical and non-technical stakeholders in ways that build consensus and secure acceptance of recommended technical approaches, priorities, and standards within a federal IT and AI policy and governance context.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'Planning and executing pilots or proofs-of-concept': skill term 'evaluating emerging cloud and AI technologies' not in the quote, removed",
+    "'These qualifications must be clearly referenced in': not a requirement (application instructions), dropped",
+    "'Completed a minimum of 52 weeks in positions at th': not a requirement (administrative condition), dropped"
+  ]
+}

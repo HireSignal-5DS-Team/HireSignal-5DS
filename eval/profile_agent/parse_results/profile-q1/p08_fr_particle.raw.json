@@ -1,0 +1,11 @@
+[
+ {
+  "input": "Section: PROFIL\nData engineer, 2 ans d'expérience, passionnée par le cloud.\n\nSection: EXPÉRIENCE\nData Engineer — Talan Tunisie (2022 – 2024)\n- Pipelines Airflow et dbt sur Snowflake.\n- Projet : migration vers AWS (S3, Glue, Redshift).\n\nSection: PROJETS\nPortfolio personnel ([URL]) en Next.js — [NAME] a conçu l'API.\n\nSection: FORMATION\nDiplôme d'ingénieur en Data Science, ESPRIT, 2022\n\nSection: COMPÉTENCES\nAirflow, dbt, Snowflake, AWS, Python, SQL",
+  "answer": "{\"skills\": [{\"name\": \"Airflow\", \"evidence\": \"Pipelines Airflow et dbt sur Snowflake.\"}, {\"name\": \"dbt\", \"evidence\": \"Pipelines Airflow et dbt sur Snowflake.\"}, {\"name\": \"Snowflake\", \"evidence\": \"Pipelines Airflow et dbt sur Snowflake.\"}, {\"name\": \"AWS\", \"evidence\": \"Projet : migration vers AWS (S3, Glue, Redshift).\"}, {\"name\": \"Python\", \"evidence\": \"Airflow, dbt, Snowflake, AWS, Python, SQL\"}, {\"name\": \"SQL\", \"evidence\": \"Airflow, dbt, Snowflake, AWS, Python, SQL\"}], \"education\": [{\"degree\": \"Diplôme d'ingénieur\", \"field\": \"Data Science\", \"institution\": \"ESPRIT\", \"end\": \"2022\", \"evidence\": \"Diplôme d'ingénieur en Data Science, ESPRIT, 2022\"}], \"experience\": [{\"title\": \"Data Engineer\", \"company\": \"Talan Tunisie\", \"start\": \"2022\", \"end\": \"2024\", \"evidence\": \"Data Engineer — Talan Tunisie (2022 – 2024)\"}]}",
+  "latency_s": 23.57,
+  "prompt_tokens": 1357,
+  "completion_tokens": 288,
+  "mode": "chat",
+  "finish_reason": "stop"
+ }
+]

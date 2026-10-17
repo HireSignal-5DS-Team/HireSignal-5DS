@@ -1,0 +1,253 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883827900",
+  "title": "Data Scientist (Recent Graduate)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "U.S. Citizen or National",
+      "evidence": "U.S. Citizen or National",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "one-year probationary period may be required.",
+      "evidence": "one-year probationary period may be required.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "background investigation is required.",
+      "evidence": "background investigation is required.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "This is a bargaining unit position (AFGE Local 421).",
+      "evidence": "This is a bargaining unit position (AFGE Local 421).",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Generally, male applicants must be registered with the Selective Service.",
+      "evidence": "Generally, male applicants must be registered with the Selective Service.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "This position has an education requirement; you must submit transcripts.",
+      "evidence": "This position has an education requirement; you must submit transcripts.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Relocation expenses will not be paid.",
+      "evidence": "Relocation expenses will not be paid.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "If hired, you may be required to divest certain energy-related securities.",
+      "evidence": "If hired, you may be required to divest certain energy-related securities.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Maximum of 2-page resume.",
+      "evidence": "Maximum of 2-page resume.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "If hired, you will be required to sign a Pathways Participant Agreement",
+      "evidence": "If hired, you will be required to sign a Pathways Participant Agreement",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Eligibility : In order to be eligible for our Recent Graduates Program, you must: Be a recent graduate who has completed, within the last two years, a qualifying associates, bachelors, masters, professional, doctorate, vocational, or technical degree or certificate from a qualifying educational institution ; AND Meet the qualification standards (e.g., series and grade). Veterans unable to apply within two years of receiving their degree, due to military service obligations, have as much as six years after degree completion to apply.",
+      "evidence": "Eligibility : In order to be eligible for our Recent Graduates Program, you must: Be a recent graduate who has completed, within the last two years, a qualifying associates, bachelors, masters, professional, doctorate, vocational, or technical degree or certificate from a qualifying educational institution ; AND Meet the qualification standards (e.g., series and grade). Veterans unable to apply within two years of receiving their degree, due to military service obligations, have as much as six years after degree completion to apply.",
+      "kind": "must",
+      "category": "certification",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "Veterans unable to apply within two years of receiving their degree, due to military service obligations, have as much as six years after degree completion to apply.",
+      "evidence": "Veterans unable to apply within two years of receiving their degree, due to military service obligations, have as much as six years after degree completion to apply.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": 6.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "You must meet the qualification (experience and/or education) and eligibility requirements by the closing date of this announcement.",
+      "evidence": "You must meet the qualification (experience and/or education) and eligibility requirements by the closing date of this announcement.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "To view the eligibility and qualification requirements of a/n Data Scientist (Recent Graduate), GS-1560, please visit: Data Scientist",
+      "evidence": "To view the eligibility and qualification requirements of a/n Data Scientist (Recent Graduate), GS-1560, please visit: Data Scientist",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r15",
+      "text": "GS-1560, please visit: Data Scientist",
+      "evidence": "GS-1560, please visit: Data Scientist",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r16",
+      "text": "GS-07: In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-05 level.",
+      "evidence": "GS-07: In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-05 level.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r17",
+      "text": "GS-09: In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-07 level.",
+      "evidence": "GS-09: In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-07 level.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r18",
+      "text": "If selected for this position, you will be required to: Complete a Declaration for Federal Employment (OF-306) to determine your suitability for Federal employment.",
+      "evidence": "If selected for this position, you will be required to: Complete a Declaration for Federal Employment (OF-306) to determine your suitability for Federal employment.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r19",
+      "text": "Have your Federal salary payments made by direct deposit to a financial institution of your choice.",
+      "evidence": "Have your Federal salary payments made by direct deposit to a financial institution of your choice.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r20",
+      "text": "Go through a Personal Identity Verification (PIV) process that requires two forms of identification from the Form I-9.",
+      "evidence": "Go through a Personal Identity Verification (PIV) process that requires two forms of identification from the Form I-9.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r21",
+      "text": "Federal law requires verification of the identity and employment eligibility of all new hires in the U.S.",
+      "evidence": "Federal law requires verification of the identity and employment eligibility of all new hires in the U.S.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r22",
+      "text": "FERC also participates in the USCIS Electronic Employment Eligibility Verification Program (E-Verify).",
+      "evidence": "FERC also participates in the USCIS Electronic Employment Eligibility Verification Program (E-Verify).",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'one-year probationary period may be required.': unknown category 'condition', inferred 'experience'",
+    "'background investigation is required.': unknown category 'condition', inferred 'skill'",
+    "'This is a bargaining unit position (AFGE Local 421': unknown category 'condition', inferred 'skill'",
+    "'Generally, male applicants must be registered with': unknown category 'condition', inferred 'skill'",
+    "'This position has an education requirement; you mu': unknown category 'condition', inferred 'skill'",
+    "'Relocation expenses will not be paid.': unknown category 'condition', inferred 'skill'",
+    "'If hired, you may be required to divest certain en': unknown category 'condition', inferred 'skill'",
+    "'Maximum of 2-page resume.': unknown category 'condition', inferred 'skill'",
+    "'If hired, you will be required to sign a Pathways ': unknown category 'condition', inferred 'skill'",
+    "'Eligibility : In order to be eligible for our Rece': unknown category 'qualification', inferred 'certification'",
+    "'Veterans unable to apply within two years of recei': unknown category 'qualification', inferred 'education'",
+    "'You must meet the qualification (experience and/or': unknown category 'qualification', inferred 'experience'",
+    "'To view the eligibility and qualification requirem': unknown category 'qualification', inferred 'education'",
+    "'GS-1560, please visit: Data Scientist': unknown category 'qualification', inferred 'skill'",
+    "'GS-07: In addition to the education required for t': unknown category 'qualification', inferred 'experience'",
+    "'GS-09: In addition to the education required for t': unknown category 'qualification', inferred 'experience'",
+    "'If selected for this position, you will be require': unknown category 'qualification', inferred 'skill'",
+    "'Have your Federal salary payments made by direct d': unknown category 'condition', inferred 'skill'",
+    "'Go through a Personal Identity Verification (PIV) ': unknown category 'condition', inferred 'skill'",
+    "'Federal law requires verification of the identity ': unknown category 'condition', inferred 'skill'",
+    "'FERC also participates in the USCIS Electronic Emp': unknown category 'condition', inferred 'skill'"
+  ]
+}
