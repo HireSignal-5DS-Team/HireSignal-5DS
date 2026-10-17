@@ -2,8 +2,10 @@
 
 Two strategies (agents/job/prompts.STRATEGY):
   "whole"    (job-v1, job-v2) the whole offer in one call;
-  "sections" (job-v3)         only the requirement sections, one small chunk per call,
+  "sections" (job-v3, job-v4) only the requirement sections, one small chunk per call,
                               then merge (agents/job/sections.py).
+job-v4 adds a second call per requirement sentence that only asks for the skill
+names (prompts.TERMS_PASS), because the first call leaves skill_terms empty.
 
 The loop (act, check, correct), per call:
 
@@ -32,7 +34,8 @@ from contracts.job_requirements import JobRequirements
 from . import prompts
 from .backend import BackendError, ExtractionBackend
 from .sections import Section, chunk_sections, requirement_sections
-from .validate import MUST_CUES, _has_cue, check_requirements, detect_language, parse_model_output
+from .validate import (MUST_CUES, _has_cue, check_requirements, detect_language, locate_evidence,
+                       parse_model_output)
 
 MAX_ATTEMPTS = 2              # first try + one retry when the answer is unreadable
 REVIEW_IF_DROPPED_SHARE = 0.3  # more than 30% of proposals invented -> a person checks the card
@@ -86,6 +89,31 @@ def _extract_by_sections(post: str, backend, template: str, examples: list[dict]
     return items, title, failed
 
 
+def _add_skill_terms(items: list, post: str, backend, warnings: list[str]) -> None:
+    """job-v4: a second, focused call per requirement sentence that only asks for the skill names.
+
+    The sentence sent is the real text of the offer (the quote after repair), so the
+    verbatim terms can be found in it; each distinct sentence is asked once. The terms
+    are added to any the model already gave; check_requirements then keeps only terms
+    found in the quote and splits compound lines.
+    """
+    found: dict[str, list] = {}
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        evidence, _how = locate_evidence(str(item.get("evidence") or ""), post)
+        if evidence is None:
+            continue  # invented quote: check_requirements drops it
+        if evidence not in found:
+            data = _ask(backend, evidence, prompts.terms_template(), prompts.TERMS_EXAMPLES, warnings,
+                        f"terms '{evidence[:40]}': ")
+            terms = (data or {}).get("skill_terms")
+            found[evidence] = [t for t in terms if isinstance(t, str)] if isinstance(terms, list) else []
+        given = item.get("skill_terms") if isinstance(item.get("skill_terms"), list) else []
+        seen = {str(t).lower() for t in given}
+        item["skill_terms"] = given + [t for t in found[evidence] if t.lower() not in seen]
+
+
 def _apply_section_hints(requirements: list[dict], sections: list[Section], warnings: list[str]) -> None:
     """Items from a 'Nice to have' / 'Preferred' section are nice, unless their wording says required."""
     nice_texts = [s.text for s in sections if s.kind_hint == "nice"]
@@ -118,6 +146,8 @@ def run_job_agent(job_text: str, job_id: str, backend: ExtractionBackend,
 
     if prompts.STRATEGY[version] == "sections":
         items, title, failed = _extract_by_sections(post, backend, template, examples, warnings)
+        if version in prompts.TERMS_PASS:
+            _add_skill_terms(items, post, backend, warnings)
         data = {"requirements": items, "title": title}
     else:
         data = _ask(backend, post, template, examples, warnings, "")

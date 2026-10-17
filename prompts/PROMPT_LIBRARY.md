@@ -5,7 +5,7 @@ the failures observed, and the fix. Code is the source of truth; this file expla
 
 | Prompt | Agent | Model | Current | Code |
 |---|---|---|---|---|
-| Job requirements extraction | Job Agent | NuExtract-2.0-2B | `job-v2` (`job-v3` being measured) | [`agents/job/prompts.py`](../agents/job/prompts.py) |
+| Job requirements extraction | Job Agent | NuExtract-2.0-2B | `job-v2` in code (`job-v4` measured best, not yet switched on) | [`agents/job/prompts.py`](../agents/job/prompts.py) |
 
 ---
 
@@ -192,7 +192,31 @@ changing **what the model sees** can fix it. That is job-v3.
 - A separate tiny call reads the job title; items found under a "Nice to have" / "Preferred"
   heading become `nice` unless their wording says required.
 
-**Results:** *to measure: `python scripts\eval_job_agent.py --prompts job-v2 job-v3 ...`*
+**Results.** Run 2: job-v2 vs job-v3 (2026-10-17, same setup as run 1, repeat 2; full results in
+`eval/job_agent/results/v2-vs-v3/`). The first table used the strict score only:
+
+| Strict score (right sentence AND a shared skill name) | `job-v2` | `job-v3` |
+|---|---|---|
+| F1 | 0.227 | 0.165 |
+| Correct / extra / missed | 27 / 107 / 77 | 21 / 130 / 83 |
+| category accuracy (on matched) | 0.63 | 0.95 |
+| Stable across repeats | 3/10 | **10/10** |
+| Mean latency per offer | 52.3 s | 43.1 s |
+
+v3 looked worse. Reading the cards showed why: **the model left `skill_terms` empty on 150 of
+its 151 items**. The strict score needs a shared skill name, so a requirement whose sentence
+was found correctly still counted as one extra *and* one missed. The scoring was then split
+into two questions (`--rescore`, `eval/job_agent/results/v2-vs-v3/rescore.md`):
+
+| Re-scored, same saved cards | `job-v2` | `job-v3` |
+|---|---|---|
+| **Sentences F1** (requirement sentences found) | 0.481 | **0.500** |
+| Sentences recall | 0.619 | 0.690 |
+| **Skill names F1** (on the sentences found) | 0.288 | **0.075** |
+| Skill names: right / wrong / missing | 15 / 16 / 58 | 3 / 0 / 74 |
+
+So job-v3 does its main job (input selection: best recall, stable, fewer invented
+categories), and loses everything on skill names. That is job-v4.
 
 Drafting the gold cards (before any model run) exposed four more guardrail bugs, now fixed and tested:
 
@@ -202,6 +226,75 @@ Drafting the gold cards (before any model run) exposed four more guardrail bugs,
 | G2 | "CI/CD pipelines and modern DevOps practices" | the `/` inside "CI/CD" was read as "or" | only the words **between** the skills decide; "git (particularly GitLab)" stays one |
 | G3 | "at least 52 weeks", "one (1) year", "one full year" | durations not recognised as years | weeks and months converted; "(1)" and "full" accepted |
 | G4 | "a degree completed within the last two years" | the years check would set `min_years: 2` on an education requirement | years are only filled in automatically for experience requirements |
+
+### job-v4
+
+**Why.** job-v3 finds the right sentences but fills `skill_terms` on 1 item in 151. Without
+skill names, compound lines are never split ("Java and Spring Boot" stays one item) and the
+Matcher has nothing to compare with a CV. Upper bound measured before writing any code: giving
+the saved v3 cards the gold skill names of the sentences they already found raises the strict
+correct count from **21 to 59**. The bottleneck is the skill names, not the sentences.
+
+**Technique: task decomposition, second step.** The first call (job-v3 template, examples
+and chunks, unchanged) only finds the requirement sentences. Then **one focused call per
+requirement sentence** asks for the skill names alone:
+
+```json
+{"skill_terms": ["verbatim-string"]}
+```
+
+- The input is one short sentence, so the model has a single job. A probe on 12 gold sentences
+  returned useful terms in about 0.3 s per call.
+- The sentence sent is the **real text of the offer** (the quote after the guardrails' repair),
+  so verbatim terms can be found in it. Each distinct sentence is asked once. Invented quotes
+  are not sent.
+- 6 examples: 3 with terms (a compound list, a two-word method, French alternatives) and 3 whose
+  correct answer is **empty** (a degree, years of specialized experience, a list of duties).
+  The probe showed the model listing activities ("Writing", "testing") as skills.
+- The new terms are added to any the first call gave. Then the existing guardrails run
+  unchanged: a term must appear in the quote, and compound lines are split.
+
+**Results.** Run 3: job-v3 vs job-v4 (2026-10-17, laptop RTX 4050, Ollama, `--mode inline`,
+seed 0, repeat 2; full results in `eval/job_agent/results/v3-vs-v4/`):
+
+| Measure | `job-v3` | `job-v4` |
+|---|---|---|
+| Sentences F1 | 0.498 | 0.517 |
+| Sentences found / extra / missed | 57 / 88 / 27 | 60 / 88 / 24 |
+| **Skill names F1** | 0.076 | **0.532** |
+| Skill names precision / recall | 1.0 / 0.039 | 0.404 / **0.776** |
+| Skill names right / wrong / missing | 3 / 0 / 73 | 59 / 87 / 17 |
+| **Strict F1** | 0.159 | **0.409** |
+| Strict correct / extra / missed | 20 / 128 / 84 | 61 / 133 / 43 |
+| kind accuracy (on found sentences) | 0.86 | 0.82 |
+| category accuracy (on found sentences) | 0.81 | 0.82 |
+| Requirements in the 10 cards | 148 | 194 |
+| Mean latency per offer | 34.0 s | 40.2 s (+6 s) |
+| Stable across repeats | 10/10 | 10/10 |
+
+The skill-name recall goes from 4% to 78%, and the strict score of the whole agent goes from
+0.16 to 0.41, the best so far, for 6 s more per offer. Sentence finding is almost unchanged, as
+expected: the first call is the same. The small gain comes from `_split_by_clause`, which now
+receives terms and cuts some lines into their real clauses (offer 885947600: 0.21 → 0.45).
+
+**Error analysis** (the 87 wrong skill names, on the sentences found):
+
+| # | Error | Examples | Count |
+|---|---|---|---|
+| T1 | A real skill or domain that the gold card does not mark (the gold keeps one or two key terms per sentence) | "model development", "containerized workloads", "web services", "secure authentication" | 52 |
+| T2 | Boundary differs from the gold term | "CI/CD pipelines" vs "CI/CD", "DevOps practices" vs "DevOps", "RESTful" + "API" vs "RESTful APIs" | 12 |
+| T3 | Generic words: activities and adjectives | "designing", "implementing", "troubleshooting", "secure", "scalable" | 12 |
+| T4 | Terms on a sentence with no skill in the gold (degree contents, grade levels) | "GS-13", "mathematics", "statistics", "real world environments" | 11 |
+
+Every wrong term also produces a wrong split, which is why the card count rises from 148 to 194
+and the strict "extra" count does not go down.
+
+Reading: T3 and T4 are model errors that more empty examples or a stopword filter in code
+could remove. T1 and T2 are partly an **annotation question**: the gold cards keep only the
+main terms, and a matcher could well use "containerized workloads". Before tuning the prompt
+for precision, the annotation rule for `skill_terms` (ANNOTATION_RULES.md §3) should say how
+many terms per sentence and where a term starts and ends, and the gold should be reviewed by a
+second person. Otherwise the prompt would be tuned to one annotator's habits.
 
 ### Guardrails applied after every call (code, not prompt)
 

@@ -1,0 +1,65 @@
+### call 1 - input starts: 'ALL QUALIFICATION REQUIREMENTS MUST BE MET BY THE CLOSING DATE OF THIS ANNOUNCEM'
+{"requirements": [{"evidence": "Evidence of copying and pasting directly from the vacancy announcement without clearly documenting supplemental information to describe your experience will result in an ineligible rating.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Evidence of copying and pasting directly from the vacancy announcement without clearly documenting supplemental information to describe your experience will result in an ineligible rating."}, {"evidence": "This will prevent you from being considered further.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "This will prevent you from being considered further."}, {"evidence": "Basic Requirement: You must have IT-related experience demonstrating each of the four competencies listed below:", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Basic Requirement: You must have IT-related experience demonstrating each of the four competencies listed below:"}]}
+
+### call 2 - input starts: 'Attention to Detail - is thorough when performing work and conscientious about a'
+{"requirements": [{"evidence": "Attention to Detail - is thorough when performing work and conscientious about attending to detail;", "skill_terms": [], "kind": "must", "category": "skill", "min_years": null, "text": "Attention to Detail - is thorough when performing work and conscientious about attending to detail"}, {"evidence": "Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations;", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations"}, {"evidence": "knows about available products and services;", "skill_terms": [], "kind": "must", "category": "skill", "min_years": null, "text": "knows about available products and services"}, {"evidence": "is committed to providing quality products and services;", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "is committed to providing quality products and services"}]}
+
+### call 3 - input starts: 'Oral Communication - Expresses information (for example, ideas or facts) to indi'
+{"requirements": [{"evidence": "Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately;", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately"}, {"evidence": "AND 4. Problem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "AND 4. Problem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations."}]}
+
+### call 4 - input starts: 'AND In order to qualify for the GS-15 , you must meet the following: You must de'
+{"requirements": [{"evidence": "You must demonstrate in your resume at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, to include: (1) Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": 1, "text": "You must demonstrate in your resume at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, to include: (1) Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere."}, {"evidence": "Analyzing and reviewing automated workflows, including integrations between RPA tools and other software applications, to assess performance, identify gaps, or recommend improvements.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Analyzing and reviewing automated workflows, including integrations between RPA tools and other software applications, to assess performance, identify gaps, or recommend improvements."}]}
+
+### call 5 - input starts: '(3) Planning, scheduling, and carrying out end-to-end RPA projects (from busines'
+{"requirements": [{"evidence": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring)", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring)"}, {"evidence": "Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies"}]}
+
+### call 6 - input starts: 'Volunteer work helps build critical competencies, knowledge, and skills, and can'
+{"requirements": [{"evidence": "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment.", "skill_terms": [], "kind": "nice", "category": "experience", "min_years": null, "text": "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment."}]}
+
+### call 7 - input starts: 'This job does not have an education qualification requirement.'
+{"requirements": [{"evidence": null, "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "This job does not have an education qualification requirement."}]}
+
+### call 8 - input starts: 'Summary This position is located in the Department of Health & Human Services (H'
+{"job_title": "Senior IT Specialist (Robotic Process Automation and AI)"}
+
+### call 9 - input starts: 'Evidence of copying and pasting directly from the vacancy announcement without c'
+{"skill_terms": []}
+
+### call 10 - input starts: 'This will prevent you from being considered further.'
+{"skill_terms": []}
+
+### call 11 - input starts: 'Basic Requirement: You must have IT-related experience demonstrating each of the'
+{"skill_terms": []}
+
+### call 12 - input starts: 'Attention to Detail - is thorough when performing work and conscientious about a'
+{"skill_terms": ["Attention to Detail"]}
+
+### call 13 - input starts: 'Works with clients and customers (that is, any individuals who use or receive th'
+{"skill_terms": []}
+
+### call 14 - input starts: 'knows about available products and services;'
+{"skill_terms": ["available products", "services"]}
+
+### call 15 - input starts: 'is committed to providing quality products and services;'
+{"skill_terms": []}
+
+### call 16 - input starts: 'Oral Communication - Expresses information (for example, ideas or facts) to indi'
+{"skill_terms": ["Oral Communication", "expresses information", "ideas or facts", "individuals or groups", "effectively", "taking into account the audience", "nature of the information", "technical", "sensitive", "controversial", "makes clear and convincing oral presentations", "listens to others", "attends to nonverbal cues", "responds appropriately"]}
+
+### call 17 - input starts: 'AND 4. Problem Solving - identifies problems; determines accuracy and relevance '
+{"skill_terms": ["Problem Solving"]}
+
+### call 18 - input starts: 'You must demonstrate in your resume at least one year (52 weeks) of qualifying s'
+{"skill_terms": ["Designing", "overseeing", "large-scale automation efforts", "robotic process automation", "UiPath", "Microsoft Power Automate", "Automation Anywhere"]}
+
+### call 19 - input starts: 'Analyzing and reviewing automated workflows, including integrations between RPA '
+{"skill_terms": ["RPA", "automated workflows"]}
+
+### call 20 - input starts: 'Planning, scheduling, and carrying out end-to-end RPA projects (from business pr'
+{"skill_terms": ["Planning", "scheduling", "end-to-end RPA projects", "business process analysis", "bot development", "testing", "deployment", "performance monitoring"]}
+
+### call 21 - input starts: 'Serving as an expert or consultant to senior leadership on the feasibility, impl'
+{"skill_terms": ["feasibility", "implementation", "governance", "enterprise-wide adoption"]}
+
+### call 22 - input starts: 'Volunteer work helps build critical competencies, knowledge, and skills, and can'
+{"skill_terms": []}

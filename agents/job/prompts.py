@@ -293,16 +293,48 @@ EXAMPLES_V3 = [
     {"input": _V3_EX3_INPUT, "output": json.dumps(_V3_EX3_OUTPUT, ensure_ascii=False)},
 ]
 
+# ------------------------------------------------------------------ v4 ---
+# Fix for the v2-vs-v3 evaluation: the model fills skill_terms on 1 of 151 items,
+# so compound lines are never split and most items share no term with the gold.
+# Re-scoring the saved v3 cards with the right terms on the same sentences:
+# 21 -> 59 correct requirements.
+# Technique: task decomposition again. job-v4 = job-v3 for finding the sentences,
+# then a SECOND, focused call per requirement sentence with a one-field template
+# that only asks for the skill names. The sentence is short, so the model has one
+# job. Examples include sentences whose correct answer is empty (degree, years of
+# experience, duties-style lists), because a probe showed the model listing
+# activities ("Writing", "testing") as skills.
+
+TERMS_TEMPLATE = {"skill_terms": ["verbatim-string"]}
+
+
+def _terms(text, terms):
+    return {"input": text, "output": json.dumps({"skill_terms": terms}, ensure_ascii=False)}
+
+
+TERMS_EXAMPLES = [
+    _terms("2+ years of experience with Python, Airflow and dbt.", ["Python", "Airflow", "dbt"]),
+    _terms("Knowledge of statistical modeling and machine learning techniques.",
+           ["statistical modeling", "machine learning"]),
+    _terms("Maîtrise de MySQL ou PostgreSQL.", ["MySQL", "PostgreSQL"]),
+    _terms("Bachelor's degree in computer science or a related field.", []),
+    _terms("One year of specialized experience equivalent to the GS-09 level.", []),
+    _terms("Preparing reports, briefing senior managers, and coordinating with other teams.", []),
+]
+
 # ------------------------------------------------------------ registry ---
 
 VERSIONS = {
     "job-v1": (TEMPLATE_V1, EXAMPLES_V1),
     "job-v2": (TEMPLATE_V2, EXAMPLES_V2),
     "job-v3": (TEMPLATE_V3, EXAMPLES_V3),
+    "job-v4": (TEMPLATE_V3, EXAMPLES_V3),
 }
 # How the offer is given to the model: the whole offer in one call, or only the
 # requirement sections, a chunk per call (agents/job/sections.py).
-STRATEGY = {"job-v1": "whole", "job-v2": "whole", "job-v3": "sections"}
+STRATEGY = {"job-v1": "whole", "job-v2": "whole", "job-v3": "sections", "job-v4": "sections"}
+# Versions that ask for the skill names in a second call per requirement sentence.
+TERMS_PASS = {"job-v4"}
 PROMPT_VERSION = "job-v2"  # active version (switch to job-v3 once it is measured on the real offers)
 
 
@@ -318,3 +350,7 @@ def template_json(version: str | None = None) -> str:
 
 def title_template() -> str:
     return json.dumps(TITLE_TEMPLATE, indent=4)
+
+
+def terms_template() -> str:
+    return json.dumps(TERMS_TEMPLATE, indent=4)

@@ -1,0 +1,150 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883827900",
+  "title": "Data Scientist (Recent Graduate)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "recent graduate who has completed, within the last two years, a qualifying associates, bachelors, masters, professional, doctorate, vocational, or technical degree or certificate from a qualifying educational institution",
+      "evidence": "recent graduate who has completed, within the last two years, a qualifying associates, bachelors, masters, professional, doctorate, vocational, or technical degree or certificate from a qualifying educational institution",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Veterans unable to apply within two years of receiving their degree, due to military service obligations, have as much as six years after degree completion to apply.",
+      "evidence": "Veterans unable to apply within two years of receiving their degree, due to military service obligations, have as much as six years after degree completion to apply.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 2.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "You must meet the qualification (experience and/or education) and eligibility requirements by the closing date of this announcement.",
+      "evidence": "You must meet the qualification (experience and/or education) and eligibility requirements by the closing date of this announcement.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-05 level.",
+      "evidence": "Data Scientist For the GS-07",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Specialized experience is defined as: Extracting, aggregating, and cleaning complex data from relational databases via Python, R, or SQL to create standardized datasets for further analysis.",
+      "evidence": "Specialized experience is defined as: Extracting, aggregating, and cleaning complex data from relational databases via Python, R, or SQL to create standardized datasets for further analysis.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional; philanthropic; religious; spiritual; community, student, social).",
+      "evidence": "Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional; philanthropic; religious; spiritual; community, student, social).",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "transcripts are required.",
+      "evidence": "transcripts",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "If more than 10 percent of your undergraduate course work (credit hours) were taken on a pass/fail basis, your claim of superior academic achievement must be based upon class standing or membership in an honor society.",
+      "evidence": "If more than 10 percent of your undergraduate course work (credit hours) were taken on a pass/fail basis, your claim of superior academic achievement must be based upon class standing or membership in an honor society.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "One academic year of graduate education is the number of credits hours your graduate school has determined to represent one academic year of full-time study.",
+      "evidence": "One academic year of graduate education is the number of credits hours your graduate school has determined to represent one academic year of full-time study.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "18 semester hours (or 27 quarter hours) should be considered as satisfying the requirement for one year of full-time graduate study",
+      "evidence": "18 semester hours (or 27 quarter hours)",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Failure to submit a copy of your transcripts at the time of application will result in your application being marked incomplete and you will not receive further consideration.",
+      "evidence": "Failure to submit a copy of your transcripts at the time of application will result in your application being marked incomplete and you will not receive further consideration.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "Such study may have been performed on a full-time or part-time basis.",
+      "evidence": "Such study may have been performed on a full-time or part-time basis.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "If you cannot obtain your graduate school's definition of one year of graduate study, 18 semester hours (or 27 quarter hours) should be considered as satisfying the requirement for one year of full-time graduate study.",
+      "evidence": "If you cannot obtain your graduate school's definition of one year of graduate study, 18 semester hours (or 27 quarter hours) should be considered as satisfying the requirement for one year of full-time graduate study.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'Veterans unable to apply within two years of recei': min_years None -> 2.0 (from the quote)",
+    "'In addition to the education required for this pos': quote not found (closest 0.48) in the job offer, dropped as invented (model quoted: \"Data Scientist For the GS-09\")",
+    "'transcripts are required.': duplicate, dropped",
+    "'transcripts are required.': duplicate, dropped",
+    "'transcripts are required.': duplicate, dropped",
+    "'If more than 10 percent of your undergraduate cour': duplicate, dropped",
+    "'One academic year of graduate education is the num': min_years 1.0 removed (no years in the quote)",
+    "'One academic year of graduate education is the num': duplicate, dropped"
+  ]
+}
