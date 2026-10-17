@@ -32,6 +32,7 @@ export function workflowStages(
   running: boolean,
   step: number,
   error: string,
+  apiFlow: "v1" | "v2" = "v1",
 ): WorkflowStage[] {
   if (executionMode === "MOCK") {
     return names.map((name, i) => {
@@ -59,6 +60,10 @@ export function workflowStages(
       };
     });
   }
+
+  // V2 has real upstream agents; its server returns their individual stage
+  // statuses after each candidate completes. Never reuse the V1 placeholders.
+  if (apiFlow === "v2") return workflowStagesV2(campaign, running, error);
 
   const results: RequirementResult[] =
     campaign?.mode === "REAL"
@@ -138,4 +143,142 @@ export function workflowStages(
         : "SLM report generation is not confirmed by the current /api/v1/match response",
     },
   ];
+}
+
+
+/** V2 is measured from the server's completed per-candidate stage records.
+ *  The API is synchronous: there is NO live stage streaming during inference.
+ */
+function workflowStagesV2(
+  campaign: Campaign | null,
+  running: boolean,
+  error: string,
+): WorkflowStage[] {
+  const candidates = campaign?.mode === "REAL" ? campaign.candidates : [];
+  const awaitingDetail = error
+    ? "Analysis failed; no verified stage results were returned. See the error above."
+    : running
+      ? "Awaiting /api/v2/analyze response; the API does not stream live stage progress."
+      : "No completed V2 analysis has been received yet.";
+
+  const pending = (name: string): WorkflowStage => ({
+    name,
+    state: error ? "Not reported" : "Pending",
+    detail: awaitingDetail,
+  });
+
+  const serverStage = (name: string, key: string): WorkflowStage => {
+    if (!candidates.length) return pending(name);
+    const records = candidates.map((candidate) =>
+      candidate.stages?.find((stage) => stage.stage === key),
+    );
+    const failure = records.find((record) => record?.status === "failed");
+    if (failure) {
+      return {
+        name,
+        state: "Failed",
+        detail: failure.error ?? `Backend reported that ${key} failed`,
+      };
+    }
+    const confirmed = records.filter((record) => record?.status === "ok").length;
+    if (confirmed !== candidates.length) {
+      return {
+        name,
+        state: "Not reported",
+        detail: `Verified server stage returned for ${confirmed}/${candidates.length} candidates`,
+      };
+    }
+    const seconds = records.reduce((sum, record) => sum + (record?.elapsed_s ?? 0), 0);
+    return {
+      name,
+      state: "Completed",
+      detail: `Server confirmed ${key} for ${confirmed}/${candidates.length} candidates · ${seconds.toFixed(1)} s total`,
+    };
+  };
+
+  const reader = serverStage("CV Reader", "reader");
+  const profile = serverStage("Profile Agent", "profile");
+  const job = serverStage("Job Agent", "job_agent");
+  const matcherServer = serverStage("Matcher", "matcher_pipeline");
+  const allModelBacked = candidates.length > 0 && candidates.every(
+    (candidate) => candidate.report.backend.is_model === true &&
+      candidate.report.results.length > 0,
+  );
+  const matcher: WorkflowStage = matcherServer.state === "Completed" && !allModelBacked
+    ? {
+        name: "Matcher",
+        state: "Not reported",
+        detail: "Server stage returned, but real Matcher provenance is not confirmed.",
+      }
+    : matcherServer;
+
+  const evidenceStage = (
+    name: string,
+    verified: boolean,
+    confirmedDetail: string,
+    missingDetail: string,
+  ): WorkflowStage => {
+    if (!candidates.length) return pending(name);
+    if (matcher.state !== "Completed") {
+      return {
+        name,
+        state: "Not reported",
+        detail: "Matcher pipeline has not been fully verified.",
+      };
+    }
+    return {
+      name,
+      state: verified ? "Completed" : "Not reported",
+      detail: verified ? confirmedDetail : missingDetail,
+    };
+  };
+
+  const hasRagProvider = candidates.length > 0 && candidates.every(
+    (candidate) => typeof candidate.report.backend.knowledge === "string" &&
+      candidate.report.backend.knowledge.includes("rag"),
+  );
+  const rag = evidenceStage(
+    "RAG Retrieval",
+    hasRagProvider,
+    "Real Matcher response confirms the RAG knowledge provider; some queries may correctly retrieve zero citations.",
+    "No RAG provider was confirmed in the Matcher response.",
+  );
+
+  const results: RequirementResult[] = candidates.flatMap((candidate) => candidate.report.results);
+  const biasCount = results.filter((result) => result.bias_audit != null).length;
+  const judgeCount = results.filter((result) => result.judge != null).length;
+  const bias = evidenceStage(
+    "Bias Auditor",
+    results.length > 0 && biasCount === results.length,
+    `Bias audit returned for ${biasCount}/${results.length} requirements`,
+    `Only ${biasCount}/${results.length} bias audit results were returned`,
+  );
+  const judge = evidenceStage(
+    "Judge",
+    results.length > 0 && judgeCount === results.length,
+    `Judge verdict returned for ${judgeCount}/${results.length} requirements`,
+    `Only ${judgeCount}/${results.length} Judge verdicts were returned`,
+  );
+
+  const reporterServer = serverStage("Report Writer", "reporter");
+  const reportsPresent = candidates.length > 0 && candidates.every(
+    (candidate) => candidate.reporter != null,
+  );
+  const reporter: WorkflowStage =
+    reporterServer.state === "Completed" && !reportsPresent
+      ? {
+          name: "Report Writer",
+          state: "Not reported",
+          detail: "Reporter server stage succeeded but its validated report was not returned.",
+        }
+      : reporterServer;
+  if (reporter.state === "Completed") {
+    const slmSections = candidates.reduce(
+      (sum, candidate) => sum + (candidate.reporter?.provenance.sections_slm ?? 0),
+      0,
+    );
+    reporter.detail += ` · ${slmSections} SLM sections accepted; deterministic fallback where needed`;
+  }
+
+  return [reader, profile, job, rag, matcher, bias, judge, reporter];
 }

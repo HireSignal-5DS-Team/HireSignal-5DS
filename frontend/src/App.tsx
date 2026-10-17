@@ -777,7 +777,7 @@ function Processing({
   campaign: Campaign | null;
   retry: () => void;
 }) {
-  const verifiedStages = workflowStages(mode, campaign, running, step, error);
+  const verifiedStages = workflowStages(mode, campaign, running, step, error, flow);
   return (
     <>
       <PageHeading
