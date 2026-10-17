@@ -84,3 +84,34 @@ python -m pytest -q tests/test_job_agent.py tests/test_job_contract.py
 ```
 
 They use a fake NuExtract, so they run without the model or a GPU.
+
+## job-q1: the team's Qwen instead of NuExtract
+
+`job-q1` uses the **plain Qwen3-4B-Instruct-2507** that the Matcher already runs
+(`config/matcher_models.json` on the release branch), so on a shared machine it adds **no GPU
+memory**. It reads the **same settings as the Matcher**: `HS_LLM_BASE_URL`, `HS_LLM_MODEL`,
+`HS_LLM_API_KEY` (local llama.cpp or a hosted API, one switch for the whole team).
+It never uses the Matcher's LoRA: a model name containing "lora" is refused.
+
+Same pipeline as job-v4 (sections, chunks, filter, checks). Qwen gets **written instructions**
+(`prompts.SYSTEM_Q1`) and gives the skill names in the same answer (no second call per sentence).
+
+**On the laptop with Ollama** (the same file as the team's: unsloth Q4_K_M, ~2.5 GB):
+
+```
+ollama pull hf.co/unsloth/Qwen3-4B-Instruct-2507-GGUF:Q4_K_M
+$env:HS_LLM_BASE_URL = "http://127.0.0.1:11434/v1"
+$env:HS_LLM_MODEL = "hf.co/unsloth/Qwen3-4B-Instruct-2507-GGUF:Q4_K_M"
+python scripts\run_job_agent.py examples\job_post.example.txt --prompt job-q1
+```
+
+**With the team's llama.cpp server** (plain Qwen on port 8080): the defaults already point there.
+**With a hosted API**: set the three `HS_LLM_*` variables as for the Matcher. Job offers are
+public, so sending them to an API is fine.
+
+**Compare with job-v4 in one run** (each version gets its own model; Ollama swaps them):
+
+```
+$env:HS_NUEXTRACT_MODEL = "hf.co/numind/NuExtract-2.0-2B-GGUF:Q4_K_M"
+python scripts\eval_job_agent.py --prompts job-v4 job-q1 --base-url http://127.0.0.1:11434/v1 --mode inline --llm-url http://127.0.0.1:11434/v1 --repeat 2 --name v4-vs-q1
+```

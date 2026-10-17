@@ -1,6 +1,7 @@
 """Evaluate the Job Agent on the real job offers against the gold cards.
 
     python scripts/eval_job_agent.py --base-url http://127.0.0.1:11434/v1 --mode inline
+    python scripts/eval_job_agent.py --prompts job-v4 job-q1 --base-url <NuExtract server> --llm-url <Qwen server>
     python scripts/eval_job_agent.py --prompts job-v1 job-v2 --repeat 2 --name v1-vs-v2
     python scripts/eval_job_agent.py --rescore v2-vs-v3     (re-score a saved run, no model needed)
 
@@ -26,7 +27,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from agents.job import BackendError, JobAgentError, NuExtractClient, PROMPT_VERSION, VERSIONS, run_job_agent  # noqa: E402
+from agents.job import BackendError, JobAgentError, PROMPT_VERSION, VERSIONS, make_backend, run_job_agent  # noqa: E402
+from agents.job.prompts import MODEL_FAMILY  # noqa: E402
 from agents.job.scoring import Score, TermScore, score_card, score_sentences, score_skill_terms  # noqa: E402
 
 OFFERS = ROOT / "eval/job_agent/offers"
@@ -214,7 +216,8 @@ def main() -> None:
     parser.add_argument("--repeat", type=int, default=1, help="runs per offer, to measure stability")
     parser.add_argument("--offers", nargs="*", help="only these job ids (default: all with a gold card)")
     parser.add_argument("--base-url")
-    parser.add_argument("--mode", choices=["kwargs", "inline"])
+    parser.add_argument("--mode", choices=["kwargs", "inline"], help="NuExtract only")
+    parser.add_argument("--llm-url", help="Qwen server for job-q* (default: HS_LLM_BASE_URL, else 127.0.0.1:8080)")
     parser.add_argument("--name", help="results folder name (default: date-time)")
     parser.add_argument("--rescore", metavar="NAME", help="re-score a saved run (writes rescore.md, keeps summary.md)")
     args = parser.parse_args()
@@ -229,7 +232,10 @@ def main() -> None:
         print(md + f"\nSaved {folder / 'rescore.md'}")
         return
 
-    backend = NuExtractClient(base_url=args.base_url, mode=args.mode)
+    backends = {}
+    for prompt in args.prompts:  # NuExtract for job-v*, the team's plain Qwen for job-q*
+        url = args.llm_url if MODEL_FAMILY[prompt] == "qwen" else args.base_url
+        backends[prompt] = make_backend(prompt, base_url=url, mode=args.mode)
     name = args.name or datetime.now().strftime("%Y%m%d-%H%M")
     out = ROOT / "eval/job_agent/results" / name
     gold_n = sum(len(json.loads((GOLD / f"{j}.json").read_text(encoding="utf-8"))["requirements"]) for j in job_ids)
@@ -238,12 +244,15 @@ def main() -> None:
     results = {}
     try:
         for prompt in args.prompts:
-            results[prompt] = run_prompt(prompt, backend, job_ids, out / prompt, args.repeat)
+            results[prompt] = run_prompt(prompt, backends[prompt], job_ids, out / prompt, args.repeat)
     except BackendError as exc:
         sys.exit(f"MODEL ERROR: {exc}")
 
     meta = {"date": datetime.now().strftime("%Y-%m-%d"), "offers": len(job_ids), "gold_requirements": gold_n,
-            "model": backend.model, "mode": backend.mode, "repeat": args.repeat, "active_prompt": PROMPT_VERSION}
+            "model": ", ".join(sorted({b.model for b in backends.values()})),
+            "mode": ", ".join(sorted({b.mode for b in backends.values()})),
+            "models": {p: b.info() for p, b in backends.items()},
+            "repeat": args.repeat, "active_prompt": PROMPT_VERSION}
     (out / "summary.json").write_text(json.dumps({"meta": meta, "results": results}, indent=2), encoding="utf-8")
     md = to_markdown(results, meta)
     (out / "summary.md").write_text(md, encoding="utf-8")

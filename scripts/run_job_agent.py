@@ -4,6 +4,7 @@
     python scripts/run_job_agent.py offer.txt --job-id JD-007 --out out/JD-007.json
     python scripts/run_job_agent.py offer.txt --mode inline      (if the server ignores chat_template_kwargs)
     python scripts/run_job_agent.py offer.txt --prompt job-v1    (an older prompt, for before/after)
+    python scripts/run_job_agent.py offer.txt --prompt job-q1    (the team's plain Qwen; reads HS_LLM_BASE_URL / HS_LLM_MODEL)
 
 NuExtract must be running first (see agents/job/README.md).
 """
@@ -15,7 +16,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from agents.job import BackendError, JobAgentError, NuExtractClient, PROMPT_VERSION, VERSIONS, run_job_agent  # noqa: E402
+from agents.job import BackendError, JobAgentError, PROMPT_VERSION, VERSIONS, make_backend, run_job_agent  # noqa: E402
 
 
 def read_offer(path: Path) -> str:
@@ -36,14 +37,17 @@ def main() -> None:
     parser.add_argument("file", type=Path, help="job offer (.txt or .md)")
     parser.add_argument("--job-id", help="default: the file name")
     parser.add_argument("--out", type=Path, help="where to save the card (default: out/<job-id>.json)")
-    parser.add_argument("--base-url", help="NuExtract server, default http://127.0.0.1:8080/v1")
+    parser.add_argument("--base-url", help="model server (NuExtract for job-v*, Qwen for job-q*)")
     parser.add_argument("--mode", choices=["kwargs", "inline"], help="how the template is sent")
     parser.add_argument("--prompt", choices=sorted(VERSIONS), default=PROMPT_VERSION,
                         help=f"prompt version (default {PROMPT_VERSION})")
     args = parser.parse_args()
 
     job_id = args.job_id or args.file.stem
-    backend = NuExtractClient(base_url=args.base_url, mode=args.mode)
+    try:
+        backend = make_backend(args.prompt, base_url=args.base_url, mode=args.mode)
+    except ValueError as exc:
+        sys.exit(f"CONFIG ERROR: {exc}")
     print(f"Job Agent ({args.prompt}) -> {backend.info()}")
 
     try:

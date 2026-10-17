@@ -207,7 +207,7 @@ def salvage_cut_json(raw: str) -> tuple[dict, int] | None:
 
 def parse_model_output(raw: str) -> dict:
     """NuExtract should answer pure JSON; tolerate code fences or extra text around it."""
-    raw = raw.strip()
+    raw = re.sub(r"<think>.*?</think>", "", raw, flags=re.DOTALL).strip()  # chat models that "think"
     raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw)
     try:
         data = json.loads(raw)

@@ -322,6 +322,51 @@ TERMS_EXAMPLES = [
     _terms("Preparing reports, briefing senior managers, and coordinating with other teams.", []),
 ]
 
+# ------------------------------------------------------------------ q1 ---
+# job-q1: the team's plain Qwen3-4B-Instruct (no LoRA) instead of NuExtract.
+# Why: GPU memory. The Matcher already runs Qwen3-4B (config/matcher_models.json);
+# on a 4 GB card NuExtract (~1.9 GB) and Qwen (~2.5-3.5 GB) cannot both stay loaded.
+# Sharing the Matcher's plain-Qwen server (or the same hosted API) adds no memory.
+# What changes: Qwen follows written instructions, so the prompt is a role + explicit
+# rules (what to extract, what to skip, the skill-name rules S1-S6 of
+# eval/job_agent/ANNOTATION_RULES.md, the JSON format) + the job-v3 examples as
+# few-shot turns. Skill names are asked in the SAME call (no second call per
+# sentence as in job-v4): fewer calls on a server shared with the Matcher.
+# Unchanged: requirement sections, chunks, guardrails, not-a-requirement filter.
+
+SYSTEM_Q1 = """You are the Job Agent of HireSignal, a CV-screening system. You read a PIECE of a job offer \
+and list the requirements a CANDIDATE must meet. A recruiter and a matching system rely on your list, \
+and code checks every quote against the offer, so never invent or reword a quote.
+
+Answer with a JSON object only: {"requirements": [ ... ]}. Each item has these keys, in this order:
+- "evidence": the requirement sentence or clause, copied EXACTLY, character for character, from the input.
+- "skill_terms": the named skills the requirement asks for, each copied exactly from the evidence: tools, \
+technologies, languages, methods, domains (e.g. "Python", "machine learning", "SQL"). After "such as", \
+"e.g.", "including" or "particularly", list each named example. Use the short form a CV would use \
+("CI/CD", not "CI/CD pipelines"). A full name with its acronym in brackets is one term, the first form \
+written. Never terms: verbs or activities, adjectives, generic words (data, code, applications, solutions, \
+environments), grade levels (GS-13), generic labels ("specialized experience", "IT-related experience"). \
+Education items have no terms: []. A soft skill is a term only when it stands alone as a named competency.
+- "kind": "nice" when the wording or its heading makes it optional (preferred, desired, a plus, nice to \
+have, ideally, appreciated, atout, souhaité); otherwise "must".
+- "category": exactly one of "skill", "experience", "education", "certification", "language", "other".
+- "min_years": the minimum number of years asked for, as a number (52 weeks = 1), or null if none is stated.
+- "text": the requirement as one short statement.
+
+Extract ONLY what the candidate must have: degrees, experience, skills, knowledge, certifications, \
+languages, named competencies. Do NOT extract:
+- job duties or responsibilities (what the job does);
+- citizenship, residency, age, background checks, drug tests, security clearance, Selective Service, \
+probation, time in grade, merit promotion rules;
+- application instructions: resume length or content, transcripts, questionnaires, deadlines, links, \
+how or where to apply, foreign-education evaluation;
+- definitions and explanations ("Experience refers to ...", "One year of graduate education is ...");
+- salary, benefits, location, schedule.
+When the text gives alternative ways to qualify ("... OR a Ph.D. OR a combination of education and \
+experience"), extract only the first one. If the piece contains no requirement, answer {"requirements": []}."""
+
+EXAMPLES_Q1 = EXAMPLES_V3  # same chunk-sized examples (one is all text to skip, with an empty answer)
+
 # ------------------------------------------------------------ registry ---
 
 VERSIONS = {
@@ -329,18 +374,25 @@ VERSIONS = {
     "job-v2": (TEMPLATE_V2, EXAMPLES_V2),
     "job-v3": (TEMPLATE_V3, EXAMPLES_V3),
     "job-v4": (TEMPLATE_V3, EXAMPLES_V3),
+    "job-q1": (SYSTEM_Q1, EXAMPLES_Q1),
 }
+# Which model a version is written for (agents/job/backend.make_backend picks the client).
+MODEL_FAMILY = {"job-v1": "nuextract", "job-v2": "nuextract", "job-v3": "nuextract", "job-v4": "nuextract",
+                "job-q1": "qwen"}
 # How the offer is given to the model: the whole offer in one call, or only the
 # requirement sections, a chunk per call (agents/job/sections.py).
-STRATEGY = {"job-v1": "whole", "job-v2": "whole", "job-v3": "sections", "job-v4": "sections"}
+STRATEGY = {"job-v1": "whole", "job-v2": "whole", "job-v3": "sections", "job-v4": "sections",
+            "job-q1": "sections"}
 # Versions that ask for the skill names in a second call per requirement sentence.
 TERMS_PASS = {"job-v4"}
 PROMPT_VERSION = "job-v4"  # active version: best measured on the 10 real offers (PROMPT_LIBRARY.md, run 3)
 
 
 def get_prompt(version: str | None = None) -> tuple[str, list[dict]]:
-    """(template as indented JSON, examples) for a prompt version."""
+    """(template as indented JSON, or the instructions for a chat model; examples) for a prompt version."""
     template, examples = VERSIONS[version or PROMPT_VERSION]
+    if isinstance(template, str):  # written instructions (job-q1)
+        return template, examples
     return json.dumps(template, indent=4, ensure_ascii=False), examples
 
 

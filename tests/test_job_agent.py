@@ -69,7 +69,9 @@ def test_prompt_examples_obey_their_own_rules(version):
             assert out["title"] in ex["input"]
         for r in out["requirements"]:
             assert r["evidence"] in ex["input"], r["evidence"]
-            assert set(r) == set(template["requirements"][0]), "example fields must match the template"
+            fields = (set(template["requirements"][0]) if isinstance(template, dict)
+                      else {"evidence", "skill_terms", "kind", "category", "min_years", "text"})  # job-q1 keys
+            assert set(r) == fields, "example fields must match the template"
             for term in r["skill_terms"]:
                 assert term in r["evidence"], term
 

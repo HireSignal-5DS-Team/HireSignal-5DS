@@ -54,7 +54,7 @@ def _ask(backend, text: str, template: str, examples: list[dict], warnings: list
         try:
             data = parse_model_output(raw)
         except (ValueError, TypeError) as exc:
-            warnings.append(f"{where}attempt {attempt}: unreadable answer from NuExtract ({exc})")
+            warnings.append(f"{where}attempt {attempt}: unreadable answer from the model ({exc})")
             continue
         if data.pop("_salvaged", None) is not None:
             warnings.append(f"{where}answer was cut off; kept the {len(data['requirements'])} complete items")
@@ -80,7 +80,7 @@ def _extract_by_sections(post: str, backend, template: str, examples: list[dict]
         found = data.get("requirements")
         items += found if isinstance(found, list) else []
     if failed == len(chunks):
-        raise JobAgentError("NuExtract never returned valid JSON. " + " | ".join(warnings))
+        raise JobAgentError("The model never returned valid JSON. " + " | ".join(warnings))
     if failed:
         warnings.append(f"{failed} of {len(chunks)} chunks gave no usable answer")
 
@@ -153,7 +153,7 @@ def run_job_agent(job_text: str, job_id: str, backend: ExtractionBackend,
         data = _ask(backend, post, template, examples, warnings, "")
         failed = 0
         if data is None:
-            raise JobAgentError("NuExtract never returned valid JSON. " + " | ".join(warnings))
+            raise JobAgentError("The model never returned valid JSON. " + " | ".join(warnings))
 
     report = check_requirements(data.get("requirements"), post)
     warnings += report.warnings

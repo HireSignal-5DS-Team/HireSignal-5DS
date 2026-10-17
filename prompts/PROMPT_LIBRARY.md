@@ -405,3 +405,33 @@ Consequences for the report:
   saved answers when only code changes.
 - Not measured yet: the size of this noise (the same version run several times, restarting
   Ollama between runs).
+
+
+---
+
+### job-q1 (the team's plain Qwen3-4B instead of NuExtract)
+
+**Why.** GPU memory, not accuracy. The Matcher runs Qwen3-4B-Instruct-2507 (Q4_K_M,
+llama.cpp; `config/matcher_models.json` on `release/hiresignal-v1`). On the 4 GB GTX 1650,
+NuExtract-2.0-2B (~1.9 GB in Ollama) and Qwen (~2.5–3.5 GB) cannot both stay loaded. Using the
+Matcher's **plain** Qwen (never its LoRA, which is trained for matching) adds no memory; the same
+`HS_LLM_*` settings also cover a hosted API.
+
+**Techniques.** Qwen is an instruction-following chat model, so unlike NuExtract it can be told
+what NOT to extract:
+- **Role + explicit rules** (`prompts.SYSTEM_Q1`): what counts as a requirement, the list of
+  things to skip (duties, citizenship and other administrative conditions, application
+  instructions, definitions, salary/benefits), only the first of alternative qualifying paths,
+  the skill-name rules S1–S6 in plain words, the six allowed categories, the JSON format.
+  These rules restate `eval/job_agent/ANNOTATION_RULES.md`: the task specification, written
+  before the model was run.
+- **Few-shot**: the three job-v3 chunk examples as user/assistant turns (one is all
+  administrative text with an empty answer).
+- **Structured output**: JSON mode (`response_format: json_object`) where the server supports it.
+- **One call per chunk, skill names included**: no second call per sentence (job-v4), so fewer
+  requests on a server shared with the Matcher.
+- Unchanged guardrails: sections, chunks, exact-quote check, not-a-requirement filter, years,
+  must/nice cues, compound split.
+
+**Results:** *to measure in one run against job-v4 (`--prompts job-v4 job-q1`). Expected trade-off:
+better at skipping non-requirements (it can read rules), slower per call (4B vs 2B).*
