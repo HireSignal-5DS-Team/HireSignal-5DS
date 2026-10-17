@@ -506,7 +506,9 @@ function NewAnalysis({
         : candidates;
       const input = { title, description, candidates: all };
       validateInput(input);
-      if (!confirmed)
+      // V2 has a server-side Profile Agent that anonymizes CV text before matching.
+      // Do not require an inaccurate declaration of manual redaction in REAL V2.
+      if (!(mode === "REAL" && flow === "v2") && !confirmed)
         throw new Error(
           "Confirm that you removed identifying and sensitive personal information.",
         );
@@ -520,7 +522,9 @@ function NewAnalysis({
       <PageHeading
         eyebrow="FROM INFORMATION TO INSIGHT"
         title="Start with the right context."
-        description="Define the role, add anonymized CVs, and let the review begin."
+        description={mode === "REAL" && flow === "v2"
+          ? "Define the role, add CVs, and let the integrated agents prepare an evidence-based review."
+          : "Define the role, add anonymized CVs, and let the review begin."}
       />
       <div className="analysis-layout">
         <form onSubmit={submit} className="analysis-form">
@@ -580,7 +584,9 @@ function NewAnalysis({
               <span>02</span>
               <div>
                 <h2>Add candidate CVs</h2>
-                <p>Up to 10 anonymized profiles per analysis.</p>
+                <p>{mode === "REAL" && flow === "v2"
+                  ? "Up to 10 CVs; the Profile Agent attempts anonymization before matching."
+                  : "Up to 10 anonymized profiles per analysis."}</p>
               </div>
               <Badge>{candidates.length} added</Badge>
             </div>
@@ -615,17 +621,18 @@ function NewAnalysis({
               </div>
             )}
             <p className="field-hint">
-              PDFs support up to 10 pages. Images and scanned pages use English
-              OCR in your browser; OCR assets download on first use. Review
-              extracted text below and remove personal details before analysis.
-              Maximum 50,000 characters per CV. DOCX is not supported.
+              {mode === "REAL" && flow === "v2"
+                ? "PDFs support up to 10 pages in the browser preview. Browser OCR may download assets on first use. The original uploaded file goes to the local backend Reader and Profile Agent for extraction and attempted anonymization before matching; check privacy warnings. DOCX is not supported by this browser uploader."
+                : "PDFs support up to 10 pages. Images and scanned pages use English OCR in your browser; OCR assets download on first use. Review extracted text below and remove personal details before analysis. Maximum 50,000 characters per CV. DOCX is not supported."}
             </p>
             <label>
               Or paste CV content
               <textarea
                 rows={6}
                 maxLength={MAX_TEXT}
-                placeholder="Paste anonymized experience, skills, and qualifications…"
+                placeholder={mode === "REAL" && flow === "v2"
+                  ? "Paste CV content; the local Profile Agent will attempt anonymization before matching."
+                  : "Paste anonymized experience, skills, and qualifications…"}
                 value={text}
                 onChange={(e) => setText(e.target.value)}
               />
@@ -688,22 +695,33 @@ function NewAnalysis({
                     />
                   </label>
                   <p className="field-hint">
-                    Check reading order and OCR accuracy. This edited text
-                    becomes the evidence source.
+                    {mode === "REAL" && flow === "v2" && c.structured.source_file
+                      ? "This is a browser preview. V2 reads the ORIGINAL uploaded file on the backend; editing this preview does not change that file. Upload an edited file or paste revised text instead."
+                      : "Check reading order and OCR accuracy. This edited text becomes the evidence source."}
                   </p>
                 </details>
               </div>
             ))}
           </section>
-          <label className="checkbox-label">
-            <input
-              type="checkbox"
-              checked={confirmed}
-              onChange={(e) => setConfirmed(e.target.checked)}
-            />
-            I removed names, contact details and sensitive personal information
-            from the CVs.
-          </label>
+          {mode === "REAL" && flow === "v2" ? (
+            <p className="field-hint" role="note">
+              <strong>Automatic privacy protection (V2):</strong> The original CV is
+              sent to your local FastAPI backend. The Profile Agent attempts to
+              remove identifying details before the Matcher runs. This is not
+              guaranteed to catch everything; review the privacy findings and
+              use synthetic CVs for demonstrations.
+            </p>
+          ) : (
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                checked={confirmed}
+                onChange={(e) => setConfirmed(e.target.checked)}
+              />
+              I removed names, contact details and sensitive personal information
+              from the CVs.
+            </label>
+          )}
           {error && (
             <div role="alert" className="error">
               <CircleAlert size={18} />
