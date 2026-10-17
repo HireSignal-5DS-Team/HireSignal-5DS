@@ -5,7 +5,7 @@ the failures observed, and the fix. Code is the source of truth; this file expla
 
 | Prompt | Agent | Model | Current | Code |
 |---|---|---|---|---|
-| Job requirements extraction | Job Agent | NuExtract-2.0-2B | `job-v2` | [`agents/job/prompts.py`](../agents/job/prompts.py) |
+| Job requirements extraction | Job Agent | NuExtract-2.0-2B | `job-v2` (`job-v3` being measured) | [`agents/job/prompts.py`](../agents/job/prompts.py) |
 
 ---
 
@@ -128,7 +128,71 @@ reproducible (Ollama split the work differently between CPU and GPU across runs)
 
 10 USAJOBS offers, 104 gold requirements, rules in
 [`eval/job_agent/ANNOTATION_RULES.md`](../eval/job_agent/ANNOTATION_RULES.md); run
-`scripts/eval_job_agent.py`. *Results table to paste here from `eval/job_agent/results/<name>/summary.md`.*
+`scripts/eval_job_agent.py`.
+
+**Run 1: job-v1 vs job-v2** (2026-10-17, laptop RTX 4050, Ollama, `--mode inline`, seed 0, repeat 2;
+full results in `eval/job_agent/results/v1-vs-v2/`):
+
+| Measure | `job-v1` | `job-v2` |
+|---|---|---|
+| Precision | 0.267 | 0.184 |
+| Recall | 0.192 | 0.154 |
+| **F1** | **0.223** | **0.168** |
+| Correct / extra / missed | 20 / 55 / 84 | 16 / 71 / 88 |
+| kind accuracy (on matched) | 0.95 | 1.0 |
+| category accuracy (on matched) | 0.65 | 0.375 |
+| Offers with no valid card | 2 | 3 |
+| Mean latency per offer | 45.8 s | 59.6 s |
+| Stable across repeats | 9/10 | 7/10 |
+
+Both versions fail on real offers, and v2 is worse than v1: the fix that worked on the
+one-page example (F1 on 9 requirements) did not carry over to 1,200–1,900-word postings.
+
+**Error analysis** (reading the 20 saved raw answers):
+
+| # | Error | Evidence | Share |
+|---|---|---|---|
+| E1 | Answer **cut off** at the 2,048-token output limit: broken JSON, whole card lost | 5 of 20 answers stop mid-sentence at ~10,000 characters | 5/20 runs |
+| E2 | The model extracts **every sentence that sounds required**, not just candidate requirements | e.g. offer 883827900 (v2): 22 items, of which citizenship, probation, Selective Service, "Maximum of 2-page resume", direct deposit, E-Verify… only 2 are real requirements | most of the 126 extra items |
+| E3 | **Invented categories** outside the allowed list | 181 items: `other` 67, `condition` 13, `qualification` 10, `age`, `citizenship`, `security`, `employment`… | 33% of items |
+| E4 | Degenerate repetition | v1 on 883827900: 20 items with evidence "None" (all dropped by the guardrails) | 1 offer |
+
+Why: NuExtract takes **no instructions**. Its examples only ever showed requirements, never
+text to leave out, so it had no way to learn "skip citizenship". And the longer the input,
+the more such sentences it sees.
+
+**Guardrails only (no new model run).** The saved raw answers replayed through the new
+guardrails (salvage of cut-off answers, category inference):
+
+| Same saved answers | `job-v1` | `job-v2` |
+|---|---|---|
+| Offers with no valid card | 2 → **0** | 3 → **0** |
+| category accuracy | 0.65 → 0.61 | 0.375 → **0.59** |
+| F1 | 0.223 → 0.235 | 0.168 → 0.194 |
+
+Cards are no longer lost, but F1 barely moves: E2 (wrong things extracted) dominates, and only
+changing **what the model sees** can fix it. That is job-v3.
+
+### job-v3
+
+**Why.** E1–E3 above.
+
+**Techniques**
+- **Input selection** (`agents/job/sections.py`): only the requirement sections are sent
+  (Qualifications, Requirements, Profil recherché, Education, Nice to have…); Summary, Duties,
+  Conditions of employment, Benefits, How to apply are dropped, and inline boilerplate
+  ("Additional information …") is cut. On the 10 offers this removes 30–70% of the text,
+  and all 104 gold quotes remain inside the text sent (checked by a test).
+- **Chunking**: the kept text is sent ~700 characters at a time (4–11 calls per offer), so
+  every answer is short (E1) and the model sees few distracting sentences at once.
+- **Negative examples**: the 3 examples are chunk-sized and *contain* text to skip
+  (volunteer-work boilerplate, transcripts, location, application deadline); one example is
+  only administrative conditions and its correct output is **empty** (E2).
+- Only allowed categories in the examples (E3); invalid categories are re-inferred by code.
+- A separate tiny call reads the job title; items found under a "Nice to have" / "Preferred"
+  heading become `nice` unless their wording says required.
+
+**Results:** *to measure: `python scripts\eval_job_agent.py --prompts job-v2 job-v3 ...`*
 
 Drafting the gold cards (before any model run) exposed four more guardrail bugs, now fixed and tested:
 

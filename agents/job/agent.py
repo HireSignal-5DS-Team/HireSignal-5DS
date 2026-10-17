@@ -1,6 +1,11 @@
 """Job Agent: job offer text -> requirements card (contracts/job_requirements.py).
 
-The loop (act, check, correct):
+Two strategies (agents/job/prompts.STRATEGY):
+  "whole"    (job-v1, job-v2) the whole offer in one call;
+  "sections" (job-v3)         only the requirement sections, one small chunk per call,
+                              then merge (agents/job/sections.py).
+
+The loop (act, check, correct), per call:
 
     job offer --> NuExtract fills the template --> parse JSON
                      ^                                 |
@@ -26,7 +31,8 @@ from contracts.job_requirements import JobRequirements
 
 from . import prompts
 from .backend import BackendError, ExtractionBackend
-from .validate import check_requirements, detect_language, parse_model_output
+from .sections import Section, chunk_sections, requirement_sections
+from .validate import MUST_CUES, _has_cue, check_requirements, detect_language, parse_model_output
 
 MAX_ATTEMPTS = 2              # first try + one retry when the answer is unreadable
 REVIEW_IF_DROPPED_SHARE = 0.3  # more than 30% of proposals invented -> a person checks the card
@@ -34,6 +40,60 @@ REVIEW_IF_DROPPED_SHARE = 0.3  # more than 30% of proposals invented -> a person
 
 class JobAgentError(Exception):
     """No usable requirement could be extracted from the job offer."""
+
+
+def _ask(backend, text: str, template: str, examples: list[dict], warnings: list[str], where: str) -> dict | None:
+    """One extraction call, retried once if the answer is unreadable. None if both fail."""
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        raw = backend.extract(text, template, examples)  # BackendError: server down, no retry
+        if (getattr(backend, "last_call", {}) or {}).get("finish_reason") == "length":
+            warnings.append(f"{where}answer cut off at the token limit")
+        try:
+            data = parse_model_output(raw)
+        except (ValueError, TypeError) as exc:
+            warnings.append(f"{where}attempt {attempt}: unreadable answer from NuExtract ({exc})")
+            continue
+        if data.pop("_salvaged", None) is not None:
+            warnings.append(f"{where}answer was cut off; kept the {len(data['requirements'])} complete items")
+        return data
+    return None
+
+
+def _extract_by_sections(post: str, backend, template: str, examples: list[dict],
+                         warnings: list[str]) -> tuple[list, str, int]:
+    """job-v3: only the requirement sections, one small chunk per call, then merge."""
+    sections = requirement_sections(post)
+    if not sections:
+        warnings.append("no requirement section found, the whole offer was used")
+        sections = [Section("", post, None)]
+    chunks = chunk_sections(sections)
+
+    items, failed = [], 0
+    for i, (chunk, _section) in enumerate(chunks, start=1):
+        data = _ask(backend, chunk, template, examples, warnings, f"chunk {i}/{len(chunks)}: ")
+        if data is None:
+            failed += 1
+            continue
+        found = data.get("requirements")
+        items += found if isinstance(found, list) else []
+    if failed == len(chunks):
+        raise JobAgentError("NuExtract never returned valid JSON. " + " | ".join(warnings))
+    if failed:
+        warnings.append(f"{failed} of {len(chunks)} chunks gave no usable answer")
+
+    title_data = _ask(backend, post[:600], prompts.title_template(), [], warnings, "title: ")
+    title = str((title_data or {}).get("job_title") or "").strip()
+    return items, title, failed
+
+
+def _apply_section_hints(requirements: list[dict], sections: list[Section], warnings: list[str]) -> None:
+    """Items from a 'Nice to have' / 'Preferred' section are nice, unless their wording says required."""
+    nice_texts = [s.text for s in sections if s.kind_hint == "nice"]
+    for req in requirements:
+        if req["kind"] == "must" and any(req["evidence"] in t for t in nice_texts) \
+                and not _has_cue(req["evidence"], MUST_CUES):
+            req["kind"] = "nice"
+            warnings.append(f"'{req['text'][:50]}': kind 'must' -> 'nice' (from a nice-to-have section)")
 
 
 def _clean_post(text: str) -> str:
@@ -52,22 +112,18 @@ def run_job_agent(job_text: str, job_id: str, backend: ExtractionBackend,
     if len(post) < 30:
         raise JobAgentError("The job offer is empty or too short.")
 
-    template, examples = prompts.get_prompt(prompt_version)
+    version = prompt_version or prompts.PROMPT_VERSION
+    template, examples = prompts.get_prompt(version)
     warnings: list[str] = []
-    data = None
 
-    for attempt in range(1, MAX_ATTEMPTS + 1):
-        try:
-            raw = backend.extract(post, template, examples)
-        except BackendError:
-            raise  # the server is down: a retry with the same input won't help
-        try:
-            data = parse_model_output(raw)
-            break
-        except (ValueError, TypeError) as exc:
-            warnings.append(f"attempt {attempt}: unreadable answer from NuExtract ({exc})")
-    if data is None:
-        raise JobAgentError("NuExtract never returned valid JSON. " + " | ".join(warnings))
+    if prompts.STRATEGY[version] == "sections":
+        items, title, failed = _extract_by_sections(post, backend, template, examples, warnings)
+        data = {"requirements": items, "title": title}
+    else:
+        data = _ask(backend, post, template, examples, warnings, "")
+        failed = 0
+        if data is None:
+            raise JobAgentError("NuExtract never returned valid JSON. " + " | ".join(warnings))
 
     report = check_requirements(data.get("requirements"), post)
     warnings += report.warnings
@@ -76,8 +132,12 @@ def run_job_agent(job_text: str, job_id: str, backend: ExtractionBackend,
             "No requirement survived the checks (all missing or invented). " + " | ".join(warnings)
         )
 
+    if prompts.STRATEGY[version] == "sections":
+        _apply_section_hints(report.requirements, requirement_sections(post), warnings)
+
     proposed = len(report.requirements) + report.dropped
-    needs_review = report.dropped / proposed > REVIEW_IF_DROPPED_SHARE or bool(report.uncertain)
+    needs_review = (report.dropped / proposed > REVIEW_IF_DROPPED_SHARE or bool(report.uncertain)
+                    or failed > 0)
 
     title = str(data.get("title") or "").strip()
     if not title or title not in post:

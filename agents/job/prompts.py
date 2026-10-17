@@ -207,13 +207,103 @@ EXAMPLES_V2 = [
     {"input": _V2_EX2_INPUT, "output": json.dumps(_V2_EX2_OUTPUT, ensure_ascii=False)},
 ]
 
+# ------------------------------------------------------------------ v3 ---
+# Fix for the first real evaluation (10 USAJOBS offers, F1 0.22 / 0.17):
+#   E1 answers cut off on long offers (broken JSON, card lost),
+#   E2 the model extracted every "must" sentence: citizenship, probation,
+#      transcripts, "maximum 2-page resume", direct deposit...,
+#   E3 invented categories ("condition", "qualification", "age").
+# Techniques:
+#   - input selection + chunking (agents/job/sections.py): only requirement
+#     sections are sent, ~700 characters per call, so answers stay short (E1)
+#     and most administrative text never reaches the model (E2);
+#   - negative examples: the examples now CONTAIN text to skip (administrative
+#     conditions, application instructions, boilerplate) and their outputs leave
+#     it out, plus one example whose correct output is empty (E2). NuExtract takes
+#     no instructions, so "what not to extract" can only be taught by example;
+#   - every example uses only the allowed categories (E3); invalid ones are also
+#     re-inferred by code (validate.infer_category).
+# The template has no title: the title comes from a separate small call.
+
+TEMPLATE_V3 = {
+    "requirements": [
+        {
+            "evidence": "verbatim-string",
+            "skill_terms": ["verbatim-string"],
+            "kind": ["must", "nice"],
+            "category": CATEGORIES,
+            "min_years": "number",
+            "text": "string",
+        }
+    ],
+}
+
+TITLE_TEMPLATE = {"job_title": "verbatim-string"}
+
+
+def _v3(ev, terms, kind, cat, years, text):
+    return {"evidence": ev, "skill_terms": terms, "kind": kind, "category": cat,
+            "min_years": years, "text": text}
+
+
+_V3_EX1_INPUT = (
+    "Basic Requirement: Bachelor's degree in statistics, mathematics or computer science. "
+    "You must have one year of specialized experience equivalent to the GS-11 level. "
+    "Experience refers to paid and unpaid experience, including volunteer work. "
+    "Transcripts must be submitted with your application. "
+    "Preferred Qualifications: Experience with Python and SQL. Knowledge of Tableau is a plus."
+)
+_V3_EX1_OUTPUT = {"requirements": [
+    _v3("Bachelor's degree in statistics, mathematics or computer science.", [], "must", "education", None,
+        "Bachelor's degree in statistics, mathematics or computer science"),
+    _v3("You must have one year of specialized experience equivalent to the GS-11 level.", [], "must",
+        "experience", 1, "One year of specialized experience equivalent to the GS-11 level"),
+    _v3("Experience with Python and SQL.", ["Python", "SQL"], "nice", "experience", None,
+        "Experience with Python and SQL"),
+    _v3("Knowledge of Tableau is a plus.", ["Tableau"], "nice", "skill", None, "Knowledge of Tableau"),
+]}
+
+_V3_EX2_INPUT = (
+    "You must be a U.S. Citizen. A background investigation is required. "
+    "A one-year probationary period may be required. Maximum of 2-page resume. "
+    "Males born after 12/31/1959 must be registered with the Selective Service. "
+    "Federal salary payments are made by direct deposit."
+)
+_V3_EX2_OUTPUT = {"requirements": []}
+
+_V3_EX3_INPUT = """Profil recherché :
+- Diplôme d'ingénieur en informatique.
+- Minimum 3 ans d'expérience avec Angular et Node.js.
+- Maîtrise de MySQL ou PostgreSQL.
+- Poste basé à Tunis, télétravail partiel possible.
+- Merci d'envoyer votre CV avant le 30 novembre.
+- La connaissance de Docker serait un atout."""
+_V3_EX3_OUTPUT = {"requirements": [
+    _v3("Diplôme d'ingénieur en informatique.", [], "must", "education", None, "Diplôme d'ingénieur en informatique"),
+    _v3("Minimum 3 ans d'expérience avec Angular et Node.js.", ["Angular", "Node.js"], "must", "experience", 3,
+        "Minimum 3 ans d'expérience avec Angular et Node.js"),
+    _v3("Maîtrise de MySQL ou PostgreSQL.", ["MySQL", "PostgreSQL"], "must", "skill", None,
+        "Maîtrise de MySQL ou PostgreSQL"),
+    _v3("La connaissance de Docker serait un atout.", ["Docker"], "nice", "skill", None, "Connaissance de Docker"),
+]}
+
+EXAMPLES_V3 = [
+    {"input": _V3_EX1_INPUT, "output": json.dumps(_V3_EX1_OUTPUT, ensure_ascii=False)},
+    {"input": _V3_EX2_INPUT, "output": json.dumps(_V3_EX2_OUTPUT, ensure_ascii=False)},
+    {"input": _V3_EX3_INPUT, "output": json.dumps(_V3_EX3_OUTPUT, ensure_ascii=False)},
+]
+
 # ------------------------------------------------------------ registry ---
 
 VERSIONS = {
     "job-v1": (TEMPLATE_V1, EXAMPLES_V1),
     "job-v2": (TEMPLATE_V2, EXAMPLES_V2),
+    "job-v3": (TEMPLATE_V3, EXAMPLES_V3),
 }
-PROMPT_VERSION = "job-v2"  # active version
+# How the offer is given to the model: the whole offer in one call, or only the
+# requirement sections, a chunk per call (agents/job/sections.py).
+STRATEGY = {"job-v1": "whole", "job-v2": "whole", "job-v3": "sections"}
+PROMPT_VERSION = "job-v2"  # active version (switch to job-v3 once it is measured on the real offers)
 
 
 def get_prompt(version: str | None = None) -> tuple[str, list[dict]]:
@@ -224,3 +314,7 @@ def get_prompt(version: str | None = None) -> tuple[str, list[dict]]:
 
 def template_json(version: str | None = None) -> str:
     return get_prompt(version)[0]
+
+
+def title_template() -> str:
+    return json.dumps(TITLE_TEMPLATE, indent=4)

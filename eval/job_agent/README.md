@@ -17,6 +17,8 @@ $env:HS_NUEXTRACT_MODEL = "hf.co/numind/NuExtract-2.0-2B-GGUF:Q4_K_M"
 python scripts\eval_job_agent.py --base-url http://127.0.0.1:11434/v1 --mode inline --repeat 2 --name v1-vs-v2
 ```
 
+Compare only some versions with `--prompts job-v2 job-v3`.
+
 It runs every prompt version (`job-v1`, `job-v2`) on every offer, twice each (`--repeat 2`,
 to check the answers are stable), and prints a table ready for the prompt library.
 About 10 offers × 2 prompts × 2 repeats = 40 model calls (roughly 10 minutes).

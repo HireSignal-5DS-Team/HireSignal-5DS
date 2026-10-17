@@ -58,7 +58,8 @@ def test_prompt_examples_obey_their_own_rules(version):
     template, examples = prompts.VERSIONS[version]
     for ex in examples:
         out = json.loads(ex["output"])
-        assert out["title"] in ex["input"]
+        if "title" in out:
+            assert out["title"] in ex["input"]
         for r in out["requirements"]:
             assert r["evidence"] in ex["input"], r["evidence"]
             assert set(r) == set(template["requirements"][0]), "example fields must match the template"
@@ -134,10 +135,17 @@ def test_duplicates_are_dropped():
     assert len(card.requirements) == 1
 
 
-def test_unknown_category_becomes_other():
-    card = run_job_agent(POST, "JD-001", FakeBackend([answer([
-        req("SQL", "Solid knowledge of SQL databases (PostgreSQL or Oracle).", category="hard skill")])]))
-    assert card.requirements[0].category == "other"
+@pytest.mark.parametrize("evidence,expected", [
+    ("Solid knowledge of SQL databases (PostgreSQL or Oracle).", "skill"),
+    ("Engineering degree in computer science or equivalent.", "education"),
+    ("At least 3 years of professional experience with Java and Spring Boot.", "experience"),
+    ("AWS certification would be appreciated.", "certification"),
+    ("Fluent French", "language"),
+])
+def test_invented_category_is_inferred_from_the_wording(evidence, expected):
+    """Real evaluation: the model answered 'condition', 'qualification', 'age'... (not allowed)."""
+    card = run_job_agent(POST, "JD-001", FakeBackend([answer([req("x", evidence, category="qualification")])]))
+    assert card.requirements[0].category == expected
 
 
 # ------------------------------------------------------------- retry loop ---

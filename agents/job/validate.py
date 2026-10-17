@@ -129,7 +129,50 @@ def locate_evidence(quote: str, post: str) -> tuple[str | None, str]:
     return None, f"not found (closest {best_ratio:.2f})"
 
 
+_CATEGORY_RULES = [
+    ("certification", r"\b(certifi\w*|certificate|license|licence)\b"),
+    ("education", r"\b(degree|bachelor\w*|master\w*|ph\.?d|doctora\w*|diplom\w*|licence|ingenieur|"
+                  r"semester hours|coursework|graduate|baccalaureate)\b"),
+    ("language", r"\b(english|french|arabic|german|spanish|anglais|francais|arabe|allemand|espagnol|"
+                 r"fluent|bilingual|bilingue)\b"),
+    ("experience", r"\b(experience|experiences|years?|ans|annees?)\b"),
+]
+
+
+def infer_category(evidence: str) -> str:
+    """Category from the wording, for when the model answers a value outside the list."""
+    folded = _fold(evidence)
+    for category, pattern in _CATEGORY_RULES:
+        if re.search(pattern, folded):
+            return category
+    return "skill"
+
+
 # --------------------------------------------------------------- parsing ---
+
+def salvage_cut_json(raw: str) -> tuple[dict, int] | None:
+    """Recover the complete requirements of an answer that was cut off mid-way.
+
+    '{"requirements": [{...}, {...}, {"evidence": "half a sent' -> the first two items.
+    Returns (data, number of items kept) or None.
+    """
+    start = raw.find("{")
+    if start == -1:
+        return None
+    body = raw[start:]
+    cut = len(body)
+    while True:
+        cut = body.rfind("}", 0, cut)
+        if cut == -1:
+            return None
+        for closing in ("]}", "]}}"):
+            try:
+                data = json.loads(body[:cut + 1] + closing)
+            except json.JSONDecodeError:
+                continue
+            if isinstance(data, dict) and isinstance(data.get("requirements"), list):
+                return data, len(data["requirements"])
+
 
 def parse_model_output(raw: str) -> dict:
     """NuExtract should answer pure JSON; tolerate code fences or extra text around it."""
@@ -139,9 +182,16 @@ def parse_model_output(raw: str) -> dict:
         data = json.loads(raw)
     except json.JSONDecodeError:
         start, end = raw.find("{"), raw.rfind("}")
-        if start == -1 or end <= start:
-            raise ValueError("no JSON object in the model answer")
-        data = json.loads(raw[start:end + 1])
+        try:
+            if start == -1 or end <= start:
+                raise ValueError("no JSON object in the model answer")
+            data = json.loads(raw[start:end + 1])
+        except (ValueError, json.JSONDecodeError):
+            saved = salvage_cut_json(raw)
+            if saved is None or saved[1] == 0:
+                raise ValueError("no JSON object in the model answer") from None
+            data = saved[0]
+            data["_salvaged"] = saved[1]
     if not isinstance(data, dict):
         raise ValueError("the model answer is not a JSON object")
     return data
@@ -198,8 +248,9 @@ def check_requirements(items: list, post: str) -> CheckReport:
         # 3. Category must be a known value.
         category = item.get("category")
         if category not in CATEGORIES:
-            report.warnings.append(f"{label}: unknown category '{category}', set to 'other'")
-            category = "other"
+            guessed = infer_category(evidence)
+            report.warnings.append(f"{label}: unknown category '{category}', inferred '{guessed}'")
+            category = guessed
 
         # 4. Years must match the quote.
         stated = years_in(evidence)

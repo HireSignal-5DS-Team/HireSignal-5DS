@@ -116,6 +116,8 @@ class NuExtractClient:
         }
         try:
             self.last_raw = body["choices"][0]["message"]["content"] or ""
+            # "length" = the answer hit max_tokens and was cut off
+            self.last_call["finish_reason"] = body["choices"][0].get("finish_reason")
             return self.last_raw
         except (KeyError, IndexError, TypeError) as exc:
             raise BackendError(f"Unexpected answer from the server: {str(body)[:300]}") from exc
@@ -127,17 +129,27 @@ class NuExtractClient:
 
 
 class FakeBackend:
-    """Returns prepared answers in order. Used by the tests (no GPU needed)."""
+    """Prepared answers for the tests (no GPU needed).
 
-    def __init__(self, answers: list[str]):
-        self.answers = list(answers)
+    answers: a list returned in order, or a function (text, template) -> answer,
+    for the chunked strategy where the answer depends on the chunk.
+    """
+
+    def __init__(self, answers):
+        self.answers = answers if callable(answers) else list(answers)
         self.calls: list[dict] = []
+        self.last_call: dict = {}
+        self.last_raw = ""
 
     def extract(self, text: str, template: str, examples: list[dict]) -> str:
         self.calls.append({"text": text, "template": template, "examples": examples})
+        if callable(self.answers):
+            self.last_raw = self.answers(text, template)
+            return self.last_raw
         if not self.answers:
             raise BackendError("FakeBackend has no more answers")
-        return self.answers.pop(0)
+        self.last_raw = self.answers.pop(0)
+        return self.last_raw
 
     def info(self) -> dict:
         return {"model": "fake", "mode": "fake"}
