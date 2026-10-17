@@ -1,0 +1,19 @@
+### call 1 - input starts: 'Basic Requirement Data Scientist , 1560: A) Degree: Mathematics, statistics, com'
+{"requirements": [{"evidence": "A) Degree: Mathematics, statistics, computer science, data science or field directly related to the position. The degree must be in a major field of study (at least at the baccalaureate level) that is appropriate for the position.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Degree in Mathematics, statistics, computer science, data science or field directly related to the position, in a major field of study (at least at the baccalaureate level) that is appropriate for the position"}, {"evidence": "OR B) Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph A above, plus additional education or appropriate experience.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph A above, plus additional education or appropriate experience"}]}
+
+### call 2 - input starts: 'Specialized Experience Specialized experience is the experience that equipped th'
+{"requirements": [{"evidence": "In addition to the basic requirements above, applicants must have at least 52 weeks of specialized experience at a level of difficulty and responsibility equivalent to the GS-11 in the federal service.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": 1, "text": "At least 52 weeks of specialized experience at a level of difficulty and responsibility equivalent to the GS-11 in the federal service"}]}
+
+### call 3 - input starts: 'Experience for this position includes at least three of the following: Maintaini'
+{"requirements": [{"evidence": "Experience for this position includes at least three of the following: Maintaining machine learning, natural language processing, and/or artificial intelligence systems in production;", "skill_terms": ["machine learning", "natural language processing", "artificial intelligence"], "kind": "must", "category": "experience", "min_years": null, "text": "Experience maintaining machine learning, natural language processing, and/or artificial intelligence systems in production"}, {"evidence": "Assisting in research and evaluation of the state-of-the-art topics in data science, such as deep learning and large language models;", "skill_terms": ["deep learning", "large language models"], "kind": "must", "category": "experience", "min_years": null, "text": "Assisting in research and evaluation of state-of-the-art topics in data science, such as deep learning and large language models"}, {"evidence": "Using data engineering techniques to process large, complex datasets into structured formats for record matching, anomaly detection, data analysis, and/or estimation;", "skill_terms": ["data engineering"], "kind": "must", "category": "experience", "min_years": null, "text": "Using data engineering techniques to process large, complex datasets into structured formats for record matching, anomaly detection, data analysis, and/or estimation"}, {"evidence": "Writing high-quality, maintainable code for analytics and applications using the Python programming language.", "skill_terms": ["Python"], "kind": "must", "category": "skill", "min_years": null, "text": "Writing high-quality, maintainable code for analytics and applications using the Python programming language"}]}
+
+### call 4 - input starts: 'Education Any applicant falsely claiming an academic degree from an accredited s'
+{"requirements": []}
+
+### call 5 - input starts: 'Any applicant falsely claiming an academic degree from an accredited school will'
+{"requirements": []}
+
+### call 6 - input starts: 'Summary The Bureau of Labor Statistics measures labor market activity, working c'
+{
+    "job_title": null
+}

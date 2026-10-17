@@ -1,0 +1,193 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883161100",
+  "title": "data science, system analysis, risk analysis, predictive analysis, computer simulation, and program/project planning and controls",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Degree in Mathematics, statistics, computer science, data science or field directly related to the position",
+      "evidence": "Degree: Mathematics, statistics, computer science, data science or field directly related to the position.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "The degree must be in a major field of study (at least at the baccalaureate level) that is appropriate for the position",
+      "evidence": "The degree must be in a major field of study (at least at the baccalaureate level) that is appropriate for the position.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience",
+      "evidence": "OR Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "One year of specialized experience that equipped you with the particular competencies to successfully perform the duties of the position and is directly in or related to this position",
+      "evidence": "One year of specialized experience that equipped you with the particular competencies to successfully perform the duties of the position and is directly in or related to this position.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "To qualify at the GS-14 level, applicants must possess one year of specialized experience equivalent to the GS-13 level or equivalent under other pay systems in the Federal service, military or private sector",
+      "evidence": "To qualify at the GS-14 level, applicants must possess one year of specialized experience equivalent to the GS-13 level or equivalent under other pay systems in the Federal service, military or private sector.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis to research and improve supply chain risk assessment processes",
+      "evidence": "Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis to research and improve supply chain risk assessment processes.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "regression",
+        "decision tree analytics",
+        "probability",
+        "game theory",
+        "statistical analysis"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Providing technical direction, planning, and leadership to create and implement new agency data and supply chain risk assessment policy and processes",
+      "evidence": "Providing technical direction, planning, and leadership to create and implement new agency data and supply chain risk assessment policy and processes.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Providing a high level of technical expertise in data science",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "data science"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Providing a high level of technical expertise in intelligence",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "intelligence"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Providing a high level of technical expertise in artificial intelligence/machine learning (AI/ML)",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "artificial intelligence/machine learning (AI/ML)"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Providing a high level of technical expertise in system analysis",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "system analysis"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "Providing a high level of technical expertise in risk analysis",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "risk analysis"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "Providing a high level of technical expertise in predictive analysis",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "predictive analysis"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "Providing a high level of technical expertise in computer simulation",
+      "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "computer simulation"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r15",
+      "text": "Using standard-type models to simulate real world environments",
+      "evidence": "Using standard-type models to simulate real world environments.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "standard-type models"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'Applicants must meet eligibility requirements incl': not a requirement (application instructions), dropped",
+    "'If the position has a minimum education requiremen': not a requirement (application instructions), dropped",
+    "'If you are using education to qualify in lieu of s': not a requirement (application instructions), dropped",
+    "'The transcripts must include your name, the name o': not a requirement (application instructions), dropped",
+    "'Education must be accredited by an accrediting ins': not a requirement (application instructions), dropped",
+    "'If the position has a minimum education requiremen': not a requirement (application instructions), dropped",
+    "'If you are using education to qualify in lieu of s': not a requirement (application instructions), dropped",
+    "'The transcripts must include your name, the name o': not a requirement (application instructions), dropped",
+    "'Education must be accredited by an accrediting ins': not a requirement (application instructions), dropped"
+  ]
+}

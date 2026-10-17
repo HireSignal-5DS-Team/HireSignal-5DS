@@ -1,0 +1,74 @@
+### call 1 - input starts: 'Federal experience is not required. Experience may have been gained in the publi'
+{"requirements": [{"evidence": "A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics"}]}
+
+### call 2 - input starts: 'OR COMBINATION OF EDUCATION AND EXPERIENCE : A combination of education and expe'
+{"requirements": [{"evidence": "A combination of education and experience", "skill_terms": [], "kind": "must", "category": "education", "min_years": 24, "text": "A combination of education and experience -- at least 24 semester hours of mathematics and statistics, including at least 12 hours in mathematics and 6 hours in statistics, as shown in A above, plus appropriate experience or additional education."}]}
+
+### call 3 - input starts: 'Evaluation of Education : Courses acceptable toward meeting the mathematics cour'
+{"requirements": [{"evidence": "Courses acceptable toward meeting the mathematics course requirement of paragraphs A or B above must have included at least four of the following: differential calculus, integral calculus, advanced calculus, theory of equations, vector analysis, advanced algebra, linear algebra, mathematical logic, differential equations, or any other advanced course in mathematics for which one of these was a prerequisite.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Courses acceptable toward meeting the mathematics course requirement of paragraphs A or B above must have included at least four of the following: differential calculus, integral calculus, advanced calculus, theory of equations, vector analysis, advanced algebra, linear algebra, mathematical logic, differential equations, or any other advanced course in mathematics for which one of these was a prerequisite."}]}
+
+### call 4 - input starts: 'Courses in mathematical statistics or probability theory with a prerequisite of '
+{"requirements": [{"evidence": "Courses in mathematical statistics or probability theory with a prerequisite of elementary calculus or more advanced courses", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Courses in mathematical statistics or probability theory with a prerequisite of elementary calculus or more advanced courses"}]}
+
+### call 5 - input starts: 'Evaluation of Experience : The experience offered in combination with educationa'
+{"requirements": [{"evidence": "sampling, collecting, computing, and analyzing statistical data", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "sampling, collecting, computing, and analyzing statistical data"}, {"evidence": "applying known statistical techniques to data", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "applying known statistical techniques to data"}, {"evidence": "work required in the processing of numerical or quantified information by other than statistical methods", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "work required in the processing of numerical or quantified information by other than statistical methods"}]}
+
+### call 6 - input starts: 'Examples of such nonqualifying work include statistical clerical work; statistic'
+{"requirements": [{"evidence": "Examples of such nonqualifying work include statistical clerical work; statistical drafting; calculation of totals, averages, percentages, or other arithmetic summations; preparation of simple tables or charts; or verification of data by simple comparison or proofreading.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Examples of such nonqualifying work include statistical clerical work; statistical drafting; calculation of totals, averages, percentages, or other arithmetic summations; preparation of simple tables or charts; or verification of data by simple comparison or proofreading."}, {"evidence": "GS-14 : In addition to meeting basic requirements, to be eligible for this position at this grade level, you must have one (1) year of specialized experience at a level of difficulty and responsibility equivalent to the GS-13 grade level in the Federal service.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": 1, "text": "GS-14 : In addition to meeting basic requirements, to be eligible for this position at this grade level, you must have one (1) year of specialized experience at a level of difficulty and responsibility equivalent to the GS-13 grade level in the Federal service."}]}
+
+### call 7 - input starts: 'Specialized experience for this position includes: AND You must also meet the fo'
+{"requirements": [{"evidence": "Current civilian employees must have completed at least 90 days of federal civilian service since their latest non-temporary appointment from a competitive referral certificate, known as time after competitive appointment.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": 90, "text": "Current civilian employees must have completed at least 90 days of federal civilian service since their latest non-temporary appointment from a competitive referral certificate, known as time after competitive appointment."}, {"evidence": "For positions above the GS-05,applicants must meet applicable time-in-­grade requirements to be considered eligible.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "For positions above the GS-05,applicants must meet applicable time-in-­grade requirements to be considered eligible."}]}
+
+### call 8 - input starts: 'One year (52 weeks) at the next lower grade level is required to meet the time-i'
+{"requirements": [{"evidence": "One year (52 weeks) at the next lower grade level is required to meet the time-in-grade requirements for the grade you are applying for.", "skill_terms": [], "kind": "must", "category": "education", "min_years": 1, "text": "One year (52 weeks) at the next lower grade level is required to meet the time-in-grade requirements for the grade you are applying for."}, {"evidence": "For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks."}, {"evidence": "There is no TIG restriction for GS-02, 03, or 04 positions.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "There is no TIG restriction for GS-02, 03, or 04 positions."}, {"evidence": "For more information on qualifications please refer to OPM's Qualifications Standards .", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "For more information on qualifications please refer to OPM's Qualifications Standards ."}]}
+
+### call 9 - input starts: 'FOREIGN EDUCATION: Education completed in foreign colleges or universities may b'
+{"requirements": [{"evidence": "Education completed in foreign colleges or universities may be used to meet the requirements.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Education completed in foreign colleges or universities may be used to meet the requirements."}, {"evidence": "You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program."}, {"evidence": "It is your responsibility to provide such evidence when applying.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "It is your responsibility to provide such evidence when applying."}, {"evidence": "Click here (Section 3, Explanation of Terms) or here for Foreign Education Credentialing instructions.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Click here (Section 3, Explanation of Terms) or here for Foreign Education Credentialing instructions."}, {"evidence": "We recommend choosing an evaluator from a member organization of one of the following national associations of credential evaluation services: National Association of Credential Evaluation Services (NACES) or Association of International Credentials Evaluators (AICE).", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "We recommend choosing an evaluator from a member organization of one of the following national associations of credential evaluation services: National Association of Credential Evaluation Services (NACES) or Association of International Credentials Evaluators (AICE)."}]}
+
+### call 10 - input starts: 'A college or university degree generally must be from an accredited (or pre-accr'
+{"requirements": [{"evidence": "education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program"}]}
+
+### call 11 - input starts: 'We recommend choosing an evaluator from a member organization of one of the foll'
+{"requirements": [{"evidence": "We recommend choosing an evaluator from a member organization of one of the following national associations of credential evaluation services: National Association of Credential Evaluation Services (NACES) or Association of International Credentials Evaluators (AICE).", "skill_terms": [], "kind": "must", "category": "other", "min_years": null, "text": "We recommend choosing an evaluator from a member organization of one of the following national associations of credential evaluation services: National Association of Credential Evaluation Services (NACES) or Association of International Credentials Evaluators (AICE)."}]}
+
+### call 12 - input starts: 'Summary WHAT IS Large Business & International (LB&I) ? A description of the bus'
+{"job_title": null}
+
+### call 13 - input starts: 'A degree that included 24 semester hours of mathematics and statistics, of which'
+{"skill_terms": []}
+
+### call 14 - input starts: 'A combination of education and experience'
+{"skill_terms": []}
+
+### call 15 - input starts: 'Courses acceptable toward meeting the mathematics course requirement of paragrap'
+{"skill_terms": []}
+
+### call 16 - input starts: 'Courses in mathematical statistics or probability theory with a prerequisite of '
+{"skill_terms": ["mathematical statistics", "probability theory", "elementary calculus", "more advanced courses"]}
+
+### call 17 - input starts: 'applying known statistical techniques to data'
+{"skill_terms": ["applying known statistical techniques", "data"]}
+
+### call 18 - input starts: 'work required in the processing of numerical or quantified information by other '
+{"skill_terms": []}
+
+### call 19 - input starts: 'GS-14 : In addition to meeting basic requirements, to be eligible for this posit'
+{"skill_terms": []}
+
+### call 20 - input starts: 'For positions above the GS-05,applicants must meet applicable time-in-\xadgrade req'
+{"skill_terms": []}
+
+### call 21 - input starts: 'For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS'
+{"skill_terms": []}
+
+### call 22 - input starts: "For more information on qualifications please refer to OPM's Qualifications Stan"
+{"skill_terms": []}
+
+### call 23 - input starts: 'You must show proof the education credentials have been deemed to be at least eq'
+{"skill_terms": []}
+
+### call 24 - input starts: 'It is your responsibility to provide such evidence when applying.'
+{"skill_terms": []}
+
+### call 25 - input starts: 'education credentials have been deemed to be at least equivalent to that gained '
+{"skill_terms": []}

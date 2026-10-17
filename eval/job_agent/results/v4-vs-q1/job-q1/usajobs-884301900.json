@@ -1,0 +1,68 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-884301900",
+  "title": "Senior IT Specialist (Robotic Process Automation and AI)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Expresses information effectively to individuals or groups, taking into account the audience and nature of the information; makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately",
+      "evidence": "Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately;",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations",
+      "evidence": "Problem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "At least one year of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, including designing or overseeing large-scale automation efforts using RPA tools such as UiPath, Microsoft Power Automate, or Automation Anywhere, and analyzing and reviewing automated workflows including integrations between RPA tools and other software applications to assess performance, identify gaps, or recommend improvements",
+      "evidence": "You must demonstrate in your resume at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, to include: (1) Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere.; (2) Analyzing and reviewing automated workflows, including integrations between RPA tools and other software applications, to assess performance, identify gaps, or recommend improvements.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "UiPath",
+        "Microsoft Power Automate",
+        "Automation Anywhere"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies",
+      "evidence": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "RPA projects",
+        "business process analysis",
+        "bot development",
+        "testing",
+        "deployment",
+        "performance monitoring",
+        "feasibility",
+        "implementation",
+        "governance",
+        "enterprise-wide adoption",
+        "RPA",
+        "AI technologies"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": []
+}
