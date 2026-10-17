@@ -1,0 +1,59 @@
+### call 1 - input starts: "Basic Requirements: Bachelor's degree in computer science or bachelor's degree w"
+{"requirements": [{"evidence": "Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science"}, {"evidence": "At least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "At least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus"}, {"evidence": "All academic degrees and coursework must be from accredited or pre-accredited institutions.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "All academic degrees and coursework must be from accredited or pre-accredited institutions"}, {"evidence": "Applicants must have one year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST).", "skill_terms": [], "kind": "must", "category": "experience", "min_years": 1, "text": "Applicants must have one year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST)"}]}
+
+### call 2 - input starts: 'The specialized experience is defined as: Experience with computer programming a'
+{"requirements": [{"evidence": "Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges"}, {"evidence": "Experience with core AI technical skills such as machine learning and deep learning", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Experience with core AI technical skills such as machine learning and deep learning"}, {"evidence": "Experience with statistical data analysis and experimental design", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Experience with statistical data analysis and experimental design"}, {"evidence": "3 years of progressively higher-level graduate education leading to a Ph.D. degree", "skill_terms": [], "kind": "must", "category": "education", "min_years": 3, "text": "3 years of progressively higher-level graduate education leading to a Ph.D. degree"}, {"evidence": "Ph.D. or equivalent doctoral degree", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Ph.D. or equivalent doctoral degree"}, {"evidence": "A combination of education and experience", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "A combination of education and experience"}]}
+
+### call 3 - input starts: 'The specialized experience is defined as: Experience in leading computer program'
+{"requirements": [{"evidence": "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges"}, {"evidence": "Experience in providing technical leadership for AI experts in areas involving core AI technical skills such as machine learning and deep learning.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Experience in providing technical leadership for AI experts in areas involving core AI technical skills such as machine learning and deep learning"}, {"evidence": "Experience in leading and implementing projects involving statistical data analysis and experimental design.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Experience in leading and implementing projects involving statistical data analysis and experimental design"}, {"evidence": "Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional, philanthropic, religious, spiritual, community, student, social).", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional, philanthropic, religious, spiritual, community, student, social)."}]}
+
+### call 4 - input starts: 'Volunteer work helps build critical competencies, knowledge, and skills, and can'
+{"requirements": [{"evidence": "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment.", "skill_terms": [], "kind": "nice", "category": "experience", "min_years": null, "text": "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment."}, {"evidence": "You will receive credit for all qualifying experience, including volunteer experience.", "skill_terms": [], "kind": "nice", "category": "experience", "min_years": null, "text": "You will receive credit for all qualifying experience, including volunteer experience."}, {"evidence": "The qualification requirements in this vacancy announcement are based on the U.S. Office of Personnel Management (OPM) Qualification Standards Handbook.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "The qualification requirements in this vacancy announcement are based on the U.S. Office of Personnel Management (OPM) Qualification Standards Handbook."}, {"evidence": "Transcripts must be submitted to validate that the education requirement has been met.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Transcripts must be submitted to validate that the education requirement has been met."}]}
+
+### call 5 - input starts: 'Unofficial transcripts will be accepted in the application package. However, an '
+{"requirements": [{"evidence": "An accredited organization must evaluate education completed outside of the U.S.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "An accredited organization must evaluate education completed outside of the U.S."}, {"evidence": "A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application."}]}
+
+### call 6 - input starts: 'This position has an education requirement. Transcripts must be submitted to val'
+{"requirements": [{"evidence": "Transcripts must be submitted to validate that the education requirement has been met.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Transcripts must be submitted to validate that the education requirement has been met."}, {"evidence": "Unofficial transcripts will be accepted in the application package.", "skill_terms": [], "kind": "nice", "category": "other", "min_years": null, "text": "Unofficial transcripts will be accepted in the application package."}, {"evidence": "an official copy will be required before a final offer of employment.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "an official copy will be required before a final offer of employment."}, {"evidence": "Use of foreign education for qualifications.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Use of foreign education for qualifications."}, {"evidence": "An accredited organization must evaluate education completed outside of the U.S. to ensure that it is comparable to education received in accredited institutions in the U.S.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "An accredited organization must evaluate education completed outside of the U.S. to ensure that it is comparable to education received in accredited institutions in the U.S."}, {"evidence": "Click here to view a listing of accredited organizations from the Department of Education's website.", "skill_terms": [], "kind": "nice", "category": "other", "min_years": null, "text": "Click here to view a listing of accredited organizations from the Department of Education's website."}]}
+
+### call 7 - input starts: 'A copy of the foreign education evaluation (containing the results with a course'
+{"requirements": [{"evidence": "A copy of the foreign education evaluation (containing the results with a course-by-course listing)", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application."}]}
+
+### call 8 - input starts: 'Summary NIST is seeking an AI Technical Expert to conduct original research and '
+{"job_title": "AI Technical Expert"}
+
+### call 9 - input starts: "Bachelor's degree in computer science or bachelor's degree with 30 semester hour"
+{"skill_terms": []}
+
+### call 10 - input starts: 'At least 15 of the 30 semester hours must have included any combination of stati'
+{"skill_terms": ["statistics", "mathematics", "differential calculus", "integral calculus"]}
+
+### call 11 - input starts: 'applicants must have one year (52 weeks) of specialized experience at the GS-12 '
+{"skill_terms": []}
+
+### call 12 - input starts: 'Experience with computer programming and tool development to solve key Artificia'
+{"skill_terms": ["computer programming", "tool development", "Artificial Intelligence", "measurement science"]}
+
+### call 13 - input starts: 'Experience with core AI technical skills such as machine learning and deep learn'
+{"skill_terms": ["machine learning", "deep learning"]}
+
+### call 14 - input starts: 'Experience with statistical data analysis and experimental design'
+{"skill_terms": ["statistical data analysis", "experimental design"]}
+
+### call 15 - input starts: '3 years of progressively higher-level graduate education leading to a Ph.D. degr'
+{"skill_terms": []}
+
+### call 16 - input starts: 'Ph.D. or equivalent doctoral degree'
+{"skill_terms": []}
+
+### call 17 - input starts: 'A combination of education and experience'
+{"skill_terms": []}
+
+### call 18 - input starts: 'Experience in leading computer programming and tool development efforts to solve'
+{"skill_terms": ["leading computer programming", "tool development", "solving key Artificial Intelligence (AI) measurement science challenges"]}
+
+### call 19 - input starts: 'You will receive credit for all qualifying experience, including volunteer exper'
+{"skill_terms": []}
+
+### call 20 - input starts: 'an official copy will be required before a final offer of employment.'
+{"skill_terms": []}

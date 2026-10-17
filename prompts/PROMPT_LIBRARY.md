@@ -328,6 +328,7 @@ Open points, not yet decided:
 | Check | If it fails |
 |---|---|
 | `evidence` appears in the job offer (exact, then ignoring spaces/case, then ≥ 90% similar line) | repaired to the real text, or the requirement is **dropped** as invented |
+| `evidence` is not application text, a definition or an administrative condition (`not_a_requirement`, cue words) | **dropped** as "not a requirement" (not counted as invented); job-v4 asks no skill names for it |
 | `min_years` matches a number of years in the quote | set to the number in the quote, or `null` if the quote has none |
 | `kind` agrees with cue words ("a plus", "preferred", "atout" → nice; "required", "must", "obligatoire" → must) | corrected |
 | each `skill_terms` entry appears in the quote | term removed |
@@ -335,3 +336,72 @@ Open points, not yet decided:
 
 Every repair is written to the card's `warnings`, so the recruiter and the evaluation
 can see it.
+
+### Filter for sentences that are not requirements
+
+**Why.** After job-v4, the largest error was **extra sentences**: 88 of the 148 sentences
+kept on the 10 offers were not requirements (sentence precision 0.405). All were inside
+USAJOBS "Qualifications", so the section filter (job-v3) could not remove them. Sorted by hand:
+
+| Kind | Count | Examples |
+|---|---|---|
+| A. Application, documents, verification | 37 | transcripts, foreign education evaluation, school accreditation, "resume must include…", links, reference checks |
+| B. Definitions and explanations | 19 | "Experience refers to paid and unpaid experience…", "One academic year of graduate education is…" |
+| C. Alternative paths and higher grade levels | 15 | "OR Combination of education and experience", Ph.D. paths, GS-12 / ZP-IV |
+| D. Administrative eligibility | 11 | time-in-grade, merit promotion, criminal check, drug test |
+| E. Text describing a competency | 6 | "Shows understanding, friendliness, courtesy…" |
+
+**Technique: a rule-based filter in code** (`validate.not_a_requirement`) for A, B and D: cue
+words on the quote ("transcripts", "click here", "accrediting", "refers to", "examples of",
+"time-in-grade", "drug-test"…). It is code, not prompt, because the 2B model already had a
+negative example with transcripts (job-v3) and still extracted them. C and E are left alone:
+telling the main path from an alternative needs more than keywords.
+
+The cues were checked against the 104 gold quotes. The first version would have dropped a real
+requirement ("…an **accredited** college or university…"); "accredited", "resume" and
+"is defined as" were narrowed ("demonstrate in your resume at least one year…" and
+"Specialized experience is defined as: …" introduce real requirements). A test now keeps every
+gold quote out of the filter.
+
+**Results.** Run 4: job-v4 + filter (2026-10-17, same setup, repeat 2;
+`eval/job_agent/results/v4-filter/`). Two measures, because the model's answers changed between
+runs (see below):
+
+| Measure | v4 (run 3) | v4 run 3 cards, filter replayed | **v4 + filter (run 4)** |
+|---|---|---|---|
+| Sentences precision | 0.405 | 0.625 | **0.576** |
+| Sentences recall | 0.714 | 0.714 | 0.679 |
+| **Sentences F1** | 0.517 | 0.667 | **0.623** |
+| Sentences found / extra / missed | 60 / 88 / 24 | 60 / 36 / 24 | 57 / 42 / 27 |
+| Skill names F1 | 0.565 | 0.565 | 0.596 |
+| **Strict F1** | 0.430 | 0.527 | **0.523** |
+| Mean latency per offer | 40.2 s | — | 45.0 s |
+
+The replay (same model answers, filter only) is the clean measure of the filter: **+0.15
+sentences F1, and no requirement lost**. The new run confirms the direction (+0.11 sentences F1,
++0.09 strict F1).
+
+**Limit.** The cues were written by reading these same 10 offers, so these numbers are
+optimistic. The cues are generic federal boilerplate but have not been tested on new offers,
+and there are no French cues yet. A fair number needs offers the cues were not written from.
+
+### Reproducibility across runs
+
+The 3 lost sentences in run 4 did not come from the filter. On offer 885947600, the skill-names
+call got **the same sentence as in run 3 and answered differently** (`"Federal service", "GS-11",
+…` instead of `"IT field", "performing IT related tasks", …`). The terms then fell in other
+clauses, and the line was split differently.
+
+Comparing the cards of run 3 (filter replayed) and run 4 shows that **only 3 of the 10 offers
+give identical cards across the two runs**, although each run reports "stable 10/10". The
+"stable" measure compares two repeats *inside one run*, when Ollama has the model loaded and the
+prompt cached. Across runs, temperature 0 and a fixed seed are not enough for exact
+reproducibility with Ollama, as was already seen with job-v1 on the example offer.
+
+Consequences for the report:
+- "Stable across repeats" means stable within a run, not reproducible across runs.
+- Differences of a few points between versions measured in **different runs** are within the
+  run-to-run noise. Compare versions **in the same run** (`--prompts job-v3 job-v4`), or replay
+  saved answers when only code changes.
+- Not measured yet: the size of this noise (the same version run several times, restarting
+  Ollama between runs).
