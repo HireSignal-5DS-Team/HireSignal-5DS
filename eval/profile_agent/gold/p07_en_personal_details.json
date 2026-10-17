@@ -1,0 +1,56 @@
+{
+  "cv": "p07_en_personal_details",
+  "language": "en",
+  "must_hide": [
+    {
+      "kind": "NAME",
+      "value": "Karim Benali"
+    },
+    {
+      "kind": "URL",
+      "value": "karimbenali.dev"
+    },
+    {
+      "kind": "EMAIL",
+      "value": "karim@benali.io"
+    },
+    {
+      "kind": "PHONE",
+      "value": "+212 6 61 22 33 44"
+    },
+    {
+      "kind": "AGE",
+      "value": "Age: 31"
+    },
+    {
+      "kind": "GENDER",
+      "value": "Male"
+    },
+    {
+      "kind": "NATIONALITY",
+      "value": "Moroccan"
+    },
+    {
+      "kind": "MARITAL",
+      "value": "Married"
+    },
+    {
+      "kind": "ADDRESS",
+      "value": "27 Boulevard Zerktouni"
+    },
+    {
+      "kind": "ADDRESS",
+      "value": "Casablanca 20000"
+    }
+  ],
+  "other_people": [],
+  "must_keep": [
+    "Capgemini Morocco, 2016 - 2024",
+    "Node.js",
+    "Vue.js",
+    "ASP.NET",
+    "Socket.io",
+    "ENSIAS, 2016",
+    "MongoDB"
+  ]
+}

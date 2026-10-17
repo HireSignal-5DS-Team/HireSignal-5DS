@@ -1,0 +1,67 @@
+{
+  "cv": "p01_en_classic",
+  "language": "en",
+  "must_hide": [
+    {
+      "kind": "NAME",
+      "value": "John Smith"
+    },
+    {
+      "kind": "EMAIL",
+      "value": "john.smith92@gmail.com"
+    },
+    {
+      "kind": "PHONE",
+      "value": "+216 22 345 678"
+    },
+    {
+      "kind": "URL",
+      "value": "linkedin.com/in/johnsmith"
+    },
+    {
+      "kind": "URL",
+      "value": "github.com/jsmith"
+    },
+    {
+      "kind": "ADDRESS",
+      "value": "12 Rue de Marseille"
+    },
+    {
+      "kind": "ADDRESS",
+      "value": "Tunis 1002"
+    },
+    {
+      "kind": "NATIONALITY",
+      "value": "Tunisian"
+    },
+    {
+      "kind": "DOB",
+      "value": "12/03/1999"
+    },
+    {
+      "kind": "MARITAL",
+      "value": "Single"
+    }
+  ],
+  "other_people": [
+    {
+      "kind": "NAME",
+      "value": "Leila Haddad"
+    },
+    {
+      "kind": "EMAIL",
+      "value": "leila.haddad@esprit.tn"
+    }
+  ],
+  "must_keep": [
+    "Data Scientist, Vermeg",
+    "2021 - 2024",
+    "XGBoost",
+    "scikit-learn",
+    "Sofrecom",
+    "2020 - 2021",
+    "ESPRIT, 2021",
+    "Power BI",
+    "3 years of experience"
+  ]
+}

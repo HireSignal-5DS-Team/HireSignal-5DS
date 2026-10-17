@@ -1,0 +1,20 @@
+Curriculum Vitae — Omar Haddad
+https://www.linkedin.com/in/omar-haddad-12345 · omar.haddad@hotmail.com · 50 222 333
+
+OBJECTIF
+Ingénieur réseaux à la recherche d'un poste en cloud networking.
+
+EXPÉRIENCE PROFESSIONNELLE
+Ingénieur Réseaux — Ooredoo Tunisie (2018 – 2024)
+- Administration Cisco et Fortinet, 300 sites.
+- Automatisation avec Ansible et Python.
+
+FORMATION
+Ingénieur en Réseaux et Télécommunications, ENIT, 2018
+
+CERTIFICATIONS
+CCNA (2017), CCNP Enterprise (2020)
+
+RÉFÉRENCES
+M. Sami Gharbi, Directeur technique, Ooredoo — sami.gharbi@ooredoo.tn — 71 000 111
+Omar Haddad, 2024

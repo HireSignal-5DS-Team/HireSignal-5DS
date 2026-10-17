@@ -1,0 +1,22 @@
+AMINE
+GHARBI
+Machine Learning Engineer
+
+EXPERIENCE
+ML Engineer, InstaDeep                2022 - present
+- Trained transformer models in PyTorch on GPU clusters.
+- Wrote data pipelines with Spark.
+Research Intern, Inria                2021 - 2022
+- Computer vision with OpenCV.
+
+EDUCATION
+MSc in Artificial Intelligence, Université Paris-Saclay, 2022
+BSc in Mathematics, Faculty of Sciences of Tunis, 2020
+
+SKILLS
+PyTorch, Spark, OpenCV, Python, C++
+
+CONTACT
+amine.gharbi@proton.me
+Mobile: +33 6 12 34 56 78
+Paris, France

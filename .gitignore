@@ -222,3 +222,6 @@ __marimo__/
 # HireSignal local data (never commit real CVs)
 samples/
 out/
+
+# Profile Agent identity files: personal data, never commit
+private/

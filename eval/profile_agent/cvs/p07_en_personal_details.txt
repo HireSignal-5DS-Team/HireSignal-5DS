@@ -1,0 +1,21 @@
+Karim Benali
+Full Stack Developer
+www.karimbenali.dev | karim@benali.io | +212 6 61 22 33 44
+
+PERSONAL DETAILS
+Age: 31
+Gender: Male
+Nationality: Moroccan
+Marital Status: Married
+Address: 27 Boulevard Zerktouni, Casablanca 20000
+
+EXPERIENCE
+Full Stack Developer, Capgemini Morocco, 2016 - 2024
+- Node.js and Vue.js applications for insurance clients.
+- REST APIs with Express and MongoDB; ASP.NET maintenance.
+
+EDUCATION
+Engineering degree, ENSIAS, 2016
+
+SKILLS
+Node.js, Vue.js, Express, MongoDB, ASP.NET, Socket.io

@@ -1,0 +1,37 @@
+{
+  "cv": "p09_en_years_and_handles",
+  "language": "en",
+  "must_hide": [
+    {
+      "kind": "NAME",
+      "value": "Rania Jaziri"
+    },
+    {
+      "kind": "ADDRESS",
+      "value": "Sfax, Tunisia"
+    },
+    {
+      "kind": "URL",
+      "value": "@dev_rania"
+    },
+    {
+      "kind": "EMAIL",
+      "value": "rania.jaziri@gmail.com"
+    },
+    {
+      "kind": "PHONE",
+      "value": "0021697123456"
+    }
+  ],
+  "other_people": [],
+  "must_keep": [
+    "2021 2022 2023",
+    "06/2020 - 09/2020",
+    "CEH (2021)",
+    "Security+ (2020)",
+    "2000 alerts",
+    "SY0-601",
+    "SUP'COM, 2021",
+    "Burp Suite"
+  ]
+}

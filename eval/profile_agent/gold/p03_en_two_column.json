@@ -1,0 +1,36 @@
+{
+  "cv": "p03_en_two_column",
+  "language": "en",
+  "must_hide": [
+    {
+      "kind": "NAME",
+      "value": "Amine"
+    },
+    {
+      "kind": "NAME",
+      "value": "Gharbi"
+    },
+    {
+      "kind": "EMAIL",
+      "value": "amine.gharbi@proton.me"
+    },
+    {
+      "kind": "PHONE",
+      "value": "+33 6 12 34 56 78"
+    },
+    {
+      "kind": "ADDRESS",
+      "value": "Paris, France"
+    }
+  ],
+  "other_people": [],
+  "must_keep": [
+    "ML Engineer, InstaDeep",
+    "2022 - present",
+    "PyTorch",
+    "Inria",
+    "Université Paris-Saclay, 2022",
+    "Faculty of Sciences of Tunis, 2020",
+    "C++"
+  ]
+}
