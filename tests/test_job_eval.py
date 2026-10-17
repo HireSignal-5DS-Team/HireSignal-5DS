@@ -88,3 +88,42 @@ def test_each_gold_matches_at_most_once():
     pred = [GOLD_REQS[2], {**GOLD_REQS[2], "req_id": "dup"}]
     s = score_card(pred, [GOLD_REQS[2]])
     assert (s.tp, s.fp) == (1, 1)
+
+
+# --------------------------------------------------------- two-level scoring ---
+
+from agents.job.scoring import score_sentences, score_skill_terms  # noqa: E402
+
+
+def test_found_sentence_without_skill_names_counts_as_found():
+    """Real evaluation: the model found the right sentence but left skill_terms empty."""
+    pred = [r("p1", "At least 3 years with Java and Spring Boot.", [], category="experience", years=3)]
+    sent, pairs = score_sentences(pred, GOLD_REQS)
+    assert (sent.tp, sent.fp, sent.fn) == (1, 0, 1)            # 2 gold sentences: one found
+    terms = score_skill_terms(pred, GOLD_REQS, pairs)
+    assert (terms.tp, terms.fp, terms.fn) == (0, 0, 2)         # Java and Spring Boot not named
+    strict = score_card(pred, GOLD_REQS)
+    assert strict.tp == 0                                      # the strict score sees nothing
+
+
+def test_skill_terms_are_compared_per_sentence():
+    pred = [r("p1", "At least 3 years with Java and Spring Boot.", ["Java", "Kotlin"], category="experience")]
+    _, pairs = score_sentences(pred, GOLD_REQS)
+    terms = score_skill_terms(pred, GOLD_REQS, pairs)
+    assert (terms.tp, terms.fp, terms.fn) == (1, 1, 1)         # Java right, Kotlin wrong, Spring Boot missing
+
+
+def test_each_sentence_matches_once():
+    pred = [r("p1", "Docker is a plus.", ["Docker"], kind="nice"), r("p2", "Docker is a plus", ["Docker"], kind="nice")]
+    sent, _ = score_sentences(pred, GOLD_REQS)
+    assert (sent.tp, sent.fp) == (1, 1)
+
+
+def test_recording_backend_keeps_every_answer():
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from eval_job_agent import RecordingBackend
+    rec = RecordingBackend(FakeBackend(["A", "B"]))
+    rec.extract("first chunk", "{}", [])
+    rec.extract("second chunk", "{}", [])
+    dump = rec.dump()
+    assert "### call 1" in dump and "### call 2" in dump and "first chunk" in dump and dump.endswith("B")

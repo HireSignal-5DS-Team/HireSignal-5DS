@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "date": "2026-10-17",
+    "offers": 10,
+    "gold_requirements": 104,
+    "model": "hf.co/numind/NuExtract-2.0-2B-GGUF:Q4_K_M",
+    "mode": "inline",
+    "repeat": 2,
+    "active_prompt": "job-v2",
+    "rescored": "2026-10-17"
+  },
+  "results": {
+    "job-v2": {
+      "sentences": {
+        "precision": 0.394,
+        "recall": 0.619,
+        "f1": 0.481,
+        "tp": 52,
+        "fp": 80,
+        "fn": 32,
+        "kind_accuracy": 0.904,
+        "category_accuracy": 0.635,
+        "years_accuracy": 1.0
+      },
+      "skills": {
+        "precision": 0.484,
+        "recall": 0.205,
+        "f1": 0.288,
+        "tp": 15,
+        "fp": 16,
+        "fn": 58
+      },
+      "strict": {
+        "precision": 0.201,
+        "recall": 0.26,
+        "f1": 0.227,
+        "tp": 27,
+        "fp": 107,
+        "fn": 77
+      },
+      "invented_dropped": 0,
+      "needs_human_review": 0,
+      "failed_offers": 0,
+      "mean_latency_s": 52.3,
+      "stable_offers": "3/10",
+      "per_offer": {
+        "usajobs-883161100": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.75,
+          "skills_f1": 0.0,
+          "strict_f1": 0.273
+        },
+        "usajobs-883337000": {
+          "gold_sentences": 16,
+          "sentences_f1": 0.621,
+          "skills_f1": 0.0,
+          "strict_f1": 0.067
+        },
+        "usajobs-883386100": {
+          "gold_sentences": 5,
+          "sentences_f1": 0.222,
+          "skills_f1": 0.0,
+          "strict_f1": 0.2
+        },
+        "usajobs-883511200": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.4,
+          "skills_f1": 0.615,
+          "strict_f1": 0.357
+        },
+        "usajobs-883699600": {
+          "gold_sentences": 18,
+          "sentences_f1": 0.973,
+          "skills_f1": 0.333,
+          "strict_f1": 0.25
+        },
+        "usajobs-883827900": {
+          "gold_sentences": 3,
+          "sentences_f1": 0.16,
+          "skills_f1": 0.0,
+          "strict_f1": 0.16
+        },
+        "usajobs-884301900": {
+          "gold_sentences": 10,
+          "sentences_f1": 0.696,
+          "skills_f1": 0.4,
+          "strict_f1": 0.522
+        },
+        "usajobs-884783000": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.182,
+          "skills_f1": 0.0,
+          "strict_f1": 0.182
+        },
+        "usajobs-885947600": {
+          "gold_sentences": 12,
+          "sentences_f1": 0.0,
+          "skills_f1": 0.0,
+          "strict_f1": 0.0
+        },
+        "usajobs-886071700": {
+          "gold_sentences": 2,
+          "sentences_f1": 0.267,
+          "skills_f1": 0.0,
+          "strict_f1": 0.267
+        }
+      }
+    },
+    "job-v3": {
+      "sentences": {
+        "precision": 0.392,
+        "recall": 0.69,
+        "f1": 0.5,
+        "tp": 58,
+        "fp": 90,
+        "fn": 26,
+        "kind_accuracy": 0.862,
+        "category_accuracy": 0.793,
+        "years_accuracy": 0.948
+      },
+      "skills": {
+        "precision": 1.0,
+        "recall": 0.039,
+        "f1": 0.075,
+        "tp": 3,
+        "fp": 0,
+        "fn": 74
+      },
+      "strict": {
+        "precision": 0.139,
+        "recall": 0.202,
+        "f1": 0.165,
+        "tp": 21,
+        "fp": 130,
+        "fn": 83
+      },
+      "invented_dropped": 10,
+      "needs_human_review": 0,
+      "failed_offers": 0,
+      "mean_latency_s": 43.1,
+      "stable_offers": "10/10",
+      "per_offer": {
+        "usajobs-883161100": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.476,
+          "skills_f1": 0.0,
+          "strict_f1": 0.2
+        },
+        "usajobs-883337000": {
+          "gold_sentences": 16,
+          "sentences_f1": 0.462,
+          "skills_f1": 0.0,
+          "strict_f1": 0.231
+        },
+        "usajobs-883386100": {
+          "gold_sentences": 5,
+          "sentences_f1": 0.211,
+          "skills_f1": 0.0,
+          "strict_f1": 0.2
+        },
+        "usajobs-883511200": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.387,
+          "skills_f1": 0.0,
+          "strict_f1": 0.182
+        },
+        "usajobs-883699600": {
+          "gold_sentences": 18,
+          "sentences_f1": 0.973,
+          "skills_f1": 0.167,
+          "strict_f1": 0.125
+        },
+        "usajobs-883827900": {
+          "gold_sentences": 3,
+          "sentences_f1": 0.267,
+          "skills_f1": 0.0,
+          "strict_f1": 0.133
+        },
+        "usajobs-884301900": {
+          "gold_sentences": 10,
+          "sentences_f1": 0.64,
+          "skills_f1": 0.0,
+          "strict_f1": 0.08
+        },
+        "usajobs-884783000": {
+          "gold_sentences": 6,
+          "sentences_f1": 0.667,
+          "skills_f1": 0.0,
+          "strict_f1": 0.222
+        },
+        "usajobs-885947600": {
+          "gold_sentences": 12,
+          "sentences_f1": 0.316,
+          "skills_f1": 0.0,
+          "strict_f1": 0.105
+        },
+        "usajobs-886071700": {
+          "gold_sentences": 2,
+          "sentences_f1": 0.19,
+          "skills_f1": 0.0,
+          "strict_f1": 0.19
+        }
+      }
+    }
+  }
+}

@@ -111,3 +111,79 @@ def score_card(pred_reqs: list[dict], gold_reqs: list[dict]) -> Score:
     score.unmatched_gold = [g["req_id"] for g in gold_reqs if g["req_id"] not in used_g]
     score.fp, score.fn = len(score.unmatched_pred), len(score.unmatched_gold)
     return score
+
+
+# ------------------------------------------------- two-level scoring ---
+# The strict score above needs the right sentence AND a shared skill name. The model
+# often finds the right sentence but leaves skill_terms empty, so one miss is counted
+# twice (an extra AND a missed requirement). The two questions are scored separately:
+#   1. sentences: was each requirement SENTENCE of the offer found?   (one-to-one on unique quotes)
+#   2. skills:    on the sentences found, were the skill names right? (term level)
+
+
+@dataclass
+class TermScore:
+    tp: int = 0
+    fp: int = 0
+    fn: int = 0
+
+    def add(self, other: "TermScore") -> "TermScore":
+        self.tp, self.fp, self.fn = self.tp + other.tp, self.fp + other.fp, self.fn + other.fn
+        return self
+
+    @property
+    def precision(self) -> float:
+        return self.tp / (self.tp + self.fp) if self.tp + self.fp else 0.0
+
+    @property
+    def recall(self) -> float:
+        return self.tp / (self.tp + self.fn) if self.tp + self.fn else 0.0
+
+    @property
+    def f1(self) -> float:
+        p, r = self.precision, self.recall
+        return 2 * p * r / (p + r) if p + r else 0.0
+
+
+def _by_evidence(reqs: list[dict]) -> dict[str, list[dict]]:
+    groups: dict[str, list[dict]] = {}
+    for r in reqs:
+        groups.setdefault(r["evidence"], []).append(r)
+    return groups
+
+
+def score_sentences(pred_reqs: list[dict], gold_reqs: list[dict]) -> tuple[Score, list[tuple[str, str]]]:
+    """Requirement SENTENCES found, ignoring skill names. Returns the score and matched (pred, gold) quotes."""
+    pred_q, gold_q = list(_by_evidence(pred_reqs)), list(_by_evidence(gold_reqs))
+    candidates = sorted(((_ratio(p, g), i, j) for i, p in enumerate(pred_q) for j, g in enumerate(gold_q)
+                         if _evidence_overlap(p, g)), reverse=True)
+    used_p, used_g, pairs = set(), set(), []
+    for _, i, j in candidates:
+        if i not in used_p and j not in used_g:
+            used_p.add(i)
+            used_g.add(j)
+            pairs.append((pred_q[i], gold_q[j]))
+
+    pred_g, gold_g = _by_evidence(pred_reqs), _by_evidence(gold_reqs)
+    score = Score(tp=len(pairs), fp=len(pred_q) - len(pairs), fn=len(gold_q) - len(pairs))
+    for p, g in pairs:  # attributes compared on the first requirement of each sentence
+        pr, gr = pred_g[p][0], gold_g[g][0]
+        score.kind_ok += pr["kind"] == gr["kind"]
+        score.category_ok += pr["category"] == gr["category"]
+        score.years_ok += _same_years(pr["min_years"], gr["min_years"])
+    score.unmatched_pred = [q for k, q in enumerate(pred_q) if k not in used_p]
+    score.unmatched_gold = [q for k, q in enumerate(gold_q) if k not in used_g]
+    return score, pairs
+
+
+def score_skill_terms(pred_reqs: list[dict], gold_reqs: list[dict],
+                      pairs: list[tuple[str, str]]) -> TermScore:
+    """On the sentences found: were the skill names right? (all terms of a sentence together)"""
+    pred_g, gold_g = _by_evidence(pred_reqs), _by_evidence(gold_reqs)
+    total = TermScore()
+    for p, g in pairs:
+        pt = {_norm(t) for r in pred_g[p] for t in r["skill_terms"]}
+        gt = {_norm(t) for r in gold_g[g] for t in r["skill_terms"]}
+        tp = len(pt & gt)
+        total.add(TermScore(tp=tp, fp=len(pt) - tp, fn=len(gt) - tp))
+    return total
