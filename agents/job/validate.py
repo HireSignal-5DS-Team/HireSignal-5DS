@@ -2,6 +2,7 @@
 
 The model output is never trusted directly. For each requirement:
   1. evidence  must be found in the job offer      -> repaired to the real text, or dropped
+               and must not be application text, a definition or an admin condition -> dropped
   2. min_years must match a number in the evidence -> corrected, or set to null
   3. kind      must agree with cue words           -> corrected
   4. skill_terms must appear in the evidence       -> unknown terms removed
@@ -44,6 +45,35 @@ _YEARS = re.compile(
 )
 _PER_YEAR = {"month": 12, "months": 12, "mois": 12, "week": 52, "weeks": 52, "semaine": 52, "semaines": 52}
 
+# Sentences that sit inside a requirement section but are not requirements (ANNOTATION_RULES.md §1).
+# Found in the job-v4 evaluation: 52 of the 88 extra sentences were of these three kinds, all
+# inside USAJOBS "Qualifications". Matched on folded text (lowercase, no accents). Each cue was
+# checked against the 104 gold quotes: none matches (tests/test_job_filter.py keeps it that way).
+# "accredited", "resume" and "is defined as" alone are too broad: "an accredited college",
+# "demonstrate in your resume at least one year…", "Specialized experience is defined as: …"
+# introduce real requirements.
+NOT_REQUIREMENT_CUES = {
+    "application instructions": re.compile(
+        r"\b(transcripts?|resume must|referenced in your resume|application (package|process)|questionnaire|"
+        r"plagiari\w+|click here|click evaluation|https?://|www\.|verification|must be submitted|"
+        r"falsely claiming|closing date|cut-?off date|ineligible rating|"
+        r"accrediting|accreditation|accredited (or pre-accredited )?institutions|accredited organization|"
+        r"accredited school|foreign (college|education|educat)\w*|credential evaluat\w*|"
+        r"education completed in foreign|outside of the u\.?s)\b"),
+    "definition": re.compile(
+        r"\b(refers to|is considered|is the number of|is the experience that|may have been performed|"
+        r"examples of|nonqualifying|volunteer work helps|if you cannot obtain|are based on the)\b"),
+    "administrative condition": re.compile(
+        r"\b(time-?in-?grade|tig restriction|merit promotion|career-conditional|eligibility requirements|"
+        r"criminal history|drug-?test|security clearance|veterans unable|next lower grade)\b"),
+}
+
+
+def not_a_requirement(evidence: str) -> str | None:
+    """The kind of non-requirement text this quote is ('definition', ...), or None."""
+    folded = _fold(evidence)
+    return next((kind for kind, cue in NOT_REQUIREMENT_CUES.items() if cue.search(folded)), None)
+
 
 @dataclass
 class CheckReport:
@@ -51,6 +81,7 @@ class CheckReport:
     warnings: list[str] = field(default_factory=list)
     uncertain: list[str] = field(default_factory=list)
     dropped: int = 0
+    filtered: int = 0  # real quotes that are not requirements (not_a_requirement); not counted as invented
     repaired: int = 0
     split: int = 0  # compound items turned into one requirement per skill
 
@@ -225,6 +256,11 @@ def check_requirements(items: list, post: str) -> CheckReport:
         if how != "exact":
             report.repaired += 1
             report.warnings.append(f"{label}: quote repaired ({how})")
+        kind_of_text = not_a_requirement(evidence)
+        if kind_of_text:
+            report.filtered += 1
+            report.warnings.append(f"{label}: not a requirement ({kind_of_text}), dropped")
+            continue
         if not text:
             text = _squash(evidence)
 

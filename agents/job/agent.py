@@ -35,7 +35,7 @@ from . import prompts
 from .backend import BackendError, ExtractionBackend
 from .sections import Section, chunk_sections, requirement_sections
 from .validate import (MUST_CUES, _has_cue, check_requirements, detect_language, locate_evidence,
-                       parse_model_output)
+                       not_a_requirement, parse_model_output)
 
 MAX_ATTEMPTS = 2              # first try + one retry when the answer is unreadable
 REVIEW_IF_DROPPED_SHARE = 0.3  # more than 30% of proposals invented -> a person checks the card
@@ -102,8 +102,8 @@ def _add_skill_terms(items: list, post: str, backend, warnings: list[str]) -> No
         if not isinstance(item, dict):
             continue
         evidence, _how = locate_evidence(str(item.get("evidence") or ""), post)
-        if evidence is None:
-            continue  # invented quote: check_requirements drops it
+        if evidence is None or not_a_requirement(evidence):
+            continue  # invented quote or not a requirement: check_requirements drops it
         if evidence not in found:
             data = _ask(backend, evidence, prompts.terms_template(), prompts.TERMS_EXAMPLES, warnings,
                         f"terms '{evidence[:40]}': ")
@@ -159,7 +159,7 @@ def run_job_agent(job_text: str, job_id: str, backend: ExtractionBackend,
     warnings += report.warnings
     if not report.requirements:
         raise JobAgentError(
-            "No requirement survived the checks (all missing or invented). " + " | ".join(warnings)
+            "No requirement survived the checks (all missing, invented or not requirements). " + " | ".join(warnings)
         )
 
     if prompts.STRATEGY[version] == "sections":
