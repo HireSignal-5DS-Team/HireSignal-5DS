@@ -117,7 +117,10 @@
       "kind": "must",
       "category": "experience",
       "skill_terms": [
-        "Microsoft SQL Server"
+        "Microsoft SQL Server",
+        "schema design",
+        "performance tuning",
+        "query optimization"
       ],
       "min_years": null,
       "chunk_ids": []
@@ -140,9 +143,7 @@
       "evidence": "Strong full‑stack development skills and proficiency with modern programming languages, web development, relational databases, DevOps, and Unix‑like systems.",
       "kind": "must",
       "category": "skill",
-      "skill_terms": [
-        "modern programming languages"
-      ],
+      "skill_terms": [],
       "min_years": null,
       "chunk_ids": []
     },
@@ -264,7 +265,8 @@
       "kind": "must",
       "category": "skill",
       "skill_terms": [
-        "git"
+        "git",
+        "GitLab"
       ],
       "min_years": null,
       "chunk_ids": []
@@ -349,7 +351,7 @@
       "kind": "must",
       "category": "skill",
       "skill_terms": [
-        "MSAL"
+        "Microsoft Authentication Library"
       ],
       "min_years": null,
       "chunk_ids": []

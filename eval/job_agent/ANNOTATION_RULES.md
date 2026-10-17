@@ -51,8 +51,26 @@ are not separate requirements.
   Qualifications", "desired", "a plus", "ideally") → `nice`.
 - `category`: `education` (degrees), `experience` (years or "experience with/in…"),
   `certification`, `language`, `skill` (knowledge, proficiency, ability), `other`.
-- `skill_terms`: the tool / technology / domain names, as written in the offer.
+- `skill_terms`: the named skills the requirement asks for, as written in the offer (rules below).
 - `min_years`: only when the offer gives a number of years for that requirement; else `null`.
+
+### 3.1 `skill_terms`
+
+`skill_terms` has two jobs. The Matcher looks for these names on the CV, and the code splits a
+line into one requirement per term (§2). So a term must be **something a candidate could list
+on a CV** and **what the requirement asks for**, not a detail around it.
+
+| # | Rule | Example (terms in **bold**) |
+|---|---|---|
+| S1 | Terms are the **objects of the requirement**: what follows "experience with / in / using", "knowledge of", "proficiency in", "expertise in", or the skill a duty-style line names. Words about purpose, context or parts are not terms | "Experience with **computer programming** and **tool development** to solve key AI measurement science challenges"; "designing … end-to-end **AI platforms** that incorporate secure data pipelines, APIs…" |
+| S2 | After **such as / e.g. / including / to include / particularly**, every **named** example is a term. The general word before the list is a term only if it is itself a named skill, not a generic class | "**ETL** … tools such as **Pentaho**, **AWS Glue**"; "**git** (particularly **GitLab**)"; "statistical software or programming languages (e.g., **R**, **Python**)": no term for "statistical software" |
+| S3 | **Boundary**: the shortest form a CV would use. Drop a trailing generic noun (practices, pipelines, projects, techniques, tools, patterns, skills, technologies) when the rest is a skill on its own; keep it when the rest is not | "**CI/CD** pipelines", "**DevOps** practices", "**RPA** projects"; but "**data pipelines**", "**RESTful APIs**", "**distributed systems**" |
+| S4 | A full name with its acronym in parentheses is **one term, the first form written**. A pair written as one unit with a slash stays one term | "**Microsoft SQL Server** (MSSQL)", "**robotic process automation** (RPA)", "**artificial intelligence/machine learning** (AI/ML)" |
+| S5 | **Never terms**: verbs and activities (designing, troubleshooting), adjectives (secure, scalable), generic nouns (data, code, applications, environments, solutions), grade levels (GS-13), generic experience labels ("IT-related experience", "specialized experience"), generic classes ("modern programming languages", "cloud tools") | "Experience troubleshooting **distributed systems** and production environments": not "troubleshooting", not "production environments" |
+| S6 | **Education** items have no terms (the field of study is in `text`). A **soft skill** is a term only when the offer lists it as a named competency on its own line | "Bachelor's degree in computer science" → `[]`; "**Teamwork**" (competency line) → `["Teamwork"]` |
+
+No limit on the number of terms: every name that passes S1–S6 is listed, and none that fails.
+A sentence with no such name has `skill_terms: []`.
 
 ## 4. Evaluation matching (`scripts/eval_job_agent.py`)
 

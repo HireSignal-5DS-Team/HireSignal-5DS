@@ -10,9 +10,7 @@
       "evidence": "IT related experience demonstrated by paid or unpaid experience obtained in either the private or public sector, and/or completion of specific, intensive training that demonstrates all of the following four competencies",
       "kind": "must",
       "category": "experience",
-      "skill_terms": [
-        "IT related experience"
-      ],
+      "skill_terms": [],
       "min_years": null,
       "chunk_ids": []
     },

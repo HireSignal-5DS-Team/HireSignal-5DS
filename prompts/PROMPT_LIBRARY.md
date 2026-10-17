@@ -290,11 +290,38 @@ Every wrong term also produces a wrong split, which is why the card count rises 
 and the strict "extra" count does not go down.
 
 Reading: T3 and T4 are model errors that more empty examples or a stopword filter in code
-could remove. T1 and T2 are partly an **annotation question**: the gold cards keep only the
-main terms, and a matcher could well use "containerized workloads". Before tuning the prompt
-for precision, the annotation rule for `skill_terms` (ANNOTATION_RULES.md §3) should say how
-many terms per sentence and where a term starts and ends, and the gold should be reviewed by a
-second person. Otherwise the prompt would be tuned to one annotator's habits.
+could remove. T1 and T2 looked partly like an **annotation question**, so before tuning the
+prompt for precision, the `skill_terms` rule was written down (ANNOTATION_RULES.md §3.1, rules
+S1–S6: the objects of the requirement, named examples after "such as", shortest CV form, no
+generic words). Applying it changed 8 of the 70 gold sentences (e.g. "IT-related experience" is
+no longer a term, "Microsoft SQL Server (MSSQL), including schema design…" gains the three
+methods, "RPA projects" → "RPA"); the number of gold requirements is unchanged (104).
+
+Same saved cards, re-scored against the gold that follows the rule
+(`eval/job_agent/results/v3-vs-v4/rescore.md`):
+
+| Measure | `job-v3` | `job-v4` |
+|---|---|---|
+| Skill names F1 | 0.075 | **0.565** |
+| Skill names precision / recall | 1.0 / 0.039 | 0.432 / 0.818 |
+| Skill names right / wrong / missing | 3 / 0 / 74 | 63 / 83 / 14 |
+| Strict F1 | 0.175 | **0.430** |
+
+The score barely moves: **83 wrong terms remain wrong under the written rule**. Most of T1
+are details around the requirement (S1: "secure data pipelines" in "AI platforms that
+incorporate secure data pipelines…"), not skills the annotator forgot. So precision is a real
+model problem, and the next prompt version can target it (examples where details are not terms,
+and the S5 word list as a code filter).
+
+Open points, not yet decided:
+- "Experience using LLMs, RAG, MCP servers, and other AI development resources, including cloud
+  tools such as AWS Bedrock and Azure OpenAI": S2 would add AWS Bedrock and Azure OpenAI, but
+  `split_compound` would then keep the whole line as one requirement (a "such as" in any gap
+  stops the split). The gold item is left unchanged until the code groups only the terms after
+  the marker.
+- §1 excludes "assessment competency lists", yet three gold cards keep lines such as "Attention
+  to Detail", because those offers say the candidate must show these competencies. §1 needs to
+  say so explicitly.
 
 ### Guardrails applied after every call (code, not prompt)
 

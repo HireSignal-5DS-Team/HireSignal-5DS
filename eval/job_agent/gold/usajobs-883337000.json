@@ -10,9 +10,7 @@
       "evidence": "you must show that you have the required IT-related experience for the grade level to which your are applying",
       "kind": "must",
       "category": "experience",
-      "skill_terms": [
-        "IT-related experience"
-      ],
+      "skill_terms": [],
       "min_years": null,
       "chunk_ids": []
     },

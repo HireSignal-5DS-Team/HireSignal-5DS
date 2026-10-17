@@ -10,9 +10,7 @@
       "evidence": "You must have IT-related experience demonstrating each of the four competencies listed below",
       "kind": "must",
       "category": "experience",
-      "skill_terms": [
-        "IT-related experience"
-      ],
+      "skill_terms": [],
       "min_years": null,
       "chunk_ids": []
     },
@@ -108,7 +106,7 @@
       "kind": "must",
       "category": "experience",
       "skill_terms": [
-        "RPA projects"
+        "RPA"
       ],
       "min_years": null,
       "chunk_ids": []
