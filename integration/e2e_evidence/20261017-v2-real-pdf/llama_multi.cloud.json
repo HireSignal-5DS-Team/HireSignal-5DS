@@ -1,0 +1,7 @@
+{"host": "127.0.0.1", "port": 8091,
+ "models": [
+  {"model": "/home/user/hs_models/gguf/Qwen3-4B-Instruct-2507-Q4_K_M.gguf", "model_alias": "Qwen/Qwen3-4B-Instruct-2507+lora",
+   "lora_path": "/home/user/hs_models/adapter/hiresignal-lora-f16.gguf", "n_ctx": 6144, "n_threads": 4},
+  {"model": "/home/user/hs_models/gguf/Qwen3-4B-Instruct-2507-Q4_K_M.gguf", "model_alias": "Qwen/Qwen3-4B-Instruct-2507",
+   "n_ctx": 6144, "n_threads": 4}
+ ]}
