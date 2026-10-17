@@ -11,11 +11,12 @@ from .prompts import PROMPT_VERSION
 
 
 def run_profile_agent(text: str, cv_id: str | None = None, backend=None, sections: dict | None = None,
-                      detectors: list | tuple = (), prompt_version: str = PROMPT_VERSION) -> AnonymisedCV:
+                      detectors: list | tuple = (), prompt_version: str = PROMPT_VERSION,
+                      chunk_chars: int = 1500) -> AnonymisedCV:
     """Steps 1-3 always; step 4 when a backend (the shared plain Qwen) is given.
 
     Step 4 only ever sees `result.text`, the anonymised CV."""
     result = anonymise_cv(text, cv_id=cv_id, sections=sections, detectors=detectors)
     if backend is not None:
-        result.profile = parse_cv(result.text, result.cv_id, backend, prompt_version)
+        result.profile = parse_cv(result.text, result.cv_id, backend, prompt_version, chunk_chars=chunk_chars)
     return result

@@ -252,12 +252,13 @@ def _ask(backend, chunk: str, system: str, examples: list[dict], notes: list[str
     return None
 
 
-def parse_cv(anon_text: str, cv_id: str, backend, prompt_version: str = PROMPT_VERSION) -> ParsedCV:
+def parse_cv(anon_text: str, cv_id: str, backend, prompt_version: str = PROMPT_VERSION,
+             chunk_chars: int = CHUNK_CHARS) -> ParsedCV:
     """Anonymised CV text -> ParsedCV. Never give it the original text."""
     system, examples = get_prompt(prompt_version)
     notes: list[str] = []
     skills, education, experience = [], [], []
-    chunks = chunk_sections(cv_sections(anon_text))
+    chunks = chunk_sections(cv_sections(anon_text), size=chunk_chars)
     for i, chunk in enumerate(chunks, 1):
         data = _ask(backend, chunk, system, examples, notes, f"part {i}/{len(chunks)}")
         if data is None:

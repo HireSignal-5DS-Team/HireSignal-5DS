@@ -101,7 +101,7 @@ swap, use the fallback below.
 Notes:
 - `n_ctx` 6144 for the plain model: the Job and Profile prompts are about 1,400 tokens plus up to
   `HS_UPSTREAM_MAX_TOKENS` output tokens. With 6 GB, if loading fails, set `n_ctx` to 4096 and
-  `HS_UPSTREAM_MAX_TOKENS` to 2048.
+  `HS_UPSTREAM_MAX_TOKENS` to 768 (verified 2026-10-17 under partial GPU offload).
 - An unknown model name falls back to the first model. The backend `/ready` check compares the Matcher alias,
   and the Job Agent refuses any model name that contains "lora".
 - Each candidate costs two swaps (plain for Profile and Job, then LoRA for the Matcher). On the GPU a swap is a
@@ -122,8 +122,9 @@ $env:HS_MATCHER_MODEL="Qwen/Qwen3-4B-Instruct-2507+lora"
 $env:HS_FALLBACK="off"
 $env:HS_UPSTREAM_LLM_URL="http://127.0.0.1:8081/v1"
 $env:HS_UPSTREAM_LLM_MODEL="Qwen/Qwen3-4B-Instruct-2507"
-$env:HS_UPSTREAM_TIMEOUT="300"
-$env:HS_UPSTREAM_MAX_TOKENS="3072"
+$env:HS_UPSTREAM_TIMEOUT="180"
+$env:HS_UPSTREAM_MAX_TOKENS="768"
+$env:HS_V2_PROFILE_CHUNK_CHARS="800" # V2 integration only; teammate profile defaults remain unchanged
 $env:HS_RAG="gated"
 $env:HIRESIGNAL_RAG_DIR="$PWD\rag"
 $env:HS_BIAS_AUDITOR="rules_v2"

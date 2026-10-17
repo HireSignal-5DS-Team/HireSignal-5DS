@@ -138,3 +138,46 @@ def test_plain_paragraph_job_without_section_is_not_alone_a_review_reason():
     out = analyze_documents(pipeline(), JOB, cv_text=CV, llm=FakeBackend(fake_llm))
     assert "no requirement section found, the whole offer was used" in out["upstream"]["job_card"]["warnings"]
     assert "job_agent:validation_warnings" not in out["upstream"]["review_reasons"]
+
+
+def test_v2_upstream_defaults_have_bounded_completion():
+    from integration.upstream import upstream_llm
+    client = upstream_llm({})
+    assert client.model == "Qwen/Qwen3-4B-Instruct-2507"
+    assert client.max_tokens == 768
+    assert client.timeout == 180
+
+
+def test_truncated_profile_output_requires_review_without_fabricating_skills():
+    class TruncatedProfile(FakeBackend):
+        def extract(self, text, template, examples):
+            if "You read one part of a CV" in template:
+                self.last_call = {"finish_reason": "length"}
+                return '{"skills": ['
+            self.last_call = {"finish_reason": "stop"}
+            return fake_llm(text, template)
+
+    out = analyze_documents(pipeline(), JOB, cv_text=CV, llm=TruncatedProfile(fake_llm))
+    assert out["stages"][1]["status"] == "ok"
+    assert out["stages"][1]["extraction_incomplete"] is True
+    assert "profile:partial_extraction_requires_review" in out["upstream"]["review_reasons"]
+    assert out["upstream"]["profile"]["skills"] == []
+    assert out["requirements"]  # Matcher still evaluates verbatim anonymised CV evidence
+
+
+def test_v2_smaller_profile_chunks_preserve_teammate_defaults(monkeypatch):
+    import inspect
+    import agents.profile as profile_module
+    original = profile_module.run_profile_agent
+    assert inspect.signature(original).parameters["chunk_chars"].default == 1500
+    monkeypatch.delenv("HS_V2_PROFILE_CHUNK_CHARS", raising=False)
+    called = []
+
+    def recorded(*args, **kwargs):
+        called.append(kwargs.get("chunk_chars"))
+        return original(*args, **kwargs)
+
+    monkeypatch.setattr(profile_module, "run_profile_agent", recorded)
+    out = analyze_documents(pipeline(), JOB, cv_text=CV, llm=FakeBackend(fake_llm))
+    assert called == [800]
+    assert out["stages"][1]["status"] == "ok"
