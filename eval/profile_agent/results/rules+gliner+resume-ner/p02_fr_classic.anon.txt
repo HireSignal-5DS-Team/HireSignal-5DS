@@ -2,13 +2,13 @@
 Ingénieure DevOps
 Adresse : [ADDRESS]
 Tél : [PHONE] | E-mail : [EMAIL]
-Née le [PERSONAL] | Nationalité : [ADDRESS] | Situation familiale : [PERSONAL]
+Née le [PERSONAL] | Nationalité : [PERSONAL] | Situation familiale : [PERSONAL]
 
 PROFIL
 Ingénieure DevOps avec 4 ans d'expérience en CI/CD et Kubernetes.
 
 EXPÉRIENCE PROFESSIONNELLE
-Ingénieure DevOps — Telnet, Tu[ADDRESS] (2020 – 2024)
+Ingénieure DevOps — Telnet, Tunis (2020 – 2024)
 - Mise en place de pipelines GitLab CI et de clusters Kubernetes.
 - Supervision avec Prometheus et Grafana.
 

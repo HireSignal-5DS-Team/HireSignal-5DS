@@ -1,5 +1,5 @@
 [NAME] | Data Scientist
-[EMAIL] • [PHONE] • [EMAIL] • [EMAIL]
+[EMAIL] • [PHONE] • [URL] • [URL]
 [ADDRESS] | [PERSONAL] | Born on [PERSONAL] | [PERSONAL]
 
 SUMMARY
@@ -20,4 +20,4 @@ SKILLS
 Python, SQL, XGBoost, scikit-learn, Docker, FastAPI, Power BI
 
 REFERENCES
-Dr. [NAME], ESPRIT, [EMAIL]
+[NAME], ESPRIT, [EMAIL]

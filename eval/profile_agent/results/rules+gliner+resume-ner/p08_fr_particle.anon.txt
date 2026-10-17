@@ -1,19 +1,19 @@
 [NAME] — Data Engineer
-Portfolio : [EMAIL] | G[ADDRESS]H[ADDRESS] : [URL] | [EMAIL] | [PHONE]
+Portfolio : [URL] | GitHub : [URL] | [EMAIL] | [PHONE]
 
 PROFIL
 Data engineer, 2 ans d'expérience, passionnée par le cloud.
 
 EXPÉRIENCE
 Data Engineer — Talan Tunisie (2022 – 2024)
-- Pipelines Airflow et dbt sur Snow[ADDRESS].
+- Pipelines Airflow et dbt sur Snowflake.
 - Projet : migration vers AWS (S3, Glue, Redshift).
 
 PROJETS
-Portfolio personnel ([EMAIL]) en Next.js — [NAME] a conçu l'API.
+Portfolio personnel ([URL]) en Next.js — [NAME] a conçu l'API.
 
 FORMATION
-Diplôme d'ingénieur en Data Science, ESPR[ADDRESS], 2022
+Diplôme d'ingénieur en Data Science, ESPRIT, 2022
 
 COMPÉTENCES
-Airflow, dbt, Snow[ADDRESS], AWS, Python, SQL
+Airflow, dbt, Snowflake, AWS, Python, SQL

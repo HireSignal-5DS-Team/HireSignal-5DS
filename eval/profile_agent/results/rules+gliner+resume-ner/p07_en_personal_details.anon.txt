@@ -1,6 +1,6 @@
 [NAME]
 Full Stack Developer
-[EMAIL] | [EMAIL] | [PHONE]
+[URL] | [EMAIL] | [PHONE]
 
 PERSONAL DETAILS
 Age: [PERSONAL]

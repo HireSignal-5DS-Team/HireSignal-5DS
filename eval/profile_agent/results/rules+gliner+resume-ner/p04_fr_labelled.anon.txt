@@ -3,7 +3,7 @@
 Prénom : [NAME]
 Nom : [NAME]
 Date de naissance : [PERSONAL]
-Lieu de naissance : [ADDRESS]
+Lieu de naissance : [PERSONAL]
 Sexe : [PERSONAL]
 Téléphone : [PHONE]
 Email : [EMAIL]
@@ -14,7 +14,7 @@ Développeur Java — Sopra HR Software (2019 – 2023)
 - Base de données Oracle et PostgreSQL.
 
 FORMATION
-Licence en Informatique de Gestion, ISG [ADDRESS], 2018
+Licence en Informatique de Gestion, ISG [PERSONAL], 2018
 
 COMPÉTENCES
 Java, Spring Boot, Oracle, PostgreSQL, Angular

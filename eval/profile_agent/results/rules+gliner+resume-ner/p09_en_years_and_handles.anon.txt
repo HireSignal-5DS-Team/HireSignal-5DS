@@ -1,5 +1,5 @@
 [NAME]
-Cybersecurity Analyst · [ADDRESS] · [EMAIL] · [EMAIL]
+Cybersecurity Analyst · [ADDRESS] · [URL] · [EMAIL] · [PHONE]
 
 SUMMARY
 Security analyst. Certified CEH (2021) and CompTIA Security+ (2020).
