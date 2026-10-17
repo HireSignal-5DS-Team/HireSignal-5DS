@@ -225,3 +225,6 @@ samples/
 out/
 # Profile Agent identity files: personal data, never commit
 private/
+
+# Local isolated dependency installs for V2 GPU/browser verification
+.v2deps/

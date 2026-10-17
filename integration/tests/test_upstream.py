@@ -132,3 +132,9 @@ def test_clean_inputs_have_no_injection_flags():
     out = analyze_documents(pipeline(), JOB, cv_text=CV, llm=FakeBackend(fake_llm))
     assert not [r for r in out["upstream"]["review_reasons"] if "injection" in r]
     assert out["upstream"]["dropped_injected_requirements"] == []
+
+
+def test_plain_paragraph_job_without_section_is_not_alone_a_review_reason():
+    out = analyze_documents(pipeline(), JOB, cv_text=CV, llm=FakeBackend(fake_llm))
+    assert "no requirement section found, the whole offer was used" in out["upstream"]["job_card"]["warnings"]
+    assert "job_agent:validation_warnings" not in out["upstream"]["review_reasons"]

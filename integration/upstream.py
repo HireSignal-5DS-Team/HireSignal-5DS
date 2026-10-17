@@ -115,7 +115,11 @@ def analyze_documents(pipeline, job_text, cv_bytes=None, file_name=None, cv_text
         review.append("reader:low_confidence_or_ocr")
     if prof.report.leaks_left:
         review.append("profile:identity_leak_left")
-    if card.needs_human_review or card.warnings:
+    # A free-form job paragraph has no explicit section heading. Using the whole
+    # paragraph is an expected fallback, not by itself a reason for human review.
+    benign_job_warnings = {"no requirement section found, the whole offer was used"}
+    material_job_warnings = [w for w in card.warnings if w not in benign_job_warnings]
+    if card.needs_human_review or material_job_warnings:
         review.append("job_agent:validation_warnings")
     if job_inj:
         review.append("job_agent:possible_prompt_injection")

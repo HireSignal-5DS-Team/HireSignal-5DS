@@ -561,15 +561,18 @@ function NewAnalysis({
                 rows={7}
                 maxLength={MAX_TEXT}
                 placeholder={
-                  "Add one requirement per line…\nReact\nTypeScript\nAccessible interfaces"
+                  mode === "REAL" && flow === "v2"
+                    ? "Paste a complete job description. The Job Agent extracts required and preferred qualifications."
+                    : "Add one requirement per line…\nReact\nTypeScript\nAccessible interfaces"
                 }
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               />
             </label>
             <p className="field-hint">
-              In DEMO, each non-empty line becomes one must-have requirement. No
-              AI extraction is performed.
+              {mode === "REAL" && flow === "v2"
+                ? "In REAL V2, the Job Agent reads this whole description and extracts must-have and preferred requirements with evidence."
+                : "In DEMO, each non-empty line becomes one must-have requirement. No AI extraction is performed."}
             </p>
           </section>
           <section className="panel form-panel">
@@ -1054,6 +1057,12 @@ function Detail({
                   </p>
                 </div>
               </div>
+              {!!candidate.upstream?.review_reasons?.length && (
+                <p className="field-hint" role="alert">
+                  HUMAN REVIEW REQUIRED for upstream checks: {candidate.upstream.review_reasons.join(", ")}.
+                  These flags are additional to the per-requirement review count in the generated summary.
+                </p>
+              )}
               <p>{candidate.reporter.executive_summary.text}</p>
               <p className="field-hint">
                 Summary writer: {candidate.reporter.executive_summary.writer} ·
