@@ -125,12 +125,29 @@ export interface AnalysisInput {
   description: string;
   candidates: CV[];
 }
+/** One upstream/downstream stage as it really ran on the backend (POST /api/v2/analyze). */
+export interface StageInfo {
+  stage: string;
+  status: "ok" | "failed";
+  elapsed_s?: number;
+  error?: string;
+  [key: string]: unknown;
+}
+export interface UpstreamInfo {
+  job_title?: string;
+  review_reasons?: string[];
+  privacy?: { leaks_left?: number; placeholders?: Record<string, number> };
+  job_card?: { requirements?: { req_id: string; text: string; kind: string; evidence: string; min_years?: number | null }[] };
+  [key: string]: unknown;
+}
 export interface CandidateRecord {
   id: string;
   label: string;
   cv: CV;
   report: MatchReport;
   reporter?: ReporterData | null;
+  stages?: StageInfo[];
+  upstream?: UpstreamInfo;
   review: "Pending review" | "Reviewed" | "Follow-up needed";
   note: string;
 }

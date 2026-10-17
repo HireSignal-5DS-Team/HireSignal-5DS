@@ -10,11 +10,16 @@ import type {
   Mode,
   RequirementResult,
   ReporterData,
+  StageInfo,
+  UpstreamInfo,
   ValidatorInfo,
 } from "./contracts";
 
 export const mode: Mode =
   import.meta.env.VITE_EXECUTION_MODE === "REAL" ? "REAL" : "MOCK";
+/** v2 (default): CV + job paragraph go through the Reader, Profile and Job agents (POST /api/v2/analyze).
+ *  v1: the original structured flow (one requirement per line, POST /api/v1/match). */
+export const flow: "v1" | "v2" = import.meta.env.VITE_API_FLOW === "v1" ? "v1" : "v2";
 export const stages = [
   "CV Reader",
   "Profile & Job Analysis",
@@ -166,7 +171,11 @@ export function seedCampaign(): Campaign {
   );
 }
 
-export class ApiError extends Error {}
+export class ApiError extends Error {
+  constructor(message: string, public stages?: StageInfo[]) {
+    super(message);
+  }
+}
 export class ApiClient {
   constructor(
     private base = import.meta.env.VITE_API_BASE_URL ?? "",
@@ -191,10 +200,23 @@ export class ApiClient {
         signal: controller.signal,
         headers: { Accept: "application/json", ...options.headers },
       });
-      if (!response.ok)
+      if (!response.ok) {
+        let detail = "";
+        let failed: StageInfo[] | undefined;
+        try {
+          const body = JSON.parse(await response.text()) as { detail?: unknown; stages?: StageInfo[] };
+          detail = typeof body.detail === "string" ? body.detail : "";
+          failed = body.stages;
+        } catch {
+          /* non-JSON error body */
+        }
         throw new ApiError(
-          `Backend returned HTTP ${response.status}. Check service readiness and request validation.`,
+          detail
+            ? `Backend returned HTTP ${response.status}: ${detail}`
+            : `Backend returned HTTP ${response.status}. Check service readiness and request validation.`,
+          failed,
         );
+      }
       const text = await response.text();
       if (!text.trim())
         throw new ApiError("Backend returned an empty response.");
@@ -233,6 +255,13 @@ export class ApiClient {
   }
   // Deliberately unknown: an HTTP envelope is not defined on the integration branch.
   // Wire this transport through a verified FastAPI adapter before enabling REAL matching.
+  analyze(payload: { cv_text?: string; cv_file_b64?: string; cv_file_name?: string; job_text: string }) {
+    return this.request("/api/v2/analyze", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+  }
   match(payload: unknown) {
     return this.request("/api/v1/match", {
       method: "POST",
@@ -261,6 +290,8 @@ interface PipelineRequirementRow {
 }
 interface PipelineOutput {
   contract_version?: string;
+  stages?: StageInfo[];
+  upstream?: UpstreamInfo;
   cv_id: string;
   job_id: string;
   match_report: MatchReport;
@@ -275,12 +306,12 @@ function isMatchReport(x: unknown): x is MatchReport {
   return typeof o.schema_version === "string" && Array.isArray(o.results) && typeof o.summary === "object";
 }
 
-async function realMatch(
-  client: ApiClient,
-  cv: CV,
-  job: Job,
-): Promise<{ report: MatchReport; reporter?: ReporterData }> {
-  const data = (await client.match({ cv, job })) as PipelineOutput;
+export function mergeOutput(data: PipelineOutput): {
+  report: MatchReport;
+  reporter?: ReporterData;
+  stages?: StageInfo[];
+  upstream?: UpstreamInfo;
+} {
   if (!data || typeof data !== "object" || !isMatchReport(data.match_report))
     throw new ApiError("Backend response is missing a valid match_report.");
   const extras = new Map<string, PipelineRequirementRow>();
@@ -295,7 +326,20 @@ async function realMatch(
         : r;
     }),
   };
-  return { report: merged, reporter: data.reporter };
+  return { report: merged, reporter: data.reporter, stages: data.stages, upstream: data.upstream };
+}
+
+async function realMatch(client: ApiClient, cv: CV, job: Job) {
+  return mergeOutput((await client.match({ cv, job })) as PipelineOutput);
+}
+
+/** V2: the original upload (if any) goes to the server-side Reader; otherwise the CV text. */
+async function realAnalyze(client: ApiClient, cv: CV, jobText: string) {
+  const file = cv.structured?.source_file as { name?: string; b64?: string } | undefined;
+  const payload = file?.b64
+    ? { cv_file_b64: file.b64, cv_file_name: file.name, job_text: jobText }
+    : { cv_text: cv.text, job_text: jobText };
+  return mergeOutput((await client.analyze(payload)) as PipelineOutput);
 }
 
 export const adapter: AnalysisAdapter = {
@@ -304,19 +348,23 @@ export const adapter: AnalysisAdapter = {
     if (mode !== "REAL")
       return demoCampaign(input, crypto.randomUUID(), new Date().toISOString());
     const client = new ApiClient(undefined, 600_000);
-    const job = demoJob(input);
+    const job = flow === "v1" ? demoJob(input) : null;
     const id = crypto.randomUUID();
     const candidates: CandidateRecord[] = [];
     // Serialize: concurrency = 1 on the backend (RTX 4050, 6 GB VRAM).
     for (let i = 0; i < input.candidates.length; i++) {
       const cv = input.candidates[i];
-      const { report, reporter } = await realMatch(client, cv, job);
+      const { report, reporter, stages, upstream } = job
+        ? await realMatch(client, cv, job)
+        : await realAnalyze(client, cv, input.description);
       candidates.push({
         id: `${id}-${i + 1}`,
         label: `Candidate ${String(i + 1).padStart(2, "0")}`,
-        cv,
+        cv: stripFile(cv),
         report,
         reporter,
+        stages,
+        upstream,
         review: "Pending review",
         note: "",
       });
@@ -330,3 +378,20 @@ export const adapter: AnalysisAdapter = {
     };
   },
 };
+
+/** Base64 of an uploaded file, for the server-side Reader (V2). */
+export async function fileToB64(file: Blob): Promise<string> {
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  let bin = "";
+  for (let i = 0; i < bytes.length; i += 0x8000)
+    bin += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  return btoa(bin);
+}
+
+/** Never keep raw upload bytes in saved campaigns (privacy, storage size). */
+function stripFile(cv: CV): CV {
+  if (!cv.structured?.source_file) return cv;
+  const rest = { ...cv.structured };
+  delete rest.source_file;
+  return { ...cv, structured: rest };
+}

@@ -38,6 +38,8 @@ import {
 import {
   adapter,
   ApiClient,
+  fileToB64,
+  flow,
   MAX_TEXT,
   mode,
   readCVFile,
@@ -472,9 +474,14 @@ function NewAnalysis({
             controller.signal,
           );
           if (controller.signal.aborted) break;
+          // V2: the original file also goes to the server-side Reader (browser text is a preview only).
+          const structured =
+            mode === "REAL" && flow === "v2"
+              ? { source_file: { name: file.name, b64: await fileToB64(file) } }
+              : {};
           setCandidates((prev) => [
             ...prev,
-            { cv_id: crypto.randomUUID(), text: extracted, structured: {} },
+            { cv_id: crypto.randomUUID(), text: extracted, structured },
           ]);
         } catch (e) {
           failures.push((e as Error).message);
@@ -834,7 +841,9 @@ function Processing({
           ) : (
             <p className="muted">
               {mode === "REAL"
-                ? "Awaiting FastAPI results. No per-stage progress is available from the API."
+                ? flow === "v2"
+                  ? "Awaiting FastAPI results. Reader, Profile, Job Agent, Matcher and Reporter run on the server; their real stage statuses appear on each candidate when it finishes."
+                  : "Awaiting FastAPI results. No per-stage progress is available from the API."
                 : "You can navigate elsewhere while this demo completes."}
             </p>
           )}
@@ -1007,6 +1016,33 @@ function Detail({
               ))}
             </div>
           </section>
+          {candidate.stages && (
+            <section className="panel">
+              <div className="panel-title">
+                <div>
+                  <h2>Pipeline stages (actual)</h2>
+                  <p>What the server really ran for this candidate. A failed stage is never shown as a success.</p>
+                </div>
+              </div>
+              <div className="requirements">
+                {candidate.stages.map((s) => (
+                  <div className="requirement" key={s.stage}>
+                    <strong>{s.stage}</strong>{" "}
+                    <Badge tone={s.status === "ok" ? "green" : "red"}>{s.status}</Badge>
+                    <small>
+                      {s.elapsed_s != null ? ` ${s.elapsed_s} s` : ""}
+                      {s.error ? ` · ${s.error}` : ""}
+                    </small>
+                  </div>
+                ))}
+              </div>
+              {!!candidate.upstream?.review_reasons?.length && (
+                <p className="field-hint">
+                  HUMAN REVIEW REQUIRED (upstream): {candidate.upstream.review_reasons.join(", ")}
+                </p>
+              )}
+            </section>
+          )}
           {candidate.reporter && (
             <section className="panel">
               <div className="panel-title">

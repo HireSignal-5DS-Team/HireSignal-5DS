@@ -1,7 +1,9 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   ApiClient,
+  ApiError,
   demoCampaign,
+  fileToB64,
   mockReport,
   readCVFile,
   validateInput,
@@ -122,6 +124,23 @@ describe("input and honest demo results", () => {
   });
 });
 describe("FastAPI transport", () => {
+  it("V2: posts documents to /api/v2/analyze and surfaces failed stages", async () => {
+    const fetch = vi.fn<typeof globalThis.fetch>(async () => new Response('{"requirements":[]}'));
+    vi.stubGlobal("fetch", fetch);
+    const api = new ApiClient("https://api.example.test");
+    await api.analyze({ cv_text: "CV", job_text: "Job" });
+    expect(fetch.mock.calls[0][0]).toBe("https://api.example.test/api/v2/analyze");
+    const stages = [{ stage: "reader", status: "ok" }, { stage: "profile", status: "failed", error: "down" }];
+    fetch.mockImplementation(
+      async () => new Response(JSON.stringify({ detail: "profile failed", stages }), { status: 502 }),
+    );
+    const err = await api.analyze({ cv_text: "CV", job_text: "Job" }).catch((e) => e);
+    expect(err).toBeInstanceOf(ApiError);
+    expect((err as ApiError).stages).toEqual(stages);
+  });
+  it("V2: encodes an upload as base64 for the server-side Reader", async () => {
+    expect(await fileToB64(new Blob(["hi"]))).toBe("aGk=");
+  });
   it("calls all supplied endpoints and preserves the transport payload", async () => {
     const fetch = vi.fn().mockResolvedValue(new Response('{"status":"ok"}'));
     // Each request needs an unconsumed response.
