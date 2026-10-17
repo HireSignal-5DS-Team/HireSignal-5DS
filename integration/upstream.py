@@ -30,7 +30,8 @@ def upstream_llm(env=None):
     env = os.environ if env is None else env
     return QwenChatClient(base_url=env.get("HS_UPSTREAM_LLM_URL") or env.get("HS_LLM_BASE_URL") or "http://127.0.0.1:8080/v1",
                           model=env.get("HS_UPSTREAM_LLM_MODEL") or "Qwen/Qwen3-4B-Instruct-2507",
-                          max_tokens=int(env.get("HS_UPSTREAM_MAX_TOKENS", 3072)))
+                          max_tokens=int(env.get("HS_UPSTREAM_MAX_TOKENS", 3072)),
+                          timeout=float(env.get("HS_UPSTREAM_TIMEOUT", 300)))  # CPU-only runs need ~1800
 
 
 def _stage(stages, name, fn, **meta):
