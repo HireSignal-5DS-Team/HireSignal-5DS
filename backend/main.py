@@ -4,7 +4,9 @@ Endpoints match frontend/INTEGRATION.md:
   GET  /health                  liveness
   GET  /ready                   models + RAG index + Matcher server reachable
   GET  /api/v1/models/status    pinned provenance + live /v1/models from the Matcher server
-  POST /api/v1/match            {cv, job} -> PipelineOutput
+  POST /api/v1/match            {cv, job} -> PipelineOutput (V1, unchanged)
+  POST /api/v2/analyze          {cv_text | cv_file_b64 + cv_file_name, job_text} -> Reader -> Profile -> Job Agent
+                                -> the same pipeline -> PipelineOutput + stages + upstream + reporter
 
 Concurrency is bounded to 1 in-flight match (RTX 4050 budget).
 """
@@ -237,4 +239,65 @@ async def match(request: Request):
         out["_meta"]["reporter_elapsed_s"] = round(time.perf_counter() - reporter_t0, 2)
     except Exception as exc:
         out["_meta"]["reporter_error"] = f"{type(exc).__name__}: {str(exc)[:120]}"
+    return out
+
+
+MAX_V2_BODY_CHARS = 15 * 1024 * 1024  # base64 of a 10 MB CV plus the job text
+
+
+@app.post("/api/v2/analyze")
+async def analyze(request: Request):
+    """Document flow (integration/upstream.py). Stage statuses are what really ran; on a failed stage the response
+    is an error with the stages so far, never a partial result presented as complete."""
+    import base64
+    import binascii
+
+    from integration.upstream import StageError, analyze_documents
+
+    raw = await request.body()
+    if len(raw) > MAX_V2_BODY_CHARS:
+        raise HTTPException(status_code=413, detail="request too large (CV file limit 10 MB)")
+    try:
+        body = json.loads(raw)
+    except Exception:
+        raise HTTPException(status_code=400, detail="request body must be JSON")
+    if not isinstance(body, dict) or not isinstance(body.get("job_text"), str) or not body["job_text"].strip():
+        raise HTTPException(status_code=400, detail="job_text (the full job description) is required")
+    cv_bytes = None
+    if body.get("cv_file_b64") is not None:
+        if body.get("cv_text") is not None:
+            raise HTTPException(status_code=400, detail="give either cv_text or cv_file_b64, not both")
+        try:
+            cv_bytes = base64.b64decode(body["cv_file_b64"], validate=True)
+        except (binascii.Error, TypeError, ValueError):
+            raise HTTPException(status_code=400, detail="cv_file_b64 is not valid base64")
+    async with MATCH_SEMAPHORE:
+        t0 = time.perf_counter()
+        try:
+            pipeline = _build_pipeline()
+            loop = asyncio.get_running_loop()
+            out = await loop.run_in_executor(None, lambda: analyze_documents(
+                pipeline, body["job_text"], cv_bytes=cv_bytes, file_name=body.get("cv_file_name"),
+                cv_text=body.get("cv_text"), job_id=body.get("job_id")))
+        except StageError as e:
+            code = 422 if e.stage in ("reader", "job_agent") and "Backend" not in e.message else 502
+            return JSONResponse(status_code=code, content={"detail": f"{e.stage} failed: {e.message[:300]}",
+                                                           "stages": e.stages})
+        except ValueError as e:
+            raise HTTPException(status_code=422, detail=str(e))
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"analysis failed: {type(e).__name__}: {e}")
+        elapsed = time.perf_counter() - t0
+    out.setdefault("_meta", {})["elapsed_s"] = round(elapsed, 2)
+    try:
+        from backend.reporter_adapter import render_report
+        t1 = time.perf_counter()
+        async with REPORTER_SEMAPHORE:
+            loop = asyncio.get_running_loop()
+            out["reporter"] = await loop.run_in_executor(None, render_report, out, out["upstream"].get("job_title") or "")
+        out["_meta"]["reporter_elapsed_s"] = round(time.perf_counter() - t1, 2)
+        out["stages"].append({"stage": "reporter", "status": "ok", "elapsed_s": out["_meta"]["reporter_elapsed_s"]})
+    except Exception as exc:
+        out["_meta"]["reporter_error"] = f"{type(exc).__name__}: {str(exc)[:120]}"
+        out["stages"].append({"stage": "reporter", "status": "failed", "error": out["_meta"]["reporter_error"]})
     return out
