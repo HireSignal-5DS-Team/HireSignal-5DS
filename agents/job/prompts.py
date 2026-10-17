@@ -335,7 +335,7 @@ VERSIONS = {
 STRATEGY = {"job-v1": "whole", "job-v2": "whole", "job-v3": "sections", "job-v4": "sections"}
 # Versions that ask for the skill names in a second call per requirement sentence.
 TERMS_PASS = {"job-v4"}
-PROMPT_VERSION = "job-v2"  # active version (switch to job-v3 once it is measured on the real offers)
+PROMPT_VERSION = "job-v4"  # active version: best measured on the 10 real offers (PROMPT_LIBRARY.md, run 3)
 
 
 def get_prompt(version: str | None = None) -> tuple[str, list[dict]]:

@@ -16,7 +16,7 @@ job offer ─► NuExtract fills the template ─► parse JSON ─┬─► che
 
 | File | Role |
 |---|---|
-| `prompts.py` | the template + 2 solved examples per version (`job-v1`, `job-v2` active), documented in [`prompts/PROMPT_LIBRARY.md`](../../prompts/PROMPT_LIBRARY.md) |
+| `prompts.py` | the template + solved examples per version (`job-v1` … `job-v4`, **`job-v4` active**: requirement sentences by chunk, then one skill-names call per sentence), documented in [`prompts/PROMPT_LIBRARY.md`](../../prompts/PROMPT_LIBRARY.md) |
 | `backend.py` | talks to NuExtract (llama.cpp server, vLLM or an API), plus a fake for tests |
 | `validate.py` | the guardrails: quotes really in the offer, years, must/nice, skill terms; splits "Java and Spring Boot" into one requirement per skill |
 | `agent.py` | the loop: extract → retry if unreadable → check → build the card → flag for review |
@@ -74,7 +74,8 @@ python scripts\run_job_agent.py examples\job_post.example.txt --base-url http://
 Ollama needs `--mode inline`, and a context of 8192 tokens for long job offers
 (set once: `[Environment]::SetEnvironmentVariable("OLLAMA_CONTEXT_LENGTH", "8192", "User")`, then restart Ollama).
 
-**Compare prompt versions** (for the prompt library): add `--prompt job-v1` or `--prompt job-v2`.
+**Compare prompt versions** (for the prompt library): add `--prompt job-v1` … `--prompt job-v4`
+(default: the active version); on the 10 real offers use `scripts/eval_job_agent.py --prompts job-v3 job-v4`.
 
 ## Tests
 

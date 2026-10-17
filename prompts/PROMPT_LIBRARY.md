@@ -5,7 +5,7 @@ the failures observed, and the fix. Code is the source of truth; this file expla
 
 | Prompt | Agent | Model | Current | Code |
 |---|---|---|---|---|
-| Job requirements extraction | Job Agent | NuExtract-2.0-2B | `job-v2` in code (`job-v4` measured best, not yet switched on) | [`agents/job/prompts.py`](../agents/job/prompts.py) |
+| Job requirements extraction | Job Agent | NuExtract-2.0-2B | `job-v4` (since 2026-10-17: best strict F1 0.43 on the 10 real offers) | [`agents/job/prompts.py`](../agents/job/prompts.py) |
 
 ---
 

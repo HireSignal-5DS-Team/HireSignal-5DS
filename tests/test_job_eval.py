@@ -11,10 +11,18 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from agents.job import FakeBackend, run_job_agent  # noqa: E402
+from agents.job import prompts  # noqa: E402
 from agents.job.scoring import score_card  # noqa: E402
 
 GOLD = sorted((ROOT / "eval/job_agent/gold").glob("*.json"))
 FIELDS = ("evidence", "skill_terms", "kind", "category", "min_years", "text")
+
+
+@pytest.fixture(autouse=True)
+def whole_offer_prompt(monkeypatch):
+    """The gold round-trip gives the fake model ONE whole-offer answer: the job-v2 path.
+    The same check for the chunked path is in test_job_v3.py / test_job_v4.py."""
+    monkeypatch.setattr(prompts, "PROMPT_VERSION", "job-v2")
 
 
 def load(path):

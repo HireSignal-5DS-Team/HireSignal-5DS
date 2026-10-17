@@ -33,6 +33,13 @@ PERFECT = answer([{k: v for k, v in r.items() if k not in ("req_id", "chunk_ids"
                   for r in GOLD["requirements"]])
 
 
+@pytest.fixture(autouse=True)
+def whole_offer_prompt(monkeypatch):
+    """These tests give the fake model ONE whole-offer answer: the job-v2 path.
+    The chunked job-v3/v4 path (default since job-v4) is tested in test_job_v3.py / test_job_v4.py."""
+    monkeypatch.setattr(prompts, "PROMPT_VERSION", "job-v2")
+
+
 # ------------------------------------------------------------ happy path ---
 
 def test_perfect_answer_gives_the_expected_card():
