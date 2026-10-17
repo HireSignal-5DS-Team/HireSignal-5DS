@@ -1,0 +1,327 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883699600",
+  "title": "Office of the Chief Administrative Officer (CAO)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Bachelor’s degree in Computer Science or equivalent experience",
+      "evidence": "Bachelor’s degree in Computer Science or equivalent experience.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Minimum of 3 years of relevant professional experience",
+      "evidence": "Minimum of 3 years of relevant professional experience.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 3.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Broad and deep expertise in AI development, AI infrastructure, and AI policy, with the ability to communicate technical concepts to diverse audiences",
+      "evidence": "Broad and deep expertise in AI development, AI infrastructure, and AI policy, with the ability to communicate technical concepts to diverse audiences.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Knowledge of secure authentication patterns such as OAuth2, OpenID Connect, and MSAL",
+      "evidence": "Knowledge of secure authentication patterns such as OAuth2, OpenID Connect, and MSAL.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "OAuth2",
+        "OpenID Connect",
+        "MSAL"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Experience using LLMs, RAG, MCP servers, and other AI development resources, including cloud tools such as AWS Bedrock and Azure OpenAI",
+      "evidence": "Experience using LLMs, RAG, MCP servers, and other AI development resources, including cloud tools such as AWS Bedrock and Azure OpenAI.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "LLMs",
+        "RAG",
+        "MCP servers",
+        "AWS Bedrock",
+        "Azure OpenAI"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Strong experience working with Microsoft SQL Server (MSSQL), including schema design, performance tuning, and query optimization",
+      "evidence": "Strong experience working with Microsoft SQL Server (MSSQL), including schema design, performance tuning, and query optimization.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Microsoft SQL Server",
+        "schema design",
+        "performance tuning",
+        "query optimization"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Strong full‑stack development",
+      "evidence": "Strong full‑stack development skills and proficiency with modern programming languages, web development, relational databases, DevOps, and Unix‑like systems.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "full‑stack development"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Strong modern programming languages",
+      "evidence": "Strong full‑stack development skills and proficiency with modern programming languages, web development, relational databases, DevOps, and Unix‑like systems.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "modern programming languages"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Strong web development",
+      "evidence": "Strong full‑stack development skills and proficiency with modern programming languages, web development, relational databases, DevOps, and Unix‑like systems.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "web development"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Strong relational databases",
+      "evidence": "Strong full‑stack development skills and proficiency with modern programming languages, web development, relational databases, DevOps, and Unix‑like systems.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "relational databases"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Strong DevOps",
+      "evidence": "Strong full‑stack development skills and proficiency with modern programming languages, web development, relational databases, DevOps, and Unix‑like systems.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "DevOps"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "Strong Unix‑like systems",
+      "evidence": "Strong full‑stack development skills and proficiency with modern programming languages, web development, relational databases, DevOps, and Unix‑like systems.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Unix‑like systems"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "Expertise with building Extract, Transform, and Load (ETL) pipelines and enterprise ETL tools such as Pentaho, AWS Glue, Hadoop, and Apache Airflow",
+      "evidence": "Expertise with building Extract, Transform, and Load (ETL) pipelines and enterprise ETL tools such as Pentaho, AWS Glue, Hadoop, and Apache Airflow.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Extract, Transform, and Load",
+        "Pentaho",
+        "AWS Glue",
+        "Hadoop",
+        "Apache Airflow"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "Ability to develop APIs (web services) using web messaging or service protocols and integrate many services into a single cohesive application",
+      "evidence": "Ability to develop APIs (web services) using web messaging or service protocols and integrate many services into a single cohesive application.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "APIs",
+        "web services",
+        "web messaging",
+        "service protocols"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r15",
+      "text": "Hands-on experience with containerized applications",
+      "evidence": "Hands-on experience with containerized applications using Docker.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "containerized applications"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r16",
+      "text": "Hands-on experience with Docker",
+      "evidence": "Hands-on experience with containerized applications using Docker.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Docker"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r17",
+      "text": "Experience deploying and operating applications in Kubernetes environments",
+      "evidence": "Experience deploying and operating applications in Kubernetes environments.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "Kubernetes"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r18",
+      "text": "Proficiency using git (particularly GitLab) for source control and issue tracking in collaborative workflows",
+      "evidence": "Proficiency using git (particularly GitLab) for source control and issue tracking in collaborative workflows.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "git",
+        "GitLab"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r19",
+      "text": "Experience working within CI/CD practices",
+      "evidence": "Experience working within CI/CD pipelines and modern DevOps practices.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "CI/CD"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r20",
+      "text": "Experience working within DevOps practices",
+      "evidence": "Experience working within CI/CD pipelines and modern DevOps practices.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "DevOps"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r21",
+      "text": "Familiarity with infrastructure as code cloud service enablement",
+      "evidence": "Familiarity with infrastructure as code cloud service enablement.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "infrastructure as code"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r22",
+      "text": "Ability to design and implement secure, scalable RESTful APIs",
+      "evidence": "Ability to design and implement secure, scalable RESTful APIs.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "RESTful APIs"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r23",
+      "text": "Experience troubleshooting distributed systems and production environments",
+      "evidence": "Experience troubleshooting distributed systems and production environments.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r24",
+      "text": "Familiarity with secure authentication patterns, including OAuth2 and OpenID Connect",
+      "evidence": "Familiarity with secure authentication patterns, including OAuth2 and OpenID Connect.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "OAuth2",
+        "OpenID Connect"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r25",
+      "text": "Implementing the Microsoft Authentication Library (MSAL) in conjunction with Entra/Azure App Registrations",
+      "evidence": "In particular, implementing the Microsoft Authentication Library (MSAL) in conjunction with Entra/Azure App Registrations.",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Microsoft Authentication Library",
+        "MSAL",
+        "Entra",
+        "Azure App Registrations"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'Knowledge of secure authentication patterns such a': no valid kind, defaulted to 'must'",
+    "'Experience using LLMs, RAG, MCP servers, and other': no valid kind, defaulted to 'must'"
+  ]
+}

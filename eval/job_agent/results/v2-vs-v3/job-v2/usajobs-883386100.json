@@ -1,0 +1,71 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883386100",
+  "title": "Data Scientist",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "One year of directly related specialized experience equivalent to the GS-11 level: Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects. Assisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues. Writing, testing, and documenting code for data analysis or modeling and producing basic visualizations.",
+      "evidence": "One year of directly related specialized experience equivalent to the GS-11 level",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "GS-11"
+      ],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+      "evidence": "Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "GS-12: Preparing, transforming, and integrating datasets from multiple sources and maintaining reproducible documentation. Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking. Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+      "evidence": "GS-12",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "GS-13: Preparing, transforming, and integrating datasets from multiple sources and maintaining reproducible documentation. Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking. Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences. Your resume must include a clear and detailed narrative description, in your own words, of how you meet the required specialized experience.",
+      "evidence": "GS-13",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "answer cut off at the token limit",
+    "answer was cut off; kept the 19 complete items",
+    "'GS-12: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-13: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-12: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-13: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-12: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-13: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-12: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-13: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-12: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-13: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-12: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-13: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-12: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-13: Preparing, transforming, and integrating da': duplicate, dropped",
+    "'GS-12: Preparing, transforming, and integrating da': duplicate, dropped"
+  ]
+}

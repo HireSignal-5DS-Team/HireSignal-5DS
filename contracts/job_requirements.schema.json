@@ -1,0 +1,184 @@
+{
+  "title": "HireSignal Job Agent contract",
+  "version": "0.1.0",
+  "models": {
+    "JobRequirements": {
+      "$defs": {
+        "Requirement": {
+          "additionalProperties": false,
+          "description": "One thing the employer asks for.",
+          "properties": {
+            "req_id": {
+              "description": "Stable id inside this job: r1, r2, ...",
+              "examples": [
+                "r1"
+              ],
+              "pattern": "^r[0-9]+$",
+              "title": "Req Id",
+              "type": "string"
+            },
+            "text": {
+              "description": "The requirement as one short, self-contained statement.",
+              "examples": [
+                "3+ years of experience with Java"
+              ],
+              "minLength": 1,
+              "title": "Text",
+              "type": "string"
+            },
+            "evidence": {
+              "description": "Exact quote copied from the job post that states this requirement.",
+              "minLength": 1,
+              "title": "Evidence",
+              "type": "string"
+            },
+            "kind": {
+              "description": "'must' = required; 'nice' = preferred, a plus, nice to have.",
+              "enum": [
+                "must",
+                "nice"
+              ],
+              "title": "Kind",
+              "type": "string"
+            },
+            "category": {
+              "default": "skill",
+              "enum": [
+                "skill",
+                "experience",
+                "education",
+                "certification",
+                "language",
+                "other"
+              ],
+              "title": "Category",
+              "type": "string"
+            },
+            "skill_terms": {
+              "description": "Skill or tool names, used as retrieval queries by the Matcher.",
+              "examples": [
+                [
+                  "Java"
+                ]
+              ],
+              "items": {
+                "type": "string"
+              },
+              "title": "Skill Terms",
+              "type": "array"
+            },
+            "min_years": {
+              "anyOf": [
+                {
+                  "maximum": 50,
+                  "minimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Minimum years asked for, when the post gives a number; else null.",
+              "title": "Min Years"
+            },
+            "chunk_ids": {
+              "description": "RAG chunks of the job description this requirement comes from. Empty until the job post is indexed.",
+              "examples": [
+                [
+                  "JD-001-C03"
+                ]
+              ],
+              "items": {
+                "type": "string"
+              },
+              "title": "Chunk Ids",
+              "type": "array"
+            }
+          },
+          "required": [
+            "req_id",
+            "text",
+            "evidence",
+            "kind"
+          ],
+          "title": "Requirement",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "description": "The requirements card for one job post.",
+      "properties": {
+        "schema_version": {
+          "default": "0.1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "job_id": {
+          "examples": [
+            "JD-001"
+          ],
+          "minLength": 1,
+          "title": "Job Id",
+          "type": "string"
+        },
+        "title": {
+          "examples": [
+            "Backend Developer"
+          ],
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "language": {
+          "default": "en",
+          "description": "Language of the job post.",
+          "enum": [
+            "en",
+            "fr",
+            "other"
+          ],
+          "title": "Language",
+          "type": "string"
+        },
+        "requirements": {
+          "items": {
+            "$ref": "#/$defs/Requirement"
+          },
+          "minItems": 1,
+          "title": "Requirements",
+          "type": "array"
+        },
+        "uncertain": {
+          "description": "Facts the agent could not establish, e.g. 'unclear if Docker is required'.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Uncertain",
+          "type": "array"
+        },
+        "needs_human_review": {
+          "default": false,
+          "description": "True when validation still failed after the retry.",
+          "title": "Needs Human Review",
+          "type": "boolean"
+        },
+        "warnings": {
+          "description": "Problems found by validation, shown to the recruiter.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Warnings",
+          "type": "array"
+        }
+      },
+      "required": [
+        "job_id",
+        "title",
+        "requirements"
+      ],
+      "title": "JobRequirements",
+      "type": "object"
+    }
+  }
+}

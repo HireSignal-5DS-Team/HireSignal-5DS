@@ -1,0 +1,47 @@
+### call 1 - input starts: 'In order to qualify for an IT Specialist (Data Science), GS-2210 position you mu'
+{"requirements": [{"evidence": "IT related experience demonstrated by paid or unpaid experience obtained in either the private or public sector, and/or completion of specific, intensive training that demonstrates all of the following four competencies", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "Attention to Detail - is thorough when performing work and conscientious about attending to detail; and 2."}]}
+
+### call 2 - input starts: 'Customer Service - Works with clients and customers (that is, any individuals wh'
+{"requirements": [{"evidence": "works with clients and customers", "skill_terms": [], "kind": "must", "category": "experience", "min_years": null, "text": "works with clients and customers"}]}
+
+### call 3 - input starts: 'Oral Communication - Expresses information (for example, ideas or facts) to indi'
+{"requirements": [{"evidence": null, "skill_terms": [], "kind": "must", "category": "communication", "min_years": null, "text": "Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately; and"}]}
+
+### call 4 - input starts: 'Problem Solving - identifies problems; determines accuracy and relevance of info'
+{"requirements": [{"evidence": "1 year of specialized experience equivalent to at least the GS-11 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data; curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues; preparing or supporting the dissemination of data; identifying and resolving routine data performance and management issues; storing and managing high-quality data from diverse sources for use by decision makers; and analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": 1, "text": "1 year of specialized experience equivalent to at least the GS-11 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data; curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues; preparing or supporting the dissemination of data; identifying and resolving routine data performance and management issues; storing and managing high-quality data from diverse sources for use by decision makers; and analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements."}]}
+
+### call 5 - input starts: 'In order to qualify for an IT Specialist (Data Science),GS-2210 position at the '
+{"requirements": [{"evidence": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.", "skill_terms": [], "kind": "must", "category": "experience", "min_years": 1, "text": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making."}]}
+
+### call 6 - input starts: 'You will receive credit for all experience material to the position, including e'
+{"requirements": []}
+
+### call 7 - input starts: 'Persons listed as knowing your past accomplishments or experience in your applic'
+{"requirements": [{"evidence": "Persons listed as knowing your past accomplishments or experience in your application may be contacted for verification purposes at any time.", "skill_terms": [], "kind": "must", "category": "other", "min_years": null, "text": "Persons listed as knowing your past accomplishments or experience in your application may be contacted for verification purposes at any time."}, {"evidence": "Verification may, but need not, begin before receiving an offer.", "skill_terms": [], "kind": "must", "category": "other", "min_years": null, "text": "Verification may, but need not, begin before receiving an offer."}, {"evidence": "Preview application questionnaire before you apply: https://apply.usastaffing.gov/ViewQuestionnaire/13062893 Education This job does not have an education qualification requirement.", "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "Education This job does not have an education qualification requirement."}]}
+
+### call 8 - input starts: 'This job does not have an education qualification requirement.'
+{"requirements": [{"evidence": null, "skill_terms": [], "kind": "must", "category": "education", "min_years": null, "text": "This job does not have an education qualification requirement."}]}
+
+### call 9 - input starts: 'Summary Are you an IT professional interested in applying data science, AI, and '
+{"job_title": "IT Specialist (Data Science)"}
+
+### call 10 - input starts: 'IT related experience demonstrated by paid or unpaid experience obtained in eith'
+{"skill_terms": []}
+
+### call 11 - input starts: 'Works with clients and customers'
+{"skill_terms": ["clients", "customers"]}
+
+### call 12 - input starts: '1 year of specialized experience equivalent to at least the GS-11 level in the F'
+{"skill_terms": ["IT field", "performing IT related tasks", "data", "data issues", "data dissemination", "data performance", "data management", "data analysis", "statistical software", "programming languages"]}
+
+### call 13 - input starts: '1 year of specialized experience equivalent to at least the GS-12 level in the F'
+{"skill_terms": ["Federal service", "GS-12", "IT field", "data collection", "data quality", "data performance", "data management", "data dissemination", "data analysis", "R", "Python"]}
+
+### call 14 - input starts: 'Persons listed as knowing your past accomplishments or experience in your applic'
+{"skill_terms": []}
+
+### call 15 - input starts: 'Verification may, but need not, begin before receiving an offer.'
+{"skill_terms": []}
+
+### call 16 - input starts: 'Preview application questionnaire before you apply: https://apply.usastaffing.go'
+{"skill_terms": []}

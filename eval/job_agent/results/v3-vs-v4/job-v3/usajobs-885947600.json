@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-885947600",
+  "title": "IT Specialist (Data Science)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Attention to Detail - is thorough when performing work and conscientious about attending to detail; and 2.",
+      "evidence": "IT related experience demonstrated by paid or unpaid experience obtained in either the private or public sector, and/or completion of specific, intensive training that demonstrates all of the following four competencies",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "works with clients and customers",
+      "evidence": "Works with clients and customers",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "1 year of specialized experience equivalent to at least the GS-11 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data; curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues; preparing or supporting the dissemination of data; identifying and resolving routine data performance and management issues; storing and managing high-quality data from diverse sources for use by decision makers; and analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements.",
+      "evidence": "1 year of specialized experience equivalent to at least the GS-11 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data; curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues; preparing or supporting the dissemination of data; identifying and resolving routine data performance and management issues; storing and managing high-quality data from diverse sources for use by decision makers; and analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+      "evidence": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Persons listed as knowing your past accomplishments or experience in your application may be contacted for verification purposes at any time.",
+      "evidence": "Persons listed as knowing your past accomplishments or experience in your application may be contacted for verification purposes at any time.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Verification may, but need not, begin before receiving an offer.",
+      "evidence": "Verification may, but need not, begin before receiving an offer.",
+      "kind": "must",
+      "category": "other",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Education This job does not have an education qualification requirement.",
+      "evidence": "Preview application questionnaire before you apply: https://apply.usastaffing.gov/ViewQuestionnaire/13062893 Education This job does not have an education qualification requirement.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'works with clients and customers': quote repaired (spacing)",
+    "'Oral Communication - Expresses information (for ex': quote empty in the job offer, dropped as invented (model quoted: \"\")",
+    "'This job does not have an education qualification ': quote empty in the job offer, dropped as invented (model quoted: \"\")"
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883386100",
+  "title": "Data Scientist",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+      "evidence": "Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Preparing, transforming, and integrating datasets from multiple sources and maintaining reproducible documentation",
+      "evidence": "one year of directly related specialized experience equivalent to the GS-12 level",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Designing and operating data",
+      "evidence": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "data"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Designing and operating machine learning",
+      "evidence": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "machine learning"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Designing and operating pipelines",
+      "evidence": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "pipelines"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "Designing and operating data quality checks",
+      "evidence": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "data quality checks"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Designing and operating lineage tracking",
+      "evidence": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "lineage tracking"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Conducting model validation to diverse audiences",
+      "evidence": "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "model validation"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "Conducting testing to diverse audiences",
+      "evidence": "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "testing"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "Conducting performance evaluation to diverse audiences",
+      "evidence": "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "performance evaluation"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Conducting presenting results to diverse audiences",
+      "evidence": "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "presenting results"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position.",
+      "evidence": "You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience.",
+      "evidence": "Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'One year of directly related specialized experienc': quote not found (closest 0.53) in the job offer, dropped as invented (model quoted: \"One year of directly related specialized experience equivalent to the GS-11 level.\")",
+    "'Your resume must include a clear and detailed narr': not a requirement (application instructions), dropped",
+    "'Experience statements copied from a position descr': not a requirement (application instructions), dropped",
+    "'Please visit https://www.nasa.gov/careers/how-to-a': not a requirement (application instructions), dropped",
+    "'You must have successfully completed a full 4-year': min_years 4.0 removed (no years in the quote)",
+    "'Have a combination of education and experience equ': min_years 30.0 removed (no years in the quote)",
+    "'U.S. degrees must have been awarded from colleges ': not a requirement (application instructions), dropped",
+    "'education completed in foreign colleges or univers': not a requirement (application instructions), dropped",
+    "'All degrees must have been received in the year of': not a requirement (application instructions), dropped",
+    "'You must have successfully completed a full 4-year': min_years 4.0 removed (no years in the quote)",
+    "'You must have successfully completed a full 4-year': duplicate, dropped",
+    "'Have a combination of education and experience equ': min_years 30.0 removed (no years in the quote)",
+    "'Have a combination of education and experience equ': duplicate, dropped",
+    "'U.S. degrees must have been awarded from colleges ': not a requirement (application instructions), dropped",
+    "'For a list of schools that meet this criteria, go ': not a requirement (application instructions), dropped",
+    "'education completed in foreign colleges or univers': not a requirement (application instructions), dropped"
+  ]
+}

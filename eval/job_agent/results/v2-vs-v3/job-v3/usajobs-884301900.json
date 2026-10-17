@@ -1,0 +1,163 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-884301900",
+  "title": "Senior IT Specialist (Robotic Process Automation and AI)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "Evidence of copying and pasting directly from the vacancy announcement without clearly documenting supplemental information to describe your experience will result in an ineligible rating.",
+      "evidence": "Evidence of copying and pasting directly from the vacancy announcement without clearly documenting supplemental information to describe your experience will result in an ineligible rating.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "This will prevent you from being considered further.",
+      "evidence": "This will prevent you from being considered further.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Basic Requirement: You must have IT-related experience demonstrating each of the four competencies listed below:",
+      "evidence": "Basic Requirement: You must have IT-related experience demonstrating each of the four competencies listed below:",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Attention to Detail - is thorough when performing work and conscientious about attending to detail",
+      "evidence": "Attention to Detail - is thorough when performing work and conscientious about attending to detail;",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations",
+      "evidence": "Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations;",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "knows about available products and services",
+      "evidence": "knows about available products and services;",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "is committed to providing quality products and services",
+      "evidence": "is committed to providing quality products and services;",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately",
+      "evidence": "Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately;",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "AND 4. Problem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations.",
+      "evidence": "AND 4. Problem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "You must demonstrate in your resume at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, to include: (1) Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere.",
+      "evidence": "You must demonstrate in your resume at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, to include: (1) Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "Analyzing and reviewing automated workflows, including integrations between RPA tools and other software applications, to assess performance, identify gaps, or recommend improvements.",
+      "evidence": "Analyzing and reviewing automated workflows, including integrations between RPA tools and other software applications, to assess performance, identify gaps, or recommend improvements.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring)",
+      "evidence": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring)",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies",
+      "evidence": "Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment.",
+      "evidence": "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment.",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r15",
+      "text": "You will receive credit for all qualifying experience, including volunteer experience.",
+      "evidence": "You will receive credit for all qualifying experience, including volunteer experience.",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'This job does not have an education qualification ': quote empty in the job offer, dropped as invented (model quoted: \"\")"
+  ]
+}

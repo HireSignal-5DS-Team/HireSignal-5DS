@@ -1,0 +1,208 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-886071700",
+  "title": "Summary",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics",
+      "evidence": "A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "A combination of education and experience -- at least 24 semester hours of mathematics and statistics, including at least 12 hours in mathematics and 6 hours in statistics, as shown in A above, plus appropriate experience or additional education.",
+      "evidence": "A combination of education and experience",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Courses acceptable toward meeting the mathematics course requirement of paragraphs A or B above must have included at least four of the following: differential calculus, integral calculus, advanced calculus, theory of equations, vector analysis, advanced algebra, linear algebra, mathematical logic, differential equations, or any other advanced course in mathematics for which one of these was a prerequisite.",
+      "evidence": "Courses acceptable toward meeting the mathematics course requirement of paragraphs A or B above must have included at least four of the following: differential calculus, integral calculus, advanced calculus, theory of equations, vector analysis, advanced algebra, linear algebra, mathematical logic, differential equations, or any other advanced course in mathematics for which one of these was a prerequisite.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Courses in mathematical statistics or probability theory with a prerequisite of elementary calculus or more advanced courses",
+      "evidence": "Courses in mathematical statistics or probability theory with a prerequisite of elementary calculus or more advanced courses",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "applying known statistical techniques to data",
+      "evidence": "applying known statistical techniques to data",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "work required in the processing of numerical or quantified information by other than statistical methods",
+      "evidence": "work required in the processing of numerical or quantified information by other than statistical methods",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "Examples of such nonqualifying work include statistical clerical work; statistical drafting; calculation of totals, averages, percentages, or other arithmetic summations; preparation of simple tables or charts; or verification of data by simple comparison or proofreading.",
+      "evidence": "Examples of such nonqualifying work include statistical clerical work; statistical drafting; calculation of totals, averages, percentages, or other arithmetic summations; preparation of simple tables or charts; or verification of data by simple comparison or proofreading.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "GS-14 : In addition to meeting basic requirements, to be eligible for this position at this grade level, you must have one (1) year of specialized experience at a level of difficulty and responsibility equivalent to the GS-13 grade level in the Federal service.",
+      "evidence": "GS-14 : In addition to meeting basic requirements, to be eligible for this position at this grade level, you must have one (1) year of specialized experience at a level of difficulty and responsibility equivalent to the GS-13 grade level in the Federal service.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "For positions above the GS-05,applicants must meet applicable time-in-­grade requirements to be considered eligible.",
+      "evidence": "For positions above the GS-05,applicants must meet applicable time-in-­grade requirements to be considered eligible.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "One year (52 weeks) at the next lower grade level is required to meet the time-in-grade requirements for the grade you are applying for.",
+      "evidence": "One year (52 weeks) at the next lower grade level is required to meet the time-in-grade requirements for the grade you are applying for.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks.",
+      "evidence": "For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "There is no TIG restriction for GS-02, 03, or 04 positions.",
+      "evidence": "There is no TIG restriction for GS-02, 03, or 04 positions.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r13",
+      "text": "For more information on qualifications please refer to OPM's Qualifications Standards .",
+      "evidence": "For more information on qualifications please refer to OPM's Qualifications Standards .",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r14",
+      "text": "Education completed in foreign colleges or universities may be used to meet the requirements.",
+      "evidence": "Education completed in foreign colleges or universities may be used to meet the requirements.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r15",
+      "text": "You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.",
+      "evidence": "You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r16",
+      "text": "It is your responsibility to provide such evidence when applying.",
+      "evidence": "It is your responsibility to provide such evidence when applying.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r17",
+      "text": "Click here (Section 3, Explanation of Terms) or here for Foreign Education Credentialing instructions.",
+      "evidence": "Click here (Section 3, Explanation of Terms) or here for Foreign Education Credentialing instructions.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r18",
+      "text": "We recommend choosing an evaluator from a member organization of one of the following national associations of credential evaluation services: National Association of Credential Evaluation Services (NACES) or Association of International Credentials Evaluators (AICE).",
+      "evidence": "We recommend choosing an evaluator from a member organization of one of the following national associations of credential evaluation services: National Association of Credential Evaluation Services (NACES) or Association of International Credentials Evaluators (AICE) .",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r19",
+      "text": "education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program",
+      "evidence": "education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+    "'A combination of education and experience -- at le': min_years 24.0 removed (no years in the quote)",
+    "'sampling, collecting, computing, and analyzing sta': quote not found (closest 0.42) in the job offer, dropped as invented (model quoted: \"sampling, collecting, computing, and analyzing statistical data\")",
+    "'Current civilian employees must have completed at ': quote not found (closest 0.75) in the job offer, dropped as invented (model quoted: \"Current civilian employees must have completed at least 90 days of federal civilian service since th\")",
+    "'We recommend choosing an evaluator from a member o': quote repaired (fuzzy 1.00)",
+    "'We recommend choosing an evaluator from a member o': quote repaired (fuzzy 1.00)",
+    "'We recommend choosing an evaluator from a member o': duplicate, dropped"
+  ]
+}

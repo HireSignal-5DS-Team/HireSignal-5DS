@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-886071700",
+  "title": "Mathematical Statistician (Data Scientist)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics",
+      "evidence": "A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "you must have one (1) year of specialized experience at a level of difficulty and responsibility equivalent to the GS-13 grade level in the Federal service",
+      "evidence": "you must have one (1) year of specialized experience at a level of difficulty and responsibility equivalent to the GS-13 grade level in the Federal service.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [
+    "The 'Specialized experience for this position includes:' list is empty in the source text. Time in grade, time after competitive appointment and the government credit card are administrative: excluded."
+  ],
+  "needs_human_review": false,
+  "warnings": []
+}
