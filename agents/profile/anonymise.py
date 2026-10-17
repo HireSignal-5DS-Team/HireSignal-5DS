@@ -23,6 +23,7 @@ from .detect import (AGE_RES, DOB_RE, HONORIFIC_RE, PLACEHOLDER, PRIORITY, Span,
                      detect_rules, find_emails, find_phones, find_urls, fold, header_region, name_parts,
                      private_regions, references_region)
 
+NER_SOURCES = ("resume-ner", "gliner")
 PROXY_KINDS = ("DOB", "AGE", "GENDER", "HONORIFIC", "NATIONALITY", "MARITAL", "BIRTHPLACE", "RELIGION")
 _PLACEHOLDER_RE = re.compile(r"\[(?:NAME|EMAIL|PHONE|URL|ADDRESS|PERSONAL)\]")
 
@@ -254,8 +255,11 @@ def anonymise_cv(text: str, cv_id: str | None = None, sections: dict | None = No
         else:
             used.append(getattr(det, "name", "ner"))
             regions = private_regions(text, sections)
-            spans += [sp for sp in found if sp.kind != "ADDRESS"
-                      or any(r0 <= sp.start < r1 for r0, r1 in regions)]
+            rule_spans = [sp for sp in spans if sp.source not in NER_SOURCES]
+            spans += [sp for sp in found
+                      if (sp.kind != "ADDRESS" or any(r0 <= sp.start < r1 for r0, r1 in regions))
+                      # where a rule already found something, the rule wins (more precise kind and edges)
+                      and not any(sp.start < r.end and r.start < sp.end for r in rule_spans)]
     name = _pick_name(spans, header)
     if not name:
         warnings.append("candidate name not found: check the anonymised text by hand")

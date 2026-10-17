@@ -18,7 +18,7 @@ from __future__ import annotations
 import os
 import re
 
-from .detect import Span
+from .detect import NOT_NAME, Span, fold
 
 # NER label word -> our kind, so B-NAME / PERSON / "phone number" / "date of birth" all work.
 LABEL_MAP = [
@@ -91,10 +91,29 @@ class _Detector:
                 kind = map_label(label)
                 if kind not in self.KINDS or score < self.threshold:
                     continue
-                s, e = _trim(piece, s, e)
-                if _usable(piece, s, e):
-                    out.append(Span(offset + s, offset + e, kind, piece[s:e], self.name, round(float(score), 3)))
+                # a span never crosses a line break: "Divorcée\nTunis" -> "Divorcée" | "Tunis"
+                for ls, le in _lines(piece, s, e):
+                    ls, le = _trim(piece, ls, le)
+                    if _usable(piece, ls, le) and not (kind == "NAME" and _cv_words(piece[ls:le])):
+                        out.append(Span(offset + ls, offset + le, kind, piece[ls:le], self.name,
+                                        round(float(score), 3)))
         return out
+
+
+def _lines(piece: str, s: int, e: int) -> list[tuple[int, int]]:
+    out, start = [], s
+    for i in range(s, e):
+        if piece[i] == "\n":
+            out.append((start, i))
+            start = i + 1
+    out.append((start, e))
+    return out
+
+
+def _cv_words(text: str) -> bool:
+    """'CURRICULUM VITAE', 'Data Scientist': only CV words, not a person."""
+    words = [fold(w) for w in re.findall(r"[^\W\d_]+", text)]
+    return bool(words) and all(w in NOT_NAME for w in words)
 
 
 def _usable(piece: str, s: int, e: int) -> bool:

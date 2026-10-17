@@ -396,3 +396,25 @@ def test_ner_places_outside_the_header_are_kept():
     det._model = _ReplayPipe([("Carthage", "LOCATION", 0.95, 0), ("Tunis", "LOCATION", 0.95, 0)])
     anon = anonymise_cv(text, cv_id="cv-x", detectors=[det]).text
     assert "IHEC Carthage, 2019" in anon and "Tunis" not in anon
+
+
+def test_ner_span_across_a_line_break_is_split_and_rules_win():
+    text = (ROOT / "eval/profile_agent/cvs/p06_fr_proxies.txt").read_text(encoding="utf-8")
+    det = ResumeNER()
+    det._model = _ReplayPipe(P06_RESUME_NER)
+    anon = anonymise_cv(text, cv_id="cv-x", detectors=[det]).text
+    rules = anonymise_cv(text, cv_id="cv-x").text
+    assert anon.splitlines()[:3] == rules.splitlines()[:3]        # same lines, [PERSONAL] kept as [PERSONAL]
+
+
+def test_ner_name_made_of_cv_words_is_ignored():
+    det = GlinerPII()
+    det._model = _FakeGlinerTitle()
+    anon = anonymise_cv("CURRICULUM VITAE\n\nPrénom : Ali\nNom : Ben Salah\n", cv_id="cv-x", detectors=[det]).text
+    assert anon.startswith("CURRICULUM VITAE")
+
+
+class _FakeGlinerTitle:
+    def predict_entities(self, piece, labels, threshold):
+        i = piece.find("CURRICULUM VITAE")
+        return [{"start": i, "end": i + 16, "label": "person", "score": 0.9}] if i >= 0 else []
