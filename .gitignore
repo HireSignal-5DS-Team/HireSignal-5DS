@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Secrets and private data (CLAUDE.md hard rules 4 and 5)
+.env
+.env.*
+!config/.env.example
+private/
+
+# Raw data (licences / size)
+data/raw/
+
+# Model files
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
