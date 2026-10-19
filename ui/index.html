@@ -4,83 +4,61 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>HireSignal Demo</title>
+<link rel="stylesheet" href="assets/hs.css">
 <style>
-:root{--navy:#14213D;--paper:#F6F5F1;--blue:#2E63C9;--ink:#1d2433;--muted:#5d6577;--line:#d9d6cc;
-  --met:#1f7a4d;--miss:#b3361f;--unc:#a86b00;--card:#ffffff}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.45 "Segoe UI",system-ui,-apple-system,Arial,sans-serif}
-header{background:var(--navy);color:#fff;padding:14px 24px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
-header h1{margin:0;font-size:20px;letter-spacing:.3px}
-header span{color:#c9d3ea;font-size:13px}
-main{max-width:1280px;margin:0 auto;padding:18px 20px 60px}
-section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:16px}
-h2{margin:0 0 12px;font-size:16px;color:var(--navy);text-transform:uppercase;letter-spacing:.6px}
-h3{margin:14px 0 8px;font-size:14px;color:var(--navy)}
-label{display:block;font-weight:600;font-size:13px;margin:8px 0 4px;color:var(--navy)}
-textarea{width:100%;min-height:96px;font:13px/1.4 Consolas,monospace;border:1px solid var(--line);border-radius:6px;padding:8px}
-.grid3{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:16px}
-.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
-button{background:var(--blue);color:#fff;border:0;border-radius:6px;padding:9px 16px;font-size:14px;cursor:pointer}
-button.ghost{background:#fff;color:var(--blue);border:1px solid var(--blue)}
-button:disabled{opacity:.5;cursor:default}
-.hint{color:var(--muted);font-size:12px}
-.err{color:var(--miss);font-weight:600}
-/* timeline */
-.chain{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:stretch}
-.box{border:1px solid var(--line);border-left:5px solid #b9bfcc;border-radius:8px;padding:10px 12px;background:#fbfbf9;position:relative;min-height:118px}
-.box .t{font-weight:700;color:var(--navy);font-size:14px}
-.box .what{color:var(--muted);font-size:12px;margin-top:2px}
-.box .st{position:absolute;top:9px;right:10px;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
-.box .sum{margin-top:8px;font-size:13px;font-weight:600;min-height:18px;word-break:break-word}
-.box .sec{font-size:12px;color:var(--muted)}
-.box.running{border-left-color:var(--blue);background:#eef3fc;animation:pulse 1.2s ease-in-out infinite}
-.box.done{border-left-color:var(--met)}
-.box.skipped{border-left-color:#c9c9c9;opacity:.75}
-.box.error{border-left-color:var(--miss);background:#fbeeea}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(46,99,201,.35)}50%{box-shadow:0 0 0 7px rgba(46,99,201,0)}}
-.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;grid-column:span 2}
-.pair .tag{grid-column:span 2;font-size:11px;color:var(--muted);text-align:center;margin-bottom:-6px}
-.arrow{font-size:12px;color:var(--muted);margin:6px 0 0}
-.bar{height:6px;background:#e7e5de;border-radius:3px;margin-top:8px;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--blue);width:0}
-.clock{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px}
-/* result */
-.banner{display:flex;gap:18px;align-items:center;flex-wrap:wrap;border-radius:10px;padding:16px 18px;color:#fff;background:var(--navy)}
-.banner .o{font-size:28px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
-.banner.invite{background:var(--met)}.banner.reject{background:var(--miss)}.banner.review{background:var(--unc)}
-.banner .kv{font-size:14px}.banner .kv b{font-size:18px}
+/* page-specific (T16 demo page, T20 redesign) */
+.grid3{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:20px}
+.grid3 input[type=file]{font-size:13px;max-width:100%}
+#job{min-height:120px}
+.runbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:18px;padding-top:16px;border-top:1px solid var(--line-2)}
+.clock{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px;display:inline-flex;gap:8px;align-items:center}
+.banner{display:flex;gap:22px;align-items:center;flex-wrap:wrap;border-radius:var(--r-lg);padding:18px 22px;border:1px solid var(--line);background:#fff;border-left:6px solid #98a2b3}
+.banner .o{font-size:26px;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+.banner.invite{border-left-color:var(--met);background:linear-gradient(90deg,var(--met-50),#fff 60%)}.banner.invite .o{color:var(--met)}
+.banner.reject{border-left-color:var(--miss);background:linear-gradient(90deg,var(--miss-50),#fff 60%)}.banner.reject .o{color:var(--miss)}
+.banner.review{border-left-color:var(--unc);background:linear-gradient(90deg,var(--unc-50),#fff 60%)}.banner.review .o{color:var(--unc)}
+.banner .kv{font-size:13.5px;color:var(--ink-2)}.banner .kv b{font-size:18px;color:var(--ink)}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-.chip{border:1px solid var(--line);border-radius:16px;padding:4px 12px;background:#fff;cursor:pointer;font-size:13px}
-.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:12px}
-.req{border:1px solid var(--line);border-radius:8px;padding:12px;background:#fff;border-top:4px solid #ccc}
-.req.MET{border-top-color:var(--met)}.req.MISSING{border-top-color:var(--miss)}.req.UNCERTAIN{border-top-color:var(--unc)}
-.req .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
-.req .txt{font-weight:600}
-.pill{font-size:11px;font-weight:700;border-radius:10px;padding:2px 8px;white-space:nowrap}
-.pill.MET{background:#e3f2ea;color:var(--met)}.pill.MISSING{background:#f8e5e1;color:var(--miss)}.pill.UNCERTAIN{background:#fbf0dc;color:var(--unc)}
-.pill.kind{background:#e9edf6;color:var(--navy)}
-.q{background:#f6f5f1;border-left:3px solid var(--blue);padding:6px 8px;margin:8px 0;font-size:13px;font-style:italic}
-.conf{display:flex;height:10px;border-radius:5px;overflow:hidden;margin:8px 0 2px;background:#eee}
-.conf i{display:block;height:100%}
-.legend{font-size:11px;color:var(--muted)}
-.why{font-size:12px;color:var(--ink);margin:4px 0 0;padding-left:16px}
-.changed{font-size:12px;background:#fff6e0;border-radius:4px;padding:4px 6px;margin-top:6px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-pre.letter{white-space:pre-wrap;font:13px/1.5 "Segoe UI",system-ui,sans-serif;background:#f6f5f1;border-radius:6px;padding:10px;margin:0}
-.tbar{display:flex;height:26px;border-radius:6px;overflow:hidden;margin-top:6px}
-.tbar i{display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-style:normal;white-space:nowrap;overflow:hidden}
-table.kv{border-collapse:collapse;font-size:13px}table.kv td{padding:3px 10px 3px 0;vertical-align:top}table.kv td:first-child{color:var(--muted)}
-.hidden{display:none}
-@media (max-width:900px){.grid3,.two,.chain{grid-template-columns:1fr}.pair{grid-column:span 1;grid-template-columns:1fr}}
+.chips .chip{cursor:pointer;border:1px solid var(--line);background:#fff;padding:6px 12px}
+.chips .chip.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.tbar{display:flex;height:28px;border-radius:8px;overflow:hidden;margin-top:6px}
+.tbar i{display:flex;align-items:center;justify-content:center;color:#fff;font-size:11.5px;font-style:normal;white-space:nowrap;overflow:hidden}
+h3.sh{font-size:16px;margin:22px 0 10px}
+@media (max-width:1100px){.grid3{grid-template-columns:1fr 1fr}}
+@media (max-width:900px){.grid3,.two{grid-template-columns:1fr}.cards{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<header><h1>HireSignal</h1><span>Watch each agent screen a CV, step by step. Everything runs locally: n8n, our station API and local models.</span><a href="/ui/recruiter.html" style="color:#c9d3ea;font-size:13px;margin-left:auto">Recruiter flow (1 job, up to 3 candidates) →</a></header>
-<main>
+<div class="app">
+<aside class="sidebar" aria-label="HireSignal navigation">
+  <a class="brand" href="/ui/recruiter.html"><span class="logo"><i data-ic="logo"></i></span><b>HireSignal<i>.</i></b></a>
+  <div class="ws"><span class="av">H</span><div><b>Hiring workspace</b><span>Runs locally on this laptop</span></div></div>
+  <div class="nav-label">Recruiter flow</div>
+  <nav class="nav"><a href="/ui/recruiter.html"><i data-ic="newdoc"></i>New analysis</a></nav>
+  <div class="nav-label">Tools</div>
+  <nav class="nav"><a href="/ui/" class="on" aria-current="page"><i data-ic="file"></i>Single-CV demo</a></nav>
+  <div class="promise"><i data-ic="shield"></i><b>Built for better judgment.</b>Explainable signals. Human decisions.</div>
+</aside>
 
-<section id="input">
-  <h2>1. Input</h2>
+<div class="main">
+<div class="topbar">
+  <div class="crumbs">Tools <span>›</span> <b>Single-CV demo</b></div>
+  <span class="grow"></span>
+  <span class="live" id="live">Checking the AI backend…</span>
+  <a class="toplink" href="/ui/recruiter.html"><i data-ic="users"></i>Recruiter flow (1 job, up to 3 candidates) →</a>
+</div>
+
+<main class="page">
+<div class="page-head"><div>
+  <div class="eyebrow"><i data-ic="activity"></i>Single-CV demo</div>
+  <h1>Watch each agent screen a CV.</h1>
+  <p>Step by step, through the n8n workflow. Everything runs locally: n8n, our station API and local models.</p>
+</div></div>
+
+<section id="input" class="card">
+  <div class="card-head"><div class="ic"><i data-ic="upload"></i></div><div class="grow"><h2>1. Input</h2><p>One CV, the job text and, optionally, a confirmed requirement card.</p></div></div>
   <div class="grid3">
     <div>
       <label for="cv">CV file (PDF, image, DOCX or TXT)</label>
@@ -92,68 +70,61 @@ table.kv{border-collapse:collapse;font-size:13px}table.kv td{padding:3px 10px 3p
     <div>
       <label for="job">Job text (paste, or choose a .txt file)</label>
       <textarea id="job" placeholder="Paste the job offer here"></textarea>
-      <input type="file" id="jobFile" accept=".txt">
+      <input type="file" id="jobFile" accept=".txt" aria-label="Job text file (.txt)" style="margin-top:8px;font-size:13px">
     </div>
     <div>
       <label>Demo samples (public, from demo/)</label>
       <div class="row" style="margin-top:4px">
-        <button class="ghost" data-demo="invite">Load invite sample (P50 + J4)</button>
-        <button class="ghost" data-demo="reject">Load reject sample (P02 + J1)</button>
+        <button class="ghost small" data-demo="invite">Load invite sample (P50 + J4)</button>
+        <button class="ghost small" data-demo="reject">Load reject sample (P02 + J1)</button>
       </div>
       <label for="saved">Open a saved result (replay, no run)</label>
       <input type="file" id="saved" accept=".json">
       <div class="hint">Shows a result.json without running the pipeline.</div>
     </div>
   </div>
-  <div class="row">
-    <button id="run">Run</button>
+  <div class="runbar">
+    <button id="run" class="lg"><i data-ic="play"></i>Run</button>
     <span class="clock" id="clock"></span>
     <span id="msg"></span>
   </div>
 </section>
 
-<section id="timelineSec">
-  <h2>2. Agent timeline</h2>
-  <div class="chain" id="chain"></div>
-  <p class="hint">The page asks the station API for progress every second. Profile and Job run on separate branches of the n8n workflow.</p>
+<section id="timelineSec" class="card">
+  <div class="card-head"><div class="ic"><i data-ic="activity"></i></div><div class="grow"><h2>2. Agent timeline</h2>
+    <p>The page asks the station API for progress every second. Profile and Job run on separate branches of the n8n workflow.</p></div>
+    <span class="chip" id="runChip">Not started</span></div>
+  <div id="chain" aria-live="polite"></div>
+  <div class="alert info"><i data-ic="info"></i><div>RAG gives knowledge (what a skill means), never CV evidence. Statuses and times come from the station API; nothing is estimated.</div></div>
 </section>
 
-<section id="resultSec" class="hidden">
-  <h2>3. Result</h2>
+<section id="resultSec" class="card hidden">
+  <div class="card-head"><div class="ic"><i data-ic="compare"></i></div><div class="grow"><h2>3. Result</h2><p>Every decision with its CV quote, the Judge and the fairness checks.</p></div></div>
   <div class="banner" id="banner"></div>
   <div class="row" id="resultBtns"></div>
 
-  <h3 id="reqs">Requirements</h3>
+  <h3 class="sh" id="reqs">Requirements</h3>
   <div class="chips" id="filters"></div>
   <div class="cards" id="cards"></div>
 
-  <div class="two" style="margin-top:16px">
-    <div><h3>Fairness (Bias Auditor)</h3><div id="fair"></div></div>
-    <div><h3>Reader</h3><div id="reader"></div></div>
+  <div class="two" style="margin-top:18px">
+    <div><h3 class="sh">Fairness (Bias Auditor)</h3><div id="fair"></div></div>
+    <div><h3 class="sh">Reader</h3><div id="reader"></div></div>
   </div>
 
-  <h3>Report (Report Writer)</h3>
+  <h3 class="sh">Report (Report Writer)</h3>
   <div id="report"></div>
 
-  <h3>Time per station</h3>
+  <h3 class="sh">Time per station</h3>
   <div id="timings"></div>
 </section>
 </main>
+</div>
+</div>
 
+<script src="assets/hs.js"></script>
 <script>
 "use strict";
-const STAGES = [
-  {key:"reader", title:"Reader", what:"Reads the file: the text layer, or OCR plus a vision model for photos and scans."},
-  {pair:[
-    {key:"profile", title:"Profile Agent", what:"Hides the identity (name, contacts, photo) in code, then lists skills, jobs and degrees."},
-    {key:"job", title:"Job Agent", what:"Turns the job offer into a list of must-have and nice-to-have requirements."}]},
-  {key:"rag", title:"RAG lookup", what:"Looks up unknown skill names in ESCO. It explains terms; it is never evidence."},
-  {key:"match", title:"Matcher", what:"For each requirement: MET, MISSING or UNCERTAIN, with an exact quote from the CV."},
-  {key:"judge", title:"Judge", what:"A second model (NLI) checks that each quote really supports the decision."},
-  {key:"bias", title:"Bias Auditor", what:"Swaps the identity (other gender and origin) and checks the decision does not change."},
-  {key:"outcome", title:"Outcome gate", what:"Code rules decide: invite, reject, or send to a person for review."},
-  {key:"report", title:"Report Writer", what:"Writes the recruiter summary and the candidate letter, then a fact checker verifies them."},
-  {key:"final", title:"Outcome", what:"The decision. A review case waits for the recruiter's form in n8n."}];
 const REASONS = {
   "evidence_not_in_cv":"the model gave no exact quote from the CV",
   "evidence_too_short":"the quote is too short to prove anything",
@@ -180,34 +151,18 @@ const REASONS = {
   "report:template_fallback":"the AI report failed the fact check; the checked template was used"};
 const plain = r => { for (const k in REASONS) if (r === k || r.startsWith(k)) return REASONS[k]; return r; };
 const $ = id => document.getElementById(id);
-const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const esc = HS.esc;
 let polling = null, startT = 0, tick = null, result = null, filter = "ALL", cardFile = null, demoCv = null;
+HS.paintIcons();
+HS.ready($("live"));
 
-function drawChain(p){
-  p = p || {stages:{}};
-  const st = p.stages || {};
-  const total = p.total_requirements;
-  const box = s => {
-    const d = st[s.key] || {};
-    let state = d.status || "waiting", sum = d.summary || "";
-    if (s.key === "match" && d.done) sum = `${d.req_id || ""}: ${sum.split(": ")[1] || ""} · ${d.done} / ${total ?? "?"}`;
-    if (s.key === "judge" && d.done) sum = `${sum} · ${d.done} / ${total ?? "?"}`;
-    if (s.key === "rag" && d.done) sum = `${sum} · ${d.done} / ${total ?? "?"}`;
-    if (["rag","match","judge"].includes(s.key) && total && d.done < total && !p.finished && state === "done") state = "running";
-    if (s.key === "final") { state = p.finalState || "waiting"; sum = p.finalSum || ""; }
-    if (s.key === "job" && p.card_given && !d.status) { state = "skipped"; sum = "skipped: the recruiter's card is used"; }
-    if (p.finished && state === "waiting" && s.key !== "final") {
-      state = "skipped";
-      sum = s.key === "job" ? "skipped: the recruiter's card was used" : s.key === "bias" ? "skipped: a person reviews anyway" :
-            s.key === "rag" ? "skipped" : "not called";
-    }
-    const bar = (["match","judge","rag"].includes(s.key) && total) ? `<div class="bar"><i style="width:${Math.min(100,100*(d.done||0)/total)}%"></i></div>` : "";
-    const secs = d.elapsed_s != null ? `${d.elapsed_s} s` : "";
-    return `<div class="box ${state}"><div class="st">${state}</div><div class="t">${s.title}</div><div class="what">${s.what}</div>
-      <div class="sum">${esc(sum)}</div><div class="sec">${secs}</div>${bar}</div>`;
-  };
-  $("chain").innerHTML = STAGES.map(s => s.pair ?
-    `<div class="pair"><div class="tag">in parallel</div>${s.pair.map(box).join("")}</div>` : box(s)).join("");
+/* o: {phase: idle | running | done | error, outcome, formWaiting, groupTime} (see ui/assets/hs.js) */
+function drawChain(p, o){
+  o = o || {phase: p && p.active ? "running" : "idle"};
+  HS.renderPipeline($("chain"), p || {stages:{}}, o);
+  const chip = {idle:["", "Not started"], running:["blue", "Running"], done:["green", "Finished"], error:["red", "Failed"]}[o.phase];
+  $("runChip").className = "chip " + chip[0];
+  $("runChip").textContent = chip[1] + (p && p.elapsed_s != null && o.phase !== "idle" ? ` · ${p.elapsed_s} s` : "");
 }
 
 async function poll(){
@@ -218,7 +173,7 @@ async function poll(){
   } catch(e){ return null; }
 }
 
-function startClock(){ startT = Date.now(); tick = setInterval(() => $("clock").textContent = `running… ${((Date.now()-startT)/1000).toFixed(0)} s`, 500); }
+function startClock(){ startT = Date.now(); tick = setInterval(() => $("clock").innerHTML = `<span class="spin"></span>running… ${((Date.now()-startT)/1000).toFixed(0)} s`, 500); }
 function stopClock(){ clearInterval(tick); clearInterval(polling); polling = null; }
 
 $("card").onchange = e => { cardFile = e.target.files[0] || null; $("cardInfo").textContent = cardFile ? `Card: ${cardFile.name} (the Job Agent is skipped)` : "Without a card, the Job Agent reads the job text."; };
@@ -247,17 +202,21 @@ $("run").onclick = async () => {
   fd.append("job_text", $("job").value);
   if (cardFile) fd.append("requirements", cardFile, cardFile.name);
   $("run").disabled = true; $("msg").textContent = ""; $("resultSec").classList.add("hidden");
-  drawChain(); startClock();
+  drawChain(null, {phase:"running"}); startClock();
   polling = setInterval(poll, 1000);
   try {
     const r = await fetch("/ui/run", {method:"POST", body:fd});
     const body = await r.json();
     stopClock();
     const p = await poll();
-    if (!r.ok) { $("msg").innerHTML = `<span class="err">${esc(body.detail || ("HTTP " + r.status))}</span>`; return; }
+    if (!r.ok) {
+      drawChain(p, {phase:"error"}); $("clock").textContent = "";
+      $("msg").innerHTML = `<div class="alert error">${HS.icon("alert")}<div><b>The run failed</b>${esc(body.detail || ("HTTP " + r.status))}. You can retry with Run.</div></div>`;
+      return;
+    }
     $("clock").textContent = `finished in ${((Date.now()-startT)/1000).toFixed(0)} s`;
     show(body, p);
-  } catch(e){ stopClock(); $("msg").innerHTML = `<span class="err">${esc(e.message)}</span>`; }
+  } catch(e){ stopClock(); $("clock").textContent = ""; $("msg").innerHTML = `<span class="err">${esc(e.message)}</span>`; }
   finally { $("run").disabled = false; }
 };
 
@@ -267,31 +226,12 @@ $("saved").onchange = async e => {
   catch(err){ $("msg").innerHTML = `<span class="err">Not a result file: ${esc(err.message)}</span>`; }
 };
 
-function replayChain(res){
-  // a saved result has no live progress: rebuild the timeline from the result itself
-  const n = (res.requirements || []).length, t = res.timings_s || {}, rd = res.reader || {}, sw = (res.bias||{}).swap || {};
-  const cnt = d => (res.requirements||[]).filter(x => x.decision === d).length;
-  const routes = [...new Set(rd.read_path || [])].join(", ");
-  return {finished:true, total_requirements:n, stages:{
-    reader:{status:"done", summary:`${rd.file_type || "?"}, route ${routes || "-"}`, elapsed_s:t.reader},
-    profile:{status:"done", summary:"anonymised; identity stored apart", elapsed_s:t.profile},
-    job: t.job != null ? {status:"done", summary:`${n} requirements`, elapsed_s:t.job} : undefined,
-    rag:{status:"done", summary:"per requirement", done:n},
-    match:{status:"done", summary:`r${n}: ${cnt("MET")} met, ${cnt("MISSING")} missing, ${cnt("UNCERTAIN")} uncertain`, done:n, elapsed_s:t.match_and_judge},
-    judge:{status:"done", summary:"quotes checked", done:n},
-    bias: sw.ran != null ? {status: sw.ran ? "done" : "skipped", summary: sw.ran ? `swap ${sw.counterfactual}, identical input: ${sw.identical_matcher_input ? "yes":"no"}` : (sw.skipped || "skipped")} : undefined,
-    outcome:{status:"done", summary:`${res.outcome} (score ${res.score})`},
-    report:{status:"done", summary:`${(res.report||{}).source === "llm" ? "AI" : "template"} report`}}};
-}
-
 function show(res, p){
   result = res;
-  const prog = p && p.stages && Object.keys(p.stages).length ? p : replayChain(res);
-  prog.finished = true;
-  prog.finalState = "done";
-  prog.finalSum = `${String(res.outcome).toUpperCase()} · decided by ${res.decided_by === "human" ? "the recruiter" : "the gate"}` +
-                  (res.review_form_url ? " · waiting for the recruiter form" : "");
-  drawChain(prog);
+  const rp = HS.replay(res);
+  const live = p && p.stages && Object.keys(p.stages).length ? p : null;
+  drawChain(live ? HS.merge(rp.snap, live) : rp.snap,
+            {phase:"done", outcome:res.outcome, formWaiting:!!res.review_form_url, groupTime:rp.groupTime});
   const reqs = res.requirements || [];
   const n = d => reqs.filter(r => r.decision === d).length;
   $("banner").className = "banner " + (res.outcome || "");
@@ -301,14 +241,14 @@ function show(res, p){
     <div class="kv">Met <b>${n("MET")}</b> · Missing <b>${n("MISSING")}</b> · Uncertain <b>${n("UNCERTAIN")}</b></div>
     <div class="kv" style="flex-basis:100%;font-size:13px">${esc(res.job_title || "")} · rule: ${esc(res.rule || "")}${res.message ? " · " + esc(res.message) : ""}</div>`;
   $("resultBtns").innerHTML = (res.review_form_url ? `<button id="formBtn">Open recruiter form</button>` : "") +
-    `<button class="ghost" id="dl">Download result.json</button>`;
+    `<button class="ghost" id="dl">${HS.icon("download")}Download result.json</button>`;
   if (res.review_form_url) $("formBtn").onclick = () => window.open(res.review_form_url, "_blank");
   $("dl").onclick = () => { const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([JSON.stringify(res, null, 1)], {type:"application/json"}));
     a.download = "result.json"; a.click(); };
   $("filters").innerHTML = ["ALL","MET","MISSING","UNCERTAIN"].map(f =>
-    `<span class="chip ${f === filter ? "on" : ""}" data-f="${f}">${f === "ALL" ? "All" : f[0] + f.slice(1).toLowerCase()} (${f === "ALL" ? reqs.length : n(f)})</span>`).join("");
-  document.querySelectorAll(".chip").forEach(c => c.onclick = () => { filter = c.dataset.f; show(result, p); });
+    `<span class="chip ${f === filter ? "on" : ""}" data-f="${f}" role="button" tabindex="0">${f === "ALL" ? "All" : f[0] + f.slice(1).toLowerCase()} (${f === "ALL" ? reqs.length : n(f)})</span>`).join("");
+  document.querySelectorAll(".chips .chip").forEach(c => c.onclick = c.onkeydown = e => { if (e.type === "keydown" && e.key !== "Enter" && e.key !== " ") return; filter = c.dataset.f; show(result, p); });
   $("cards").innerHTML = reqs.filter(r => filter === "ALL" || r.decision === filter).map(card).join("") || '<p class="hint">None.</p>';
   fairness(res); reader(res); report(res); timings(res);
   $("resultSec").classList.remove("hidden");
@@ -361,14 +301,14 @@ function report(res){
   const r = res.report || {};
   const flags = (r.flags_for_recruiter || []).map(f => `<li>${esc(f)}</li>`).join("");
   $("report").innerHTML = `<p class="hint">Source: <b>${r.source === "llm" ? "AI (checked by the fact checker)" : "template fallback (the AI text failed a check)"}</b>${r.model ? " · model " + esc(r.model) : ""}</p>
-    <div class="two"><div><h3>Recruiter summary</h3><pre class="letter">${esc(r.recruiter_summary || "-")}</pre>
-    ${flags ? `<h3>Flags for the recruiter</h3><ul class="why">${flags}</ul>` : ""}</div>
-    <div><h3>Candidate letter</h3><pre class="letter">${esc(r.candidate_letter || "(no letter: a person reviews this case)")}</pre></div></div>`;
+    <div class="two"><div><h3 class="sh" style="margin-top:6px">Recruiter summary</h3><pre class="letter">${esc(r.recruiter_summary || "-")}</pre>
+    ${flags ? `<h3 class="sh">Flags for the recruiter</h3><ul class="why">${flags}</ul>` : ""}</div>
+    <div><h3 class="sh" style="margin-top:6px">Candidate letter</h3><pre class="letter">${esc(r.candidate_letter || "(no letter: a person reviews this case)")}</pre></div></div>`;
 }
 
 function timings(res){
   const t = res.timings_s || {};
-  const parts = [["Reader","reader","#14213D"],["Profile","profile","#2E63C9"],["Job","job","#6b8fd6"],["Match + Judge","match_and_judge","#1f7a4d"]]
+  const parts = [["Reader","reader","#101828"],["Profile","profile","#1f5fd6"],["Job","job","#6b93e0"],["Match + Judge","match_and_judge","#0f6b4c"]]
     .filter(x => t[x[1]] != null);
   const tot = parts.reduce((s,x) => s + t[x[1]], 0) || 1;
   $("timings").innerHTML = `<div class="tbar">${parts.map(x => `<i style="width:${100*t[x[1]]/tot}%;background:${x[2]}" title="${x[0]} ${t[x[1]]} s">${x[0]} ${Number(t[x[1]]).toFixed(1)} s</i>`).join("")}</div>
