@@ -1,0 +1,76 @@
+{
+ "row": {
+  "id": "P28",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 10,
+  "raw_skills_in_cv": 10,
+  "skills_kept": 8,
+  "experience": 0,
+  "education": 1,
+  "terms_present": 2,
+  "terms_found": 1,
+  "terms_missed": [
+   "time series"
+  ],
+  "latency_s": 7.8,
+  "max_completion_tokens": 406
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Machine Learning",
+    "evidence": "Educational YouTube channel devoted to explaining basics of machine learning and deep learning for non-STEM students."
+   },
+   {
+    "name": "Deep Learning",
+    "evidence": "Educational YouTube channel devoted to explaining basics of machine learning and deep learning for non-STEM students."
+   },
+   {
+    "name": "Python",
+    "evidence": "Machine Learning, Data Science and Deep Learning with Python"
+   },
+   {
+    "name": "Statsoft Statistica",
+    "evidence": "mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+   },
+   {
+    "name": "SPSS Statistics",
+    "evidence": "mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+   },
+   {
+    "name": "Matlab",
+    "evidence": "mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+   },
+   {
+    "name": "RapidMiner",
+    "evidence": "mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+   },
+   {
+    "name": "English",
+    "evidence": "English level: fluent"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Ph. D.",
+    "field": "Economics",
+    "institution": null,
+    "end": null,
+    "evidence": "Ph. D. in Economics, more than two dozens of publication papers (full list upon request)."
+   }
+  ],
+  "experience": [],
+  "uncertain": [
+   "skill 'Data Science': name 'Data Science' is not written in its evidence, removed",
+   "education 'Ph. D.': institution 'unspecified' is not written in its evidence, removed",
+   "education 'Ph. D.': end 'more than two dozens of publication papers (full list upon request)' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

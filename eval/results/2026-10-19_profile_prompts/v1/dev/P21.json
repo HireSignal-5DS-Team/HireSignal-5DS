@@ -1,0 +1,107 @@
+{
+ "row": {
+  "id": "P21",
+  "set": "gold",
+  "calls": 4,
+  "json_valid": 4,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 20,
+  "raw_skills_in_cv": 20,
+  "skills_kept": 13,
+  "experience": 3,
+  "education": 0,
+  "terms_present": 5,
+  "terms_found": 3,
+  "terms_missed": [
+   "monitoring",
+   "data pipelines"
+  ],
+  "latency_s": 19.4,
+  "max_completion_tokens": 472
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "MLOps",
+    "evidence": "Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL"
+   },
+   {
+    "name": "Dataiku DSS",
+    "evidence": "Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL"
+   },
+   {
+    "name": "Python",
+    "evidence": "Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL"
+   },
+   {
+    "name": "Knowledge Sharing",
+    "evidence": "Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL"
+   },
+   {
+    "name": "Bash",
+    "evidence": "Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL"
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL"
+   },
+   {
+    "name": "Data Operations",
+    "evidence": "Skills: Python (Programming Language) · Bash · Data Operations · Research and Development (R&D) · Machine Learning ·\nOracle Database · PostgreSQL · Data Science"
+   },
+   {
+    "name": "Research and Development",
+    "evidence": "Skills: Python (Programming Language) · Bash · Data Operations · Research and Development (R&D) · Machine Learning ·\nOracle Database · PostgreSQL · Data Science"
+   },
+   {
+    "name": "Machine Learning",
+    "evidence": "Skills: Python (Programming Language) · Bash · Data Operations · Research and Development (R&D) · Machine Learning ·\nOracle Database · PostgreSQL · Data Science"
+   },
+   {
+    "name": "Oracle Database",
+    "evidence": "Skills: Python (Programming Language) · Bash · Data Operations · Research and Development (R&D) · Machine Learning ·\nOracle Database · PostgreSQL · Data Science"
+   },
+   {
+    "name": "Data Science",
+    "evidence": "Skills: Python (Programming Language) · Bash · Data Operations · Research and Development (R&D) · Machine Learning ·\nOracle Database · PostgreSQL · Data Science"
+   },
+   {
+    "name": "Data Analysis",
+    "evidence": "Skills: Python (Programming Language) · Research and Development (R&D) · Machine Learning · Data Science · Data Analysis · TensorFlow"
+   },
+   {
+    "name": "TensorFlow",
+    "evidence": "Skills: Python (Programming Language) · Research and Development (R&D) · Machine Learning · Data Science · Data Analysis · TensorFlow"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "MLOps Engineer",
+    "company": "PASHA Bank OJSC",
+    "start": "2023-01",
+    "end": "present",
+    "evidence": "MLOps Engineer - PASHA Bank OJSC [ 01/01/2023 - Current ]"
+   },
+   {
+    "title": "Data Scientist",
+    "company": "PASHA Bank OJSC",
+    "start": "2021-11",
+    "end": "2022-12",
+    "evidence": "Data Scientist - PASHA Bank OJSC [ 22/11/2021 - 30/12/2022 ]"
+   },
+   {
+    "title": "Data Scientist",
+    "company": "International Bank of Azerbaijan",
+    "start": "2020-12",
+    "end": "2021-11",
+    "evidence": "Data Scientist - International Bank of Azerbaijan [ 01/12/2020 - 19/11/2021 ]\nCountry: Azerbaijan\nResponsibilities:\n- Demonstrated expertise in manipulating large datasets using statistical and numerical languages"
+   }
+  ],
+  "uncertain": [],
+  "prompt_version": "profile-v1"
+ }
+}

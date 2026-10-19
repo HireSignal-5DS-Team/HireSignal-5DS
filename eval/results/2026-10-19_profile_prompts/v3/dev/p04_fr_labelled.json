@@ -1,0 +1,69 @@
+{
+ "row": {
+  "id": "p04_fr_labelled",
+  "set": "synth",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 5,
+  "raw_skills_in_cv": 5,
+  "skills_kept": 5,
+  "experience": 1,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 3.1,
+  "max_completion_tokens": 181,
+  "synth_tp": 5,
+  "synth_fp": 0,
+  "synth_fn": 0
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Java",
+    "evidence": "Java, Spring Boot, Oracle, PostgreSQL, Angular"
+   },
+   {
+    "name": "Spring Boot",
+    "evidence": "Java, Spring Boot, Oracle, PostgreSQL, Angular"
+   },
+   {
+    "name": "Oracle",
+    "evidence": "Java, Spring Boot, Oracle, PostgreSQL, Angular"
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Java, Spring Boot, Oracle, PostgreSQL, Angular"
+   },
+   {
+    "name": "Angular",
+    "evidence": "Java, Spring Boot, Oracle, PostgreSQL, Angular"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Licence",
+    "field": "Informatique de Gestion",
+    "institution": "ISG",
+    "end": "2018",
+    "evidence": "Licence en Informatique de Gestion, ISG [PERSONAL], 2018"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Développeur·se Java",
+    "company": "Sopra HR Software",
+    "start": "2019",
+    "end": "2023",
+    "evidence": "Développeur·se Java - Sopra HR Software (2019 - 2023)"
+   }
+  ],
+  "uncertain": [],
+  "prompt_version": "profile-v3"
+ }
+}

@@ -1,0 +1,233 @@
+{
+ "row": {
+  "id": "P42",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 33,
+  "raw_skills_in_cv": 32,
+  "skills_kept": 31,
+  "experience": 2,
+  "education": 3,
+  "terms_present": 4,
+  "terms_found": 1,
+  "terms_missed": [
+   "probability theory",
+   "statistics",
+   "SQL"
+  ],
+  "latency_s": 9.5,
+  "max_completion_tokens": 290
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Collaborative filtering",
+    "evidence": "- Building a recommendation system\n(Collaborative filtering, LSTM)"
+   },
+   {
+    "name": "LSTM",
+    "evidence": "- Building a recommendation system\n(Collaborative filtering, LSTM)"
+   },
+   {
+    "name": "Stochastic differential equations",
+    "evidence": "(Stochastic differential equations area)"
+   },
+   {
+    "name": "Behavioral biases",
+    "evidence": "- Making research on behavioral biases' impact on traders' performance"
+   },
+   {
+    "name": "Databricks",
+    "evidence": "- Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)"
+   },
+   {
+    "name": "PySpark",
+    "evidence": "- Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)"
+   },
+   {
+    "name": "unittest",
+    "evidence": "- Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)"
+   },
+   {
+    "name": "pyodbc",
+    "evidence": "- Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)"
+   },
+   {
+    "name": "ARIMA",
+    "evidence": "- Sales Forecasting using ARIMA model"
+   },
+   {
+    "name": "Wavelet",
+    "evidence": "Creating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization"
+   },
+   {
+    "name": "Fourier",
+    "evidence": "Creating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization"
+   },
+   {
+    "name": "Cluster analysis",
+    "evidence": "Creating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization"
+   },
+   {
+    "name": "PCA",
+    "evidence": "Creating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization"
+   },
+   {
+    "name": "Autoencoder",
+    "evidence": "Creating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization"
+   },
+   {
+    "name": "t-SNE",
+    "evidence": "Creating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization"
+   },
+   {
+    "name": "Time Series forecasting",
+    "evidence": "- Time Series forecasting using FFT, Facebook Prophet model"
+   },
+   {
+    "name": "FFT",
+    "evidence": "- Time Series forecasting using FFT, Facebook Prophet model"
+   },
+   {
+    "name": "Facebook Prophet",
+    "evidence": "- Time Series forecasting using FFT, Facebook Prophet model"
+   },
+   {
+    "name": "Diophantine inequality",
+    "evidence": "- Developing method for probability calculation in clinical trials which is based on Diophantine inequality, Monte Carlo method for multiple integral derivation"
+   },
+   {
+    "name": "Monte Carlo",
+    "evidence": "- Developing method for probability calculation in clinical trials which is based on Diophantine inequality, Monte Carlo method for multiple integral derivation"
+   },
+   {
+    "name": "Binary imbalanced classification",
+    "evidence": "- Binary imbalanced classification, anomaly detection based on complex business logic in financial market. AWS Sagemaker, sklearn processing jobs. Leading Junior Data Scientist."
+   },
+   {
+    "name": "anomaly detection",
+    "evidence": "- Binary imbalanced classification, anomaly detection based on complex business logic in financial market. AWS Sagemaker, sklearn processing jobs. Leading Junior Data Scientist."
+   },
+   {
+    "name": "AWS Sagemaker",
+    "evidence": "- Binary imbalanced classification, anomaly detection based on complex business logic in financial market. AWS Sagemaker, sklearn processing jobs. Leading Junior Data Scientist."
+   },
+   {
+    "name": "sklearn",
+    "evidence": "- Binary imbalanced classification, anomaly detection based on complex business logic in financial market. AWS Sagemaker, sklearn processing jobs. Leading Junior Data Scientist."
+   },
+   {
+    "name": "Data Science",
+    "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+   },
+   {
+    "name": "Predictive analytics",
+    "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+   },
+   {
+    "name": "Quantitative Finance",
+    "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+   },
+   {
+    "name": "Signal Processing",
+    "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+   },
+   {
+    "name": "Mathematical modeling",
+    "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+   },
+   {
+    "name": "Gambling",
+    "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+   },
+   {
+    "name": "Portfolio optimization",
+    "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+   }
+  ],
+  "education": [
+   {
+    "degree": "BA",
+    "field": "Mathematics",
+    "institution": null,
+    "end": null,
+    "evidence": "BA in Mathematics"
+   },
+   {
+    "degree": "Master",
+    "field": "Mathematics",
+    "institution": null,
+    "end": null,
+    "evidence": "Master degree in Mathematics\n(Stochastic differential equations area)"
+   },
+   {
+    "degree": "PhD",
+    "field": "Mathematics",
+    "institution": null,
+    "end": null,
+    "evidence": "PhD in Mathematics (currently) (Stochastic differential equations area)"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Data Scientist",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Data scientist:\n- Building a recommendation system\n(Collaborative filtering, LSTM)\n- Making research on behavioral biases' impact on traders' performance\n- Doing analytics with parsed data from Facebook"
+   },
+   {
+    "title": "College lecturer",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "College lecturer (1 term): Probability theory and statistics"
+   }
+  ],
+  "uncertain": [
+   "skill 'Stochastic differential equations': evidence re-anchored to the CV line that names it",
+   "skill 'Behavioral biases': evidence re-anchored to the CV line that names it",
+   "skill 'Facebook analytics': name 'Facebook analytics' is not written in its evidence, removed",
+   "education 'BA': institution 'null' is not written in its evidence, removed",
+   "education 'BA': end 'null' not found in its evidence, removed",
+   "education 'Master': institution 'null' is not written in its evidence, removed",
+   "education 'Master': end 'null' not found in its evidence, removed",
+   "education 'Master': institution 'null' is not written in its evidence, removed",
+   "education 'Master': end 'null' not found in its evidence, removed",
+   "education 'PhD': institution 'null' is not written in its evidence, removed",
+   "education 'PhD': end 'present' not found in its evidence, removed",
+   "experience 'Data Scientist': company 'null' is not written in its evidence, removed",
+   "experience 'Data Scientist': start 'null' not found in its evidence, removed",
+   "experience 'Data Scientist': end 'null' not found in its evidence, removed",
+   "skill 'ARIMA': evidence re-anchored to the CV line that names it",
+   "skill 'Wavelet': evidence re-anchored to the CV line that names it",
+   "skill 'Fourier': evidence re-anchored to the CV line that names it",
+   "skill 'Cluster analysis': evidence re-anchored to the CV line that names it",
+   "skill 'PCA': evidence re-anchored to the CV line that names it",
+   "skill 'Autoencoder': evidence re-anchored to the CV line that names it",
+   "skill 't-SNE': evidence re-anchored to the CV line that names it",
+   "skill 'Time Series forecasting': evidence re-anchored to the CV line that names it",
+   "skill 'FFT': evidence re-anchored to the CV line that names it",
+   "skill 'Facebook Prophet': evidence re-anchored to the CV line that names it",
+   "skill 'Diophantine inequality': evidence re-anchored to the CV line that names it",
+   "skill 'Monte Carlo': evidence re-anchored to the CV line that names it",
+   "skill 'Data Science': evidence re-anchored to the CV line that names it",
+   "skill 'Predictive analytics': evidence re-anchored to the CV line that names it",
+   "skill 'Quantitative Finance': evidence re-anchored to the CV line that names it",
+   "skill 'Time Series Forecasting': evidence re-anchored to the CV line that names it",
+   "skill 'Signal Processing': evidence re-anchored to the CV line that names it",
+   "skill 'Mathematical modeling': evidence re-anchored to the CV line that names it",
+   "skill 'Gambling': evidence re-anchored to the CV line that names it",
+   "skill 'Portfolio optimization': evidence re-anchored to the CV line that names it",
+   "experience 'College lecturer': company 'University' is not written in its evidence, removed",
+   "experience 'College lecturer': start '1 term' not found in its evidence, removed",
+   "experience 'College lecturer': end '1 term' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "row": {
+  "id": "p10_fr_header_and_refs",
+  "set": "synth",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 4,
+  "raw_skills_in_cv": 4,
+  "skills_kept": 4,
+  "experience": 1,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 4.2,
+  "max_completion_tokens": 246,
+  "synth_tp": 4,
+  "synth_fp": 0,
+  "synth_fn": 2
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Cisco",
+    "evidence": "Administration Cisco et Fortinet, 300 sites."
+   },
+   {
+    "name": "Fortinet",
+    "evidence": "Administration Cisco et Fortinet, 300 sites."
+   },
+   {
+    "name": "Ansible",
+    "evidence": "Automatisation avec Ansible et Python."
+   },
+   {
+    "name": "Python",
+    "evidence": "Automatisation avec Ansible et Python."
+   }
+  ],
+  "education": [
+   {
+    "degree": "Ingénieur·e en Réseaux et Télécommunications",
+    "field": "Réseaux et Télécommunications",
+    "institution": "ENIT",
+    "end": "2018",
+    "evidence": "Ingénieur·e en Réseaux et Télécommunications, ENIT, 2018"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Ingénieur·e Réseaux",
+    "company": "Ooredoo Tunisie",
+    "start": "2018",
+    "end": "2024",
+    "evidence": "Ingénieur·e Réseaux - Ooredoo Tunisie (2018 - 2024)"
+   }
+  ],
+  "uncertain": [],
+  "prompt_version": "profile-v1"
+ }
+}

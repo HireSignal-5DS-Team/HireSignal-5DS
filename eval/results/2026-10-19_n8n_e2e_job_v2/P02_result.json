@@ -1,0 +1,670 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "75",
+ "cv_id": "cv-5b04c16c",
+ "job_id": "job-a6fe233f",
+ "job_title": "Data Scientist",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 14,
+ "reasons": [
+  "r2: must-have MISSING",
+  "r4: must-have MISSING",
+  "r5: must-have MISSING",
+  "r6: must-have MISSING",
+  "r7: must-have MISSING",
+  "r8: must-have MISSING",
+  "r9: must-have MISSING",
+  "r10: must-have MISSING",
+  "r11: must-have MISSING",
+  "r12: must-have MISSING",
+  "r13: must-have MISSING",
+  "r14: must-have MISSING",
+  "r15: must-have MISSING"
+ ],
+ "listed_flags": [
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: bias:identity placeholder line removed",
+  "pair: bias:identity placeholder line removed",
+  "pair: profile:name_not_found (info only)",
+  "pair: job_agent:validation_warnings (info only)"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Data scientist with 4+ years of experience",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [
+    {
+     "quote": "Master Degree in Data Science",
+     "start": 188,
+     "end": 217
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.396231,
+    "MISSING": 0.468155,
+    "UNCERTAIN": 0.135614
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Good knowledge of the probability theory",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000103,
+    "MISSING": 0.879983,
+    "UNCERTAIN": 0.119914
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9969
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Good knowledge of the statistics",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.003281,
+    "MISSING": 0.645591,
+    "UNCERTAIN": 0.351128
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Understanding of Bayesian methods",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 2.8e-05,
+    "MISSING": 0.985957,
+    "UNCERTAIN": 0.014015
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9977
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Understanding of time series analysis",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 2.3e-05,
+    "MISSING": 0.987116,
+    "UNCERTAIN": 0.012861
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9944
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Understanding of sensor signal processing",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 3.4e-05,
+    "MISSING": 0.990058,
+    "UNCERTAIN": 0.009908
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9368
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r7",
+   "text": "Hands-on experience with probabilistic programming (Pyro, or similar)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 3.4e-05,
+    "MISSING": 0.999515,
+    "UNCERTAIN": 0.000451
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9952
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r8",
+   "text": "Hands-on experience with probabilistic programming (PyMC3, or similar)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 9e-06,
+    "MISSING": 0.999549,
+    "UNCERTAIN": 0.000442
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9986
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r9",
+   "text": "Hands-on experience with probabilistic programming (JAGS, or similar)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 9e-06,
+    "MISSING": 0.999421,
+    "UNCERTAIN": 0.00057
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9959
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r10",
+   "text": "Experience with cloud (Amazon SageMaker)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 6e-06,
+    "MISSING": 0.999026,
+    "UNCERTAIN": 0.000968
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9956
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r11",
+   "text": "Experience with PySpark",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 4e-06,
+    "MISSING": 0.999632,
+    "UNCERTAIN": 0.000364
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9995
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r12",
+   "text": "Hands-on experience with data preparation",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 1.6e-05,
+    "MISSING": 0.98814,
+    "UNCERTAIN": 0.011844
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9956
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r13",
+   "text": "Hands-on experience with cleansing",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 9e-06,
+    "MISSING": 0.997092,
+    "UNCERTAIN": 0.002899
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9993
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r14",
+   "text": "Hands-on experience with feature engineering",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.001096,
+    "MISSING": 0.923133,
+    "UNCERTAIN": 0.075771
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9844
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r15",
+   "text": "Hands-on experience with visualization",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.003459,
+    "MISSING": 0.878631,
+    "UNCERTAIN": 0.117911
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9947
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r16",
+   "text": "Strong working knowledge of SQL",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 4e-06,
+    "MISSING": 0.998956,
+    "UNCERTAIN": 0.00104
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9989
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r17",
+   "text": "Good communication skills",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "English level: fluent",
+     "start": 62,
+     "end": 83
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.975377,
+    "MISSING": 0.02176,
+    "UNCERTAIN": 0.002862
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.7207
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r18",
+   "text": "Good interpersonal skills",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.00721,
+    "MISSING": 0.450301,
+    "UNCERTAIN": 0.54249
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r19",
+   "text": "Experience in working across different global cultures",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000196,
+    "MISSING": 0.773722,
+    "UNCERTAIN": 0.226082
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9996
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r20",
+   "text": "Ph.D. in Mathematics",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 5e-06,
+    "MISSING": 0.999577,
+    "UNCERTAIN": 0.000418
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9907
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 1 of 17 must-have requirements are met; the score is 14. Missing must-haves: Good knowledge of the probability theory; Understanding of Bayesian methods; Understanding of time series analysis; Understanding of sensor signal processing; Hands-on experience with probabilistic programming (Pyro, or similar); Hands-on experience with probabilistic programming (PyMC3, or similar); Hands-on experience with probabilistic programming (JAGS, or similar); Experience with cloud (Amazon SageMaker); Experience with PySpark; Hands-on experience with data preparation; Hands-on experience with cleansing; Hands-on experience with feature engineering; Hands-on experience with visualization. Unclear must-haves: Data scientist with 4+ years of experience; Good knowledge of the statistics; Good interpersonal skills.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Data scientist with 4+ years of experience (must; unclear in the CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Good knowledge of the probability theory (must; not found in CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Good knowledge of the statistics (must; unclear in the CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Understanding of Bayesian methods (must; not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Understanding of time series analysis (must; not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Understanding of sensor signal processing (must; not found in CV)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Hands-on experience with probabilistic programming (Pyro, or similar) (must; not found in CV)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Hands-on experience with probabilistic programming (PyMC3, or similar) (must; not found in CV)"
+   },
+   {
+    "req_id": "r9",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Hands-on experience with probabilistic programming (JAGS, or similar) (must; not found in CV)"
+   },
+   {
+    "req_id": "r10",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with cloud (Amazon SageMaker) (must; not found in CV)"
+   },
+   {
+    "req_id": "r11",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with PySpark (must; not found in CV)"
+   },
+   {
+    "req_id": "r12",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Hands-on experience with data preparation (must; not found in CV)"
+   },
+   {
+    "req_id": "r13",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Hands-on experience with cleansing (must; not found in CV)"
+   },
+   {
+    "req_id": "r14",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Hands-on experience with feature engineering (must; not found in CV)"
+   },
+   {
+    "req_id": "r15",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Hands-on experience with visualization (must; not found in CV)"
+   },
+   {
+    "req_id": "r16",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Strong working knowledge of SQL (nice; not found in CV)"
+   },
+   {
+    "req_id": "r17",
+    "decision": "MET",
+    "quote": "English level: fluent",
+    "line": "Met: Good communication skills (must; CV: English level: fluent)"
+   },
+   {
+    "req_id": "r18",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Good interpersonal skills (must; unclear in the CV)"
+   },
+   {
+    "req_id": "r19",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience in working across different global cultures (nice; not found in CV)"
+   },
+   {
+    "req_id": "r20",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Ph.D. in Mathematics (nice; not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Good knowledge of the probability theory; Understanding of Bayesian methods; Understanding of time series analysis; Understanding of sensor signal processing; Hands-on experience with probabilistic programming (Pyro, or similar); Hands-on experience with probabilistic programming (PyMC3, or similar); Hands-on experience with probabilistic programming (JAGS, or similar); Experience with cloud (Amazon SageMaker); Experience with PySpark; Hands-on experience with data preparation; Hands-on experience with cleansing; Hands-on experience with feature engineering; Hands-on experience with visualization.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r1, r3"
+  ],
+  "source": "template",
+  "info_flags": [
+   "report:template_fallback"
+  ],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [
+   {
+    "kind": "identity placeholder",
+    "rule": "placeholder-only line",
+    "line": 6,
+    "action": "line removed"
+   }
+  ],
+  "would_be_outcome": "reject",
+  "swap": {
+   "ran": true,
+   "counterfactual": "female_arab",
+   "how": "name + pronouns added",
+   "identical_matcher_input": true,
+   "latency_s": 0.009
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.027,
+  "profile": 10.407,
+  "job": 12.622,
+  "match_and_judge": 25.314
+ }
+}

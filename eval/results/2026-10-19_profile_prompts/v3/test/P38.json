@@ -1,0 +1,94 @@
+{
+ "row": {
+  "id": "P38",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 28,
+  "raw_skills_in_cv": 28,
+  "skills_kept": 16,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 2,
+  "terms_found": 2,
+  "terms_missed": [],
+  "latency_s": 4.8,
+  "max_completion_tokens": 233
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Position: Junior Python Developer"
+   },
+   {
+    "name": "English",
+    "evidence": "English level: intermediate"
+   },
+   {
+    "name": "Python3",
+    "evidence": "Technologies:\nPython3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "FastAPI",
+    "evidence": "Technologies:\nPython3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Technologies:\nPython3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "Docker",
+    "evidence": "Technologies:\nPython3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "PyJWT",
+    "evidence": "Technologies:\nPython3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "SQLAlchemy",
+    "evidence": "Technologies:\nPython3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "Pydantic",
+    "evidence": "Technologies:\nPython3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "Alembic",
+    "evidence": "Technologies:\nPython3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "Django",
+    "evidence": "Technologies:\nPython3, Django, HTML, CSS, Bootstrap,\nSQLite"
+   },
+   {
+    "name": "HTML",
+    "evidence": "Technologies:\nPython3, Django, HTML, CSS, Bootstrap,\nSQLite"
+   },
+   {
+    "name": "CSS",
+    "evidence": "Technologies:\nPython3, Django, HTML, CSS, Bootstrap,\nSQLite"
+   },
+   {
+    "name": "Bootstrap",
+    "evidence": "Technologies:\nPython3, Django, HTML, CSS, Bootstrap,\nSQLite"
+   },
+   {
+    "name": "SQLite",
+    "evidence": "Technologies:\nPython3, Django, HTML, CSS, Bootstrap,\nSQLite"
+   },
+   {
+    "name": "Django Rest Framework",
+    "evidence": "Technologies:\nPython3, Django, Django Rest Framework,\nSQLite"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [],
+  "prompt_version": "profile-v3"
+ }
+}

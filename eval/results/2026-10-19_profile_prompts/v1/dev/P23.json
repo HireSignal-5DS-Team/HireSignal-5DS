@@ -1,0 +1,78 @@
+{
+ "row": {
+  "id": "P23",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 14,
+  "raw_skills_in_cv": 13,
+  "skills_kept": 9,
+  "experience": 0,
+  "education": 1,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 10.4,
+  "max_completion_tokens": 307
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "VBA",
+    "evidence": "Conduct lectures and laboratory classes with students in such courses:\n\n- Object-oriented programming in C++;\n\n- Automata theory and formal languages;\n\n- VBA and VB .NET;\n\n- Mathematical modelling of system"
+   },
+   {
+    "name": "C++",
+    "evidence": "Conduct lectures and laboratory classes with students in such courses:\n\n- Object-oriented programming in C++;\n\n- Automata theory and formal languages;\n\n- VBA and VB .NET;\n\n- Mathematical modelling of system"
+   },
+   {
+    "name": "STL",
+    "evidence": "R, Vba, C/C++, STL, Python"
+   },
+   {
+    "name": "Python",
+    "evidence": "R, Vba, C/C++, STL, Python"
+   },
+   {
+    "name": "R",
+    "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+   },
+   {
+    "name": "Web scraping",
+    "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+   },
+   {
+    "name": "Data scraping",
+    "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+   },
+   {
+    "name": "C/C++ STL",
+    "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+   },
+   {
+    "name": "C#",
+    "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+   }
+  ],
+  "education": [
+   {
+    "degree": "PhD",
+    "field": "Mathematics",
+    "institution": "PhD in Mathematics",
+    "end": null,
+    "evidence": "PhD in Mathematics."
+   }
+  ],
+  "experience": [],
+  "uncertain": [
+   "skill 'R': evidence not in the CV (not found (closest 0.88)), dropped",
+   "skill 'C/C++': name 'C/C++' is not written in its evidence, removed",
+   "skill 'vb . net': name 'vb . net' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

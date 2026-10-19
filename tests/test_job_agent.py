@@ -63,7 +63,7 @@ def test_template_and_examples_are_sent_to_the_model():
     run_job_agent(POST, "JD-001", fake)
     call = fake.calls[0]
     assert call["template"] == prompts.get_prompt()[0]
-    assert len(call["examples"]) == 3  # job-v1 (= V2 job-q1) examples
+    assert call["examples"] == prompts.get_prompt()[1]  # the production version's examples (T15: job-v2, 4)
 
 
 def test_prompt_examples_obey_their_own_rules():

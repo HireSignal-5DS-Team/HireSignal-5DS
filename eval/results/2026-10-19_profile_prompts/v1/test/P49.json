@@ -1,0 +1,147 @@
+{
+ "row": {
+  "id": "P49",
+  "set": "gold",
+  "calls": 7,
+  "json_valid": 3,
+  "cut_calls": 4,
+  "partial": true,
+  "raw_skills": 23,
+  "raw_skills_in_cv": 22,
+  "skills_kept": 22,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 11,
+  "terms_found": 4,
+  "terms_missed": [
+   "Python",
+   "Tensorflow",
+   "Pytorch",
+   "LightGBM",
+   "Scikit-learn",
+   "time series",
+   "Docker"
+  ],
+  "latency_s": 72.8,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "ML",
+    "evidence": "- Built an ML model that proposes the optimal path for a driver, taking into account fuel consumption to help users save on gas."
+   },
+   {
+    "name": "predictive maintenance",
+    "evidence": "- Designed, developed, and deployed a predictive maintenance model that provides crucial car maintenance recommendations based on detailed analysis of vehicle data."
+   },
+   {
+    "name": "driver behavior estimation",
+    "evidence": "- Developed and deployed a driver behavior estimation model that can accurately estimate user driving and identify potentially dangerous events in real-time."
+   },
+   {
+    "name": "car bumping detection",
+    "evidence": "- Created a proof of concept for a car bumping detection model that can detect and alert users of potential collisions."
+   },
+   {
+    "name": "GPS filtering",
+    "evidence": "- Built a GPS filtering model that effectively removes noise from GPS data in real-time."
+   },
+   {
+    "name": "real-time",
+    "evidence": "- Developed and deployed a driver behavior estimation model that can accurately estimate user driving and identify potentially dangerous events in real-time."
+   },
+   {
+    "name": "fuel consumption",
+    "evidence": "- Built an ML model that proposes the optimal path for a driver, taking into account fuel consumption to help users save on gas."
+   },
+   {
+    "name": "user verification model",
+    "evidence": "- Co-designed and developed a user verification model based on pictures, ensuring reliable user authentication."
+   },
+   {
+    "name": "churn prediction model",
+    "evidence": "- Built a churn prediction model for banking data, helping the company retain customers."
+   },
+   {
+    "name": "backend developer",
+    "evidence": "- Served as a part-time backend developer for a startup platform, contributing to the development of their platform."
+   },
+   {
+    "name": "mentored",
+    "evidence": "- Mentored new team members."
+   },
+   {
+    "name": "research",
+    "evidence": "- Conducted extensive research, reviewing papers and creating proof of concept models for possible automotive, locating, dentistry, and interior design projects."
+   },
+   {
+    "name": "Kaggle Notebooks Master",
+    "evidence": "Kaggle Notebooks Master"
+   },
+   {
+    "name": "Google QUEST Q&A Labeling Competition",
+    "evidence": "Bronze medal for Google QUEST Q&A Labeling Competition (Kaggle)"
+   },
+   {
+    "name": "exploratory data analysis",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "paper analysis",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "data cleaning",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "data preprocessing",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "machine learning",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "deep learning model training",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "error analysis",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "model deployment",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Data Scientist",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Position: Data Scientist\nExperience years: 4\nEnglish level: upper"
+   }
+  ],
+  "uncertain": [
+   "experience 'Data Scientist': company 'null' is not written in its evidence, removed",
+   "experience 'Data Scientist': start 'null' not found in its evidence, removed",
+   "experience 'Data Scientist': end 'null' not found in its evidence, removed",
+   "skill 'deep learning model tuning': name 'deep learning model tuning' is not written in its evidence, removed",
+   "part 4/5: answer cut off at the token limit",
+   "part 4/5: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 4/5: answer cut off at the token limit",
+   "part 4/5: attempt 2: unreadable answer (no JSON object in the model answer)",
+   "part 5/5: answer cut off at the token limit",
+   "part 5/5: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 5/5: answer cut off at the token limit",
+   "part 5/5: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

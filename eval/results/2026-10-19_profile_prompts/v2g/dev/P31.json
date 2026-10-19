@@ -1,0 +1,48 @@
+{
+ "row": {
+  "id": "P31",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 5,
+  "raw_skills_in_cv": 3,
+  "skills_kept": 3,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 1.7,
+  "max_completion_tokens": 97
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Position: Python/Django full-stack web developer"
+   },
+   {
+    "name": "Django",
+    "evidence": "Position: Python/Django full-stack web developer"
+   },
+   {
+    "name": "full-text search",
+    "evidence": "- Developed a custom full-text search with complex ranking logics."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "skill 'Django': evidence re-anchored to the CV line that names it",
+   "skill 'full-text search': evidence re-anchored to the CV line that names it",
+   "skill 'complex filtering': name 'complex filtering' is not written in its evidence, removed",
+   "skill 'full-stack web development': name 'full-stack web development' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

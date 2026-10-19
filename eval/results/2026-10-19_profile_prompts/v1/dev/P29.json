@@ -1,0 +1,60 @@
+{
+ "row": {
+  "id": "P29",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 5,
+  "raw_skills_in_cv": 5,
+  "skills_kept": 5,
+  "experience": 0,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 4.1,
+  "max_completion_tokens": 240
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Machine Learning",
+    "evidence": "Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+   },
+   {
+    "name": "supervised/unsupervised learning",
+    "evidence": "Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+   },
+   {
+    "name": "RESTful API development",
+    "evidence": "Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+   },
+   {
+    "name": "Flask",
+    "evidence": "Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+   },
+   {
+    "name": "English",
+    "evidence": "English level: fluent"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Data Science program",
+    "field": "Data Science",
+    "institution": "Data Root University",
+    "end": null,
+    "evidence": "Successfully finished 14 weeks of Data Science program by Data Root University."
+   }
+  ],
+  "experience": [],
+  "uncertain": [
+   "education 'Data Science program': end '14 weeks' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

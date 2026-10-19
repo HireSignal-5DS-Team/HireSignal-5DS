@@ -1,0 +1,84 @@
+{
+ "row": {
+  "id": "p01_en_classic",
+  "set": "synth",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 7,
+  "raw_skills_in_cv": 7,
+  "skills_kept": 7,
+  "experience": 2,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 4.8,
+  "max_completion_tokens": 281,
+  "synth_tp": 7,
+  "synth_fp": 0,
+  "synth_fn": 0
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Python, SQL, XGBoost, scikit-learn, Docker, FastAPI, Power BI"
+   },
+   {
+    "name": "SQL",
+    "evidence": "Python, SQL, XGBoost, scikit-learn, Docker, FastAPI, Power BI"
+   },
+   {
+    "name": "XGBoost",
+    "evidence": "Python, SQL, XGBoost, scikit-learn, Docker, FastAPI, Power BI"
+   },
+   {
+    "name": "scikit-learn",
+    "evidence": "Python, SQL, XGBoost, scikit-learn, Docker, FastAPI, Power BI"
+   },
+   {
+    "name": "Docker",
+    "evidence": "Python, SQL, XGBoost, scikit-learn, Docker, FastAPI, Power BI"
+   },
+   {
+    "name": "FastAPI",
+    "evidence": "Python, SQL, XGBoost, scikit-learn, Docker, FastAPI, Power BI"
+   },
+   {
+    "name": "Power BI",
+    "evidence": "Python, SQL, XGBoost, scikit-learn, Docker, FastAPI, Power BI"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Engineering degree",
+    "field": "Computer Science",
+    "institution": "ESPRIT",
+    "end": "2021",
+    "evidence": "Engineering degree in Computer Science, ESPRIT, 2021"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Data Scientist",
+    "company": "Vermeg",
+    "start": "2021",
+    "end": "2024",
+    "evidence": "Data Scientist, Vermeg - Tunis 2021 - 2024\n- Built churn models (XGBoost, scikit-learn) for 2 million clients.\n- Deployed models with Docker and FastAPI."
+   },
+   {
+    "title": "Data Analyst Intern",
+    "company": "Sofrecom",
+    "start": "2020",
+    "end": "2021",
+    "evidence": "Data Analyst Intern, Sofrecom 2020 - 2021\n- Dashboards in Power BI and SQL."
+   }
+  ],
+  "uncertain": [],
+  "prompt_version": "profile-v3"
+ }
+}

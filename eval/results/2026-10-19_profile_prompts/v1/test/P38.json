@@ -1,0 +1,94 @@
+{
+ "row": {
+  "id": "P38",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 17,
+  "raw_skills_in_cv": 17,
+  "skills_kept": 16,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 2,
+  "terms_found": 2,
+  "terms_missed": [],
+  "latency_s": 8.7,
+  "max_completion_tokens": 462
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Position: Junior Python Developer"
+   },
+   {
+    "name": "English",
+    "evidence": "English level: intermediate"
+   },
+   {
+    "name": "Python3",
+    "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "FastAPI",
+    "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "Docker",
+    "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "PyJWT",
+    "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "SQLAlchemy",
+    "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "Pydantic",
+    "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "Alembic",
+    "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+   },
+   {
+    "name": "HTML",
+    "evidence": "Python3, Django, HTML, CSS, Bootstrap,\nSQLite"
+   },
+   {
+    "name": "CSS",
+    "evidence": "Python3, Django, HTML, CSS, Bootstrap,\nSQLite"
+   },
+   {
+    "name": "Bootstrap",
+    "evidence": "Python3, Django, HTML, CSS, Bootstrap,\nSQLite"
+   },
+   {
+    "name": "Django",
+    "evidence": "Python3, Django, Django Rest Framework,\nSQLite"
+   },
+   {
+    "name": "Django Rest Framework",
+    "evidence": "Python3, Django, Django Rest Framework,\nSQLite"
+   },
+   {
+    "name": "SQLite",
+    "evidence": "Python3, Django, HTML, CSS, Bootstrap,\nSQLite"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [],
+  "prompt_version": "profile-v1"
+ }
+}

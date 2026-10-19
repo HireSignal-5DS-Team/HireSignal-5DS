@@ -1,0 +1,54 @@
+{
+ "row": {
+  "id": "P24",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 6,
+  "raw_skills_in_cv": 6,
+  "skills_kept": 6,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 1.5,
+  "max_completion_tokens": 85
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "machine learning",
+    "evidence": "- machine learning models for fraud detection and anti-money laundering\n- time-series modelling\n- anomalies detection\n- customer segmentation\n- customer lifetime value\n- various data analysis tasks"
+   },
+   {
+    "name": "time-series modelling",
+    "evidence": "- machine learning models for fraud detection and anti-money laundering\n- time-series modelling\n- anomalies detection\n- customer segmentation\n- customer lifetime value\n- various data analysis tasks"
+   },
+   {
+    "name": "anomalies detection",
+    "evidence": "- machine learning models for fraud detection and anti-money laundering\n- time-series modelling\n- anomalies detection\n- customer segmentation\n- customer lifetime value\n- various data analysis tasks"
+   },
+   {
+    "name": "customer segmentation",
+    "evidence": "- machine learning models for fraud detection and anti-money laundering\n- time-series modelling\n- anomalies detection\n- customer segmentation\n- customer lifetime value\n- various data analysis tasks"
+   },
+   {
+    "name": "customer lifetime value",
+    "evidence": "- machine learning models for fraud detection and anti-money laundering\n- time-series modelling\n- anomalies detection\n- customer segmentation\n- customer lifetime value\n- various data analysis tasks"
+   },
+   {
+    "name": "data analysis",
+    "evidence": "- machine learning models for fraud detection and anti-money laundering\n- time-series modelling\n- anomalies detection\n- customer segmentation\n- customer lifetime value\n- various data analysis tasks"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [],
+  "prompt_version": "profile-v3"
+ }
+}

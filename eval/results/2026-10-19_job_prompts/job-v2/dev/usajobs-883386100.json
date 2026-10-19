@@ -1,0 +1,277 @@
+{
+ "card": {
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883386100",
+  "title": "Data Scientist",
+  "language": "en",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "text": "One year of specialized experience equivalent to the GS-11 level",
+    "evidence": "One year of directly related specialized experience equivalent to the GS-11 level",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": 1.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r2",
+    "text": "Collecting, cleaning, transforming and preparing structured and unstructured data for analytic projects",
+    "evidence": "Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r3",
+    "text": "Assisting in building and maintaining data pipelines by recording results and identifying issues",
+    "evidence": "Assisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "data pipelines"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r4",
+    "text": "Assisting in building and maintaining model testing by recording results and identifying issues",
+    "evidence": "Assisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "model testing"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r5",
+    "text": "Writing, testing and documenting code for data analysis or modeling and producing basic visualizations",
+    "evidence": "Writing, testing, and documenting code for data analysis or modeling and producing basic visualizations.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r6",
+    "text": "Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+    "evidence": "OR b) Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+    "kind": "nice",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r7",
+    "text": "One year of specialized experience equivalent to the GS-12 level",
+    "evidence": "To qualify for GS-13, you must have one year of directly related specialized experience equivalent to the GS-12 level",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": 1.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r8",
+    "text": "Preparing, transforming, and integrating datasets",
+    "evidence": "Preparing, transforming, and integrating datasets from multiple sources and maintaining reproducible documentation.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "datasets"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r9",
+    "text": "Preparing, transforming, and integrating documentation",
+    "evidence": "Preparing, transforming, and integrating datasets from multiple sources and maintaining reproducible documentation.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "documentation"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r10",
+    "text": "Designing and operating data and machine learning pipelines",
+    "evidence": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "machine learning pipelines"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r11",
+    "text": "Designing and operating data and data quality checks",
+    "evidence": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "data quality checks"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r12",
+    "text": "Designing and operating data and lineage tracking",
+    "evidence": "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "lineage tracking"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r13",
+    "text": "Conducting model validation and presenting results to diverse audiences",
+    "evidence": "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "model validation"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r14",
+    "text": "Conducting performance evaluation and presenting results to diverse audiences",
+    "evidence": "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "performance evaluation"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r15",
+    "text": "A full 4-year degree in mathematics, statistics, computer science, data science, or a directly related field",
+    "evidence": "You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r16",
+    "text": "A combination of education and experience equivalent to 30 semester hours in one of the majors, plus additional education or experience",
+    "evidence": "Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+   "'Designing and operating data and machine learning ': skill term 'data pipelines' not in the quote, removed",
+   "'Conducting model validation, testing and performan': skill term 'model testing' not in the quote, removed",
+   "'A full 4-year degree in mathematics, statistics, c': duplicate, dropped",
+   "'A combination of education and experience equivale': duplicate, dropped",
+   "'U.S. degrees must be from institutions accredited ': not a requirement (application instructions), dropped"
+  ]
+ },
+ "score": {
+  "job": "usajobs-883386100",
+  "failed": 0,
+  "latency_s": 23.7,
+  "tp": 5,
+  "fp": 6,
+  "fn": 0,
+  "kind_ok": 5,
+  "terms_tp": 2,
+  "terms_fp": 0,
+  "terms_fn": 0,
+  "strict_tp": 6,
+  "strict_fp": 10,
+  "strict_fn": 0,
+  "raw_proposals": 14,
+  "raw_verbatim": 14,
+  "invented": 0,
+  "soft_must": [],
+  "splits": [
+   "One year of directly related specialized experience equivalent to the GS-11 level"
+  ],
+  "merges": [],
+  "cut_calls": 0,
+  "missed": [],
+  "extra": [
+   "OR b) Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field",
+   "To qualify for GS-13, you must have one year of directly related specialized experience equivalent to the GS-12 level",
+   "Preparing, transforming, and integrating datasets from multiple sources and maintaining reproducible documentation.",
+   "Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.",
+   "Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+   "Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience."
+  ]
+ },
+ "calls": [
+  {
+   "input": "Specialized experience is experience that has equipped you with the particular ability, skill, and knowledge to successfully perform the duties of this position and is typically in or related to this line of work.\nTo qualify for GS-12, you must have: a) One year of directly related specialized experience equivalent to the GS-11 level: Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects.\nAssisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues.\nWriting, testing, and documenting code for data analysis or modeling and producing basic visualizations.",
+   "raw": "{\"requirements\": [{\"evidence\": \"One year of directly related specialized experience equivalent to the GS-11 level\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"One year of specialized experience equivalent to the GS-11 level\"}, {\"evidence\": \"Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Collecting, cleaning, transforming and preparing structured and unstructured data for analytic projects\"}, {\"evidence\": \"Assisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues.\", \"skill_terms\": [\"data pipelines\", \"model testing\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Building and maintaining data pipelines and supporting model testing\"}, {\"evidence\": \"Writing, testing, and documenting code for data analysis or modeling and producing basic visualizations.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Writing, testing and documenting code for data analysis or modeling and producing basic visualizations\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "OR b) Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field To qualify for GS-13, you must have one year of directly related specialized experience equivalent to the GS-12 level: Preparing, transforming, and integrating datasets from multiple sources and maintaining reproducible documentation.\nDesigning and operating data and machine learning pipelines with defined data quality checks and lineage tracking.\nConducting model validation, testing, and performance evaluation and presenting results to diverse audiences.",
+   "raw": "{\"requirements\": [{\"evidence\": \"OR b) Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field\", \"skill_terms\": [], \"kind\": \"nice\", \"category\": \"education\", \"min_years\": null, \"text\": \"Completed all requirements for a doctoral degree (i.e., Ph.D. or equivalent) in an appropriate field\"}, {\"evidence\": \"To qualify for GS-13, you must have one year of directly related specialized experience equivalent to the GS-12 level\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"One year of specialized experience equivalent to the GS-12 level\"}, {\"evidence\": \"Preparing, transforming, and integrating datasets from multiple sources and maintaining reproducible documentation.\", \"skill_terms\": [\"datasets\", \"documentation\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Preparing, transforming and integrating datasets from multiple sources and maintaining reproducible documentation\"}, {\"evidence\": \"Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking.\", \"skill_terms\": [\"data pipelines\", \"machine learning pipelines\", \"data quality checks\", \"lineage tracking\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Designing and operating data and machine learning pipelines with defined data quality checks and lineage tracking\"}, {\"evidence\": \"Conducting model validation, testing, and performance evaluation and presenting results to diverse audiences.\", \"skill_terms\": [\"model validation\", \"model testing\", \"performance evaluation\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Conducting model validation, testing and performance evaluation and presenting results to diverse audiences\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Your resume must include a clear and detailed narrative description, in your own words, of how you meet the required specialized experience.\nExperience statements copied from a position description, vacancy announcement or other reference material constitutes plagiarism and may result in disqualification and losing consideration for the job.\nPlease visit https://www.nasa.gov/careers/how-to-apply/#Artificial-Intelligence to review NASA's guidance on the use of artificial intelligent (AI) or AI-assisted tools during the application process.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Education Basic Requirement: You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position.\nOR Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience.\nU.S. degrees must have been awarded from colleges or universities that are accredited by recognized accrediting organizations.",
+   "raw": "{\"requirements\": [{\"evidence\": \"You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"A full 4-year degree in mathematics, statistics, computer science, data science, or a directly related field\"}, {\"evidence\": \"Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"A combination of education and experience equivalent to 30 semester hours in one of the majors, plus additional education or experience\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "For a list of schools that meet this criteria, go to http://ope.ed.gov/accreditation/ .\nIf you are using education completed in foreign colleges or universities to meet the qualification requirements, you must show that the education credentials have been evaluated by a private organization that specializes in interpretation of foreign education programs.\nThese education credentials must be deemed equivalent to that gained in an accredited U.S. education program; or full credit has been given for the courses at a U.S. accredited college or university.\nFor further information, visit: https://sites.ed.gov/international/recognition-of-foreign-qualifications/ .",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "All degrees must have been received in the year of, or any year subsequent to the original date of accreditation.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Basic Requirement: You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position.\nOR Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience.\nU.S. degrees must have been awarded from colleges or universities that are accredited by recognized accrediting organizations.\nFor a list of schools that meet this criteria, go to http://ope.ed.gov/accreditation/ .",
+   "raw": "{\"requirements\": [{\"evidence\": \"You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"A full 4-year degree in mathematics, statistics, computer science, data science, or a directly related field\"}, {\"evidence\": \"Have a combination of education and experience equivalent to a major field of study (30 semester hours) equivalent to one of the majors shown above, plus additional education or appropriate experience.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"A combination of education and experience equivalent to 30 semester hours in one of the majors, plus additional education or experience\"}, {\"evidence\": \"U.S. degrees must have been awarded from colleges or universities that are accredited by recognized accrediting organizations.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"U.S. degrees must be from institutions accredited by recognized accrediting organizations\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "If you are using education completed in foreign colleges or universities to meet the qualification requirements, you must show that the education credentials have been evaluated by a private organization that specializes in interpretation of foreign education programs.\nThese education credentials must be deemed equivalent to that gained in an accredited U.S. education program; or full credit has been given for the courses at a U.S. accredited college or university.\nFor further information, visit: https://sites.ed.gov/international/recognition-of-foreign-qualifications/ .\nAll degrees must have been received in the year of, or any year subsequent to the original date of accreditation.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Summary\nAs a Data Scientist, you support mission and program needs by preparing and analyzing data, developing analytic methods, and assisting with model evaluation. You create summaries and visualizations to communicate findings. Higher-grade levels perform these tasks with increased independence, broader scope, and responsibility for coordinating technical work. Learn more about this agency\n\nDuties\nDuties described below are at the highest grade advertised. Duties assigned at lower grade levels will be of more limited scope, performed with less independence and limited complexity; duties wil",
+   "raw": "{\n    \"job_title\": \"Data Scientist\"\n}",
+   "finish": "stop"
+  }
+ ]
+}

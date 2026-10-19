@@ -1,0 +1,288 @@
+{
+ "job-v1": {
+  "all": {
+   "offers": 7,
+   "gold_sentences": 46,
+   "found": 35,
+   "extra": 19,
+   "missed": 11,
+   "precision": 0.648,
+   "recall": 0.761,
+   "f1": 0.7,
+   "kind_accuracy": 0.714,
+   "skills_f1": 0.826,
+   "strict_f1": 0.504,
+   "invented_dropped": 1,
+   "verbatim_rate": 0.897,
+   "soft_must": 0,
+   "splits": 2,
+   "merges": 3,
+   "cut_calls": 0,
+   "failed": 0,
+   "latency_s_mean": 19.2
+  },
+  "usajobs": {
+   "offers": 5,
+   "gold_sentences": 33,
+   "found": 22,
+   "extra": 16,
+   "missed": 11,
+   "precision": 0.579,
+   "recall": 0.667,
+   "f1": 0.62,
+   "kind_accuracy": 0.545,
+   "skills_f1": 0.619,
+   "strict_f1": 0.469,
+   "invented_dropped": 1,
+   "verbatim_rate": 0.885,
+   "soft_must": 0,
+   "splits": 2,
+   "merges": 3,
+   "cut_calls": 0,
+   "failed": 0,
+   "latency_s_mean": 22.5
+  },
+  "djinni": {
+   "offers": 2,
+   "gold_sentences": 13,
+   "found": 13,
+   "extra": 3,
+   "missed": 0,
+   "precision": 0.812,
+   "recall": 1.0,
+   "f1": 0.897,
+   "kind_accuracy": 1.0,
+   "skills_f1": 0.955,
+   "strict_f1": 0.565,
+   "invented_dropped": 0,
+   "verbatim_rate": 0.938,
+   "soft_must": 0,
+   "splits": 0,
+   "merges": 0,
+   "cut_calls": 0,
+   "failed": 0,
+   "latency_s_mean": 11.1
+  },
+  "per_job": {
+   "usajobs-883827900": {
+    "tp": 2,
+    "fp": 4,
+    "fn": 1,
+    "soft_must": [],
+    "splits": [
+     "you must have one full year of specialized experience at or equivalent to the GS-05 level."
+    ],
+    "merges": [],
+    "latency_s": 25.5
+   },
+   "usajobs-884301900": {
+    "tp": 5,
+    "fp": 0,
+    "fn": 5,
+    "soft_must": [],
+    "splits": [],
+    "merges": [
+     "You must demonstrate in your resume at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, to include: (1) Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere.;",
+     "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies."
+    ],
+    "latency_s": 15.1
+   },
+   "usajobs-884783000": {
+    "tp": 6,
+    "fp": 1,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [],
+    "merges": [],
+    "latency_s": 14.0
+   },
+   "usajobs-885947600": {
+    "tp": 7,
+    "fp": 2,
+    "fn": 5,
+    "soft_must": [],
+    "splits": [
+     "analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements"
+    ],
+    "merges": [
+     "IT related experience demonstrated by paid or unpaid experience obtained in either the private or public sector, and/or completion of specific, intensive training that demonstrates all of the following four competencies: 1. Attention to Detail - is thorough when performing work and conscientious about attending to detail; and 2."
+    ],
+    "latency_s": 25.0
+   },
+   "usajobs-886071700": {
+    "tp": 2,
+    "fp": 9,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [],
+    "merges": [],
+    "latency_s": 32.7
+   },
+   "J3": {
+    "tp": 8,
+    "fp": 1,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [],
+    "merges": [],
+    "latency_s": 13.2
+   },
+   "J4": {
+    "tp": 5,
+    "fp": 2,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [],
+    "merges": [],
+    "latency_s": 9.1
+   }
+  }
+ },
+ "job-v2": {
+  "all": {
+   "offers": 7,
+   "gold_sentences": 46,
+   "found": 37,
+   "extra": 21,
+   "missed": 9,
+   "precision": 0.638,
+   "recall": 0.804,
+   "f1": 0.712,
+   "kind_accuracy": 0.865,
+   "skills_f1": 0.8,
+   "strict_f1": 0.578,
+   "invented_dropped": 0,
+   "verbatim_rate": 0.966,
+   "soft_must": 0,
+   "splits": 2,
+   "merges": 1,
+   "cut_calls": 0,
+   "failed": 0,
+   "latency_s_mean": 17.2
+  },
+  "usajobs": {
+   "offers": 5,
+   "gold_sentences": 33,
+   "found": 24,
+   "extra": 12,
+   "missed": 9,
+   "precision": 0.667,
+   "recall": 0.727,
+   "f1": 0.696,
+   "kind_accuracy": 0.792,
+   "skills_f1": 0.675,
+   "strict_f1": 0.649,
+   "invented_dropped": 0,
+   "verbatim_rate": 0.973,
+   "soft_must": 0,
+   "splits": 2,
+   "merges": 1,
+   "cut_calls": 0,
+   "failed": 0,
+   "latency_s_mean": 17.7
+  },
+  "djinni": {
+   "offers": 2,
+   "gold_sentences": 13,
+   "found": 13,
+   "extra": 9,
+   "missed": 0,
+   "precision": 0.591,
+   "recall": 1.0,
+   "f1": 0.743,
+   "kind_accuracy": 1.0,
+   "skills_f1": 0.941,
+   "strict_f1": 0.481,
+   "invented_dropped": 0,
+   "verbatim_rate": 0.955,
+   "soft_must": 0,
+   "splits": 0,
+   "merges": 0,
+   "cut_calls": 0,
+   "failed": 0,
+   "latency_s_mean": 15.8
+  },
+  "per_job": {
+   "usajobs-883827900": {
+    "tp": 3,
+    "fp": 2,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [
+     "you must have one full year of specialized experience at or equivalent to the GS-05 level."
+    ],
+    "merges": [],
+    "latency_s": 13.2
+   },
+   "usajobs-884301900": {
+    "tp": 8,
+    "fp": 0,
+    "fn": 2,
+    "soft_must": [],
+    "splits": [],
+    "merges": [
+     "You must demonstrate in your resume at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, to include: (1) Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere."
+    ],
+    "latency_s": 18.6
+   },
+   "usajobs-884783000": {
+    "tp": 6,
+    "fp": 2,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [],
+    "merges": [],
+    "latency_s": 14.6
+   },
+   "usajobs-885947600": {
+    "tp": 5,
+    "fp": 3,
+    "fn": 7,
+    "soft_must": [],
+    "splits": [
+     "analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements"
+    ],
+    "merges": [],
+    "latency_s": 21.2
+   },
+   "usajobs-886071700": {
+    "tp": 2,
+    "fp": 5,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [],
+    "merges": [],
+    "latency_s": 21.1
+   },
+   "J3": {
+    "tp": 8,
+    "fp": 7,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [],
+    "merges": [],
+    "latency_s": 21.8
+   },
+   "J4": {
+    "tp": 5,
+    "fp": 2,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [],
+    "merges": [],
+    "latency_s": 9.7
+   }
+  }
+ },
+ "label": "real-GPU, plain Qwen3-4B (llama-server)",
+ "max_tokens": 768,
+ "split_jobs": [
+  "usajobs-883827900",
+  "usajobs-884301900",
+  "usajobs-884783000",
+  "usajobs-885947600",
+  "usajobs-886071700",
+  "J3",
+  "J4"
+ ]
+}

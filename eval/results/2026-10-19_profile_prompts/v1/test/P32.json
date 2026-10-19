@@ -1,0 +1,42 @@
+{
+ "row": {
+  "id": "P32",
+  "set": "gold",
+  "calls": 4,
+  "json_valid": 0,
+  "cut_calls": 4,
+  "partial": true,
+  "raw_skills": 0,
+  "raw_skills_in_cv": 0,
+  "skills_kept": 0,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 0,
+  "terms_missed": [
+   "Python",
+   "AWS",
+   "Docker"
+  ],
+  "latency_s": 52.8,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "part 1/2: answer cut off at the token limit",
+   "part 1/2: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 1/2: answer cut off at the token limit",
+   "part 1/2: attempt 2: unreadable answer (no JSON object in the model answer)",
+   "part 2/2: answer cut off at the token limit",
+   "part 2/2: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 2/2: answer cut off at the token limit",
+   "part 2/2: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

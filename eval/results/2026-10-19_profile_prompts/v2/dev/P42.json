@@ -1,0 +1,157 @@
+{
+ "row": {
+  "id": "P42",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 31,
+  "raw_skills_in_cv": 30,
+  "skills_kept": 10,
+  "experience": 2,
+  "education": 3,
+  "terms_present": 4,
+  "terms_found": 1,
+  "terms_missed": [
+   "probability theory",
+   "statistics",
+   "SQL"
+  ],
+  "latency_s": 11.7,
+  "max_completion_tokens": 290
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Collaborative filtering",
+    "evidence": "- Building a recommendation system\n(Collaborative filtering, LSTM)"
+   },
+   {
+    "name": "LSTM",
+    "evidence": "- Building a recommendation system\n(Collaborative filtering, LSTM)"
+   },
+   {
+    "name": "Databricks",
+    "evidence": "- Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)"
+   },
+   {
+    "name": "PySpark",
+    "evidence": "- Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)"
+   },
+   {
+    "name": "unittest",
+    "evidence": "- Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)"
+   },
+   {
+    "name": "pyodbc",
+    "evidence": "- Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)"
+   },
+   {
+    "name": "Binary imbalanced classification",
+    "evidence": "- Binary imbalanced classification, anomaly detection based on complex business logic in financial market. AWS Sagemaker, sklearn processing jobs. Leading Junior Data Scientist."
+   },
+   {
+    "name": "anomaly detection",
+    "evidence": "- Binary imbalanced classification, anomaly detection based on complex business logic in financial market. AWS Sagemaker, sklearn processing jobs. Leading Junior Data Scientist."
+   },
+   {
+    "name": "AWS Sagemaker",
+    "evidence": "- Binary imbalanced classification, anomaly detection based on complex business logic in financial market. AWS Sagemaker, sklearn processing jobs. Leading Junior Data Scientist."
+   },
+   {
+    "name": "sklearn",
+    "evidence": "- Binary imbalanced classification, anomaly detection based on complex business logic in financial market. AWS Sagemaker, sklearn processing jobs. Leading Junior Data Scientist."
+   }
+  ],
+  "education": [
+   {
+    "degree": "BA",
+    "field": "Mathematics",
+    "institution": null,
+    "end": null,
+    "evidence": "BA in Mathematics"
+   },
+   {
+    "degree": "Master",
+    "field": "Mathematics",
+    "institution": null,
+    "end": null,
+    "evidence": "Master degree in Mathematics\n(Stochastic differential equations area)"
+   },
+   {
+    "degree": "PhD",
+    "field": "Mathematics",
+    "institution": null,
+    "end": null,
+    "evidence": "PhD in Mathematics (currently) (Stochastic differential equations area)"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Data Scientist",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Data scientist:\n- Building a recommendation system\n(Collaborative filtering, LSTM)\n- Making research on behavioral biases' impact on traders' performance\n- Doing analytics with parsed data from Facebook"
+   },
+   {
+    "title": "College lecturer",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "College lecturer (1 term): Probability theory and statistics"
+   }
+  ],
+  "uncertain": [
+   "skill 'Stochastic differential equations': name 'Stochastic differential equations' is not written in its evidence, removed",
+   "skill 'Behavioral biases': name 'Behavioral biases' is not written in its evidence, removed",
+   "skill 'Facebook analytics': name 'Facebook analytics' is not written in its evidence, removed",
+   "education 'BA': institution 'null' is not written in its evidence, removed",
+   "education 'BA': end 'null' not found in its evidence, removed",
+   "education 'Master': institution 'null' is not written in its evidence, removed",
+   "education 'Master': end 'null' not found in its evidence, removed",
+   "education 'Master': institution 'null' is not written in its evidence, removed",
+   "education 'Master': end 'null' not found in its evidence, removed",
+   "education 'PhD': institution 'null' is not written in its evidence, removed",
+   "education 'PhD': end 'currently' not found in its evidence, removed",
+   "experience 'Data Scientist': company 'null' is not written in its evidence, removed",
+   "experience 'Data Scientist': start 'null' not found in its evidence, removed",
+   "experience 'Data Scientist': end 'null' not found in its evidence, removed",
+   "skill 'ARIMA': name 'ARIMA' is not written in its evidence, removed",
+   "skill 'Wavelet': name 'Wavelet' is not written in its evidence, removed",
+   "skill 'Fourier': name 'Fourier' is not written in its evidence, removed",
+   "skill 'Cluster analysis': name 'Cluster analysis' is not written in its evidence, removed",
+   "skill 'PCA': name 'PCA' is not written in its evidence, removed",
+   "skill 'Autoencoder': name 'Autoencoder' is not written in its evidence, removed",
+   "skill 't-SNE': name 't-SNE' is not written in its evidence, removed",
+   "skill 'Facebook Prophet': name 'Facebook Prophet' is not written in its evidence, removed",
+   "skill 'Diophantine inequality': name 'Diophantine inequality' is not written in its evidence, removed",
+   "skill 'Monte Carlo': name 'Monte Carlo' is not written in its evidence, removed",
+   "experience 'Data Analyst / Engineer': title 'Data Analyst / Engineer' is not written in its evidence, removed",
+   "experience 'Data Analyst / Engineer': company 'null' is not written in its evidence, removed",
+   "experience 'Data Analyst / Engineer': start 'null' not found in its evidence, removed",
+   "experience 'Data Analyst / Engineer': end 'null' not found in its evidence, removed",
+   "experience 'Data Analyst / Engineer': neither title nor company, dropped",
+   "experience 'Machine Learning Engineer / Data Scientist': title 'Machine Learning Engineer / Data Scientist' is not written in its evidence, removed",
+   "experience 'Machine Learning Engineer / Data Scientist': company 'null' is not written in its evidence, removed",
+   "experience 'Machine Learning Engineer / Data Scientist': start 'null' not found in its evidence, removed",
+   "experience 'Machine Learning Engineer / Data Scientist': end 'null' not found in its evidence, removed",
+   "experience 'Machine Learning Engineer / Data Scientist': neither title nor company, dropped",
+   "skill 'Data Science': name 'Data Science' is not written in its evidence, removed",
+   "skill 'Predictive analytics': name 'Predictive analytics' is not written in its evidence, removed",
+   "skill 'Quantitative Finance': name 'Quantitative Finance' is not written in its evidence, removed",
+   "skill 'Time Series Forecasting': name 'Time Series Forecasting' is not written in its evidence, removed",
+   "skill 'Signal Processing': name 'Signal Processing' is not written in its evidence, removed",
+   "skill 'Mathematical modeling': name 'Mathematical modeling' is not written in its evidence, removed",
+   "skill 'Gambling': name 'Gambling' is not written in its evidence, removed",
+   "skill 'Portfolio optimization': name 'Portfolio optimization' is not written in its evidence, removed",
+   "experience 'College lecturer': company 'Unknown' is not written in its evidence, removed",
+   "experience 'College lecturer': start '1 term' not found in its evidence, removed",
+   "experience 'College lecturer': end '1 term' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

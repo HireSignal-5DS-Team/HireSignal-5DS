@@ -1,0 +1,129 @@
+{
+ "row": {
+  "id": "P48",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 26,
+  "raw_skills_in_cv": 24,
+  "skills_kept": 22,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 7,
+  "terms_found": 4,
+  "terms_missed": [
+   "ML",
+   "deployment",
+   "time series"
+  ],
+  "latency_s": 6.0,
+  "max_completion_tokens": 126
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "python",
+    "evidence": "- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+   },
+   {
+    "name": "matplotlib",
+    "evidence": "- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+   },
+   {
+    "name": "seaborn",
+    "evidence": "- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+   },
+   {
+    "name": "bokeh",
+    "evidence": "- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+   },
+   {
+    "name": "pandas",
+    "evidence": "- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+   },
+   {
+    "name": "numpy",
+    "evidence": "- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+   },
+   {
+    "name": "Docker",
+    "evidence": "- As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "name": "Kubernetes",
+    "evidence": "- As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "name": "BeautifulSoup",
+    "evidence": "- As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "name": "Selenium",
+    "evidence": "- As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "name": "Scala",
+    "evidence": "- As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "name": "Apache Spark",
+    "evidence": "- As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "name": "pytest",
+    "evidence": "- As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet"
+   },
+   {
+    "name": "LightGBM",
+    "evidence": "- As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet"
+   },
+   {
+    "name": "FB Prophet",
+    "evidence": "- As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet"
+   },
+   {
+    "name": "text classification",
+    "evidence": "ML competencies:\n- text classification\n- time-series forecasting\n- data preparation\n- feature engineering\n- model evaluation\n\nI'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+   },
+   {
+    "name": "time-series forecasting",
+    "evidence": "ML competencies:\n- text classification\n- time-series forecasting\n- data preparation\n- feature engineering\n- model evaluation\n\nI'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+   },
+   {
+    "name": "data preparation",
+    "evidence": "ML competencies:\n- text classification\n- time-series forecasting\n- data preparation\n- feature engineering\n- model evaluation\n\nI'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+   },
+   {
+    "name": "feature engineering",
+    "evidence": "ML competencies:\n- text classification\n- time-series forecasting\n- data preparation\n- feature engineering\n- model evaluation\n\nI'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+   },
+   {
+    "name": "model evaluation",
+    "evidence": "ML competencies:\n- text classification\n- time-series forecasting\n- data preparation\n- feature engineering\n- model evaluation\n\nI'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+   },
+   {
+    "name": "deep learning",
+    "evidence": "ML competencies:\n- text classification\n- time-series forecasting\n- data preparation\n- feature engineering\n- model evaluation\n\nI'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+   },
+   {
+    "name": "NLP",
+    "evidence": "ML competencies:\n- text classification\n- time-series forecasting\n- data preparation\n- feature engineering\n- model evaluation\n\nI'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'pytest': evidence re-anchored to the CV line that names it",
+   "skill 'pandas': evidence re-anchored to the CV line that names it",
+   "skill 'LightGBM': evidence re-anchored to the CV line that names it",
+   "skill 'FB Prophet': evidence re-anchored to the CV line that names it",
+   "skill 'computer vision': name 'computer vision' is not written in its evidence, removed",
+   "skill 'model serving': name 'model serving' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

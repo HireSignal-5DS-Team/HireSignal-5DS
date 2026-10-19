@@ -1,0 +1,305 @@
+{
+ "row": {
+  "id": "P49",
+  "set": "gold",
+  "calls": 5,
+  "json_valid": 5,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 74,
+  "raw_skills_in_cv": 69,
+  "skills_kept": 61,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 11,
+  "terms_found": 10,
+  "terms_missed": [
+   "training"
+  ],
+  "latency_s": 14.4,
+  "max_completion_tokens": 289
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Machine Learning",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "Real-time",
+    "evidence": "- Developed and deployed a driver behavior estimation model that can accurately estimate user driving and identify potentially dangerous events in real-time."
+   },
+   {
+    "name": "GPS",
+    "evidence": "- Built a GPS filtering model that effectively removes noise from GPS data in real-time."
+   },
+   {
+    "name": "Fuel consumption",
+    "evidence": "- Built an ML model that proposes the optimal path for a driver, taking into account fuel consumption to help users save on gas."
+   },
+   {
+    "name": "Predictive maintenance",
+    "evidence": "- Designed, developed, and deployed a predictive maintenance model that provides crucial car maintenance recommendations based on detailed analysis of vehicle data."
+   },
+   {
+    "name": "Driver behavior",
+    "evidence": "- Developed and deployed a driver behavior estimation model that can accurately estimate user driving and identify potentially dangerous events in real-time."
+   },
+   {
+    "name": "Bumping detection",
+    "evidence": "- Created a proof of concept for a car bumping detection model that can detect and alert users of potential collisions."
+   },
+   {
+    "name": "Model deployment",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "Proof of concept",
+    "evidence": "- Created a proof of concept for a car bumping detection model that can detect and alert users of potential collisions."
+   },
+   {
+    "name": "GPS filtering",
+    "evidence": "- Built a GPS filtering model that effectively removes noise from GPS data in real-time."
+   },
+   {
+    "name": "user verification model",
+    "evidence": "- Co-designed and developed a user verification model based on pictures, ensuring reliable user authentication."
+   },
+   {
+    "name": "churn prediction model",
+    "evidence": "- Built a churn prediction model for banking data, helping the company retain customers."
+   },
+   {
+    "name": "backend developer",
+    "evidence": "- Served as a part-time backend developer for a startup platform, contributing to the development of their platform."
+   },
+   {
+    "name": "research",
+    "evidence": "- Conducted extensive research, reviewing papers and creating proof of concept models for possible automotive, locating, dentistry, and interior design projects."
+   },
+   {
+    "name": "proof of concept models",
+    "evidence": "- Conducted extensive research, reviewing papers and creating proof of concept models for possible automotive, locating, dentistry, and interior design projects."
+   },
+   {
+    "name": "Kaggle",
+    "evidence": "- Kaggle Notebooks Master"
+   },
+   {
+    "name": "Google QUEST Q&A Labeling Competition",
+    "evidence": "- Bronze medal for Google QUEST Q&A Labeling Competition (Kaggle)"
+   },
+   {
+    "name": "exploratory data analysis",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "paper analysis",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "data cleaning",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "data preprocessing",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "deep learning",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "error analysis",
+    "evidence": "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+   },
+   {
+    "name": "linear models",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "SVM",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "Decision Trees",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "Random Forest",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "Gradient Boosting",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "k-nearest neighbours",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "PCA",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "MLP",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "CNN",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "RNN",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "LSTM",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "GRU",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "GAN",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "Transformers",
+    "evidence": "Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers"
+   },
+   {
+    "name": "image classification",
+    "evidence": "Tasks: image classification, image generation, time series forecasting/classification, clustering, sentence classification"
+   },
+   {
+    "name": "image generation",
+    "evidence": "Tasks: image classification, image generation, time series forecasting/classification, clustering, sentence classification"
+   },
+   {
+    "name": "time series forecasting/classification",
+    "evidence": "Tasks: image classification, image generation, time series forecasting/classification, clustering, sentence classification"
+   },
+   {
+    "name": "clustering",
+    "evidence": "Tasks: image classification, image generation, time series forecasting/classification, clustering, sentence classification"
+   },
+   {
+    "name": "sentence classification",
+    "evidence": "Tasks: image classification, image generation, time series forecasting/classification, clustering, sentence classification"
+   },
+   {
+    "name": "python",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "pandas",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "numpy",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "pytorch",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "tensorflow/keras",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "scikit-learn",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "xgboost",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "lightgbm",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "plotly",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "matplotlib",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "seaborn",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "streamlit",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "FastAPI",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "Django REST framework",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "Docker",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "Docker-compose",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "Gitlab CI/CD",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   },
+   {
+    "name": "AWS",
+    "evidence": "Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Data Scientist",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Position: Data Scientist\nExperience years: 4\nEnglish level: upper"
+   }
+  ],
+  "uncertain": [
+   "skill 'Data Science': name 'Data Science' is not written in its evidence, removed",
+   "skill 'Machine Learning': evidence re-anchored to the CV line that names it",
+   "skill 'GPS': evidence re-anchored to the CV line that names it",
+   "skill 'Fuel consumption': evidence re-anchored to the CV line that names it",
+   "skill 'Predictive maintenance': evidence re-anchored to the CV line that names it",
+   "skill 'Bumping detection': evidence re-anchored to the CV line that names it",
+   "skill 'Model deployment': evidence re-anchored to the CV line that names it",
+   "skill 'Vehicle data analysis': name 'Vehicle data analysis' is not written in its evidence, removed",
+   "skill 'Collision detection': name 'Collision detection' is not written in its evidence, removed",
+   "skill 'Noise removal': name 'Noise removal' is not written in its evidence, removed",
+   "skill 'Path optimization': name 'Path optimization' is not written in its evidence, removed",
+   "experience 'Data Scientist': company 'null' is not written in its evidence, removed",
+   "experience 'Data Scientist': start 'null' not found in its evidence, removed",
+   "experience 'Data Scientist': end 'null' not found in its evidence, removed",
+   "skill 'churn prediction model': evidence re-anchored to the CV line that names it",
+   "skill 'backend developer': evidence re-anchored to the CV line that names it",
+   "skill 'research': evidence re-anchored to the CV line that names it",
+   "skill 'proof of concept models': evidence re-anchored to the CV line that names it",
+   "skill 'Kaggle': evidence re-anchored to the CV line that names it",
+   "skill 'Google QUEST Q&A Labeling Competition': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

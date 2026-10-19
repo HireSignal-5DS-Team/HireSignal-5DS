@@ -1,0 +1,69 @@
+{
+ "row": {
+  "id": "p05_en_name_in_footer",
+  "set": "synth",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 5,
+  "raw_skills_in_cv": 5,
+  "skills_kept": 5,
+  "experience": 1,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 4.0,
+  "max_completion_tokens": 233,
+  "synth_tp": 5,
+  "synth_fp": 0,
+  "synth_fn": 0
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "React",
+    "evidence": "React, TypeScript, CSS, Jest, Figma"
+   },
+   {
+    "name": "TypeScript",
+    "evidence": "React, TypeScript, CSS, Jest, Figma"
+   },
+   {
+    "name": "CSS",
+    "evidence": "React, TypeScript, CSS, Jest, Figma"
+   },
+   {
+    "name": "Jest",
+    "evidence": "React, TypeScript, CSS, Jest, Figma"
+   },
+   {
+    "name": "Figma",
+    "evidence": "React, TypeScript, CSS, Jest, Figma"
+   }
+  ],
+  "education": [
+   {
+    "degree": "BSc",
+    "field": "Computer Science",
+    "institution": "University of Toronto",
+    "end": "2019",
+    "evidence": "BSc Computer Science, University of Toronto, 2019"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Front-end Developer",
+    "company": "Shopify",
+    "start": "2019",
+    "end": "2024",
+    "evidence": "Front-end Developer, Shopify, 2019 - 2024"
+   }
+  ],
+  "uncertain": [],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "cv": "p10_fr_header_and_refs",
+ "skills": [
+  [
+   "Cisco"
+  ],
+  [
+   "Fortinet"
+  ],
+  [
+   "Ansible"
+  ],
+  [
+   "Python"
+  ],
+  [
+   "CCNA"
+  ],
+  [
+   "CCNP Enterprise",
+   "CCNP"
+  ]
+ ],
+ "skills_optional": [
+  "cloud networking",
+  "Automatisation",
+  "Administration Cisco"
+ ],
+ "education": [
+  {
+   "degree": "Ingénieur",
+   "field": "Réseaux et Télécommunications",
+   "institution": "ENIT",
+   "end": "2018"
+  }
+ ],
+ "experience": [
+  {
+   "title": "Ingénieur Réseaux",
+   "company": "Ooredoo Tunisie",
+   "start": "2018",
+   "end": "2024"
+  }
+ ]
+}

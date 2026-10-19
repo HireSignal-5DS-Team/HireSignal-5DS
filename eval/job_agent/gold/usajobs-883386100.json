@@ -1,0 +1,77 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883386100",
+  "title": "Data Scientist (Direct Hire)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "One year of directly related specialized experience equivalent to the GS-11 level",
+      "evidence": "One year of directly related specialized experience equivalent to the GS-11 level",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects",
+      "evidence": "Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Assisting in building and maintaining data pipelines by recording results and identifying issues",
+      "evidence": "Assisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "data pipelines"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Assisting in building and maintaining model testing by recording results and identifying issues",
+      "evidence": "Assisting in building and maintaining data pipelines and supporting model testing by recording results and identifying issues.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [
+        "model testing"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Writing, testing, and documenting code for data analysis or modeling and producing basic visualizations",
+      "evidence": "Writing, testing, and documenting code for data analysis or modeling and producing basic visualizations.",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position",
+      "evidence": "You must have successfully completed a full 4-year course of study in an accredited college or university leading to a bachelor's or higher degree with a major in mathematics, statistics, computer science, data science or field directly related to the position.",
+      "kind": "must",
+      "category": "education",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [
+    "Entry level GS-12 annotated; GS-13 and the Ph.D. alternative path are not counted."
+  ],
+  "needs_human_review": false,
+  "warnings": []
+}

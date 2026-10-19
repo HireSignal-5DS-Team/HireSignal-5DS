@@ -1,0 +1,147 @@
+{
+ "row": {
+  "id": "P17",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 20,
+  "raw_skills_in_cv": 20,
+  "skills_kept": 13,
+  "experience": 7,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 0,
+  "terms_missed": [
+   "English"
+  ],
+  "latency_s": 13.6,
+  "max_completion_tokens": 464
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Machine Learning",
+    "evidence": "Freelance | .Net / Machine Learning Engineer"
+   },
+   {
+    "name": "Net",
+    "evidence": "Freelance | .Net / Machine Learning Engineer"
+   },
+   {
+    "name": "neural network",
+    "evidence": "A neural network based on the yolov4 architecture for video object"
+   },
+   {
+    "name": "yolov4",
+    "evidence": "A neural network based on the yolov4 architecture for video object"
+   },
+   {
+    "name": "video object recognition",
+    "evidence": "Video Object Recognition | Machine Learning Engineer"
+   },
+   {
+    "name": "scientific articles",
+    "evidence": "A neural network for generating scientific articles in the field of crypto\u0002trading."
+   },
+   {
+    "name": "image classification",
+    "evidence": "A neural network for image classification using AlexNet."
+   },
+   {
+    "name": "AlexNet",
+    "evidence": "A neural network for image classification using AlexNet."
+   },
+   {
+    "name": "Self-Attention",
+    "evidence": "A chat bot using Self-Attention architecture to conduct specific dialog"
+   },
+   {
+    "name": "Siamese architecture",
+    "evidence": "A neural network using a Siamese architecture to identify similar"
+   },
+   {
+    "name": "K-Means",
+    "evidence": "Used K-Means and Affinity Propagation to cluster products by name and"
+   },
+   {
+    "name": "Affinity Propagation",
+    "evidence": "Used K-Means and Affinity Propagation to cluster products by name and"
+   },
+   {
+    "name": "chat bot",
+    "evidence": "A chat bot using Self-Attention architecture to conduct specific dialog"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Machine Learning Engineer",
+    "company": "Freelance",
+    "start": "2019-06",
+    "end": "present",
+    "evidence": "Freelance | .Net / Machine Learning Engineer\n06/2019 - present\nOne of the managers of the shared account. I also take the role of Team\nLead on projects related to my technology stack. (team of up to 5 people)"
+   },
+   {
+    "title": "Machine Learning Engineer",
+    "company": "Video Object Recognition",
+    "start": "2022-03",
+    "end": "2022-06",
+    "evidence": "Video Object Recognition | Machine Learning Engineer\n03/2022 - 06/2022\nA neural network based on the yolov4 architecture for video object\nrecognition."
+   },
+   {
+    "title": "Machine Learning Engineer",
+    "company": "Article Generator",
+    "start": null,
+    "end": null,
+    "evidence": "Article Generator | Machine Learning Engineer"
+   },
+   {
+    "title": "Machine Learning Engineer",
+    "company": "Chat Bot",
+    "start": "2021-01",
+    "end": "2021-03",
+    "evidence": "Chat Bot | Machine Learning Engineer\n01/2021 - 03/2021"
+   },
+   {
+    "title": "Machine Learning Engineer",
+    "company": "Duplicate Searcher",
+    "start": "2020-09",
+    "end": "2020-12",
+    "evidence": "Duplicate Searcher | Machine Learning Engineer\n09/2020 - 12/2020"
+   },
+   {
+    "title": "Machine Learning Engineer",
+    "company": "Product Cluster",
+    "start": "2020-05",
+    "end": "2020-08",
+    "evidence": "Product Cluster | Machine Learning Engineer\n05/2020 - 08/2020"
+   },
+   {
+    "title": ".Net Fullstack Developer",
+    "company": null,
+    "start": "2020-01",
+    "end": "2022-05",
+    "evidence": ".Net Fullstack Developer\n01/2020 - 05/2022"
+   }
+  ],
+  "uncertain": [
+   "skill 'neural network': evidence re-anchored to the CV line that names it",
+   "skill 'yolov4': evidence re-anchored to the CV line that names it",
+   "skill 'video object recognition': evidence re-anchored to the CV line that names it",
+   "skill 'scientific articles': evidence re-anchored to the CV line that names it",
+   "skill 'image classification': evidence re-anchored to the CV line that names it",
+   "experience 'Machine Learning Engineer': start '10/2021' not found in its evidence, removed",
+   "experience 'Machine Learning Engineer': end '02/2022' not found in its evidence, removed",
+   "skill 'Self-Attention': evidence re-anchored to the CV line that names it",
+   "skill 'Siamese architecture': evidence re-anchored to the CV line that names it",
+   "skill 'K-Means': evidence re-anchored to the CV line that names it",
+   "skill 'Affinity Propagation': evidence re-anchored to the CV line that names it",
+   "experience '.Net Fullstack Developer': company 'Various companies' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "row": {
+  "id": "P13",
+  "set": "gold",
+  "calls": 4,
+  "json_valid": 2,
+  "cut_calls": 2,
+  "partial": true,
+  "raw_skills": 13,
+  "raw_skills_in_cv": 13,
+  "skills_kept": 13,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 3,
+  "terms_missed": [],
+  "latency_s": 38.1,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Azure",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+   },
+   {
+    "name": "ADLS",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+   },
+   {
+    "name": "SFTP",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+   },
+   {
+    "name": "CosmosDB",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+   },
+   {
+    "name": "Azure SQL",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+   },
+   {
+    "name": "GCP",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+   },
+   {
+    "name": "Oracle",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+   },
+   {
+    "name": "Postgres",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+   },
+   {
+    "name": "Azure DevOps",
+    "evidence": "Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "CI/CD",
+    "evidence": "Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "ADF",
+    "evidence": "Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "Snowflake",
+    "evidence": "Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "English",
+    "evidence": "English level: fluent"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "part 2/3: answer cut off at the token limit",
+   "part 2/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 2/3: answer cut off at the token limit",
+   "part 2/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

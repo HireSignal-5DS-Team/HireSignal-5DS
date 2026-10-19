@@ -1,0 +1,116 @@
+{
+ "row": {
+  "id": "P50",
+  "set": "gold",
+  "calls": 4,
+  "json_valid": 2,
+  "cut_calls": 2,
+  "partial": true,
+  "raw_skills": 22,
+  "raw_skills_in_cv": 22,
+  "skills_kept": 19,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 5,
+  "terms_found": 2,
+  "terms_missed": [
+   "AWS",
+   "Docker",
+   "Machine Learning"
+  ],
+  "latency_s": 36.7,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Position: Lead Backend Developer (Python, Golang)"
+   },
+   {
+    "name": "Golang",
+    "evidence": "Position: Lead Backend Developer (Python, Golang)"
+   },
+   {
+    "name": "API",
+    "evidence": "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)"
+   },
+   {
+    "name": "Microservices",
+    "evidence": "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)"
+   },
+   {
+    "name": "Asterisk",
+    "evidence": "- Implemented CallCenter system based on Asterisk which processes 200+ calls at one moment."
+   },
+   {
+    "name": "LocationBased Social Network",
+    "evidence": "- Implemented LocationBased Social Network architecture, API and microservices."
+   },
+   {
+    "name": "Social media reputation",
+    "evidence": "- Developing platform for manage social media reputation (working with instagram, Facebook and other social networks API)."
+   },
+   {
+    "name": "Instagram",
+    "evidence": "- Developing platform for manage social media reputation (working with instagram, Facebook and other social networks API)."
+   },
+   {
+    "name": "Facebook",
+    "evidence": "- Developing platform for manage social media reputation (working with instagram, Facebook and other social networks API)."
+   },
+   {
+    "name": "IoT",
+    "evidence": "- Implemented service for motion detection for IoT and other IoT things."
+   },
+   {
+    "name": "Traffic monitoring",
+    "evidence": "- Implemented service for traffic monitoring and billing for ISP."
+   },
+   {
+    "name": "Billing",
+    "evidence": "- Implemented service for traffic monitoring and billing for ISP."
+   },
+   {
+    "name": "VOIP",
+    "evidence": "- VOIP (asterisk, asterisk AGI scripts)"
+   },
+   {
+    "name": "asterisk AGI scripts",
+    "evidence": "- VOIP (asterisk, asterisk AGI scripts)"
+   },
+   {
+    "name": "Blockchain development",
+    "evidence": "- Blockchain development (Basic Knowledges)"
+   },
+   {
+    "name": "Basic Knowledges",
+    "evidence": "- Blockchain development (Basic Knowledges)"
+   },
+   {
+    "name": "Linux",
+    "evidence": "- Linux/MacOS Expert :)"
+   },
+   {
+    "name": "MacOS",
+    "evidence": "- Linux/MacOS Expert :)"
+   },
+   {
+    "name": "Highload",
+    "evidence": "prefer Highload or IoT projects"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Food delivery': evidence not in the CV (not found (closest 0.81)), dropped",
+   "part 2/3: answer cut off at the token limit",
+   "part 2/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 2/3: answer cut off at the token limit",
+   "part 2/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

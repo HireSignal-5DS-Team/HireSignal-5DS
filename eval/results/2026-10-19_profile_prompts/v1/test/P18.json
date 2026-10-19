@@ -1,0 +1,80 @@
+{
+ "row": {
+  "id": "P18",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 17,
+  "raw_skills_in_cv": 12,
+  "skills_kept": 8,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 2,
+  "terms_missed": [
+   "English"
+  ],
+  "latency_s": 15.2,
+  "max_completion_tokens": 537
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "SQL",
+    "evidence": "leveraging my expertise in SQL, Python, and other relevant tools"
+   },
+   {
+    "name": "Python",
+    "evidence": "leveraging my expertise in SQL, Python, and other relevant tools"
+   },
+   {
+    "name": "ETL",
+    "evidence": "design, develop, and maintain robust data pipelines and ETL processes"
+   },
+   {
+    "name": "database performance",
+    "evidence": "I optimize data models and database performance to enhance the efficiency and scalability of data processing operations. By writing complex SQL queries, I ensure that data is readily accessible for analysis and reporting purposes."
+   },
+   {
+    "name": "data processing",
+    "evidence": "I optimize data models and database performance to enhance the efficiency and scalability of data processing operations. By writing complex SQL queries, I ensure that data is readily accessible for analysis and reporting purposes."
+   },
+   {
+    "name": "data validation",
+    "evidence": "I am committed to ensuring data quality and integrity throughout the data lifecycle. This involves implementing data validation, cleansing, and normalization techniques to maintain high standards and accuracy."
+   },
+   {
+    "name": "data quality",
+    "evidence": "I am committed to ensuring data quality and integrity throughout the data lifecycle. This involves implementing data validation, cleansing, and normalization techniques to maintain high standards and accuracy."
+   },
+   {
+    "name": "Data Engineering",
+    "evidence": "By leveraging my SQL, Python and Data Engineering skills, I contribute to the overall success of the organization by delivering accurate and actionable insights that drive strategic business decisions."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Data Engineer",
+    "company": "Space International",
+    "start": null,
+    "end": null,
+    "evidence": "As a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights."
+   }
+  ],
+  "uncertain": [
+   "experience 'Data Engineer': start '0.5' not found in its evidence, removed",
+   "skill 'data modeling': name 'data modeling' is not written in its evidence, removed",
+   "skill 'data analysis': name 'data analysis' is not written in its evidence, removed",
+   "skill 'data reporting': name 'data reporting' is not written in its evidence, removed",
+   "skill 'data cleansing': name 'data cleansing' is not written in its evidence, removed",
+   "skill 'data normalization': name 'data normalization' is not written in its evidence, removed",
+   "skill 'data integrity': name 'data integrity' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

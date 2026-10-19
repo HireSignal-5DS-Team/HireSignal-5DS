@@ -1,0 +1,71 @@
+{
+ "row": {
+  "id": "P05",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 11,
+  "raw_skills_in_cv": 7,
+  "skills_kept": 6,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 5.7,
+  "max_completion_tokens": 302
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "statistical hypotheses",
+    "evidence": "Formulation and testing of statistical hypotheses"
+   },
+   {
+    "name": "mathematical models",
+    "evidence": "Improvement of ready-made mathematical models"
+   },
+   {
+    "name": "probability theory",
+    "evidence": "Knowledge of probability theory and higher mathematics"
+   },
+   {
+    "name": "higher mathematics",
+    "evidence": "Knowledge of probability theory and higher mathematics"
+   },
+   {
+    "name": "analytical skills",
+    "evidence": "strong analytical skills"
+   },
+   {
+    "name": "English",
+    "evidence": "English level: pre"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": null,
+    "company": "product IT company",
+    "start": null,
+    "end": null,
+    "evidence": "I work as a data scientist for 3 years in product IT company."
+   }
+  ],
+  "uncertain": [
+   "skill 'data collection': name 'data collection' is not written in its evidence, removed",
+   "skill 'data processing': name 'data processing' is not written in its evidence, removed",
+   "skill 'data analysis': name 'data analysis' is not written in its evidence, removed",
+   "skill 'machine learning algorithms': name 'machine learning algorithms' is not written in its evidence, removed",
+   "skill 'model optimization': name 'model optimization' is not written in its evidence, removed",
+   "experience 'Senior Data Scientist': title 'Senior Data Scientist' is not written in its evidence, removed",
+   "experience 'Senior Data Scientist': start '2020' not found in its evidence, removed",
+   "experience 'Senior Data Scientist': end '2023' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

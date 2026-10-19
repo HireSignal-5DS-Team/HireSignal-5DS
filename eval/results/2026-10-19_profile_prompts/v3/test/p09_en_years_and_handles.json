@@ -1,0 +1,80 @@
+{
+ "row": {
+  "id": "p09_en_years_and_handles",
+  "set": "synth",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 6,
+  "raw_skills_in_cv": 6,
+  "skills_kept": 6,
+  "experience": 2,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 4.3,
+  "max_completion_tokens": 249,
+  "synth_tp": 6,
+  "synth_fp": 0,
+  "synth_fn": 3
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Splunk",
+    "evidence": "Splunk, QRadar, Burp Suite, Wireshark, Python, Linux"
+   },
+   {
+    "name": "QRadar",
+    "evidence": "Splunk, QRadar, Burp Suite, Wireshark, Python, Linux"
+   },
+   {
+    "name": "Burp Suite",
+    "evidence": "Splunk, QRadar, Burp Suite, Wireshark, Python, Linux"
+   },
+   {
+    "name": "Wireshark",
+    "evidence": "Splunk, QRadar, Burp Suite, Wireshark, Python, Linux"
+   },
+   {
+    "name": "Python",
+    "evidence": "Splunk, QRadar, Burp Suite, Wireshark, Python, Linux"
+   },
+   {
+    "name": "Linux",
+    "evidence": "Splunk, QRadar, Burp Suite, Wireshark, Python, Linux"
+   }
+  ],
+  "education": [
+   {
+    "degree": "National Engineering Diploma",
+    "field": "Telecommunications",
+    "institution": "SUP'COM",
+    "end": "2021",
+    "evidence": "National Engineering Diploma in Telecommunications, SUP'COM, 2021"
+   }
+  ],
+  "experience": [
+   {
+    "title": "SOC Analyst",
+    "company": "Orange Business",
+    "start": "2021",
+    "end": "2023",
+    "evidence": "SOC Analyst, Orange Business, 2021 2022 2023"
+   },
+   {
+    "title": "Pentester Intern",
+    "company": "Wevioo",
+    "start": "2020-06",
+    "end": "2020-09",
+    "evidence": "Pentester Intern, Wevioo, 06/2020 - 09/2020"
+   }
+  ],
+  "uncertain": [],
+  "prompt_version": "profile-v3"
+ }
+}

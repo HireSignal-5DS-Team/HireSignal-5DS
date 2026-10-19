@@ -1,0 +1,272 @@
+{
+ "card": {
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883511200",
+  "title": "ZP-III AI Technical Expert",
+  "language": "en",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "text": "Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science",
+    "evidence": "Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r2",
+    "text": "At least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus",
+    "evidence": "At least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [
+     "differential and integral calculus"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r3",
+    "text": "One year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST)",
+    "evidence": "In addition to the above basic requirements, applicants must have one year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST).",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": 1.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r4",
+    "text": "Experience with computer programming to solve key Artificial Intelligence (AI) measurement science challenges",
+    "evidence": "Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "computer programming"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r5",
+    "text": "Experience with tool development to solve key Artificial Intelligence (AI) measurement science challenges",
+    "evidence": "Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "tool development"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r6",
+    "text": "Experience with core AI technical skills such as machine learning and deep learning",
+    "evidence": "Experience with core AI technical skills such as machine learning and deep learning",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "machine learning",
+     "deep learning"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r7",
+    "text": "Experience with statistical data analysis and experimental design OR 3 years of progressively higher-level graduate education leading to a Ph.D. degree OR Ph.D. or equivalent doctoral degree OR A combination of education and experience",
+    "evidence": "Experience with statistical data analysis and experimental design OR 3 years of progressively higher-level graduate education leading to a Ph.D. degree OR Ph.D. or equivalent doctoral degree OR A combination of education and experience",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": 3.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r8",
+    "text": "Applicants must have one year (52 weeks) of specialized experience at the GS-14 level (ZP-IV at NIST)",
+    "evidence": "For ZP-IV: In addition to the above basic requirements, applicants must have one year (52 weeks) of specialized experience at the GS-14 level (ZP-IV at NIST).",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": 1.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r9",
+    "text": "Experience in leading computer programming efforts to solve key Artificial Intelligence (AI) measurement science challenges",
+    "evidence": "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "computer programming"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r10",
+    "text": "Experience in leading tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges",
+    "evidence": "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "tool development"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r11",
+    "text": "Experience in providing technical leadership for AI experts in areas involving core AI technical skills such as machine learning and deep learning",
+    "evidence": "Experience in providing technical leadership for AI experts in areas involving core AI technical skills such as machine learning and deep learning",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "machine learning",
+     "deep learning"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r12",
+    "text": "Experience in leading and implementing projects involving statistical data analysis",
+    "evidence": "Experience in leading and implementing projects involving statistical data analysis and experimental design",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "statistical data analysis"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r13",
+    "text": "Experience in leading and implementing projects involving experimental design",
+    "evidence": "Experience in leading and implementing projects involving statistical data analysis and experimental design",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "experimental design"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r14",
+    "text": "An official copy will be required before a final offer of employment",
+    "evidence": "However, an official copy will be required before a final offer of employment.",
+    "kind": "must",
+    "category": "other",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r15",
+    "text": "This position has an education requirement",
+    "evidence": "This position has an education requirement.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+   "'All academic degrees and coursework must be from a': not a requirement (application instructions), dropped",
+   "'Experience refers to paid and unpaid experience, i': not a requirement (definition), dropped",
+   "'Unofficial transcripts will be accepted in the app': not a requirement (application instructions), dropped",
+   "'A copy of the foreign education evaluation (contai': not a requirement (application instructions), dropped",
+   "'Transcripts must be submitted to validate that the': not a requirement (application instructions), dropped",
+   "'Unofficial transcripts will be accepted in the app': not a requirement (application instructions), dropped",
+   "'An official copy will be required before a final o': duplicate, dropped",
+   "'Use of foreign education for qualifications': not a requirement (application instructions), dropped",
+   "'An accredited organization must evaluate education': not a requirement (application instructions), dropped",
+   "'A copy of the foreign education evaluation (contai': not a requirement (application instructions), dropped"
+  ]
+ },
+ "score": {
+  "job": "usajobs-883511200",
+  "failed": 0,
+  "latency_s": 33.8,
+  "tp": 6,
+  "fp": 6,
+  "fn": 0,
+  "kind_ok": 6,
+  "terms_tp": 6,
+  "terms_fp": 1,
+  "terms_fn": 0,
+  "strict_tp": 8,
+  "strict_fp": 7,
+  "strict_fn": 0,
+  "raw_proposals": 22,
+  "raw_verbatim": 22,
+  "invented": 0,
+  "soft_must": [],
+  "splits": [
+   "applicants must have one year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST)",
+   "Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges.",
+   "Experience with core AI technical skills such as machine learning and deep learning",
+   "Experience with statistical data analysis and experimental design"
+  ],
+  "merges": [],
+  "cut_calls": 0,
+  "missed": [],
+  "extra": [
+   "Experience with statistical data analysis and experimental design OR 3 years of progressively higher-level graduate education leading to a Ph.D. degree OR Ph.D. or equivalent doctoral degree OR A combination of education and experience",
+   "For ZP-IV: In addition to the above basic requirements, applicants must have one year (52 weeks) of specialized experience at the GS-14 level (ZP-IV at NIST).",
+   "Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges.",
+   "Experience in providing technical leadership for AI experts in areas involving core AI technical skills such as machine learning and deep learning",
+   "However, an official copy will be required before a final offer of employment.",
+   "This position has an education requirement."
+  ]
+ },
+ "calls": [
+  {
+   "input": "Basic Requirements: Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science.\nAt least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus.\nAll academic degrees and coursework must be from accredited or pre-accredited institutions.\nIn addition to the above basic requirements, applicants must have one year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST).",
+   "raw": "{\"requirements\": [{\"evidence\": \"Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"Bachelor's degree in computer science or bachelor's degree with 30 semester hours in a combination of mathematics, statistics, and computer science\"}, {\"evidence\": \"At least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus.\", \"skill_terms\": [\"differential and integral calculus\"], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"At least 15 of the 30 semester hours must have included any combination of statistics and mathematics that included differential and integral calculus\"}, {\"evidence\": \"All academic degrees and coursework must be from accredited or pre-accredited institutions.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"All academic degrees and coursework must be from accredited or pre-accredited institutions\"}, {\"evidence\": \"In addition to the above basic requirements, applicants must have one year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST).\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"One year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST)\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "The specialized experience is defined as: Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges.\nExperience with core AI technical skills such as machine learning and deep learning Experience with statistical data analysis and experimental design OR 3 years of progressively higher-level graduate education leading to a Ph.D. degree OR Ph.D. or equivalent doctoral degree OR A combination of education and experience For ZP-IV: In addition to the above basic requirements, applicants must have one year (52 weeks) of specialized experience at the GS-14 level (ZP-IV at NIST).",
+   "raw": "{\"requirements\": [{\"evidence\": \"Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges.\", \"skill_terms\": [\"computer programming\", \"tool development\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges\"}, {\"evidence\": \"Experience with core AI technical skills such as machine learning and deep learning\", \"skill_terms\": [\"machine learning\", \"deep learning\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Experience with core AI technical skills such as machine learning and deep learning\"}, {\"evidence\": \"Experience with statistical data analysis and experimental design OR 3 years of progressively higher-level graduate education leading to a Ph.D. degree OR Ph.D. or equivalent doctoral degree OR A combination of education and experience\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 3, \"text\": \"Experience with statistical data analysis and experimental design OR 3 years of progressively higher-level graduate education leading to a Ph.D. degree OR Ph.D. or equivalent doctoral degree OR A combination of education and experience\"}, {\"evidence\": \"For ZP-IV: In addition to the above basic requirements, applicants must have one year (52 weeks) of specialized experience at the GS-14 level (ZP-IV at NIST).\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"Applicants must have one year (52 weeks) of specialized experience at the GS-14 level (ZP-IV at NIST)\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "The specialized experience is defined as: Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges.\nExperience in providing technical leadership for AI experts in areas involving core AI technical skills such as machine learning and deep learning Experience in leading and implementing projects involving statistical data analysis and experimental design Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional, philanthropic, religious, spiritual, community, student, social).",
+   "raw": "{\"requirements\": [{\"evidence\": \"Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges.\", \"skill_terms\": [\"computer programming\", \"tool development\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Experience in leading computer programming and tool development efforts to solve key Artificial Intelligence (AI) measurement science challenges\"}, {\"evidence\": \"Experience in providing technical leadership for AI experts in areas involving core AI technical skills such as machine learning and deep learning\", \"skill_terms\": [\"machine learning\", \"deep learning\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Experience in providing technical leadership for AI experts in areas involving core AI technical skills such as machine learning and deep learning\"}, {\"evidence\": \"Experience in leading and implementing projects involving statistical data analysis and experimental design\", \"skill_terms\": [\"statistical data analysis\", \"experimental design\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Experience in leading and implementing projects involving statistical data analysis and experimental design\"}, {\"evidence\": \"Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional, philanthropic, religious, spiritual, community, student, social).\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"Experience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional, philanthropic, religious, spiritual, community, student, social).\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment.\nYou will receive credit for all qualifying experience, including volunteer experience.\nThe qualification requirements in this vacancy announcement are based on the U.S.\nOffice of Personnel Management (OPM) Qualification Standards Handbook .\nIf requesting reconsideration of your qualification determination, please refer to the following site: Applicant Reconsideration Education This position has an education requirement.\nTranscripts must be submitted to validate that the education requirement has been met.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Unofficial transcripts will be accepted in the application package.\nHowever, an official copy will be required before a final offer of employment.\nUse of foreign education for qualifications.\nAn accredited organization must evaluate education completed outside of the U.S. to ensure that it is comparable to education received in accredited institutions in the U.S.\nClick here to view a listing of accredited organizations from the Department of Education's website.\nA copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Unofficial transcripts will be accepted in the application package.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"Unofficial transcripts will be accepted in the application package\"}, {\"evidence\": \"However, an official copy will be required before a final offer of employment.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"An official copy will be required before a final offer of employment\"}, {\"evidence\": \"A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "This position has an education requirement.\nTranscripts must be submitted to validate that the education requirement has been met.\nUnofficial transcripts will be accepted in the application package.\nHowever, an official copy will be required before a final offer of employment.\nUse of foreign education for qualifications.\nAn accredited organization must evaluate education completed outside of the U.S. to ensure that it is comparable to education received in accredited institutions in the U.S.\nClick here to view a listing of accredited organizations from the Department of Education's website.",
+   "raw": "{\"requirements\": [{\"evidence\": \"This position has an education requirement.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"This position has an education requirement\"}, {\"evidence\": \"Transcripts must be submitted to validate that the education requirement has been met.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"Transcripts must be submitted to validate that the education requirement has been met\"}, {\"evidence\": \"Unofficial transcripts will be accepted in the application package.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"Unofficial transcripts will be accepted in the application package\"}, {\"evidence\": \"However, an official copy will be required before a final offer of employment.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"An official copy will be required before a final offer of employment\"}, {\"evidence\": \"Use of foreign education for qualifications.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"Use of foreign education for qualifications\"}, {\"evidence\": \"An accredited organization must evaluate education completed outside of the U.S. to ensure that it is comparable to education received in accredited institutions in the U.S.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"An accredited organization must evaluate education completed outside of the U.S. to ensure that it is comparable to education received in accredited institutions in the U.S.\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application.",
+   "raw": "{\"requirements\": [{\"evidence\": \"A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"A copy of the foreign education evaluation (containing the results with a course-by-course listing) is required with your application\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Summary\nNIST is seeking an AI Technical Expert to conduct original research and advance measurement science. This position will drive the NIST's AI mission by addressing critical standards challenges. Key responsibilities include designing, developing, and testing novel AI-driven tools, test software, methodologies, and benchmarks. This notice is issued under direct-hire authority to recruit new talent to occupations for which NIST has a severe shortage of candidates. Learn more about this agency\n\nDuties\nAs a ZP-III AI Technical Expert, you will perform cutting-edge research and develop advanc",
+   "raw": "{\n    \"job_title\": \"ZP-III AI Technical Expert\"\n}",
+   "finish": "stop"
+  }
+ ]
+}

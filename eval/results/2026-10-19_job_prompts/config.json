@@ -1,0 +1,10 @@
+{
+ "task": "T15 Part A",
+ "label": "real-GPU, plain Qwen3-4B Q4_K_M on llama-server b11139 (LoRA scale 0), RTX 4050 6 GB",
+ "script": "scripts/eval_job_prompts.py (scores: services/job/scoring.py, from V2)",
+ "max_tokens": 768,
+ "splits": {"dev": "usajobs 883161100, 883337000, 883386100, 883511200, 883699600 + J1, J2", "test": "usajobs 883827900, 884301900, 884783000, 885947600, 886071700 + J3, J4"},
+ "gold": "V2 gold cards (eval/job_agent/gold) and our recruiter-confirmed cards (data/processed/jobs/J*_requirements.json)",
+ "few_shot_sources_in_dev": ["usajobs-883337000", "usajobs-883386100", "J2"],
+ "e2e_without_card": "eval/results/2026-10-19_n8n_e2e_job_v2/ (P02 through n8n, /job with job-v2)"
+}

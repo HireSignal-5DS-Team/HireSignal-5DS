@@ -1,0 +1,73 @@
+{
+ "row": {
+  "id": "p07_en_personal_details",
+  "set": "synth",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 6,
+  "raw_skills_in_cv": 6,
+  "skills_kept": 6,
+  "experience": 1,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 2.9,
+  "max_completion_tokens": 169,
+  "synth_tp": 6,
+  "synth_fp": 0,
+  "synth_fn": 0
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Node.js",
+    "evidence": "Node.js, Vue.js, Express, MongoDB, ASP.NET, Socket.io"
+   },
+   {
+    "name": "Vue.js",
+    "evidence": "Node.js, Vue.js, Express, MongoDB, ASP.NET, Socket.io"
+   },
+   {
+    "name": "Express",
+    "evidence": "Node.js, Vue.js, Express, MongoDB, ASP.NET, Socket.io"
+   },
+   {
+    "name": "MongoDB",
+    "evidence": "Node.js, Vue.js, Express, MongoDB, ASP.NET, Socket.io"
+   },
+   {
+    "name": "ASP.NET",
+    "evidence": "Node.js, Vue.js, Express, MongoDB, ASP.NET, Socket.io"
+   },
+   {
+    "name": "Socket.io",
+    "evidence": "Node.js, Vue.js, Express, MongoDB, ASP.NET, Socket.io"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Engineering degree",
+    "field": "ENSIAS",
+    "institution": "ENSIAS",
+    "end": "2016",
+    "evidence": "Engineering degree, ENSIAS, 2016"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Full Stack Developer",
+    "company": "Capgemini Morocco",
+    "start": "2016",
+    "end": "2024",
+    "evidence": "Full Stack Developer, Capgemini Morocco, 2016 - 2024"
+   }
+  ],
+  "uncertain": [],
+  "prompt_version": "profile-v3"
+ }
+}

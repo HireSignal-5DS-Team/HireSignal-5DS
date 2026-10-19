@@ -1,0 +1,38 @@
+{
+ "row": {
+  "id": "P44",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 1,
+  "cut_calls": 2,
+  "partial": true,
+  "raw_skills": 0,
+  "raw_skills_in_cv": 0,
+  "skills_kept": 0,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 0,
+  "terms_missed": [
+   "SQL",
+   "Python",
+   "English"
+  ],
+  "latency_s": 26.5,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "part 1/2: answer cut off at the token limit",
+   "part 1/2: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 1/2: answer cut off at the token limit",
+   "part 1/2: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -1,0 +1,81 @@
+{
+ "row": {
+  "id": "p03_en_two_column",
+  "set": "synth",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 5,
+  "raw_skills_in_cv": 5,
+  "skills_kept": 4,
+  "experience": 2,
+  "education": 2,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 5.9,
+  "max_completion_tokens": 344,
+  "synth_tp": 4,
+  "synth_fp": 0,
+  "synth_fn": 1
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "PyTorch",
+    "evidence": "Trained transformer models in PyTorch on GPU clusters."
+   },
+   {
+    "name": "Spark",
+    "evidence": "Wrote data pipelines with Spark."
+   },
+   {
+    "name": "OpenCV",
+    "evidence": "Computer vision with OpenCV."
+   },
+   {
+    "name": "C++",
+    "evidence": "PyTorch, Spark, OpenCV, Python, C++"
+   }
+  ],
+  "education": [
+   {
+    "degree": "MSc",
+    "field": "Artificial Intelligence",
+    "institution": "Université Paris-Saclay",
+    "end": "2022",
+    "evidence": "MSc in Artificial Intelligence, Université Paris-Saclay, 2022"
+   },
+   {
+    "degree": "BSc",
+    "field": "Mathematics",
+    "institution": "Faculty of Sciences of Tunis",
+    "end": "2020",
+    "evidence": "BSc in Mathematics, Faculty of Sciences of Tunis, 2020"
+   }
+  ],
+  "experience": [
+   {
+    "title": "ML Engineer",
+    "company": "InstaDeep",
+    "start": "2022",
+    "end": "present",
+    "evidence": "ML Engineer, InstaDeep 2022 - present"
+   },
+   {
+    "title": "Research Intern",
+    "company": "Inria",
+    "start": "2021",
+    "end": "2022",
+    "evidence": "Research Intern, Inria 2021 - 2022"
+   }
+  ],
+  "uncertain": [
+   "skill 'Python': name 'Python' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

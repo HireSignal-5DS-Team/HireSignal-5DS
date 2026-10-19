@@ -1,0 +1,73 @@
+{
+ "row": {
+  "id": "p08_fr_particle",
+  "set": "synth",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 6,
+  "raw_skills_in_cv": 6,
+  "skills_kept": 6,
+  "experience": 1,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 5.0,
+  "max_completion_tokens": 290,
+  "synth_tp": 6,
+  "synth_fp": 0,
+  "synth_fn": 4
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Airflow",
+    "evidence": "Pipelines Airflow et dbt sur Snowflake."
+   },
+   {
+    "name": "dbt",
+    "evidence": "Pipelines Airflow et dbt sur Snowflake."
+   },
+   {
+    "name": "Snowflake",
+    "evidence": "Pipelines Airflow et dbt sur Snowflake."
+   },
+   {
+    "name": "AWS",
+    "evidence": "Projet : migration vers AWS (S3, Glue, Redshift)."
+   },
+   {
+    "name": "Python",
+    "evidence": "Airflow, dbt, Snowflake, AWS, Python, SQL"
+   },
+   {
+    "name": "SQL",
+    "evidence": "Airflow, dbt, Snowflake, AWS, Python, SQL"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Diplôme d'ingénieur",
+    "field": "Data Science",
+    "institution": "ESPRIT",
+    "end": "2022",
+    "evidence": "Diplôme d'ingénieur·e en Data Science, ESPRIT, 2022"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Data Engineer",
+    "company": "Talan Tunisie",
+    "start": "2022",
+    "end": "2024",
+    "evidence": "Data Engineer - Talan Tunisie (2022 - 2024)"
+   }
+  ],
+  "uncertain": [],
+  "prompt_version": "profile-v1"
+ }
+}

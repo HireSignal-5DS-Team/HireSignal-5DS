@@ -1,0 +1,118 @@
+{
+ "row": {
+  "id": "P43",
+  "set": "gold",
+  "calls": 4,
+  "json_valid": 2,
+  "cut_calls": 2,
+  "partial": true,
+  "raw_skills": 17,
+  "raw_skills_in_cv": 17,
+  "skills_kept": 17,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 0,
+  "terms_missed": [
+   "statistics",
+   "PySpark",
+   "SQL"
+  ],
+  "latency_s": 36.7,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "ML",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction"
+   },
+   {
+    "name": "Classification",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction"
+   },
+   {
+    "name": "Regression",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction"
+   },
+   {
+    "name": "Clustering",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction"
+   },
+   {
+    "name": "Recommendation System",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction"
+   },
+   {
+    "name": "MAB",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction"
+   },
+   {
+    "name": "Real-Time Bidding",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction"
+   },
+   {
+    "name": "algorithm design",
+    "evidence": "Excellent problem-solver and collaborative with expertise in algorithm design and data collection"
+   },
+   {
+    "name": "data collection",
+    "evidence": "Excellent problem-solver and collaborative with expertise in algorithm design and data collection"
+   },
+   {
+    "name": "English",
+    "evidence": "English level: upper"
+   },
+   {
+    "name": "A/B testing",
+    "evidence": "- Controlling all the main KPIs, A/B testing, rolling, and validation of results."
+   },
+   {
+    "name": "KPIs",
+    "evidence": "- Controlling all the main KPIs, A/B testing, rolling, and validation of results."
+   },
+   {
+    "name": "rolling",
+    "evidence": "- Controlling all the main KPIs, A/B testing, rolling, and validation of results."
+   },
+   {
+    "name": "validation",
+    "evidence": "- Controlling all the main KPIs, A/B testing, rolling, and validation of results."
+   },
+   {
+    "name": "analysis",
+    "evidence": "Profound analysis and finding hidden patterns/causes."
+   },
+   {
+    "name": "patterns",
+    "evidence": "Profound analysis and finding hidden patterns/causes."
+   },
+   {
+    "name": "causes",
+    "evidence": "Profound analysis and finding hidden patterns/causes."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Data Scientist",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Position: Data Scientist\nExperience years: 5\nEnglish level: upper"
+   }
+  ],
+  "uncertain": [
+   "experience 'Data Scientist': company 'null' is not written in its evidence, removed",
+   "experience 'Data Scientist': start 'null' not found in its evidence, removed",
+   "experience 'Data Scientist': end 'null' not found in its evidence, removed",
+   "part 3/3: answer cut off at the token limit",
+   "part 3/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 3/3: answer cut off at the token limit",
+   "part 3/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -1,0 +1,150 @@
+{
+ "row": {
+  "id": "P46",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 30,
+  "raw_skills_in_cv": 30,
+  "skills_kept": 30,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 3,
+  "terms_missed": [],
+  "latency_s": 4.5,
+  "max_completion_tokens": 260
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "MS SQL",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Snowfalke",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "BigQuery",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Vertica",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Netteza",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "MySQL",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Azure DataFactory",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "DataBricks",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "AirFlow",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "SSIS",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "SSAS",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "SSRS",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Pentaho",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "HTML",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "XML",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Git",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Subversion",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Python",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Ruby",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "JS",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Ruby on Rails",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Windows",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Linux",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Agile",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Scrum",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "Waterfall",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "JIRA",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "YouTrack",
+    "evidence": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack"
+   },
+   {
+    "name": "English",
+    "evidence": "English level: upper"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [],
+  "prompt_version": "profile-v3"
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "task": "T15 Part B",
+ "label": "real-GPU, plain Qwen3-4B Q4_K_M on llama-server b11139 (LoRA scale 0), RTX 4050 6 GB",
+ "script": "scripts/eval_profile_prompts.py; example: scripts/profile_example.py",
+ "settings": {"v1": ["profile-v1", 800, 768], "v2": ["profile-v2", 800, 768], "v2g": ["profile-v2 + re-anchor guard", 800, 768], "v3": ["profile-v3 + re-anchor guard", 800, 768]},
+ "settings_format": "[prompt, chunk characters, max output tokens]",
+ "input": "Reader text -> anonymiser -> leakage check + injection removal (as /profile)",
+ "splits": {"dev": "26 dev gold-pair CVs + K01, K02 + synthetic p01-p05", "test": "26 test gold-pair CVs + K03-K05 + synthetic p06-p10"},
+ "notes": ["v2 and v2g dev only; test run once for v1 and v3", "the first v3 test run crashed on a punctuation-only skill name (fixed in parse.py, then v3 test re-run; v1 test numbers are from the first run)", "v2 dev ran before the re-anchor guard existed; v2g = the same prompt with the guard"]
+}

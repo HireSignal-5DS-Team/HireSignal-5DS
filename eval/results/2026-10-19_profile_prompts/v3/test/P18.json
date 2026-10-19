@@ -1,0 +1,61 @@
+{
+ "row": {
+  "id": "P18",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 9,
+  "raw_skills_in_cv": 7,
+  "skills_kept": 4,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 2,
+  "terms_missed": [
+   "English"
+  ],
+  "latency_s": 4.6,
+  "max_completion_tokens": 115
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "SQL",
+    "evidence": "leveraging my expertise in SQL, Python, and other relevant tools"
+   },
+   {
+    "name": "Python",
+    "evidence": "leveraging my expertise in SQL, Python, and other relevant tools"
+   },
+   {
+    "name": "data validation",
+    "evidence": "I am committed to ensuring data quality and integrity throughout the data lifecycle. This involves implementing data validation, cleansing, and normalization techniques to maintain high standards and accuracy."
+   },
+   {
+    "name": "Data Engineering",
+    "evidence": "SQL, Python and Data Engineering skills"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Data Engineer",
+    "company": "Space International",
+    "start": null,
+    "end": null,
+    "evidence": "As a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights."
+   }
+  ],
+  "uncertain": [
+   "experience 'Data Engineer': start '0.5' not found in its evidence, removed",
+   "experience 'Data Engineer': end 'present' not found in its evidence, removed",
+   "skill 'data cleansing': name 'data cleansing' is not written in its evidence, removed",
+   "skill 'data normalization': name 'data normalization' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

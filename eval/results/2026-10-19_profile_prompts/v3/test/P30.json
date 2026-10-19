@@ -1,0 +1,91 @@
+{
+ "row": {
+  "id": "P30",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 20,
+  "raw_skills_in_cv": 18,
+  "skills_kept": 9,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 4.8,
+  "max_completion_tokens": 219
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Position: Python Developer"
+   },
+   {
+    "name": "cross-functional teams",
+    "evidence": "Collaborated with cross-functional teams to deliver new features on time."
+   },
+   {
+    "name": "mobile backends",
+    "evidence": "Also I have experience developing web and mobile backends using"
+   },
+   {
+    "name": "Django",
+    "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+   },
+   {
+    "name": "DRF",
+    "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+   },
+   {
+    "name": "Celery",
+    "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+   },
+   {
+    "name": "MongoDB",
+    "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+   },
+   {
+    "name": "Redis",
+    "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": null,
+    "company": "ad-tech company",
+    "start": null,
+    "end": null,
+    "evidence": "Last two years I worked for an ad-tech company. I developed a tool which measures and analyses data privacy for digital advertisers. I started from the MVP of the project and helped it grow to finished product."
+   }
+  ],
+  "uncertain": [
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "skill 'Selenium': name 'Selenium' is not written in its evidence, removed",
+   "skill 'MITM Proxy': name 'MITM Proxy' is not written in its evidence, removed",
+   "skill 'AWS Lambda': name 'AWS Lambda' is not written in its evidence, removed",
+   "skill 'API Gateway': name 'API Gateway' is not written in its evidence, removed",
+   "skill 'RDS': name 'RDS' is not written in its evidence, removed",
+   "skill 'ECS': name 'ECS' is not written in its evidence, removed",
+   "skill 'S3': name 'S3' is not written in its evidence, removed",
+   "skill 'CloudFormation': name 'CloudFormation' is not written in its evidence, removed",
+   "skill 'RESTful API': name 'RESTful API' is not written in its evidence, removed",
+   "skill 'mentoring': name 'mentoring' is not written in its evidence, removed",
+   "skill 'web backends': name 'web backends' is not written in its evidence, removed",
+   "skill 'mobile backends': evidence re-anchored to the CV line that names it",
+   "experience 'Python Developer': title 'Python Developer' is not written in its evidence, removed",
+   "experience 'Python Developer': start '2018' not found in its evidence, removed",
+   "experience 'Python Developer': end 'present' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

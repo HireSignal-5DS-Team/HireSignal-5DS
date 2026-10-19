@@ -1,0 +1,54 @@
+{
+ "row": {
+  "id": "P25",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 4,
+  "raw_skills_in_cv": 4,
+  "skills_kept": 4,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 0,
+  "terms_missed": [
+   "testing"
+  ],
+  "latency_s": 4.4,
+  "max_completion_tokens": 258
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "risk assessment systems",
+    "evidence": "I took part in developing and implementing two risk assessment systems for national procurement systems in the countries of the former USSR"
+   },
+   {
+    "name": "online analytical tools",
+    "evidence": "Development of online analytical tools for auditors."
+   },
+   {
+    "name": "red flags and risk indicators algorithms",
+    "evidence": "Responsible for exploring opportunities to design red flags and risk indicators algorithms considering the available procurement data set and for designed red flags and risk indicators algorithms testing, ensuring their correct performance."
+   },
+   {
+    "name": "procurement data set",
+    "evidence": "considering the available procurement data set and for designed red flags and risk indicators algorithms testing, ensuring their correct performance."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "experience 'Data Analyst': title 'Data Analyst' is not written in its evidence, removed",
+   "experience 'Data Analyst': company 'null' is not written in its evidence, removed",
+   "experience 'Data Analyst': start 'null' not found in its evidence, removed",
+   "experience 'Data Analyst': end 'null' not found in its evidence, removed",
+   "experience 'Data Analyst': neither title nor company, dropped"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

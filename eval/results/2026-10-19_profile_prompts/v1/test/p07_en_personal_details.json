@@ -1,0 +1,71 @@
+{
+ "row": {
+  "id": "p07_en_personal_details",
+  "set": "synth",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 6,
+  "raw_skills_in_cv": 6,
+  "skills_kept": 5,
+  "experience": 1,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 4.4,
+  "max_completion_tokens": 258,
+  "synth_tp": 5,
+  "synth_fp": 0,
+  "synth_fn": 1
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Node.js",
+    "evidence": "Node.js and Vue.js applications for insurance clients."
+   },
+   {
+    "name": "Vue.js",
+    "evidence": "Node.js and Vue.js applications for insurance clients."
+   },
+   {
+    "name": "Express",
+    "evidence": "REST APIs with Express and MongoDB; ASP.NET maintenance."
+   },
+   {
+    "name": "MongoDB",
+    "evidence": "REST APIs with Express and MongoDB; ASP.NET maintenance."
+   },
+   {
+    "name": "ASP.NET",
+    "evidence": "REST APIs with Express and MongoDB; ASP.NET maintenance."
+   }
+  ],
+  "education": [
+   {
+    "degree": "Engineering degree",
+    "field": null,
+    "institution": "ENSIAS",
+    "end": "2016",
+    "evidence": "Engineering degree, ENSIAS, 2016"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Full Stack Developer",
+    "company": "Capgemini Morocco",
+    "start": "2016",
+    "end": "2024",
+    "evidence": "Full Stack Developer, Capgemini Morocco, 2016 - 2024"
+   }
+  ],
+  "uncertain": [
+   "skill 'Socket.io': name 'Socket.io' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

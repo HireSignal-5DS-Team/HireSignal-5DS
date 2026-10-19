@@ -1,0 +1,212 @@
+{
+ "row": {
+  "id": "K04",
+  "set": "kaggle",
+  "calls": 11,
+  "json_valid": 9,
+  "cut_calls": 2,
+  "partial": true,
+  "raw_skills": 34,
+  "raw_skills_in_cv": 34,
+  "skills_kept": 34,
+  "experience": 2,
+  "education": 2,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 55.8,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Strategic Planning",
+    "evidence": "Strategic Planning / Visioning & Tactical Execution"
+   },
+   {
+    "name": "Visioning",
+    "evidence": "Strategic Planning / Visioning & Tactical Execution"
+   },
+   {
+    "name": "Tactical Execution",
+    "evidence": "Strategic Planning / Visioning & Tactical Execution"
+   },
+   {
+    "name": "Manpower Planning",
+    "evidence": "Manpower Planning & Scheduling"
+   },
+   {
+    "name": "Scheduling",
+    "evidence": "Manpower Planning & Scheduling"
+   },
+   {
+    "name": "SDLC Methodology",
+    "evidence": "SDLC Methodology/ Problem & Change Software & Application Lifecycle Management"
+   },
+   {
+    "name": "Problem",
+    "evidence": "SDLC Methodology/ Problem & Change Software & Application Lifecycle Management"
+   },
+   {
+    "name": "Change",
+    "evidence": "SDLC Methodology/ Problem & Change Software & Application Lifecycle Management"
+   },
+   {
+    "name": "Software & Application Lifecycle Management",
+    "evidence": "SDLC Methodology/ Problem & Change Software & Application Lifecycle Management"
+   },
+   {
+    "name": "Management",
+    "evidence": "Management"
+   },
+   {
+    "name": "SLA Authoring",
+    "evidence": "SLA Authoring & Resource Allocation"
+   },
+   {
+    "name": "Resource Allocation",
+    "evidence": "SLA Authoring & Resource Allocation"
+   },
+   {
+    "name": "Expense Budgeting",
+    "evidence": "Expense Budgeting & Forecasting"
+   },
+   {
+    "name": "Forecasting",
+    "evidence": "Expense Budgeting & Forecasting"
+   },
+   {
+    "name": "Team-Building",
+    "evidence": "Team-Building & Front-Line Leadership"
+   },
+   {
+    "name": "Front-Line Leadership",
+    "evidence": "Team-Building & Front-Line Leadership"
+   },
+   {
+    "name": "Technology Upgrades",
+    "evidence": "Technology Upgrades & Training"
+   },
+   {
+    "name": "Training",
+    "evidence": "Technology Upgrades & Training"
+   },
+   {
+    "name": "Saflok",
+    "evidence": "Installation of Gate and Locking systems (Saflok, Ving, Salto and Amano Mc Gann access control systems) in various brands resorts"
+   },
+   {
+    "name": "Ving",
+    "evidence": "Installation of Gate and Locking systems (Saflok, Ving, Salto and Amano Mc Gann access control systems) in various brands resorts"
+   },
+   {
+    "name": "Salto",
+    "evidence": "Installation of Gate and Locking systems (Saflok, Ving, Salto and Amano Mc Gann access control systems) in various brands resorts"
+   },
+   {
+    "name": "Amano Mc Gann",
+    "evidence": "Installation of Gate and Locking systems (Saflok, Ving, Salto and Amano Mc Gann access control systems) in various brands resorts"
+   },
+   {
+    "name": "PMS systems",
+    "evidence": "interfacing with PMS systems."
+   },
+   {
+    "name": "Windows server",
+    "evidence": "Provided first and second-tier technical support and knowledge on Windows server/desktop applications and resort PMS/POS Systems."
+   },
+   {
+    "name": "desktop applications",
+    "evidence": "Provided first and second-tier technical support and knowledge on Windows server/desktop applications and resort PMS/POS Systems."
+   },
+   {
+    "name": "POS Systems",
+    "evidence": "Provided first and second-tier technical support and knowledge on Windows server/desktop applications and resort PMS/POS Systems."
+   },
+   {
+    "name": "security",
+    "evidence": "Provided operations management, including security, backup/recovery/disaster planning, off-hours staff coverage."
+   },
+   {
+    "name": "backup/recovery",
+    "evidence": "Provided operations management, including security, backup/recovery/disaster planning, off-hours staff coverage."
+   },
+   {
+    "name": "disaster planning",
+    "evidence": "Provided operations management, including security, backup/recovery/disaster planning, off-hours staff coverage."
+   },
+   {
+    "name": "off-hours staff coverage",
+    "evidence": "Provided operations management, including security, backup/recovery/disaster planning, off-hours staff coverage."
+   },
+   {
+    "name": "ITIL Foundation",
+    "evidence": "ITIL Foundation Course"
+   },
+   {
+    "name": "Microsoft Certified Professional",
+    "evidence": "Microsoft Certified Professional (MCP), CompTia A+, CompTia N+"
+   },
+   {
+    "name": "CompTia A+",
+    "evidence": "Microsoft Certified Professional (MCP), CompTia A+, CompTia N+"
+   },
+   {
+    "name": "CompTia N+",
+    "evidence": "Microsoft Certified Professional (MCP), CompTia A+, CompTia N+"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Bachelor of Science",
+    "field": "Computers and Information Technology",
+    "institution": "UNIVERSITY OF PHOENIX",
+    "end": null,
+    "evidence": "Bachelor of Science : Computers and Information Technology UNIVERSITY OF PHOENIX ï1⁄4 City , State Computers and Information\nTechnology"
+   },
+   {
+    "degree": "Associates of Arts",
+    "field": "Finance and Business Administration",
+    "institution": "LAKE SUMTER COMMUNITY COLLEGE",
+    "end": null,
+    "evidence": "Associates of Arts : Finance and Business Administration LAKE SUMTER COMMUNITY COLLEGE ï1⁄4 City , State Finance and Business\nAdministration"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Corporate Project Manager",
+    "company": "Company Name",
+    "start": null,
+    "end": null,
+    "evidence": "Corporate Project Manager Company Name\n\nManage direct reports supporting multiple locations with annual revenues of $2M.\nAccountable for the strategic direction, implementation, support, and development of all business applications, Enterprise Resource Planning\n(ERP), Facilities Management, Financials, Forecasting and Procurement.\nEstablished change management and help desk solutions and policies.\nDeveloped new process design workflow to ensure on-time delivery of all solutions and within budget leading to increase in monthly\nproductivity by 20%.\nCentralized disparate support documentation for all business applications and architecture.\nDeveloped corporate process and tools for opportunities tracking, bid decision making and proposal development."
+   },
+   {
+    "title": "Director of Information Technology and Systems",
+    "company": "Company Name",
+    "start": null,
+    "end": null,
+    "evidence": "Director of Information Technology and Systems Company Name\n\nManage four hotels within REIT interfacing with both management and ownership to guide the hotel through day-to-day operations.\nInsure that the company's strategic technologies needs are the primary focus.\nProvided first and second-tier technical support and knowledge on Windows server/desktop applications and resort PMS/POS Systems.\nProvided operations management, including security, backup/recovery/disaster planning, off-hours staff coverage.\nOversaw $1.4 M capital budget and hotel conversion."
+   }
+  ],
+  "uncertain": [
+   "experience 'Corporate Project Manager': start '01/2014' not found in its evidence, removed",
+   "experience 'Corporate Project Manager': end '01/2016' not found in its evidence, removed",
+   "experience 'Director of Information Technology': title 'Director of Information Technology' is not written in its evidence, removed",
+   "experience 'Director of Information Technology': company 'Company Name' is not written in its evidence, removed",
+   "experience 'Director of Information Technology': start '01/2008' not found in its evidence, removed",
+   "experience 'Director of Information Technology': end '01/2014' not found in its evidence, removed",
+   "experience 'Director of Information Technology': neither title nor company, dropped",
+   "experience 'Director of Information Technology and Systems': start '01/2006' not found in its evidence, removed",
+   "experience 'Director of Information Technology and Systems': end '01/2008' not found in its evidence, removed",
+   "education 'Bachelor of Science': end '2016' not found in its evidence, removed",
+   "education 'Associates of Arts': end '2016' not found in its evidence, removed",
+   "part 10/10: answer cut off at the token limit",
+   "part 10/10: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 10/10: answer cut off at the token limit",
+   "part 10/10: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

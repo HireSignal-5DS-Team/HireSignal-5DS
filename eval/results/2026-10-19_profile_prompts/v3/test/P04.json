@@ -1,0 +1,116 @@
+{
+ "row": {
+  "id": "P04",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 20,
+  "raw_skills_in_cv": 19,
+  "skills_kept": 18,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 6.8,
+  "max_completion_tokens": 319
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "machine learning",
+    "evidence": "- Design, build and launch efficient and reliable machine learning (ML) services\n- Research, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively\n- Develop deep-learning software prototypes that demonstrate potential usefulness to our customers\n- Design and develop machine learning systems to create, train and deploy ML models\n- Establish reusable data processing pipelines to enable rapid re-training and iteration through different ML methodologies\n- Select appropriate datasets and data representation methods\n- Design experiments and analysis methodologies that are statistically rigorous"
+   },
+   {
+    "name": "deep-learning",
+    "evidence": "- Design, build and launch efficient and reliable machine learning (ML) services\n- Research, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively\n- Develop deep-learning software prototypes that demonstrate potential usefulness to our customers\n- Design and develop machine learning systems to create, train and deploy ML models\n- Establish reusable data processing pipelines to enable rapid re-training and iteration through different ML methodologies\n- Select appropriate datasets and data representation methods\n- Design experiments and analysis methodologies that are statistically rigorous"
+   },
+   {
+    "name": "neural networks",
+    "evidence": "- Design, build and launch efficient and reliable machine learning (ML) services\n- Research, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively\n- Develop deep-learning software prototypes that demonstrate potential usefulness to our customers\n- Design and develop machine learning systems to create, train and deploy ML models\n- Establish reusable data processing pipelines to enable rapid re-training and iteration through different ML methodologies\n- Select appropriate datasets and data representation methods\n- Design experiments and analysis methodologies that are statistically rigorous"
+   },
+   {
+    "name": "data processing",
+    "evidence": "- Design, build and launch efficient and reliable machine learning (ML) services\n- Research, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively\n- Develop deep-learning software prototypes that demonstrate potential usefulness to our customers\n- Design and develop machine learning systems to create, train and deploy ML models\n- Establish reusable data processing pipelines to enable rapid re-training and iteration through different ML methodologies\n- Select appropriate datasets and data representation methods\n- Design experiments and analysis methodologies that are statistically rigorous"
+   },
+   {
+    "name": "data representation",
+    "evidence": "- Design, build and launch efficient and reliable machine learning (ML) services\n- Research, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively\n- Develop deep-learning software prototypes that demonstrate potential usefulness to our customers\n- Design and develop machine learning systems to create, train and deploy ML models\n- Establish reusable data processing pipelines to enable rapid re-training and iteration through different ML methodologies\n- Select appropriate datasets and data representation methods\n- Design experiments and analysis methodologies that are statistically rigorous"
+   },
+   {
+    "name": "statistical analysis",
+    "evidence": "- Perform statistical analysis and fine-tuning using test results"
+   },
+   {
+    "name": "ML models",
+    "evidence": "- Design, build and launch efficient and reliable machine learning (ML) services\n- Research, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively\n- Develop deep-learning software prototypes that demonstrate potential usefulness to our customers\n- Design and develop machine learning systems to create, train and deploy ML models\n- Establish reusable data processing pipelines to enable rapid re-training and iteration through different ML methodologies\n- Select appropriate datasets and data representation methods\n- Design experiments and analysis methodologies that are statistically rigorous"
+   },
+   {
+    "name": "algorithms",
+    "evidence": "- Design, build and launch efficient and reliable machine learning (ML) services\n- Research, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively\n- Develop deep-learning software prototypes that demonstrate potential usefulness to our customers\n- Design and develop machine learning systems to create, train and deploy ML models\n- Establish reusable data processing pipelines to enable rapid re-training and iteration through different ML methodologies\n- Select appropriate datasets and data representation methods\n- Design experiments and analysis methodologies that are statistically rigorous"
+   },
+   {
+    "name": "test results",
+    "evidence": "- Perform statistical analysis and fine-tuning using test results"
+   },
+   {
+    "name": "fine-tuning",
+    "evidence": "- Perform statistical analysis and fine-tuning using test results"
+   },
+   {
+    "name": "pose estimation",
+    "evidence": "- pose estimation and images classification"
+   },
+   {
+    "name": "images classification",
+    "evidence": "- pose estimation and images classification"
+   },
+   {
+    "name": "financial trading prediction",
+    "evidence": "- financial trading prediction"
+   },
+   {
+    "name": "geodata",
+    "evidence": "Project use new technologies, I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+   },
+   {
+    "name": "satellite imaginary",
+    "evidence": "Project use new technologies, I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+   },
+   {
+    "name": "maps",
+    "evidence": "Project use new technologies, I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+   },
+   {
+    "name": "logistics",
+    "evidence": "Project use new technologies, I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+   },
+   {
+    "name": "urbanism",
+    "evidence": "Project use new technologies, I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'statistical analysis': evidence re-anchored to the CV line that names it",
+   "skill 'data pipelines': name 'data pipelines' is not written in its evidence, removed",
+   "experience 'Machine learning engineer': title 'Machine learning engineer' is not written in its evidence, removed",
+   "experience 'Machine learning engineer': company 'null' is not written in its evidence, removed",
+   "experience 'Machine learning engineer': neither title nor company, dropped",
+   "skill 'pose estimation': evidence re-anchored to the CV line that names it",
+   "skill 'images classification': evidence re-anchored to the CV line that names it",
+   "skill 'financial trading prediction': evidence re-anchored to the CV line that names it",
+   "skill 'geodata': evidence re-anchored to the CV line that names it",
+   "skill 'satellite imaginary': evidence re-anchored to the CV line that names it",
+   "skill 'maps': evidence re-anchored to the CV line that names it",
+   "skill 'logistics': evidence re-anchored to the CV line that names it",
+   "skill 'urbanism': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

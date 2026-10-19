@@ -1,0 +1,241 @@
+{
+ "card": {
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-886071700",
+  "title": "Large Business & International (LB&I)",
+  "language": "en",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "text": "A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics",
+    "evidence": "A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r2",
+    "text": "At least 24 semester hours of mathematics and statistics, including at least 12 hours in mathematics and 6 hours in statistics, plus appropriate experience or additional education",
+    "evidence": "A combination of education and experience -- at least 24 semester hours of mathematics and statistics, including at least 12 hours in mathematics and 6 hours in statistics, as shown in A above, plus appropriate experience or additional education.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r3",
+    "text": "Evidence of statistical work such as sampling, collecting, computing, and analyzing statistical data, and applying known statistical techniques to data such as measurement of central tendency, dispersion, skewness, sampling error, simple and multiple correlation, analysis of variance, and tests of significance",
+    "evidence": "The experience offered in combination with educational courses to meet the requirements in paragraph B above should include evidence of statistical work such as (a) sampling, (b) collecting, computing, and analyzing statistical data, and (c) applying known statistical techniques to data such as measurement of central tendency, dispersion, skewness, sampling error, simple and multiple correlation, analysis of variance, and tests of significance.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "sampling",
+     "collecting",
+     "computing",
+     "analyzing statistical data",
+     "measurement of central tendency",
+     "dispersion",
+     "skewness",
+     "sampling error",
+     "simple and multiple correlation",
+     "analysis of variance",
+     "tests of significance"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r4",
+    "text": "Work required in the processing of numerical or quantified information by other than statistical methods is not considered appropriate qualifying experience",
+    "evidence": "Without other indications of statistical experience, work required in the processing of numerical or quantified information by other than statistical methods is not considered appropriate qualifying experience.",
+    "kind": "must",
+    "category": "other",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r5",
+    "text": "One year of specialized experience at a level of difficulty and responsibility equivalent to the GS-13 grade level in the Federal service",
+    "evidence": "In addition to meeting basic requirements, to be eligible for this position at this grade level, you must have one (1) year of specialized experience at a level of difficulty and responsibility equivalent to the GS-13 grade level in the Federal service.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": 1.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r6",
+    "text": "Applicants must meet applicable time-in-grade requirements to be considered eligible",
+    "evidence": "TIME IN GRADE (TIG): For positions above the GS-05,applicants must meet applicable time-in-­grade requirements to be considered eligible.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r7",
+    "text": "For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks",
+    "evidence": "For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": 1.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r8",
+    "text": "A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S. Department of Education",
+    "evidence": "Education A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S. Department of Education.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r9",
+    "text": "A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S. Department of Education",
+    "evidence": "A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S. Department of Education.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r10",
+    "text": "You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program",
+    "evidence": "You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r11",
+    "text": "It is your responsibility to provide such evidence when applying",
+    "evidence": "It is your responsibility to provide such evidence when applying.",
+    "kind": "must",
+    "category": "other",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+   "'Examples of such nonqualifying work include statis': not a requirement (application instructions), dropped",
+   "'Current civilian employees must have completed at ': quote not found (closest 0.75) in the job offer, dropped as invented (model quoted: \"Current civilian employees must have completed at least 90 days of federal civilian service since th\")",
+   "'Applicants must meet applicable time-in-grade requ': quote repaired (fuzzy 0.91)",
+   "'One year (52 weeks) at the next lower grade level ': not a requirement (administrative condition), dropped",
+   "'For positions at the GS-5, you cannot advance to t': min_years None -> 1.0 (from the quote)",
+   "'There is no TIG restriction for GS-02, 03, or 04 p': not a requirement (administrative condition), dropped",
+   "'For a list of schools which meet these criteria, p': quote repaired (fuzzy 1.00)",
+   "'For a list of schools which meet these criteria, p': not a requirement (application instructions), dropped",
+   "'Education completed in foreign colleges or univers': not a requirement (application instructions), dropped"
+  ]
+ },
+ "score": {
+  "job": "usajobs-886071700",
+  "failed": 0,
+  "latency_s": 32.7,
+  "tp": 2,
+  "fp": 9,
+  "fn": 0,
+  "kind_ok": 2,
+  "terms_tp": 0,
+  "terms_fp": 0,
+  "terms_fn": 0,
+  "strict_tp": 2,
+  "strict_fp": 9,
+  "strict_fn": 0,
+  "raw_proposals": 17,
+  "raw_verbatim": 14,
+  "invented": 1,
+  "soft_must": [],
+  "splits": [],
+  "merges": [],
+  "cut_calls": 0,
+  "missed": [],
+  "extra": [
+   "A combination of education and experience -- at least 24 semester hours of mathematics and statistics, including at least 12 hours in mathematics and 6 hours in statistics, as shown in A above, plus appropriate experience or additional education.",
+   "The experience offered in combination with educational courses to meet the requirements in paragraph B above should include evidence of statistical work such as (a) sampling, (b) collecting, computing, and analyzing statistical data, and (c) applying known statistical techniques to data such as measurement of central tendency, dispersion, skewness, sampling error, simple and multiple correlation, analysis of variance, and tests of significance.",
+   "Without other indications of statistical experience, work required in the processing of numerical or quantified information by other than statistical methods is not considered appropriate qualifying experience.",
+   "TIME IN GRADE (TIG): For positions above the GS-05,applicants must meet applicable time-in-­grade requirements to be considered eligible.",
+   "For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks.",
+   "Education A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S. Department of Education.",
+   "A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S. Department of Education.",
+   "You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.",
+   "It is your responsibility to provide such evidence when applying."
+  ]
+ },
+ "calls": [
+  {
+   "input": "Federal experience is not required.\nExperience may have been gained in the public sector, private sector or through Volunteer Service .\nOne year of experience refers to full-time work; part-timework is considered on a prorated basis.\nTo ensure full credit for your work experience, please indicate dates of employment by month/day/year, and indicate number of hours worked per week, on your resume.\nYou must meet the following requirements by the closing date of this announcement.\nBASIC REQUIREMENTS (IOR) ALL GRADES: EDUCATION : A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics.",
+   "raw": "{\"requirements\": [{\"evidence\": \"A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"A degree that included 24 semester hours of mathematics and statistics, of which at least 12 semester hours were in mathematics and 6 semester hours were in statistics\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "OR COMBINATION OF EDUCATION AND EXPERIENCE : A combination of education and experience -- at least 24 semester hours of mathematics and statistics, including at least 12 hours in mathematics and 6 hours in statistics, as shown in A above, plus appropriate experience or additional education.",
+   "raw": "{\"requirements\": [{\"evidence\": \"A combination of education and experience -- at least 24 semester hours of mathematics and statistics, including at least 12 hours in mathematics and 6 hours in statistics, as shown in A above, plus appropriate experience or additional education.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"At least 24 semester hours of mathematics and statistics, including at least 12 hours in mathematics and 6 hours in statistics, plus appropriate experience or additional education\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Evaluation of Education : Courses acceptable toward meeting the mathematics course requirement of paragraphs A or B above must have included at least four of the following: differential calculus, integral calculus, advanced calculus, theory of equations, vector analysis, advanced algebra, linear algebra, mathematical logic, differential equations, or any other advanced course in mathematics for which one of these was a prerequisite.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Courses in mathematical statistics or probability theory with a prerequisite of elementary calculus or more advanced courses will be accepted toward meeting the mathematics requirements, with the provision that the same course cannot be counted toward both the mathematics and the statistics requirement.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Evaluation of Experience : The experience offered in combination with educational courses to meet the requirements in paragraph B above should include evidence of statistical work such as (a) sampling, (b) collecting, computing, and analyzing statistical data, and (c) applying known statistical techniques to data such as measurement of central tendency, dispersion, skewness, sampling error, simple and multiple correlation, analysis of variance, and tests of significance.\nWithout other indications of statistical experience, work required in the processing of numerical or quantified information by other than statistical methods is not considered appropriate qualifying experience.",
+   "raw": "{\"requirements\": [{\"evidence\": \"The experience offered in combination with educational courses to meet the requirements in paragraph B above should include evidence of statistical work such as (a) sampling, (b) collecting, computing, and analyzing statistical data, and (c) applying known statistical techniques to data such as measurement of central tendency, dispersion, skewness, sampling error, simple and multiple correlation, analysis of variance, and tests of significance.\", \"skill_terms\": [\"sampling\", \"collecting\", \"computing\", \"analyzing statistical data\", \"measurement of central tendency\", \"dispersion\", \"skewness\", \"sampling error\", \"simple and multiple correlation\", \"analysis of variance\", \"tests of significance\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Evidence of statistical work such as sampling, collecting, computing, and analyzing statistical data, and applying known statistical techniques to data such as measurement of central tendency, dispersion, skewness, sampling error, simple and multiple correlation, analysis of variance, and tests of significance\"}, {\"evidence\": \"Without other indications of statistical experience, work required in the processing of numerical or quantified information by other than statistical methods is not considered appropriate qualifying experience.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"Work required in the processing of numerical or quantified information by other than statistical methods is not considered appropriate qualifying experience\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Examples of such nonqualifying work include statistical clerical work; statistical drafting; calculation of totals, averages, percentages, or other arithmetic summations; preparation of simple tables or charts; or verification of data by simple comparison or proofreading.\nAND SPECIALIZED EXPERIENCE GS-14 : In addition to meeting basic requirements, to be eligible for this position at this grade level, you must have one (1) year of specialized experience at a level of difficulty and responsibility equivalent to the GS-13 grade level in the Federal service.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Examples of such nonqualifying work include statistical clerical work; statistical drafting; calculation of totals, averages, percentages, or other arithmetic summations; preparation of simple tables or charts; or verification of data by simple comparison or proofreading.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"Examples of such nonqualifying work include statistical clerical work; statistical drafting; calculation of totals, averages, percentages, or other arithmetic summations; preparation of simple tables or charts; or verification of data by simple comparison or proofreading\"}, {\"evidence\": \"In addition to meeting basic requirements, to be eligible for this position at this grade level, you must have one (1) year of specialized experience at a level of difficulty and responsibility equivalent to the GS-13 grade level in the Federal service.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"One year of specialized experience at a level of difficulty and responsibility equivalent to the GS-13 grade level in the Federal service\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Specialized experience for this position includes: AND You must also meet the following requirement(s): TIME AFTER COMPETITIVE APPOINTMENT (TACA): Current civilian employees must have completed at least 90 days of federal civilian service since their latest non-temporary appointment from a competitive referral certificate, known as time after competitive appointment .\nFor this requirement, a competitive appointment is one where you applied to and were appointed from an announcement open to \"All US Citizens\".\nTIME IN GRADE (TIG): For positions above the GS-05,applicants must meet applicable time-in-­grade requirements to be considered eligible.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Current civilian employees must have completed at least 90 days of federal civilian service since their latest non-temporary appointment from a competitive referral certificate, known as time after competitive appointment.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 0.227, \"text\": \"Current civilian employees must have completed at least 90 days of federal civilian service since their latest non-temporary appointment from a competitive referral certificate, known as time after competitive appointment\"}, {\"evidence\": \"For positions above the GS-05, applicants must meet applicable time-in-grade requirements to be considered eligible.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Applicants must meet applicable time-in-grade requirements to be considered eligible\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "One year (52 weeks) at the next lower grade level is required to meet the time-in-grade requirements for the grade you are applying for.\nFor positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks.\nThere is no TIG restriction for GS-02, 03, or 04 positions.\nFor more information on qualifications please refer to OPM's Qualifications Standards .\nEducation A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S.\nDepartment of Education.\nFor a list of schools which meet these criteria, please refer to Department of Education Accreditation page .",
+   "raw": "{\"requirements\": [{\"evidence\": \"One year (52 weeks) at the next lower grade level is required to meet the time-in-grade requirements for the grade you are applying for.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"One year (52 weeks) at the next lower grade level is required to meet the time-in-grade requirements for the grade you are applying for\"}, {\"evidence\": \"For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"For positions at the GS-5, you cannot advance to the GS-05 if you have held a GS-02 in the past 52 weeks\"}, {\"evidence\": \"There is no TIG restriction for GS-02, 03, or 04 positions.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"There is no TIG restriction for GS-02, 03, or 04 positions\"}, {\"evidence\": \"Education A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S. Department of Education.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S. Department of Education\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "FOREIGN EDUCATION: Education completed in foreign colleges or universities may be used to meet the requirements.\nYou must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.\nIt is your responsibility to provide such evidence when applying.\nClick here (Section 3, Explanation of Terms) or here for Foreign Education Credentialing instructions.\nWe recommend choosing an evaluator from a member organization of one of the following national associations of credential evaluation services: National Association of Credential Evaluation Services (NACES) or Association of International Credentials Evaluators (AICE) .",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S.\nDepartment of Education.\nFor a list of schools which meet these criteria, please refer to Department of Education Accreditation page .\nFOREIGN EDUCATION: Education completed in foreign colleges or universities may be used to meet the requirements.\nYou must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.\nIt is your responsibility to provide such evidence when applying.\nClick here (Section 3, Explanation of Terms) or here for Foreign Education Credentialing instructions.",
+   "raw": "{\"requirements\": [{\"evidence\": \"A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S. Department of Education.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"A college or university degree generally must be from an accredited (or pre-accredited) college or university recognized by the U.S. Department of Education\"}, {\"evidence\": \"For a list of schools which meet these criteria, please refer to Department of Education Accreditation page.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"For a list of schools which meet these criteria, please refer to Department of Education Accreditation page\"}, {\"evidence\": \"Education completed in foreign colleges or universities may be used to meet the requirements.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"Education completed in foreign colleges or universities may be used to meet the requirements\"}, {\"evidence\": \"You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"You must show proof the education credentials have been deemed to be at least equivalent to that gained in conventional U.S. education program\"}, {\"evidence\": \"It is your responsibility to provide such evidence when applying.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"It is your responsibility to provide such evidence when applying\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "We recommend choosing an evaluator from a member organization of one of the following national associations of credential evaluation services: National Association of Credential Evaluation Services (NACES) or Association of International Credentials Evaluators (AICE) .",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Summary\nWHAT IS Large Business & International (LB&I) ? A description of the business units can be found at: https://www.jobs.irs.gov/about/who/business-divisions Position(s) are to be filled in following area(s): LBI - ADCCI - ADCCI, Data Solutions REVIEW THE ADDITIONAL INFORMATION BELOW FOR FURTHER DETAILS Learn more about this agency\n\nDuties\nHelp The following are the duties of this position at the full working level. If this vacancy includes more than one grade and you are selected at a lower grade level, you will have the opportunity to learn to perform these duties and receive training t",
+   "raw": "{\n    \"job_title\": \"Large Business & International (LB&I)\"\n}",
+   "finish": "stop"
+  }
+ ]
+}

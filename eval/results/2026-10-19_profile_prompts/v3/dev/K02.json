@@ -1,0 +1,485 @@
+{
+ "row": {
+  "id": "K02",
+  "set": "kaggle",
+  "calls": 8,
+  "json_valid": 8,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 133,
+  "raw_skills_in_cv": 122,
+  "skills_kept": 86,
+  "experience": 2,
+  "education": 2,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 29.8,
+  "max_completion_tokens": 427
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Project management",
+    "evidence": "in project management and product support. Proven communication skills for quality development of standard documentation, as well as genuine"
+   },
+   {
+    "name": "Product support",
+    "evidence": "in project management and product support. Proven communication skills for quality development of standard documentation, as well as genuine"
+   },
+   {
+    "name": "Communication",
+    "evidence": "in project management and product support. Proven communication skills for quality development of standard documentation, as well as genuine"
+   },
+   {
+    "name": "Documentation",
+    "evidence": "in project management and product support. Proven communication skills for quality development of standard documentation, as well as genuine"
+   },
+   {
+    "name": "Hardware and software upgrade planning",
+    "evidence": "Hardware and software upgrade planning\nCertified [NAME] Security Manager\nUser experience (UX) design\nSelf-motivated"
+   },
+   {
+    "name": "User experience (UX) design",
+    "evidence": "Hardware and software upgrade planning\nCertified [NAME] Security Manager\nUser experience (UX) design\nSelf-motivated"
+   },
+   {
+    "name": "Self-motivated",
+    "evidence": "Hardware and software upgrade planning\nCertified [NAME] Security Manager\nUser experience (UX) design\nSelf-motivated"
+   },
+   {
+    "name": "end-to-end customer experience",
+    "evidence": "Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n\nDelivered detailed feature roadmaps that included action items and project targets.\n\nLeveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs.\n\nManaged the 8 -person local IT team, allocating resources to ongoing projects and enforcing deadlines.\n\nConducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n\nWorked on large enterprise and business critical applications."
+   },
+   {
+    "name": "feature roadmaps",
+    "evidence": "Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n\nDelivered detailed feature roadmaps that included action items and project targets.\n\nLeveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs.\n\nManaged the 8 -person local IT team, allocating resources to ongoing projects and enforcing deadlines.\n\nConducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n\nWorked on large enterprise and business critical applications."
+   },
+   {
+    "name": "action items",
+    "evidence": "Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n\nDelivered detailed feature roadmaps that included action items and project targets.\n\nLeveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs.\n\nManaged the 8 -person local IT team, allocating resources to ongoing projects and enforcing deadlines.\n\nConducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n\nWorked on large enterprise and business critical applications."
+   },
+   {
+    "name": "project targets",
+    "evidence": "Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n\nDelivered detailed feature roadmaps that included action items and project targets.\n\nLeveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs.\n\nManaged the 8 -person local IT team, allocating resources to ongoing projects and enforcing deadlines.\n\nConducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n\nWorked on large enterprise and business critical applications."
+   },
+   {
+    "name": "pain points",
+    "evidence": "Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n\nDelivered detailed feature roadmaps that included action items and project targets.\n\nLeveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs.\n\nManaged the 8 -person local IT team, allocating resources to ongoing projects and enforcing deadlines.\n\nConducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n\nWorked on large enterprise and business critical applications."
+   },
+   {
+    "name": "latent customer needs",
+    "evidence": "Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n\nDelivered detailed feature roadmaps that included action items and project targets.\n\nLeveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs.\n\nManaged the 8 -person local IT team, allocating resources to ongoing projects and enforcing deadlines.\n\nConducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n\nWorked on large enterprise and business critical applications."
+   },
+   {
+    "name": "deadlines",
+    "evidence": "Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n\nDelivered detailed feature roadmaps that included action items and project targets.\n\nLeveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs.\n\nManaged the 8 -person local IT team, allocating resources to ongoing projects and enforcing deadlines.\n\nConducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n\nWorked on large enterprise and business critical applications."
+   },
+   {
+    "name": "computer diagnostics",
+    "evidence": "Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n\nDelivered detailed feature roadmaps that included action items and project targets.\n\nLeveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs.\n\nManaged the 8 -person local IT team, allocating resources to ongoing projects and enforcing deadlines.\n\nConducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n\nWorked on large enterprise and business critical applications."
+   },
+   {
+    "name": "technical assistance",
+    "evidence": "Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n\nDelivered detailed feature roadmaps that included action items and project targets.\n\nLeveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs.\n\nManaged the 8 -person local IT team, allocating resources to ongoing projects and enforcing deadlines.\n\nConducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n\nWorked on large enterprise and business critical applications."
+   },
+   {
+    "name": "support",
+    "evidence": "Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n\nDelivered detailed feature roadmaps that included action items and project targets.\n\nLeveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs.\n\nManaged the 8 -person local IT team, allocating resources to ongoing projects and enforcing deadlines.\n\nConducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n\nWorked on large enterprise and business critical applications."
+   },
+   {
+    "name": "business critical applications",
+    "evidence": "Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n\nDelivered detailed feature roadmaps that included action items and project targets.\n\nLeveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs.\n\nManaged the 8 -person local IT team, allocating resources to ongoing projects and enforcing deadlines.\n\nConducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n\nWorked on large enterprise and business critical applications."
+   },
+   {
+    "name": "configuration",
+    "evidence": "Analyzed and created new configuration for packaged software to meet business and system requirements."
+   },
+   {
+    "name": "storage systems",
+    "evidence": "Configured, maintained and provided trending and performance analysis of enterprise class storage systems."
+   },
+   {
+    "name": "trending and performance analysis",
+    "evidence": "Configured, maintained and provided trending and performance analysis of enterprise class storage systems."
+   },
+   {
+    "name": "second-level support",
+    "evidence": "Performed second-level support for all workstation and server class systems."
+   },
+   {
+    "name": "server infrastructure",
+    "evidence": "Served as the technical lead for server infrastructure including development, QA, staging and production systems."
+   },
+   {
+    "name": "development",
+    "evidence": "in project management and product support. Proven communication skills for quality development of standard documentation, as well as genuine"
+   },
+   {
+    "name": "QA",
+    "evidence": "Served as the technical lead for server infrastructure including development, QA, staging and production systems."
+   },
+   {
+    "name": "staging",
+    "evidence": "Served as the technical lead for server infrastructure including development, QA, staging and production systems."
+   },
+   {
+    "name": "production systems",
+    "evidence": "Served as the technical lead for server infrastructure including development, QA, staging and production systems."
+   },
+   {
+    "name": "microprocessor controls",
+    "evidence": "Serviced electrical, pneumatic, mechanical and microprocessor controls."
+   },
+   {
+    "name": "digital control systems",
+    "evidence": "Analyzed, modified and repaired digital control systems."
+   },
+   {
+    "name": "networks",
+    "evidence": "Set up, tested and configured networks, desktops, laptops and printers."
+   },
+   {
+    "name": "desktops",
+    "evidence": "Set up, tested and configured networks, desktops, laptops and printers."
+   },
+   {
+    "name": "laptops",
+    "evidence": "Set up, tested and configured networks, desktops, laptops and printers."
+   },
+   {
+    "name": "printers",
+    "evidence": "Set up, tested and configured networks, desktops, laptops and printers."
+   },
+   {
+    "name": "employee training",
+    "evidence": "Created employee training materials and procedures to teach in-house workers proper software and hardware protocols."
+   },
+   {
+    "name": "software and hardware protocols",
+    "evidence": "Created employee training materials and procedures to teach in-house workers proper software and hardware protocols."
+   },
+   {
+    "name": "maintenance",
+    "evidence": "security, Microsoft-based programs, and the installation and maintenance of affiliated hardware."
+   },
+   {
+    "name": "enterprise class storage systems",
+    "evidence": "Configured, maintained and provided trending and performance analysis of enterprise class storage systems."
+   },
+   {
+    "name": "workstation",
+    "evidence": "Performed second-level support for all workstation and server class systems."
+   },
+   {
+    "name": "server class systems",
+    "evidence": "Performed second-level support for all workstation and server class systems."
+   },
+   {
+    "name": "technical lead",
+    "evidence": "Served as the technical lead for server infrastructure including development, QA, staging and production systems."
+   },
+   {
+    "name": "electrical",
+    "evidence": "Serviced electrical, pneumatic, mechanical and microprocessor controls."
+   },
+   {
+    "name": "pneumatic",
+    "evidence": "Serviced electrical, pneumatic, mechanical and microprocessor controls."
+   },
+   {
+    "name": "mechanical",
+    "evidence": "Serviced electrical, pneumatic, mechanical and microprocessor controls."
+   },
+   {
+    "name": "analyzed",
+    "evidence": "Analyzed, modified and repaired digital control systems."
+   },
+   {
+    "name": "modified",
+    "evidence": "Analyzed, modified and repaired digital control systems."
+   },
+   {
+    "name": "repaired",
+    "evidence": "Analyzed, modified and repaired digital control systems."
+   },
+   {
+    "name": "set up",
+    "evidence": "Set up, tested and configured networks, desktops, laptops and printers."
+   },
+   {
+    "name": "tested",
+    "evidence": "Set up, tested and configured networks, desktops, laptops and printers."
+   },
+   {
+    "name": "configured",
+    "evidence": "Set up, tested and configured networks, desktops, laptops and printers."
+   },
+   {
+    "name": "created",
+    "evidence": "Created employee training materials and procedures to teach in-house workers proper software and hardware protocols."
+   },
+   {
+    "name": "employee training materials",
+    "evidence": "Created employee training materials and procedures to teach in-house workers proper software and hardware protocols."
+   },
+   {
+    "name": "procedures",
+    "evidence": "Created employee training materials and procedures to teach in-house workers proper software and hardware protocols."
+   },
+   {
+    "name": "computer systems",
+    "evidence": "Diagnosed, installed, configured and repaired computer systems and software."
+   },
+   {
+    "name": "software",
+    "evidence": "Diagnosed, installed, configured and repaired computer systems and software."
+   },
+   {
+    "name": "Microsoft-based programs",
+    "evidence": "security, Microsoft-based programs, and the installation and maintenance of affiliated hardware."
+   },
+   {
+    "name": "video teleconferencing systems",
+    "evidence": "Demonstrated technical expertise to install, upgrade, and troubleshoot networks and related articles, such as video teleconferencing systems,"
+   },
+   {
+    "name": "routers",
+    "evidence": "routers, servers, computers, switches, and sound systems."
+   },
+   {
+    "name": "servers",
+    "evidence": "routers, servers, computers, switches, and sound systems."
+   },
+   {
+    "name": "computers",
+    "evidence": "routers, servers, computers, switches, and sound systems."
+   },
+   {
+    "name": "switches",
+    "evidence": "routers, servers, computers, switches, and sound systems."
+   },
+   {
+    "name": "sound systems",
+    "evidence": "routers, servers, computers, switches, and sound systems."
+   },
+   {
+    "name": "specifications",
+    "evidence": "Entrusted with confidential information to successfully develop and review specifications, standards, protocol, and inventory data, as well as"
+   },
+   {
+    "name": "standards",
+    "evidence": "Entrusted with confidential information to successfully develop and review specifications, standards, protocol, and inventory data, as well as"
+   },
+   {
+    "name": "protocols",
+    "evidence": "Created employee training materials and procedures to teach in-house workers proper software and hardware protocols."
+   },
+   {
+    "name": "inventory data",
+    "evidence": "Entrusted with confidential information to successfully develop and review specifications, standards, protocol, and inventory data, as well as"
+   },
+   {
+    "name": "server room",
+    "evidence": "Maintained and monitored the server room, the wireless network and other server infrastructure."
+   },
+   {
+    "name": "wireless network",
+    "evidence": "Maintained and monitored the server room, the wireless network and other server infrastructure."
+   },
+   {
+    "name": "audiovisual equipment",
+    "evidence": "Maintained audiovisual equipment, including overhead projectors, laptops and video conferencing equipment."
+   },
+   {
+    "name": "overhead projectors",
+    "evidence": "Maintained audiovisual equipment, including overhead projectors, laptops and video conferencing equipment."
+   },
+   {
+    "name": "video conferencing equipment",
+    "evidence": "Maintained audiovisual equipment, including overhead projectors, laptops and video conferencing equipment."
+   },
+   {
+    "name": "technical specifications",
+    "evidence": "Set up staff workstations with PCs, Macs, phones and laptops.Translated technical specifications into detailed product requirements."
+   },
+   {
+    "name": "product requirements",
+    "evidence": "Set up staff workstations with PCs, Macs, phones and laptops.Translated technical specifications into detailed product requirements."
+   },
+   {
+    "name": "Microsoft Exchange 2013",
+    "evidence": "Microsoft Exchange 2013"
+   },
+   {
+    "name": "Systems Security Professional",
+    "evidence": "[NAME] Systems Security Professional (CISSP)"
+   },
+   {
+    "name": "Microsoft Certified Systems Administrator",
+    "evidence": "Microsoft Certified Systems Administrator (MCSA)"
+   },
+   {
+    "name": "Project Management Professional",
+    "evidence": "PMI - Project Management Professional (PMP)"
+   },
+   {
+    "name": "Certified Automation Professional",
+    "evidence": "ISA - Certified Automation Professional"
+   },
+   {
+    "name": "Cisco",
+    "evidence": "Cisco"
+   },
+   {
+    "name": "Certified Network Associate",
+    "evidence": "Certified Network Associate (CCNA)"
+   },
+   {
+    "name": "Certified Network Professional",
+    "evidence": "Certified Network Professional (CCNP)"
+   },
+   {
+    "name": "Certified Security Professional",
+    "evidence": "Certified Security Professional (CCSP)"
+   },
+   {
+    "name": "Video Teleconference Certified Expert",
+    "evidence": "Video Teleconference Certified Expert"
+   },
+   {
+    "name": "CompTIA",
+    "evidence": "CompTIA"
+   },
+   {
+    "name": "Security+",
+    "evidence": "Security+"
+   },
+   {
+    "name": "Network+",
+    "evidence": "Network+"
+   },
+   {
+    "name": "A+",
+    "evidence": "A+"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Master of Science",
+    "field": null,
+    "institution": "University of Houston ï1⁄4 City , State , USA",
+    "end": "2015",
+    "evidence": "Master of Science : Computer & [NAME] Science , 2015 University of Houston ï1⁄4 City , State , USA"
+   },
+   {
+    "degree": "Bachelor of Science",
+    "field": null,
+    "institution": "University of Maryland University College ï1⁄4 City , State , USA",
+    "end": "2011",
+    "evidence": "Bachelor of Science : Management of [NAME] Systems , 2011 University of Maryland University College ï1⁄4 City , State , USA"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Manager",
+    "company": "Current Company Name ï1⁄4 City , State",
+    "start": "2014-10",
+    "end": "present",
+    "evidence": "Manager - [NAME] and Building Automation Systems\nOctober 2014 to Current Company Name ï1⁄4 City , State"
+   },
+   {
+    "title": "Systems Technician",
+    "company": "Company Name ï1⁄4 City , State",
+    "start": "2008-07",
+    "end": "2014-07",
+    "evidence": "Diagnosed, installed, configured and repaired computer systems and software.\n\n[NAME] Systems Technician\nJuly 2008 to July 2014 Company Name ï1⁄4 City , State\n\nUtilized IT expertise to support communications efforts in Operation Iraqi Freedom and Operation New Dawn, focusing on network\nsecurity, Microsoft-based programs, and the installation and maintenance of affiliated hardware.\nDemonstrated technical expertise to install, upgrade, and troubleshoot networks and related articles, such as video teleconferencing systems,\nrouters, servers, computers, switches, and sound systems.\nEntrusted with confidential information to successfully develop and review specifications, standards, protocol, and inventory data, as well as\nkeeping numerous systems encrypted."
+   }
+  ],
+  "uncertain": [
+   "skill 'Building Automation Systems': name 'Building Automation Systems' is not written in its evidence, removed",
+   "skill 'Enterprise Project Lifecycle': name 'Enterprise Project Lifecycle' is not written in its evidence, removed",
+   "skill 'Network infrastructure': name 'Network infrastructure' is not written in its evidence, removed",
+   "skill 'Leadership': name 'Leadership' is not written in its evidence, removed",
+   "skill 'Server management': name 'Server management' is not written in its evidence, removed",
+   "skill 'Mac and PC': name 'Mac and PC' is not written in its evidence, removed",
+   "skill 'Computer programming': name 'Computer programming' is not written in its evidence, removed",
+   "skill 'Control system design': name 'Control system design' is not written in its evidence, removed",
+   "skill 'Multi-tasking': name 'Multi-tasking' is not written in its evidence, removed",
+   "skill 'Enterprise platforms': name 'Enterprise platforms' is not written in its evidence, removed",
+   "skill 'Certified Security Manager': name 'Certified Security Manager' is not written in its evidence, removed",
+   "skill 'resource allocation': name 'resource allocation' is not written in its evidence, removed",
+   "skill 'enterprise applications': name 'enterprise applications' is not written in its evidence, removed",
+   "skill 'storage systems': evidence re-anchored to the CV line that names it",
+   "skill 'trending and performance analysis': evidence re-anchored to the CV line that names it",
+   "skill 'second-level support': evidence re-anchored to the CV line that names it",
+   "skill 'server infrastructure': evidence re-anchored to the CV line that names it",
+   "skill 'development': evidence re-anchored to the CV line that names it",
+   "skill 'QA': evidence re-anchored to the CV line that names it",
+   "skill 'staging': evidence re-anchored to the CV line that names it",
+   "skill 'production systems': evidence re-anchored to the CV line that names it",
+   "skill 'electrical controls': name 'electrical controls' is not written in its evidence, removed",
+   "skill 'pneumatic controls': name 'pneumatic controls' is not written in its evidence, removed",
+   "skill 'mechanical controls': name 'mechanical controls' is not written in its evidence, removed",
+   "skill 'microprocessor controls': evidence re-anchored to the CV line that names it",
+   "skill 'digital control systems': evidence re-anchored to the CV line that names it",
+   "skill 'networks': evidence re-anchored to the CV line that names it",
+   "skill 'desktops': evidence re-anchored to the CV line that names it",
+   "skill 'laptops': evidence re-anchored to the CV line that names it",
+   "skill 'printers': evidence re-anchored to the CV line that names it",
+   "skill 'employee training': evidence re-anchored to the CV line that names it",
+   "skill 'software and hardware protocols': evidence re-anchored to the CV line that names it",
+   "skill 'configuration': evidence re-anchored to the CV line that names it",
+   "skill 'maintenance': evidence re-anchored to the CV line that names it",
+   "skill 'network security': name 'network security' is not written in its evidence, removed",
+   "skill 'Microsoft-based programs': evidence re-anchored to the CV line that names it",
+   "skill 'hardware installation': name 'hardware installation' is not written in its evidence, removed",
+   "skill 'network troubleshooting': name 'network troubleshooting' is not written in its evidence, removed",
+   "skill 'video teleconferencing systems': evidence re-anchored to the CV line that names it",
+   "skill 'routers': evidence re-anchored to the CV line that names it",
+   "skill 'servers': evidence re-anchored to the CV line that names it",
+   "skill 'computers': evidence re-anchored to the CV line that names it",
+   "skill 'switches': evidence re-anchored to the CV line that names it",
+   "skill 'sound systems': evidence re-anchored to the CV line that names it",
+   "skill 'encryption': name 'encryption' is not written in its evidence, removed",
+   "skill 'specifications': evidence re-anchored to the CV line that names it",
+   "skill 'standards': evidence re-anchored to the CV line that names it",
+   "skill 'protocols': evidence re-anchored to the CV line that names it",
+   "skill 'inventory data': evidence re-anchored to the CV line that names it",
+   "skill 'audiovisual equipment': evidence re-anchored to the CV line that names it",
+   "skill 'overhead projectors': evidence re-anchored to the CV line that names it",
+   "skill 'video conferencing equipment': evidence re-anchored to the CV line that names it",
+   "skill 'technical specifications': evidence re-anchored to the CV line that names it",
+   "skill 'product requirements': evidence re-anchored to the CV line that names it",
+   "skill 'System administration': name 'System administration' is not written in its evidence, removed",
+   "skill 'Windows Server 2003': name 'Windows Server 2003' is not written in its evidence, removed",
+   "skill 'Windows Server 2008': name 'Windows Server 2008' is not written in its evidence, removed",
+   "skill 'VMware': name 'VMware' is not written in its evidence, removed",
+   "skill 'Active Directory': name 'Active Directory' is not written in its evidence, removed",
+   "skill 'Large computer networks': name 'Large computer networks' is not written in its evidence, removed",
+   "skill 'Linux': name 'Linux' is not written in its evidence, removed",
+   "skill 'Mac OS': name 'Mac OS' is not written in its evidence, removed",
+   "skill 'Microsoft Dynamics': name 'Microsoft Dynamics' is not written in its evidence, removed",
+   "skill 'Access Control Security': name 'Access Control Security' is not written in its evidence, removed",
+   "education 'Master of Science': field contained a placeholder, removed",
+   "education 'Bachelor of Science': field contained a placeholder, removed",
+   "skill 'Naval Systems Technician': name 'Naval Systems Technician' is not written in its evidence, removed",
+   "skill 'Systems Security Professional': evidence re-anchored to the CV line that names it",
+   "skill 'Microsoft Certified Systems Administrator': evidence re-anchored to the CV line that names it",
+   "skill 'Project Management Professional': evidence re-anchored to the CV line that names it",
+   "skill 'Certified Automation Professional': evidence re-anchored to the CV line that names it",
+   "skill 'Cisco': evidence re-anchored to the CV line that names it",
+   "skill 'Certified Network Associate': evidence re-anchored to the CV line that names it",
+   "skill 'Certified Network Professional': evidence re-anchored to the CV line that names it",
+   "skill 'Certified Security Professional': evidence re-anchored to the CV line that names it",
+   "skill 'Video Teleconference Certified Expert': evidence re-anchored to the CV line that names it",
+   "skill 'CompTIA': evidence re-anchored to the CV line that names it",
+   "skill 'Security+': evidence re-anchored to the CV line that names it",
+   "skill 'Network+': evidence re-anchored to the CV line that names it",
+   "skill 'A+': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

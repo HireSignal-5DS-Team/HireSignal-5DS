@@ -1,0 +1,217 @@
+{
+ "row": {
+  "id": "P16",
+  "set": "gold",
+  "calls": 4,
+  "json_valid": 4,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 65,
+  "raw_skills_in_cv": 65,
+  "skills_kept": 32,
+  "experience": 3,
+  "education": 0,
+  "terms_present": 4,
+  "terms_found": 3,
+  "terms_missed": [
+   "English"
+  ],
+  "latency_s": 15.1,
+  "max_completion_tokens": 353
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "- Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)"
+   },
+   {
+    "name": "Terraform",
+    "evidence": "- Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)"
+   },
+   {
+    "name": "Flask API",
+    "evidence": "- Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)"
+   },
+   {
+    "name": "Docker",
+    "evidence": "- Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)"
+   },
+   {
+    "name": "GCP",
+    "evidence": "- Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)"
+   },
+   {
+    "name": "Cloud Run",
+    "evidence": "- Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)"
+   },
+   {
+    "name": "Cloud Functions",
+    "evidence": "- Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)"
+   },
+   {
+    "name": "AWS",
+    "evidence": "- Supporting AWS Infrastructure (Debugging Issues related to resource Provisioning,"
+   },
+   {
+    "name": "Cloud DataProc",
+    "evidence": "Kubernetes Engine,Cloud DataProc, Cloud Dataflow, Cloud SQL, Big-Table, BigQuery)"
+   },
+   {
+    "name": "Cloud Dataflow",
+    "evidence": "Kubernetes Engine,Cloud DataProc, Cloud Dataflow, Cloud SQL, Big-Table, BigQuery)"
+   },
+   {
+    "name": "Cloud SQL",
+    "evidence": "Kubernetes Engine,Cloud DataProc, Cloud Dataflow, Cloud SQL, Big-Table, BigQuery)"
+   },
+   {
+    "name": "Big-Table",
+    "evidence": "Kubernetes Engine,Cloud DataProc, Cloud Dataflow, Cloud SQL, Big-Table, BigQuery)"
+   },
+   {
+    "name": "BigQuery",
+    "evidence": "Kubernetes Engine,Cloud DataProc, Cloud Dataflow, Cloud SQL, Big-Table, BigQuery)"
+   },
+   {
+    "name": "ETL",
+    "evidence": "- Creating ETL Glue Jobs and AWS Lambdas for Data Processing and Automation"
+   },
+   {
+    "name": "Glue",
+    "evidence": "- Creating ETL Glue Jobs and AWS Lambdas for Data Processing and Automation"
+   },
+   {
+    "name": "AWS Lambdas",
+    "evidence": "- Creating ETL Glue Jobs and AWS Lambdas for Data Processing and Automation"
+   },
+   {
+    "name": "Cloud-Formation",
+    "evidence": "- Assisting in Deployment, Updating and Creation of IaC Cloud-Formation Templates"
+   },
+   {
+    "name": "Bash",
+    "evidence": "- Creating Bash scripts for automation of AWS Processes"
+   },
+   {
+    "name": "SQL",
+    "evidence": "Kubernetes Engine,Cloud DataProc, Cloud Dataflow, Cloud SQL, Big-Table, BigQuery)"
+   },
+   {
+    "name": "Spark",
+    "evidence": "- Batch Data Pipeline for extraction of Cryptocurrencies' data and calculation of price\ndifferences between various cryptocurrency categories on different time ranges.\n(GCP, Spark, Airflow, Pandas, GCS, BigQuery. Terraform, Docker, Java, Cloud Run, NodeJS)"
+   },
+   {
+    "name": "Airflow",
+    "evidence": "- Batch Data Pipeline for extraction of Cryptocurrencies' data and calculation of price\ndifferences between various cryptocurrency categories on different time ranges.\n(GCP, Spark, Airflow, Pandas, GCS, BigQuery. Terraform, Docker, Java, Cloud Run, NodeJS)"
+   },
+   {
+    "name": "Pandas",
+    "evidence": "- Batch Data Pipeline for extraction of Cryptocurrencies' data and calculation of price\ndifferences between various cryptocurrency categories on different time ranges.\n(GCP, Spark, Airflow, Pandas, GCS, BigQuery. Terraform, Docker, Java, Cloud Run, NodeJS)"
+   },
+   {
+    "name": "GCS",
+    "evidence": "- Batch Data Pipeline for extraction of Cryptocurrencies' data and calculation of price\ndifferences between various cryptocurrency categories on different time ranges.\n(GCP, Spark, Airflow, Pandas, GCS, BigQuery. Terraform, Docker, Java, Cloud Run, NodeJS)"
+   },
+   {
+    "name": "Java",
+    "evidence": "- Batch Data Pipeline for extraction of Cryptocurrencies' data and calculation of price\ndifferences between various cryptocurrency categories on different time ranges.\n(GCP, Spark, Airflow, Pandas, GCS, BigQuery. Terraform, Docker, Java, Cloud Run, NodeJS)"
+   },
+   {
+    "name": "NodeJS",
+    "evidence": "- Batch Data Pipeline for extraction of Cryptocurrencies' data and calculation of price\ndifferences between various cryptocurrency categories on different time ranges.\n(GCP, Spark, Airflow, Pandas, GCS, BigQuery. Terraform, Docker, Java, Cloud Run, NodeJS)"
+   },
+   {
+    "name": "AWS Lambda",
+    "evidence": "- Building a Serverless Data Pipeline by using Python, AWS Lambda, Amazon S3 and AWS"
+   },
+   {
+    "name": "Amazon S3",
+    "evidence": "- Building a Serverless Data Pipeline by using Python, AWS Lambda, Amazon S3 and AWS"
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Application's access logs (Python, Pandas, Flask, PostgreSQL, SQLite, Django)"
+   },
+   {
+    "name": "SQLite",
+    "evidence": "Application's access logs (Python, Pandas, Flask, PostgreSQL, SQLite, Django)"
+   },
+   {
+    "name": "Django",
+    "evidence": "Application's access logs (Python, Pandas, Flask, PostgreSQL, SQLite, Django)"
+   },
+   {
+    "name": "BeautifulSoup",
+    "evidence": "- Developing a Web Scraper for Ebay Website (BeautifulSoup, Python, Pandas)"
+   },
+   {
+    "name": "Flask",
+    "evidence": "- Building a real-time Data Processing/Visualization pipeline for processing Web\nApplication's access logs (Python, Pandas, Flask, PostgreSQL, SQLite, Django)"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Cloud Support Engineer",
+    "company": "Devoteam G Cloud",
+    "start": null,
+    "end": null,
+    "evidence": "Cloud Support Engineer, Devoteam G Cloud, Warsaw:\n- Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)\n- Contribution to local support automation projects (Developing Cloud Functions)\n- First line support for Clients with the Google Cloud based infrastructure (Google\nKubernetes Engine,Cloud DataProc, Cloud Dataflow, Cloud SQL, Big-Table, BigQuery)"
+   },
+   {
+    "title": "Student Data Engineer/DevOps",
+    "company": "Abbott",
+    "start": null,
+    "end": null,
+    "evidence": "Student Data Engineer/DevOps, Abbott, Warsaw:\n- Supporting AWS Infrastructure (Debugging Issues related to resource Provisioning,\nDeployment and Exploitation)\n- Creating ETL Glue Jobs and AWS Lambdas for Data Processing and Automation"
+   },
+   {
+    "title": "Intern Software Developer",
+    "company": "CASE",
+    "start": null,
+    "end": null,
+    "evidence": "Intern Software Developer, CASE, Warsaw"
+   }
+  ],
+  "uncertain": [
+   "skill 'AWS': evidence re-anchored to the CV line that names it",
+   "skill 'Google Kubernetes Engine': name 'Google Kubernetes Engine' is not written in its evidence, removed",
+   "skill 'Cloud DataProc': evidence re-anchored to the CV line that names it",
+   "skill 'Cloud Dataflow': evidence re-anchored to the CV line that names it",
+   "skill 'Cloud SQL': evidence re-anchored to the CV line that names it",
+   "skill 'Big-Table': evidence re-anchored to the CV line that names it",
+   "skill 'BigQuery': evidence re-anchored to the CV line that names it",
+   "skill 'ETL': evidence re-anchored to the CV line that names it",
+   "skill 'Glue': evidence re-anchored to the CV line that names it",
+   "skill 'AWS Lambdas': evidence re-anchored to the CV line that names it",
+   "experience 'Cloud Support Engineer': start 'present' not found in its evidence, removed",
+   "experience 'Cloud Support Engineer': end 'present' not found in its evidence, removed",
+   "experience 'Student Data Engineer/DevOps': start 'present' not found in its evidence, removed",
+   "experience 'Student Data Engineer/DevOps': end 'present' not found in its evidence, removed",
+   "skill 'Bash': evidence re-anchored to the CV line that names it",
+   "skill 'AWS': evidence re-anchored to the CV line that names it",
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "skill 'SQL': evidence re-anchored to the CV line that names it",
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "skill 'SQL': evidence re-anchored to the CV line that names it",
+   "skill 'AWS': evidence re-anchored to the CV line that names it",
+   "skill 'SQL': evidence re-anchored to the CV line that names it",
+   "skill 'SQL': evidence re-anchored to the CV line that names it",
+   "experience 'Intern Software Developer': start 'present' not found in its evidence, removed",
+   "experience 'Intern Software Developer': end 'present' not found in its evidence, removed",
+   "skill 'AWS': evidence re-anchored to the CV line that names it",
+   "skill 'AWS Lambda': evidence re-anchored to the CV line that names it",
+   "skill 'Amazon S3': evidence re-anchored to the CV line that names it",
+   "skill 'Cloud-Formation': evidence re-anchored to the CV line that names it",
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "skill 'PostgreSQL': evidence re-anchored to the CV line that names it",
+   "skill 'SQLite': evidence re-anchored to the CV line that names it",
+   "skill 'Django': evidence re-anchored to the CV line that names it",
+   "skill 'BeautifulSoup': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

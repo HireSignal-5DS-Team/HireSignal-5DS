@@ -1,0 +1,76 @@
+{
+ "row": {
+  "id": "p10_fr_header_and_refs",
+  "set": "synth",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 8,
+  "raw_skills_in_cv": 8,
+  "skills_kept": 6,
+  "experience": 1,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 4.3,
+  "max_completion_tokens": 251,
+  "synth_tp": 6,
+  "synth_fp": 0,
+  "synth_fn": 0
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Cisco",
+    "evidence": "- Administration Cisco et Fortinet, 300 sites."
+   },
+   {
+    "name": "Fortinet",
+    "evidence": "- Administration Cisco et Fortinet, 300 sites."
+   },
+   {
+    "name": "Ansible",
+    "evidence": "- Automatisation avec Ansible et Python."
+   },
+   {
+    "name": "Python",
+    "evidence": "- Automatisation avec Ansible et Python."
+   },
+   {
+    "name": "CCNA",
+    "evidence": "CCNA (2017), CCNP Enterprise (2020)"
+   },
+   {
+    "name": "CCNP Enterprise",
+    "evidence": "CCNA (2017), CCNP Enterprise (2020)"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Ingénieur·e en Réseaux et Télécommunications",
+    "field": "Réseaux et Télécommunications",
+    "institution": "ENIT",
+    "end": "2018",
+    "evidence": "Ingénieur·e en Réseaux et Télécommunications, ENIT, 2018"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Ingénieur·e Réseaux",
+    "company": "Ooredoo Tunisie",
+    "start": "2018",
+    "end": "2024",
+    "evidence": "Ingénieur·e Réseaux - Ooredoo Tunisie (2018 - 2024)"
+   }
+  ],
+  "uncertain": [
+   "skill 'Ansible': evidence re-anchored to the CV line that names it",
+   "skill 'Python': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

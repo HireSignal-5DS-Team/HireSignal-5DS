@@ -1,0 +1,106 @@
+{
+ "row": {
+  "id": "P40",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 24,
+  "raw_skills_in_cv": 23,
+  "skills_kept": 17,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 20.4,
+  "max_completion_tokens": 678
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Spark",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+   },
+   {
+    "name": "Spark Streaming",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+   },
+   {
+    "name": "Kafka",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+   },
+   {
+    "name": "Hadoop",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+   },
+   {
+    "name": "Airflow",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+   },
+   {
+    "name": "Hive",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+   },
+   {
+    "name": "ELK stack",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+   },
+   {
+    "name": "GCP Dataproc",
+    "evidence": "I used GCP Dataproc for running services, mentioned above."
+   },
+   {
+    "name": "GCP BigQuery",
+    "evidence": "I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "Power BI",
+    "evidence": "I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "Spark Structured Streaming",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   },
+   {
+    "name": "ETL/ELT processes",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   },
+   {
+    "name": "Data Warehouses",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   },
+   {
+    "name": "Cloud Services",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   },
+   {
+    "name": "Python",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   },
+   {
+    "name": "Data Engineering",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   },
+   {
+    "name": "Big Data",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'databases': name 'databases' is not written in its evidence, removed",
+   "skill 'relational database design': name 'relational database design' is not written in its evidence, removed",
+   "skill 'data warehouses': name 'data warehouses' is not written in its evidence, removed",
+   "skill 'ETL': name 'ETL' is not written in its evidence, removed",
+   "skill 'BI tools': name 'BI tools' is not written in its evidence, removed",
+   "skill 'data analytics': name 'data analytics' is not written in its evidence, removed",
+   "skill 'Data Lakes': name 'Data Lakes' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

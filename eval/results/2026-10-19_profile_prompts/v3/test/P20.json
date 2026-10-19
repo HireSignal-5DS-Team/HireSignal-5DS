@@ -1,0 +1,296 @@
+{
+ "row": {
+  "id": "P20",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 67,
+  "raw_skills_in_cv": 65,
+  "skills_kept": 65,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 2,
+  "terms_found": 1,
+  "terms_missed": [
+   "English"
+  ],
+  "latency_s": 15.2,
+  "max_completion_tokens": 716
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Oracle",
+    "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products. Postgres DBA with 3 years of experience."
+   },
+   {
+    "name": "Postgres",
+    "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products. Postgres DBA with 3 years of experience."
+   },
+   {
+    "name": "Oracle Certified Professional",
+    "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products. Postgres DBA with 3 years of experience."
+   },
+   {
+    "name": "OCP",
+    "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products. Postgres DBA with 3 years of experience."
+   },
+   {
+    "name": "8i",
+    "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products. Postgres DBA with 3 years of experience."
+   },
+   {
+    "name": "9i",
+    "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products. Postgres DBA with 3 years of experience."
+   },
+   {
+    "name": "10g",
+    "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products. Postgres DBA with 3 years of experience."
+   },
+   {
+    "name": "11g",
+    "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products. Postgres DBA with 3 years of experience."
+   },
+   {
+    "name": "12c",
+    "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products. Postgres DBA with 3 years of experience."
+   },
+   {
+    "name": "DevOps",
+    "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c looking for a position of Oracle/Postgres DBA / Database Administrator / DevOps."
+   },
+   {
+    "name": "Oracle 7",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "Oracle8i",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "Oracle 9i",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "Oracle 10g",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "Oracle 11g",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "Oracle 12c",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "Oracle 18c",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "Oracle 19c",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "DB2 6.x/7.x",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "Sybase 11.x/12.x",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "MS SQL 6.5/7.0",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "MS SQL 2000",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "Informix 9.x",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "MySQL 4.x",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "Postgres 9/10/11",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "AWS RDS",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "AWS Aurora Postgres",
+    "evidence": "- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;"
+   },
+   {
+    "name": "AIX",
+    "evidence": "- Operating Systems: AIX, Solaris, Red Hat Linux, HP-UX, Windows NT/2000;"
+   },
+   {
+    "name": "Solaris",
+    "evidence": "- Operating Systems: AIX, Solaris, Red Hat Linux, HP-UX, Windows NT/2000;"
+   },
+   {
+    "name": "Red Hat Linux",
+    "evidence": "- Operating Systems: AIX, Solaris, Red Hat Linux, HP-UX, Windows NT/2000;"
+   },
+   {
+    "name": "HP-UX",
+    "evidence": "- Operating Systems: AIX, Solaris, Red Hat Linux, HP-UX, Windows NT/2000;"
+   },
+   {
+    "name": "Windows NT/2000",
+    "evidence": "- Operating Systems: AIX, Solaris, Red Hat Linux, HP-UX, Windows NT/2000;"
+   },
+   {
+    "name": "IBM RS/6000",
+    "evidence": "- Hardware Platforms: IBM RS/6000, Sun V880, Sun V890, Sun E4000, Sun E5000, Dell4300, IBM PC;"
+   },
+   {
+    "name": "Sun V880",
+    "evidence": "- Hardware Platforms: IBM RS/6000, Sun V880, Sun V890, Sun E4000, Sun E5000, Dell4300, IBM PC;"
+   },
+   {
+    "name": "Sun V890",
+    "evidence": "- Hardware Platforms: IBM RS/6000, Sun V880, Sun V890, Sun E4000, Sun E5000, Dell4300, IBM PC;"
+   },
+   {
+    "name": "Sun E4000",
+    "evidence": "- Hardware Platforms: IBM RS/6000, Sun V880, Sun V890, Sun E4000, Sun E5000, Dell4300, IBM PC;"
+   },
+   {
+    "name": "Sun E5000",
+    "evidence": "- Hardware Platforms: IBM RS/6000, Sun V880, Sun V890, Sun E4000, Sun E5000, Dell4300, IBM PC;"
+   },
+   {
+    "name": "Dell4300",
+    "evidence": "- Hardware Platforms: IBM RS/6000, Sun V880, Sun V890, Sun E4000, Sun E5000, Dell4300, IBM PC;"
+   },
+   {
+    "name": "IBM PC",
+    "evidence": "- Hardware Platforms: IBM RS/6000, Sun V880, Sun V890, Sun E4000, Sun E5000, Dell4300, IBM PC;"
+   },
+   {
+    "name": "Oracle Financials (ERP) 10.7",
+    "evidence": "- Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;"
+   },
+   {
+    "name": "Vertex",
+    "evidence": "- Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;"
+   },
+   {
+    "name": "Veritas",
+    "evidence": "- Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;"
+   },
+   {
+    "name": "Clarify (CRM)",
+    "evidence": "- Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;"
+   },
+   {
+    "name": "Jinitiator",
+    "evidence": "- Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;"
+   },
+   {
+    "name": "JDK",
+    "evidence": "- Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;"
+   },
+   {
+    "name": "Oracle Web Server",
+    "evidence": "- Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;"
+   },
+   {
+    "name": "Oracle Application Server",
+    "evidence": "- Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;"
+   },
+   {
+    "name": "Brio",
+    "evidence": "- Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;"
+   },
+   {
+    "name": "MicroStrategy",
+    "evidence": "- Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;"
+   },
+   {
+    "name": "SQL",
+    "evidence": "- Programming Languages: SQL, PL/SQL, C/C++, HTML, Korn Shell, C Shell, Bash;"
+   },
+   {
+    "name": "PL/SQL",
+    "evidence": "- Programming Languages: SQL, PL/SQL, C/C++, HTML, Korn Shell, C Shell, Bash;"
+   },
+   {
+    "name": "C/C++",
+    "evidence": "- Programming Languages: SQL, PL/SQL, C/C++, HTML, Korn Shell, C Shell, Bash;"
+   },
+   {
+    "name": "HTML",
+    "evidence": "- Programming Languages: SQL, PL/SQL, C/C++, HTML, Korn Shell, C Shell, Bash;"
+   },
+   {
+    "name": "Korn Shell",
+    "evidence": "- Programming Languages: SQL, PL/SQL, C/C++, HTML, Korn Shell, C Shell, Bash;"
+   },
+   {
+    "name": "C Shell",
+    "evidence": "- Programming Languages: SQL, PL/SQL, C/C++, HTML, Korn Shell, C Shell, Bash;"
+   },
+   {
+    "name": "Bash",
+    "evidence": "- Programming Languages: SQL, PL/SQL, C/C++, HTML, Korn Shell, C Shell, Bash;"
+   },
+   {
+    "name": "Confluence",
+    "evidence": "- Project Management System: Confluence, Jira;"
+   },
+   {
+    "name": "Jira",
+    "evidence": "- Project Management System: Confluence, Jira;"
+   },
+   {
+    "name": "Git",
+    "evidence": "- Version Control: Git, SVN;"
+   },
+   {
+    "name": "SVN",
+    "evidence": "- Version Control: Git, SVN;"
+   },
+   {
+    "name": "TeamCity",
+    "evidence": "- Continuous Integration: TeamCity, Jenkins;"
+   },
+   {
+    "name": "Jenkins",
+    "evidence": "- Continuous Integration: TeamCity, Jenkins;"
+   },
+   {
+    "name": "Agile Methodologies",
+    "evidence": "- Agile Methodologies: Kanban, Scrum."
+   },
+   {
+    "name": "Kanban",
+    "evidence": "- Agile Methodologies: Kanban, Scrum."
+   },
+   {
+    "name": "Scrum",
+    "evidence": "- Agile Methodologies: Kanban, Scrum."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'DevOps': evidence re-anchored to the CV line that names it",
+   "skill 'Oracle Financials (ERP) 11.0.X': name 'Oracle Financials (ERP) 11.0.X' is not written in its evidence, removed",
+   "skill 'Oracle Financials (ERP) 11i': name 'Oracle Financials (ERP) 11i' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

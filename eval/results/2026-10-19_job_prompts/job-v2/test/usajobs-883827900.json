@@ -1,0 +1,146 @@
+{
+ "card": {
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883827900",
+  "title": "Data Scientist (Recent Graduate)",
+  "language": "en",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "text": "Be a recent graduate who has completed a qualifying degree or certificate within the last two years",
+    "evidence": "Be a recent graduate who has completed, within the last two years, a qualifying associates, bachelors, masters, professional, doctorate, vocational, or technical degree or certificate from a qualifying educational institution",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": 2.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r2",
+    "text": "Meet qualification standards such as series and grade",
+    "evidence": "Meet the qualification standards (e.g., series and grade)",
+    "kind": "must",
+    "category": "other",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r3",
+    "text": "One full year of specialized experience at or equivalent to the GS-05 level",
+    "evidence": "In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-05 level.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": 1.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r4",
+    "text": "Assisting in the aggregation and cleaning of data from multiple sources using Python, R, or SQL to support the development of standardized datasets for analysis",
+    "evidence": "Specialized experience is defined as: assisting in the aggregation and cleaning of data from multiple sources using Python, R, or SQL to support the development of standardized datasets for analysis.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "Python",
+     "R",
+     "SQL"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r5",
+    "text": "One full year of specialized experience at or equivalent to the GS-07 level",
+    "evidence": "In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-07 level.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": 1.0,
+    "chunk_ids": []
+   }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+   "'Veterans with military service obligations have up': not a requirement (administrative condition), dropped",
+   "'You must meet qualification and eligibility requir': not a requirement (application instructions), dropped"
+  ]
+ },
+ "score": {
+  "job": "usajobs-883827900",
+  "failed": 0,
+  "latency_s": 13.2,
+  "tp": 3,
+  "fp": 2,
+  "fn": 0,
+  "kind_ok": 3,
+  "terms_tp": 3,
+  "terms_fp": 0,
+  "terms_fn": 0,
+  "strict_tp": 3,
+  "strict_fp": 2,
+  "strict_fn": 0,
+  "raw_proposals": 7,
+  "raw_verbatim": 7,
+  "invented": 0,
+  "soft_must": [],
+  "splits": [
+   "you must have one full year of specialized experience at or equivalent to the GS-05 level."
+  ],
+  "merges": [],
+  "cut_calls": 0,
+  "missed": [],
+  "extra": [
+   "Meet the qualification standards (e.g., series and grade)",
+   "In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-07 level."
+  ]
+ },
+ "calls": [
+  {
+   "input": "Eligibility : In order to be eligible for our Recent Graduates Program, you must: Be a recent graduate who has completed, within the last two years, a qualifying associates, bachelors, masters, professional, doctorate, vocational, or technical degree or certificate from a qualifying educational institution ;\nAND Meet the qualification standards (e.g., series and grade).\nVeterans unable to apply within two years of receiving their degree, due to military service obligations, have as much as six years after degree completion to apply.\nYou must meet the qualification (experience and/or education) and eligibility requirements by the closing date of this announcement.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Be a recent graduate who has completed, within the last two years, a qualifying associates, bachelors, masters, professional, doctorate, vocational, or technical degree or certificate from a qualifying educational institution\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": 2, \"text\": \"Be a recent graduate who has completed a qualifying degree or certificate within the last two years\"}, {\"evidence\": \"Meet the qualification standards (e.g., series and grade)\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"Meet qualification standards such as series and grade\"}, {\"evidence\": \"Veterans unable to apply within two years of receiving their degree, due to military service obligations, have as much as six years after degree completion to apply\", \"skill_terms\": [], \"kind\": \"nice\", \"category\": \"other\", \"min_years\": null, \"text\": \"Veterans with military service obligations have up to six years to apply after degree completion\"}, {\"evidence\": \"You must meet the qualification (experience and/or education) and eligibility requirements by the closing date of this announcement\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"You must meet qualification and eligibility requirements by the closing date\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "To view the eligibility and qualification requirements of a/n Data Scientist (Recent Graduate), GS-1560, please visit: Data Scientist For the GS-07: In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-05 level.\nSpecialized experience is defined as: assisting in the aggregation and cleaning of data from multiple sources using Python, R, or SQL to support the development of standardized datasets for analysis.\nFor the GS-09: In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-07 level.",
+   "raw": "{\"requirements\": [{\"evidence\": \"In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-05 level.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"One full year of specialized experience at or equivalent to the GS-05 level\"}, {\"evidence\": \"Specialized experience is defined as: assisting in the aggregation and cleaning of data from multiple sources using Python, R, or SQL to support the development of standardized datasets for analysis.\", \"skill_terms\": [\"Python\", \"R\", \"SQL\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Assisting in the aggregation and cleaning of data from multiple sources using Python, R, or SQL to support the development of standardized datasets for analysis\"}, {\"evidence\": \"In addition to the education required for this position, you must have one full year of specialized experience at or equivalent to the GS-07 level.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"One full year of specialized experience at or equivalent to the GS-07 level\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Specialized experience is defined as: Extracting, aggregating, and cleaning complex data from relational databases via Python, R, or SQL to create standardized datasets for further analysis.\nExperience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional; philanthropic; religious; spiritual; community, student, social).\nVolunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "You will receive credit for all qualifying experience, including any volunteer experience.\nPlease do not cut and paste the \"Duties\" section, specialized experience statement, or occupational assessment questionnaire from this announcement into your resume, as this will not be considered a demonstration of your qualifications for this position.\nEducation This position has an education requirement and therefore, transcripts are required.\nFailure to submit a copy of your transcripts at the time of application will result in your application being marked incomplete and you will not receive further consideration.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "PASS/FAIL COURSES: If more than 10 percent of your undergraduate course work (credit hours) were taken on a pass/fail basis, your claim of superior academic achievement must be based upon class standing or membership in an honor society.\nGRADUATE EDUCATION: One academic year of graduate education is the number of credits hours your graduate school has determined to represent one academic year of full-time study.\nSuch study may have been performed on a full-time or part-time basis.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "If you cannot obtain your graduate school's definition of one year of graduate study, 18 semester hours (or 27 quarter hours) should be considered as satisfying the requirement for one year of full-time graduate study.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "This position has an education requirement and therefore, transcripts are required.\nFailure to submit a copy of your transcripts at the time of application will result in your application being marked incomplete and you will not receive further consideration.\nPASS/FAIL COURSES: If more than 10 percent of your undergraduate course work (credit hours) were taken on a pass/fail basis, your claim of superior academic achievement must be based upon class standing or membership in an honor society.\nGRADUATE EDUCATION: One academic year of graduate education is the number of credits hours your graduate school has determined to represent one academic year of full-time study.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Such study may have been performed on a full-time or part-time basis.\nIf you cannot obtain your graduate school's definition of one year of graduate study, 18 semester hours (or 27 quarter hours) should be considered as satisfying the requirement for one year of full-time graduate study.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Summary\nThe Federal Energy Regulatory Commission (FERC) is ranked within the top 5 mid-size agencies as a \"Best Place to Work\" in the Federal government! Our Pathways Recent Graduates Program provides first-hand developmental experiences in the energy industry, while gaining exposure to the Commission's work. This Data Scientist (Recent Graduate) position is located in the Office of Enforcement and Regulatory Accounting. For more information visit: OERA Learn more about this agency\n\nDuties\nAs a Data Scientist (Recent Graduate) some of your typical work assignments include: Developing and maint",
+   "raw": "{\n    \"job_title\": \"Data Scientist (Recent Graduate)\"\n}",
+   "finish": "stop"
+  }
+ ]
+}

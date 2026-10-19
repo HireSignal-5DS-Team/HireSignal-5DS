@@ -1,0 +1,217 @@
+{
+ "row": {
+  "id": "P51",
+  "set": "gold",
+  "calls": 4,
+  "json_valid": 4,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 43,
+  "raw_skills_in_cv": 43,
+  "skills_kept": 36,
+  "experience": 2,
+  "education": 1,
+  "terms_present": 4,
+  "terms_found": 4,
+  "terms_missed": [],
+  "latency_s": 14.1,
+  "max_completion_tokens": 318
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Position: Python Developer"
+   },
+   {
+    "name": "AWS CDK",
+    "evidence": "Senior Backend Engineer\n\nA transaction Monitoring solution that helps compliance officers to find transactions that are related to Money Laundering or Terrorism Financing. I\ndesigned and execute well-engineered, easy-to-maintain, reliable, and bug-free code for various company apps (microservices) in collaboration with AI engineers, data scientists, programmers, and other software personnel.\nConfigured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK."
+   },
+   {
+    "name": "CI/CD",
+    "evidence": "Senior Backend Engineer\n\nA transaction Monitoring solution that helps compliance officers to find transactions that are related to Money Laundering or Terrorism Financing. I\ndesigned and execute well-engineered, easy-to-maintain, reliable, and bug-free code for various company apps (microservices) in collaboration with AI engineers, data scientists, programmers, and other software personnel.\nConfigured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK."
+   },
+   {
+    "name": "microservices",
+    "evidence": "Senior Backend Engineer\n\nA transaction Monitoring solution that helps compliance officers to find transactions that are related to Money Laundering or Terrorism Financing. I\ndesigned and execute well-engineered, easy-to-maintain, reliable, and bug-free code for various company apps (microservices) in collaboration with AI engineers, data scientists, programmers, and other software personnel.\nConfigured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK."
+   },
+   {
+    "name": "FastAPI",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "AWS",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "lambda",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "SNS",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "SQS",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Athena",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "DynamoDB",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "CDK",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Git",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Gitlab CI/CD",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Scrum",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Agile",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "JIRA",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Linux",
+    "evidence": "Linux, Python 3.8 & 2.7, Flask, Docker/Docker-Compose, MongoDB, AWS, CI/CD, logging(Sentry), Git(Bitbucket), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Python 3.8",
+    "evidence": "Linux, Python 3.8 & 2.7, Flask, Docker/Docker-Compose, MongoDB, AWS, CI/CD, logging(Sentry), Git(Bitbucket), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Python 3.6",
+    "evidence": "Linux, Python 3.6, Django + Django ORM, Oscar E-Commerce, GraphQL(graphene), Docker-Compose, pytest, Wagtail, PostgreSQL, ReactJS, AWS, CI/CD, logging(Sentry), GitLab, Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Flask",
+    "evidence": "Linux, Python 3.8 & 2.7, Flask, Docker/Docker-Compose, MongoDB, AWS, CI/CD, logging(Sentry), Git(Bitbucket), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Docker",
+    "evidence": "Linux, Python 3.8 & 2.7, Flask, Docker/Docker-Compose, MongoDB, AWS, CI/CD, logging(Sentry), Git(Bitbucket), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Docker-Compose",
+    "evidence": "Linux, Python 3.8 & 2.7, Flask, Docker/Docker-Compose, MongoDB, AWS, CI/CD, logging(Sentry), Git(Bitbucket), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "MongoDB",
+    "evidence": "Linux, Python 3.8 & 2.7, Flask, Docker/Docker-Compose, MongoDB, AWS, CI/CD, logging(Sentry), Git(Bitbucket), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "logging(Sentry)",
+    "evidence": "Linux, Python 3.8 & 2.7, Flask, Docker/Docker-Compose, MongoDB, AWS, CI/CD, logging(Sentry), Git(Bitbucket), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Bitbucket",
+    "evidence": "Linux, Python 3.8 & 2.7, Flask, Docker/Docker-Compose, MongoDB, AWS, CI/CD, logging(Sentry), Git(Bitbucket), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Django",
+    "evidence": "Linux, Python 3.6, Django + Django ORM, Oscar E-Commerce, GraphQL(graphene), Docker-Compose, pytest, Wagtail, PostgreSQL, ReactJS, AWS, CI/CD, logging(Sentry), GitLab, Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Django ORM",
+    "evidence": "Linux, Python 3.6, Django + Django ORM, Oscar E-Commerce, GraphQL(graphene), Docker-Compose, pytest, Wagtail, PostgreSQL, ReactJS, AWS, CI/CD, logging(Sentry), GitLab, Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Oscar E-Commerce",
+    "evidence": "Linux, Python 3.6, Django + Django ORM, Oscar E-Commerce, GraphQL(graphene), Docker-Compose, pytest, Wagtail, PostgreSQL, ReactJS, AWS, CI/CD, logging(Sentry), GitLab, Scrum, Agile, JIRA"
+   },
+   {
+    "name": "GraphQL",
+    "evidence": "Linux, Python 3.6, Django + Django ORM, Oscar E-Commerce, GraphQL(graphene), Docker-Compose, pytest, Wagtail, PostgreSQL, ReactJS, AWS, CI/CD, logging(Sentry), GitLab, Scrum, Agile, JIRA"
+   },
+   {
+    "name": "graphene",
+    "evidence": "Linux, Python 3.6, Django + Django ORM, Oscar E-Commerce, GraphQL(graphene), Docker-Compose, pytest, Wagtail, PostgreSQL, ReactJS, AWS, CI/CD, logging(Sentry), GitLab, Scrum, Agile, JIRA"
+   },
+   {
+    "name": "pytest",
+    "evidence": "Linux, Python 3.6, Django + Django ORM, Oscar E-Commerce, GraphQL(graphene), Docker-Compose, pytest, Wagtail, PostgreSQL, ReactJS, AWS, CI/CD, logging(Sentry), GitLab, Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Wagtail",
+    "evidence": "Linux, Python 3.6, Django + Django ORM, Oscar E-Commerce, GraphQL(graphene), Docker-Compose, pytest, Wagtail, PostgreSQL, ReactJS, AWS, CI/CD, logging(Sentry), GitLab, Scrum, Agile, JIRA"
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Linux, Python 3.6, Django + Django ORM, Oscar E-Commerce, GraphQL(graphene), Docker-Compose, pytest, Wagtail, PostgreSQL, ReactJS, AWS, CI/CD, logging(Sentry), GitLab, Scrum, Agile, JIRA"
+   },
+   {
+    "name": "ReactJS",
+    "evidence": "Linux, Python 3.6, Django + Django ORM, Oscar E-Commerce, GraphQL(graphene), Docker-Compose, pytest, Wagtail, PostgreSQL, ReactJS, AWS, CI/CD, logging(Sentry), GitLab, Scrum, Agile, JIRA"
+   },
+   {
+    "name": "GitLab",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Master's",
+    "field": "Professional Python Developer",
+    "institution": null,
+    "end": null,
+    "evidence": "Master's degree, Professional Python Developer with experience in building complete cycles of applications."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Senior Backend Engineer",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Senior Backend Engineer\n\nA transaction Monitoring solution that helps compliance officers to find transactions that are related to Money Laundering or Terrorism Financing. I\ndesigned and execute well-engineered, easy-to-maintain, reliable, and bug-free code for various company apps (microservices) in collaboration with AI engineers, data scientists, programmers, and other software personnel.\nConfigured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK."
+   },
+   {
+    "title": "Development Team Lead / Senior Python Engineer",
+    "company": "Visualfabriq",
+    "start": null,
+    "end": null,
+    "evidence": "- Visualfabriq (Netherlands)\n\nDevelopment Team Lead / Senior Python Engineer\n\nVisualfabriq is a web tool for FMCGs to plan and manage promotions, make invoices, and build reports and data forecasts. My team was responsible for the Invoices module (which is a part of the Promotions module). The team consisted of 5 people (3 backend developers). I provided coaching, performance review, 1 to 1 sessions, and was the first person for contact. As a developer, I built new features, supported existing ones, optimized\nperformance, raised tests code coverage from 60% to 87%, and successfully led the project transition from\nPython 2.7 to 3.8"
+   }
+  ],
+  "uncertain": [
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "education 'Master's': institution 'N/A' is not written in its evidence, removed",
+   "education 'Master's': end 'N/A' not found in its evidence, removed",
+   "experience 'Senior Backend Engineer': company 'Sentinels AI (acquired by Fenergo)' is not written in its evidence, removed",
+   "experience 'Senior Backend Engineer': start 'N/A' not found in its evidence, removed",
+   "experience 'Senior Backend Engineer': end 'N/A' not found in its evidence, removed",
+   "experience 'Development Team Lead / Senior Python Engineer': start 'present' not found in its evidence, removed",
+   "experience 'Development Team Lead / Senior Python Engineer': end 'present' not found in its evidence, removed",
+   "skill 'Python 3.6': evidence re-anchored to the CV line that names it",
+   "skill 'Django': evidence re-anchored to the CV line that names it",
+   "skill 'Django ORM': evidence re-anchored to the CV line that names it",
+   "skill 'Oscar E-Commerce': evidence re-anchored to the CV line that names it",
+   "skill 'GraphQL': evidence re-anchored to the CV line that names it",
+   "skill 'graphene': evidence re-anchored to the CV line that names it",
+   "skill 'pytest': evidence re-anchored to the CV line that names it",
+   "skill 'Wagtail': evidence re-anchored to the CV line that names it",
+   "skill 'PostgreSQL': evidence re-anchored to the CV line that names it",
+   "skill 'ReactJS': evidence re-anchored to the CV line that names it",
+   "skill 'GitLab': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

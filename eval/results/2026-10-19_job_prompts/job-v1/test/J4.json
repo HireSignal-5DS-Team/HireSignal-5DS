@@ -1,0 +1,204 @@
+{
+ "card": {
+  "schema_version": "0.1.0",
+  "job_id": "J4",
+  "title": "Python BackEnd Developer",
+  "language": "en",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "text": "5 years of experience in development (At least 2 years experience in developing big systems with Python)",
+    "evidence": "5 years of experience in development (At least 2 years experience in developing big systems with Python) - Must",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "Python"
+    ],
+    "min_years": 5.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r2",
+    "text": "asynchronous programming",
+    "evidence": "Asynchronous programming and experience in developing performance-critical applications",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "asynchronous programming"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r3",
+    "text": "performance-critical applications",
+    "evidence": "Asynchronous programming and experience in developing performance-critical applications",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "performance-critical applications"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r4",
+    "text": "Working with AWS – Advantages",
+    "evidence": "Working with AWS, Docker, and microservices – Advantages",
+    "kind": "nice",
+    "category": "skill",
+    "skill_terms": [
+     "AWS"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r5",
+    "text": "Working with Docker – Advantages",
+    "evidence": "Working with AWS, Docker, and microservices – Advantages",
+    "kind": "nice",
+    "category": "skill",
+    "skill_terms": [
+     "Docker"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r6",
+    "text": "Working with microservices – Advantages",
+    "evidence": "Working with AWS, Docker, and microservices – Advantages",
+    "kind": "nice",
+    "category": "skill",
+    "skill_terms": [
+     "microservices"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r7",
+    "text": "Experience with Machine Learning",
+    "evidence": "Experience with Machine Learning – Advantages",
+    "kind": "nice",
+    "category": "skill",
+    "skill_terms": [
+     "Machine Learning"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r8",
+    "text": "Algorithms development (collaborative filtering) - Advantages",
+    "evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages",
+    "kind": "nice",
+    "category": "skill",
+    "skill_terms": [
+     "collaborative filtering"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r9",
+    "text": "Algorithms development (similarity) - Advantages",
+    "evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages",
+    "kind": "nice",
+    "category": "skill",
+    "skill_terms": [
+     "similarity"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r10",
+    "text": "Algorithms development (data normalization) - Advantages",
+    "evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages",
+    "kind": "nice",
+    "category": "skill",
+    "skill_terms": [
+     "data normalization"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r11",
+    "text": "Algorithms development (clustering) - Advantages",
+    "evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages",
+    "kind": "nice",
+    "category": "skill",
+    "skill_terms": [
+     "clustering"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r12",
+    "text": "Excellent analytical and time management skills",
+    "evidence": "Excellent analytical and time management skills",
+    "kind": "nice",
+    "category": "other",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r13",
+    "text": "Teamwork skills with a problem-solving attitude.",
+    "evidence": "Teamwork skills with a problem-solving attitude.",
+    "kind": "nice",
+    "category": "other",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": []
+ },
+ "score": {
+  "job": "J4",
+  "failed": 0,
+  "latency_s": 9.1,
+  "tp": 5,
+  "fp": 2,
+  "fn": 0,
+  "kind_ok": 5,
+  "terms_tp": 11,
+  "terms_fp": 0,
+  "terms_fn": 0,
+  "strict_tp": 5,
+  "strict_fp": 8,
+  "strict_fn": 1,
+  "raw_proposals": 7,
+  "raw_verbatim": 7,
+  "invented": 0,
+  "soft_must": [],
+  "splits": [],
+  "merges": [],
+  "cut_calls": 0,
+  "missed": [],
+  "extra": [
+   "Excellent analytical and time management skills",
+   "Teamwork skills with a problem-solving attitude."
+  ]
+ },
+ "calls": [
+  {
+   "input": "· 5 years of experience in development (At least 2 years experience in developing big systems with Python) - Must\n· Asynchronous programming and experience in developing performance-critical applications\n· Working with AWS, Docker, and microservices – Advantages\n· Experience with Machine Learning – Advantages\n· Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages\n· Excellent analytical and time management skills\n· Teamwork skills with a problem-solving attitude.",
+   "raw": "{\"requirements\": [{\"evidence\": \"5 years of experience in development (At least 2 years experience in developing big systems with Python) - Must\", \"skill_terms\": [\"Python\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 5, \"text\": \"5 years of experience in development (At least 2 years experience in developing big systems with Python)\"}, {\"evidence\": \"Asynchronous programming and experience in developing performance-critical applications\", \"skill_terms\": [\"asynchronous programming\", \"performance-critical applications\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Asynchronous programming and experience in developing performance-critical applications\"}, {\"evidence\": \"Working with AWS, Docker, and microservices – Advantages\", \"skill_terms\": [\"AWS\", \"Docker\", \"microservices\"], \"kind\": \"nice\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Working with AWS, Docker, and microservices\"}, {\"evidence\": \"Experience with Machine Learning – Advantages\", \"skill_terms\": [\"Machine Learning\"], \"kind\": \"nice\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Experience with Machine Learning\"}, {\"evidence\": \"Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages\", \"skill_terms\": [\"collaborative filtering\", \"similarity\", \"data normalization\", \"clustering\"], \"kind\": \"nice\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Algorithms development (collaborative filtering, similarity, data normalization, clustering)\"}, {\"evidence\": \"Excellent analytical and time management skills\", \"skill_terms\": [], \"kind\": \"nice\", \"category\": \"other\", \"min_years\": null, \"text\": \"Excellent analytical and time management skills\"}, {\"evidence\": \"Teamwork skills with a problem-solving attitude.\", \"skill_terms\": [], \"kind\": \"nice\", \"category\": \"other\", \"min_years\": null, \"text\": \"Teamwork skills with a problem-solving attitude.\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Djinni job id: 0dc63314-bb5e-551c-a012-65d5850b4938\nPosition: Python BackEnd Developer\nExperience (Djinni field): 3y\nEnglish level (Djinni field): upper\n\nAbout the project\n\nWe are looking for an experienced Python developer. You will be responsible for the server-side of our web applications.\nIf you have excellent programming skills and a passion for developing applications or improving existing ones, we would like to meet you.\nAs a Back-end developer, you’ll work closely with our engineers to ensure system consistency and improve user experience.\nUltimately, you should be able to develop and ",
+   "raw": "{\n    \"job_title\": \"Python BackEnd Developer\"\n}",
+   "finish": "stop"
+  }
+ ]
+}

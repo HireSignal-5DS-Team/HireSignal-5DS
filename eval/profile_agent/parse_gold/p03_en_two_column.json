@@ -1,0 +1,55 @@
+{
+ "cv": "p03_en_two_column",
+ "skills": [
+  [
+   "PyTorch"
+  ],
+  [
+   "Spark"
+  ],
+  [
+   "OpenCV"
+  ],
+  [
+   "Python"
+  ],
+  [
+   "C++"
+  ]
+ ],
+ "skills_optional": [
+  "transformer models",
+  "Computer vision",
+  "GPU clusters",
+  "data pipelines",
+  "transformers"
+ ],
+ "education": [
+  {
+   "degree": "MSc",
+   "field": "Artificial Intelligence",
+   "institution": "Université Paris-Saclay",
+   "end": "2022"
+  },
+  {
+   "degree": "BSc",
+   "field": "Mathematics",
+   "institution": "Faculty of Sciences of Tunis",
+   "end": "2020"
+  }
+ ],
+ "experience": [
+  {
+   "title": "ML Engineer",
+   "company": "InstaDeep",
+   "start": "2022",
+   "end": "present"
+  },
+  {
+   "title": "Research Intern",
+   "company": "Inria",
+   "start": "2021",
+   "end": "2022"
+  }
+ ]
+}

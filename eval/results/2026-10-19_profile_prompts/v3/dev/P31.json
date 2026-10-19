@@ -1,0 +1,95 @@
+{
+ "row": {
+  "id": "P31",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 15,
+  "raw_skills_in_cv": 13,
+  "skills_kept": 13,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 1.8,
+  "max_completion_tokens": 102
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Position: Python/Django full-stack web developer\nExperience years: 5\nEnglish level: fluent"
+   },
+   {
+    "name": "Django",
+    "evidence": "Position: Python/Django full-stack web developer\nExperience years: 5\nEnglish level: fluent"
+   },
+   {
+    "name": "full-stack",
+    "evidence": "Position: Python/Django full-stack web developer\nExperience years: 5\nEnglish level: fluent"
+   },
+   {
+    "name": "backend",
+    "evidence": "- Lead redesign and optimization of backend and deployment for two legacy projects in 3-4 member teams."
+   },
+   {
+    "name": "deployment",
+    "evidence": "- Lead redesign and optimization of backend and deployment for two legacy projects in 3-4 member teams."
+   },
+   {
+    "name": "full-text search",
+    "evidence": "- Developed a custom full-text search with complex ranking logics."
+   },
+   {
+    "name": "legacy codebases",
+    "evidence": "I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-sized websites. I have expertise in building projects from scratch and improving legacy codebases concerning best practices. Excellent communication skills help me facilitate teamwork, mentor junior developers, and transform ideas into business value."
+   },
+   {
+    "name": "best practices",
+    "evidence": "I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-sized websites. I have expertise in building projects from scratch and improving legacy codebases concerning best practices. Excellent communication skills help me facilitate teamwork, mentor junior developers, and transform ideas into business value."
+   },
+   {
+    "name": "teamwork",
+    "evidence": "I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-sized websites. I have expertise in building projects from scratch and improving legacy codebases concerning best practices. Excellent communication skills help me facilitate teamwork, mentor junior developers, and transform ideas into business value."
+   },
+   {
+    "name": "communication",
+    "evidence": "I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-sized websites. I have expertise in building projects from scratch and improving legacy codebases concerning best practices. Excellent communication skills help me facilitate teamwork, mentor junior developers, and transform ideas into business value."
+   },
+   {
+    "name": "planning",
+    "evidence": "I appreciate challenging tasks, good planning, and healthy corporate culture. I would prefer to work in product companies."
+   },
+   {
+    "name": "corporate culture",
+    "evidence": "I appreciate challenging tasks, good planning, and healthy corporate culture. I would prefer to work in product companies."
+   },
+   {
+    "name": "product companies",
+    "evidence": "I appreciate challenging tasks, good planning, and healthy corporate culture. I would prefer to work in product companies."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'backend': evidence re-anchored to the CV line that names it",
+   "skill 'deployment': evidence re-anchored to the CV line that names it",
+   "skill 'full-text search': evidence re-anchored to the CV line that names it",
+   "skill 'complex filtering': name 'complex filtering' is not written in its evidence, removed",
+   "skill 'legacy codebases': evidence re-anchored to the CV line that names it",
+   "skill 'best practices': evidence re-anchored to the CV line that names it",
+   "skill 'teamwork': evidence re-anchored to the CV line that names it",
+   "skill 'communication': evidence re-anchored to the CV line that names it",
+   "skill 'mentoring': name 'mentoring' is not written in its evidence, removed",
+   "skill 'planning': evidence re-anchored to the CV line that names it",
+   "skill 'corporate culture': evidence re-anchored to the CV line that names it",
+   "skill 'product companies': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

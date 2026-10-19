@@ -1,0 +1,121 @@
+{
+ "row": {
+  "id": "P50",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 55,
+  "raw_skills_in_cv": 54,
+  "skills_kept": 10,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 5,
+  "terms_found": 1,
+  "terms_missed": [
+   "Python",
+   "AWS",
+   "Docker",
+   "Machine Learning"
+  ],
+  "latency_s": 6.8,
+  "max_completion_tokens": 223
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "API",
+    "evidence": "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)"
+   },
+   {
+    "name": "Microservices",
+    "evidence": "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)"
+   },
+   {
+    "name": "LoRaWAN",
+    "evidence": "- Implemented an advertising system\n- Implemented payment gateway\n- Implemented smart home software and hardware IoT things (LoRaWAN, ZigBee).\n- Implemented highload datastore with lot of ETL pipelines\n- Etc."
+   },
+   {
+    "name": "ZigBee",
+    "evidence": "- Implemented an advertising system\n- Implemented payment gateway\n- Implemented smart home software and hardware IoT things (LoRaWAN, ZigBee).\n- Implemented highload datastore with lot of ETL pipelines\n- Etc."
+   },
+   {
+    "name": "VOIP",
+    "evidence": "- VOIP (asterisk, asterisk AGI scripts)\n- Blockchain development (Basic Knowledges)\n- Linux/MacOS Expert :)"
+   },
+   {
+    "name": "asterisk",
+    "evidence": "- VOIP (asterisk, asterisk AGI scripts)\n- Blockchain development (Basic Knowledges)\n- Linux/MacOS Expert :)"
+   },
+   {
+    "name": "asterisk AGI scripts",
+    "evidence": "- VOIP (asterisk, asterisk AGI scripts)\n- Blockchain development (Basic Knowledges)\n- Linux/MacOS Expert :)"
+   },
+   {
+    "name": "Blockchain development",
+    "evidence": "- VOIP (asterisk, asterisk AGI scripts)\n- Blockchain development (Basic Knowledges)\n- Linux/MacOS Expert :)"
+   },
+   {
+    "name": "Linux",
+    "evidence": "- VOIP (asterisk, asterisk AGI scripts)\n- Blockchain development (Basic Knowledges)\n- Linux/MacOS Expert :)"
+   },
+   {
+    "name": "MacOS",
+    "evidence": "- VOIP (asterisk, asterisk AGI scripts)\n- Blockchain development (Basic Knowledges)\n- Linux/MacOS Expert :)"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Python': name 'Python' is not written in its evidence, removed",
+   "skill 'Golang': name 'Golang' is not written in its evidence, removed",
+   "skill 'Asterisk': name 'Asterisk' is not written in its evidence, removed",
+   "skill 'Social media APIs': name 'Social media APIs' is not written in its evidence, removed",
+   "skill 'IoT': name 'IoT' is not written in its evidence, removed",
+   "skill 'LocationBased': name 'LocationBased' is not written in its evidence, removed",
+   "skill 'Billing': name 'Billing' is not written in its evidence, removed",
+   "skill 'Traffic monitoring': name 'Traffic monitoring' is not written in its evidence, removed",
+   "skill 'Motion detection': name 'Motion detection' is not written in its evidence, removed",
+   "skill 'Python': name 'Python' is not written in its evidence, removed",
+   "skill 'FastAPI': name 'FastAPI' is not written in its evidence, removed",
+   "skill 'asyncio': name 'asyncio' is not written in its evidence, removed",
+   "skill 'Django': name 'Django' is not written in its evidence, removed",
+   "skill 'DRF': name 'DRF' is not written in its evidence, removed",
+   "skill 'Flask': name 'Flask' is not written in its evidence, removed",
+   "skill 'Celery': name 'Celery' is not written in its evidence, removed",
+   "skill 'gevent': name 'gevent' is not written in its evidence, removed",
+   "skill 'Golang': name 'Golang' is not written in its evidence, removed",
+   "skill 'fiber': name 'fiber' is not written in its evidence, removed",
+   "skill 'gin': name 'gin' is not written in its evidence, removed",
+   "skill 'beego': name 'beego' is not written in its evidence, removed",
+   "skill 'echo': name 'echo' is not written in its evidence, removed",
+   "skill 'PostgreSQL': name 'PostgreSQL' is not written in its evidence, removed",
+   "skill 'Redis': name 'Redis' is not written in its evidence, removed",
+   "skill 'RabbitMQ': name 'RabbitMQ' is not written in its evidence, removed",
+   "skill 'MongoDB': name 'MongoDB' is not written in its evidence, removed",
+   "skill 'MySQL': name 'MySQL' is not written in its evidence, removed",
+   "skill 'ElasticSearch': name 'ElasticSearch' is not written in its evidence, removed",
+   "skill 'Cassandra': name 'Cassandra' is not written in its evidence, removed",
+   "skill 'Kafka': name 'Kafka' is not written in its evidence, removed",
+   "skill 'Tarantool': name 'Tarantool' is not written in its evidence, removed",
+   "skill 'Kubernetes': name 'Kubernetes' is not written in its evidence, removed",
+   "skill 'Docker': name 'Docker' is not written in its evidence, removed",
+   "skill 'AWS': name 'AWS' is not written in its evidence, removed",
+   "skill 'Azure': name 'Azure' is not written in its evidence, removed",
+   "skill 'SparkNLP': name 'SparkNLP' is not written in its evidence, removed",
+   "skill 'StanfordNLP': name 'StanfordNLP' is not written in its evidence, removed",
+   "skill 'TensorFlow': name 'TensorFlow' is not written in its evidence, removed",
+   "skill 'PyTorch': name 'PyTorch' is not written in its evidence, removed",
+   "skill 'nltk': name 'nltk' is not written in its evidence, removed",
+   "skill 'Raspberry Pi': name 'Raspberry Pi' is not written in its evidence, removed",
+   "skill 'Arduino': name 'Arduino' is not written in its evidence, removed",
+   "skill 'ESP32': name 'ESP32' is not written in its evidence, removed",
+   "skill 'Linux': name 'Linux' is not written in its evidence, removed",
+   "skill 'Device drivers': name 'Device drivers' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

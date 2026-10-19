@@ -1,0 +1,62 @@
+v1 test P02 ok cut 0 skills 19 terms 0/0 20.9
+v1 test P04 ok cut 0 skills 16 terms 0/0 10.5
+v1 test P06 ok cut 0 skills 27 terms 1/1 17.9
+v1 test P08 ok cut 0 skills 7 terms 0/0 7.2
+v1 test P10 ok cut 0 skills 5 terms 0/1 6.1
+v1 test P12 partial cut 2 skills 20 terms 0/2 45.4
+v1 test P14 ok cut 0 skills 1 terms 0/1 0.6
+v1 test P16 partial cut 4 skills 5 terms 2/4 59.3
+v1 test P18 ok cut 0 skills 8 terms 2/3 15.2
+v1 test P20 partial cut 2 skills 8 terms 1/2 34.0
+v1 test P22 partial cut 2 skills 27 terms 3/6 52.6
+v1 test P24 ok cut 0 skills 7 terms 0/0 2.3
+v1 test P26 ok cut 0 skills 14 terms 1/1 12.4
+v1 test P28 ok cut 0 skills 8 terms 1/2 7.8
+v1 test P30 ok cut 0 skills 16 terms 1/1 9.0
+v1 test P32 partial cut 4 skills 0 terms 0/3 52.8
+v1 test P34 ok cut 0 skills 11 terms 2/2 9.3
+v1 test P36 ok cut 0 skills 12 terms 1/1 6.9
+v1 test P38 ok cut 0 skills 16 terms 2/2 8.7
+v1 test P40 ok cut 0 skills 17 terms 1/1 20.4
+v1 test P43 partial cut 2 skills 17 terms 0/3 36.7
+v1 test P44 partial cut 2 skills 0 terms 0/3 26.5
+v1 test P46 partial cut 2 skills 0 terms 0/3 26.4
+v1 test P47 partial cut 4 skills 14 terms 4/13 62.6
+v1 test P49 partial cut 4 skills 22 terms 4/11 72.8
+v1 test P52 partial cut 2 skills 42 terms 2/4 55.1
+v1 test K03 partial cut 6 skills 68 terms 0/0 129.1
+v1 test K04 partial cut 2 skills 34 terms 0/0 55.8
+v1 test K05 partial cut 2 skills 51 terms 0/0 98.3
+v1 test p06_fr_proxies ok cut 0 skills 4 terms 0/0 4.0
+v1 test p07_en_personal_details ok cut 0 skills 5 terms 0/0 4.4
+v1 test p08_fr_particle ok cut 0 skills 6 terms 0/0 5.0
+v1 test p09_en_years_and_handles ok cut 0 skills 6 terms 0/0 6.5
+v1 test p10_fr_header_and_refs ok cut 0 skills 4 terms 0/0 4.2
+v1 test {"cvs": 34, "partial": 14, "partial_rate": 0.412, "calls": 116, "cut_calls": 40, "json_valid": 0.655, "skills_precision_raw": 0.965, "skills_kept": 517, "experience": 48, "education": 15, "term_recall": "28/70", "synth_skills_precision": 1.0, "synth_skills_recall": 0.714, "latency_s_mean": 29.0}
+v3 test P02 ok cut 0 skills 19 terms 0/0 10.1
+v3 test P04 ok cut 0 skills 18 terms 0/0 6.8
+v3 test P06 ok cut 0 skills 33 terms 1/1 7.1
+v3 test P08 ok cut 0 skills 7 terms 0/0 3.2
+v3 test P10 ok cut 0 skills 8 terms 1/1 4.6
+Traceback (most recent call last):
+  File "C:\Users\semah\Desktop\YD\scripts\eval_profile_prompts.py", line 162, in <module>
+    main()
+  File "C:\Users\semah\Desktop\YD\scripts\eval_profile_prompts.py", line 146, in main
+    row, prof = run_case(c, version, chunk, mt)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\semah\Desktop\YD\scripts\eval_profile_prompts.py", line 87, in run_case
+    prof = parse_cv(anon, "cv-00000000", rec, prompt_version=version, chunk_chars=chunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\semah\Desktop\YD\services\profile\parse.py", line 309, in parse_cv
+    s, e, x = check_items(data, anon_text, notes)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\semah\Desktop\YD\services\profile\parse.py", line 189, in check_items
+    skills.append(Skill(name=name.strip(" .,;:"), evidence=ev))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\semah\Desktop\YD\.venv\Lib\site-packages\pydantic\main.py", line 280, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Skill
+name
+  String should have at least 1 character [type=string_too_short, input_value='', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/string_too_short

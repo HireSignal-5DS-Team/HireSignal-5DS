@@ -1,0 +1,159 @@
+{
+ "row": {
+  "id": "P06",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 31,
+  "raw_skills_in_cv": 31,
+  "skills_kept": 27,
+  "experience": 0,
+  "education": 2,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 17.9,
+  "max_completion_tokens": 640
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "C++",
+    "evidence": "Languages: C++, Python, SQL, R(basic)"
+   },
+   {
+    "name": "Python",
+    "evidence": "Languages: C++, Python, SQL, R(basic)"
+   },
+   {
+    "name": "SQL",
+    "evidence": "Languages: C++, Python, SQL, R(basic)"
+   },
+   {
+    "name": "R",
+    "evidence": "Languages: C++, Python, SQL, R(basic)"
+   },
+   {
+    "name": "mathematical finance",
+    "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "stock prediction",
+    "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "LSTM",
+    "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "ARIMA",
+    "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "Monte Carlo Markov Chain",
+    "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "investment portfolio optimization",
+    "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "hedging",
+    "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "quantitative finance",
+    "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling"
+   },
+   {
+    "name": "risk modelling",
+    "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling"
+   },
+   {
+    "name": "credit scoring modelling",
+    "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling"
+   },
+   {
+    "name": "regression",
+    "evidence": "Experience in regression and neural models for stock prediction"
+   },
+   {
+    "name": "neural models",
+    "evidence": "Experience in regression and neural models for stock prediction"
+   },
+   {
+    "name": "CNN",
+    "evidence": "CNN pytorch, tabnet, xgboost"
+   },
+   {
+    "name": "pytorch",
+    "evidence": "CNN pytorch, tabnet, xgboost"
+   },
+   {
+    "name": "tabnet",
+    "evidence": "CNN pytorch, tabnet, xgboost"
+   },
+   {
+    "name": "xgboost",
+    "evidence": "CNN pytorch, tabnet, xgboost"
+   },
+   {
+    "name": "binary classification",
+    "evidence": "I also have knowledge in binary classification models"
+   },
+   {
+    "name": "deep learning",
+    "evidence": "Deep Learning Specialization by [URL] (5 courses)"
+   },
+   {
+    "name": "GANs",
+    "evidence": "Build Better Generative Adversarial Networks (GANs) by [URL]"
+   },
+   {
+    "name": "TensorFlow",
+    "evidence": "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning by [URL]"
+   },
+   {
+    "name": "economic modelling",
+    "evidence": "Even though I have experience in mathematical finance and economic modelling"
+   },
+   {
+    "name": "NLP",
+    "evidence": "I am also interested in CV/NLP projects"
+   },
+   {
+    "name": "language skills",
+    "evidence": "I would gladly be involved in projects from international clients due to my strong language skills"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Bachelor",
+    "field": "Economic Cybernetics (KPI)",
+    "institution": null,
+    "end": null,
+    "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field)"
+   },
+   {
+    "degree": "Master",
+    "field": null,
+    "institution": null,
+    "end": null,
+    "evidence": "currently studying for master's degree (same field)"
+   }
+  ],
+  "experience": [],
+  "uncertain": [
+   "education 'Bachelor': institution 'unknown' is not written in its evidence, removed",
+   "education 'Bachelor': end 'present' not found in its evidence, removed",
+   "education 'Master': field 'Economic Cybernetics (KPI)' is not written in its evidence, removed",
+   "education 'Master': institution 'unknown' is not written in its evidence, removed",
+   "education 'Master': end 'present' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "row": {
+  "id": "P41",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 1,
+  "cut_calls": 2,
+  "partial": true,
+  "raw_skills": 7,
+  "raw_skills_in_cv": 7,
+  "skills_kept": 7,
+  "experience": 0,
+  "education": 1,
+  "terms_present": 3,
+  "terms_found": 0,
+  "terms_missed": [
+   "statistics",
+   "PySpark",
+   "SQL"
+  ],
+  "latency_s": 31.8,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Machine learning",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more."
+   },
+   {
+    "name": "Computer vision",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more."
+   },
+   {
+    "name": "Tabular data",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more."
+   },
+   {
+    "name": "Time series",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more."
+   },
+   {
+    "name": "Digital signals processing",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more."
+   },
+   {
+    "name": "MLOps",
+    "evidence": "Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   },
+   {
+    "name": "English",
+    "evidence": "English level: upper"
+   }
+  ],
+  "education": [
+   {
+    "degree": "M.SC",
+    "field": "Computer Science",
+    "institution": null,
+    "end": null,
+    "evidence": "- M.SC computer science, Thesis on Automatic wordnet construction using sense embedding for local language"
+   }
+  ],
+  "experience": [],
+  "uncertain": [
+   "education 'M.SC': institution 'unspecified' is not written in its evidence, removed",
+   "education 'M.SC': end 'unspecified' not found in its evidence, removed",
+   "part 2/2: answer cut off at the token limit",
+   "part 2/2: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 2/2: answer cut off at the token limit",
+   "part 2/2: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

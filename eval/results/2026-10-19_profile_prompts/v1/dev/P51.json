@@ -1,0 +1,122 @@
+{
+ "row": {
+  "id": "P51",
+  "set": "gold",
+  "calls": 5,
+  "json_valid": 3,
+  "cut_calls": 2,
+  "partial": true,
+  "raw_skills": 15,
+  "raw_skills_in_cv": 15,
+  "skills_kept": 14,
+  "experience": 2,
+  "education": 1,
+  "terms_present": 4,
+  "terms_found": 2,
+  "terms_missed": [
+   "Docker",
+   "microservices"
+  ],
+  "latency_s": 43.0,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Professional Python Developer with experience in building complete cycles of applications."
+   },
+   {
+    "name": "AWS CDK",
+    "evidence": "managed and provisioned infrastructure as a code using AWS CDK."
+   },
+   {
+    "name": "FastAPI",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+   },
+   {
+    "name": "AWS",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+   },
+   {
+    "name": "lambda",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+   },
+   {
+    "name": "SNS",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+   },
+   {
+    "name": "SQS",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+   },
+   {
+    "name": "Athena",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+   },
+   {
+    "name": "DynamoDB",
+    "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+   },
+   {
+    "name": "Git",
+    "evidence": "Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Gitlab CI/CD",
+    "evidence": "Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Scrum",
+    "evidence": "Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "Agile",
+    "evidence": "Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   },
+   {
+    "name": "JIRA",
+    "evidence": "Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Master's degree",
+    "field": "Professional Python Developer",
+    "institution": null,
+    "end": null,
+    "evidence": "Master's degree, Professional Python Developer with experience in building complete cycles of applications."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Senior Backend Engineer",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Senior Backend Engineer\n\nA transaction Monitoring solution that helps compliance officers to find transactions that are related to Money Laundering or Terrorism Financing. I\ndesigned and execute well-engineered, easy-to-maintain, reliable, and bug-free code for various company apps (microservices) in collaboration with AI engineers, data scientists, programmers, and other software personnel.\nConfigured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK."
+   },
+   {
+    "title": "Development Team Lead / Senior Python Engineer",
+    "company": "Visualfabriq",
+    "start": null,
+    "end": null,
+    "evidence": "- Visualfabriq (Netherlands)\n\nDevelopment Team Lead / Senior Python Engineer\n\nVisualfabriq is a web tool for FMCGs to plan and manage promotions, make invoices, and build reports and data forecasts. My team was responsible for the Invoices module (which is a part of the Promotions module). The team consisted of 5 people (3 backend developers). I provided coaching, performance review, 1 to 1 sessions, and was the first person for contact. As a developer, I built new features, supported existing ones, optimized\nperformance, raised tests code coverage from 60% to 87%, and successfully led the project transition from\nPython 2.7 to 3.8"
+   }
+  ],
+  "uncertain": [
+   "education 'Master's degree': institution 'null' is not written in its evidence, removed",
+   "education 'Master's degree': end 'null' not found in its evidence, removed",
+   "experience 'Senior Backend Engineer': company 'Sentinels AI (acquired by Fenergo)' is not written in its evidence, removed",
+   "experience 'Senior Backend Engineer': start 'null' not found in its evidence, removed",
+   "experience 'Senior Backend Engineer': end 'null' not found in its evidence, removed",
+   "part 3/4: answer cut off at the token limit",
+   "part 3/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 3/4: answer cut off at the token limit",
+   "part 3/4: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -1,0 +1,318 @@
+{
+ "job-v1": {
+  "all": {
+   "offers": 7,
+   "gold_sentences": 65,
+   "found": 53,
+   "extra": 29,
+   "missed": 12,
+   "precision": 0.646,
+   "recall": 0.815,
+   "f1": 0.721,
+   "kind_accuracy": 0.868,
+   "skills_f1": 0.76,
+   "strict_f1": 0.615,
+   "invented_dropped": 0,
+   "verbatim_rate": 1.0,
+   "soft_must": 1,
+   "splits": 8,
+   "merges": 7,
+   "cut_calls": 0,
+   "failed": 0,
+   "latency_s_mean": 23.6
+  },
+  "usajobs": {
+   "offers": 5,
+   "gold_sentences": 51,
+   "found": 39,
+   "extra": 26,
+   "missed": 12,
+   "precision": 0.6,
+   "recall": 0.765,
+   "f1": 0.672,
+   "kind_accuracy": 0.872,
+   "skills_f1": 0.721,
+   "strict_f1": 0.594,
+   "invented_dropped": 0,
+   "verbatim_rate": 1.0,
+   "soft_must": 0,
+   "splits": 6,
+   "merges": 5,
+   "cut_calls": 0,
+   "failed": 0,
+   "latency_s_mean": 29.1
+  },
+  "djinni": {
+   "offers": 2,
+   "gold_sentences": 14,
+   "found": 14,
+   "extra": 3,
+   "missed": 0,
+   "precision": 0.824,
+   "recall": 1.0,
+   "f1": 0.903,
+   "kind_accuracy": 0.857,
+   "skills_f1": 0.914,
+   "strict_f1": 0.7,
+   "invented_dropped": 0,
+   "verbatim_rate": 1.0,
+   "soft_must": 1,
+   "splits": 2,
+   "merges": 2,
+   "cut_calls": 0,
+   "failed": 0,
+   "latency_s_mean": 10.0
+  },
+  "per_job": {
+   "usajobs-883161100": {
+    "tp": 6,
+    "fp": 3,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [],
+    "merges": [],
+    "latency_s": 32.5
+   },
+   "usajobs-883337000": {
+    "tp": 5,
+    "fp": 1,
+    "fn": 11,
+    "soft_must": [],
+    "splits": [],
+    "merges": [
+     "To be considered minimally qualified for this position, you must show that you have the required IT-related experience for the grade level to which your are applying: GS-14, Required Competencies: Attention to Detail - Is thorough when performing work and conscientious about attending to detail.",
+     "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions;"
+    ],
+    "latency_s": 20.6
+   },
+   "usajobs-883386100": {
+    "tp": 4,
+    "fp": 5,
+    "fn": 1,
+    "soft_must": [],
+    "splits": [],
+    "merges": [
+     "To qualify for GS-12, you must have: a) One year of directly related specialized experience equivalent to the GS-11 level: Collecting, cleaning, transforming, and preparing structured and unstructured data for analytic projects."
+    ],
+    "latency_s": 24.9
+   },
+   "usajobs-883511200": {
+    "tp": 6,
+    "fp": 6,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [
+     "applicants must have one year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST)",
+     "Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges.",
+     "Experience with core AI technical skills such as machine learning and deep learning",
+     "Experience with statistical data analysis and experimental design"
+    ],
+    "merges": [],
+    "latency_s": 33.8
+   },
+   "usajobs-883699600": {
+    "tp": 18,
+    "fp": 11,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [
+     "Knowledge of secure authentication patterns such as OAuth2, OpenID Connect, and MSAL.",
+     "Familiarity with secure authentication patterns, including OAuth2 and OpenID Connect."
+    ],
+    "merges": [
+     "Knowledge of secure authentication patterns such as OAuth2, OpenID Connect, and MSAL.",
+     "Familiarity with secure authentication patterns, including OAuth2 and OpenID Connect."
+    ],
+    "latency_s": 33.7
+   },
+   "J1": {
+    "tp": 8,
+    "fp": 3,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [
+     "Experience with cloud (Amazon SageMaker) is required",
+     "Experience with PySpark is required"
+    ],
+    "merges": [
+     "Experience with cloud (Amazon SageMaker) is required",
+     "Experience with PySpark is required"
+    ],
+    "latency_s": 13.5
+   },
+   "J2": {
+    "tp": 6,
+    "fp": 0,
+    "fn": 0,
+    "soft_must": [
+     "Wiliness to do research on business logic"
+    ],
+    "splits": [],
+    "merges": [],
+    "latency_s": 6.5
+   }
+  }
+ },
+ "label": "real-GPU, plain Qwen3-4B (llama-server)",
+ "max_tokens": 768,
+ "split_jobs": [
+  "usajobs-883161100",
+  "usajobs-883337000",
+  "usajobs-883386100",
+  "usajobs-883511200",
+  "usajobs-883699600",
+  "J1",
+  "J2"
+ ],
+ "job-v2": {
+  "all": {
+   "offers": 7,
+   "gold_sentences": 65,
+   "found": 62,
+   "extra": 26,
+   "missed": 3,
+   "precision": 0.705,
+   "recall": 0.954,
+   "f1": 0.81,
+   "kind_accuracy": 0.919,
+   "skills_f1": 0.792,
+   "strict_f1": 0.622,
+   "invented_dropped": 0,
+   "verbatim_rate": 1.0,
+   "soft_must": 0,
+   "splits": 9,
+   "merges": 5,
+   "cut_calls": 0,
+   "failed": 0,
+   "latency_s_mean": 22.2
+  },
+  "usajobs": {
+   "offers": 5,
+   "gold_sentences": 51,
+   "found": 48,
+   "extra": 23,
+   "missed": 3,
+   "precision": 0.676,
+   "recall": 0.941,
+   "f1": 0.787,
+   "kind_accuracy": 0.917,
+   "skills_f1": 0.75,
+   "strict_f1": 0.608,
+   "invented_dropped": 0,
+   "verbatim_rate": 1.0,
+   "soft_must": 0,
+   "splits": 7,
+   "merges": 3,
+   "cut_calls": 0,
+   "failed": 0,
+   "latency_s_mean": 27.1
+  },
+  "djinni": {
+   "offers": 2,
+   "gold_sentences": 14,
+   "found": 14,
+   "extra": 3,
+   "missed": 0,
+   "precision": 0.824,
+   "recall": 1.0,
+   "f1": 0.903,
+   "kind_accuracy": 0.929,
+   "skills_f1": 1.0,
+   "strict_f1": 0.683,
+   "invented_dropped": 0,
+   "verbatim_rate": 1.0,
+   "soft_must": 0,
+   "splits": 2,
+   "merges": 2,
+   "cut_calls": 0,
+   "failed": 0,
+   "latency_s_mean": 10.2
+  },
+  "per_job": {
+   "usajobs-883161100": {
+    "tp": 5,
+    "fp": 2,
+    "fn": 1,
+    "soft_must": [],
+    "splits": [],
+    "merges": [],
+    "latency_s": 22.2
+   },
+   "usajobs-883337000": {
+    "tp": 14,
+    "fp": 0,
+    "fn": 2,
+    "soft_must": [],
+    "splits": [],
+    "merges": [
+     "One year of specialized experience, equivalent to the GS-13 grade level in the Federal service, obtained in either the private or public sector: 1. serving as a senior cloud and AI engineer, that leads the development and institutional use of technical standards and reference architectures for cloud-hosted AI solutions"
+    ],
+    "latency_s": 31.5
+   },
+   "usajobs-883386100": {
+    "tp": 5,
+    "fp": 6,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [
+     "One year of directly related specialized experience equivalent to the GS-11 level"
+    ],
+    "merges": [],
+    "latency_s": 23.7
+   },
+   "usajobs-883511200": {
+    "tp": 6,
+    "fp": 4,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [
+     "applicants must have one year (52 weeks) of specialized experience at the GS-12 level (ZP-III at NIST)",
+     "Experience with computer programming and tool development to solve key Artificial Intelligence (AI) measurement science challenges.",
+     "Experience with core AI technical skills such as machine learning and deep learning",
+     "Experience with statistical data analysis and experimental design"
+    ],
+    "merges": [],
+    "latency_s": 19.8
+   },
+   "usajobs-883699600": {
+    "tp": 18,
+    "fp": 11,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [
+     "Knowledge of secure authentication patterns such as OAuth2, OpenID Connect, and MSAL.",
+     "Familiarity with secure authentication patterns, including OAuth2 and OpenID Connect."
+    ],
+    "merges": [
+     "Knowledge of secure authentication patterns such as OAuth2, OpenID Connect, and MSAL",
+     "Familiarity with secure authentication patterns, including OAuth2 and OpenID Connect."
+    ],
+    "latency_s": 38.1
+   },
+   "J1": {
+    "tp": 8,
+    "fp": 3,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [
+     "Experience with cloud (Amazon SageMaker) is required",
+     "Experience with PySpark is required"
+    ],
+    "merges": [
+     "Experience with cloud (Amazon SageMaker) is required",
+     "Experience with PySpark is required"
+    ],
+    "latency_s": 13.8
+   },
+   "J2": {
+    "tp": 6,
+    "fp": 0,
+    "fn": 0,
+    "soft_must": [],
+    "splits": [],
+    "merges": [],
+    "latency_s": 6.5
+   }
+  }
+ }
+}

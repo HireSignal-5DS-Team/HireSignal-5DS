@@ -1,0 +1,78 @@
+{
+ "row": {
+  "id": "P34",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 14,
+  "raw_skills_in_cv": 14,
+  "skills_kept": 11,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 2,
+  "terms_found": 2,
+  "terms_missed": [],
+  "latency_s": 9.3,
+  "max_completion_tokens": 511
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "English",
+    "evidence": "English level: intermediate"
+   },
+   {
+    "name": "Amazon Web Services",
+    "evidence": "I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript."
+   },
+   {
+    "name": "AWS SDK",
+    "evidence": "I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript."
+   },
+   {
+    "name": "Python",
+    "evidence": "I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript."
+   },
+   {
+    "name": "TypeScript",
+    "evidence": "I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript."
+   },
+   {
+    "name": "Lambda",
+    "evidence": "I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+   },
+   {
+    "name": "DynamoDB",
+    "evidence": "I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+   },
+   {
+    "name": "StepFunctions",
+    "evidence": "I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+   },
+   {
+    "name": "CloudFormation",
+    "evidence": "I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+   },
+   {
+    "name": "CloudWatch",
+    "evidence": "I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+   },
+   {
+    "name": "S3",
+    "evidence": "I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Angular': name 'Angular' is not written in its evidence, removed",
+   "skill 'JMeter': evidence not in the CV (not found (closest 0.80)), dropped",
+   "skill 'PyTest': evidence not in the CV (not found (closest 0.80)), dropped"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

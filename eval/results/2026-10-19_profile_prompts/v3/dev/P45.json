@@ -1,0 +1,148 @@
+{
+ "row": {
+  "id": "P45",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 33,
+  "raw_skills_in_cv": 33,
+  "skills_kept": 23,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 0,
+  "terms_missed": [
+   "SQL",
+   "Python",
+   "English"
+  ],
+  "latency_s": 7.1,
+  "max_completion_tokens": 215
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Cognos",
+    "evidence": "BI tools: Cognos, SAP business objects, Qlik Sense, Power BI, GoodData"
+   },
+   {
+    "name": "SAP business objects",
+    "evidence": "BI tools: Cognos, SAP business objects, Qlik Sense, Power BI, GoodData"
+   },
+   {
+    "name": "Qlik Sense",
+    "evidence": "BI tools: Cognos, SAP business objects, Qlik Sense, Power BI, GoodData"
+   },
+   {
+    "name": "Power BI",
+    "evidence": "BI tools: Cognos, SAP business objects, Qlik Sense, Power BI, GoodData"
+   },
+   {
+    "name": "GoodData",
+    "evidence": "BI tools: Cognos, SAP business objects, Qlik Sense, Power BI, GoodData"
+   },
+   {
+    "name": "Enterprise Architect",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "Power Designer",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "Matillion",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "DBT",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "Airbyte",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "Jira",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "Confluence",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "HP ALM",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "Gsnow",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "Mantis",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "Apache Airflow",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "Agile",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "Waterfall",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow"
+   },
+   {
+    "name": "Azure Fundamentals",
+    "evidence": "Recent certifications:\n- Microsoft Certified: Azure Fundamentals\n- Microsoft Certified: Azure Data Fundamentals\n- Microsoft Certified: Azure Data Engineer Associate\n- Microsoft Certified: Azure Developer Associate\n- Microsoft Certified: Azure Solutions Architect Expert"
+   },
+   {
+    "name": "Azure Data Fundamentals",
+    "evidence": "Recent certifications:\n- Microsoft Certified: Azure Fundamentals\n- Microsoft Certified: Azure Data Fundamentals\n- Microsoft Certified: Azure Data Engineer Associate\n- Microsoft Certified: Azure Developer Associate\n- Microsoft Certified: Azure Solutions Architect Expert"
+   },
+   {
+    "name": "Azure Data Engineer Associate",
+    "evidence": "Recent certifications:\n- Microsoft Certified: Azure Fundamentals\n- Microsoft Certified: Azure Data Fundamentals\n- Microsoft Certified: Azure Data Engineer Associate\n- Microsoft Certified: Azure Developer Associate\n- Microsoft Certified: Azure Solutions Architect Expert"
+   },
+   {
+    "name": "Azure Developer Associate",
+    "evidence": "Recent certifications:\n- Microsoft Certified: Azure Fundamentals\n- Microsoft Certified: Azure Data Fundamentals\n- Microsoft Certified: Azure Data Engineer Associate\n- Microsoft Certified: Azure Developer Associate\n- Microsoft Certified: Azure Solutions Architect Expert"
+   },
+   {
+    "name": "Azure Solutions Architect Expert",
+    "evidence": "Recent certifications:\n- Microsoft Certified: Azure Fundamentals\n- Microsoft Certified: Azure Data Fundamentals\n- Microsoft Certified: Azure Data Engineer Associate\n- Microsoft Certified: Azure Developer Associate\n- Microsoft Certified: Azure Solutions Architect Expert"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Data Architect",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Position: Data Architect\nExperience years: 11\nEnglish level: fluent\n\nExperienced data engineer/ data architect / system analyst."
+   }
+  ],
+  "uncertain": [
+   "skill 'Snowflake': name 'Snowflake' is not written in its evidence, removed",
+   "skill 'Oracle': name 'Oracle' is not written in its evidence, removed",
+   "skill 'Postgres': name 'Postgres' is not written in its evidence, removed",
+   "skill 'Clickhouse': name 'Clickhouse' is not written in its evidence, removed",
+   "skill 'DuckDB': name 'DuckDB' is not written in its evidence, removed",
+   "skill 'MS SQL': name 'MS SQL' is not written in its evidence, removed",
+   "skill 'Python': name 'Python' is not written in its evidence, removed",
+   "skill 'Linux': name 'Linux' is not written in its evidence, removed",
+   "skill 'Azure': name 'Azure' is not written in its evidence, removed",
+   "skill 'AWS': name 'AWS' is not written in its evidence, removed",
+   "experience 'Data Architect': company 'null' is not written in its evidence, removed",
+   "experience 'Data Architect': start 'null' not found in its evidence, removed",
+   "experience 'Data Architect': end 'null' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

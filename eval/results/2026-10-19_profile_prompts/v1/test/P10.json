@@ -1,0 +1,58 @@
+{
+ "row": {
+  "id": "P10",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 7,
+  "raw_skills_in_cv": 7,
+  "skills_kept": 5,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 0,
+  "terms_missed": [
+   "SQL"
+  ],
+  "latency_s": 6.1,
+  "max_completion_tokens": 225
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "PowerApps",
+    "evidence": "I've created interfaces for inputting the data via PowerApps, and dashboards for accessing data via Power BI."
+   },
+   {
+    "name": "Power BI",
+    "evidence": "I've created interfaces for inputting the data via PowerApps, and dashboards for accessing data via Power BI."
+   },
+   {
+    "name": "Looker",
+    "evidence": "creating Looker dashboards for enterprise customers;"
+   },
+   {
+    "name": "Tableau",
+    "evidence": "worked with Looker, Tableau, and Power BI, and can write basic JS scripts."
+   },
+   {
+    "name": "JS",
+    "evidence": "can write basic JS scripts."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "experience 'Data Analyst / BI Developer': title 'Data Analyst / BI Developer' is not written in its evidence, removed",
+   "experience 'Data Analyst / BI Developer': company contained a placeholder, removed",
+   "experience 'Data Analyst / BI Developer': start '2020' not found in its evidence, removed",
+   "experience 'Data Analyst / BI Developer': end 'present' not found in its evidence, removed",
+   "experience 'Data Analyst / BI Developer': neither title nor company, dropped"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

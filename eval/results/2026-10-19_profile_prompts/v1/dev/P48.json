@@ -1,0 +1,179 @@
+{
+ "row": {
+  "id": "P48",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 28,
+  "raw_skills_in_cv": 28,
+  "skills_kept": 26,
+  "experience": 4,
+  "education": 0,
+  "terms_present": 7,
+  "terms_found": 5,
+  "terms_missed": [
+   "ML",
+   "time series"
+  ],
+  "latency_s": 19.6,
+  "max_completion_tokens": 673
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "python",
+    "evidence": "Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+   },
+   {
+    "name": "matplotlib",
+    "evidence": "Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+   },
+   {
+    "name": "seaborn",
+    "evidence": "Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+   },
+   {
+    "name": "bokeh",
+    "evidence": "Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+   },
+   {
+    "name": "pandas",
+    "evidence": "Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+   },
+   {
+    "name": "numpy",
+    "evidence": "Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+   },
+   {
+    "name": "Docker",
+    "evidence": "Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "name": "Kubernetes",
+    "evidence": "Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "name": "BeautifulSoup",
+    "evidence": "Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "name": "Selenium",
+    "evidence": "Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "name": "Scala",
+    "evidence": "Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "name": "Apache Spark",
+    "evidence": "Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "name": "Spark",
+    "evidence": "Technologies: Scala, Spark."
+   },
+   {
+    "name": "pytest",
+    "evidence": "Technologies: python, pytest, pandas, LightGBM, FB Prophet"
+   },
+   {
+    "name": "LightGBM",
+    "evidence": "Technologies: python, pytest, pandas, LightGBM, FB Prophet"
+   },
+   {
+    "name": "FB Prophet",
+    "evidence": "Technologies: python, pytest, pandas, LightGBM, FB Prophet"
+   },
+   {
+    "name": "text classification",
+    "evidence": "text classification"
+   },
+   {
+    "name": "time-series forecasting",
+    "evidence": "time-series forecasting"
+   },
+   {
+    "name": "data preparation",
+    "evidence": "data preparation"
+   },
+   {
+    "name": "feature engineering",
+    "evidence": "feature engineering"
+   },
+   {
+    "name": "model evaluation",
+    "evidence": "model evaluation"
+   },
+   {
+    "name": "deep learning",
+    "evidence": "I'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+   },
+   {
+    "name": "NLP",
+    "evidence": "I'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+   },
+   {
+    "name": "CV",
+    "evidence": "I'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+   },
+   {
+    "name": "deployment",
+    "evidence": "I'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+   },
+   {
+    "name": "serving",
+    "evidence": "I'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "engineer",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "- As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+   },
+   {
+    "title": "domain expert and engineer",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "- As a domain expert and engineer, significantly improved and refactored pivotal piece of data pipeline for search extraction. Technologies: Scala, Spark."
+   },
+   {
+    "title": "data scientist",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "- As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet"
+   },
+   {
+    "title": "hackathons winner",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Multiple times hackathons winner"
+   }
+  ],
+  "uncertain": [
+   "experience 'engineer': company 'null' is not written in its evidence, removed",
+   "experience 'engineer': start 'null' not found in its evidence, removed",
+   "experience 'engineer': end 'null' not found in its evidence, removed",
+   "experience 'domain expert and engineer': company 'null' is not written in its evidence, removed",
+   "experience 'domain expert and engineer': start 'null' not found in its evidence, removed",
+   "experience 'domain expert and engineer': end 'null' not found in its evidence, removed",
+   "experience 'data scientist': company 'null' is not written in its evidence, removed",
+   "experience 'data scientist': start 'null' not found in its evidence, removed",
+   "experience 'data scientist': end 'null' not found in its evidence, removed",
+   "experience 'hackathons winner': company 'null' is not written in its evidence, removed",
+   "experience 'hackathons winner': start 'null' not found in its evidence, removed",
+   "experience 'hackathons winner': end 'null' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

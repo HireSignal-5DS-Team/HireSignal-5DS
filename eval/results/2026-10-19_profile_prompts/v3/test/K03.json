@@ -1,0 +1,464 @@
+{
+ "row": {
+  "id": "K03",
+  "set": "kaggle",
+  "calls": 10,
+  "json_valid": 10,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 110,
+  "raw_skills_in_cv": 103,
+  "skills_kept": 90,
+  "experience": 5,
+  "education": 2,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 32.3,
+  "max_completion_tokens": 369
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Windows 2000",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "Novell NetWare 4.x",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "TCP/IP Enterprise Networks",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "Enterprise",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "Asset Management",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "ITIL",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "Arcserve",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "Backup Exec",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "Net Backup",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "Symantec Ghost",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "Cable Installation",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "Management",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "LANDesk",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "Window Server 2000",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "HIPAA",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "HITEC",
+    "evidence": "Proficient in Windows 2000/XP/7;Novell NetWare 4.x/5.x/6.x; EMR (Allscripts and McKesson); TCP/IP Enterprise Networks; Enterprise\n[NAME]; Asset Management/ITIL; Arcserve/Backup Exec/Net Backup; Symantec Ghost; Cable Installation/Management; LANDesk;\nWindow Server 2000/2003/2008; HIPAA/HITEC"
+   },
+   {
+    "name": "EMR",
+    "evidence": "Revised technology initiatives, and developed strategic/operations plans to drive business operations.\nProvided all technical support for EMR (Allscripts) projects.\nDeveloped, authored, distributed, and enhanced processes and improved procedural manuals/policies Standardized purchasing,\nprocurement, inventory, and network operations.\nChampioned mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development.\nRecognized developing teams and processes that boosted growth, profitability, and efficiency.\nRevised clinical training collateral, delivered classroom instruction, and conducted clinical visits to ensure all field staff competencies in EMR\nsystem."
+   },
+   {
+    "name": "Allscripts",
+    "evidence": "Revised technology initiatives, and developed strategic/operations plans to drive business operations.\nProvided all technical support for EMR (Allscripts) projects.\nDeveloped, authored, distributed, and enhanced processes and improved procedural manuals/policies Standardized purchasing,\nprocurement, inventory, and network operations.\nChampioned mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development.\nRecognized developing teams and processes that boosted growth, profitability, and efficiency.\nRevised clinical training collateral, delivered classroom instruction, and conducted clinical visits to ensure all field staff competencies in EMR\nsystem."
+   },
+   {
+    "name": "system training",
+    "evidence": "Revised technology initiatives, and developed strategic/operations plans to drive business operations.\nProvided all technical support for EMR (Allscripts) projects.\nDeveloped, authored, distributed, and enhanced processes and improved procedural manuals/policies Standardized purchasing,\nprocurement, inventory, and network operations.\nChampioned mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development.\nRecognized developing teams and processes that boosted growth, profitability, and efficiency.\nRevised clinical training collateral, delivered classroom instruction, and conducted clinical visits to ensure all field staff competencies in EMR\nsystem."
+   },
+   {
+    "name": "employee development",
+    "evidence": "Revised technology initiatives, and developed strategic/operations plans to drive business operations.\nProvided all technical support for EMR (Allscripts) projects.\nDeveloped, authored, distributed, and enhanced processes and improved procedural manuals/policies Standardized purchasing,\nprocurement, inventory, and network operations.\nChampioned mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development.\nRecognized developing teams and processes that boosted growth, profitability, and efficiency.\nRevised clinical training collateral, delivered classroom instruction, and conducted clinical visits to ensure all field staff competencies in EMR\nsystem."
+   },
+   {
+    "name": "procedural manuals",
+    "evidence": "Revised technology initiatives, and developed strategic/operations plans to drive business operations.\nProvided all technical support for EMR (Allscripts) projects.\nDeveloped, authored, distributed, and enhanced processes and improved procedural manuals/policies Standardized purchasing,\nprocurement, inventory, and network operations.\nChampioned mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development.\nRecognized developing teams and processes that boosted growth, profitability, and efficiency.\nRevised clinical training collateral, delivered classroom instruction, and conducted clinical visits to ensure all field staff competencies in EMR\nsystem."
+   },
+   {
+    "name": "purchasing",
+    "evidence": "Revised technology initiatives, and developed strategic/operations plans to drive business operations.\nProvided all technical support for EMR (Allscripts) projects.\nDeveloped, authored, distributed, and enhanced processes and improved procedural manuals/policies Standardized purchasing,\nprocurement, inventory, and network operations.\nChampioned mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development.\nRecognized developing teams and processes that boosted growth, profitability, and efficiency.\nRevised clinical training collateral, delivered classroom instruction, and conducted clinical visits to ensure all field staff competencies in EMR\nsystem."
+   },
+   {
+    "name": "procurement",
+    "evidence": "Revised technology initiatives, and developed strategic/operations plans to drive business operations.\nProvided all technical support for EMR (Allscripts) projects.\nDeveloped, authored, distributed, and enhanced processes and improved procedural manuals/policies Standardized purchasing,\nprocurement, inventory, and network operations.\nChampioned mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development.\nRecognized developing teams and processes that boosted growth, profitability, and efficiency.\nRevised clinical training collateral, delivered classroom instruction, and conducted clinical visits to ensure all field staff competencies in EMR\nsystem."
+   },
+   {
+    "name": "inventory",
+    "evidence": "Revised technology initiatives, and developed strategic/operations plans to drive business operations.\nProvided all technical support for EMR (Allscripts) projects.\nDeveloped, authored, distributed, and enhanced processes and improved procedural manuals/policies Standardized purchasing,\nprocurement, inventory, and network operations.\nChampioned mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development.\nRecognized developing teams and processes that boosted growth, profitability, and efficiency.\nRevised clinical training collateral, delivered classroom instruction, and conducted clinical visits to ensure all field staff competencies in EMR\nsystem."
+   },
+   {
+    "name": "network operations",
+    "evidence": "Revised technology initiatives, and developed strategic/operations plans to drive business operations.\nProvided all technical support for EMR (Allscripts) projects.\nDeveloped, authored, distributed, and enhanced processes and improved procedural manuals/policies Standardized purchasing,\nprocurement, inventory, and network operations.\nChampioned mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development.\nRecognized developing teams and processes that boosted growth, profitability, and efficiency.\nRevised clinical training collateral, delivered classroom instruction, and conducted clinical visits to ensure all field staff competencies in EMR\nsystem."
+   },
+   {
+    "name": "clinical training",
+    "evidence": "Revised technology initiatives, and developed strategic/operations plans to drive business operations.\nProvided all technical support for EMR (Allscripts) projects.\nDeveloped, authored, distributed, and enhanced processes and improved procedural manuals/policies Standardized purchasing,\nprocurement, inventory, and network operations.\nChampioned mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development.\nRecognized developing teams and processes that boosted growth, profitability, and efficiency.\nRevised clinical training collateral, delivered classroom instruction, and conducted clinical visits to ensure all field staff competencies in EMR\nsystem."
+   },
+   {
+    "name": "clinical visits",
+    "evidence": "Revised technology initiatives, and developed strategic/operations plans to drive business operations.\nProvided all technical support for EMR (Allscripts) projects.\nDeveloped, authored, distributed, and enhanced processes and improved procedural manuals/policies Standardized purchasing,\nprocurement, inventory, and network operations.\nChampioned mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development.\nRecognized developing teams and processes that boosted growth, profitability, and efficiency.\nRevised clinical training collateral, delivered classroom instruction, and conducted clinical visits to ensure all field staff competencies in EMR\nsystem."
+   },
+   {
+    "name": "Cisco Certified Network Associate",
+    "evidence": "Cisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed\nTraining Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation"
+   },
+   {
+    "name": "ITIL Foundations",
+    "evidence": "Cisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed\nTraining Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation"
+   },
+   {
+    "name": "Sniffer Distributed",
+    "evidence": "Cisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed\nTraining Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation"
+   },
+   {
+    "name": "Certified Novell Administrator",
+    "evidence": "Cisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed\nTraining Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation"
+   },
+   {
+    "name": "HIPAA/HITECH Regulation",
+    "evidence": "Cisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed\nTraining Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation"
+   },
+   {
+    "name": "ADR",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "advertising",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "agency",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Backup",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "banking",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Budget Management",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "budgeting",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "business operations",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Cable",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "CCNA",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "CNA 5.1",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Change Management",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Conflict Resolution",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "corporate accounting",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "client",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "clients",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Customer Relations",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "disaster recovery",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "educational programs",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Employee Relations",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "financial",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Ghost",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "information systems",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Innovation",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "instruction",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "internal audits",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "inventory management",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Leadership Training",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "regulatory compliance",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "loss prevention",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "marketing plans",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "marketing",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "market",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Window",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "2000",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "network",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Networks",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "packaging",
+    "evidence": "ADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations,\nCable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients,\nCustomer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction,\ninternal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing,\nmarket, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging"
+   },
+   {
+    "name": "Performance Management",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "Policies",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "processes",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "Project Management",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "Leadership",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "public relations",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "quality",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "scheduling",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "Staff Development",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "strategic",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "Strategic Planning",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "surveys",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "Symantec",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "TCP/IP",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "technical support",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "telecommunication",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "phone",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "VoIP",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "website",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   },
+   {
+    "name": "workflow",
+    "evidence": "Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling,\nStaff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee\ndevelopment, VoIP, website, workflow"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Master of Business Administration",
+    "field": "Business Administration",
+    "institution": "Keller Graduate School of Management",
+    "end": null,
+    "evidence": "Master of Business Administration (MBA) Keller Graduate School of Management ï1⁄4 City , State"
+   },
+   {
+    "degree": "Bachelor of Science",
+    "field": "Telecommunications Management",
+    "institution": "DeVry University",
+    "end": null,
+    "evidence": "Bachelor of Science , Telecommunications Management DeVry University ï1⁄4 City , State"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Practice Manager",
+    "company": "Company Name ï1⁄4 City , State",
+    "start": "2014-08",
+    "end": "present",
+    "evidence": "Practice Manager Aug 2014 to Current\nCompany Name ï1⁄4 City , State"
+   },
+   {
+    "title": "Marketing Director",
+    "company": null,
+    "start": "2007-02",
+    "end": "2008-09",
+    "evidence": "Marketing Director Feb 2007 to Sep 2008"
+   },
+   {
+    "title": "Director of Information Systems",
+    "company": "Company Name ï1⁄4 City , State",
+    "start": "2004",
+    "end": "2007",
+    "evidence": "Director of Information Systems Jan 2004 to Feb 2007\nCompany Name ï1⁄4 City , State\n\nImplemented the agency's first disaster recovery plan to minimize productivity loss.\nEstablished equipment lifecycles to maximize use of technology throughout the organization.\nCreated and delivered agency computer/security training collateral and instruction to increase end user knowledge and minimize agency\nrisks."
+   },
+   {
+    "title": null,
+    "company": "Verizon",
+    "start": null,
+    "end": null,
+    "evidence": "Reduced maintenance costs, improved productivity, increased employee security, and decreased travel expenses by implementing Verizon\ncell phone plan to replace pagers, and included the Field Force Manager that Integrated into backend clinical system to do scheduling."
+   },
+   {
+    "title": "Boosted user satisfaction",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Boosted user satisfaction by doubling bandwidth at 2 remote sites and tripling bandwidth at the corporate site, and ensuring usage of VoIP\nin future projects."
+   }
+  ],
+  "uncertain": [
+   "skill 'Windows XP': name 'Windows XP' is not written in its evidence, removed",
+   "skill 'Windows 7': name 'Windows 7' is not written in its evidence, removed",
+   "skill 'Novell NetWare 5.x': name 'Novell NetWare 5.x' is not written in its evidence, removed",
+   "skill 'Novell NetWare 6.x': name 'Novell NetWare 6.x' is not written in its evidence, removed",
+   "skill 'Window Server 2003': name 'Window Server 2003' is not written in its evidence, removed",
+   "skill 'Window Server 2008': name 'Window Server 2008' is not written in its evidence, removed",
+   "experience 'Information Technology Manager': title 'Information Technology Manager' is not written in its evidence, removed",
+   "experience 'Information Technology Manager': company 'Company Name ï1⁄4 City , State' is not written in its evidence, removed",
+   "experience 'Information Technology Manager': start '02/2012' not found in its evidence, removed",
+   "experience 'Information Technology Manager': end '09/2013' not found in its evidence, removed",
+   "experience 'Information Technology Manager': neither title nor company, dropped",
+   "experience 'Information Technology Manager': title 'Information Technology Manager' is not written in its evidence, removed",
+   "experience 'Information Technology Manager': company 'Company Name ï1⁄4 City , State' is not written in its evidence, removed",
+   "experience 'Information Technology Manager': start '09/2008' not found in its evidence, removed",
+   "experience 'Information Technology Manager': end '05/2011' not found in its evidence, removed",
+   "experience 'Information Technology Manager': neither title nor company, dropped",
+   "skill 'process development': name 'process development' is not written in its evidence, removed",
+   "experience 'Marketing Director': company 'null' is not written in its evidence, removed",
+   "education 'Master of Business Administration': end 'ï1⁄4 City , State' not found in its evidence, removed",
+   "education 'Bachelor of Science': end 'ï1⁄4 City , State' not found in its evidence, removed",
+   "experience 'Implemented Verizon cell phone plan': title 'Implemented Verizon cell phone plan' is not written in its evidence, removed",
+   "experience 'Boosted user satisfaction': company 'Remote sites and corporate site' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

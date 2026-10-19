@@ -1,0 +1,89 @@
+{
+ "row": {
+  "id": "P39",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 15,
+  "raw_skills_in_cv": 14,
+  "skills_kept": 13,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 2.9,
+  "max_completion_tokens": 121
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python3",
+    "evidence": "Up to year experience in pure Python3, and Django powered back-end application development. Creating and setting up the databases with PostgreSQL DBMS. I am a quick learner, responsible, good time-management skills, and aiming at best both personal and team results."
+   },
+   {
+    "name": "Django",
+    "evidence": "Up to year experience in pure Python3, and Django powered back-end application development. Creating and setting up the databases with PostgreSQL DBMS. I am a quick learner, responsible, good time-management skills, and aiming at best both personal and team results."
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Up to year experience in pure Python3, and Django powered back-end application development. Creating and setting up the databases with PostgreSQL DBMS. I am a quick learner, responsible, good time-management skills, and aiming at best both personal and team results."
+   },
+   {
+    "name": "Django REST framework",
+    "evidence": "- Implemented the API via Django REST framework, for sending the JSON data to the client application."
+   },
+   {
+    "name": "API",
+    "evidence": "- Implemented the API via Django REST framework, for sending the JSON data to the client application."
+   },
+   {
+    "name": "database operations",
+    "evidence": "- Used the cursor from Django model connection for executing the database operations."
+   },
+   {
+    "name": "services modules",
+    "evidence": "- Wrapped the application business logic into services modules."
+   },
+   {
+    "name": "cursor",
+    "evidence": "- Used the cursor from Django model connection for executing the database operations."
+   },
+   {
+    "name": "quick learner",
+    "evidence": "Up to year experience in pure Python3, and Django powered back-end application development. Creating and setting up the databases with PostgreSQL DBMS. I am a quick learner, responsible, good time-management skills, and aiming at best both personal and team results."
+   },
+   {
+    "name": "time-management",
+    "evidence": "Up to year experience in pure Python3, and Django powered back-end application development. Creating and setting up the databases with PostgreSQL DBMS. I am a quick learner, responsible, good time-management skills, and aiming at best both personal and team results."
+   },
+   {
+    "name": "team results",
+    "evidence": "Up to year experience in pure Python3, and Django powered back-end application development. Creating and setting up the databases with PostgreSQL DBMS. I am a quick learner, responsible, good time-management skills, and aiming at best both personal and team results."
+   },
+   {
+    "name": "Python",
+    "evidence": "Improving skills in Python 3, Django, and databases."
+   },
+   {
+    "name": "databases",
+    "evidence": "Improving skills in Python 3, Django, and databases."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Django REST framework': evidence re-anchored to the CV line that names it",
+   "skill 'API': evidence re-anchored to the CV line that names it",
+   "skill 'database operations': evidence re-anchored to the CV line that names it",
+   "skill 'services modules': evidence re-anchored to the CV line that names it",
+   "skill 'cursor': evidence re-anchored to the CV line that names it",
+   "skill 'responsibility': name 'responsibility' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

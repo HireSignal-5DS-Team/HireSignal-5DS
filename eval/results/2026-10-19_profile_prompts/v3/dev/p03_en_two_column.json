@@ -1,0 +1,79 @@
+{
+ "row": {
+  "id": "p03_en_two_column",
+  "set": "synth",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 5,
+  "raw_skills_in_cv": 5,
+  "skills_kept": 5,
+  "experience": 0,
+  "education": 2,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 4.4,
+  "max_completion_tokens": 260,
+  "synth_tp": 5,
+  "synth_fp": 0,
+  "synth_fn": 0
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "PyTorch",
+    "evidence": "PyTorch, Spark, OpenCV, Python, C++"
+   },
+   {
+    "name": "Spark",
+    "evidence": "PyTorch, Spark, OpenCV, Python, C++"
+   },
+   {
+    "name": "OpenCV",
+    "evidence": "PyTorch, Spark, OpenCV, Python, C++"
+   },
+   {
+    "name": "Python",
+    "evidence": "PyTorch, Spark, OpenCV, Python, C++"
+   },
+   {
+    "name": "C++",
+    "evidence": "PyTorch, Spark, OpenCV, Python, C++"
+   }
+  ],
+  "education": [
+   {
+    "degree": "MSc",
+    "field": "Artificial Intelligence",
+    "institution": "Université Paris-Saclay",
+    "end": "2022",
+    "evidence": "MSc in Artificial Intelligence, Université Paris-Saclay, 2022"
+   },
+   {
+    "degree": "BSc",
+    "field": "Mathematics",
+    "institution": "Faculty of Sciences of Tunis",
+    "end": "2020",
+    "evidence": "BSc in Mathematics, Faculty of Sciences of Tunis, 2020"
+   }
+  ],
+  "experience": [],
+  "uncertain": [
+   "experience 'ML Engineer': title 'ML Engineer' is not written in its evidence, removed",
+   "experience 'ML Engineer': company 'InstaDeep' is not written in its evidence, removed",
+   "experience 'ML Engineer': start '2022' not found in its evidence, removed",
+   "experience 'ML Engineer': end 'present' not found in its evidence, removed",
+   "experience 'ML Engineer': neither title nor company, dropped",
+   "experience 'Research Intern': title 'Research Intern' is not written in its evidence, removed",
+   "experience 'Research Intern': company 'Inria' is not written in its evidence, removed",
+   "experience 'Research Intern': start '2021' not found in its evidence, removed",
+   "experience 'Research Intern': end '2022' not found in its evidence, removed",
+   "experience 'Research Intern': neither title nor company, dropped"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

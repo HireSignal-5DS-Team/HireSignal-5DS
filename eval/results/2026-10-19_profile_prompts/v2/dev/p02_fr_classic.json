@@ -1,0 +1,85 @@
+{
+ "row": {
+  "id": "p02_fr_classic",
+  "set": "synth",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 9,
+  "raw_skills_in_cv": 9,
+  "skills_kept": 9,
+  "experience": 1,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 4.0,
+  "max_completion_tokens": 235,
+  "synth_tp": 9,
+  "synth_fp": 0,
+  "synth_fn": 3
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Docker",
+    "evidence": "Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux"
+   },
+   {
+    "name": "Kubernetes",
+    "evidence": "Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux"
+   },
+   {
+    "name": "GitLab CI",
+    "evidence": "Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux"
+   },
+   {
+    "name": "Terraform",
+    "evidence": "Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux"
+   },
+   {
+    "name": "Ansible",
+    "evidence": "Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux"
+   },
+   {
+    "name": "Linux",
+    "evidence": "Docker, Kubernetes, GitLab CI, Terraform, Ansible, Linux"
+   },
+   {
+    "name": "Arabe",
+    "evidence": "Arabe, Français, Anglais (B2)"
+   },
+   {
+    "name": "Français",
+    "evidence": "Arabe, Français, Anglais (B2)"
+   },
+   {
+    "name": "Anglais",
+    "evidence": "Arabe, Français, Anglais (B2)"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Diplôme d'ingénieur",
+    "field": "Génie Logiciel",
+    "institution": "INSAT",
+    "end": "2020",
+    "evidence": "Diplôme d'ingénieur·e en Génie Logiciel, INSAT, 2020"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Ingénieur·e DevOps",
+    "company": "Telnet",
+    "start": "2020",
+    "end": "2024",
+    "evidence": "Ingénieur·e DevOps - Telnet, Tunis (2020 - 2024)"
+   }
+  ],
+  "uncertain": [],
+  "prompt_version": "profile-v2"
+ }
+}

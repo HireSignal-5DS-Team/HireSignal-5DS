@@ -1,0 +1,57 @@
+{
+ "row": {
+  "id": "P33",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 4,
+  "raw_skills_in_cv": 4,
+  "skills_kept": 4,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 2.3,
+  "max_completion_tokens": 117
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Excel",
+    "evidence": "Working on tools - Excel, SQL, Tableau, Python."
+   },
+   {
+    "name": "SQL",
+    "evidence": "Working on tools - Excel, SQL, Tableau, Python."
+   },
+   {
+    "name": "Tableau",
+    "evidence": "Working on tools - Excel, SQL, Tableau, Python."
+   },
+   {
+    "name": "Python",
+    "evidence": "Working on tools - Excel, SQL, Tableau, Python."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Senior Finance Analyst",
+    "company": "Amazon",
+    "start": null,
+    "end": null,
+    "evidence": "Senior Finance Analyst at Amazon. Working in Pricing Finance team and collaborate with Product Managers, Software Development Engineer and Senior Leadership team. Working on tools - Excel, SQL, Tableau, Python."
+   }
+  ],
+  "uncertain": [
+   "experience 'Senior Finance Analyst': start 'present' not found in its evidence, removed",
+   "experience 'Senior Finance Analyst': end 'present' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

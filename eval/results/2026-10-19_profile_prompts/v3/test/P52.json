@@ -1,0 +1,313 @@
+{
+ "row": {
+  "id": "P52",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 97,
+  "raw_skills_in_cv": 94,
+  "skills_kept": 54,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 4,
+  "terms_found": 3,
+  "terms_missed": [
+   "Docker"
+  ],
+  "latency_s": 15.6,
+  "max_completion_tokens": 338
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Position: Senior Python Developer, Team Lead"
+   },
+   {
+    "name": "Django",
+    "evidence": "Architecture and implementation of analitycs dashboard based on django, celery and D3.js"
+   },
+   {
+    "name": "Celery",
+    "evidence": "Architecture and implementation of analitycs dashboard based on django, celery and D3.js"
+   },
+   {
+    "name": "D3.js",
+    "evidence": "Architecture and implementation of analitycs dashboard based on django, celery and D3.js"
+   },
+   {
+    "name": "RESTful API",
+    "evidence": "Designed and developed RESTful API for game application"
+   },
+   {
+    "name": "SQL",
+    "evidence": "Wrote SQL reports for the company clients"
+   },
+   {
+    "name": "JavaScript",
+    "evidence": "Designed and developed a websocket web-chat for a corporate ticket system using JavaScript and Tornado"
+   },
+   {
+    "name": "Tornado",
+    "evidence": "Designed and developed a websocket web-chat for a corporate ticket system using JavaScript and Tornado"
+   },
+   {
+    "name": "lua",
+    "evidence": "Designed and implemented a distributed RESTful task queue based on key-value DB using python and lua"
+   },
+   {
+    "name": "key-value DB",
+    "evidence": "Designed and implemented a distributed RESTful task queue based on key-value DB using python and lua"
+   },
+   {
+    "name": "b2b coffee business project",
+    "evidence": "Implemented a bunch of features for b2b coffee business project"
+   },
+   {
+    "name": "Django corporate task-management system",
+    "evidence": "Implemented new features to Django corporate task-management system"
+   },
+   {
+    "name": "business intellegence system",
+    "evidence": "Implemented business intellegence system for game application"
+   },
+   {
+    "name": "game application",
+    "evidence": "Implemented business intellegence system for game application"
+   },
+   {
+    "name": "corporate ticket system",
+    "evidence": "Integrated a corporate ticket system with Facebook and Twitter APIs"
+   },
+   {
+    "name": "web-chat",
+    "evidence": "Designed and developed a websocket web-chat for a corporate ticket system using JavaScript and Tornado"
+   },
+   {
+    "name": "distributed RESTful task queue",
+    "evidence": "Designed and implemented a distributed RESTful task queue based on key-value DB using python and lua"
+   },
+   {
+    "name": "SQL reports",
+    "evidence": "Wrote SQL reports for the company clients"
+   },
+   {
+    "name": "Django RESTFul Framework",
+    "evidence": "Django RESTFul Framework"
+   },
+   {
+    "name": "microservices",
+    "evidence": "Supported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using python\nBuild a CI pipelines in gitlab-ci with testing and code standard checks (pyflakes, pylint)\nBuild an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuild projects with microservices\nBuild systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review"
+   },
+   {
+    "name": "multi-threading",
+    "evidence": "Supported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using python\nBuild a CI pipelines in gitlab-ci with testing and code standard checks (pyflakes, pylint)\nBuild an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuild projects with microservices\nBuild systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review"
+   },
+   {
+    "name": "asynchronous",
+    "evidence": "Supported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using python\nBuild a CI pipelines in gitlab-ci with testing and code standard checks (pyflakes, pylint)\nBuild an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuild projects with microservices\nBuild systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review"
+   },
+   {
+    "name": "CI pipelines",
+    "evidence": "Supported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using python\nBuild a CI pipelines in gitlab-ci with testing and code standard checks (pyflakes, pylint)\nBuild an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuild projects with microservices\nBuild systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review"
+   },
+   {
+    "name": "infrastructure",
+    "evidence": "Supported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using python\nBuild a CI pipelines in gitlab-ci with testing and code standard checks (pyflakes, pylint)\nBuild an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuild projects with microservices\nBuild systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review"
+   },
+   {
+    "name": "clouds",
+    "evidence": "Supported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using python\nBuild a CI pipelines in gitlab-ci with testing and code standard checks (pyflakes, pylint)\nBuild an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuild projects with microservices\nBuild systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review"
+   },
+   {
+    "name": "code review",
+    "evidence": "Supported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using python\nBuild a CI pipelines in gitlab-ci with testing and code standard checks (pyflakes, pylint)\nBuild an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuild projects with microservices\nBuild systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review"
+   },
+   {
+    "name": "team leading",
+    "evidence": "Supported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using python\nBuild a CI pipelines in gitlab-ci with testing and code standard checks (pyflakes, pylint)\nBuild an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuild projects with microservices\nBuild systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review"
+   },
+   {
+    "name": "staff candidates review",
+    "evidence": "Supported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using python\nBuild a CI pipelines in gitlab-ci with testing and code standard checks (pyflakes, pylint)\nBuild an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuild projects with microservices\nBuild systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review"
+   },
+   {
+    "name": "Linux",
+    "evidence": "DevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Asure Cloud)"
+   },
+   {
+    "name": "Terraform",
+    "evidence": "DevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Asure Cloud)"
+   },
+   {
+    "name": "Ansible",
+    "evidence": "DevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Asure Cloud)"
+   },
+   {
+    "name": "Amazon AWS Cloud",
+    "evidence": "DevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Asure Cloud)"
+   },
+   {
+    "name": "Scrum",
+    "evidence": "Scrum"
+   },
+   {
+    "name": "Automated Testing",
+    "evidence": "Automated Testing"
+   },
+   {
+    "name": "CD/CI",
+    "evidence": "CD/CI (Gitlab runners/Github actions/Circle CI/Jenkins)"
+   },
+   {
+    "name": "Gitlab runners",
+    "evidence": "CD/CI (Gitlab runners/Github actions/Circle CI/Jenkins)"
+   },
+   {
+    "name": "Github actions",
+    "evidence": "CD/CI (Gitlab runners/Github actions/Circle CI/Jenkins)"
+   },
+   {
+    "name": "Circle CI",
+    "evidence": "CD/CI (Gitlab runners/Github actions/Circle CI/Jenkins)"
+   },
+   {
+    "name": "Jenkins",
+    "evidence": "CD/CI (Gitlab runners/Github actions/Circle CI/Jenkins)"
+   },
+   {
+    "name": "Code quality tools",
+    "evidence": "Code quality tools"
+   },
+   {
+    "name": "API",
+    "evidence": "Designed and developed RESTful API for game application"
+   },
+   {
+    "name": "REST",
+    "evidence": "API (REST, GraphQL, JSONRPC)"
+   },
+   {
+    "name": "GraphQL",
+    "evidence": "API (REST, GraphQL, JSONRPC)"
+   },
+   {
+    "name": "JSONRPC",
+    "evidence": "API (REST, GraphQL, JSONRPC)"
+   },
+   {
+    "name": "Web Scraping",
+    "evidence": "Web Scraping (Selenium+beautifulsoup)"
+   },
+   {
+    "name": "Selenium",
+    "evidence": "Web Scraping (Selenium+beautifulsoup)"
+   },
+   {
+    "name": "beautifulsoup",
+    "evidence": "Web Scraping (Selenium+beautifulsoup)"
+   },
+   {
+    "name": "Blockchain",
+    "evidence": "Blockchain (BTC/LTC/ETH/ERC20)"
+   },
+   {
+    "name": "BTC",
+    "evidence": "Blockchain (BTC/LTC/ETH/ERC20)"
+   },
+   {
+    "name": "LTC",
+    "evidence": "Blockchain (BTC/LTC/ETH/ERC20)"
+   },
+   {
+    "name": "ETH",
+    "evidence": "Blockchain (BTC/LTC/ETH/ERC20)"
+   },
+   {
+    "name": "ERC20",
+    "evidence": "Blockchain (BTC/LTC/ETH/ERC20)"
+   },
+   {
+    "name": "NFT",
+    "evidence": "NFT"
+   },
+   {
+    "name": "AI",
+    "evidence": "AI project will be just great"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Senior Python Developer",
+    "company": "Team Lead",
+    "start": null,
+    "end": null,
+    "evidence": "Position: Senior Python Developer, Team Lead"
+   }
+  ],
+  "uncertain": [
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "skill 'RESTful API': evidence re-anchored to the CV line that names it",
+   "skill 'SQL': evidence re-anchored to the CV line that names it",
+   "skill 'JavaScript': evidence re-anchored to the CV line that names it",
+   "skill 'Tornado': evidence re-anchored to the CV line that names it",
+   "skill 'lua': evidence re-anchored to the CV line that names it",
+   "skill 'key-value DB': evidence re-anchored to the CV line that names it",
+   "skill 'Django corporate task-management system': evidence re-anchored to the CV line that names it",
+   "skill 'business intellegence system': evidence re-anchored to the CV line that names it",
+   "skill 'game application': evidence re-anchored to the CV line that names it",
+   "skill 'corporate ticket system': evidence re-anchored to the CV line that names it",
+   "skill 'web-chat': evidence re-anchored to the CV line that names it",
+   "skill 'distributed RESTful task queue': evidence re-anchored to the CV line that names it",
+   "skill 'distributed CRM': name 'distributed CRM' is not written in its evidence, removed",
+   "skill 'web socket': name 'web socket' is not written in its evidence, removed",
+   "experience 'Senior Python Developer': start '2023' not found in its evidence, removed",
+   "experience 'Senior Python Developer': end 'present' not found in its evidence, removed",
+   "skill 'Git': name 'Git' is not written in its evidence, removed",
+   "skill 'Docker': name 'Docker' is not written in its evidence, removed",
+   "skill 'Docker Compose': name 'Docker Compose' is not written in its evidence, removed",
+   "skill 'Celery': name 'Celery' is not written in its evidence, removed",
+   "skill 'Flask SQLAlchemy': name 'Flask SQLAlchemy' is not written in its evidence, removed",
+   "skill 'aiohttp': name 'aiohttp' is not written in its evidence, removed",
+   "skill 'Tornado': name 'Tornado' is not written in its evidence, removed",
+   "skill 'RabbitMQ': name 'RabbitMQ' is not written in its evidence, removed",
+   "skill 'Python3': name 'Python3' is not written in its evidence, removed",
+   "skill 'JavaScript': name 'JavaScript' is not written in its evidence, removed",
+   "skill 'LUA': name 'LUA' is not written in its evidence, removed",
+   "skill 'SQL': name 'SQL' is not written in its evidence, removed",
+   "skill 'NoSQL': name 'NoSQL' is not written in its evidence, removed",
+   "skill 'Proxy': name 'Proxy' is not written in its evidence, removed",
+   "skill 'MS Azure Cloud': name 'MS Azure Cloud' is not written in its evidence, removed",
+   "skill 'Scrum': evidence re-anchored to the CV line that names it",
+   "skill 'Microservices': evidence re-anchored to the CV line that names it",
+   "skill 'Automated Testing': evidence re-anchored to the CV line that names it",
+   "skill 'CD/CI': evidence re-anchored to the CV line that names it",
+   "skill 'Gitlab runners': evidence re-anchored to the CV line that names it",
+   "skill 'Github actions': evidence re-anchored to the CV line that names it",
+   "skill 'Circle CI': evidence re-anchored to the CV line that names it",
+   "skill 'Jenkins': evidence re-anchored to the CV line that names it",
+   "skill 'Code quality tools': evidence re-anchored to the CV line that names it",
+   "skill 'API': evidence re-anchored to the CV line that names it",
+   "skill 'REST': evidence re-anchored to the CV line that names it",
+   "skill 'GraphQL': evidence re-anchored to the CV line that names it",
+   "skill 'JSONRPC': evidence re-anchored to the CV line that names it",
+   "skill 'Web Scraping': evidence re-anchored to the CV line that names it",
+   "skill 'Selenium': evidence re-anchored to the CV line that names it",
+   "skill 'beautifulsoup': evidence re-anchored to the CV line that names it",
+   "skill 'Team leading': evidence re-anchored to the CV line that names it",
+   "skill 'Blockchain': evidence re-anchored to the CV line that names it",
+   "skill 'BTC': evidence re-anchored to the CV line that names it",
+   "skill 'LTC': evidence re-anchored to the CV line that names it",
+   "skill 'ETH': evidence re-anchored to the CV line that names it",
+   "skill 'ERC20': evidence re-anchored to the CV line that names it",
+   "skill 'NFT': evidence re-anchored to the CV line that names it",
+   "skill 'AI': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

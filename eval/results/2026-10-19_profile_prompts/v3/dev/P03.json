@@ -1,0 +1,58 @@
+{
+ "row": {
+  "id": "P03",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 7,
+  "raw_skills_in_cv": 7,
+  "skills_kept": 7,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 2.0,
+  "max_completion_tokens": 113
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL. I know PyTorch and TensorFlow on expert level."
+   },
+   {
+    "name": "Java",
+    "evidence": "I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL. I know PyTorch and TensorFlow on expert level."
+   },
+   {
+    "name": "JavaScript",
+    "evidence": "I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL. I know PyTorch and TensorFlow on expert level."
+   },
+   {
+    "name": "SQL",
+    "evidence": "I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL. I know PyTorch and TensorFlow on expert level."
+   },
+   {
+    "name": "PyTorch",
+    "evidence": "I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL. I know PyTorch and TensorFlow on expert level."
+   },
+   {
+    "name": "TensorFlow",
+    "evidence": "I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL. I know PyTorch and TensorFlow on expert level."
+   },
+   {
+    "name": "English",
+    "evidence": "English level: upper"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [],
+  "prompt_version": "profile-v3"
+ }
+}

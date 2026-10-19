@@ -1,0 +1,37 @@
+{
+ "row": {
+  "id": "P31",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 5,
+  "raw_skills_in_cv": 3,
+  "skills_kept": 0,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 0,
+  "terms_missed": [
+   "Python"
+  ],
+  "latency_s": 1.7,
+  "max_completion_tokens": 97
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Python': name 'Python' is not written in its evidence, removed",
+   "skill 'Django': name 'Django' is not written in its evidence, removed",
+   "skill 'full-text search': name 'full-text search' is not written in its evidence, removed",
+   "skill 'complex filtering': name 'complex filtering' is not written in its evidence, removed",
+   "skill 'full-stack web development': name 'full-stack web development' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

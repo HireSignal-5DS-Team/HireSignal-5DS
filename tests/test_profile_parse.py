@@ -12,12 +12,12 @@ sys.path.insert(0, str(ROOT))
 
 from services.job.backend import FakeBackend  # noqa: E402
 from services.profile import anonymise_cv, parse_cv, run_profile_agent  # noqa: E402
-from services.profile.parse import (check_items, chunk_sections, cv_sections, dates_in,  # noqa: E402
+from services.profile.parse import (_expand_skill_groups, check_items, chunk_sections, cv_sections, dates_in,  # noqa: E402
                                   normalise_date)
-from services.profile.prompts import get_prompt  # noqa: E402
+from services.profile.prompts import PROMPT_VERSION, get_prompt  # noqa: E402
 from services.profile.contracts import ParsedCV  # noqa: E402
 
-SYSTEM_P1, EXAMPLES_P1 = get_prompt()  # prompts/profile/v1.md (= V2 profile-q1)
+SYSTEM_P1, EXAMPLES_P1 = get_prompt()  # the production version (T15: prompts/profile/v3.md)
 
 ANON = """[NAME] | Data Scientist
 [EMAIL] • [PHONE]
@@ -167,7 +167,7 @@ def test_parse_cv_retries_unreadable_and_merges_duplicates():
     parsed = parse_cv(ANON, "cv-x", backend)
     assert [s.name for s in parsed.skills] == ["Python"]
     assert any("unreadable" in n for n in parsed.uncertain)
-    assert parsed.candidate_id == "cv-x" and parsed.prompt_version == "profile-v1"
+    assert parsed.candidate_id == "cv-x" and parsed.prompt_version == PROMPT_VERSION
 
 
 def test_the_model_only_sees_the_anonymised_text():
@@ -193,7 +193,7 @@ def test_examples_follow_their_own_rules():
         data = json.loads(ex["output"])
         s, e, x = check_items(data, ex["input"], notes)
         assert notes == [], notes
-        assert len(s) == len(data["skills"]) and len(e) == len(data["education"]) and len(x) == len(data["experience"])
+        assert len(s) == len(_expand_skill_groups(data["skills"])) and len(e) == len(data["education"]) and len(x) == len(data["experience"])
 
 
 def test_parsed_cv_has_no_identity_field():

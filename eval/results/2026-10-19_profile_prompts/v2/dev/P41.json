@@ -1,0 +1,91 @@
+{
+ "row": {
+  "id": "P41",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 28,
+  "raw_skills_in_cv": 28,
+  "skills_kept": 6,
+  "experience": 0,
+  "education": 1,
+  "terms_present": 3,
+  "terms_found": 0,
+  "terms_missed": [
+   "statistics",
+   "PySpark",
+   "SQL"
+  ],
+  "latency_s": 5.2,
+  "max_completion_tokens": 167
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Machine learning",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   },
+   {
+    "name": "Computer vision",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   },
+   {
+    "name": "Tabular data",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   },
+   {
+    "name": "Time series",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   },
+   {
+    "name": "Digital signals processing",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   },
+   {
+    "name": "MLOps",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   }
+  ],
+  "education": [
+   {
+    "degree": "M.Sc",
+    "field": "Computer science",
+    "institution": null,
+    "end": null,
+    "evidence": "- M.SC computer science, Thesis on Automatic wordnet construction using sense embedding for local language"
+   }
+  ],
+  "experience": [],
+  "uncertain": [
+   "skill 'Data science': name 'Data science' is not written in its evidence, removed",
+   "skill 'Visualization': name 'Visualization' is not written in its evidence, removed",
+   "education 'M.Sc': institution 'unspecified' is not written in its evidence, removed",
+   "education 'M.Sc': end 'unspecified' not found in its evidence, removed",
+   "skill 'Machine Learning': name 'Machine Learning' is not written in its evidence, removed",
+   "skill 'PyTorch': name 'PyTorch' is not written in its evidence, removed",
+   "skill 'Deep Learning': name 'Deep Learning' is not written in its evidence, removed",
+   "skill 'Data Science': name 'Data Science' is not written in its evidence, removed",
+   "skill 'Git': name 'Git' is not written in its evidence, removed",
+   "skill 'computer vision': name 'computer vision' is not written in its evidence, removed",
+   "skill 'Docker': name 'Docker' is not written in its evidence, removed",
+   "skill 'Python': name 'Python' is not written in its evidence, removed",
+   "skill 'Pandas': name 'Pandas' is not written in its evidence, removed",
+   "skill 'SQL': name 'SQL' is not written in its evidence, removed",
+   "skill 'numpy': name 'numpy' is not written in its evidence, removed",
+   "skill 'scikit-learn': name 'scikit-learn' is not written in its evidence, removed",
+   "skill 'Jupyter Notebook': name 'Jupyter Notebook' is not written in its evidence, removed",
+   "skill 'statistics': name 'statistics' is not written in its evidence, removed",
+   "skill 'matplotlib': name 'matplotlib' is not written in its evidence, removed",
+   "skill 'PySpark': name 'PySpark' is not written in its evidence, removed",
+   "skill 'Databricks': name 'Databricks' is not written in its evidence, removed",
+   "skill 'AWS S3': name 'AWS S3' is not written in its evidence, removed",
+   "skill 'AWS Sagemaker': name 'AWS Sagemaker' is not written in its evidence, removed",
+   "skill 'MS Azure ML Studio': name 'MS Azure ML Studio' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

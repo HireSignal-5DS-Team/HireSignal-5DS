@@ -1,0 +1,648 @@
+{
+ "row": {
+  "id": "K01",
+  "set": "kaggle",
+  "calls": 11,
+  "json_valid": 11,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 180,
+  "raw_skills_in_cv": 165,
+  "skills_kept": 113,
+  "experience": 8,
+  "education": 2,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 48.1,
+  "max_completion_tokens": 458
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "control",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "budget systems",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "security management",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "budget and cost analysis",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "Office of Management and Budget (OMB)",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "Department of Defense (DoD)",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "U.S. Air Force regulations",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "logistics",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "INFOSEC/NETOPS",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "installations",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "mission support functions",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "research",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "recommendations",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "DoD planning, programming, budgeting and execution (PPBE)",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "capability planning",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "enterprise technical",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "Certification and Accreditation standards",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "CCRI processes",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,\nINFOSEC/NETOPS, installations, and mission support functions. Exceptional ability to recognize and analyze problems, conduct research;\nsummarize results, and make appropriate recommendations. Recognized expert in DoD planning, programming, budgeting and execution (PPBE)\nprocess. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "procedures",
+    "evidence": "procedures, security practices, and IA vulnerability tools i.e. ACAS. *Ability to apply knowledge of current security tools, and techniques to\nexecute Authority to Connect and Authority to Operate network systems. *Thorough knowledge of SCADA systems operations, security,\nsafeguards and protection *SECURITY CLEARANCE: TOP SECRET (SCI) w/CI Polygraph"
+   },
+   {
+    "name": "security practices",
+    "evidence": "procedures, security practices, and IA vulnerability tools i.e. ACAS. *Ability to apply knowledge of current security tools, and techniques to\nexecute Authority to Connect and Authority to Operate network systems. *Thorough knowledge of SCADA systems operations, security,\nsafeguards and protection *SECURITY CLEARANCE: TOP SECRET (SCI) w/CI Polygraph"
+   },
+   {
+    "name": "IA vulnerability tools",
+    "evidence": "procedures, security practices, and IA vulnerability tools i.e. ACAS. *Ability to apply knowledge of current security tools, and techniques to\nexecute Authority to Connect and Authority to Operate network systems. *Thorough knowledge of SCADA systems operations, security,\nsafeguards and protection *SECURITY CLEARANCE: TOP SECRET (SCI) w/CI Polygraph"
+   },
+   {
+    "name": "ACAS",
+    "evidence": "procedures, security practices, and IA vulnerability tools i.e. ACAS. *Ability to apply knowledge of current security tools, and techniques to\nexecute Authority to Connect and Authority to Operate network systems. *Thorough knowledge of SCADA systems operations, security,\nsafeguards and protection *SECURITY CLEARANCE: TOP SECRET (SCI) w/CI Polygraph"
+   },
+   {
+    "name": "SCADA systems operations",
+    "evidence": "procedures, security practices, and IA vulnerability tools i.e. ACAS. *Ability to apply knowledge of current security tools, and techniques to\nexecute Authority to Connect and Authority to Operate network systems. *Thorough knowledge of SCADA systems operations, security,\nsafeguards and protection *SECURITY CLEARANCE: TOP SECRET (SCI) w/CI Polygraph"
+   },
+   {
+    "name": "C4ISR",
+    "evidence": "Effectively oversee, manage, and evaluate multiple enterprise level IT programs, serve as senior technical advisor and evaluator for\nprograms using cutting edge technology for the Headquarters Air Force (HAF) command, control, communications, computer, intelligence,\nsurveillance and reconnaissance (C4ISR)."
+   },
+   {
+    "name": "IT programs",
+    "evidence": "Effectively oversee, manage, and evaluate multiple enterprise level IT programs, serve as senior technical advisor and evaluator for\nprograms using cutting edge technology for the Headquarters Air Force (HAF) command, control, communications, computer, intelligence,\nsurveillance and reconnaissance (C4ISR)."
+   },
+   {
+    "name": "cutting edge technology",
+    "evidence": "Effectively oversee, manage, and evaluate multiple enterprise level IT programs, serve as senior technical advisor and evaluator for\nprograms using cutting edge technology for the Headquarters Air Force (HAF) command, control, communications, computer, intelligence,\nsurveillance and reconnaissance (C4ISR)."
+   },
+   {
+    "name": "enterprise level IT",
+    "evidence": "Effectively oversee, manage, and evaluate multiple enterprise level IT programs, serve as senior technical advisor and evaluator for\nprograms using cutting edge technology for the Headquarters Air Force (HAF) command, control, communications, computer, intelligence,\nsurveillance and reconnaissance (C4ISR)."
+   },
+   {
+    "name": "technical advisor",
+    "evidence": "Effectively oversee, manage, and evaluate multiple enterprise level IT programs, serve as senior technical advisor and evaluator for\nprograms using cutting edge technology for the Headquarters Air Force (HAF) command, control, communications, computer, intelligence,\nsurveillance and reconnaissance (C4ISR)."
+   },
+   {
+    "name": "innovative approaches",
+    "evidence": "Researches and recommends innovative approaches to resolve major IT problems."
+   },
+   {
+    "name": "project management",
+    "evidence": "Performs more complex aspects of the project management, evaluation, and oversight responsibilities such as feasibility studies, systems\nanalysis, systems development, implementation, systems integration, and problem resolution."
+   },
+   {
+    "name": "feasibility studies",
+    "evidence": "Performs more complex aspects of the project management, evaluation, and oversight responsibilities such as feasibility studies, systems\nanalysis, systems development, implementation, systems integration, and problem resolution."
+   },
+   {
+    "name": "systems analysis",
+    "evidence": "Performs more complex aspects of the project management, evaluation, and oversight responsibilities such as feasibility studies, systems\nanalysis, systems development, implementation, systems integration, and problem resolution."
+   },
+   {
+    "name": "systems development",
+    "evidence": "Performs more complex aspects of the project management, evaluation, and oversight responsibilities such as feasibility studies, systems\nanalysis, systems development, implementation, systems integration, and problem resolution."
+   },
+   {
+    "name": "implementation",
+    "evidence": "Performs more complex aspects of the project management, evaluation, and oversight responsibilities such as feasibility studies, systems\nanalysis, systems development, implementation, systems integration, and problem resolution."
+   },
+   {
+    "name": "systems integration",
+    "evidence": "Performs more complex aspects of the project management, evaluation, and oversight responsibilities such as feasibility studies, systems\nanalysis, systems development, implementation, systems integration, and problem resolution."
+   },
+   {
+    "name": "problem resolution",
+    "evidence": "Performs more complex aspects of the project management, evaluation, and oversight responsibilities such as feasibility studies, systems\nanalysis, systems development, implementation, systems integration, and problem resolution."
+   },
+   {
+    "name": "cyber warfare",
+    "evidence": "cyber warfare."
+   },
+   {
+    "name": "crisis action planning",
+    "evidence": "Enabled crisis action planning, development of strike packages and cyber effects to protect U.S."
+   },
+   {
+    "name": "strike packages",
+    "evidence": "Enabled crisis action planning, development of strike packages and cyber effects to protect U.S."
+   },
+   {
+    "name": "cyber effects",
+    "evidence": "Enabled crisis action planning, development of strike packages and cyber effects to protect U.S."
+   },
+   {
+    "name": "information operations",
+    "evidence": "Developed information operations and computer network operations plans, including defensive computer operations planning, to ensure\nsupport Geographic Combatant Commanders' intent."
+   },
+   {
+    "name": "computer network operations",
+    "evidence": "Developed information operations and computer network operations plans, including defensive computer operations planning, to ensure\nsupport Geographic Combatant Commanders' intent."
+   },
+   {
+    "name": "defensive computer operations",
+    "evidence": "Developed information operations and computer network operations plans, including defensive computer operations planning, to ensure\nsupport Geographic Combatant Commanders' intent."
+   },
+   {
+    "name": "INFOSEC",
+    "evidence": "and highly-motivated mentor with proven dedication to self and subordinate improvement. *Superior knowledge of INFOSEC/NETOPS"
+   },
+   {
+    "name": "intrusion response",
+    "evidence": "requirements and provide intrusion response planning."
+   },
+   {
+    "name": "NetOps",
+    "evidence": "and highly-motivated mentor with proven dedication to self and subordinate improvement. *Superior knowledge of INFOSEC/NETOPS"
+   },
+   {
+    "name": "policy",
+    "evidence": "Made substantive recommendations to NetOps policy, doctrine, capability developments."
+   },
+   {
+    "name": "doctrine",
+    "evidence": "Supported Defend the Nation (DTN)-China Operation Planning Team with technical, INFOSEC doctrine, appropriate technologies,"
+   },
+   {
+    "name": "capability developments",
+    "evidence": "Made substantive recommendations to NetOps policy, doctrine, capability developments."
+   },
+   {
+    "name": "technical",
+    "evidence": "process. *Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "technologies",
+    "evidence": "Supported Defend the Nation (DTN)-China Operation Planning Team with technical, INFOSEC doctrine, appropriate technologies,"
+   },
+   {
+    "name": "techniques",
+    "evidence": "techniques to determine requirements for [NAME] equipment and systems. Excellent knowledge and ability to negotiate in financial"
+   },
+   {
+    "name": "tools",
+    "evidence": "procedures, security practices, and IA vulnerability tools i.e. ACAS. *Ability to apply knowledge of current security tools, and techniques to"
+   },
+   {
+    "name": "threats",
+    "evidence": "Utilized INFOSEC existing policy guidance as it pertains to threats, operating environment and operational requirements."
+   },
+   {
+    "name": "operational requirements",
+    "evidence": "Utilized INFOSEC existing policy guidance as it pertains to threats, operating environment and operational requirements."
+   },
+   {
+    "name": "operating environment",
+    "evidence": "Utilized INFOSEC existing policy guidance as it pertains to threats, operating environment and operational requirements."
+   },
+   {
+    "name": "Net/Ops",
+    "evidence": "Provided expert analysis of ongoing Net/Ops events, malicious activity and trend analysis."
+   },
+   {
+    "name": "trend analysis",
+    "evidence": "Provided expert analysis of ongoing Net/Ops events, malicious activity and trend analysis."
+   },
+   {
+    "name": "technical capabilities",
+    "evidence": "Technical lead on digital media projects, guided teams to solutions that leveraged technical capabilities."
+   },
+   {
+    "name": "documentation",
+    "evidence": "Ensured documentation of requirements for systems administration and information tasking orders."
+   },
+   {
+    "name": "technical lead",
+    "evidence": "Technical lead on digital media projects, guided teams to solutions that leveraged technical capabilities.\nDefined requirements for computer-based systems that supported electronic publishing Air Force wide.\nAchieved accurate and timely publication of electronic publications and forms.\nEnsured documentation of requirements for systems administration and information tasking orders.\nServed as technical lead on electronic publishing development and integration teams."
+   },
+   {
+    "name": "digital media projects",
+    "evidence": "Technical lead on digital media projects, guided teams to solutions that leveraged technical capabilities.\nDefined requirements for computer-based systems that supported electronic publishing Air Force wide.\nAchieved accurate and timely publication of electronic publications and forms.\nEnsured documentation of requirements for systems administration and information tasking orders.\nServed as technical lead on electronic publishing development and integration teams."
+   },
+   {
+    "name": "electronic publishing",
+    "evidence": "Technical lead on digital media projects, guided teams to solutions that leveraged technical capabilities.\nDefined requirements for computer-based systems that supported electronic publishing Air Force wide.\nAchieved accurate and timely publication of electronic publications and forms.\nEnsured documentation of requirements for systems administration and information tasking orders.\nServed as technical lead on electronic publishing development and integration teams."
+   },
+   {
+    "name": "information tasking orders",
+    "evidence": "Technical lead on digital media projects, guided teams to solutions that leveraged technical capabilities.\nDefined requirements for computer-based systems that supported electronic publishing Air Force wide.\nAchieved accurate and timely publication of electronic publications and forms.\nEnsured documentation of requirements for systems administration and information tasking orders.\nServed as technical lead on electronic publishing development and integration teams."
+   },
+   {
+    "name": "software development",
+    "evidence": "Analyzed software development, configuration management, testing, maintenance manuals, training manuals, tutorials, procedures, reports,"
+   },
+   {
+    "name": "configuration management",
+    "evidence": "Analyzed software development, configuration management, testing, maintenance manuals, training manuals, tutorials, procedures, reports,"
+   },
+   {
+    "name": "testing",
+    "evidence": "Analyzed software development, configuration management, testing, maintenance manuals, training manuals, tutorials, procedures, reports,"
+   },
+   {
+    "name": "maintenance manuals",
+    "evidence": "Analyzed software development, configuration management, testing, maintenance manuals, training manuals, tutorials, procedures, reports,"
+   },
+   {
+    "name": "training manuals",
+    "evidence": "Analyzed software development, configuration management, testing, maintenance manuals, training manuals, tutorials, procedures, reports,"
+   },
+   {
+    "name": "tutorials",
+    "evidence": "Analyzed software development, configuration management, testing, maintenance manuals, training manuals, tutorials, procedures, reports,"
+   },
+   {
+    "name": "reports",
+    "evidence": "Analyzed software development, configuration management, testing, maintenance manuals, training manuals, tutorials, procedures, reports,"
+   },
+   {
+    "name": "computer support",
+    "evidence": "Managed computer support , cost analysis, and acquisition to support ANG work plans."
+   },
+   {
+    "name": "cost analysis",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of"
+   },
+   {
+    "name": "acquisition",
+    "evidence": "Managed computer support , cost analysis, and acquisition to support ANG work plans."
+   },
+   {
+    "name": "budget",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of"
+   },
+   {
+    "name": "cost comparison procedures",
+    "evidence": "Demonstrated knowledge of cost comparison procedures, directives, and communications."
+   },
+   {
+    "name": "directives",
+    "evidence": "Collaborated with Defense [NAME] Systems Agency and other US Government partners to develop and implement directives for Global"
+   },
+   {
+    "name": "communications",
+    "evidence": "programs using cutting edge technology for the Headquarters Air Force (HAF) command, control, communications, computer, intelligence,"
+   },
+   {
+    "name": "technical direction",
+    "evidence": "Provided technical direction concerning the acquisition of hardware and software for the entire Air National (ANG)."
+   },
+   {
+    "name": "analysis",
+    "evidence": "control, budget systems, and security management. Working knowledge of budget and cost analysis processes. *Thorough knowledge of Office of"
+   },
+   {
+    "name": "evaluation",
+    "evidence": "Performs more complex aspects of the project management, evaluation, and oversight responsibilities such as feasibility studies, systems"
+   },
+   {
+    "name": "procurement",
+    "evidence": "Advised components of the ANG on acquisition, procurement, maintenance and feasibility for adoption of [NAME] hardware"
+   },
+   {
+    "name": "maintenance",
+    "evidence": "Analyzed software development, configuration management, testing, maintenance manuals, training manuals, tutorials, procedures, reports,"
+   },
+   {
+    "name": "feasibility",
+    "evidence": "Performs more complex aspects of the project management, evaluation, and oversight responsibilities such as feasibility studies, systems"
+   },
+   {
+    "name": "communication",
+    "evidence": "verbal communication skills, seeks challenging position with an organization where I can make a big impact with my multifaceted experience,"
+   },
+   {
+    "name": "DISA Action Officers",
+    "evidence": "DISA Action Officers Course 10-Dec-2009 *DOD [NAME] Assurance Boot Camp 06-Nov-2009 *Computer Network Defense/Computer"
+   },
+   {
+    "name": "Computer Network Defense",
+    "evidence": "DISA Action Officers Course 10-Dec-2009 *DOD [NAME] Assurance Boot Camp 06-Nov-2009 *Computer Network Defense/Computer"
+   },
+   {
+    "name": "Air Force",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "art",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "Agency",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "Basic",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "oral",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "hardware",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "Computer Operations",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "data management",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "Dec",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "direction",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "edge",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "forms",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "functional",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "Government",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "meetings",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "Office",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "enterprise",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "Network",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "personnel",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "policies",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "publications",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "publication",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "strategic",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "systems administration",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "trend",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   },
+   {
+    "name": "written",
+    "evidence": "Air Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec,\ndirection, documentation, edge, feasibility studies, forms, functional, Government, [NAME] Systems, [NAME], computer support,\nmeetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication,\nsoftware development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend,\nwritten"
+   }
+  ],
+  "education": [
+   {
+    "degree": "M.S",
+    "field": "Public Administration, Government Law",
+    "institution": "Sul Ross University ï1⁄4 City , State",
+    "end": null,
+    "evidence": "M.S : Public Administration, Government Law Sul Ross University ï1⁄4 City , State Public Administration, Government Law"
+   },
+   {
+    "degree": "B.S",
+    "field": "Psychology, Education",
+    "institution": "Morgan State University ï1⁄4 City , State",
+    "end": null,
+    "evidence": "B.S : Psychology, Education Morgan State University ï1⁄4 City , State Psychology, Education"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Specialist",
+    "company": "Company Name",
+    "start": "2014-07",
+    "end": "present",
+    "evidence": "07/2014 to Current\n[NAME] Specialist Company Name ï1⁄4 City"
+   },
+   {
+    "title": "Developed information operations and computer network operations plans",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Developed information operations and computer network operations plans, including defensive computer operations planning, to ensure\nsupport Geographic Combatant Commanders' intent."
+   },
+   {
+    "title": "Made recommendations to posture GIG to respond to emerging and current threats",
+    "company": "GIG",
+    "start": null,
+    "end": null,
+    "evidence": "Made recommendations to posture GIG to respond to emerging and current threats."
+   },
+   {
+    "title": "Supported Defend the Nation (DTN)-China Operation Planning Team",
+    "company": "Defend the Nation (DTN)-China Operation Planning Team",
+    "start": null,
+    "end": null,
+    "evidence": "Supported Defend the Nation (DTN)-China Operation Planning Team with technical, INFOSEC doctrine, appropriate technologies,\ntechniques, and tools."
+   },
+   {
+    "title": "Coordinated changing mission parameters",
+    "company": "US/Allied/Coalition partners",
+    "start": null,
+    "end": null,
+    "evidence": "Coordinated changing mission parameters with US/Allied/Coalition partners: identified and prioritized Intelligence Community cyber\nrequirements and provide intrusion response planning."
+   },
+   {
+    "title": "Made substantive recommendations to NetOps policy, doctrine, capability developments",
+    "company": "NetOps",
+    "start": null,
+    "end": null,
+    "evidence": "Made substantive recommendations to NetOps policy, doctrine, capability developments."
+   },
+   {
+    "title": "Technical lead",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Technical lead on digital media projects, guided teams to solutions that leveraged technical capabilities.\nDefined requirements for computer-based systems that supported electronic publishing Air Force wide.\nAchieved accurate and timely publication of electronic publications and forms.\nEnsured documentation of requirements for systems administration and information tasking orders.\nServed as technical lead on electronic publishing development and integration teams."
+   },
+   {
+    "title": "IT Specialist",
+    "company": "Company Name ï1⁄4 City , State",
+    "start": null,
+    "end": null,
+    "evidence": "IT Specialist Company Name ï1⁄4 City , State"
+   }
+  ],
+  "uncertain": [
+   "skill 'problem analysis': name 'problem analysis' is not written in its evidence, removed",
+   "skill 'SCADA systems security': name 'SCADA systems security' is not written in its evidence, removed",
+   "skill 'SCADA systems safeguards': name 'SCADA systems safeguards' is not written in its evidence, removed",
+   "skill 'SCADA systems protection': name 'SCADA systems protection' is not written in its evidence, removed",
+   "skill 'program evaluation': name 'program evaluation' is not written in its evidence, removed",
+   "skill 'innovative approaches': evidence re-anchored to the CV line that names it",
+   "skill 'cyber warfare': evidence re-anchored to the CV line that names it",
+   "skill 'crisis action planning': evidence re-anchored to the CV line that names it",
+   "skill 'strike packages': evidence re-anchored to the CV line that names it",
+   "skill 'cyber effects': evidence re-anchored to the CV line that names it",
+   "skill 'global grid operations': name 'global grid operations' is not written in its evidence, removed",
+   "experience 'Specialist (INFOSEC/NETOPS)': title 'Specialist (INFOSEC/NETOPS)' is not written in its evidence, removed",
+   "experience 'Specialist (INFOSEC/NETOPS)': company 'Company Name ï1⁄4 City , State' is not written in its evidence, removed",
+   "experience 'Specialist (INFOSEC/NETOPS)': neither title nor company, dropped",
+   "skill 'INFOSEC': evidence re-anchored to the CV line that names it",
+   "skill 'intrusion response': evidence re-anchored to the CV line that names it",
+   "skill 'NetOps': evidence re-anchored to the CV line that names it",
+   "skill 'policy': evidence re-anchored to the CV line that names it",
+   "skill 'doctrine': evidence re-anchored to the CV line that names it",
+   "skill 'capability developments': evidence re-anchored to the CV line that names it",
+   "skill 'technical': evidence re-anchored to the CV line that names it",
+   "skill 'technologies': evidence re-anchored to the CV line that names it",
+   "skill 'techniques': evidence re-anchored to the CV line that names it",
+   "skill 'tools': evidence re-anchored to the CV line that names it",
+   "experience 'Developed information operations and computer network operations plans': company 'US/Allied/Coalition partners' is not written in its evidence, removed",
+   "skill 'malicious activity analysis': name 'malicious activity analysis' is not written in its evidence, removed",
+   "skill 'threat mitigation': name 'threat mitigation' is not written in its evidence, removed",
+   "skill 'technical capabilities': evidence re-anchored to the CV line that names it",
+   "skill 'requirements definition': name 'requirements definition' is not written in its evidence, removed",
+   "skill 'system integration': name 'system integration' is not written in its evidence, removed",
+   "skill 'documentation': evidence re-anchored to the CV line that names it",
+   "skill 'system administration': name 'system administration' is not written in its evidence, removed",
+   "experience 'Senior Technical Analyst': title 'Senior Technical Analyst' is not written in its evidence, removed",
+   "experience 'Senior Technical Analyst': company 'Company Name' is not written in its evidence, removed",
+   "experience 'Senior Technical Analyst': start '09/2006' not found in its evidence, removed",
+   "experience 'Senior Technical Analyst': end '08/2009' not found in its evidence, removed",
+   "experience 'Senior Technical Analyst': neither title nor company, dropped",
+   "experience 'Technical lead': company 'Company Name' is not written in its evidence, removed",
+   "experience 'Technical lead': start '09/2006' not found in its evidence, removed",
+   "experience 'Technical lead': end '08/2009' not found in its evidence, removed",
+   "skill 'Air Force guidance': name 'Air Force guidance' is not written in its evidence, removed",
+   "skill 'computer-based training': name 'computer-based training' is not written in its evidence, removed",
+   "skill 'data management': name 'data management' is not written in its evidence, removed",
+   "skill 'interagency collaboration': name 'interagency collaboration' is not written in its evidence, removed",
+   "skill 'state-of-the-art techniques': name 'state-of-the-art techniques' is not written in its evidence, removed",
+   "skill 'computer support': evidence re-anchored to the CV line that names it",
+   "skill 'cost analysis': evidence re-anchored to the CV line that names it",
+   "skill 'acquisition': evidence re-anchored to the CV line that names it",
+   "skill 'budget': evidence re-anchored to the CV line that names it",
+   "experience 'IT Specialist': start '08/1998' not found in its evidence, removed",
+   "experience 'IT Specialist': end '09/2006' not found in its evidence, removed",
+   "experience 'IT Specialist': title 'IT Specialist' is not written in its evidence, removed",
+   "experience 'IT Specialist': company 'Company Name ï1⁄4 City , State' is not written in its evidence, removed",
+   "experience 'IT Specialist': start '08/1998' not found in its evidence, removed",
+   "experience 'IT Specialist': end '09/2006' not found in its evidence, removed",
+   "experience 'IT Specialist': neither title nor company, dropped",
+   "skill 'cost comparison procedures': evidence re-anchored to the CV line that names it",
+   "skill 'directives': evidence re-anchored to the CV line that names it",
+   "skill 'communications': evidence re-anchored to the CV line that names it",
+   "skill 'technical direction': evidence re-anchored to the CV line that names it",
+   "skill 'analysis': evidence re-anchored to the CV line that names it",
+   "skill 'evaluation': evidence re-anchored to the CV line that names it",
+   "skill 'acquisition': evidence re-anchored to the CV line that names it",
+   "skill 'procurement': evidence re-anchored to the CV line that names it",
+   "skill 'maintenance': evidence re-anchored to the CV line that names it",
+   "skill 'feasibility': evidence re-anchored to the CV line that names it",
+   "skill 'technical direction': evidence re-anchored to the CV line that names it",
+   "skill 'analysis': evidence re-anchored to the CV line that names it",
+   "skill 'evaluation': evidence re-anchored to the CV line that names it",
+   "skill 'acquisition': evidence re-anchored to the CV line that names it",
+   "skill 'procurement': evidence re-anchored to the CV line that names it",
+   "skill 'maintenance': evidence re-anchored to the CV line that names it",
+   "skill 'feasibility': evidence re-anchored to the CV line that names it",
+   "skill 'communication': evidence re-anchored to the CV line that names it",
+   "skill 'analysis': evidence re-anchored to the CV line that names it",
+   "skill 'evaluation': evidence re-anchored to the CV line that names it",
+   "skill 'procurement': evidence re-anchored to the CV line that names it",
+   "skill 'maintenance': evidence re-anchored to the CV line that names it",
+   "skill 'feasibility': evidence re-anchored to the CV line that names it",
+   "skill 'acquisition': evidence re-anchored to the CV line that names it",
+   "skill 'procurement': evidence re-anchored to the CV line that names it",
+   "skill 'maintenance': evidence re-anchored to the CV line that names it",
+   "skill 'feasibility': evidence re-anchored to the CV line that names it",
+   "skill 'advice': name 'advice' is not written in its evidence, removed",
+   "skill 'Security + Certified': name 'Security + Certified' is not written in its evidence, removed",
+   "skill 'Cyber 200 Advance': name 'Cyber 200 Advance' is not written in its evidence, removed",
+   "skill 'Basic Computer Operations': name 'Basic Computer Operations' is not written in its evidence, removed",
+   "skill 'DOD Assurance Boot Camp': name 'DOD Assurance Boot Camp' is not written in its evidence, removed",
+   "skill 'Computer Network Threat': name 'Computer Network Threat' is not written in its evidence, removed",
+   "education 'M.S': end '2014' not found in its evidence, removed",
+   "education 'B.S': end '2014' not found in its evidence, removed",
+   "skill '[NAME] Systems': name contained a placeholder, removed",
+   "skill '[NAME]': name contained a placeholder, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

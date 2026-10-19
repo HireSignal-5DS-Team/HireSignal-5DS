@@ -1,0 +1,83 @@
+{
+ "row": {
+  "id": "P28",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 10,
+  "raw_skills_in_cv": 9,
+  "skills_kept": 9,
+  "experience": 0,
+  "education": 1,
+  "terms_present": 2,
+  "terms_found": 2,
+  "terms_missed": [],
+  "latency_s": 3.5,
+  "max_completion_tokens": 186
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Machine Learning",
+    "evidence": "Ph. D. in Economics, more than two dozens of publication papers (full list upon request).\nEducational YouTube channel devoted to explaining basics of machine learning and deep learning for non-STEM students.\n\"Machine Learning, Data Science and Deep Learning with Python\" course completion certificate.\nA couple of side-projects available on my Github."
+   },
+   {
+    "name": "Data Science",
+    "evidence": "Ph. D. in Economics, more than two dozens of publication papers (full list upon request).\nEducational YouTube channel devoted to explaining basics of machine learning and deep learning for non-STEM students.\n\"Machine Learning, Data Science and Deep Learning with Python\" course completion certificate.\nA couple of side-projects available on my Github."
+   },
+   {
+    "name": "Deep Learning",
+    "evidence": "Ph. D. in Economics, more than two dozens of publication papers (full list upon request).\nEducational YouTube channel devoted to explaining basics of machine learning and deep learning for non-STEM students.\n\"Machine Learning, Data Science and Deep Learning with Python\" course completion certificate.\nA couple of side-projects available on my Github."
+   },
+   {
+    "name": "Python",
+    "evidence": "Ph. D. in Economics, more than two dozens of publication papers (full list upon request).\nEducational YouTube channel devoted to explaining basics of machine learning and deep learning for non-STEM students.\n\"Machine Learning, Data Science and Deep Learning with Python\" course completion certificate.\nA couple of side-projects available on my Github."
+   },
+   {
+    "name": "Time Series",
+    "evidence": "I have more than 8 years of academic research working as a lecturer and associate professor. Throughout that time I built plenty of macroeconomic models, mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+   },
+   {
+    "name": "Statsoft Statistica",
+    "evidence": "I have more than 8 years of academic research working as a lecturer and associate professor. Throughout that time I built plenty of macroeconomic models, mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+   },
+   {
+    "name": "SPSS Statistics",
+    "evidence": "I have more than 8 years of academic research working as a lecturer and associate professor. Throughout that time I built plenty of macroeconomic models, mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+   },
+   {
+    "name": "Matlab",
+    "evidence": "I have more than 8 years of academic research working as a lecturer and associate professor. Throughout that time I built plenty of macroeconomic models, mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+   },
+   {
+    "name": "RapidMiner",
+    "evidence": "I have more than 8 years of academic research working as a lecturer and associate professor. Throughout that time I built plenty of macroeconomic models, mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+   }
+  ],
+  "education": [
+   {
+    "degree": "Ph. D.",
+    "field": "Economics",
+    "institution": null,
+    "end": null,
+    "evidence": "Ph. D. in Economics, more than two dozens of publication papers (full list upon request)."
+   }
+  ],
+  "experience": [],
+  "uncertain": [
+   "skill 'Statistical Modeling': name 'Statistical Modeling' is not written in its evidence, removed",
+   "skill 'Time Series': evidence re-anchored to the CV line that names it",
+   "skill 'Statsoft Statistica': evidence re-anchored to the CV line that names it",
+   "skill 'SPSS Statistics': evidence re-anchored to the CV line that names it",
+   "skill 'Matlab': evidence re-anchored to the CV line that names it",
+   "skill 'RapidMiner': evidence re-anchored to the CV line that names it",
+   "education 'Ph. D.': institution 'Unknown' is not written in its evidence, removed",
+   "education 'Ph. D.': end 'present' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

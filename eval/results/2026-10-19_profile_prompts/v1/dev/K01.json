@@ -1,0 +1,271 @@
+{
+ "row": {
+  "id": "K01",
+  "set": "kaggle",
+  "calls": 14,
+  "json_valid": 8,
+  "cut_calls": 6,
+  "partial": true,
+  "raw_skills": 54,
+  "raw_skills_in_cv": 43,
+  "skills_kept": 43,
+  "experience": 3,
+  "education": 2,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 115.8,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "control",
+    "evidence": "control, budget systems, and security management."
+   },
+   {
+    "name": "budget systems",
+    "evidence": "control, budget systems, and security management."
+   },
+   {
+    "name": "security management",
+    "evidence": "control, budget systems, and security management."
+   },
+   {
+    "name": "budget and cost analysis",
+    "evidence": "Working knowledge of budget and cost analysis processes."
+   },
+   {
+    "name": "Office of Management and Budget",
+    "evidence": "*Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,"
+   },
+   {
+    "name": "Department of Defense",
+    "evidence": "*Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,"
+   },
+   {
+    "name": "U.S. Air Force",
+    "evidence": "*Thorough knowledge of Office of\nManagement and Budget (OMB), Department of Defense (DoD) and U.S. Air Force regulations, principles and practices pertaining to logistics,"
+   },
+   {
+    "name": "logistics",
+    "evidence": "pertaining to logistics,"
+   },
+   {
+    "name": "INFOSEC/NETOPS",
+    "evidence": "INFOSEC/NETOPS, installations, and mission support functions."
+   },
+   {
+    "name": "installations",
+    "evidence": "INFOSEC/NETOPS, installations, and mission support functions."
+   },
+   {
+    "name": "mission support functions",
+    "evidence": "INFOSEC/NETOPS, installations, and mission support functions."
+   },
+   {
+    "name": "capability planning",
+    "evidence": "Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "enterprise technical",
+    "evidence": "Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "Certification and Accreditation",
+    "evidence": "Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "CCRI processes",
+    "evidence": "Expertise in capability planning in IT environment, enterprise technical/Certification and Accreditation standards, CCRI processes,"
+   },
+   {
+    "name": "procedures",
+    "evidence": "procedures, security practices, and IA vulnerability tools i.e. ACAS."
+   },
+   {
+    "name": "security practices",
+    "evidence": "procedures, security practices, and IA vulnerability tools i.e. ACAS."
+   },
+   {
+    "name": "IA vulnerability tools",
+    "evidence": "procedures, security practices, and IA vulnerability tools i.e. ACAS."
+   },
+   {
+    "name": "ACAS",
+    "evidence": "procedures, security practices, and IA vulnerability tools i.e. ACAS."
+   },
+   {
+    "name": "Authority to Connect",
+    "evidence": "*Ability to apply knowledge of current security tools, and techniques to\nexecute Authority to Connect and Authority to Operate network systems."
+   },
+   {
+    "name": "Authority to Operate",
+    "evidence": "*Ability to apply knowledge of current security tools, and techniques to\nexecute Authority to Connect and Authority to Operate network systems."
+   },
+   {
+    "name": "SCADA systems operations",
+    "evidence": "*Thorough knowledge of SCADA systems operations, security,\nsafeguards and protection"
+   },
+   {
+    "name": "SECURITY CLEARANCE",
+    "evidence": "SECURITY CLEARANCE: TOP SECRET (SCI) w/CI Polygraph"
+   },
+   {
+    "name": "C4ISR",
+    "evidence": "serve as senior technical advisor and evaluator for\nprograms using cutting edge technology for the Headquarters Air Force (HAF) command, control, communications, computer, intelligence,\nsurveillance and reconnaissance (C4ISR)."
+   },
+   {
+    "name": "information operations",
+    "evidence": "Developed information operations and computer network operations plans, including defensive computer operations planning, to ensure\nsupport Geographic Combatant Commanders' intent."
+   },
+   {
+    "name": "computer network operations",
+    "evidence": "Developed information operations and computer network operations plans, including defensive computer operations planning, to ensure\nsupport Geographic Combatant Commanders' intent."
+   },
+   {
+    "name": "defensive computer operations planning",
+    "evidence": "Developed information operations and computer network operations plans, including defensive computer operations planning, to ensure\nsupport Geographic Combatant Commanders' intent."
+   },
+   {
+    "name": "Defend the Nation (DTN)-China Operation Planning",
+    "evidence": "Supported Defend the Nation (DTN)-China Operation Planning Team with technical, INFOSEC doctrine, appropriate technologies,\ntechniques, and tools."
+   },
+   {
+    "name": "NetOps policy",
+    "evidence": "Made substantive recommendations to NetOps policy, doctrine, capability developments."
+   },
+   {
+    "name": "Net/Ops events",
+    "evidence": "Provided expert analysis of ongoing Net/Ops events, malicious activity and trend analysis."
+   },
+   {
+    "name": "malicious activity",
+    "evidence": "Provided expert analysis of ongoing Net/Ops events, malicious activity and trend analysis."
+   },
+   {
+    "name": "trend analysis",
+    "evidence": "Provided expert analysis of ongoing Net/Ops events, malicious activity and trend analysis."
+   },
+   {
+    "name": "operational plans",
+    "evidence": "Developed operational plans and orders to counter malicious activity and mitigate identified or potential threats to the GIG."
+   },
+   {
+    "name": "digital media projects",
+    "evidence": "Technical lead on digital media projects, guided teams to solutions that leveraged technical capabilities."
+   },
+   {
+    "name": "technical capabilities",
+    "evidence": "Technical lead on digital media projects, guided teams to solutions that leveraged technical capabilities."
+   },
+   {
+    "name": "electronic publishing",
+    "evidence": "Defined requirements for computer-based systems that supported electronic publishing Air Force wide."
+   },
+   {
+    "name": "information tasking orders",
+    "evidence": "Ensured documentation of requirements for systems administration and information tasking orders."
+   },
+   {
+    "name": "electronic publishing development",
+    "evidence": "Served as technical lead on electronic publishing development and integration teams."
+   },
+   {
+    "name": "integration",
+    "evidence": "Served as technical lead on electronic publishing development and integration teams."
+   },
+   {
+    "name": "Cyber 200 Advance",
+    "evidence": "*Cyber 200 Advance Continuing Education Course 26-"
+   },
+   {
+    "name": "Basic Computer Operations",
+    "evidence": "*Basic Computer Operations Planner's Course 24-"
+   },
+   {
+    "name": "DISA Action Officers",
+    "evidence": "*DISA Action Officers Course 10-Dec-2009"
+   },
+   {
+    "name": "Computer Network Defense",
+    "evidence": "*Computer Network Defense/Computer\nNetwork Threat 24-"
+   }
+  ],
+  "education": [
+   {
+    "degree": "M.S",
+    "field": "Public Administration, Government Law",
+    "institution": "Sul Ross University ï1⁄4 City , State",
+    "end": null,
+    "evidence": "M.S : Public Administration, Government Law Sul Ross University ï1⁄4 City , State Public Administration, Government Law"
+   },
+   {
+    "degree": "B.S",
+    "field": "Psychology, Education",
+    "institution": "Morgan State University ï1⁄4 City , State",
+    "end": null,
+    "evidence": "B.S : Psychology, Education Morgan State University ï1⁄4 City , State Psychology, Education"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Specialist",
+    "company": "Company Name",
+    "start": null,
+    "end": null,
+    "evidence": "[NAME] Specialist Company Name ï1⁄4 City"
+   },
+   {
+    "title": "Senior Technical Analyst",
+    "company": "Company Name",
+    "start": null,
+    "end": null,
+    "evidence": "Senior Technical Analyst Company Name"
+   },
+   {
+    "title": "Technical lead",
+    "company": "digital media projects",
+    "start": null,
+    "end": null,
+    "evidence": "Technical lead on digital media projects, guided teams to solutions that leveraged technical capabilities."
+   }
+  ],
+  "uncertain": [
+   "skill 'SCADA systems security': name 'SCADA systems security' is not written in its evidence, removed",
+   "skill 'SCADA systems safeguards': name 'SCADA systems safeguards' is not written in its evidence, removed",
+   "skill 'SCADA systems protection': name 'SCADA systems protection' is not written in its evidence, removed",
+   "experience 'Specialist': start '07/2014' not found in its evidence, removed",
+   "experience 'Specialist': end 'current' not found in its evidence, removed",
+   "part 5/11: answer cut off at the token limit",
+   "part 5/11: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 5/11: answer cut off at the token limit",
+   "part 5/11: attempt 2: unreadable answer (no JSON object in the model answer)",
+   "skill 'threat response': name 'threat response' is not written in its evidence, removed",
+   "skill 'mission parameters coordination': name 'mission parameters coordination' is not written in its evidence, removed",
+   "skill 'INFOSEC policy guidance': name 'INFOSEC policy guidance' is not written in its evidence, removed",
+   "skill 'threat mitigation': name 'threat mitigation' is not written in its evidence, removed",
+   "skill 'requirements definition': name 'requirements definition' is not written in its evidence, removed",
+   "skill 'system administration': name 'system administration' is not written in its evidence, removed",
+   "experience 'Senior Technical Analyst': start '09/2006' not found in its evidence, removed",
+   "experience 'Senior Technical Analyst': end '08/2009' not found in its evidence, removed",
+   "experience 'Technical lead': start '09/2006' not found in its evidence, removed",
+   "experience 'Technical lead': end '08/2009' not found in its evidence, removed",
+   "part 8/11: answer cut off at the token limit",
+   "part 8/11: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 8/11: answer cut off at the token limit",
+   "part 8/11: attempt 2: unreadable answer (no JSON object in the model answer)",
+   "skill 'Security+': name 'Security+' is not written in its evidence, removed",
+   "skill 'DOD Assurance Boot Camp': name 'DOD Assurance Boot Camp' is not written in its evidence, removed",
+   "education 'M.S': end 'Jun-2014' not found in its evidence, removed",
+   "education 'B.S': end 'Jun-2014' not found in its evidence, removed",
+   "part 11/11: answer cut off at the token limit",
+   "part 11/11: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 11/11: answer cut off at the token limit",
+   "part 11/11: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

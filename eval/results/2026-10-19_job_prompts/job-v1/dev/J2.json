@@ -1,0 +1,134 @@
+{
+ "card": {
+  "schema_version": "0.1.0",
+  "job_id": "J2",
+  "title": "Data Engineer",
+  "language": "en",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "text": "Knowledge of the general principles of Data Warehousing",
+    "evidence": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Data Warehousing"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r2",
+    "text": "Knowledge of the general principles of Data Lakes",
+    "evidence": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Data Lakes"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r3",
+    "text": "Wiliness to do research on business logic",
+    "evidence": "Wiliness to do research on business logic",
+    "kind": "must",
+    "category": "other",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r4",
+    "text": "Hands-on experience with SQL",
+    "evidence": "Hands-on experience with SQL",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "SQL"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r5",
+    "text": "Knowledge of Python",
+    "evidence": "Knowledge of Python",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Python"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r6",
+    "text": "Experience with GCP or other cloud providers",
+    "evidence": "Experience with GCP or other cloud providers",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "GCP",
+     "cloud providers"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r7",
+    "text": "Good spoken English",
+    "evidence": "Good spoken English",
+    "kind": "must",
+    "category": "language",
+    "skill_terms": [
+     "spoken English"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": []
+ },
+ "score": {
+  "job": "J2",
+  "failed": 0,
+  "latency_s": 6.5,
+  "tp": 6,
+  "fp": 0,
+  "fn": 0,
+  "kind_ok": 5,
+  "terms_tp": 5,
+  "terms_fp": 2,
+  "terms_fn": 1,
+  "strict_tp": 6,
+  "strict_fp": 1,
+  "strict_fn": 0,
+  "raw_proposals": 6,
+  "raw_verbatim": 6,
+  "invented": 0,
+  "soft_must": [
+   "Wiliness to do research on business logic"
+  ],
+  "splits": [],
+  "merges": [],
+  "cut_calls": 0,
+  "missed": [],
+  "extra": []
+ },
+ "calls": [
+  {
+   "input": "Knowledge of the general principles of Data Warehousing and Data Lakes\nWiliness to do research on business logic\nHands-on experience with SQL\nKnowledge of Python\nExperience with GCP or other cloud providers\nGood spoken English",
+   "raw": "{\"requirements\": [{\"evidence\": \"Knowledge of the general principles of Data Warehousing and Data Lakes\", \"skill_terms\": [\"Data Warehousing\", \"Data Lakes\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Knowledge of the general principles of Data Warehousing and Data Lakes\"}, {\"evidence\": \"Wiliness to do research on business logic\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"Wiliness to do research on business logic\"}, {\"evidence\": \"Hands-on experience with SQL\", \"skill_terms\": [\"SQL\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Hands-on experience with SQL\"}, {\"evidence\": \"Knowledge of Python\", \"skill_terms\": [\"Python\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Knowledge of Python\"}, {\"evidence\": \"Experience with GCP or other cloud providers\", \"skill_terms\": [\"GCP\", \"cloud providers\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Experience with GCP or other cloud providers\"}, {\"evidence\": \"Good spoken English\", \"skill_terms\": [\"spoken English\"], \"kind\": \"must\", \"category\": \"language\", \"min_years\": null, \"text\": \"Good spoken English\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Djinni job id: 1d864d06-e9ee-55a8-a42e-3ff4da68d7a8\nPosition: Data Engineer\nExperience (Djinni field): 3y\nEnglish level (Djinni field): intermediate\n\nResponsibilities\nDevelopment and support of the core data analytics platform (Python)\nDeep diving into logic of client business\nCollaborates with multiple teams\nUnderstands the overall enterprise Data Architecture and executes on delivering a Next Gen Data Warehouse\nWork on the design of the new components of the solution\n\nRequirements\nKnowledge of the general principles of Data Warehousing and Data Lakes \nWiliness to do research on business logi",
+   "raw": "{\n    \"job_title\": \"Data Engineer\"\n}",
+   "finish": "stop"
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "row": {
+  "id": "P16",
+  "set": "gold",
+  "calls": 6,
+  "json_valid": 2,
+  "cut_calls": 4,
+  "partial": true,
+  "raw_skills": 5,
+  "raw_skills_in_cv": 5,
+  "skills_kept": 5,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 4,
+  "terms_found": 2,
+  "terms_missed": [
+   "GCP",
+   "English"
+  ],
+  "latency_s": 59.3,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Bash",
+    "evidence": "Creating Bash scripts for automation of AWS Processes"
+   },
+   {
+    "name": "Python",
+    "evidence": "Writing automated jobs in Python for extracting and processing data from different\nresources"
+   },
+   {
+    "name": "AWS",
+    "evidence": "Creating Bash scripts for automation of AWS Processes"
+   },
+   {
+    "name": "EC-2",
+    "evidence": "Managing, tuning and maintaining EC-2 Virtual Machines for running jobs in AWS\nCloud"
+   },
+   {
+    "name": "SQL",
+    "evidence": "Filtering data in the database by using SQL"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Intern Software Developer",
+    "company": "CASE",
+    "start": null,
+    "end": null,
+    "evidence": "Intern Software Developer, CASE, Warsaw"
+   }
+  ],
+  "uncertain": [
+   "part 1/4: answer cut off at the token limit",
+   "part 1/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 1/4: answer cut off at the token limit",
+   "part 1/4: attempt 2: unreadable answer (no JSON object in the model answer)",
+   "experience 'Intern Software Developer': start 'present' not found in its evidence, removed",
+   "experience 'Intern Software Developer': end 'present' not found in its evidence, removed",
+   "part 3/4: answer cut off at the token limit",
+   "part 3/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 3/4: answer cut off at the token limit",
+   "part 3/4: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -1,0 +1,195 @@
+{
+ "row": {
+  "id": "P32",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 50,
+  "raw_skills_in_cv": 50,
+  "skills_kept": 36,
+  "experience": 2,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 3,
+  "terms_missed": [],
+  "latency_s": 10.4,
+  "max_completion_tokens": 316
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "Django",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "Flask",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "FASTApi",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "SQL",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "Postgres",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "JavaScript",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "VUE",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "React",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "pure",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "PHP",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "CSS",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "HTML",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "Bash",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "Linux",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "Git",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "REST",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "graphQL",
+    "evidence": "I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git."
+   },
+   {
+    "name": "Celery",
+    "evidence": "Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)"
+   },
+   {
+    "name": "Docker",
+    "evidence": "Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)"
+   },
+   {
+    "name": "Channels",
+    "evidence": "Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)"
+   },
+   {
+    "name": "CI/CD",
+    "evidence": "Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)"
+   },
+   {
+    "name": "Gitlab",
+    "evidence": "Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)"
+   },
+   {
+    "name": "business process automation",
+    "evidence": "business process automation,\nsoftware development automation,\nscalable solutions"
+   },
+   {
+    "name": "software development automation",
+    "evidence": "business process automation,\nsoftware development automation,\nscalable solutions"
+   },
+   {
+    "name": "scalable solutions",
+    "evidence": "business process automation,\nsoftware development automation,\nscalable solutions"
+   },
+   {
+    "name": "DRF",
+    "evidence": "Technologies: Python, JavaScript, Django (DRF), PostgreSQL, Celery, React, Electron, Git, Linux, Docker, REST, Swagger, SMS Api"
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Technologies: Python, JavaScript, Django (DRF), PostgreSQL, Celery, React, Electron, Git, Linux, Docker, REST, Swagger, SMS Api"
+   },
+   {
+    "name": "Electron",
+    "evidence": "Technologies: Python, JavaScript, Django (DRF), PostgreSQL, Celery, React, Electron, Git, Linux, Docker, REST, Swagger, SMS Api"
+   },
+   {
+    "name": "Swagger",
+    "evidence": "Technologies: Python, JavaScript, Django (DRF), PostgreSQL, Celery, React, Electron, Git, Linux, Docker, REST, Swagger, SMS Api"
+   },
+   {
+    "name": "SMS Api",
+    "evidence": "Technologies: Python, JavaScript, Django (DRF), PostgreSQL, Celery, React, Electron, Git, Linux, Docker, REST, Swagger, SMS Api"
+   },
+   {
+    "name": "SQLAlchemy",
+    "evidence": "Technologies: Python (Flask), SQLAlchemy, PostgreSQL, REST, Git, Docker, Celery, AWS, CI/CD"
+   },
+   {
+    "name": "AWS",
+    "evidence": "Technologies: Python (Flask), SQLAlchemy, PostgreSQL, REST, Git, Docker, Celery, AWS, CI/CD"
+   },
+   {
+    "name": "Google API",
+    "evidence": "Technologies: Python, Django (DRF), PostgreSQL, Celery, Git, Linux, Docker, REST, Google API, CI/CD (Gitlab)"
+   },
+   {
+    "name": "Microsoft Azure",
+    "evidence": "Technologies: Python, Django (DRF), PostgreSQL, Celery, Git, Linux, Docker, REST, 1C, React, Microsoft Azure, CI/CD (Azure)"
+   },
+   {
+    "name": "1C",
+    "evidence": "Technologies: Python, Django (DRF), PostgreSQL, Celery, Git, Linux, Docker, REST, 1C, React, Microsoft Azure, CI/CD (Azure)"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Fullstack developer",
+    "company": "Project \"Business Process System\"",
+    "start": null,
+    "end": null,
+    "evidence": "Project \"Business Process System\"\nRole: Fullstack developer\nTechnologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)"
+   },
+   {
+    "title": "Backend developer",
+    "company": "Project \"CRM for shopping mall\"",
+    "start": null,
+    "end": null,
+    "evidence": "Project \"CRM for shopping mall\"\nRole: Backend developer"
+   }
+  ],
+  "uncertain": [
+   "skill 'Celery': evidence re-anchored to the CV line that names it",
+   "skill 'Docker': evidence re-anchored to the CV line that names it",
+   "skill 'Channels': evidence re-anchored to the CV line that names it",
+   "skill 'CI/CD': evidence re-anchored to the CV line that names it",
+   "skill 'Gitlab': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

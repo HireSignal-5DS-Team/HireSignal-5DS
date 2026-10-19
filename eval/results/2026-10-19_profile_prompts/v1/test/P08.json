@@ -1,0 +1,79 @@
+{
+ "row": {
+  "id": "P08",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 7,
+  "raw_skills_in_cv": 7,
+  "skills_kept": 7,
+  "experience": 2,
+  "education": 0,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 7.2,
+  "max_completion_tokens": 422
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "I have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python."
+   },
+   {
+    "name": "NLP",
+    "evidence": "I have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python."
+   },
+   {
+    "name": "Computer Vision",
+    "evidence": "I have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python."
+   },
+   {
+    "name": "data analysis",
+    "evidence": "I have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python."
+   },
+   {
+    "name": "TF",
+    "evidence": "one of which involving wine score prediction using various models with TF & IDF implementation."
+   },
+   {
+    "name": "IDF",
+    "evidence": "one of which involving wine score prediction using various models with TF & IDF implementation."
+   },
+   {
+    "name": "Deep Learning",
+    "evidence": "I would be happy to work in a project involving Deep Learning."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Cyber Risk Specialist",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "I have previously worked as a Cyber Risk Specialist."
+   },
+   {
+    "title": "Junior Data Scientist",
+    "company": "PRODATA",
+    "start": null,
+    "end": null,
+    "evidence": "I have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python."
+   }
+  ],
+  "uncertain": [
+   "experience 'Cyber Risk Specialist': company 'null' is not written in its evidence, removed",
+   "experience 'Cyber Risk Specialist': start 'null' not found in its evidence, removed",
+   "experience 'Cyber Risk Specialist': end 'null' not found in its evidence, removed",
+   "experience 'Junior Data Scientist': start 'null' not found in its evidence, removed",
+   "experience 'Junior Data Scientist': end 'null' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

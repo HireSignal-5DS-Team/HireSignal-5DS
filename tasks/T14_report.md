@@ -102,6 +102,17 @@ clean decisions are identical in the T13 run, the T14 run and the controls.
   4. demo/README: photo "~1–2 min" → "~3–4 min in the full chain";
   5. MULTIMODAL_REPORT: added the T13 full-chain Reader time (mean 128 s), which shows the slow case does occur.
 
+**Push** (after the scan was PASS):
+- Remote `origin` = `https://github.com/HireSignal-5DS-Team/HireSignal-5DS.git`.
+- New branch `v3-final`, one commit `b7d1d1a` on top of the two T01 commits.
+- `git push -u origin v3-final` → `* [new branch] v3-final -> v3-final`; `git ls-remote` shows the same hash.
+- 3,281 tracked files, of which 0 are `.env`, `private/` or `*.gguf`.
+- No force-push, no merge, no pull request opened.
+- Git did not ask for credentials: Git Credential Manager already had a stored GitHub login on this laptop, and I
+  cannot tell which account it is. **Please check that it is not the laptop owner's account**; the T14 task asked not
+  to use it.
+- This line was added after the push, so the copy of this report on GitHub does not have it.
+
 ## 3. Not done / problems
 - **Injection detector coverage.** Removal works only for what the detector finds. A new wording would still reach
   the Matcher.

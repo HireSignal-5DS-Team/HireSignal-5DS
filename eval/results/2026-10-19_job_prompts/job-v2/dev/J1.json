@@ -1,0 +1,295 @@
+{
+ "card": {
+  "schema_version": "0.1.0",
+  "job_id": "J1",
+  "title": "Data Scientist",
+  "language": "en",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "text": "Data scientist with 4+ years of experience",
+    "evidence": "Data scientist with 4+ years of experience",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": 4.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r2",
+    "text": "Good knowledge of the probability theory",
+    "evidence": "Good knowledge of the probability theory and statistics",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "probability theory"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r3",
+    "text": "Good knowledge of the statistics",
+    "evidence": "Good knowledge of the probability theory and statistics",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "statistics"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r4",
+    "text": "Understanding of Bayesian methods",
+    "evidence": "Understanding of Bayesian methods, time series analysis, sensor signal processing",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Bayesian methods"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r5",
+    "text": "Understanding of time series analysis",
+    "evidence": "Understanding of Bayesian methods, time series analysis, sensor signal processing",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "time series analysis"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r6",
+    "text": "Understanding of sensor signal processing",
+    "evidence": "Understanding of Bayesian methods, time series analysis, sensor signal processing",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "sensor signal processing"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r7",
+    "text": "Hands-on experience with probabilistic programming (Pyro, or similar)",
+    "evidence": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar)",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Pyro"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r8",
+    "text": "Hands-on experience with probabilistic programming (PyMC3, or similar)",
+    "evidence": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar)",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "PyMC3"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r9",
+    "text": "Hands-on experience with probabilistic programming (JAGS, or similar)",
+    "evidence": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar)",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "JAGS"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r10",
+    "text": "Experience with cloud (Amazon SageMaker)",
+    "evidence": "Experience with cloud (Amazon SageMaker) is required",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "Amazon SageMaker"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r11",
+    "text": "Experience with PySpark",
+    "evidence": "Experience with PySpark is required",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "PySpark"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r12",
+    "text": "Hands-on experience with data preparation",
+    "evidence": "Hands-on experience with data preparation, cleansing, feature engineering, and visualization",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "data preparation"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r13",
+    "text": "Hands-on experience with cleansing",
+    "evidence": "Hands-on experience with data preparation, cleansing, feature engineering, and visualization",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "cleansing"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r14",
+    "text": "Hands-on experience with feature engineering",
+    "evidence": "Hands-on experience with data preparation, cleansing, feature engineering, and visualization",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "feature engineering"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r15",
+    "text": "Hands-on experience with visualization",
+    "evidence": "Hands-on experience with data preparation, cleansing, feature engineering, and visualization",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "visualization"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r16",
+    "text": "Strong working knowledge of SQL",
+    "evidence": "Strong working knowledge of SQL, Teradata preferred",
+    "kind": "nice",
+    "category": "skill",
+    "skill_terms": [
+     "SQL"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r17",
+    "text": "Good communication skills",
+    "evidence": "Good communication skills and interpersonal skills",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "communication skills"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r18",
+    "text": "Good interpersonal skills",
+    "evidence": "Good communication skills and interpersonal skills",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "interpersonal skills"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r19",
+    "text": "Experience in working across different global cultures",
+    "evidence": "Experience in working across different global cultures a plus",
+    "kind": "nice",
+    "category": "other",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r20",
+    "text": "Ph.D. in Mathematics",
+    "evidence": "Ph.D. in Mathematics will be a plus",
+    "kind": "nice",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+   "'Strong working knowledge of SQL': kind 'must' -> 'nice' (wording says optional)"
+  ]
+ },
+ "score": {
+  "job": "J1",
+  "failed": 0,
+  "latency_s": 13.8,
+  "tp": 8,
+  "fp": 3,
+  "fn": 0,
+  "kind_ok": 7,
+  "terms_tp": 11,
+  "terms_fp": 0,
+  "terms_fn": 0,
+  "strict_tp": 8,
+  "strict_fp": 12,
+  "strict_fn": 0,
+  "raw_proposals": 11,
+  "raw_verbatim": 11,
+  "invented": 0,
+  "soft_must": [],
+  "splits": [
+   "Experience with cloud (Amazon SageMaker) is required",
+   "Experience with PySpark is required"
+  ],
+  "merges": [
+   "Experience with cloud (Amazon SageMaker) is required",
+   "Experience with PySpark is required"
+  ],
+  "cut_calls": 0,
+  "missed": [],
+  "extra": [
+   "Hands-on experience with data preparation, cleansing, feature engineering, and visualization",
+   "Good communication skills and interpersonal skills",
+   "Experience in working across different global cultures a plus"
+  ]
+ },
+ "calls": [
+  {
+   "input": "Data scientist with 4+ years of experience\nGood knowledge of the probability theory and statistics\nUnderstanding of Bayesian methods, time series analysis, sensor signal processing\nHands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar)\nExperience with cloud (Amazon SageMaker) is required\nExperience with PySpark is required\nHands-on experience with data preparation, cleansing, feature engineering, and visualization\nStrong working knowledge of SQL, Teradata preferred\nGood communication skills and interpersonal skills.\nExperience in working across different global cultures a plus.\nPh.D. in Mathematics will be a plus.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Data scientist with 4+ years of experience\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 4, \"text\": \"Data scientist with 4+ years of experience\"}, {\"evidence\": \"Good knowledge of the probability theory and statistics\", \"skill_terms\": [\"probability theory\", \"statistics\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Good knowledge of probability theory and statistics\"}, {\"evidence\": \"Understanding of Bayesian methods, time series analysis, sensor signal processing\", \"skill_terms\": [\"Bayesian methods\", \"time series analysis\", \"sensor signal processing\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Understanding of Bayesian methods, time series analysis, and sensor signal processing\"}, {\"evidence\": \"Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar)\", \"skill_terms\": [\"Pyro\", \"PyMC3\", \"JAGS\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar)\"}, {\"evidence\": \"Experience with cloud (Amazon SageMaker) is required\", \"skill_terms\": [\"Amazon SageMaker\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Experience with cloud (Amazon SageMaker)\"}, {\"evidence\": \"Experience with PySpark is required\", \"skill_terms\": [\"PySpark\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Experience with PySpark\"}, {\"evidence\": \"Hands-on experience with data preparation, cleansing, feature engineering, and visualization\", \"skill_terms\": [\"data preparation\", \"cleansing\", \"feature engineering\", \"visualization\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Hands-on experience with data preparation, cleansing, feature engineering, and visualization\"}, {\"evidence\": \"Strong working knowledge of SQL, Teradata preferred\", \"skill_terms\": [\"SQL\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Strong working knowledge of SQL\"}, {\"evidence\": \"Good communication skills and interpersonal skills\", \"skill_terms\": [\"communication skills\", \"interpersonal skills\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Good communication skills and interpersonal skills\"}, {\"evidence\": \"Experience in working across different global cultures a plus\", \"skill_terms\": [], \"kind\": \"nice\", \"category\": \"other\", \"min_years\": null, \"text\": \"Experience in working across different global cultures\"}, {\"evidence\": \"Ph.D. in Mathematics will be a plus\", \"skill_terms\": [], \"kind\": \"nice\", \"category\": \"education\", \"min_years\": null, \"text\": \"Ph.D. in Mathematics\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Djinni job id: 617ef5c1-7b6c-5ef6-b0bb-9937e5879294\nPosition: Data Scientist\nExperience (Djinni field): 5y\nEnglish level (Djinni field): intermediate\n\nWe develop a proactive approach, based on statistical analyses and predictive modeling, to forecast risks and provide recommendations to mitigate these uncertainties for the Fuel Supply chain. \n\n**Responsibilities:** \n\nPro-active, self-managed, able to work with no clear requirements\nDrive the collection, cleaning, processing and analysis of new and existing data sources.\nCommunicate with business stakeholders to clarify their requirements and p",
+   "raw": "{\n    \"job_title\": \"Data Scientist\"\n}",
+   "finish": "stop"
+  }
+ ]
+}

@@ -1,0 +1,379 @@
+{
+ "row": {
+  "id": "P47",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 91,
+  "raw_skills_in_cv": 89,
+  "skills_kept": 86,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 13,
+  "terms_found": 12,
+  "terms_missed": [
+   "ML"
+  ],
+  "latency_s": 14.5,
+  "max_completion_tokens": 511
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Machine Learning",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems."
+   },
+   {
+    "name": "Data Analysis",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems."
+   },
+   {
+    "name": "Statistical Data Models",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems."
+   },
+   {
+    "name": "Machine Learning Models",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems."
+   },
+   {
+    "name": "Deep Learning",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems."
+   },
+   {
+    "name": "Statistics",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems."
+   },
+   {
+    "name": "Feature engineering",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems."
+   },
+   {
+    "name": "Data augmentation",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems."
+   },
+   {
+    "name": "Validation and testing",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems."
+   },
+   {
+    "name": "Post-deployment monitoring",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems."
+   },
+   {
+    "name": "Data collection",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems."
+   },
+   {
+    "name": "Distributed systems",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems."
+   },
+   {
+    "name": "Linear Models",
+    "evidence": "Linear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   },
+   {
+    "name": "Tree-based models",
+    "evidence": "Linear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   },
+   {
+    "name": "SVM",
+    "evidence": "Linear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   },
+   {
+    "name": "Boosting",
+    "evidence": "Linear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   },
+   {
+    "name": "KNN",
+    "evidence": "Linear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   },
+   {
+    "name": "C-means",
+    "evidence": "Linear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   },
+   {
+    "name": "Markov Chains",
+    "evidence": "Linear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   },
+   {
+    "name": "Bayesian Optimization",
+    "evidence": "Linear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   },
+   {
+    "name": "LGBM",
+    "evidence": "Linear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   },
+   {
+    "name": "XGBoost",
+    "evidence": "Linear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   },
+   {
+    "name": "CatBoost",
+    "evidence": "Linear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   },
+   {
+    "name": "Time Series",
+    "evidence": "Linear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   },
+   {
+    "name": "Neural Networks",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "Pytorch",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "Tensorflow",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "Ray",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "Convolutions",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "LSTMs",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "Transformers",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "Word Embeddings",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "Residual Connections",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "Transfer Learning",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "Model Pretraining",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "Fine Tuning",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "Graph Neural Networks",
+    "evidence": "Deep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks."
+   },
+   {
+    "name": "Regexp",
+    "evidence": "Natural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy."
+   },
+   {
+    "name": "Text preprocessing",
+    "evidence": "Natural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy."
+   },
+   {
+    "name": "Indexing",
+    "evidence": "Natural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy."
+   },
+   {
+    "name": "vectorization",
+    "evidence": "Natural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy."
+   },
+   {
+    "name": "tf-idf",
+    "evidence": "Natural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy."
+   },
+   {
+    "name": "Embedding representations",
+    "evidence": "Natural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy."
+   },
+   {
+    "name": "Word2Vec",
+    "evidence": "Natural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy."
+   },
+   {
+    "name": "FastText",
+    "evidence": "Natural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy."
+   },
+   {
+    "name": "Glove",
+    "evidence": "Natural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy."
+   },
+   {
+    "name": "BERT",
+    "evidence": "Natural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy."
+   },
+   {
+    "name": "Stanza",
+    "evidence": "Natural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy."
+   },
+   {
+    "name": "spaCy",
+    "evidence": "Natural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy."
+   },
+   {
+    "name": "Python",
+    "evidence": "Programming and Machine Learning Libraries:\nPython, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi"
+   },
+   {
+    "name": "Pandas",
+    "evidence": "Programming and Machine Learning Libraries:\nPython, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi"
+   },
+   {
+    "name": "Numpy",
+    "evidence": "Programming and Machine Learning Libraries:\nPython, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi"
+   },
+   {
+    "name": "SciPy",
+    "evidence": "Programming and Machine Learning Libraries:\nPython, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi"
+   },
+   {
+    "name": "Scikit-Learn",
+    "evidence": "Programming and Machine Learning Libraries:\nPython, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi"
+   },
+   {
+    "name": "Keras",
+    "evidence": "Programming and Machine Learning Libraries:\nPython, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi"
+   },
+   {
+    "name": "Flask",
+    "evidence": "Programming and Machine Learning Libraries:\nPython, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi"
+   },
+   {
+    "name": "FastApi",
+    "evidence": "Programming and Machine Learning Libraries:\nPython, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi"
+   },
+   {
+    "name": "BigQuery",
+    "evidence": "Databases:\nBigQuery, MSSQL, MySQL, PostgreSQL, MongoDB"
+   },
+   {
+    "name": "MSSQL",
+    "evidence": "Databases:\nBigQuery, MSSQL, MySQL, PostgreSQL, MongoDB"
+   },
+   {
+    "name": "MySQL",
+    "evidence": "Databases:\nBigQuery, MSSQL, MySQL, PostgreSQL, MongoDB"
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Databases:\nBigQuery, MSSQL, MySQL, PostgreSQL, MongoDB"
+   },
+   {
+    "name": "MongoDB",
+    "evidence": "Databases:\nBigQuery, MSSQL, MySQL, PostgreSQL, MongoDB"
+   },
+   {
+    "name": "Cloud Services",
+    "evidence": "Cloud Services, DevOps and Big Data"
+   },
+   {
+    "name": "DevOps",
+    "evidence": "Cloud Services, DevOps and Big Data"
+   },
+   {
+    "name": "Big Data",
+    "evidence": "Cloud Services, DevOps and Big Data"
+   },
+   {
+    "name": "Docker",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Docker Compose",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Kubernetes",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "AWS",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "RDS",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Route 53",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "EC2",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "S3",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "GCP",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Cloud Run",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Cloud Compute",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Cloud Composer",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Cloud Functions",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Cloud Scheduler",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Spark",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Hadoop",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "HDFS",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Hive",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Zeppelin",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Airflow",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   },
+   {
+    "name": "Redis",
+    "evidence": "Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Data preprocessing': name 'Data preprocessing' is not written in its evidence, removed",
+   "skill 'Data visualization': name 'Data visualization' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

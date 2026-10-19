@@ -1,0 +1,36 @@
+{
+ "row": {
+  "id": "P14",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 1,
+  "raw_skills_in_cv": 1,
+  "skills_kept": 1,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 0,
+  "terms_missed": [
+   "English"
+  ],
+  "latency_s": 0.6,
+  "max_completion_tokens": 34
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "ELT",
+    "evidence": "I used the open source ELT ."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [],
+  "prompt_version": "profile-v1"
+ }
+}

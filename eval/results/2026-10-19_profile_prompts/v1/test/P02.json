@@ -1,0 +1,157 @@
+{
+ "row": {
+  "id": "P02",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 20,
+  "raw_skills_in_cv": 20,
+  "skills_kept": 19,
+  "experience": 4,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 20.9,
+  "max_completion_tokens": 752
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Computer Vision",
+    "evidence": "Highly performing Research Engineer with Computer Vision/Deep Learning specialization. I'm focused on applying Computer Vision algorithms (classical and deep-learning based) for enterprise-level solutions."
+   },
+   {
+    "name": "Deep Learning",
+    "evidence": "Highly performing Research Engineer with Computer Vision/Deep Learning specialization. I'm focused on applying Computer Vision algorithms (classical and deep-learning based) for enterprise-level solutions."
+   },
+   {
+    "name": "C++17",
+    "evidence": "Position: Lead C++ Engineer, Computer Vision\nDescription: Low-level Computer Vision algorithms application for manufacturing, algorithms vectorization and parallelization; Computer Vision library architecture; code review, mentoring\nTechnologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins"
+   },
+   {
+    "name": "OpenCV",
+    "evidence": "Position: Lead C++ Engineer, Computer Vision\nDescription: Low-level Computer Vision algorithms application for manufacturing, algorithms vectorization and parallelization; Computer Vision library architecture; code review, mentoring\nTechnologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins"
+   },
+   {
+    "name": "Multithreading",
+    "evidence": "Position: Lead C++ Engineer, Computer Vision\nDescription: Low-level Computer Vision algorithms application for manufacturing, algorithms vectorization and parallelization; Computer Vision library architecture; code review, mentoring\nTechnologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins"
+   },
+   {
+    "name": "TDD",
+    "evidence": "Position: Lead C++ Engineer, Computer Vision\nDescription: Low-level Computer Vision algorithms application for manufacturing, algorithms vectorization and parallelization; Computer Vision library architecture; code review, mentoring\nTechnologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins"
+   },
+   {
+    "name": "CMake",
+    "evidence": "Position: Lead C++ Engineer, Computer Vision\nDescription: Low-level Computer Vision algorithms application for manufacturing, algorithms vectorization and parallelization; Computer Vision library architecture; code review, mentoring\nTechnologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins"
+   },
+   {
+    "name": "Jenkins",
+    "evidence": "Position: Lead C++ Engineer, Computer Vision\nDescription: Low-level Computer Vision algorithms application for manufacturing, algorithms vectorization and parallelization; Computer Vision library architecture; code review, mentoring\nTechnologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins"
+   },
+   {
+    "name": "English",
+    "evidence": "English level: fluent"
+   },
+   {
+    "name": "3D Math",
+    "evidence": "Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore"
+   },
+   {
+    "name": "Computer Graphics",
+    "evidence": "Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore"
+   },
+   {
+    "name": "CUDA",
+    "evidence": "Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore"
+   },
+   {
+    "name": "Google Glass",
+    "evidence": "Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore"
+   },
+   {
+    "name": "ARKit",
+    "evidence": "Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore"
+   },
+   {
+    "name": "ARCore",
+    "evidence": "Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore"
+   },
+   {
+    "name": "Unity3D",
+    "evidence": "Technologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia"
+   },
+   {
+    "name": "C#",
+    "evidence": "Technologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia"
+   },
+   {
+    "name": "Native Mobile",
+    "evidence": "Technologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia"
+   },
+   {
+    "name": "Vuforia",
+    "evidence": "Technologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Master Degree",
+    "field": "Data Science",
+    "institution": null,
+    "end": null,
+    "evidence": "Master Degree in Data Science"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Senior Computer Vision Engineer",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Position: Senior Computer Vision Engineer"
+   },
+   {
+    "title": "Lead C++ Engineer, Computer Vision",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Position: Lead C++ Engineer, Computer Vision\nDescription: Low-level Computer Vision algorithms application for manufacturing, algorithms vectorization and parallelization; Computer Vision library architecture; code review, mentoring"
+   },
+   {
+    "title": "Research Engineer, HCI",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Position: Research Engineer, HCI"
+   },
+   {
+    "title": "Unity Developer",
+    "company": "Computer Vision",
+    "start": null,
+    "end": null,
+    "evidence": "Position: Unity Developer, Computer Vision\nDescription: App in App Store and Google Play: SLAM system for Augmented Reality at mobile\nTechnologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia\nDeveloping new algorithms/approaches in Computer Vision-related topics"
+   }
+  ],
+  "uncertain": [
+   "education 'Master Degree': institution 'null' is not written in its evidence, removed",
+   "education 'Master Degree': end 'null' not found in its evidence, removed",
+   "experience 'Senior Computer Vision Engineer': company 'null' is not written in its evidence, removed",
+   "experience 'Senior Computer Vision Engineer': start 'null' not found in its evidence, removed",
+   "experience 'Senior Computer Vision Engineer': end 'null' not found in its evidence, removed",
+   "experience 'Lead C++ Engineer, Computer Vision': company 'null' is not written in its evidence, removed",
+   "experience 'Lead C++ Engineer, Computer Vision': start 'null' not found in its evidence, removed",
+   "experience 'Lead C++ Engineer, Computer Vision': end 'null' not found in its evidence, removed",
+   "experience 'Research Engineer, HCI': company 'null' is not written in its evidence, removed",
+   "experience 'Research Engineer, HCI': start 'null' not found in its evidence, removed",
+   "experience 'Research Engineer, HCI': end 'null' not found in its evidence, removed",
+   "experience 'Unity Developer': start 'present' not found in its evidence, removed",
+   "experience 'Unity Developer': end 'present' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -1,0 +1,388 @@
+{
+ "row": {
+  "id": "K03",
+  "set": "kaggle",
+  "calls": 13,
+  "json_valid": 7,
+  "cut_calls": 6,
+  "partial": true,
+  "raw_skills": 75,
+  "raw_skills_in_cv": 74,
+  "skills_kept": 68,
+  "experience": 7,
+  "education": 2,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 129.1,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "EMR",
+    "evidence": "Provided all technical support for EMR (Allscripts) projects."
+   },
+   {
+    "name": "Allscripts",
+    "evidence": "Provided all technical support for EMR (Allscripts) projects."
+   },
+   {
+    "name": "clinical training",
+    "evidence": "Revised clinical training collateral, delivered classroom instruction, and conducted clinical visits to ensure all field staff competencies in EMR\nsystem."
+   },
+   {
+    "name": "processes",
+    "evidence": "Developed, authored, distributed, and enhanced processes and improved procedural manuals/policies"
+   },
+   {
+    "name": "purchasing",
+    "evidence": "Standardized purchasing,\nprocurement, inventory, and network operations."
+   },
+   {
+    "name": "procurement",
+    "evidence": "Standardized purchasing,\nprocurement, inventory, and network operations."
+   },
+   {
+    "name": "inventory",
+    "evidence": "Standardized purchasing,\nprocurement, inventory, and network operations."
+   },
+   {
+    "name": "network operations",
+    "evidence": "Standardized purchasing,\nprocurement, inventory, and network operations."
+   },
+   {
+    "name": "system training",
+    "evidence": "Championed mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development."
+   },
+   {
+    "name": "employee development",
+    "evidence": "Championed mission-critical operational changes which required new system, network, and telecommunication system training and\nemployee development."
+   },
+   {
+    "name": "strategic/operations plans",
+    "evidence": "Revised technology initiatives, and developed strategic/operations plans to drive business operations."
+   },
+   {
+    "name": "technical support",
+    "evidence": "Provided all technical support for EMR (Allscripts) projects."
+   },
+   {
+    "name": "procedural manuals/policies",
+    "evidence": "Developed, authored, distributed, and enhanced processes and improved procedural manuals/policies"
+   },
+   {
+    "name": "disaster recovery",
+    "evidence": "Implemented the agency's first disaster recovery plan to minimize productivity loss."
+   },
+   {
+    "name": "equipment lifecycles",
+    "evidence": "Established equipment lifecycles to maximize use of technology throughout the organization."
+   },
+   {
+    "name": "computer/security training",
+    "evidence": "Created and delivered agency computer/security training collateral and instruction to increase end user knowledge and minimize agency\nrisks."
+   },
+   {
+    "name": "marketing initiatives",
+    "evidence": "Led marketing initiatives including service packaging, advertising campaigns, seminar rollouts agency placements, endorsements, media\nactivities, service reviews, and website referrals."
+   },
+   {
+    "name": "communication",
+    "evidence": "Oversaw communication and 3rd part public relations."
+   },
+   {
+    "name": "public relations",
+    "evidence": "Oversaw communication and 3rd part public relations."
+   },
+   {
+    "name": "Cisco Certified Network Associate",
+    "evidence": "Cisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed\nTraining Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation"
+   },
+   {
+    "name": "Leadership Training",
+    "evidence": "Cisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed\nTraining Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation"
+   },
+   {
+    "name": "ITIL Foundations Certification",
+    "evidence": "Cisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed\nTraining Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation"
+   },
+   {
+    "name": "Sniffer University - Sniffer Distributed",
+    "evidence": "Cisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed\nTraining Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation"
+   },
+   {
+    "name": "Certified Novell Administrator",
+    "evidence": "Cisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed\nTraining Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation"
+   },
+   {
+    "name": "CNA 5.1",
+    "evidence": "Cisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed\nTraining Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation"
+   },
+   {
+    "name": "HIPAA/HITECH Regulation",
+    "evidence": "Cisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed\nTraining Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation"
+   },
+   {
+    "name": "ADR",
+    "evidence": "ADR"
+   },
+   {
+    "name": "advertising",
+    "evidence": "advertising"
+   },
+   {
+    "name": "Arcserve",
+    "evidence": "Arcserve"
+   },
+   {
+    "name": "Asset Management",
+    "evidence": "Asset Management"
+   },
+   {
+    "name": "agency",
+    "evidence": "agency"
+   },
+   {
+    "name": "Backup Exec",
+    "evidence": "Backup Exec"
+   },
+   {
+    "name": "Backup",
+    "evidence": "Backup"
+   },
+   {
+    "name": "banking",
+    "evidence": "banking"
+   },
+   {
+    "name": "Budget Management",
+    "evidence": "Budget Management"
+   },
+   {
+    "name": "budgeting",
+    "evidence": "budgeting"
+   },
+   {
+    "name": "business operations",
+    "evidence": "business operations"
+   },
+   {
+    "name": "Cable",
+    "evidence": "Cable"
+   },
+   {
+    "name": "CCNA",
+    "evidence": "CCNA"
+   },
+   {
+    "name": "Change Management",
+    "evidence": "Change Management"
+   },
+   {
+    "name": "Conflict Resolution",
+    "evidence": "Conflict Resolution"
+   },
+   {
+    "name": "corporate accounting",
+    "evidence": "corporate accounting"
+   },
+   {
+    "name": "client",
+    "evidence": "client"
+   },
+   {
+    "name": "clients",
+    "evidence": "clients"
+   },
+   {
+    "name": "Customer Relations",
+    "evidence": "Customer Relations"
+   },
+   {
+    "name": "educational programs",
+    "evidence": "educational programs"
+   },
+   {
+    "name": "Employee Relations",
+    "evidence": "Employee Relations"
+   },
+   {
+    "name": "financial",
+    "evidence": "financial"
+   },
+   {
+    "name": "Ghost",
+    "evidence": "Ghost"
+   },
+   {
+    "name": "information systems",
+    "evidence": "information systems"
+   },
+   {
+    "name": "Innovation",
+    "evidence": "Innovation"
+   },
+   {
+    "name": "instruction",
+    "evidence": "instruction"
+   },
+   {
+    "name": "internal audits",
+    "evidence": "internal audits"
+   },
+   {
+    "name": "inventory management",
+    "evidence": "inventory management"
+   },
+   {
+    "name": "ITIL",
+    "evidence": "ITIL"
+   },
+   {
+    "name": "regulatory compliance",
+    "evidence": "regulatory compliance"
+   },
+   {
+    "name": "loss prevention",
+    "evidence": "loss prevention"
+   },
+   {
+    "name": "marketing plans",
+    "evidence": "marketing plans"
+   },
+   {
+    "name": "marketing",
+    "evidence": "marketing"
+   },
+   {
+    "name": "market",
+    "evidence": "market"
+   },
+   {
+    "name": "Window",
+    "evidence": "Window"
+   },
+   {
+    "name": "Windows 2000",
+    "evidence": "Windows 2000"
+   },
+   {
+    "name": "2000",
+    "evidence": "2000"
+   },
+   {
+    "name": "Enterprise",
+    "evidence": "Enterprise"
+   },
+   {
+    "name": "network",
+    "evidence": "network"
+   },
+   {
+    "name": "Networks",
+    "evidence": "Networks"
+   },
+   {
+    "name": "Novell NetWare 4.x",
+    "evidence": "Novell NetWare 4.x"
+   },
+   {
+    "name": "packaging",
+    "evidence": "packaging"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Master of Business Administration",
+    "field": "MBA",
+    "institution": "Keller Graduate School of Management",
+    "end": null,
+    "evidence": "Master of Business Administration (MBA) Keller Graduate School of Management ï1⁄4 City , State"
+   },
+   {
+    "degree": "Bachelor of Science",
+    "field": "Telecommunications Management",
+    "institution": "DeVry University",
+    "end": null,
+    "evidence": "Bachelor of Science , Telecommunications Management DeVry University ï1⁄4 City , State"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Information Technology Manager",
+    "company": "Company Name ï1⁄4 City , State",
+    "start": "2012-02",
+    "end": "2013-09",
+    "evidence": "Information Technology Manager Feb 2012 to Sep 2013\nCompany Name ï1⁄4 City , State\n\nEnsured regulatory compliance and integrity of health information systems.\nProvided support during surveys, ADR, and internal audits.\nMentored and ensured the professional development of new clinical employees by providing onsite educational programs and supported\nseasoned clinical staff by making field visits.\nMember of the Performance Improvement committee and oversaw compliance department operations."
+   },
+   {
+    "title": "Information Technology Manager",
+    "company": "Company Name ï1⁄4 City , State",
+    "start": "2008-09",
+    "end": "2011-05",
+    "evidence": "Information Technology Manager Sep 2008 to May 2011\nCompany Name ï1⁄4 City , State"
+   },
+   {
+    "title": "Marketing Director",
+    "company": null,
+    "start": "2007-02",
+    "end": "2008-09",
+    "evidence": "Marketing Director Feb 2007 to Sep 2008"
+   },
+   {
+    "title": "Director of Information Systems",
+    "company": "Company Name ï1⁄4 City , State",
+    "start": "2004",
+    "end": "2007",
+    "evidence": "Director of Information Systems Jan 2004 to Feb 2007\nCompany Name ï1⁄4 City , State"
+   },
+   {
+    "title": "Led marketing initiatives",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Led marketing initiatives including service packaging, advertising campaigns, seminar rollouts agency placements, endorsements, media\nactivities, service reviews, and website referrals."
+   },
+   {
+    "title": "Boosted user satisfaction",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Boosted user satisfaction by doubling bandwidth at 2 remote sites and tripling bandwidth at the corporate site, and ensuring usage of VoIP\nin future projects."
+   },
+   {
+    "title": "Reduced maintenance costs",
+    "company": "Verizon",
+    "start": null,
+    "end": null,
+    "evidence": "Reduced maintenance costs, improved productivity, increased employee security, and decreased travel expenses by implementing Verizon\ncell phone plan to replace pagers, and included the Field Force Manager that Integrated into backend clinical system to do scheduling."
+   }
+  ],
+  "uncertain": [
+   "part 2/10: answer cut off at the token limit",
+   "part 2/10: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 2/10: answer cut off at the token limit",
+   "part 2/10: attempt 2: unreadable answer (no JSON object in the model answer)",
+   "part 3/10: answer cut off at the token limit",
+   "part 3/10: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 3/10: answer cut off at the token limit",
+   "part 3/10: attempt 2: unreadable answer (no JSON object in the model answer)",
+   "skill 'telecommunication systems': name 'telecommunication systems' is not written in its evidence, removed",
+   "experience 'Marketing Director': company 'null' is not written in its evidence, removed",
+   "experience 'Led marketing initiatives': company 'Company Name ï1⁄4 City , State' is not written in its evidence, removed",
+   "experience 'Led marketing initiatives': start 'present' not found in its evidence, removed",
+   "experience 'Led marketing initiatives': end 'present' not found in its evidence, removed",
+   "education 'Master of Business Administration': end 'ï1⁄4 City , State' not found in its evidence, removed",
+   "education 'Bachelor of Science': end 'ï1⁄4 City , State' not found in its evidence, removed",
+   "experience 'Boosted user satisfaction': company 'Vermeg' is not written in its evidence, removed",
+   "part 10/10: answer cut off at the token limit",
+   "part 10/10: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 10/10: answer cut off at the token limit",
+   "part 10/10: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

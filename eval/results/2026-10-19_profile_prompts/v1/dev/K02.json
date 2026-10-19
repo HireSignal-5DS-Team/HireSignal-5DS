@@ -1,0 +1,222 @@
+{
+ "row": {
+  "id": "K02",
+  "set": "kaggle",
+  "calls": 9,
+  "json_valid": 7,
+  "cut_calls": 2,
+  "partial": true,
+  "raw_skills": 41,
+  "raw_skills_in_cv": 36,
+  "skills_kept": 27,
+  "experience": 5,
+  "education": 2,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 55.3,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Building Automation System",
+    "evidence": "Manager - InformationÂ [NAME] and Building Automation Systems"
+   },
+   {
+    "name": "Enterprise Project Lifecycle methodology",
+    "evidence": "Versatile Building Automation System engineer and IT professional with vast knowledge of Enterprise Project Lifecycle methodology"
+   },
+   {
+    "name": "PMP Certification",
+    "evidence": "Current PMP Certification"
+   },
+   {
+    "name": "Hardware and software upgrade planning",
+    "evidence": "Hardware and software upgrade planning"
+   },
+   {
+    "name": "Self-motivated",
+    "evidence": "Self-motivated"
+   },
+   {
+    "name": "computer diagnostics",
+    "evidence": "Conducted computer diagnostics to investigate and resolve problems and provide technical assistance and support."
+   },
+   {
+    "name": "end-to-end customer experience",
+    "evidence": "Leveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs."
+   },
+   {
+    "name": "feature roadmaps",
+    "evidence": "Delivered detailed feature roadmaps that included action items and project targets."
+   },
+   {
+    "name": "product defects",
+    "evidence": "Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects."
+   },
+   {
+    "name": "configuration",
+    "evidence": "Analyzed and created new configuration for packaged software to meet business and system requirements."
+   },
+   {
+    "name": "storage systems",
+    "evidence": "Configured, maintained and provided trending and performance analysis of enterprise class storage systems."
+   },
+   {
+    "name": "second-level support",
+    "evidence": "Performed second-level support for all workstation and server class systems."
+   },
+   {
+    "name": "technical lead",
+    "evidence": "Served as the technical lead for server infrastructure including development, QA, staging and production systems."
+   },
+   {
+    "name": "digital control systems",
+    "evidence": "Analyzed, modified and repaired digital control systems."
+   },
+   {
+    "name": "networks",
+    "evidence": "Set up, tested and configured networks, desktops, laptops and printers."
+   },
+   {
+    "name": "training materials",
+    "evidence": "Created employee training materials and procedures to teach in-house workers proper software and hardware protocols."
+   },
+   {
+    "name": "System administration",
+    "evidence": "System administration"
+   },
+   {
+    "name": "Windows Server 2003",
+    "evidence": "Windows Server 2003"
+   },
+   {
+    "name": "Windows Server 2008",
+    "evidence": "Windows Server 2008"
+   },
+   {
+    "name": "VMware",
+    "evidence": "VMware"
+   },
+   {
+    "name": "Active Directory",
+    "evidence": "Active Directory"
+   },
+   {
+    "name": "Microsoft Exchange 2013",
+    "evidence": "Microsoft Exchange 2013"
+   },
+   {
+    "name": "Large computer networks",
+    "evidence": "Large computer networks"
+   },
+   {
+    "name": "Linux",
+    "evidence": "Linux"
+   },
+   {
+    "name": "Mac OS",
+    "evidence": "Mac OS"
+   },
+   {
+    "name": "Microsoft Dynamics",
+    "evidence": "Microsoft Dynamics"
+   },
+   {
+    "name": "Access Control Security",
+    "evidence": "Access Control Security"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Master of Science",
+    "field": null,
+    "institution": "University of Houston ï1⁄4 City , State , USA",
+    "end": "2015",
+    "evidence": "Master of Science : Computer & [NAME] Science , 2015 University of Houston ï1⁄4 City , State , USA"
+   },
+   {
+    "degree": "Bachelor of Science",
+    "field": null,
+    "institution": "University of Maryland University College ï1⁄4 City , State , USA",
+    "end": "2011",
+    "evidence": "Bachelor of Science : Management of [NAME] Systems , 2011 University of Maryland University College ï1⁄4 City , State , USA"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Manager",
+    "company": "Current Company Name ï1⁄4 City , State",
+    "start": "2014-10",
+    "end": "present",
+    "evidence": "Manager - [NAME] and Building Automation Systems\nOctober 2014 to Current Company Name ï1⁄4 City , State\n\nLed a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n\nDelivered detailed feature roadmaps that included action items and project targets.\n\nLeveraged in-depth understanding of end-to-end customer experience to identify pain points and latent customer needs.\n\nManaged the 8 -person local IT team, allocating resources to ongoing projects and enforcing deadlines.\n\nConducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n\nWorked on large enterprise and business critical applications."
+   },
+   {
+    "title": "Maintained and monitored the server room, the wireless network and other server infrastructure.",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Maintained and monitored the server room, the wireless network and other server infrastructure."
+   },
+   {
+    "title": "Set up staff workstations with PCs, Macs, phones and laptops.",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Set up staff workstations with PCs, Macs, phones and laptops."
+   },
+   {
+    "title": "Translated technical specifications into detailed product requirements.",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Translated technical specifications into detailed product requirements."
+   },
+   {
+    "title": "Maintained audiovisual equipment, including overhead projectors, laptops and video conferencing equipment.",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Maintained audiovisual equipment, including overhead projectors, laptops and video conferencing equipment."
+   }
+  ],
+  "uncertain": [
+   "skill 'Network infrastructure': name 'Network infrastructure' is not written in its evidence, removed",
+   "skill 'Building automation solutions': name 'Building automation solutions' is not written in its evidence, removed",
+   "skill 'Server management': name 'Server management' is not written in its evidence, removed",
+   "skill 'Mac and PC expert': name 'Mac and PC expert' is not written in its evidence, removed",
+   "skill 'Computer programming': name 'Computer programming' is not written in its evidence, removed",
+   "skill 'Control system design': name 'Control system design' is not written in its evidence, removed",
+   "skill 'Enterprise platforms': name 'Enterprise platforms' is not written in its evidence, removed",
+   "skill 'Project tracking': name 'Project tracking' is not written in its evidence, removed",
+   "skill 'Security Management': name 'Security Management' is not written in its evidence, removed",
+   "skill 'User experience design': name 'User experience design' is not written in its evidence, removed",
+   "skill 'resource allocation': name 'resource allocation' is not written in its evidence, removed",
+   "skill 'large enterprise applications': name 'large enterprise applications' is not written in its evidence, removed",
+   "skill 'electrical controls': name 'electrical controls' is not written in its evidence, removed",
+   "part 5/8: answer cut off at the token limit",
+   "part 5/8: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 5/8: answer cut off at the token limit",
+   "part 5/8: attempt 2: unreadable answer (no JSON object in the model answer)",
+   "experience 'Maintained and monitored the server room, the wireless network and other server infrastructure.': company contained a placeholder, removed",
+   "experience 'Maintained and monitored the server room, the wireless network and other server infrastructure.': start 'present' not found in its evidence, removed",
+   "experience 'Maintained and monitored the server room, the wireless network and other server infrastructure.': end 'present' not found in its evidence, removed",
+   "experience 'Set up staff workstations with PCs, Macs, phones and laptops.': company contained a placeholder, removed",
+   "experience 'Set up staff workstations with PCs, Macs, phones and laptops.': start 'present' not found in its evidence, removed",
+   "experience 'Set up staff workstations with PCs, Macs, phones and laptops.': end 'present' not found in its evidence, removed",
+   "experience 'Translated technical specifications into detailed product requirements.': company contained a placeholder, removed",
+   "experience 'Translated technical specifications into detailed product requirements.': start 'present' not found in its evidence, removed",
+   "experience 'Translated technical specifications into detailed product requirements.': end 'present' not found in its evidence, removed",
+   "experience 'Maintained audiovisual equipment, including overhead projectors, laptops and video conferencing equipment.': company contained a placeholder, removed",
+   "experience 'Maintained audiovisual equipment, including overhead projectors, laptops and video conferencing equipment.': start 'present' not found in its evidence, removed",
+   "experience 'Maintained audiovisual equipment, including overhead projectors, laptops and video conferencing equipment.': end 'present' not found in its evidence, removed",
+   "education 'Master of Science': field contained a placeholder, removed",
+   "education 'Bachelor of Science': field contained a placeholder, removed",
+   "skill 'Certified Naval [NAME] Systems Technician': name contained a placeholder, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -180,11 +180,15 @@ def _evidence(item: dict, text: str, notes: list[str], where: str) -> str | None
 def check_items(data: dict, text: str, notes: list[str]) -> tuple[list[Skill], list[Education], list[Experience]]:
     skills, education, experience = [], [], []
 
-    for item in _list(data, "skills", notes):
+    for item in _expand_skill_groups(_list(data, "skills", notes)):
+        item = _reanchor(item, text, notes)
         name = str(item.get("name") or "").strip()
         where = f"skill '{name}'"
         ev = _evidence(item, text, notes, where)
         if ev and (name := _value(item, "name", ev, notes, where)):
+            if not name.strip(" .,;:"):  # T15: a name of punctuation only crashed the Skill model
+                notes.append(f"{where}: empty name, dropped")
+                continue
             skills.append(Skill(name=name.strip(" .,;:"), evidence=ev))
 
     for item in _list(data, "education", notes):
@@ -223,6 +227,33 @@ def check_items(data: dict, text: str, notes: list[str]) -> tuple[list[Skill], l
         else:
             notes.append(f"{where}: neither title nor company, dropped")
     return skills, education, experience
+
+
+def _expand_skill_groups(items: list[dict]) -> list[dict]:
+    """profile-v2 (T15) writes one skills item per CV line: {"names": [...], "evidence": line}. Expanded here into
+    v1's one-item-per-skill form, so the checks and the ParsedCV contract stay the same."""
+    out = []
+    for item in items:
+        names = item.get("names")
+        if isinstance(names, list):
+            out += [{"name": n, "evidence": item.get("evidence"), "_group": True} for n in names if isinstance(n, str)]
+        else:
+            out.append(item)
+    return out
+
+
+def _reanchor(item: dict, text: str, notes: list[str]) -> dict:
+    """T15: a grouped skill whose name is not in the group's line (the model put names from several lines under one
+    line) gets the first CV line that does contain it as its evidence. The name is still checked as before."""
+    ev = item.get("evidence")
+    name = str(item.get("name") or "").strip()
+    if not item.get("_group") or not name or (isinstance(ev, str) and _squash(name) in _squash(ev)):
+        return item
+    for line in text.splitlines():
+        if line.strip() and re.search(rf"(?<![\w]){re.escape(_squash(name))}(?![\w])", _squash(line)):
+            notes.append(f"skill '{name}': evidence re-anchored to the CV line that names it")
+            return {**item, "evidence": line.strip()}
+    return item
 
 
 def _list(data: dict, key: str, notes: list[str]) -> list[dict]:

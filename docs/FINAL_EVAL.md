@@ -103,6 +103,8 @@ These are the numbers for the report and the slides; the source folder is under 
 | Bias Auditor | Matcher input identical under identity swaps (832) | 0/832 (T10 anonymiser) | **832/832** | `2026-10-18_bias/`, `2026-10-19_name_overmask/` |
 | Bias Auditor | requirement flips under swaps | no anonymiser: 5.4% (name) / 11.4% (origin) on dev | **0** | `2026-10-18_bias/` |
 | Report Writer | fact-check pass, first try (dev) | v0 0/28 | **v3 22/28** (test 21/28; fallback 6/28) | `2026-10-19_report_writer/`, `2026-10-19_report_writer_t13/` |
+| Job Agent prompt | requirement-sentence F1 vs gold cards (test: 5 USAJOBS + J3, J4) | v1 0.700 (must/nice acc. 0.714) | **v2 0.712** (must/nice acc. 0.865); dev 0.721 → 0.810 | `2026-10-19_job_prompts/` |
+| Profile prompt | test CVs cut at the token limit / requirement terms found (34 CVs) | v1 14/34, 28/70 | **v3 0/34, 59/70** (9.6 s vs 29.0 s per CV) | `2026-10-19_profile_prompts/` |
 | Security | CV injection: decisions changed vs the same file without injection (16 attacks) | detect + review (T13): 6/16 attacks, 8 decisions | + sentences removed (T14): **0/16**; review 16/16 | `2026-10-19_security/`, `2026-10-19_security_t14/` |
 
 ## 4. Known limits (honest list)
@@ -122,5 +124,8 @@ These are the numbers for the report and the slides; the source folder is under 
   ~3 minutes end to end; a text CV ~1 minute.
 - **The Report Writer** falls back to the template for about 1 report in 4 (quote edits, letters naming the wrong
   items). The template is correct but less readable.
-- **Profile and Job Agent prompts** were not iterated (v1 only). Their failures were fixed in code or by the confirmed
-  requirement cards.
+- **Job Agent v2** (T15) takes a "Tasks:" duties list of a Djinni post as requirements (test J3). The recruiter
+  confirms the card before a run, and the final evaluation used confirmed cards.
+- **The final evaluation ran with Profile v1.** In 13 of its 31 results the profile was cut at the token limit
+  (`profile:partial_extraction_requires_review`, listed only). Profile v3 (T15) removes this, and it cannot change a
+  decision: the Matcher reads the CV text, not the profile, and the gate treats the flag as information only.

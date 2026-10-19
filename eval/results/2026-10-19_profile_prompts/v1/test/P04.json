@@ -1,0 +1,98 @@
+{
+ "row": {
+  "id": "P04",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 16,
+  "raw_skills_in_cv": 16,
+  "skills_kept": 16,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 10.5,
+  "max_completion_tokens": 328
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "machine learning",
+    "evidence": "- Design, build and launch efficient and reliable machine learning (ML) services"
+   },
+   {
+    "name": "deep-learning",
+    "evidence": "- Develop deep-learning software prototypes that demonstrate potential usefulness to our customers"
+   },
+   {
+    "name": "neural networks",
+    "evidence": "- Research, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively"
+   },
+   {
+    "name": "data processing pipelines",
+    "evidence": "- Establish reusable data processing pipelines to enable rapid re-training and iteration through different ML methodologies"
+   },
+   {
+    "name": "datasets",
+    "evidence": "- Select appropriate datasets and data representation methods"
+   },
+   {
+    "name": "experiments and analysis methodologies",
+    "evidence": "- Design experiments and analysis methodologies that are statistically rigorous"
+   },
+   {
+    "name": "statistical analysis",
+    "evidence": "- Perform statistical analysis and fine-tuning using test results"
+   },
+   {
+    "name": "test results",
+    "evidence": "- Perform statistical analysis and fine-tuning using test results"
+   },
+   {
+    "name": "pose estimation",
+    "evidence": "- pose estimation and images classification"
+   },
+   {
+    "name": "images classification",
+    "evidence": "- pose estimation and images classification"
+   },
+   {
+    "name": "financial trading prediction",
+    "evidence": "- financial trading prediction"
+   },
+   {
+    "name": "geodata",
+    "evidence": "I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+   },
+   {
+    "name": "satellite imaginary",
+    "evidence": "I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+   },
+   {
+    "name": "maps",
+    "evidence": "I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+   },
+   {
+    "name": "logistics",
+    "evidence": "I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+   },
+   {
+    "name": "urbanism",
+    "evidence": "I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "experience 'Machine learning engineer': title 'Machine learning engineer' is not written in its evidence, removed",
+   "experience 'Machine learning engineer': company contained a placeholder, removed",
+   "experience 'Machine learning engineer': neither title nor company, dropped"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "row": {
+  "id": "P01",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 18,
+  "raw_skills_in_cv": 18,
+  "skills_kept": 18,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 5.1,
+  "max_completion_tokens": 296
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "C++",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "Python",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "PyTorch",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "Keras",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "GDAL",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "rasterio",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "geopandas",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "QGIS",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "GEE",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "Qt Framework",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "ARM",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "STM32",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "Kaggle",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "crowdanalytix",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "AIcrowd",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "TopCoder",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "Google Hashcode",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   },
+   {
+    "name": "ACM ICPC",
+    "evidence": "Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Senior ML/DL Developer",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Position: Senior ML/DL Developer\nExperience years: 11\nEnglish level: intermediate"
+   }
+  ],
+  "uncertain": [
+   "experience 'Senior ML/DL Developer': company 'null' is not written in its evidence, removed",
+   "experience 'Senior ML/DL Developer': start 'null' not found in its evidence, removed",
+   "experience 'Senior ML/DL Developer': end 'null' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "row": {
+  "id": "P24",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 7,
+  "raw_skills_in_cv": 7,
+  "skills_kept": 7,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 2.3,
+  "max_completion_tokens": 136
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "machine learning",
+    "evidence": "- machine learning models for fraud detection and anti-money laundering"
+   },
+   {
+    "name": "time-series modelling",
+    "evidence": "- time-series modelling"
+   },
+   {
+    "name": "anomalies detection",
+    "evidence": "- anomalies detection"
+   },
+   {
+    "name": "customer segmentation",
+    "evidence": "- customer segmentation"
+   },
+   {
+    "name": "customer lifetime value",
+    "evidence": "- customer lifetime value"
+   },
+   {
+    "name": "data analysis",
+    "evidence": "- various data analysis tasks"
+   },
+   {
+    "name": "English",
+    "evidence": "English level: fluent"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [],
+  "prompt_version": "profile-v1"
+ }
+}

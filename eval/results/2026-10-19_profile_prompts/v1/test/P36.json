@@ -1,0 +1,78 @@
+{
+ "row": {
+  "id": "P36",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 14,
+  "raw_skills_in_cv": 14,
+  "skills_kept": 12,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 6.9,
+  "max_completion_tokens": 227
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Position: Python Developer"
+   },
+   {
+    "name": "Django",
+    "evidence": "I am a developer with experience in Python, Django, SQL, and Django REST Framework."
+   },
+   {
+    "name": "SQL",
+    "evidence": "I am a developer with experience in Python, Django, SQL, and Django REST Framework."
+   },
+   {
+    "name": "Django REST Framework",
+    "evidence": "I am a developer with experience in Python, Django, SQL, and Django REST Framework."
+   },
+   {
+    "name": "HTML",
+    "evidence": "Implemented HTML and CSS to create an intuitive and user-friendly interface."
+   },
+   {
+    "name": "CSS",
+    "evidence": "Implemented HTML and CSS to create an intuitive and user-friendly interface."
+   },
+   {
+    "name": "task tracking",
+    "evidence": "Created task tracking and tagging features."
+   },
+   {
+    "name": "tagging",
+    "evidence": "Created task tracking and tagging features."
+   },
+   {
+    "name": "REST Framework",
+    "evidence": "Used Django REST Framework for fast API development and adherence to REST architecture standards."
+   },
+   {
+    "name": "REST architecture",
+    "evidence": "Used Django REST Framework for fast API development and adherence to REST architecture standards."
+   },
+   {
+    "name": "Django ORM",
+    "evidence": "Integrated Django ORM for seamless interaction with databases and query execution."
+   },
+   {
+    "name": "data processing",
+    "evidence": "Secure and reliable data processing is ensured."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -1,0 +1,715 @@
+{
+ "run": "P02",
+ "pair": "P02",
+ "job": "J1",
+ "stratum_in_pairs_csv": "strong",
+ "execution_id": "75",
+ "n8n_started": "2026-10-19 08:50:21.322",
+ "n8n_stopped": "2026-10-19 08:51:45.904",
+ "total_wall_s": 84.8,
+ "outcome": "reject",
+ "score": 14,
+ "rule": "1 reject: must-have MISSING",
+ "reasons": [
+  "r2: must-have MISSING",
+  "r4: must-have MISSING",
+  "r5: must-have MISSING",
+  "r6: must-have MISSING",
+  "r7: must-have MISSING",
+  "r8: must-have MISSING",
+  "r9: must-have MISSING",
+  "r10: must-have MISSING",
+  "r11: must-have MISSING",
+  "r12: must-have MISSING",
+  "r13: must-have MISSING",
+  "r14: must-have MISSING",
+  "r15: must-have MISSING"
+ ],
+ "listed_flags": [
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: bias:identity placeholder line removed",
+  "pair: bias:identity placeholder line removed",
+  "pair: profile:name_not_found (info only)",
+  "pair: job_agent:validation_warnings (info only)"
+ ],
+ "review_form_url": null,
+ "decisions": {
+  "r1": [
+   "must",
+   "UNCERTAIN"
+  ],
+  "r2": [
+   "must",
+   "MISSING"
+  ],
+  "r3": [
+   "must",
+   "UNCERTAIN"
+  ],
+  "r4": [
+   "must",
+   "MISSING"
+  ],
+  "r5": [
+   "must",
+   "MISSING"
+  ],
+  "r6": [
+   "must",
+   "MISSING"
+  ],
+  "r7": [
+   "must",
+   "MISSING"
+  ],
+  "r8": [
+   "must",
+   "MISSING"
+  ],
+  "r9": [
+   "must",
+   "MISSING"
+  ],
+  "r10": [
+   "must",
+   "MISSING"
+  ],
+  "r11": [
+   "must",
+   "MISSING"
+  ],
+  "r12": [
+   "must",
+   "MISSING"
+  ],
+  "r13": [
+   "must",
+   "MISSING"
+  ],
+  "r14": [
+   "must",
+   "MISSING"
+  ],
+  "r15": [
+   "must",
+   "MISSING"
+  ],
+  "r16": [
+   "nice",
+   "MISSING"
+  ],
+  "r17": [
+   "must",
+   "MET"
+  ],
+  "r18": [
+   "must",
+   "UNCERTAIN"
+  ],
+  "r19": [
+   "nice",
+   "MISSING"
+  ],
+  "r20": [
+   "nice",
+   "MISSING"
+  ]
+ },
+ "station_timings_s": {
+  "reader": 0.027,
+  "profile": 10.407,
+  "job": 12.622,
+  "match_and_judge": 25.314
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "node_timings": {
+  "Webhook (CV file + job text)": [
+   {
+    "start": 1792399821334,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "Check token": [
+   {
+    "start": 1792399821334,
+    "ms": 8,
+    "status": "success"
+   }
+  ],
+  "Normalize input": [
+   {
+    "start": 1792399821342,
+    "ms": 15,
+    "status": "success"
+   }
+  ],
+  "HTTP /reader": [
+   {
+    "start": 1792399821357,
+    "ms": 40,
+    "status": "success"
+   }
+  ],
+  "HTTP /profile": [
+   {
+    "start": 1792399821397,
+    "ms": 10412,
+    "status": "success"
+   }
+  ],
+  "Confirmed requirements?": [
+   {
+    "start": 1792399831810,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "HTTP /job": [
+   {
+    "start": 1792399831812,
+    "ms": 12637,
+    "status": "success"
+   }
+  ],
+  "Job card": [
+   {
+    "start": 1792399844449,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "Merge": [
+   {
+    "start": 1792399844454,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Split requirements": [
+   {
+    "start": 1792399844456,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "Loop requirements (1 at a time)": [
+   {
+    "start": 1792399844461,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399857709,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399859014,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792399860189,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399861448,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399862697,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399864051,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792399865236,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399866436,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399867602,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399868813,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792399870004,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399871190,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399872377,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399873572,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399874768,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399875990,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399877361,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399878541,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792399879721,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792399880911,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "RAG lookup": [
+   {
+    "start": 1792399844461,
+    "ms": 10649,
+    "status": "success"
+   },
+   {
+    "start": 1792399857709,
+    "ms": 23,
+    "status": "success"
+   },
+   {
+    "start": 1792399859015,
+    "ms": 13,
+    "status": "success"
+   },
+   {
+    "start": 1792399860189,
+    "ms": 12,
+    "status": "success"
+   },
+   {
+    "start": 1792399861448,
+    "ms": 14,
+    "status": "success"
+   },
+   {
+    "start": 1792399862697,
+    "ms": 12,
+    "status": "success"
+   },
+   {
+    "start": 1792399864052,
+    "ms": 13,
+    "status": "success"
+   },
+   {
+    "start": 1792399865236,
+    "ms": 14,
+    "status": "success"
+   },
+   {
+    "start": 1792399866437,
+    "ms": 13,
+    "status": "success"
+   },
+   {
+    "start": 1792399867602,
+    "ms": 13,
+    "status": "success"
+   },
+   {
+    "start": 1792399868814,
+    "ms": 14,
+    "status": "success"
+   },
+   {
+    "start": 1792399870004,
+    "ms": 15,
+    "status": "success"
+   },
+   {
+    "start": 1792399871190,
+    "ms": 14,
+    "status": "success"
+   },
+   {
+    "start": 1792399872377,
+    "ms": 11,
+    "status": "success"
+   },
+   {
+    "start": 1792399873572,
+    "ms": 11,
+    "status": "success"
+   },
+   {
+    "start": 1792399874768,
+    "ms": 12,
+    "status": "success"
+   },
+   {
+    "start": 1792399875991,
+    "ms": 10,
+    "status": "success"
+   },
+   {
+    "start": 1792399877361,
+    "ms": 11,
+    "status": "success"
+   },
+   {
+    "start": 1792399878541,
+    "ms": 15,
+    "status": "success"
+   },
+   {
+    "start": 1792399879722,
+    "ms": 14,
+    "status": "success"
+   }
+  ],
+  "HTTP /match": [
+   {
+    "start": 1792399855110,
+    "ms": 1751,
+    "status": "success"
+   },
+   {
+    "start": 1792399857732,
+    "ms": 1183,
+    "status": "success"
+   },
+   {
+    "start": 1792399859028,
+    "ms": 1156,
+    "status": "success"
+   },
+   {
+    "start": 1792399860201,
+    "ms": 1134,
+    "status": "success"
+   },
+   {
+    "start": 1792399861462,
+    "ms": 1151,
+    "status": "success"
+   },
+   {
+    "start": 1792399862709,
+    "ms": 1139,
+    "status": "success"
+   },
+   {
+    "start": 1792399864065,
+    "ms": 1147,
+    "status": "success"
+   },
+   {
+    "start": 1792399865250,
+    "ms": 1162,
+    "status": "success"
+   },
+   {
+    "start": 1792399866450,
+    "ms": 1130,
+    "status": "success"
+   },
+   {
+    "start": 1792399867615,
+    "ms": 1176,
+    "status": "success"
+   },
+   {
+    "start": 1792399868828,
+    "ms": 1152,
+    "status": "success"
+   },
+   {
+    "start": 1792399870019,
+    "ms": 1149,
+    "status": "success"
+   },
+   {
+    "start": 1792399871204,
+    "ms": 1152,
+    "status": "success"
+   },
+   {
+    "start": 1792399872388,
+    "ms": 1162,
+    "status": "success"
+   },
+   {
+    "start": 1792399873583,
+    "ms": 1163,
+    "status": "success"
+   },
+   {
+    "start": 1792399874780,
+    "ms": 1189,
+    "status": "success"
+   },
+   {
+    "start": 1792399876002,
+    "ms": 1337,
+    "status": "success"
+   },
+   {
+    "start": 1792399877372,
+    "ms": 1164,
+    "status": "success"
+   },
+   {
+    "start": 1792399878556,
+    "ms": 1142,
+    "status": "success"
+   },
+   {
+    "start": 1792399879736,
+    "ms": 1154,
+    "status": "success"
+   }
+  ],
+  "HTTP /judge": [
+   {
+    "start": 1792399856861,
+    "ms": 848,
+    "status": "success"
+   },
+   {
+    "start": 1792399858915,
+    "ms": 99,
+    "status": "success"
+   },
+   {
+    "start": 1792399860184,
+    "ms": 5,
+    "status": "success"
+   },
+   {
+    "start": 1792399861335,
+    "ms": 112,
+    "status": "success"
+   },
+   {
+    "start": 1792399862613,
+    "ms": 84,
+    "status": "success"
+   },
+   {
+    "start": 1792399863848,
+    "ms": 203,
+    "status": "success"
+   },
+   {
+    "start": 1792399865212,
+    "ms": 23,
+    "status": "success"
+   },
+   {
+    "start": 1792399866412,
+    "ms": 24,
+    "status": "success"
+   },
+   {
+    "start": 1792399867580,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792399868791,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792399869980,
+    "ms": 24,
+    "status": "success"
+   },
+   {
+    "start": 1792399871168,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792399872356,
+    "ms": 21,
+    "status": "success"
+   },
+   {
+    "start": 1792399873550,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792399874746,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792399875969,
+    "ms": 21,
+    "status": "success"
+   },
+   {
+    "start": 1792399877339,
+    "ms": 21,
+    "status": "success"
+   },
+   {
+    "start": 1792399878536,
+    "ms": 5,
+    "status": "success"
+   },
+   {
+    "start": 1792399879699,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792399880890,
+    "ms": 21,
+    "status": "success"
+   }
+  ],
+  "Aggregate": [
+   {
+    "start": 1792399880911,
+    "ms": 1,
+    "status": "success"
+   }
+  ],
+  "Bias Auditor": [
+   {
+    "start": 1792399880912,
+    "ms": 17,
+    "status": "success"
+   }
+  ],
+  "Outcome input": [
+   {
+    "start": 1792399880929,
+    "ms": 6,
+    "status": "success"
+   }
+  ],
+  "HTTP /outcome": [
+   {
+    "start": 1792399880935,
+    "ms": 8,
+    "status": "success"
+   }
+  ],
+  "Report Writer": [
+   {
+    "start": 1792399880944,
+    "ms": 24921,
+    "status": "success"
+   }
+  ],
+  "Result": [
+   {
+    "start": 1792399905865,
+    "ms": 8,
+    "status": "success"
+   }
+  ],
+  "Respond to Webhook": [
+   {
+    "start": 1792399905873,
+    "ms": 6,
+    "status": "success"
+   }
+  ],
+  "Switch outcome": [
+   {
+    "start": 1792399905879,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Decided by gate": [
+   {
+    "start": 1792399905881,
+    "ms": 7,
+    "status": "success"
+   }
+  ],
+  "Outbox letter": [
+   {
+    "start": 1792399905888,
+    "ms": 6,
+    "status": "success"
+   }
+  ],
+  "To JSON file": [
+   {
+    "start": 1792399905894,
+    "ms": 6,
+    "status": "success"
+   }
+  ],
+  "Write eval/outbox file": [
+   {
+    "start": 1792399905901,
+    "ms": 3,
+    "status": "success"
+   }
+  ]
+ },
+ "checks": {
+  "http_status": 200,
+  "valid_json": true,
+  "execution_status": "success",
+  "identity_values_in_private_file": 1,
+  "identity_values_found_in_execution_data": 0,
+  "raw_cv_text_in_execution_data": false,
+  "all_match_lora_scale_1": true,
+  "quotes_verified_positions": 2,
+  "uploaded_file_kept_by_n8n_binary_store": 2,
+  "changed_raw_lines_checked": 1
+ }
+}

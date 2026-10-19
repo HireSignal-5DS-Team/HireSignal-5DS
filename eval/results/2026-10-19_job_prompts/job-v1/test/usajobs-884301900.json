@@ -1,0 +1,266 @@
+{
+ "card": {
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-884301900",
+  "title": "Senior IT Specialist (Robotic Process Automation and AI)",
+  "language": "en",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "text": "Expresses information effectively to individuals or groups, taking into account the audience and nature of the information; makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately",
+    "evidence": "Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately;",
+    "kind": "must",
+    "category": "other",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r2",
+    "text": "Identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations",
+    "evidence": "Problem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations.",
+    "kind": "must",
+    "category": "other",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r3",
+    "text": "One year of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, including designing or overseeing large-scale automation efforts using RPA tools such as UiPath, Microsoft Power Automate, or Automation Anywhere",
+    "evidence": "You must demonstrate in your resume at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, to include: (1) Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere.;",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "UiPath",
+     "Microsoft Power Automate",
+     "Automation Anywhere"
+    ],
+    "min_years": 1.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r4",
+    "text": "Analyzing and reviewing automated workflows, including integrations between RPA tools and other software applications, to assess performance, identify gaps, or recommend improvements",
+    "evidence": "(2) Analyzing and reviewing automated workflows, including integrations between RPA tools and other software applications, to assess performance, identify gaps, or recommend improvements.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r5",
+    "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies (RPA)",
+    "evidence": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "RPA"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r6",
+    "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies (AI technologies)",
+    "evidence": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "AI technologies"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r7",
+    "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies (business process analysis)",
+    "evidence": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "business process analysis"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r8",
+    "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies (bot development)",
+    "evidence": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "bot development"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r9",
+    "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies (testing)",
+    "evidence": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "testing"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r10",
+    "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies (deployment)",
+    "evidence": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "deployment"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r11",
+    "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies (performance monitoring)",
+    "evidence": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "performance monitoring"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r12",
+    "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies (feasibility)",
+    "evidence": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "feasibility"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r13",
+    "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies (implementation)",
+    "evidence": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "implementation"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r14",
+    "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies (governance)",
+    "evidence": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "governance"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r15",
+    "text": "Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies (enterprise-wide adoption)",
+    "evidence": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "enterprise-wide adoption"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+   "'Analyzing and reviewing automated workflows, inclu': min_years 1.0 removed (no years in the quote)"
+  ]
+ },
+ "score": {
+  "job": "usajobs-884301900",
+  "failed": 0,
+  "latency_s": 15.1,
+  "tp": 5,
+  "fp": 0,
+  "fn": 5,
+  "kind_ok": 5,
+  "terms_tp": 4,
+  "terms_fp": 10,
+  "terms_fn": 4,
+  "strict_tp": 2,
+  "strict_fp": 13,
+  "strict_fn": 8,
+  "raw_proposals": 5,
+  "raw_verbatim": 5,
+  "invented": 0,
+  "soft_must": [],
+  "splits": [],
+  "merges": [
+   "You must demonstrate in your resume at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, to include: (1) Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere.;",
+   "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies."
+  ],
+  "cut_calls": 0,
+  "missed": [
+   "You must have IT-related experience demonstrating each of the four competencies listed below",
+   "Attention to Detail",
+   "Customer Service",
+   "at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level",
+   "Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies."
+  ],
+  "extra": []
+ },
+ "calls": [
+  {
+   "input": "ALL QUALIFICATION REQUIREMENTS MUST BE MET BY THE CLOSING DATE OF THIS ANNOUNCEMENT.\nYour resume (limited to no more than 2 pages) must include detailed information as it relates to the responsibilities and specialized experience for this position.\nEvidence of copying and pasting directly from the vacancy announcement without clearly documenting supplemental information to describe your experience will result in an ineligible rating.\nThis will prevent you from being considered further.\nBasic Requirement: You must have IT-related experience demonstrating each of the four competencies listed below: 1.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Attention to Detail - is thorough when performing work and conscientious about attending to detail;\n2.\nCustomer Service - Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations; knows about available products and services; is committed to providing quality products and services;\n3.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately;\nAND 4.\nProblem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately;\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"Expresses information effectively to individuals or groups, taking into account the audience and nature of the information; makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately\"}, {\"evidence\": \"Problem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"other\", \"min_years\": null, \"text\": \"Identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "AND In order to qualify for the GS-15 , you must meet the following: You must demonstrate in your resume at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, to include: (1) Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere.;\n(2) Analyzing and reviewing automated workflows, including integrations between RPA tools and other software applications, to assess performance, identify gaps, or recommend improvements.;",
+   "raw": "{\"requirements\": [{\"evidence\": \"You must demonstrate in your resume at least one year (52 weeks) of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, to include: (1) Designing or overseeing large-scale automation efforts using robotic process automation (RPA) tools such as UiPath, Microsoft Power Automate, or Automation Anywhere.;\", \"skill_terms\": [\"UiPath\", \"Microsoft Power Automate\", \"Automation Anywhere\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"One year of qualifying specialized experience equivalent to the GS-14 grade level in the Federal government, obtained in either the private or public sector, including designing or overseeing large-scale automation efforts using RPA tools such as UiPath, Microsoft Power Automate, or Automation Anywhere\"}, {\"evidence\": \"(2) Analyzing and reviewing automated workflows, including integrations between RPA tools and other software applications, to assess performance, identify gaps, or recommend improvements.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"Analyzing and reviewing automated workflows, including integrations between RPA tools and other software applications, to assess performance, identify gaps, or recommend improvements\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.\nExperience refers to paid and unpaid experience, including volunteer work done through National Service programs (e.g., Peace Corps, AmeriCorps) and other organizations (e.g., professional, philanthropic, religious, spiritual, community, student, social).",
+   "raw": "{\"requirements\": [{\"evidence\": \"(3) Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) AND 4) Serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies.\", \"skill_terms\": [\"RPA\", \"AI technologies\", \"business process analysis\", \"bot development\", \"testing\", \"deployment\", \"performance monitoring\", \"feasibility\", \"implementation\", \"governance\", \"enterprise-wide adoption\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Planning, scheduling, and carrying out end-to-end RPA projects (from business process analysis and bot development through testing, deployment, and performance monitoring) and serving as an expert or consultant to senior leadership on the feasibility, implementation, governance, or enterprise-wide adoption of RPA or AI technologies\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Volunteer work helps build critical competencies, knowledge, and skills, and can provide valuable training and experience that translates directly to paid employment.\nYou will receive credit for all qualifying experience, including volunteer experience.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "This job does not have an education qualification requirement.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Summary\nThis position is located in the Department of Health & Human Services (HHS), Centers for Medicare & Medicaid Services (CMS), Center for Clinical Standards and Quality,CCSQ, Survey and Operations Group (SOG). As a Senior IT Specialist (Robotic Process Automation and AI), GS-2210-15, you will report directly to the SOG Leadership and provide highly complex analysis, project management, and program direction for all Divisions within the Group. Learn more about this agency\n\nDuties\nLead the development, implementation, and maintenance of the Survey and Operations Group's automation strategy",
+   "raw": "{\n    \"job_title\": \"Senior IT Specialist (Robotic Process Automation and AI)\"\n}",
+   "finish": "stop"
+  }
+ ]
+}

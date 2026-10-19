@@ -1,0 +1,83 @@
+{
+ "row": {
+  "id": "P36",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 16,
+  "raw_skills_in_cv": 14,
+  "skills_kept": 12,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 4.6,
+  "max_completion_tokens": 133
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Position: Python Developer"
+   },
+   {
+    "name": "Django",
+    "evidence": "I am a developer with experience in Python, Django, SQL, and Django REST Framework."
+   },
+   {
+    "name": "SQL",
+    "evidence": "I am a developer with experience in Python, Django, SQL, and Django REST Framework."
+   },
+   {
+    "name": "Django REST Framework",
+    "evidence": "I am a developer with experience in Python, Django, SQL, and Django REST Framework."
+   },
+   {
+    "name": "problem-solving",
+    "evidence": "My strongest skills are problem-solving and close attention to detail, which ensures that I deliver clean and maintainable code."
+   },
+   {
+    "name": "attention to detail",
+    "evidence": "My strongest skills are problem-solving and close attention to detail, which ensures that I deliver clean and maintainable code."
+   },
+   {
+    "name": "REST Framework",
+    "evidence": "Used Django REST Framework for fast API development and adherence to REST architecture standards."
+   },
+   {
+    "name": "Django ORM",
+    "evidence": "Integrated Django ORM for seamless interaction with databases and query execution."
+   },
+   {
+    "name": "API",
+    "evidence": "API project for library automation"
+   },
+   {
+    "name": "endpoints",
+    "evidence": "Developed endpoints for searching, booking, and managing books.\nIntegrated Django ORM for seamless interaction with databases and query execution.\nSecure and reliable data processing is ensured."
+   },
+   {
+    "name": "database",
+    "evidence": "Developed endpoints for searching, booking, and managing books.\nIntegrated Django ORM for seamless interaction with databases and query execution.\nSecure and reliable data processing is ensured."
+   },
+   {
+    "name": "data processing",
+    "evidence": "Developed endpoints for searching, booking, and managing books.\nIntegrated Django ORM for seamless interaction with databases and query execution.\nSecure and reliable data processing is ensured."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'collaboration': name 'collaboration' is not written in its evidence, removed",
+   "skill 'learning': name 'learning' is not written in its evidence, removed",
+   "skill 'Django ORM': evidence re-anchored to the CV line that names it",
+   "skill 'API': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

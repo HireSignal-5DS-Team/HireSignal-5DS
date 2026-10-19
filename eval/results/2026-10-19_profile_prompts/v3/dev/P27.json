@@ -1,0 +1,92 @@
+{
+ "row": {
+  "id": "P27",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 22,
+  "raw_skills_in_cv": 20,
+  "skills_kept": 12,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 1,
+  "terms_missed": [
+   "training",
+   "testing"
+  ],
+  "latency_s": 5.4,
+  "max_completion_tokens": 179
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "SQL",
+    "evidence": "Used SQL Server Management Studio to implement changes in databases requested via clients of internal business systems."
+   },
+   {
+    "name": "Python",
+    "evidence": "Using Python to build optimization methods."
+   },
+   {
+    "name": "Business English",
+    "evidence": "Categorized incidents according to SLA standards and to relevant resolution teams, provided transparent communication to clients; used professional and high quality Business English in the incidents."
+   },
+   {
+    "name": "neural network",
+    "evidence": "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library."
+   },
+   {
+    "name": "fastai",
+    "evidence": "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library."
+   },
+   {
+    "name": "data analysis",
+    "evidence": "Data analysis, product analytics, application of machine learning algorithms for data analysis, creation of visualizations."
+   },
+   {
+    "name": "product analytics",
+    "evidence": "Data analysis, product analytics, application of machine learning algorithms for data analysis, creation of visualizations."
+   },
+   {
+    "name": "machine learning",
+    "evidence": "Data analysis, product analytics, application of machine learning algorithms for data analysis, creation of visualizations."
+   },
+   {
+    "name": "prediction",
+    "evidence": "Coursework: Analysis and prediction of the popularity of the top 50 songs according to Spotify."
+   },
+   {
+    "name": "Spotify",
+    "evidence": "Coursework: Analysis and prediction of the popularity of the top 50 songs according to Spotify."
+   },
+   {
+    "name": "visualizations",
+    "evidence": "Data analysis, product analytics, application of machine learning algorithms for data analysis, creation of visualizations."
+   },
+   {
+    "name": "startups",
+    "evidence": "Attempt to create multiple startups."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "skill 'Business English': evidence re-anchored to the CV line that names it",
+   "skill 'image classification': name 'image classification' is not written in its evidence, removed",
+   "skill 'data analysis': evidence re-anchored to the CV line that names it",
+   "skill 'product analytics': evidence re-anchored to the CV line that names it",
+   "skill 'machine learning': evidence re-anchored to the CV line that names it",
+   "skill 'data visualization': name 'data visualization' is not written in its evidence, removed",
+   "skill 'data analysis': evidence re-anchored to the CV line that names it",
+   "skill 'machine learning': evidence re-anchored to the CV line that names it",
+   "skill 'visualizations': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

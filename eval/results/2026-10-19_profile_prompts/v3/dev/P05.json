@@ -1,0 +1,65 @@
+{
+ "row": {
+  "id": "P05",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 11,
+  "raw_skills_in_cv": 5,
+  "skills_kept": 4,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 3.8,
+  "max_completion_tokens": 222
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "machine learning algorithms",
+    "evidence": "Hands-on experience and a good understanding of various machine learning algorithms. Knowledge of probability theory and higher mathematics, strong analytical skills."
+   },
+   {
+    "name": "probability theory",
+    "evidence": "Hands-on experience and a good understanding of various machine learning algorithms. Knowledge of probability theory and higher mathematics, strong analytical skills."
+   },
+   {
+    "name": "higher mathematics",
+    "evidence": "Hands-on experience and a good understanding of various machine learning algorithms. Knowledge of probability theory and higher mathematics, strong analytical skills."
+   },
+   {
+    "name": "analytical skills",
+    "evidence": "Hands-on experience and a good understanding of various machine learning algorithms. Knowledge of probability theory and higher mathematics, strong analytical skills."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": null,
+    "company": "product IT company",
+    "start": null,
+    "end": null,
+    "evidence": "I work as a data scientist for 3 years in product IT company."
+   }
+  ],
+  "uncertain": [
+   "skill 'data collection': name 'data collection' is not written in its evidence, removed",
+   "skill 'data processing': name 'data processing' is not written in its evidence, removed",
+   "skill 'data analysis': name 'data analysis' is not written in its evidence, removed",
+   "skill 'statistical hypotheses': name 'statistical hypotheses' is not written in its evidence, removed",
+   "skill 'model optimization': name 'model optimization' is not written in its evidence, removed",
+   "skill 'model implementation': name 'model implementation' is not written in its evidence, removed",
+   "skill 'model support': name 'model support' is not written in its evidence, removed",
+   "experience 'Senior Data Scientist': title 'Senior Data Scientist' is not written in its evidence, removed",
+   "experience 'Senior Data Scientist': start '2021' not found in its evidence, removed",
+   "experience 'Senior Data Scientist': end 'present' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

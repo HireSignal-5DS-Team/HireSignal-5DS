@@ -1,0 +1,89 @@
+{
+ "row": {
+  "id": "P23",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 14,
+  "raw_skills_in_cv": 14,
+  "skills_kept": 10,
+  "experience": 0,
+  "education": 2,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 4.8,
+  "max_completion_tokens": 205
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "R",
+    "evidence": "R, Vba, C/C++, STL, Python"
+   },
+   {
+    "name": "VBA",
+    "evidence": "R, Vba, C/C++, STL, Python"
+   },
+   {
+    "name": "C++",
+    "evidence": "R, Vba, C/C++, STL, Python"
+   },
+   {
+    "name": "Python",
+    "evidence": "R, Vba, C/C++, STL, Python"
+   },
+   {
+    "name": "STL",
+    "evidence": "R, Vba, C/C++, STL, Python"
+   },
+   {
+    "name": "Web scraping",
+    "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+   },
+   {
+    "name": "Data scraping",
+    "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+   },
+   {
+    "name": "C/C++ STL",
+    "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+   },
+   {
+    "name": "C#",
+    "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+   },
+   {
+    "name": "vb .net",
+    "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+   }
+  ],
+  "education": [
+   {
+    "degree": "PhD",
+    "field": "Mathematics",
+    "institution": null,
+    "end": null,
+    "evidence": "PhD in Mathematics."
+   },
+   {
+    "degree": "Specialization",
+    "field": "Data Science",
+    "institution": "Johns Hopkins University",
+    "end": "2015",
+    "evidence": "Data Science, a 9-course specialization by Johns Hopkins University on Coursera. Specialization Certificate earned on December 2, 2015 (Data Science Tools, R programming, Getting and cleaning data, Exploratory data analysis, Reproducible research, Statistical inference, Regression models, Machine learning and Developing data products)."
+   }
+  ],
+  "experience": [],
+  "uncertain": [
+   "skill 'C#': name 'C#' is not written in its evidence, removed",
+   "education 'PhD': institution 'Johns Hopkins University' is not written in its evidence, removed",
+   "education 'PhD': end '2015' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

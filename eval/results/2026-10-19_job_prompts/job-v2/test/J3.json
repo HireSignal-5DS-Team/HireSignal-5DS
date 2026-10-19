@@ -1,0 +1,376 @@
+{
+ "card": {
+  "schema_version": "0.1.0",
+  "job_id": "J3",
+  "title": "ML Engineer",
+  "language": "en",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "text": "3+ years of industrial experience with ML, including training, testing, deployment, and monitoring real-time or near real-time machine learning models in production",
+    "evidence": "3+ years industrial experience with ML, including training, testing, deployment, and monitoring real-time (or near real-time) machine learning models in production;",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "ML",
+     "training",
+     "testing",
+     "deployment",
+     "monitoring",
+     "real-time",
+     "near real-time",
+     "machine learning models"
+    ],
+    "min_years": 3.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r2",
+    "text": "Proven experience with modern DL techniques",
+    "evidence": "Proven experience with modern DL techniques and Gradient Boosting Trees;",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "modern DL techniques"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r3",
+    "text": "Proven experience with Gradient Boosting Trees",
+    "evidence": "Proven experience with modern DL techniques and Gradient Boosting Trees;",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "Gradient Boosting Trees"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r4",
+    "text": "Excellent Python coding skills",
+    "evidence": "Excellent Python coding skills;",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Python"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r5",
+    "text": "Proficiency with ML libraries (Tensorflow)",
+    "evidence": "Proficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn);",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Tensorflow"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r6",
+    "text": "Proficiency with ML libraries (Pytorch)",
+    "evidence": "Proficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn);",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Pytorch"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r7",
+    "text": "Proficiency with ML libraries (LightGBM)",
+    "evidence": "Proficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn);",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "LightGBM"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r8",
+    "text": "Proficiency with ML libraries (Scikit-learn)",
+    "evidence": "Proficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn);",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Scikit-learn"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r9",
+    "text": "Vast practical experience with tabular data",
+    "evidence": "Vast practical experience with tabular data and time series;",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "tabular data"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r10",
+    "text": "Vast practical experience with time series",
+    "evidence": "Vast practical experience with tabular data and time series;",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "time series"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r11",
+    "text": "Experience in Microservices architecture",
+    "evidence": "Experience in Microservices architecture, cloud technologies, Docker, Kubernetes.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "Microservices architecture"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r12",
+    "text": "Experience in cloud technologies",
+    "evidence": "Experience in Microservices architecture, cloud technologies, Docker, Kubernetes.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "cloud technologies"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r13",
+    "text": "Experience in Docker",
+    "evidence": "Experience in Microservices architecture, cloud technologies, Docker, Kubernetes.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "Docker"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r14",
+    "text": "Experience in Kubernetes",
+    "evidence": "Experience in Microservices architecture, cloud technologies, Docker, Kubernetes.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "Kubernetes"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r15",
+    "text": "Experience with data pipelines or big data",
+    "evidence": "Experience with data pipelines / big data;",
+    "kind": "nice",
+    "category": "experience",
+    "skill_terms": [
+     "data pipelines",
+     "big data"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r16",
+    "text": "Experience with ML “understanding” techniques: explainability, etc",
+    "evidence": "Experience with ML “understanding” techniques: explainability, confidence, drift, etc;",
+    "kind": "nice",
+    "category": "experience",
+    "skill_terms": [
+     "explainability"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r17",
+    "text": "Experience with ML “understanding” techniques: confidence, etc",
+    "evidence": "Experience with ML “understanding” techniques: explainability, confidence, drift, etc;",
+    "kind": "nice",
+    "category": "experience",
+    "skill_terms": [
+     "confidence"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r18",
+    "text": "Experience with ML “understanding” techniques: drift, etc",
+    "evidence": "Experience with ML “understanding” techniques: explainability, confidence, drift, etc;",
+    "kind": "nice",
+    "category": "experience",
+    "skill_terms": [
+     "drift"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r19",
+    "text": "Experience designing and implementing AutoML flows or frameworks",
+    "evidence": "Experience designing and implementing AutoML flows/frameworks.",
+    "kind": "nice",
+    "category": "experience",
+    "skill_terms": [
+     "AutoML flows"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r20",
+    "text": "Responsible for efficient models training, testing, deployment, and monitoring",
+    "evidence": "Be responsible for efficient models training, testing, deployment, and monitoring",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r21",
+    "text": "Apply scientific knowledge to analyze and collect data, identify problems, devise solutions and construct methodologies",
+    "evidence": "Apply your scientific knowledge to analyze and collect data, identify problems, devise solutions and construct methodologies",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r22",
+    "text": "Develop machine learning and deep learning models for tabular data, time series, NLP, and CV",
+    "evidence": "Develop machine learning and deep learning models for tabular data (later: time series, NLP, CV, etc.)",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "machine learning",
+     "deep learning",
+     "tabular data",
+     "time series",
+     "NLP",
+     "CV"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r23",
+    "text": "Learn and implement cutting-edge ML algorithms",
+    "evidence": "Learn and Implement cutting-edge ML algorithms",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "ML algorithms"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r24",
+    "text": "Create and automate data pipelines including data extraction, validation and anomaly detection, indexing, and other data-related tasks",
+    "evidence": "Create and automate data pipelines including data extraction, validation & anomaly detection, indexing, and other data-related tasks",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "data pipelines",
+     "data extraction",
+     "validation",
+     "anomaly detection",
+     "indexing"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r25",
+    "text": "Follow projects from ideation to implementation",
+    "evidence": "Follow your project from ideation to implementation",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+   "'Experience with ML understanding techniques: expla': quote repaired (fuzzy 0.98)",
+   "'Experience designing and implementing AutoML flows': skill term 'AutoML frameworks' not in the quote, removed"
+  ]
+ },
+ "score": {
+  "job": "J3",
+  "failed": 0,
+  "latency_s": 21.8,
+  "tp": 8,
+  "fp": 7,
+  "fn": 0,
+  "kind_ok": 8,
+  "terms_tp": 21,
+  "terms_fp": 3,
+  "terms_fn": 0,
+  "strict_tp": 8,
+  "strict_fp": 17,
+  "strict_fn": 0,
+  "raw_proposals": 15,
+  "raw_verbatim": 14,
+  "invented": 0,
+  "soft_must": [],
+  "splits": [],
+  "merges": [],
+  "cut_calls": 0,
+  "missed": [],
+  "extra": [
+   "Experience with ML “understanding” techniques: explainability, confidence, drift, etc;",
+   "Be responsible for efficient models training, testing, deployment, and monitoring",
+   "Apply your scientific knowledge to analyze and collect data, identify problems, devise solutions and construct methodologies",
+   "Develop machine learning and deep learning models for tabular data (later: time series, NLP, CV, etc.)",
+   "Learn and Implement cutting-edge ML algorithms",
+   "Create and automate data pipelines including data extraction, validation & anomaly detection, indexing, and other data-related tasks",
+   "Follow your project from ideation to implementation"
+  ]
+ },
+ "calls": [
+  {
+   "input": "3+ years industrial experience with ML, including training, testing, deployment, and monitoring real-time (or near real-time) machine learning models in production;\nProven experience with modern DL techniques and Gradient Boosting Trees;\nExcellent Python coding skills;\nProficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn);\nVast practical experience with tabular data and time series;\nExperience in Microservices architecture, cloud technologies, Docker, Kubernetes.\nAdvantages:\nExperience with data pipelines / big data;\nExperience with ML “understanding” techniques: explainability, confidence, drift, etc;\nExperience designing and implementing AutoML flows/frameworks.",
+   "raw": "{\"requirements\": [{\"evidence\": \"3+ years industrial experience with ML, including training, testing, deployment, and monitoring real-time (or near real-time) machine learning models in production;\", \"skill_terms\": [\"ML\", \"training\", \"testing\", \"deployment\", \"monitoring\", \"real-time\", \"near real-time\", \"machine learning models\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 3, \"text\": \"3+ years of industrial experience with ML, including training, testing, deployment, and monitoring real-time or near real-time machine learning models in production\"}, {\"evidence\": \"Proven experience with modern DL techniques and Gradient Boosting Trees;\", \"skill_terms\": [\"modern DL techniques\", \"Gradient Boosting Trees\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Proven experience with modern DL techniques and Gradient Boosting Trees\"}, {\"evidence\": \"Excellent Python coding skills;\", \"skill_terms\": [\"Python\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Excellent Python coding skills\"}, {\"evidence\": \"Proficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn);\", \"skill_terms\": [\"Tensorflow\", \"Pytorch\", \"LightGBM\", \"Scikit-learn\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Proficiency with ML libraries: TensorFlow, PyTorch, LightGBM, Scikit-learn\"}, {\"evidence\": \"Vast practical experience with tabular data and time series;\", \"skill_terms\": [\"tabular data\", \"time series\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Vast practical experience with tabular data and time series\"}, {\"evidence\": \"Experience in Microservices architecture, cloud technologies, Docker, Kubernetes.\", \"skill_terms\": [\"Microservices architecture\", \"cloud technologies\", \"Docker\", \"Kubernetes\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Experience in Microservices architecture, cloud technologies, Docker, Kubernetes\"}, {\"evidence\": \"Experience with data pipelines / big data;\", \"skill_terms\": [\"data pipelines\", \"big data\"], \"kind\": \"nice\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Experience with data pipelines or big data\"}, {\"evidence\": \"Experience with ML \\\"understanding\\\" techniques: explainability, confidence, drift, etc;\", \"skill_terms\": [\"explainability\", \"confidence\", \"drift\"], \"kind\": \"nice\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Experience with ML understanding techniques: explainability, confidence, drift, etc\"}, {\"evidence\": \"Experience designing and implementing AutoML flows/frameworks.\", \"skill_terms\": [\"AutoML flows\", \"AutoML frameworks\"], \"kind\": \"nice\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Experience designing and implementing AutoML flows or frameworks\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Tasks:\nBe responsible for efficient models training, testing, deployment, and monitoring;\nApply your scientific knowledge to analyze and collect data, identify problems, devise solutions and construct methodologies;\nDevelop machine learning and deep learning models for tabular data (later: time series, NLP, CV, etc.);\nLearn and Implement cutting-edge ML algorithms;\nCreate and automate data pipelines including data extraction, validation & anomaly detection, indexing, and other data-related tasks;\nFollow your project from ideation to implementation.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Be responsible for efficient models training, testing, deployment, and monitoring\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Responsible for efficient models training, testing, deployment, and monitoring\"}, {\"evidence\": \"Apply your scientific knowledge to analyze and collect data, identify problems, devise solutions and construct methodologies\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Apply scientific knowledge to analyze and collect data, identify problems, devise solutions and construct methodologies\"}, {\"evidence\": \"Develop machine learning and deep learning models for tabular data (later: time series, NLP, CV, etc.)\", \"skill_terms\": [\"machine learning\", \"deep learning\", \"tabular data\", \"time series\", \"NLP\", \"CV\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Develop machine learning and deep learning models for tabular data, time series, NLP, and CV\"}, {\"evidence\": \"Learn and Implement cutting-edge ML algorithms\", \"skill_terms\": [\"ML algorithms\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Learn and implement cutting-edge ML algorithms\"}, {\"evidence\": \"Create and automate data pipelines including data extraction, validation & anomaly detection, indexing, and other data-related tasks\", \"skill_terms\": [\"data pipelines\", \"data extraction\", \"validation\", \"anomaly detection\", \"indexing\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Create and automate data pipelines including data extraction, validation and anomaly detection, indexing, and other data-related tasks\"}, {\"evidence\": \"Follow your project from ideation to implementation\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Follow projects from ideation to implementation\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Djinni job id: f87c22c3-525f-5999-8a64-63cf49ae7a90\nPosition: ML Engineer\nExperience (Djinni field): 3y\nEnglish level (Djinni field): upper\n\nCHI Software looking for a highly motivated ML Engineer, who want to develop with us.\nLet's start working together...\n\nRequirements:\n\n3+ years industrial experience with ML, including training, testing, deployment, and monitoring real-time (or near real-time) machine learning models in production;\nProven experience with modern DL techniques and Gradient Boosting Trees;\nExcellent Python coding skills;\nProficiency with ML libraries (Tensorflow, Pytorch, Lig",
+   "raw": "{\n    \"job_title\": \"ML Engineer\"\n}",
+   "finish": "stop"
+  }
+ ]
+}

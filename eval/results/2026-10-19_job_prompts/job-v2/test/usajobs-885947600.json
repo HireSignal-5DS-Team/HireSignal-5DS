@@ -1,0 +1,215 @@
+{
+ "card": {
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-885947600",
+  "title": "IT Specialist (Data Science)",
+  "language": "en",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "text": "Attention to Detail",
+    "evidence": "Attention to Detail - is thorough when performing work and conscientious about attending to detail",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Attention to Detail"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r2",
+    "text": "Customer Service",
+    "evidence": "Customer Service - Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations; knows about available products and services; is committed to providing quality products and services;",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Customer Service"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r3",
+    "text": "Oral Communication",
+    "evidence": "Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately;",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Oral Communication"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r4",
+    "text": "Problem Solving",
+    "evidence": "Problem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "Problem Solving"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r5",
+    "text": "1 year of specialized experience equivalent to GS-11 level in IT field or IT-related tasks including data collection, curation, quality checks, dissemination, performance management, storage, and analysis using statistical software or programming languages such as R or Python",
+    "evidence": "and analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "analyzing comprehensive data sets",
+     "statistical software",
+     "R",
+     "Python"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r6",
+    "text": "designing surveys or other scientific instruments for data collection",
+    "evidence": "designing surveys or other scientific instruments for data collection",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "data collection"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r7",
+    "text": "and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making",
+    "evidence": "and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "statistical software",
+     "Python"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r8",
+    "text": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources",
+    "evidence": "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [
+     "R"
+    ],
+    "min_years": 1.0,
+    "chunk_ids": []
+   }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+   "'1 year of specialized experience equivalent to GS-': quote repaired (contained)",
+   "'1 year of specialized experience equivalent to GS-': min_years 1.0 removed (no years in the quote)",
+   "'1 year of specialized experience equivalent to GS-': skill term 'collecting and generating data' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'design or use of surveys or other scientific instruments' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'curating and processing data' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'performing quality checks on data sets' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'preparing or supporting the dissemination of data' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'identifying and resolving routine data performance and management issues' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'storing and managing high-quality data' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'data curation' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'data processing' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'data quality evaluation' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'data performance management' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'data integration' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'data dissemination' not in the quote, removed",
+   "'1 year of specialized experience equivalent to GS-': skill term 'data analysis' not in the quote, removed"
+  ]
+ },
+ "score": {
+  "job": "usajobs-885947600",
+  "failed": 0,
+  "latency_s": 21.2,
+  "tp": 5,
+  "fp": 3,
+  "fn": 7,
+  "kind_ok": 4,
+  "terms_tp": 6,
+  "terms_fp": 2,
+  "terms_fn": 0,
+  "strict_tp": 5,
+  "strict_fp": 3,
+  "strict_fn": 7,
+  "raw_proposals": 6,
+  "raw_verbatim": 5,
+  "invented": 0,
+  "soft_must": [],
+  "splits": [
+   "analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements"
+  ],
+  "merges": [],
+  "cut_calls": 0,
+  "missed": [
+   "IT related experience demonstrated by paid or unpaid experience obtained in either the private or public sector, and/or completion of specific, intensive training that demonstrates all of the following four competencies",
+   "you must have 1 year of specialized experience equivalent to at least the GS-11 level in the Federal service",
+   "collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data",
+   "curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues",
+   "preparing or supporting the dissemination of data",
+   "identifying and resolving routine data performance and management issues",
+   "storing and managing high-quality data from diverse sources for use by decision makers"
+  ],
+  "extra": [
+   "designing surveys or other scientific instruments for data collection",
+   "and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making",
+   "1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources"
+  ]
+ },
+ "calls": [
+  {
+   "input": "In order to qualify for an IT Specialist (Data Science), GS-2210 position you must have: IT related experience demonstrated by paid or unpaid experience obtained in either the private or public sector, and/or completion of specific, intensive training that demonstrates all of the following four competencies: 1.\nAttention to Detail - is thorough when performing work and conscientious about attending to detail; and 2.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Attention to Detail - is thorough when performing work and conscientious about attending to detail\", \"skill_terms\": [\"Attention to Detail\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Attention to Detail\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Customer Service - Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations; knows about available products and services; is committed to providing quality products and services; and 3.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Customer Service - Works with clients and customers (that is, any individuals who use or receive the services or products that your work unit produces, including the general public, individuals who work in the agency, other agencies, or organizations outside the Government) to assess their needs, provide information or assistance, resolve their problems, or satisfy their expectations; knows about available products and services; is committed to providing quality products and services;\", \"skill_terms\": [\"Customer Service\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Customer Service\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately; and 4.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Oral Communication - Expresses information (for example, ideas or facts) to individuals or groups effectively, taking into account the audience and nature of the information (for example, technical, sensitive, controversial); makes clear and convincing oral presentations; listens to others, attends to nonverbal cues, and responds appropriately;\", \"skill_terms\": [\"Oral Communication\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Oral Communication\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Problem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations In order to qualify for an IT Specialist (Data Science),GS-2210 position at the GS-12 level, you must have 1 year of specialized experience equivalent to at least the GS-11 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data; curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues; preparing or supporting the dissemination of data; identifying and resolving routine data performance and management issues; storing and managing high-quality data from diverse sources for use by decision makers; and analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Problem Solving - identifies problems; determines accuracy and relevance of information; uses sound judgment to generate and evaluate alternatives, and to make recommendations\", \"skill_terms\": [\"Problem Solving\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Problem Solving\"}, {\"evidence\": \"In order to qualify for an IT Specialist (Data Science), GS-2210 position at the GS-12 level, you must have 1 year of specialized experience equivalent to at least the GS-11 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data; curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues; preparing or supporting the dissemination of data; identifying and resolving routine data performance and management issues; storing and managing high-quality data from diverse sources for use by decision makers; and analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements.\", \"skill_terms\": [\"collecting and generating data\", \"design or use of surveys or other scientific instruments\", \"curating and processing data\", \"performing quality checks on data sets\", \"preparing or supporting the dissemination of data\", \"identifying and resolving routine data performance and management issues\", \"storing and managing high-quality data\", \"analyzing comprehensive data sets\", \"statistical software\", \"R\", \"Python\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"1 year of specialized experience equivalent to GS-11 level in IT field or IT-related tasks including data collection, curation, quality checks, dissemination, performance management, storage, and analysis using statistical software or programming languages such as R or Python\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "In order to qualify for an IT Specialist (Data Science),GS-2210 position at the GS-13 level, you must have 1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.",
+   "raw": "{\"requirements\": [{\"evidence\": \"1 year of specialized experience equivalent to at least the GS-12 level in the Federal service obtained in either the private or public sector typically gained in the IT field or through performing IT related tasks such as: collecting, generating, curating, and processing data from diverse sources; designing surveys or other scientific instruments for data collection; evaluating data quality and resolving complex data performance or management issues; managing, integrating, and disseminating high-quality data to support organizational or stakeholder decision-making; and analyzing large, multidimensional, or complex data sets using statistical software or programming languages (e.g., R, Python) to derive findings and support business or program decision-making.\", \"skill_terms\": [\"data collection\", \"data curation\", \"data processing\", \"data quality evaluation\", \"data performance management\", \"data integration\", \"data dissemination\", \"data analysis\", \"statistical software\", \"R\", \"Python\"], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"1 year of specialized experience equivalent to GS-12 level in IT field, including collecting, curating, and processing data from diverse sources; designing surveys; evaluating data quality; resolving complex data performance issues; managing and integrating data; disseminating data to support decision-making; and analyzing large, complex data sets using statistical software or programming languages such as R or Python to derive findings and support business decisions\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "You will receive credit for all experience material to the position, including experience gained in religious, civic, welfare, service, and organizational activities, regardless of whether you received pay.\nDo not copy and paste the duties or specialized experience from this announcement into your resume as that will not be considered a demonstration of your qualifications for this position.\nWe may verify or assess your qualifications at any time.\nInflated or unsupported qualifications may affect your rating.\nAny misrepresentation or material omission of facts may be sufficient cause to end further consideration of your candidacy.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Persons listed as knowing your past accomplishments or experience in your application may be contacted for verification purposes at any time.\nVerification may, but need not, begin before receiving an offer.\nPreview application questionnaire before you apply: https://apply.usastaffing.gov/ViewQuestionnaire/13062893 Education This job does not have an education qualification requirement.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "This job does not have an education qualification requirement.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Summary\nAre you an IT professional interested in applying data science, AI, and emerging technologies to support biomedical research? Join NIDCR to develop and implement IT solutions for managing, integrating, analyzing, and visualizing complex data; evaluate data tools and technologies; and collaborate with scientists and IT professionals to improve data capabilities and advance research goals. Learn more about this agency\n\nDuties\nHelp As an IT Specialist (Data Science) , your duties will include: Develop and implement IT data science solutions for collecting, processing, storing, managing, a",
+   "raw": "{\n    \"job_title\": \"IT Specialist (Data Science)\"\n}",
+   "finish": "stop"
+  }
+ ]
+}

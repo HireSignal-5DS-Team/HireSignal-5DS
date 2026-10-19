@@ -1,0 +1,278 @@
+{
+ "row": {
+  "id": "P50",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 55,
+  "raw_skills_in_cv": 54,
+  "skills_kept": 50,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 5,
+  "terms_found": 4,
+  "terms_missed": [
+   "Machine Learning"
+  ],
+  "latency_s": 6.8,
+  "max_completion_tokens": 223
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Position: Lead Backend Developer (Python, Golang)"
+   },
+   {
+    "name": "Golang",
+    "evidence": "Position: Lead Backend Developer (Python, Golang)"
+   },
+   {
+    "name": "API",
+    "evidence": "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)"
+   },
+   {
+    "name": "Microservices",
+    "evidence": "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)"
+   },
+   {
+    "name": "Asterisk",
+    "evidence": "- Implemented CallCenter system based on Asterisk which processes 200+ calls at one moment."
+   },
+   {
+    "name": "IoT",
+    "evidence": "- Implemented service for motion detection for IoT and other IoT things."
+   },
+   {
+    "name": "LocationBased",
+    "evidence": "- Implemented LocationBased Social Network architecture, API and microservices."
+   },
+   {
+    "name": "Billing",
+    "evidence": "- Implemented platform (API, billing, services) for Pre-order food and Food Delivery"
+   },
+   {
+    "name": "Traffic monitoring",
+    "evidence": "- Implemented service for traffic monitoring and billing for ISP."
+   },
+   {
+    "name": "Motion detection",
+    "evidence": "- Implemented service for motion detection for IoT and other IoT things."
+   },
+   {
+    "name": "FastAPI",
+    "evidence": "- Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)"
+   },
+   {
+    "name": "asyncio",
+    "evidence": "- Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)"
+   },
+   {
+    "name": "Django",
+    "evidence": "- Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)"
+   },
+   {
+    "name": "DRF",
+    "evidence": "- Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)"
+   },
+   {
+    "name": "Flask",
+    "evidence": "- Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)"
+   },
+   {
+    "name": "Celery",
+    "evidence": "- Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)"
+   },
+   {
+    "name": "gevent",
+    "evidence": "- Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)"
+   },
+   {
+    "name": "fiber",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "gin",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "beego",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "echo",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "Redis",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "RabbitMQ",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "MongoDB",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "MySQL",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "ElasticSearch",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "Cassandra",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "Kafka",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "Tarantool",
+    "evidence": "- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool"
+   },
+   {
+    "name": "Kubernetes",
+    "evidence": "- Kubernetes, Docker, AWS, Azure"
+   },
+   {
+    "name": "Docker",
+    "evidence": "- Kubernetes, Docker, AWS, Azure"
+   },
+   {
+    "name": "AWS",
+    "evidence": "- Kubernetes, Docker, AWS, Azure"
+   },
+   {
+    "name": "Azure",
+    "evidence": "- Kubernetes, Docker, AWS, Azure"
+   },
+   {
+    "name": "SparkNLP",
+    "evidence": "- Machine Learning (SparkNLP, StanfordNLP, TensorFlow, PyTorch, nltk etc)"
+   },
+   {
+    "name": "StanfordNLP",
+    "evidence": "- Machine Learning (SparkNLP, StanfordNLP, TensorFlow, PyTorch, nltk etc)"
+   },
+   {
+    "name": "TensorFlow",
+    "evidence": "- Machine Learning (SparkNLP, StanfordNLP, TensorFlow, PyTorch, nltk etc)"
+   },
+   {
+    "name": "PyTorch",
+    "evidence": "- Machine Learning (SparkNLP, StanfordNLP, TensorFlow, PyTorch, nltk etc)"
+   },
+   {
+    "name": "nltk",
+    "evidence": "- Machine Learning (SparkNLP, StanfordNLP, TensorFlow, PyTorch, nltk etc)"
+   },
+   {
+    "name": "LoRaWAN",
+    "evidence": "- Implemented an advertising system\n- Implemented payment gateway\n- Implemented smart home software and hardware IoT things (LoRaWAN, ZigBee).\n- Implemented highload datastore with lot of ETL pipelines\n- Etc."
+   },
+   {
+    "name": "ZigBee",
+    "evidence": "- Implemented an advertising system\n- Implemented payment gateway\n- Implemented smart home software and hardware IoT things (LoRaWAN, ZigBee).\n- Implemented highload datastore with lot of ETL pipelines\n- Etc."
+   },
+   {
+    "name": "Raspberry Pi",
+    "evidence": "- IoT development (LoRaWan, zwave, Raspberry Pi, Arduino, ESP32)"
+   },
+   {
+    "name": "Arduino",
+    "evidence": "- IoT development (LoRaWan, zwave, Raspberry Pi, Arduino, ESP32)"
+   },
+   {
+    "name": "ESP32",
+    "evidence": "- IoT development (LoRaWan, zwave, Raspberry Pi, Arduino, ESP32)"
+   },
+   {
+    "name": "Linux",
+    "evidence": "- Device drivers development for Linux"
+   },
+   {
+    "name": "Device drivers",
+    "evidence": "- Device drivers development for Linux"
+   },
+   {
+    "name": "VOIP",
+    "evidence": "- VOIP (asterisk, asterisk AGI scripts)\n- Blockchain development (Basic Knowledges)\n- Linux/MacOS Expert :)"
+   },
+   {
+    "name": "asterisk AGI scripts",
+    "evidence": "- VOIP (asterisk, asterisk AGI scripts)\n- Blockchain development (Basic Knowledges)\n- Linux/MacOS Expert :)"
+   },
+   {
+    "name": "Blockchain development",
+    "evidence": "- VOIP (asterisk, asterisk AGI scripts)\n- Blockchain development (Basic Knowledges)\n- Linux/MacOS Expert :)"
+   },
+   {
+    "name": "MacOS",
+    "evidence": "- VOIP (asterisk, asterisk AGI scripts)\n- Blockchain development (Basic Knowledges)\n- Linux/MacOS Expert :)"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "skill 'Golang': evidence re-anchored to the CV line that names it",
+   "skill 'Asterisk': evidence re-anchored to the CV line that names it",
+   "skill 'Social media APIs': name 'Social media APIs' is not written in its evidence, removed",
+   "skill 'IoT': evidence re-anchored to the CV line that names it",
+   "skill 'LocationBased': evidence re-anchored to the CV line that names it",
+   "skill 'Billing': evidence re-anchored to the CV line that names it",
+   "skill 'Traffic monitoring': evidence re-anchored to the CV line that names it",
+   "skill 'Motion detection': evidence re-anchored to the CV line that names it",
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "skill 'FastAPI': evidence re-anchored to the CV line that names it",
+   "skill 'asyncio': evidence re-anchored to the CV line that names it",
+   "skill 'Django': evidence re-anchored to the CV line that names it",
+   "skill 'DRF': evidence re-anchored to the CV line that names it",
+   "skill 'Flask': evidence re-anchored to the CV line that names it",
+   "skill 'Celery': evidence re-anchored to the CV line that names it",
+   "skill 'gevent': evidence re-anchored to the CV line that names it",
+   "skill 'Golang': evidence re-anchored to the CV line that names it",
+   "skill 'fiber': evidence re-anchored to the CV line that names it",
+   "skill 'gin': evidence re-anchored to the CV line that names it",
+   "skill 'beego': evidence re-anchored to the CV line that names it",
+   "skill 'echo': evidence re-anchored to the CV line that names it",
+   "skill 'PostgreSQL': evidence re-anchored to the CV line that names it",
+   "skill 'Redis': evidence re-anchored to the CV line that names it",
+   "skill 'RabbitMQ': evidence re-anchored to the CV line that names it",
+   "skill 'MongoDB': evidence re-anchored to the CV line that names it",
+   "skill 'MySQL': evidence re-anchored to the CV line that names it",
+   "skill 'ElasticSearch': evidence re-anchored to the CV line that names it",
+   "skill 'Cassandra': evidence re-anchored to the CV line that names it",
+   "skill 'Kafka': evidence re-anchored to the CV line that names it",
+   "skill 'Tarantool': evidence re-anchored to the CV line that names it",
+   "skill 'Kubernetes': evidence re-anchored to the CV line that names it",
+   "skill 'Docker': evidence re-anchored to the CV line that names it",
+   "skill 'AWS': evidence re-anchored to the CV line that names it",
+   "skill 'Azure': evidence re-anchored to the CV line that names it",
+   "skill 'SparkNLP': evidence re-anchored to the CV line that names it",
+   "skill 'StanfordNLP': evidence re-anchored to the CV line that names it",
+   "skill 'TensorFlow': evidence re-anchored to the CV line that names it",
+   "skill 'PyTorch': evidence re-anchored to the CV line that names it",
+   "skill 'nltk': evidence re-anchored to the CV line that names it",
+   "skill 'Raspberry Pi': evidence re-anchored to the CV line that names it",
+   "skill 'Arduino': evidence re-anchored to the CV line that names it",
+   "skill 'ESP32': evidence re-anchored to the CV line that names it",
+   "skill 'Linux': evidence re-anchored to the CV line that names it",
+   "skill 'Device drivers': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

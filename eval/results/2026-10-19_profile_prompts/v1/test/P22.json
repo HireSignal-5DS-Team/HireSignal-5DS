@@ -1,0 +1,169 @@
+{
+ "row": {
+  "id": "P22",
+  "set": "gold",
+  "calls": 5,
+  "json_valid": 3,
+  "cut_calls": 2,
+  "partial": true,
+  "raw_skills": 38,
+  "raw_skills_in_cv": 28,
+  "skills_kept": 27,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 6,
+  "terms_found": 3,
+  "terms_missed": [
+   "ML",
+   "training",
+   "testing"
+  ],
+  "latency_s": 52.6,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Continuous monitoring",
+    "evidence": "Continuous monitoring and analysis of key indicators fraud risks."
+   },
+   {
+    "name": "KYC providers",
+    "evidence": "Experience working with payment and KYC providers."
+   },
+   {
+    "name": "Python",
+    "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+   },
+   {
+    "name": "numpy",
+    "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+   },
+   {
+    "name": "pandas",
+    "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+   },
+   {
+    "name": "scipy",
+    "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+   },
+   {
+    "name": "scikit-learn",
+    "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+   },
+   {
+    "name": "plotly",
+    "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+   },
+   {
+    "name": "seaborn",
+    "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+   },
+   {
+    "name": "data science",
+    "evidence": "Good knowledge of data science, data mining, statistical analysis methods, mathematical model building."
+   },
+   {
+    "name": "data mining",
+    "evidence": "Good knowledge of data science, data mining, statistical analysis methods, mathematical model building."
+   },
+   {
+    "name": "statistical analysis",
+    "evidence": "Good knowledge of data science, data mining, statistical analysis methods, mathematical model building."
+   },
+   {
+    "name": "mathematical model building",
+    "evidence": "Good knowledge of data science, data mining, statistical analysis methods, mathematical model building."
+   },
+   {
+    "name": "scoring models",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud."
+   },
+   {
+    "name": "algorithms",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud."
+   },
+   {
+    "name": "databases",
+    "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "MySQL",
+    "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "Clickhouse",
+    "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "MongoDB",
+    "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "HDFS",
+    "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "Hive",
+    "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "Hue",
+    "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "agile development methodology",
+    "evidence": "Using agile development methodology (Scrum)."
+   },
+   {
+    "name": "Software Development Lifecycle",
+    "evidence": "A clear understanding of the Software Development Lifecycle for Enterprise, web, mobile applications."
+   },
+   {
+    "name": "web projects",
+    "evidence": "Understanding the internal structure of web projects."
+   },
+   {
+    "name": "IT solutions market",
+    "evidence": "Analysis of the IT solutions market of business needs, their implementation, verification of sold products for compliance with requirements."
+   },
+   {
+    "name": "fraud protection functionality",
+    "evidence": "Analysis and recommendations for improving the software taking into account the requirements of the fraud protection functionality."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Data/System analyst",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Position: Data/System analyst\nExperience years: 6\nEnglish level: intermediate"
+   }
+  ],
+  "uncertain": [
+   "skill 'Analysis': name 'Analysis' is not written in its evidence, removed",
+   "skill 'Fraud investigation': name 'Fraud investigation' is not written in its evidence, removed",
+   "skill 'Risk counteraction': name 'Risk counteraction' is not written in its evidence, removed",
+   "skill 'Data interpretation': name 'Data interpretation' is not written in its evidence, removed",
+   "skill 'Payment providers': name 'Payment providers' is not written in its evidence, removed",
+   "skill 'Client verification': name 'Client verification' is not written in its evidence, removed",
+   "skill 'Anomaly analysis': name 'Anomaly analysis' is not written in its evidence, removed",
+   "skill 'Fraud behavior analysis': name 'Fraud behavior analysis' is not written in its evidence, removed",
+   "skill 'Fraudster blocking': name 'Fraudster blocking' is not written in its evidence, removed",
+   "experience 'Data/System analyst': company 'null' is not written in its evidence, removed",
+   "experience 'Data/System analyst': start 'null' not found in its evidence, removed",
+   "experience 'Data/System analyst': end 'null' not found in its evidence, removed",
+   "skill 'fraud detection': name 'fraud detection' is not written in its evidence, removed",
+   "skill 'fraud prevention': name 'fraud prevention' is not written in its evidence, removed",
+   "part 3/4: answer cut off at the token limit",
+   "part 3/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 3/4: answer cut off at the token limit",
+   "part 3/4: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

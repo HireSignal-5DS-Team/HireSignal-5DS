@@ -1,0 +1,70 @@
+{
+ "row": {
+  "id": "P39",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 9,
+  "raw_skills_in_cv": 9,
+  "skills_kept": 7,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 3.5,
+  "max_completion_tokens": 157
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python3",
+    "evidence": "Up to year experience in pure Python3, and Django powered back-end application development. Creating and setting up the databases with PostgreSQL DBMS."
+   },
+   {
+    "name": "Django",
+    "evidence": "Up to year experience in pure Python3, and Django powered back-end application development. Creating and setting up the databases with PostgreSQL DBMS."
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Up to year experience in pure Python3, and Django powered back-end application development. Creating and setting up the databases with PostgreSQL DBMS."
+   },
+   {
+    "name": "API",
+    "evidence": "Implemented the API via Django REST framework, for sending the JSON data to the client application."
+   },
+   {
+    "name": "JSON",
+    "evidence": "Implemented the API via Django REST framework, for sending the JSON data to the client application."
+   },
+   {
+    "name": "Python",
+    "evidence": "Improving skills in Python 3, Django, and databases."
+   },
+   {
+    "name": "databases",
+    "evidence": "Improving skills in Python 3, Django, and databases."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": null,
+    "company": "IT Step Academy",
+    "start": "2019",
+    "end": null,
+    "evidence": "Took first place in the group rating during studying in IT Step Academy 2019."
+   }
+  ],
+  "uncertain": [
+   "skill 'Django REST framework': name 'Django REST framework' is not written in its evidence, removed",
+   "experience 'Junior Python Developer': title 'Junior Python Developer' is not written in its evidence, removed",
+   "experience 'Junior Python Developer': end 'present' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

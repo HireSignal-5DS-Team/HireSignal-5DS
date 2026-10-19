@@ -1,0 +1,69 @@
+{
+ "row": {
+  "id": "P20",
+  "set": "gold",
+  "calls": 4,
+  "json_valid": 2,
+  "cut_calls": 2,
+  "partial": true,
+  "raw_skills": 8,
+  "raw_skills_in_cv": 8,
+  "skills_kept": 8,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 2,
+  "terms_found": 1,
+  "terms_missed": [
+   "SQL"
+  ],
+  "latency_s": 34.0,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Oracle",
+    "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products."
+   },
+   {
+    "name": "Postgres",
+    "evidence": "Postgres DBA with 3 years of experience."
+   },
+   {
+    "name": "Database Administrator",
+    "evidence": "looking for a position of Oracle/Postgres DBA / Database Administrator / DevOps."
+   },
+   {
+    "name": "DevOps",
+    "evidence": "looking for a position of Oracle/Postgres DBA / Database Administrator / DevOps."
+   },
+   {
+    "name": "English",
+    "evidence": "English level: fluent"
+   },
+   {
+    "name": "Agile Methodologies",
+    "evidence": "- Agile Methodologies: Kanban, Scrum."
+   },
+   {
+    "name": "Kanban",
+    "evidence": "- Agile Methodologies: Kanban, Scrum."
+   },
+   {
+    "name": "Scrum",
+    "evidence": "- Agile Methodologies: Kanban, Scrum."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "part 2/3: answer cut off at the token limit",
+   "part 2/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 2/3: answer cut off at the token limit",
+   "part 2/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

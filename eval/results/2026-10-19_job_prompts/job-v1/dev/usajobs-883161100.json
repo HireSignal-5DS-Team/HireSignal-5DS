@@ -1,0 +1,275 @@
+{
+ "card": {
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-883161100",
+  "title": "Summary",
+  "language": "en",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "text": "Degree in Mathematics, statistics, computer science, data science or field directly related to the position",
+    "evidence": "Degree: Mathematics, statistics, computer science, data science or field directly related to the position.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r2",
+    "text": "The degree must be in a major field of study (at least at the baccalaureate level) that is appropriate for the position",
+    "evidence": "The degree must be in a major field of study (at least at the baccalaureate level) that is appropriate for the position.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r3",
+    "text": "Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience",
+    "evidence": "OR Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience.",
+    "kind": "must",
+    "category": "education",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r4",
+    "text": "One year of specialized experience that equipped you with the particular competencies to successfully perform the duties of the position and is directly in or related to this position",
+    "evidence": "One year of specialized experience that equipped you with the particular competencies to successfully perform the duties of the position and is directly in or related to this position.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": 1.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r5",
+    "text": "To qualify at the GS-14 level, applicants must possess one year of specialized experience equivalent to the GS-13 level or equivalent under other pay systems in the Federal service, military or private sector",
+    "evidence": "To qualify at the GS-14 level, applicants must possess one year of specialized experience equivalent to the GS-13 level or equivalent under other pay systems in the Federal service, military or private sector.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": 1.0,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r6",
+    "text": "Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis to research and improve supply chain risk assessment processes",
+    "evidence": "Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis to research and improve supply chain risk assessment processes.",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "regression",
+     "decision tree analytics",
+     "probability",
+     "game theory",
+     "statistical analysis"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r7",
+    "text": "Providing technical direction, planning, and leadership to create and implement new agency data and supply chain risk assessment policy and processes",
+    "evidence": "Providing technical direction, planning, and leadership to create and implement new agency data and supply chain risk assessment policy and processes.",
+    "kind": "must",
+    "category": "experience",
+    "skill_terms": [],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r8",
+    "text": "Providing a high level of technical expertise in data science",
+    "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "data science"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r9",
+    "text": "Providing a high level of technical expertise in intelligence",
+    "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "intelligence"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r10",
+    "text": "Providing a high level of technical expertise in artificial intelligence/machine learning (AI/ML)",
+    "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "artificial intelligence/machine learning (AI/ML)"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r11",
+    "text": "Providing a high level of technical expertise in system analysis",
+    "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "system analysis"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r12",
+    "text": "Providing a high level of technical expertise in risk analysis",
+    "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "risk analysis"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r13",
+    "text": "Providing a high level of technical expertise in predictive analysis",
+    "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "predictive analysis"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r14",
+    "text": "Providing a high level of technical expertise in computer simulation",
+    "evidence": "Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "computer simulation"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   },
+   {
+    "req_id": "r15",
+    "text": "Using standard-type models to simulate real world environments",
+    "evidence": "Using standard-type models to simulate real world environments.",
+    "kind": "must",
+    "category": "skill",
+    "skill_terms": [
+     "standard-type models"
+    ],
+    "min_years": null,
+    "chunk_ids": []
+   }
+  ],
+  "uncertain": [],
+  "needs_human_review": false,
+  "warnings": [
+   "'If the position has a minimum education requiremen': not a requirement (application instructions), dropped",
+   "'If you are using education to qualify in lieu of s': not a requirement (application instructions), dropped",
+   "'The transcripts must include your name, the name o': not a requirement (application instructions), dropped",
+   "'Education must be accredited by an accrediting ins': not a requirement (application instructions), dropped",
+   "'If the position has a minimum education requiremen': not a requirement (application instructions), dropped",
+   "'If you are using education to qualify in lieu of s': not a requirement (application instructions), dropped",
+   "'The transcripts must include your name, the name o': not a requirement (application instructions), dropped",
+   "'Education must be accredited by an accrediting ins': not a requirement (application instructions), dropped",
+   "title 'None' not found in the job offer, used the first line"
+  ]
+ },
+ "score": {
+  "job": "usajobs-883161100",
+  "failed": 0,
+  "latency_s": 32.5,
+  "tp": 6,
+  "fp": 3,
+  "fn": 0,
+  "kind_ok": 2,
+  "terms_tp": 11,
+  "terms_fp": 2,
+  "terms_fn": 2,
+  "strict_tp": 11,
+  "strict_fp": 4,
+  "strict_fn": 1,
+  "raw_proposals": 17,
+  "raw_verbatim": 17,
+  "invented": 0,
+  "soft_must": [],
+  "splits": [],
+  "merges": [],
+  "cut_calls": 0,
+  "missed": [],
+  "extra": [
+   "The degree must be in a major field of study (at least at the baccalaureate level) that is appropriate for the position.",
+   "OR Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience.",
+   "One year of specialized experience that equipped you with the particular competencies to successfully perform the duties of the position and is directly in or related to this position."
+  ]
+ },
+ "calls": [
+  {
+   "input": "To qualify for a Data Scientist (Supply Chain), your resume and supporting documentation must support: A.\nBasic Requirements: Degree: Mathematics, statistics, computer science, data science or field directly related to the position.\nThe degree must be in a major field of study (at least at the baccalaureate level) that is appropriate for the position.\nOR Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience.\nAND B.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Degree: Mathematics, statistics, computer science, data science or field directly related to the position.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"Degree in Mathematics, statistics, computer science, data science or field directly related to the position\"}, {\"evidence\": \"The degree must be in a major field of study (at least at the baccalaureate level) that is appropriate for the position.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"The degree must be in a major field of study (at least at the baccalaureate level) that is appropriate for the position\"}, {\"evidence\": \"OR Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"Combination of education and experience: Courses equivalent to a major field of study (30 semester hours) as shown in paragraph 1 above, plus additional education or appropriate experience\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Specialized Experience: One year of specialized experience that equipped you with the particular competencies to successfully perform the duties of the position and is directly in or related to this position.\nTo qualify at the GS-14 level, applicants must possess one year of specialized experience equivalent to the GS-13 level or equivalent under other pay systems in the Federal service, military or private sector.\nApplicants must meet eligibility requirements including time-in-grade (General Schedule (GS) positions only), time-after-competitive appointment, minimum qualifications, and any other regulatory requirements by the cut-off/closing date of the announcement.",
+   "raw": "{\"requirements\": [{\"evidence\": \"One year of specialized experience that equipped you with the particular competencies to successfully perform the duties of the position and is directly in or related to this position.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"One year of specialized experience that equipped you with the particular competencies to successfully perform the duties of the position and is directly in or related to this position\"}, {\"evidence\": \"To qualify at the GS-14 level, applicants must possess one year of specialized experience equivalent to the GS-13 level or equivalent under other pay systems in the Federal service, military or private sector.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": 1, \"text\": \"To qualify at the GS-14 level, applicants must possess one year of specialized experience equivalent to the GS-13 level or equivalent under other pay systems in the Federal service, military or private sector\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Creditable specialized experience includes: Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis to research and improve supply chain risk assessment processes.\nProviding technical direction, planning, and leadership to create and implement new agency data and supply chain risk assessment policy and processes.\nProviding a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.\nUsing standard-type models to simulate real world environments.",
+   "raw": "{\"requirements\": [{\"evidence\": \"Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis to research and improve supply chain risk assessment processes.\", \"skill_terms\": [\"regression\", \"decision tree analytics\", \"probability\", \"game theory\", \"statistical analysis\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Applying scientific methods, to include, regression, decision tree analytics, probability and game theory, and statistical analysis to research and improve supply chain risk assessment processes\"}, {\"evidence\": \"Providing technical direction, planning, and leadership to create and implement new agency data and supply chain risk assessment policy and processes.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"experience\", \"min_years\": null, \"text\": \"Providing technical direction, planning, and leadership to create and implement new agency data and supply chain risk assessment policy and processes\"}, {\"evidence\": \"Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation.\", \"skill_terms\": [\"data science\", \"intelligence\", \"artificial intelligence/machine learning (AI/ML)\", \"system analysis\", \"risk analysis\", \"predictive analysis\", \"computer simulation\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Providing a high level of technical expertise in data science, intelligence, artificial intelligence/machine learning (AI/ML), system analysis, risk analysis, predictive analysis, and computer simulation\"}, {\"evidence\": \"Using standard-type models to simulate real world environments.\", \"skill_terms\": [\"standard-type models\"], \"kind\": \"must\", \"category\": \"skill\", \"min_years\": null, \"text\": \"Using standard-type models to simulate real world environments\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Education If the position has a minimum education requirement you MUST provide transcripts (unofficial are acceptable at the time of application) to support your educational claims.\nOr, if you are using education to qualify in lieu of specialized experience you MUST provide transcripts (unofficial are acceptable at the time of application) to support your educational claims.\nThe transcripts must include your name, the name of the college or university, class/course list, completed number of credits/hours, and the date degree conferred (if applicable).\nEducation must be accredited by an accrediting institution recognized by the U.S.\nDepartment of Education.",
+   "raw": "{\"requirements\": [{\"evidence\": \"If the position has a minimum education requirement you MUST provide transcripts (unofficial are acceptable at the time of application) to support your educational claims.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"If the position has a minimum education requirement you MUST provide transcripts (unofficial are acceptable at the time of application) to support your educational claims\"}, {\"evidence\": \"Or, if you are using education to qualify in lieu of specialized experience you MUST provide transcripts (unofficial are acceptable at the time of application) to support your educational claims.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"If you are using education to qualify in lieu of specialized experience you MUST provide transcripts (unofficial are acceptable at the time of application) to support your educational claims\"}, {\"evidence\": \"The transcripts must include your name, the name of the college or university, class/course list, completed number of credits/hours, and the date degree conferred (if applicable).\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"The transcripts must include your name, the name of the college or university, class/course list, completed number of credits/hours, and the date degree conferred (if applicable)\"}, {\"evidence\": \"Education must be accredited by an accrediting institution recognized by the U.S. Department of Education.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"Education must be accredited by an accrediting institution recognized by the U.S. Department of Education\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Licenses must be current at time of application.\nGRADUATE EDUCATION: One academic year of graduate education is considered to be the number of credits hours that your graduate school has determined to represent one academic year of full-time study.\nSuch study may have been performed on a full-time or part-time basis.\nIf you cannot obtain your graduate school's definition of one year of graduate study, 18 semester hours (or 27 quarter hours) should be considered as satisfying the requirement for one year of full-time graduate study.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "FOREIGN EDUCATION: If you are using education completed in foreign colleges or universities to meet the qualification requirements, you must show that the education credentials have been evaluated by a private organization that specializes in interpretation of foreign education programs and such education has been deemed equivalent to that gained in an accredited U.S. education program; or full credit has been given for the courses at a U.S. accredited college or university.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "If the position has a minimum education requirement you MUST provide transcripts (unofficial are acceptable at the time of application) to support your educational claims.\nOr, if you are using education to qualify in lieu of specialized experience you MUST provide transcripts (unofficial are acceptable at the time of application) to support your educational claims.\nThe transcripts must include your name, the name of the college or university, class/course list, completed number of credits/hours, and the date degree conferred (if applicable).\nEducation must be accredited by an accrediting institution recognized by the U.S.\nDepartment of Education.",
+   "raw": "{\"requirements\": [{\"evidence\": \"If the position has a minimum education requirement you MUST provide transcripts (unofficial are acceptable at the time of application) to support your educational claims.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"If the position has a minimum education requirement you MUST provide transcripts (unofficial are acceptable at the time of application) to support your educational claims\"}, {\"evidence\": \"Or, if you are using education to qualify in lieu of specialized experience you MUST provide transcripts (unofficial are acceptable at the time of application) to support your educational claims.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"If you are using education to qualify in lieu of specialized experience you MUST provide transcripts (unofficial are acceptable at the time of application) to support your educational claims\"}, {\"evidence\": \"The transcripts must include your name, the name of the college or university, class/course list, completed number of credits/hours, and the date degree conferred (if applicable).\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"The transcripts must include your name, the name of the college or university, class/course list, completed number of credits/hours, and the date degree conferred (if applicable)\"}, {\"evidence\": \"Education must be accredited by an accrediting institution recognized by the U.S. Department of Education.\", \"skill_terms\": [], \"kind\": \"must\", \"category\": \"education\", \"min_years\": null, \"text\": \"Education must be accredited by an accrediting institution recognized by the U.S. Department of Education\"}]}",
+   "finish": "stop"
+  },
+  {
+   "input": "Licenses must be current at time of application.\nGRADUATE EDUCATION: One academic year of graduate education is considered to be the number of credits hours that your graduate school has determined to represent one academic year of full-time study.\nSuch study may have been performed on a full-time or part-time basis.\nIf you cannot obtain your graduate school's definition of one year of graduate study, 18 semester hours (or 27 quarter hours) should be considered as satisfying the requirement for one year of full-time graduate study.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "FOREIGN EDUCATION: If you are using education completed in foreign colleges or universities to meet the qualification requirements, you must show that the education credentials have been evaluated by a private organization that specializes in interpretation of foreign education programs and such education has been deemed equivalent to that gained in an accredited U.S. education program; or full credit has been given for the courses at a U.S. accredited college or university.",
+   "raw": "{\"requirements\": []}",
+   "finish": "stop"
+  },
+  {
+   "input": "Summary\nSee below for important information regarding this job. Additional vacancies may be filled from this announcement. DCMA Location Negotiable upon Selection. This is not a remote work position. See DCMA Location List , not all locations may be available. Learn more about this agency\n\nDuties\nPerforms professional work in data science, system analysis, risk analysis, predictive analysis, computer simulation, and program/project planning and controls. Gathers, conditions, analyze, and integrate large and heterogenous volumes of data related to supply chain security risk assessments, for whi",
+   "raw": "{\n    \"job_title\": \"None\"\n}",
+   "finish": "stop"
+  }
+ ]
+}

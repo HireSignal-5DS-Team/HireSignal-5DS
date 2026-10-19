@@ -1,0 +1,84 @@
+{
+ "row": {
+  "id": "P09",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 6,
+  "raw_skills_in_cv": 5,
+  "skills_kept": 5,
+  "experience": 2,
+  "education": 0,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 4.9,
+  "max_completion_tokens": 286
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Machine Learning",
+    "evidence": "I have finished a Machine Learning course at IT-HILLEL."
+   },
+   {
+    "name": "Deep Learning",
+    "evidence": "Now diving into Deep Learning, especially Hugging Face, PyTorch, OpenAI API"
+   },
+   {
+    "name": "Hugging Face",
+    "evidence": "Now diving into Deep Learning, especially Hugging Face, PyTorch, OpenAI API"
+   },
+   {
+    "name": "PyTorch",
+    "evidence": "Now diving into Deep Learning, especially Hugging Face, PyTorch, OpenAI API"
+   },
+   {
+    "name": "OpenAI API",
+    "evidence": "Now diving into Deep Learning, especially Hugging Face, PyTorch, OpenAI API"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Pet project",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Have experience in creating a pet project for predicting eSports matches, which gives up to 65% accuracy."
+   },
+   {
+    "title": null,
+    "company": "Distribution company",
+    "start": null,
+    "end": null,
+    "evidence": "I also had experience in a distribution company - my task was to organize the names of products in the database."
+   }
+  ],
+  "uncertain": [
+   "skill 'Machine Learning': evidence re-anchored to the CV line that names it",
+   "skill 'Python': name 'Python' is not written in its evidence, removed",
+   "experience 'Data Scientist': title 'Data Scientist' is not written in its evidence, removed",
+   "experience 'Data Scientist': company 'Self' is not written in its evidence, removed",
+   "experience 'Data Scientist': start '0.5' not found in its evidence, removed",
+   "experience 'Data Scientist': end 'present' not found in its evidence, removed",
+   "experience 'Data Scientist': neither title nor company, dropped",
+   "experience 'Pet project': company 'Self' is not written in its evidence, removed",
+   "experience 'Pet project': start 'present' not found in its evidence, removed",
+   "experience 'Pet project': end 'present' not found in its evidence, removed",
+   "experience 'App development': title 'App development' is not written in its evidence, removed",
+   "experience 'App development': company 'Self' is not written in its evidence, removed",
+   "experience 'App development': start 'present' not found in its evidence, removed",
+   "experience 'App development': end 'present' not found in its evidence, removed",
+   "experience 'App development': neither title nor company, dropped",
+   "experience 'Database task': title 'Database task' is not written in its evidence, removed",
+   "experience 'Database task': start 'present' not found in its evidence, removed",
+   "experience 'Database task': end 'present' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

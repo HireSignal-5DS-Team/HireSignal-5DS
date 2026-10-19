@@ -1,0 +1,300 @@
+{
+ "row": {
+  "id": "P22",
+  "set": "gold",
+  "calls": 4,
+  "json_valid": 4,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 72,
+  "raw_skills_in_cv": 59,
+  "skills_kept": 58,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 6,
+  "terms_found": 4,
+  "terms_missed": [
+   "testing",
+   "monitoring"
+  ],
+  "latency_s": 13.0,
+  "max_completion_tokens": 236
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "fraud risk",
+    "evidence": "Continuous monitoring and analysis of key indicators fraud risks. Understanding the ways, methods and procedures of fraud. Investigation fraud incidents in the system and organization."
+   },
+   {
+    "name": "malware",
+    "evidence": "Counteracting the risks of negative consequences of malware, scammers, crawlers, bots, financial fraud, illegal actions of users and customers of the system."
+   },
+   {
+    "name": "scammers",
+    "evidence": "Counteracting the risks of negative consequences of malware, scammers, crawlers, bots, financial fraud, illegal actions of users and customers of the system."
+   },
+   {
+    "name": "crawlers",
+    "evidence": "Counteracting the risks of negative consequences of malware, scammers, crawlers, bots, financial fraud, illegal actions of users and customers of the system."
+   },
+   {
+    "name": "bots",
+    "evidence": "Counteracting the risks of negative consequences of malware, scammers, crawlers, bots, financial fraud, illegal actions of users and customers of the system."
+   },
+   {
+    "name": "financial fraud",
+    "evidence": "Counteracting the risks of negative consequences of malware, scammers, crawlers, bots, financial fraud, illegal actions of users and customers of the system."
+   },
+   {
+    "name": "illegal actions",
+    "evidence": "Counteracting the risks of negative consequences of malware, scammers, crawlers, bots, financial fraud, illegal actions of users and customers of the system."
+   },
+   {
+    "name": "KYC providers",
+    "evidence": "Experience working with payment and KYC providers."
+   },
+   {
+    "name": "scoring models",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "algorithms",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "preventive protection",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "automation",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "antifraud protection",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "data science",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "data mining",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "statistical analysis",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "mathematical model building",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "Python",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "numpy",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "pandas",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "scipy",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "scikit-learn",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "plotly",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "seaborn",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "MySQL",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "Clickhouse",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "MongoDB",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "HDFS",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "Hive",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "Hue",
+    "evidence": "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+   },
+   {
+    "name": "JIRA",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "Confluence",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "YouTrack",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "Redmine",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "prioritize tasks",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "user stories",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "manage backlog",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "compile a product roadmap",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "UML",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "analysis",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "business needs",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "implementation",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "verification",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "certification",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "international certification center",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "cooperation",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "Forensiq",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "White Ops",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "Anura",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "Secure D",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "BotRadar",
+    "evidence": "Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc."
+   },
+   {
+    "name": "agile development methodology",
+    "evidence": "A clear understanding of the Software Development Lifecycle for Enterprise, web, mobile applications. Using agile development methodology (Scrum). Understanding the internal structure of web projects."
+   },
+   {
+    "name": "Scrum",
+    "evidence": "A clear understanding of the Software Development Lifecycle for Enterprise, web, mobile applications. Using agile development methodology (Scrum). Understanding the internal structure of web projects."
+   },
+   {
+    "name": "Software Development Lifecycle",
+    "evidence": "A clear understanding of the Software Development Lifecycle for Enterprise, web, mobile applications. Using agile development methodology (Scrum). Understanding the internal structure of web projects."
+   },
+   {
+    "name": "mobile applications",
+    "evidence": "A clear understanding of the Software Development Lifecycle for Enterprise, web, mobile applications. Using agile development methodology (Scrum). Understanding the internal structure of web projects."
+   },
+   {
+    "name": "IT solutions market",
+    "evidence": "Analysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements."
+   },
+   {
+    "name": "fraud protection functionality",
+    "evidence": "Consulting and training the anti-fraud team in the use of specialized software, creating instructions and regulating the escalation of cases. Analysis and recommendations for improving the software taking into account the requirements of the fraud protection functionality."
+   },
+   {
+    "name": "training",
+    "evidence": "Consulting and training the anti-fraud team in the use of specialized software, creating instructions and regulating the escalation of cases. Analysis and recommendations for improving the software taking into account the requirements of the fraud protection functionality."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Data/System analyst",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Position: Data/System analyst\nExperience years: 6\nEnglish level: intermediate"
+   }
+  ],
+  "uncertain": [
+   "skill 'data analysis': name 'data analysis' is not written in its evidence, removed",
+   "skill 'malware': evidence re-anchored to the CV line that names it",
+   "skill 'scammers': evidence re-anchored to the CV line that names it",
+   "skill 'crawlers': evidence re-anchored to the CV line that names it",
+   "skill 'bots': evidence re-anchored to the CV line that names it",
+   "skill 'financial fraud': evidence re-anchored to the CV line that names it",
+   "skill 'illegal actions': evidence re-anchored to the CV line that names it",
+   "skill 'payment providers': name 'payment providers' is not written in its evidence, removed",
+   "skill 'KYC providers': evidence re-anchored to the CV line that names it",
+   "skill 'client verification': name 'client verification' is not written in its evidence, removed",
+   "skill 'anomaly detection': name 'anomaly detection' is not written in its evidence, removed",
+   "skill 'fraud blocking': name 'fraud blocking' is not written in its evidence, removed",
+   "experience 'Data/System analyst': company 'null' is not written in its evidence, removed",
+   "experience 'Data/System analyst': start 'null' not found in its evidence, removed",
+   "experience 'Data/System analyst': end 'null' not found in its evidence, removed",
+   "skill 'fraud detection': name 'fraud detection' is not written in its evidence, removed",
+   "skill 'web applications': name 'web applications' is not written in its evidence, removed",
+   "skill 'enterprise software': name 'enterprise software' is not written in its evidence, removed",
+   "skill 'IT solutions market': evidence re-anchored to the CV line that names it",
+   "skill 'fraud protection functionality': evidence re-anchored to the CV line that names it",
+   "skill 'software analysis': name 'software analysis' is not written in its evidence, removed",
+   "skill 'market analysis': name 'market analysis' is not written in its evidence, removed",
+   "skill 'product compliance': name 'product compliance' is not written in its evidence, removed",
+   "skill 'fraud prevention': name 'fraud prevention' is not written in its evidence, removed",
+   "skill 'escalation regulation': name 'escalation regulation' is not written in its evidence, removed",
+   "skill 'training': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

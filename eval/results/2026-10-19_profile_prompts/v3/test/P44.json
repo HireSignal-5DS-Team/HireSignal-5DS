@@ -1,0 +1,150 @@
+{
+ "row": {
+  "id": "P44",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 27,
+  "raw_skills_in_cv": 27,
+  "skills_kept": 27,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 3,
+  "terms_missed": [],
+  "latency_s": 5.2,
+  "max_completion_tokens": 290
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Java",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "SQL",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Oracle",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "MSSQL",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "MySQL",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Sybase",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Teradata",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "SAP HANA",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Greenplum",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Hadoop",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Hive",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "HBase",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "MongoDB",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Redshift",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "AWS",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "EC2",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "RDS",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "S3",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Apache Airflow",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Informatica",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Git",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "GitHub",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Bitbucket",
+    "evidence": "Programming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket"
+   },
+   {
+    "name": "Agile methodology",
+    "evidence": "using most powerful development practices and Agile methodology."
+   },
+   {
+    "name": "English",
+    "evidence": "English level: upper"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Big Data Engineer",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Position: Big Data Engineer\nExperience years: 11"
+   }
+  ],
+  "uncertain": [
+   "experience 'Big Data Engineer': company 'null' is not written in its evidence, removed",
+   "experience 'Big Data Engineer': start 'null' not found in its evidence, removed",
+   "experience 'Big Data Engineer': end 'null' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

@@ -1,0 +1,160 @@
+{
+ "row": {
+  "id": "P15",
+  "set": "gold",
+  "calls": 4,
+  "json_valid": 4,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 40,
+  "raw_skills_in_cv": 40,
+  "skills_kept": 30,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 3,
+  "terms_missed": [],
+  "latency_s": 27.9,
+  "max_completion_tokens": 605
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Oracle",
+    "evidence": "Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates."
+   },
+   {
+    "name": "SQL",
+    "evidence": "Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates."
+   },
+   {
+    "name": "Azure",
+    "evidence": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+   },
+   {
+    "name": "AWS",
+    "evidence": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+   },
+   {
+    "name": "DP-203",
+    "evidence": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+   },
+   {
+    "name": "CLF-C01",
+    "evidence": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+   },
+   {
+    "name": "PowerBI",
+    "evidence": "Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis."
+   },
+   {
+    "name": "PL-300",
+    "evidence": "Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis."
+   },
+   {
+    "name": "Tableau",
+    "evidence": "Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis."
+   },
+   {
+    "name": "Sisense",
+    "evidence": "Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis."
+   },
+   {
+    "name": "Azure Data Factory",
+    "evidence": "Experience in working with Azure Data Factory and SSIS for efficient data extraction, transformation, and loading processes."
+   },
+   {
+    "name": "SSIS",
+    "evidence": "Experience in working with Azure Data Factory and SSIS for efficient data extraction, transformation, and loading processes."
+   },
+   {
+    "name": "English",
+    "evidence": "English level: upper"
+   },
+   {
+    "name": "JIRA",
+    "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+   },
+   {
+    "name": "Confluence",
+    "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+   },
+   {
+    "name": "Postman",
+    "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+   },
+   {
+    "name": "Kubernetes",
+    "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+   },
+   {
+    "name": "Jenkins",
+    "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+   },
+   {
+    "name": "Cassandra",
+    "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+   },
+   {
+    "name": "MongoDB",
+    "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+   },
+   {
+    "name": "Microsoft SQL Server",
+    "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+   },
+   {
+    "name": "GIT",
+    "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+   },
+   {
+    "name": "UNIX",
+    "evidence": "Experience in administering UNIX-based systems."
+   },
+   {
+    "name": "Containerization",
+    "evidence": "Experience in working with Kubernetes for containerization."
+   },
+   {
+    "name": "Python",
+    "evidence": "Experience in using Python for file and database manipulation tasks."
+   },
+   {
+    "name": "Charging and Billing Systems",
+    "evidence": "Experience with Charging and Billing Systems in the telecommunications industry."
+   },
+   {
+    "name": "Power BI",
+    "evidence": "creating reports in Power BI and Tableau for data analysis"
+   },
+   {
+    "name": "DP-900",
+    "evidence": "DP-900 Microsoft Certified: Azure Data Fundamentals"
+   },
+   {
+    "name": "Databricks Lakehouse Fundamentals",
+    "evidence": "Academy Accreditation - Databricks Lakehouse Fundamentals"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Member",
+    "company": "EPAM Data Analytics and Data Engineering Internal Lab",
+    "start": "2022-06",
+    "end": "present",
+    "evidence": "- EPAM Data Analytics and Data Engineering Internal Lab: Currently a member since 06.2022, involved in various projects including the development of ETL pipelines in Azure Data Factory, implementation of ETL processes using SSIS and Python with PostgreSQL in AWS, and creating reports in Power BI and Tableau for data analysis."
+   }
+  ],
+  "uncertain": [
+   "skill 'ETL': name 'ETL' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "row": {
+  "id": "P12",
+  "set": "gold",
+  "calls": 5,
+  "json_valid": 3,
+  "cut_calls": 2,
+  "partial": true,
+  "raw_skills": 23,
+  "raw_skills_in_cv": 23,
+  "skills_kept": 20,
+  "experience": 5,
+  "education": 0,
+  "terms_present": 2,
+  "terms_found": 0,
+  "terms_missed": [
+   "SQL",
+   "English"
+  ],
+  "latency_s": 45.4,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "SSIS",
+    "evidence": "- SSIS"
+   },
+   {
+    "name": "Talend ETL",
+    "evidence": "- Talend ETL"
+   },
+   {
+    "name": "SAP BODS",
+    "evidence": "- SAP BODS"
+   },
+   {
+    "name": "Oracle ODI / OBI - SAP BO",
+    "evidence": "- Oracle ODI / OBI - SAP BO"
+   },
+   {
+    "name": "Power BI",
+    "evidence": "- Power BI"
+   },
+   {
+    "name": "Qlik View/Sense",
+    "evidence": "- Qlik View/Sense"
+   },
+   {
+    "name": "SSRS",
+    "evidence": "- SSRS"
+   },
+   {
+    "name": "DWH",
+    "evidence": "- Designed, DWH architecture of Payment Management Systems, Mastercard systems and many related systems."
+   },
+   {
+    "name": "ETL",
+    "evidence": "- Adaptation of ETL and Business Intelligence projects."
+   },
+   {
+    "name": "ETL Development",
+    "evidence": "- ETL Development project for Rotana Dubai."
+   },
+   {
+    "name": "ETL processes",
+    "evidence": "- Developed ETL processes and BI Reports any tools"
+   },
+   {
+    "name": "SAP BI",
+    "evidence": "Responsible for SAP BI, Power BI: Created structures in accordance with DB and DWH, developed BI dashboard."
+   },
+   {
+    "name": "SAP R/3",
+    "evidence": "Managed SAP R/3 and Oracle E-BS HR: Team management supporting Logistics, Finance and HR units, managment of consulting firms."
+   },
+   {
+    "name": "Oracle E-BS HR",
+    "evidence": "Managed SAP R/3 and Oracle E-BS HR: Team management supporting Logistics, Finance and HR units, managment of consulting firms."
+   },
+   {
+    "name": "Salesforce CRM",
+    "evidence": "Led a team in Salesforce CRM: Management of the team that develops and supports internal and external applications."
+   },
+   {
+    "name": "Java",
+    "evidence": "Java ADF Developer; developed Store applications with Java within the scope of Mobile Field Sales Applications project"
+   },
+   {
+    "name": "ADF",
+    "evidence": "Java ADF Developer; developed Store applications with Java within the scope of Mobile Field Sales Applications project"
+   },
+   {
+    "name": "Mobile Field Sales Applications",
+    "evidence": "Java ADF Developer; developed Store applications with Java within the scope of Mobile Field Sales Applications project"
+   },
+   {
+    "name": "Net",
+    "evidence": "Headed the team that develops software with .Net, Java and Oracle"
+   },
+   {
+    "name": "Oracle",
+    "evidence": "Headed the team that develops software with .Net, Java and Oracle"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "DWH & BI Unit Manager",
+    "company": "PayCore Payment Systems",
+    "start": "2021-06",
+    "end": null,
+    "evidence": "DWH & BI Unit Manager - PayCore Payment Systems - Jun 2021 - Working\n- Designed, DWH architecture of Payment Management Systems, Mastercard systems and many related systems.\n- Uses SSIS, Talend Open Studio, SAP BO/BI, Power BI\n- Managed an agile team."
+   },
+   {
+    "title": "Senior Solution Architect",
+    "company": "MDS ap Turkey(Midis Group Inc.)",
+    "start": "2019-02",
+    "end": "2021-05",
+    "evidence": "Senior Solution Architect - MDS ap Turkey(Midis Group Inc.) - Feb 2019 - May 2021\n- Adaptation of ETL and Business Intelligence projects.\n- ETL/BI project in Türkiye Insurance Inc.\n- Consolidation project for TWF([PERSONAL] Wealth Fund).\n- ETL Development project for Rotana Dubai."
+   },
+   {
+    "title": "Founder",
+    "company": "Fox Analytics",
+    "start": "2019-06",
+    "end": null,
+    "evidence": "Founder - Fox Analytics - Jun 2019\n- Developed ETL processes and BI Reports any tools"
+   },
+   {
+    "title": "Enterprise Applications Manager",
+    "company": "NETAS Telecommunication Inc.",
+    "start": "2015-05",
+    "end": "2019-01",
+    "evidence": "Enterprise Applications Manager - NETAS Telecommunication Inc. - May 2015 - Jan 2019"
+   },
+   {
+    "title": "Senior Software Developer",
+    "company": "Yataş Inc.",
+    "start": "2011-09",
+    "end": "2015-05",
+    "evidence": "Senior Software Developer - Yataş Inc. - Agu 2011 - May 2015"
+   }
+  ],
+  "uncertain": [
+   "skill 'BI': name 'BI' is not written in its evidence, removed",
+   "experience 'DWH & BI Unit Manager': end 'working' not found in its evidence, removed",
+   "part 3/4: answer cut off at the token limit",
+   "part 3/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 3/4: answer cut off at the token limit",
+   "part 3/4: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "row": {
+  "id": "P11",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 8,
+  "raw_skills_in_cv": 8,
+  "skills_kept": 8,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 0,
+  "terms_missed": [
+   "English"
+  ],
+  "latency_s": 2.7,
+  "max_completion_tokens": 142
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Big Data",
+    "evidence": "Position: Big Data Engineer"
+   },
+   {
+    "name": "Machine Learning",
+    "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering. Took part in a variety of Data Science projects for e-commerce and advertising companies. My work covered both Engineering and Product parts. On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions. On the Product side I worked with stakeholders to formalize requirements and present results."
+   },
+   {
+    "name": "Data Science",
+    "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering. Took part in a variety of Data Science projects for e-commerce and advertising companies. My work covered both Engineering and Product parts. On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions. On the Product side I worked with stakeholders to formalize requirements and present results."
+   },
+   {
+    "name": "Software Engineering",
+    "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering. Took part in a variety of Data Science projects for e-commerce and advertising companies. My work covered both Engineering and Product parts. On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions. On the Product side I worked with stakeholders to formalize requirements and present results."
+   },
+   {
+    "name": "R&D",
+    "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering. Took part in a variety of Data Science projects for e-commerce and advertising companies. My work covered both Engineering and Product parts. On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions. On the Product side I worked with stakeholders to formalize requirements and present results."
+   },
+   {
+    "name": "System design",
+    "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering. Took part in a variety of Data Science projects for e-commerce and advertising companies. My work covered both Engineering and Product parts. On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions. On the Product side I worked with stakeholders to formalize requirements and present results."
+   },
+   {
+    "name": "Requirements",
+    "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering. Took part in a variety of Data Science projects for e-commerce and advertising companies. My work covered both Engineering and Product parts. On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions. On the Product side I worked with stakeholders to formalize requirements and present results."
+   },
+   {
+    "name": "Product",
+    "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering. Took part in a variety of Data Science projects for e-commerce and advertising companies. My work covered both Engineering and Product parts. On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions. On the Product side I worked with stakeholders to formalize requirements and present results."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Big Data': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

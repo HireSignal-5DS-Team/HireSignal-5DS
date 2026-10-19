@@ -1,0 +1,64 @@
+{
+ "row": {
+  "id": "P37",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 7,
+  "raw_skills_in_cv": 6,
+  "skills_kept": 6,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 4.4,
+  "max_completion_tokens": 244
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "As a skilled Backend Developer with over 1 year of experience, I have a strong proficiency in programming languages including Python, Go lang, and C#. My ability to quickly adapt to new languages and web frameworks allows me to efficiently tackle any project that comes my way. My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system. I also worked closely with the frontend team to integrate the frontend and backend systems. My technical skills and experience, along with my ability to work efficiently in a team, allowed me to contribute significantly to the success of the project."
+   },
+   {
+    "name": "Go lang",
+    "evidence": "As a skilled Backend Developer with over 1 year of experience, I have a strong proficiency in programming languages including Python, Go lang, and C#. My ability to quickly adapt to new languages and web frameworks allows me to efficiently tackle any project that comes my way. My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system. I also worked closely with the frontend team to integrate the frontend and backend systems. My technical skills and experience, along with my ability to work efficiently in a team, allowed me to contribute significantly to the success of the project."
+   },
+   {
+    "name": "C#",
+    "evidence": "As a skilled Backend Developer with over 1 year of experience, I have a strong proficiency in programming languages including Python, Go lang, and C#. My ability to quickly adapt to new languages and web frameworks allows me to efficiently tackle any project that comes my way. My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system. I also worked closely with the frontend team to integrate the frontend and backend systems. My technical skills and experience, along with my ability to work efficiently in a team, allowed me to contribute significantly to the success of the project."
+   },
+   {
+    "name": "RESTful APIs",
+    "evidence": "My ability to quickly adapt to new languages and web frameworks allows me to efficiently tackle any project that comes my way. My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system. I also worked closely with the frontend team to integrate the frontend and backend systems."
+   },
+   {
+    "name": "databases",
+    "evidence": "My ability to quickly adapt to new languages and web frameworks allows me to efficiently tackle any project that comes my way. My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system. I also worked closely with the frontend team to integrate the frontend and backend systems."
+   },
+   {
+    "name": "security",
+    "evidence": "My ability to quickly adapt to new languages and web frameworks allows me to efficiently tackle any project that comes my way. My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system. I also worked closely with the frontend team to integrate the frontend and backend systems."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "skill 'Go lang': evidence re-anchored to the CV line that names it",
+   "skill 'C#': evidence re-anchored to the CV line that names it",
+   "skill 'team collaboration': name 'team collaboration' is not written in its evidence, removed",
+   "experience 'Web Developer': title 'Web Developer' is not written in its evidence, removed",
+   "experience 'Web Developer': company 'null' is not written in its evidence, removed",
+   "experience 'Web Developer': start 'null' not found in its evidence, removed",
+   "experience 'Web Developer': end 'null' not found in its evidence, removed",
+   "experience 'Web Developer': neither title nor company, dropped"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

@@ -1,0 +1,154 @@
+{
+ "row": {
+  "id": "P45",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 33,
+  "raw_skills_in_cv": 33,
+  "skills_kept": 29,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 1,
+  "terms_missed": [
+   "Python",
+   "English"
+  ],
+  "latency_s": 18.6,
+  "max_completion_tokens": 651
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Snowflake",
+    "evidence": "Databases: Snowflake/Oracle / Postgres / Clickhouse/ DuckDB/ MS SQL"
+   },
+   {
+    "name": "Oracle",
+    "evidence": "Databases: Snowflake/Oracle / Postgres / Clickhouse/ DuckDB/ MS SQL"
+   },
+   {
+    "name": "Postgres",
+    "evidence": "Databases: Snowflake/Oracle / Postgres / Clickhouse/ DuckDB/ MS SQL"
+   },
+   {
+    "name": "Clickhouse",
+    "evidence": "Databases: Snowflake/Oracle / Postgres / Clickhouse/ DuckDB/ MS SQL"
+   },
+   {
+    "name": "DuckDB",
+    "evidence": "Databases: Snowflake/Oracle / Postgres / Clickhouse/ DuckDB/ MS SQL"
+   },
+   {
+    "name": "MS SQL",
+    "evidence": "Databases: Snowflake/Oracle / Postgres / Clickhouse/ DuckDB/ MS SQL"
+   },
+   {
+    "name": "Cognos",
+    "evidence": "BI tools: Cognos, SAP business objects, Qlik Sense, Power BI, GoodData"
+   },
+   {
+    "name": "SAP business objects",
+    "evidence": "BI tools: Cognos, SAP business objects, Qlik Sense, Power BI, GoodData"
+   },
+   {
+    "name": "Qlik Sense",
+    "evidence": "BI tools: Cognos, SAP business objects, Qlik Sense, Power BI, GoodData"
+   },
+   {
+    "name": "Power BI",
+    "evidence": "BI tools: Cognos, SAP business objects, Qlik Sense, Power BI, GoodData"
+   },
+   {
+    "name": "GoodData",
+    "evidence": "BI tools: Cognos, SAP business objects, Qlik Sense, Power BI, GoodData"
+   },
+   {
+    "name": "Enterprise Architect",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)"
+   },
+   {
+    "name": "Power Designer",
+    "evidence": "- CASE tools (Enterprise Architect, Power Designer)"
+   },
+   {
+    "name": "Matillion",
+    "evidence": "- ETL: Matillion, DBT, Airbyte"
+   },
+   {
+    "name": "DBT",
+    "evidence": "- ETL: Matillion, DBT, Airbyte"
+   },
+   {
+    "name": "Airbyte",
+    "evidence": "- ETL: Matillion, DBT, Airbyte"
+   },
+   {
+    "name": "Jira",
+    "evidence": "- Jira, Confluence, HP ALM, Gsnow, Mantis etc"
+   },
+   {
+    "name": "Confluence",
+    "evidence": "- Jira, Confluence, HP ALM, Gsnow, Mantis etc"
+   },
+   {
+    "name": "HP ALM",
+    "evidence": "- Jira, Confluence, HP ALM, Gsnow, Mantis etc"
+   },
+   {
+    "name": "Gsnow",
+    "evidence": "- Jira, Confluence, HP ALM, Gsnow, Mantis etc"
+   },
+   {
+    "name": "Mantis",
+    "evidence": "- Jira, Confluence, HP ALM, Gsnow, Mantis etc"
+   },
+   {
+    "name": "Agile",
+    "evidence": "- Agile / Waterfall"
+   },
+   {
+    "name": "Waterfall",
+    "evidence": "- Agile / Waterfall"
+   },
+   {
+    "name": "Apache Airflow",
+    "evidence": "- Apache Airflow"
+   },
+   {
+    "name": "Azure Fundamentals",
+    "evidence": "Microsoft Certified: Azure Fundamentals"
+   },
+   {
+    "name": "Azure Data Fundamentals",
+    "evidence": "Microsoft Certified: Azure Data Fundamentals"
+   },
+   {
+    "name": "Azure Data Engineer Associate",
+    "evidence": "Microsoft Certified: Azure Data Engineer Associate"
+   },
+   {
+    "name": "Azure Developer Associate",
+    "evidence": "Microsoft Certified: Azure Developer Associate"
+   },
+   {
+    "name": "Azure Solutions Architect Expert",
+    "evidence": "Microsoft Certified: Azure Solutions Architect Expert"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Python': name 'Python' is not written in its evidence, removed",
+   "skill 'Linux': name 'Linux' is not written in its evidence, removed",
+   "skill 'Azure': name 'Azure' is not written in its evidence, removed",
+   "skill 'AWS': name 'AWS' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

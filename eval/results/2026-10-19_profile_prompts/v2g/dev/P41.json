@@ -1,0 +1,163 @@
+{
+ "row": {
+  "id": "P41",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 28,
+  "raw_skills_in_cv": 28,
+  "skills_kept": 25,
+  "experience": 0,
+  "education": 1,
+  "terms_present": 3,
+  "terms_found": 3,
+  "terms_missed": [],
+  "latency_s": 5.2,
+  "max_completion_tokens": 167
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Machine learning",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   },
+   {
+    "name": "Computer vision",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   },
+   {
+    "name": "Tabular data",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   },
+   {
+    "name": "Time series",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   },
+   {
+    "name": "Digital signals processing",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   },
+   {
+    "name": "MLOps",
+    "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+   },
+   {
+    "name": "Data science",
+    "evidence": "- finished data science and visualization training offered by UN Analytics & Visualization Team, 6 months of rigorous training."
+   },
+   {
+    "name": "Visualization",
+    "evidence": "- finished data science and visualization training offered by UN Analytics & Visualization Team, 6 months of rigorous training."
+   },
+   {
+    "name": "PyTorch",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "Deep Learning",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "Git",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "Docker",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "Python",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "Pandas",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "SQL",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "numpy",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "scikit-learn",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "Jupyter Notebook",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "statistics",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "matplotlib",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "PySpark",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "Databricks",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "AWS S3",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "AWS Sagemaker",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   },
+   {
+    "name": "MS Azure ML Studio",
+    "evidence": "Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio"
+   }
+  ],
+  "education": [
+   {
+    "degree": "M.Sc",
+    "field": "Computer science",
+    "institution": null,
+    "end": null,
+    "evidence": "- M.SC computer science, Thesis on Automatic wordnet construction using sense embedding for local language"
+   }
+  ],
+  "experience": [],
+  "uncertain": [
+   "skill 'Data science': evidence re-anchored to the CV line that names it",
+   "skill 'Visualization': evidence re-anchored to the CV line that names it",
+   "education 'M.Sc': institution 'unspecified' is not written in its evidence, removed",
+   "education 'M.Sc': end 'unspecified' not found in its evidence, removed",
+   "skill 'Machine Learning': evidence re-anchored to the CV line that names it",
+   "skill 'PyTorch': evidence re-anchored to the CV line that names it",
+   "skill 'Deep Learning': evidence re-anchored to the CV line that names it",
+   "skill 'Data Science': evidence re-anchored to the CV line that names it",
+   "skill 'Git': evidence re-anchored to the CV line that names it",
+   "skill 'computer vision': evidence re-anchored to the CV line that names it",
+   "skill 'Docker': evidence re-anchored to the CV line that names it",
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "skill 'Pandas': evidence re-anchored to the CV line that names it",
+   "skill 'SQL': evidence re-anchored to the CV line that names it",
+   "skill 'numpy': evidence re-anchored to the CV line that names it",
+   "skill 'scikit-learn': evidence re-anchored to the CV line that names it",
+   "skill 'Jupyter Notebook': evidence re-anchored to the CV line that names it",
+   "skill 'statistics': evidence re-anchored to the CV line that names it",
+   "skill 'matplotlib': evidence re-anchored to the CV line that names it",
+   "skill 'PySpark': evidence re-anchored to the CV line that names it",
+   "skill 'Databricks': evidence re-anchored to the CV line that names it",
+   "skill 'AWS S3': evidence re-anchored to the CV line that names it",
+   "skill 'AWS Sagemaker': evidence re-anchored to the CV line that names it",
+   "skill 'MS Azure ML Studio': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

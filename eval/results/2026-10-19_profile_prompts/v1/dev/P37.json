@@ -1,0 +1,60 @@
+{
+ "row": {
+  "id": "P37",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 7,
+  "raw_skills_in_cv": 6,
+  "skills_kept": 3,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 0,
+  "terms_missed": [
+   "Python"
+  ],
+  "latency_s": 8.2,
+  "max_completion_tokens": 463
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "RESTful APIs",
+    "evidence": "My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system."
+   },
+   {
+    "name": "databases",
+    "evidence": "My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system."
+   },
+   {
+    "name": "security",
+    "evidence": "My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Backend Developer",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "As a skilled Backend Developer with over 1 year of experience, I have a strong proficiency in programming languages including Python, Go lang, and C#. My ability to quickly adapt to new languages and web frameworks allows me to efficiently tackle any project that comes my way. My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system. I also worked closely with the frontend team to integrate the frontend and backend systems. My technical skills and experience, along with my ability to work efficiently in a team, allowed me to contribute significantly to the success of the project."
+   }
+  ],
+  "uncertain": [
+   "skill 'Python': name 'Python' is not written in its evidence, removed",
+   "skill 'Go lang': name 'Go lang' is not written in its evidence, removed",
+   "skill 'C#': name 'C#' is not written in its evidence, removed",
+   "skill 'team collaboration': name 'team collaboration' is not written in its evidence, removed",
+   "experience 'Backend Developer': company contained a placeholder, removed",
+   "experience 'Backend Developer': start '2022' not found in its evidence, removed",
+   "experience 'Backend Developer': end 'present' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

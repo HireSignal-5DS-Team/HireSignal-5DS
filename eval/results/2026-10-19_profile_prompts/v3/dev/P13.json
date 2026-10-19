@@ -1,0 +1,192 @@
+{
+ "row": {
+  "id": "P13",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 47,
+  "raw_skills_in_cv": 44,
+  "skills_kept": 39,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 2,
+  "terms_missed": [
+   "English"
+  ],
+  "latency_s": 8.8,
+  "max_completion_tokens": 300
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Azure",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "ADLS",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "SFTP",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "CosmosDB",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "Azure SQL",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "GCP",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "Postgres",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "Azure DevOps",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "CI/CD",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "ADF",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "Snowflake",
+    "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   },
+   {
+    "name": "Technical Interviews",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "seniority evaluations",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "manager interviews",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "DBs",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Teradata",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "MS SQL",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Oracle",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Hadoop",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "cloud technologies",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "AWS",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "architectural decisions",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Active Listening",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Communication",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Flexibility",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Helping Others",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Humor",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Motivation",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Patience",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Persuasive",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Fast Learner",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Knowledge Seeker",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Responsive",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "Eager to go extra mile",
+    "evidence": "Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   },
+   {
+    "name": "DWBI",
+    "evidence": "Interested only in DWBI/DWH/ETL projects as a Team/Tech Lead or Data Delivery Manager. No preferences for team size. Cloud stack is mandatory (Azure preferred)."
+   },
+   {
+    "name": "DWH",
+    "evidence": "Interested only in DWBI/DWH/ETL projects as a Team/Tech Lead or Data Delivery Manager. No preferences for team size. Cloud stack is mandatory (Azure preferred)."
+   },
+   {
+    "name": "ETL",
+    "evidence": "Interested only in DWBI/DWH/ETL projects as a Team/Tech Lead or Data Delivery Manager. No preferences for team size. Cloud stack is mandatory (Azure preferred)."
+   },
+   {
+    "name": "Cloud",
+    "evidence": "Interested only in DWBI/DWH/ETL projects as a Team/Tech Lead or Data Delivery Manager. No preferences for team size. Cloud stack is mandatory (Azure preferred)."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'project interviews': name 'project interviews' is not written in its evidence, removed",
+   "skill 'customer communication': name 'customer communication' is not written in its evidence, removed",
+   "skill 'progress presentation': name 'progress presentation' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

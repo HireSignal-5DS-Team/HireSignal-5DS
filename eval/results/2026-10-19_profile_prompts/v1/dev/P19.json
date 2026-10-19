@@ -1,0 +1,84 @@
+{
+ "row": {
+  "id": "P19",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 11,
+  "raw_skills_in_cv": 11,
+  "skills_kept": 11,
+  "experience": 0,
+  "education": 1,
+  "terms_present": 2,
+  "terms_found": 2,
+  "terms_missed": [],
+  "latency_s": 11.7,
+  "max_completion_tokens": 679
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Hadoop",
+    "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+   },
+   {
+    "name": "Spark",
+    "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+   },
+   {
+    "name": "Spark Streaming",
+    "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+   },
+   {
+    "name": "Hive",
+    "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+   },
+   {
+    "name": "Kafka",
+    "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+   },
+   {
+    "name": "Cloud Computing",
+    "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+   },
+   {
+    "name": "Docker",
+    "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+   },
+   {
+    "name": "Airflow",
+    "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+   },
+   {
+    "name": "NoSQL",
+    "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+   },
+   {
+    "name": "ELK",
+    "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+   },
+   {
+    "name": "English",
+    "evidence": "English level: upper"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Big Data education plan",
+    "field": "Big Data",
+    "institution": "a big outsourcing company",
+    "end": null,
+    "evidence": "- Finished the theoretical part of a Big Data education plan in a big outsourcing company with practical tasks for each module."
+   }
+  ],
+  "experience": [],
+  "uncertain": [
+   "education 'Big Data education plan': end 'theoretical part' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

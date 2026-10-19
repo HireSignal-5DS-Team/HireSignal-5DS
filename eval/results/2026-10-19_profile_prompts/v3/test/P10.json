@@ -1,0 +1,80 @@
+{
+ "row": {
+  "id": "P10",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 14,
+  "raw_skills_in_cv": 14,
+  "skills_kept": 8,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 4.6,
+  "max_completion_tokens": 202
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "PowerApps",
+    "evidence": "I've created interfaces for inputting the data via PowerApps, and dashboards for accessing data via Power BI."
+   },
+   {
+    "name": "Power BI",
+    "evidence": "I've created interfaces for inputting the data via PowerApps, and dashboards for accessing data via Power BI."
+   },
+   {
+    "name": "Looker",
+    "evidence": "- creating Looker dashboards for enterprise customers;"
+   },
+   {
+    "name": "LookML",
+    "evidence": "- modeling data in LookML;"
+   },
+   {
+    "name": "GQB",
+    "evidence": "- scheduling queries in GQB, and writing complex SQL queries to process large amounts of data;"
+   },
+   {
+    "name": "SQL",
+    "evidence": "- scheduling queries in GQB, and writing complex SQL queries to process large amounts of data;"
+   },
+   {
+    "name": "Tableau",
+    "evidence": "I also have experience in analyzing sales and internal HR data, worked with Looker, Tableau, and Power BI, and can write basic JS scripts."
+   },
+   {
+    "name": "JS",
+    "evidence": "I also have experience in analyzing sales and internal HR data, worked with Looker, Tableau, and Power BI, and can write basic JS scripts."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": null,
+    "company": "event industry company",
+    "start": null,
+    "end": null,
+    "evidence": "I worked as a customer success data analyst in an event industry company for the past year."
+   }
+  ],
+  "uncertain": [
+   "skill 'Looker': evidence re-anchored to the CV line that names it",
+   "skill 'LookML': evidence re-anchored to the CV line that names it",
+   "skill 'GQB': evidence re-anchored to the CV line that names it",
+   "skill 'SQL': evidence re-anchored to the CV line that names it",
+   "skill 'Looker': name 'Looker' is not written in its evidence, removed",
+   "skill 'LookML': name 'LookML' is not written in its evidence, removed",
+   "experience 'Data Analyst / BI Developer': title 'Data Analyst / BI Developer' is not written in its evidence, removed",
+   "experience 'Data Analyst / BI Developer': start '2020' not found in its evidence, removed",
+   "experience 'Data Analyst / BI Developer': end 'present' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

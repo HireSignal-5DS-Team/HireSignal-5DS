@@ -1,0 +1,134 @@
+{
+ "row": {
+  "id": "P07",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 18,
+  "raw_skills_in_cv": 18,
+  "skills_kept": 17,
+  "experience": 4,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 12.9,
+  "max_completion_tokens": 522
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Sales forecasting",
+    "evidence": "- Sales forecasting of CPG products"
+   },
+   {
+    "name": "Data analysis",
+    "evidence": "- Data analysis, reports preparation and insights generation based on the historical data"
+   },
+   {
+    "name": "Reports preparation",
+    "evidence": "- Data analysis, reports preparation and insights generation based on the historical data"
+   },
+   {
+    "name": "Insights generation",
+    "evidence": "- Data analysis, reports preparation and insights generation based on the historical data"
+   },
+   {
+    "name": "Data manipulation",
+    "evidence": "- Data manipulation, data preparation according to requests using python"
+   },
+   {
+    "name": "Data preparation",
+    "evidence": "- Data manipulation, data preparation according to requests using python"
+   },
+   {
+    "name": "Python",
+    "evidence": "- Data manipulation, data preparation according to requests using python"
+   },
+   {
+    "name": "Automatization",
+    "evidence": "- Automatization of the internal processes."
+   },
+   {
+    "name": "Demand forecasting",
+    "evidence": "- Business analysis and demand forecasting."
+   },
+   {
+    "name": "Client communication",
+    "evidence": "- Client communication and support, analysis of clients' requests."
+   },
+   {
+    "name": "Software testing",
+    "evidence": "- Software testing."
+   },
+   {
+    "name": "Trends research",
+    "evidence": "- Business analysis and demand forecasting, data mining and analysis, trends research and analysis."
+   },
+   {
+    "name": "Data mining",
+    "evidence": "- Business analysis and demand forecasting, data mining and analysis, trends research and analysis."
+   },
+   {
+    "name": "Analysis",
+    "evidence": "- Business analysis and demand forecasting, data mining and analysis, trends research and analysis."
+   },
+   {
+    "name": "DB ORACLE 10g",
+    "evidence": "- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover."
+   },
+   {
+    "name": "PL SQL Developer",
+    "evidence": "- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover."
+   },
+   {
+    "name": "Oracle Discover",
+    "evidence": "- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Data analyst/Data scientist",
+    "company": null,
+    "start": "2020",
+    "end": "present",
+    "evidence": "2020 - Present Data analyst/Data scientist"
+   },
+   {
+    "title": "Sr. Business Analyst",
+    "company": null,
+    "start": "2017",
+    "end": "2019",
+    "evidence": "2017 - 2019 Sr. Business Analyst"
+   },
+   {
+    "title": "Business Analyst",
+    "company": null,
+    "start": "2013",
+    "end": "2016",
+    "evidence": "2013 - 2016 Business Analyst"
+   },
+   {
+    "title": "Specialist of Business Intelligence and Report Development Department",
+    "company": "bank",
+    "start": null,
+    "end": null,
+    "evidence": "Specialist of Business Intelligence and Report Development Department, bank\n- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover.\n- Writing explanatory documentation about developed reports.\n- Testing and performance analysis of developed reports."
+   }
+  ],
+  "uncertain": [
+   "skill 'Business analysis': name 'Business analysis' is not written in its evidence, removed",
+   "experience 'Data analyst/Data scientist': company 'null' is not written in its evidence, removed",
+   "experience 'Sr. Business Analyst': company 'null' is not written in its evidence, removed",
+   "experience 'Business Analyst': company 'null' is not written in its evidence, removed",
+   "experience 'Specialist of Business Intelligence and Report Development Department': start '2012' not found in its evidence, removed",
+   "experience 'Specialist of Business Intelligence and Report Development Department': end '2013' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

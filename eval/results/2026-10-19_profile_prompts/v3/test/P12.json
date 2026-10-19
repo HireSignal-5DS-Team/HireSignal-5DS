@@ -1,0 +1,185 @@
+{
+ "row": {
+  "id": "P12",
+  "set": "gold",
+  "calls": 4,
+  "json_valid": 4,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 37,
+  "raw_skills_in_cv": 35,
+  "skills_kept": 26,
+  "experience": 3,
+  "education": 0,
+  "terms_present": 2,
+  "terms_found": 1,
+  "terms_missed": [
+   "SQL"
+  ],
+  "latency_s": 16.1,
+  "max_completion_tokens": 351
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "SSIS",
+    "evidence": "- SSIS\n- Talend ETL\n- SAP BODS\n- Oracle ODI / OBI - SAP BO\n- Power BI\n- Qlik View/Sense\n- SSRS"
+   },
+   {
+    "name": "Talend ETL",
+    "evidence": "- SSIS\n- Talend ETL\n- SAP BODS\n- Oracle ODI / OBI - SAP BO\n- Power BI\n- Qlik View/Sense\n- SSRS"
+   },
+   {
+    "name": "SAP BODS",
+    "evidence": "- SSIS\n- Talend ETL\n- SAP BODS\n- Oracle ODI / OBI - SAP BO\n- Power BI\n- Qlik View/Sense\n- SSRS"
+   },
+   {
+    "name": "Oracle ODI / OBI - SAP BO",
+    "evidence": "- SSIS\n- Talend ETL\n- SAP BODS\n- Oracle ODI / OBI - SAP BO\n- Power BI\n- Qlik View/Sense\n- SSRS"
+   },
+   {
+    "name": "Power BI",
+    "evidence": "- SSIS\n- Talend ETL\n- SAP BODS\n- Oracle ODI / OBI - SAP BO\n- Power BI\n- Qlik View/Sense\n- SSRS"
+   },
+   {
+    "name": "Qlik View/Sense",
+    "evidence": "- SSIS\n- Talend ETL\n- SAP BODS\n- Oracle ODI / OBI - SAP BO\n- Power BI\n- Qlik View/Sense\n- SSRS"
+   },
+   {
+    "name": "SSRS",
+    "evidence": "- SSIS\n- Talend ETL\n- SAP BODS\n- Oracle ODI / OBI - SAP BO\n- Power BI\n- Qlik View/Sense\n- SSRS"
+   },
+   {
+    "name": "English",
+    "evidence": "English level: intermediate"
+   },
+   {
+    "name": "SAP R/3",
+    "evidence": "Managed SAP R/3 and Oracle E-BS HR: Team management supporting Logistics, Finance and HR units, managment of consulting firms."
+   },
+   {
+    "name": "Oracle E-BS HR",
+    "evidence": "Managed SAP R/3 and Oracle E-BS HR: Team management supporting Logistics, Finance and HR units, managment of consulting firms."
+   },
+   {
+    "name": "Oracle",
+    "evidence": "Managed SAP R/3 and Oracle E-BS HR: Team management supporting Logistics, Finance and HR units, managment of consulting firms."
+   },
+   {
+    "name": "Oracle E-BS",
+    "evidence": "- Oracle E-BS Developer; developed Oracle Forms, OAF, PL / SQL, Workflow, Discoverer, XML Publisher."
+   },
+   {
+    "name": "Oracle Forms",
+    "evidence": "- Oracle E-BS Developer; developed Oracle Forms, OAF, PL / SQL, Workflow, Discoverer, XML Publisher."
+   },
+   {
+    "name": "OAF",
+    "evidence": "- Oracle E-BS Developer; developed Oracle Forms, OAF, PL / SQL, Workflow, Discoverer, XML Publisher."
+   },
+   {
+    "name": "Workflow",
+    "evidence": "- Oracle E-BS Developer; developed Oracle Forms, OAF, PL / SQL, Workflow, Discoverer, XML Publisher."
+   },
+   {
+    "name": "Discoverer",
+    "evidence": "- Oracle E-BS Developer; developed Oracle Forms, OAF, PL / SQL, Workflow, Discoverer, XML Publisher."
+   },
+   {
+    "name": "XML Publisher",
+    "evidence": "- Oracle E-BS Developer; developed Oracle Forms, OAF, PL / SQL, Workflow, Discoverer, XML Publisher."
+   },
+   {
+    "name": "Process analysis",
+    "evidence": "- Developed software used by the Shipping, Warehouse, Accounting, Sales and HR unit, project management, process analysis and accounting unit."
+   },
+   {
+    "name": "Project management",
+    "evidence": "- Developed software used by the Shipping, Warehouse, Accounting, Sales and HR unit, project management, process analysis and accounting unit."
+   },
+   {
+    "name": "Accounting",
+    "evidence": "- Developed software used by the Shipping, Warehouse, Accounting, Sales and HR unit, project management, process analysis and accounting unit."
+   },
+   {
+    "name": "Shipping",
+    "evidence": "- Developed software used by the Shipping, Warehouse, Accounting, Sales and HR unit, project management, process analysis and accounting unit."
+   },
+   {
+    "name": "Warehouse",
+    "evidence": "- Developed software used by the Shipping, Warehouse, Accounting, Sales and HR unit, project management, process analysis and accounting unit."
+   },
+   {
+    "name": "Sales",
+    "evidence": "- Developed software used by the Shipping, Warehouse, Accounting, Sales and HR unit, project management, process analysis and accounting unit."
+   },
+   {
+    "name": "HR",
+    "evidence": "- Developed software used by the Shipping, Warehouse, Accounting, Sales and HR unit, project management, process analysis and accounting unit."
+   },
+   {
+    "name": "Java",
+    "evidence": "- Headed the team that develops software with .Net, Java and Oracle"
+   },
+   {
+    "name": "B2B applications",
+    "evidence": "- Met new customer / project automation / integration needs in shipping and warehouse units, coordinated the project at the stage of developing B2B applications"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Enterprise Applications Manager",
+    "company": "NETAS Telecommunication Inc.",
+    "start": "2015-05",
+    "end": "2019-01",
+    "evidence": "Enterprise Applications Manager - NETAS Telecommunication Inc. - May 2015 - Jan 2019"
+   },
+   {
+    "title": "Senior Software Developer",
+    "company": "Yataş Inc.",
+    "start": "2011-09",
+    "end": "2015-05",
+    "evidence": "Senior Software Developer - Yataş Inc. - Agu 2011 - May 2015"
+   },
+   {
+    "title": "IT Project Manager",
+    "company": "Tırsan Logistics Inc.",
+    "start": "2009-11",
+    "end": "2011",
+    "evidence": "IT Project Manager - Tırsan Logistics Inc. - Nov 2009 - Agu 2011."
+   }
+  ],
+  "uncertain": [
+   "experience 'DWH & BI Unit Manager': title 'DWH & BI Unit Manager' is not written in its evidence, removed",
+   "experience 'DWH & BI Unit Manager': company 'PayCore Payment Systems' is not written in its evidence, removed",
+   "experience 'DWH & BI Unit Manager': start 'Jun 2021' not found in its evidence, removed",
+   "experience 'DWH & BI Unit Manager': end 'present' not found in its evidence, removed",
+   "experience 'DWH & BI Unit Manager': neither title nor company, dropped",
+   "experience 'Senior Solution Architect': title 'Senior Solution Architect' is not written in its evidence, removed",
+   "experience 'Senior Solution Architect': company 'MDS ap Turkey(Midis Group Inc.)' is not written in its evidence, removed",
+   "experience 'Senior Solution Architect': start 'Feb 2019' not found in its evidence, removed",
+   "experience 'Senior Solution Architect': end 'May 2021' not found in its evidence, removed",
+   "experience 'Senior Solution Architect': neither title nor company, dropped",
+   "experience 'Founder': title 'Founder' is not written in its evidence, removed",
+   "experience 'Founder': company 'Fox Analytics' is not written in its evidence, removed",
+   "experience 'Founder': start 'Jun 2019' not found in its evidence, removed",
+   "experience 'Founder': end 'present' not found in its evidence, removed",
+   "experience 'Founder': neither title nor company, dropped",
+   "skill 'SAP BI': name 'SAP BI' is not written in its evidence, removed",
+   "skill 'Power BI': name 'Power BI' is not written in its evidence, removed",
+   "skill 'Salesforce CRM': name 'Salesforce CRM' is not written in its evidence, removed",
+   "skill 'Java': name 'Java' is not written in its evidence, removed",
+   "skill 'ADF': name 'ADF' is not written in its evidence, removed",
+   "skill 'DWH': name 'DWH' is not written in its evidence, removed",
+   "skill 'SAP BODS': name 'SAP BODS' is not written in its evidence, removed",
+   "skill 'PL/SQL': name 'PL/SQL' is not written in its evidence, removed",
+   "skill 'Software development': name 'Software development' is not written in its evidence, removed",
+   "skill '.': empty name, dropped",
+   "skill 'B2B applications': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

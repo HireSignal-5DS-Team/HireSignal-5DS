@@ -1,0 +1,41 @@
+{
+ "cv": "p04_fr_labelled",
+ "skills": [
+  [
+   "Java"
+  ],
+  [
+   "Spring Boot"
+  ],
+  [
+   "Oracle"
+  ],
+  [
+   "PostgreSQL"
+  ],
+  [
+   "Angular"
+  ]
+ ],
+ "skills_optional": [
+  "microservices",
+  "microservices Spring Boot",
+  "Base de données Oracle"
+ ],
+ "education": [
+  {
+   "degree": "Licence",
+   "field": "Informatique de Gestion",
+   "institution": "ISG",
+   "end": "2018"
+  }
+ ],
+ "experience": [
+  {
+   "title": "Développeur Java",
+   "company": "Sopra HR Software",
+   "start": "2019",
+   "end": "2023"
+  }
+ ]
+}

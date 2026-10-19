@@ -1,0 +1,223 @@
+{
+ "row": {
+  "id": "P43",
+  "set": "gold",
+  "calls": 3,
+  "json_valid": 3,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 53,
+  "raw_skills_in_cv": 47,
+  "skills_kept": 43,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 2,
+  "terms_missed": [
+   "statistics"
+  ],
+  "latency_s": 12.1,
+  "max_completion_tokens": 360
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "ML",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction, which allowed to automatically buy traffic from the most prominent advertising platforms for more than $500k+ monthly with positive margins."
+   },
+   {
+    "name": "Classification",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction, which allowed to automatically buy traffic from the most prominent advertising platforms for more than $500k+ monthly with positive margins."
+   },
+   {
+    "name": "Regression",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction, which allowed to automatically buy traffic from the most prominent advertising platforms for more than $500k+ monthly with positive margins."
+   },
+   {
+    "name": "Clustering",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction, which allowed to automatically buy traffic from the most prominent advertising platforms for more than $500k+ monthly with positive margins."
+   },
+   {
+    "name": "Recommendation System",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction, which allowed to automatically buy traffic from the most prominent advertising platforms for more than $500k+ monthly with positive margins."
+   },
+   {
+    "name": "MAB",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction, which allowed to automatically buy traffic from the most prominent advertising platforms for more than $500k+ monthly with positive margins."
+   },
+   {
+    "name": "Real-Time Bidding",
+    "evidence": "Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction, which allowed to automatically buy traffic from the most prominent advertising platforms for more than $500k+ monthly with positive margins."
+   },
+   {
+    "name": "Data Collection",
+    "evidence": "Excellent problem-solver and collaborative with expertise in algorithm design and data collection."
+   },
+   {
+    "name": "Algorithm Design",
+    "evidence": "Excellent problem-solver and collaborative with expertise in algorithm design and data collection."
+   },
+   {
+    "name": "A/B testing",
+    "evidence": "- Controlling all the main KPIs, A/B testing, rolling, and validation of results."
+   },
+   {
+    "name": "Python",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Jupyter Lab/Hub",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "SQL",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Hadoop",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "PySpark",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "BI Tableau",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Power BI",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Datadog",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "AirFlow",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "MLFlow",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "supervised and unsupervised learning",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "recommendation systems",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "time series",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "VBA",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "OLAP",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "PowerPivot",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "PowerQuery",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Word",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Access",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "PowerPoint",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Excel",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Microsoft Office",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Agile methodologies",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Scrum",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Kanban",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Safe",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Waterfall",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Jira",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "Confluence",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "interpersonal skills",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "problem solving",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "creative thinking",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   },
+   {
+    "name": "team management",
+    "evidence": "- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management"
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Data Scientist",
+    "company": "self",
+    "start": null,
+    "end": null,
+    "evidence": "Position: Data Scientist\nExperience years: 5\nEnglish level: upper\n\nSelf-motivated Data Scientist with 4+ years of experience (8+ years in IT Data Analytics ). I constantly bring high-quality business solutions to businesses seeking higher efficiency.\nStrong analytical mindset and proactive team player\nExcellent problem-solver and collaborative with expertise in algorithm design and data collection.\n\nResponsibilities:\n- Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction, which allowed to automatically buy traffic from the most prominent advertising platforms for more than $500k+ monthly with positive margins.\n- Creating complex resolutions to provide RTB (real-time bidding) in a highly loaded platform."
+   }
+  ],
+  "uncertain": [
+   "skill 'Data Collection': evidence re-anchored to the CV line that names it",
+   "skill 'Algorithm Design': evidence re-anchored to the CV line that names it",
+   "experience 'Data Scientist': start '2019' not found in its evidence, removed",
+   "experience 'Data Scientist': end 'present' not found in its evidence, removed",
+   "skill 'data processing': name 'data processing' is not written in its evidence, removed",
+   "skill 'data aggregation': name 'data aggregation' is not written in its evidence, removed",
+   "skill 'data analysis': name 'data analysis' is not written in its evidence, removed",
+   "skill 'data visualization': name 'data visualization' is not written in its evidence, removed",
+   "skill 'mathematical skills': name 'mathematical skills' is not written in its evidence, removed",
+   "skill 'statistical skills': name 'statistical skills' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

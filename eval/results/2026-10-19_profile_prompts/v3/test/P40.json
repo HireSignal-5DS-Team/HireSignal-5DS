@@ -1,0 +1,116 @@
+{
+ "row": {
+  "id": "P40",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 23,
+  "raw_skills_in_cv": 22,
+  "skills_kept": 21,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 5.0,
+  "max_completion_tokens": 186
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Spark",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "Spark Streaming",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "Kafka",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "Hadoop",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "Airflow",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "Hive",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "ELK stack",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "GCP Dataproc",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "BigQuery",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "relational database design",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "data warehouses",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "ETL",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "BI tools",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "data analytics",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "Power BI",
+    "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   },
+   {
+    "name": "Spark Structured Streaming",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   },
+   {
+    "name": "ETL/ELT processes",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   },
+   {
+    "name": "Cloud Services",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   },
+   {
+    "name": "Python",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   },
+   {
+    "name": "Data Engineering",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   },
+   {
+    "name": "Big Data",
+    "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Data Lakes': name 'Data Lakes' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

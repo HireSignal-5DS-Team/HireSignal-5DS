@@ -1,0 +1,107 @@
+{
+ "row": {
+  "id": "P26",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 15,
+  "raw_skills_in_cv": 12,
+  "skills_kept": 11,
+  "experience": 1,
+  "education": 1,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 5.0,
+  "max_completion_tokens": 289
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "- Languages: Python, SQL, C/C++"
+   },
+   {
+    "name": "SQL",
+    "evidence": "- Languages: Python, SQL, C/C++"
+   },
+   {
+    "name": "C/C++",
+    "evidence": "- Languages: Python, SQL, C/C++"
+   },
+   {
+    "name": "Machine Learning",
+    "evidence": "-Development of Machine Learning models for various business domains."
+   },
+   {
+    "name": "Data modeling",
+    "evidence": "-Data modeling of IFRS9 standards for the banking system."
+   },
+   {
+    "name": "Data cleaning",
+    "evidence": "-Generating python scripts for data cleaning and preprocessing."
+   },
+   {
+    "name": "Prediction",
+    "evidence": "- Prediction of Acute Pancreatitis with medical data"
+   },
+   {
+    "name": "Text Classification",
+    "evidence": "- Analysis and Application of Automatic Text Classification with"
+   },
+   {
+    "name": "Data mining",
+    "evidence": "- Modeling, data mining, and identifying anomalies using statistical, math, and probability theory tools (regressions, data sampling, clustering)."
+   },
+   {
+    "name": "Data sampling",
+    "evidence": "- Modeling, data mining, and identifying anomalies using statistical, math, and probability theory tools (regressions, data sampling, clustering)."
+   },
+   {
+    "name": "Clustering",
+    "evidence": "- Modeling, data mining, and identifying anomalies using statistical, math, and probability theory tools (regressions, data sampling, clustering)."
+   }
+  ],
+  "education": [
+   {
+    "degree": "Master's",
+    "field": "Computer Science and Data Analytics",
+    "institution": "George Washington University",
+    "end": null,
+    "evidence": "Master's degree in Computer Science and Data Analytics at George Washington University (USA)."
+   }
+  ],
+  "experience": [
+   {
+    "title": "Data Scientist",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "I have 1.5 -years of experience as a Data Scientist. I have worked with\n-Data modeling of IFRS9 standards for the banking system.\n-Generating python scripts for data cleaning and preprocessing.\n-Development of Machine Learning models for various business domains.\n- Prediction of Acute Pancreatitis with medical data\n- Analysis and Application of Automatic Text Classification with\nSupervised Machine Learning\n- Modeling, data mining, and identifying anomalies using statistical, math, and probability theory tools (regressions, data sampling, clustering)."
+   }
+  ],
+  "uncertain": [
+   "skill 'Machine Learning': evidence re-anchored to the CV line that names it",
+   "skill 'Data modeling': evidence re-anchored to the CV line that names it",
+   "skill 'Data cleaning': evidence re-anchored to the CV line that names it",
+   "skill 'Data preprocessing': name 'Data preprocessing' is not written in its evidence, removed",
+   "skill 'Prediction': evidence re-anchored to the CV line that names it",
+   "skill 'Text Classification': evidence re-anchored to the CV line that names it",
+   "skill 'Statistical analysis': name 'Statistical analysis' is not written in its evidence, removed",
+   "skill 'Data mining': evidence re-anchored to the CV line that names it",
+   "skill 'Anomaly detection': name 'Anomaly detection' is not written in its evidence, removed",
+   "skill 'Regression': name 'Regression' is not written in its evidence, removed",
+   "skill 'Data sampling': evidence re-anchored to the CV line that names it",
+   "skill 'Clustering': evidence re-anchored to the CV line that names it",
+   "education 'Master's': end 'present' not found in its evidence, removed",
+   "experience 'Data Scientist': company 'unknown' is not written in its evidence, removed",
+   "experience 'Data Scientist': start '1.5' not found in its evidence, removed",
+   "experience 'Data Scientist': end 'present' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

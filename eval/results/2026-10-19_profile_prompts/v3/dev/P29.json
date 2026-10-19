@@ -1,0 +1,72 @@
+{
+ "row": {
+  "id": "P29",
+  "set": "gold",
+  "calls": 1,
+  "json_valid": 1,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 7,
+  "raw_skills_in_cv": 7,
+  "skills_kept": 7,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 2.9,
+  "max_completion_tokens": 168
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Machine Learning",
+    "evidence": "Successfully finished 14 weeks of Data Science program by Data Root University. Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+   },
+   {
+    "name": "supervised learning",
+    "evidence": "Successfully finished 14 weeks of Data Science program by Data Root University. Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+   },
+   {
+    "name": "unsupervised learning",
+    "evidence": "Successfully finished 14 weeks of Data Science program by Data Root University. Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+   },
+   {
+    "name": "RESTful API",
+    "evidence": "Successfully finished 14 weeks of Data Science program by Data Root University. Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+   },
+   {
+    "name": "Flask",
+    "evidence": "Successfully finished 14 weeks of Data Science program by Data Root University. Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+   },
+   {
+    "name": "Data Analysis",
+    "evidence": "Highly experienced scientist with a strong background in analytical chemistry and scientific research. Looking for new opportunities in the field of Data Science. Particularly motivated towards Machine Learning, Data Analysis and Prediction."
+   },
+   {
+    "name": "Prediction",
+    "evidence": "Highly experienced scientist with a strong background in analytical chemistry and scientific research. Looking for new opportunities in the field of Data Science. Particularly motivated towards Machine Learning, Data Analysis and Prediction."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": null,
+    "company": "Data Root University",
+    "start": null,
+    "end": null,
+    "evidence": "Successfully finished 14 weeks of Data Science program by Data Root University. Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+   }
+  ],
+  "uncertain": [
+   "skill 'Data Analysis': evidence re-anchored to the CV line that names it",
+   "skill 'Prediction': evidence re-anchored to the CV line that names it",
+   "experience 'Junior Data Scientist': title 'Junior Data Scientist' is not written in its evidence, removed",
+   "experience 'Junior Data Scientist': start '0.5' not found in its evidence, removed",
+   "experience 'Junior Data Scientist': end 'present' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

@@ -1,0 +1,218 @@
+{
+ "row": {
+  "id": "P06",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 37,
+  "raw_skills_in_cv": 37,
+  "skills_kept": 33,
+  "experience": 1,
+  "education": 2,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 7.1,
+  "max_completion_tokens": 282
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Data Science",
+    "evidence": "Position: Data Science/Machine Learning Trainee"
+   },
+   {
+    "name": "Machine Learning",
+    "evidence": "Position: Data Science/Machine Learning Trainee"
+   },
+   {
+    "name": "Python",
+    "evidence": "Languages: C++, Python, SQL, R(basic)\nStrong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "SQL",
+    "evidence": "Languages: C++, Python, SQL, R(basic)\nStrong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "R",
+    "evidence": "Languages: C++, Python, SQL, R(basic)\nStrong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "C++",
+    "evidence": "Languages: C++, Python, SQL, R(basic)\nStrong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "mathematical finance",
+    "evidence": "Languages: C++, Python, SQL, R(basic)\nStrong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "LSTM",
+    "evidence": "Languages: C++, Python, SQL, R(basic)\nStrong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "ARIMA",
+    "evidence": "Languages: C++, Python, SQL, R(basic)\nStrong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "Monte Carlo Markov Chain",
+    "evidence": "Languages: C++, Python, SQL, R(basic)\nStrong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "investment portfolio optimization",
+    "evidence": "Languages: C++, Python, SQL, R(basic)\nStrong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "hedging",
+    "evidence": "Languages: C++, Python, SQL, R(basic)\nStrong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   },
+   {
+    "name": "quantitative finance",
+    "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling"
+   },
+   {
+    "name": "risk modelling",
+    "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling"
+   },
+   {
+    "name": "credit scoring modelling",
+    "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling"
+   },
+   {
+    "name": "regression",
+    "evidence": "Experience in regression and neural models for stock prediction (bachelor thesis is uploaded on my github)"
+   },
+   {
+    "name": "neural models",
+    "evidence": "Experience in regression and neural models for stock prediction (bachelor thesis is uploaded on my github)"
+   },
+   {
+    "name": "stock prediction",
+    "evidence": "Experience in regression and neural models for stock prediction (bachelor thesis is uploaded on my github)"
+   },
+   {
+    "name": "Deep Learning",
+    "evidence": "* Deep Learning Specialization by [URL] (5 courses)"
+   },
+   {
+    "name": "CNN",
+    "evidence": "Kaggle competitions CV and tabular (CNN pytorch, tabnet, xgboost)"
+   },
+   {
+    "name": "PyTorch",
+    "evidence": "Kaggle competitions CV and tabular (CNN pytorch, tabnet, xgboost)"
+   },
+   {
+    "name": "TabNet",
+    "evidence": "Kaggle competitions CV and tabular (CNN pytorch, tabnet, xgboost)"
+   },
+   {
+    "name": "XGBoost",
+    "evidence": "Kaggle competitions CV and tabular (CNN pytorch, tabnet, xgboost)"
+   },
+   {
+    "name": "binary classification",
+    "evidence": "I also have knowledge in binary classification models"
+   },
+   {
+    "name": "economic modelling",
+    "evidence": "Even though I have experience in mathematical finance and economic modelling, I am also interested in CV/NLP projects and I would gladly be involved in projects from international clients due to my strong language skills"
+   },
+   {
+    "name": "NLP",
+    "evidence": "Even though I have experience in mathematical finance and economic modelling, I am also interested in CV/NLP projects and I would gladly be involved in projects from international clients due to my strong language skills"
+   },
+   {
+    "name": "GANs",
+    "evidence": "* Build Better Generative Adversarial Networks (GANs) by [URL]"
+   },
+   {
+    "name": "TensorFlow",
+    "evidence": "* Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning by [URL]"
+   },
+   {
+    "name": "artificial intelligence",
+    "evidence": "* Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning by [URL]"
+   },
+   {
+    "name": "personal growth",
+    "evidence": "Looking for any job experience that involves personal growth and progress, especially research opportunities :)"
+   },
+   {
+    "name": "research",
+    "evidence": "Looking for any job experience that involves personal growth and progress, especially research opportunities :)"
+   },
+   {
+    "name": "international clients",
+    "evidence": "Even though I have experience in mathematical finance and economic modelling, I am also interested in CV/NLP projects and I would gladly be involved in projects from international clients due to my strong language skills"
+   },
+   {
+    "name": "language skills",
+    "evidence": "Even though I have experience in mathematical finance and economic modelling, I am also interested in CV/NLP projects and I would gladly be involved in projects from international clients due to my strong language skills"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Bachelor",
+    "field": "Economic Cybernetics (KPI)",
+    "institution": null,
+    "end": null,
+    "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field)"
+   },
+   {
+    "degree": "Master",
+    "field": null,
+    "institution": null,
+    "end": null,
+    "evidence": "currently studying for master's degree (same field)"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Data Science/Machine Learning Trainee",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Position: Data Science/Machine Learning Trainee\nExperience years: 1"
+   }
+  ],
+  "uncertain": [
+   "skill 'Data Science': evidence re-anchored to the CV line that names it",
+   "skill 'Machine Learning': evidence re-anchored to the CV line that names it",
+   "skill 'quantitative finance': evidence re-anchored to the CV line that names it",
+   "skill 'risk modelling': evidence re-anchored to the CV line that names it",
+   "skill 'credit scoring modelling': evidence re-anchored to the CV line that names it",
+   "education 'Bachelor': institution 'unknown' is not written in its evidence, removed",
+   "education 'Bachelor': end 'present' not found in its evidence, removed",
+   "education 'Master': field 'Economic Cybernetics (KPI)' is not written in its evidence, removed",
+   "education 'Master': institution 'unknown' is not written in its evidence, removed",
+   "education 'Master': end 'present' not found in its evidence, removed",
+   "experience 'Data Science/Machine Learning Trainee': company 'unknown' is not written in its evidence, removed",
+   "experience 'Data Science/Machine Learning Trainee': start '1' not found in its evidence, removed",
+   "experience 'Data Science/Machine Learning Trainee': end 'present' not found in its evidence, removed",
+   "skill 'Python': evidence re-anchored to the CV line that names it",
+   "skill 'SQL': evidence re-anchored to the CV line that names it",
+   "skill 'Deep Learning': evidence re-anchored to the CV line that names it",
+   "skill 'CNN': evidence re-anchored to the CV line that names it",
+   "skill 'PyTorch': evidence re-anchored to the CV line that names it",
+   "skill 'TabNet': evidence re-anchored to the CV line that names it",
+   "skill 'XGBoost': evidence re-anchored to the CV line that names it",
+   "skill 'binary classification': evidence re-anchored to the CV line that names it",
+   "skill 'mathematical finance': evidence re-anchored to the CV line that names it",
+   "skill 'economic modelling': evidence re-anchored to the CV line that names it",
+   "skill 'NLP': evidence re-anchored to the CV line that names it",
+   "skill 'GANs': evidence re-anchored to the CV line that names it",
+   "skill 'TensorFlow': evidence re-anchored to the CV line that names it",
+   "skill 'machine learning': evidence re-anchored to the CV line that names it",
+   "skill 'artificial intelligence': evidence re-anchored to the CV line that names it",
+   "skill 'personal growth': evidence re-anchored to the CV line that names it",
+   "skill 'research': evidence re-anchored to the CV line that names it",
+   "skill 'international clients': evidence re-anchored to the CV line that names it",
+   "skill 'language skills': evidence re-anchored to the CV line that names it"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

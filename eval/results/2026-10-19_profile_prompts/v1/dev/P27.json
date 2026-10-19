@@ -1,0 +1,83 @@
+{
+ "row": {
+  "id": "P27",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 13,
+  "raw_skills_in_cv": 12,
+  "skills_kept": 12,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 3,
+  "terms_found": 1,
+  "terms_missed": [
+   "training",
+   "testing"
+  ],
+  "latency_s": 6.4,
+  "max_completion_tokens": 268
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "SQL",
+    "evidence": "Used SQL Server Management Studio to implement changes in databases requested via clients of internal business systems."
+   },
+   {
+    "name": "Python",
+    "evidence": "Using Python to build optimization methods."
+   },
+   {
+    "name": "numerical methods",
+    "evidence": "Implementation of numerical methods in Python."
+   },
+   {
+    "name": "Business English",
+    "evidence": "used professional and high quality Business English in the incidents."
+   },
+   {
+    "name": "neural network",
+    "evidence": "creation of a neural network that classifies images of waste into organic and inorganic"
+   },
+   {
+    "name": "fastai",
+    "evidence": "creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library"
+   },
+   {
+    "name": "machine learning",
+    "evidence": "application of machine learning algorithms for data analysis"
+   },
+   {
+    "name": "data analysis",
+    "evidence": "Data analysis, product analytics, application of machine learning algorithms for data analysis, creation of visualizations"
+   },
+   {
+    "name": "product analytics",
+    "evidence": "Data analysis, product analytics, application of machine learning algorithms for data analysis, creation of visualizations"
+   },
+   {
+    "name": "visualizations",
+    "evidence": "creation of visualizations"
+   },
+   {
+    "name": "Spotify",
+    "evidence": "Analysis and prediction of the popularity of the top 50 songs according to Spotify"
+   },
+   {
+    "name": "prediction",
+    "evidence": "Analysis and prediction of the popularity of the top 50 songs according to Spotify"
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'image classification': name 'image classification' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

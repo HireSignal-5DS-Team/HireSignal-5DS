@@ -1,0 +1,106 @@
+{
+ "row": {
+  "id": "P30",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 16,
+  "raw_skills_in_cv": 16,
+  "skills_kept": 16,
+  "experience": 1,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 9.0,
+  "max_completion_tokens": 345
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Python",
+    "evidence": "Position: Python Developer"
+   },
+   {
+    "name": "Selenium",
+    "evidence": "- Developed data scraping tool using Selenium and MITM Proxy."
+   },
+   {
+    "name": "MITM Proxy",
+    "evidence": "- Developed data scraping tool using Selenium and MITM Proxy."
+   },
+   {
+    "name": "AWS Lambda",
+    "evidence": "- Created serverless RESTful API using AWS Lambda, API Gateway, and RDS."
+   },
+   {
+    "name": "API Gateway",
+    "evidence": "- Created serverless RESTful API using AWS Lambda, API Gateway, and RDS."
+   },
+   {
+    "name": "RDS",
+    "evidence": "- Created serverless RESTful API using AWS Lambda, API Gateway, and RDS."
+   },
+   {
+    "name": "ECS",
+    "evidence": "- Built cloud infrastructure on AWS with ECS, S3 and CloudFormation."
+   },
+   {
+    "name": "S3",
+    "evidence": "- Built cloud infrastructure on AWS with ECS, S3 and CloudFormation."
+   },
+   {
+    "name": "CloudFormation",
+    "evidence": "- Built cloud infrastructure on AWS with ECS, S3 and CloudFormation."
+   },
+   {
+    "name": "English",
+    "evidence": "English level: upper"
+   },
+   {
+    "name": "Django",
+    "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+   },
+   {
+    "name": "DRF",
+    "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+   },
+   {
+    "name": "Celery",
+    "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+   },
+   {
+    "name": "PostgreSQL",
+    "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+   },
+   {
+    "name": "MongoDB",
+    "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+   },
+   {
+    "name": "Redis",
+    "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": null,
+    "company": "ad-tech company",
+    "start": null,
+    "end": null,
+    "evidence": "Last two years I worked for an ad-tech company. I developed a tool which measures and analyses data privacy for digital advertisers. I started from the MVP of the project and helped it grow to finished product."
+   }
+  ],
+  "uncertain": [
+   "experience 'Python Developer': title 'Python Developer' is not written in its evidence, removed",
+   "experience 'Python Developer': start '2018' not found in its evidence, removed",
+   "experience 'Python Developer': end '2024' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

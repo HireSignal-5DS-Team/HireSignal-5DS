@@ -1,0 +1,102 @@
+{
+ "row": {
+  "id": "P07",
+  "set": "gold",
+  "calls": 2,
+  "json_valid": 2,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 13,
+  "raw_skills_in_cv": 13,
+  "skills_kept": 8,
+  "experience": 4,
+  "education": 0,
+  "terms_present": 1,
+  "terms_found": 1,
+  "terms_missed": [],
+  "latency_s": 8.9,
+  "max_completion_tokens": 360
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Data analysis",
+    "evidence": "- Sales forecasting of CPG products\n- Data analysis, reports preparation and insights generation based on the historical data\n- Data manipulation, data preparation according to requests using python"
+   },
+   {
+    "name": "Sales forecasting",
+    "evidence": "- Sales forecasting of CPG products\n- Data analysis, reports preparation and insights generation based on the historical data\n- Data manipulation, data preparation according to requests using python"
+   },
+   {
+    "name": "Data manipulation",
+    "evidence": "- Sales forecasting of CPG products\n- Data analysis, reports preparation and insights generation based on the historical data\n- Data manipulation, data preparation according to requests using python"
+   },
+   {
+    "name": "Data preparation",
+    "evidence": "- Sales forecasting of CPG products\n- Data analysis, reports preparation and insights generation based on the historical data\n- Data manipulation, data preparation according to requests using python"
+   },
+   {
+    "name": "Python",
+    "evidence": "- Sales forecasting of CPG products\n- Data analysis, reports preparation and insights generation based on the historical data\n- Data manipulation, data preparation according to requests using python"
+   },
+   {
+    "name": "DB ORACLE 10g",
+    "evidence": "- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover."
+   },
+   {
+    "name": "PL SQL Developer",
+    "evidence": "- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover."
+   },
+   {
+    "name": "Oracle Discover",
+    "evidence": "- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover."
+   }
+  ],
+  "education": [],
+  "experience": [
+   {
+    "title": "Data analyst/Data scientist",
+    "company": null,
+    "start": "2020",
+    "end": "present",
+    "evidence": "2020 - Present Data analyst/Data scientist\n- Sales forecasting of CPG products\n- Data analysis, reports preparation and insights generation based on the historical data\n- Data manipulation, data preparation according to requests using python"
+   },
+   {
+    "title": "Sr. Business Analyst",
+    "company": null,
+    "start": "2017",
+    "end": "2019",
+    "evidence": "2017 - 2019 Sr. Business Analyst\n- Support and coordination of work of BAs group as a regional team lead.\n- Automatization of the internal processes.\n- Business analysis and demand forecasting.\n- Client communication and support, analysis of clients' requests.\n- Development specifications for new features of the product."
+   },
+   {
+    "title": "Business Analyst",
+    "company": null,
+    "start": "2013",
+    "end": "2016",
+    "evidence": "2013 - 2016 Business Analyst\n- Business analysis and demand forecasting, data mining and analysis, trends research and analysis.\n- Software testing."
+   },
+   {
+    "title": "Specialist of Business Intelligence and Report Development",
+    "company": "bank",
+    "start": null,
+    "end": null,
+    "evidence": "Specialist of Business Intelligence and Report Development Department, bank\n- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover.\n- Writing explanatory documentation about developed reports.\n- Testing and performance analysis of developed reports."
+   }
+  ],
+  "uncertain": [
+   "skill 'Business analysis': name 'Business analysis' is not written in its evidence, removed",
+   "skill 'Demand forecasting': name 'Demand forecasting' is not written in its evidence, removed",
+   "skill 'Data mining': name 'Data mining' is not written in its evidence, removed",
+   "skill 'Trends research': name 'Trends research' is not written in its evidence, removed",
+   "skill 'Software testing': name 'Software testing' is not written in its evidence, removed",
+   "experience 'Data analyst/Data scientist': company 'null' is not written in its evidence, removed",
+   "experience 'Sr. Business Analyst': company 'null' is not written in its evidence, removed",
+   "experience 'Business Analyst': company 'null' is not written in its evidence, removed",
+   "experience 'Specialist of Business Intelligence and Report Development': start '2012' not found in its evidence, removed",
+   "experience 'Specialist of Business Intelligence and Report Development': end '2013' not found in its evidence, removed"
+  ],
+  "prompt_version": "profile-v2"
+ }
+}

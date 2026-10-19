@@ -1,0 +1,585 @@
+{
+ "row": {
+  "id": "K05",
+  "set": "kaggle",
+  "calls": 9,
+  "json_valid": 9,
+  "cut_calls": 0,
+  "partial": false,
+  "raw_skills": 147,
+  "raw_skills_in_cv": 145,
+  "skills_kept": 97,
+  "experience": 14,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 44.3,
+  "max_completion_tokens": 465
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Project management",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,"
+   },
+   {
+    "name": "Secure FTP scripts",
+    "evidence": "Developed secure FTP scripts during implementation of CIS and AMR applications after Ransomware attack."
+   },
+   {
+    "name": "Cityworks CMMS",
+    "evidence": "Install and configured Cityworks CMMS application, including XML modifications."
+   },
+   {
+    "name": "XML modifications",
+    "evidence": "Install and configured Cityworks CMMS application, including XML modifications."
+   },
+   {
+    "name": "AMI",
+    "evidence": "Assisted the City of Cleveland with the installation of their AMI Fixed Network."
+   },
+   {
+    "name": "AMR",
+    "evidence": "Provide Application support for CIS, Infor CMMS, and Neptune AMR applications."
+   },
+   {
+    "name": "data interfaces",
+    "evidence": "Led team to manage data interfaces between City of Atlanta and Contractor systems during the AMR replacement program."
+   },
+   {
+    "name": "business process",
+    "evidence": "Develop business process and productivity reports to manage field book scanning project and Water Main data collection project."
+   },
+   {
+    "name": "reports",
+    "evidence": "Developed Crystal Reports for client management team to manage business within the Customer Information System."
+   },
+   {
+    "name": "Crystal Reports",
+    "evidence": "Developed Crystal Reports for client management team to manage business within the Customer Information System."
+   },
+   {
+    "name": "Crystal Info Server",
+    "evidence": "Installed and configured Crystal Info Server 7."
+   },
+   {
+    "name": "PL/SQL",
+    "evidence": "Developed PL/SQL views to handle difficult data issues in reporting."
+   },
+   {
+    "name": "SQL",
+    "evidence": "Installed and configured Infor Enterprise Asset Management 11.1 application and SQL Server database."
+   },
+   {
+    "name": "Oracle",
+    "evidence": "Developed SQL queries against Oracle 8 database."
+   },
+   {
+    "name": "Access",
+    "evidence": "Developed new applications using Access and Visual basic for Application for clients to track new projects."
+   },
+   {
+    "name": "Visual basic for Application",
+    "evidence": "Developed new applications using Access and Visual basic for Application for clients to track new projects."
+   },
+   {
+    "name": "Pro C",
+    "evidence": "Created a new system functionality using Pro C code."
+   },
+   {
+    "name": "C",
+    "evidence": "Created a new system functionality using Pro C code."
+   },
+   {
+    "name": "Uniface",
+    "evidence": "Maintained and Enhanced C and Uniface program code and Unix Shell scripts."
+   },
+   {
+    "name": "Unix Shell scripts",
+    "evidence": "Maintained and Enhanced C and Uniface program code and Unix Shell scripts."
+   },
+   {
+    "name": "procedures",
+    "evidence": "Developed new PL/SQL Stored Procedures and Functions to build financial summary data."
+   },
+   {
+    "name": "triggers",
+    "evidence": "Worked with DBA to build Oracle triggers and procedures and test programs."
+   },
+   {
+    "name": "application development environment",
+    "evidence": "Developed new application development environment for future MMI software development."
+   },
+   {
+    "name": "process",
+    "evidence": "Develop business process and productivity reports to manage field book scanning project and Water Main data collection project."
+   },
+   {
+    "name": "GQL",
+    "evidence": "Developed management reports using GQL\\User and Sybase SQL Server database in OS/2 environment."
+   },
+   {
+    "name": "User",
+    "evidence": "Developed management reports using GQL\\User and Sybase SQL Server database in OS/2 environment."
+   },
+   {
+    "name": "Sybase SQL Server",
+    "evidence": "Developed management reports using GQL\\User and Sybase SQL Server database in OS/2 environment."
+   },
+   {
+    "name": "Lotus Approach 96",
+    "evidence": "Developed reports database using Lotus Approach 96 in Windows 95 environment."
+   },
+   {
+    "name": "Uniface 6.1",
+    "evidence": "Modified and maintained Uniface 6.1 Code in the Windows NT environment, during migration from Uniface 5.2 in OS/2 environment."
+   },
+   {
+    "name": "Uniface 5.2",
+    "evidence": "Modified and maintained Uniface 6.1 Code in the Windows NT environment, during migration from Uniface 5.2 in OS/2 environment."
+   },
+   {
+    "name": "Oracle 7.3",
+    "evidence": "Develop and maintain application using Uniface 5.2, Oracle 7.3, and image software PowerImage."
+   },
+   {
+    "name": "PowerImage",
+    "evidence": "Develop and maintain application using Uniface 5.2, Oracle 7.3, and image software PowerImage."
+   },
+   {
+    "name": "Software Development Life Cycle",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "SQL Server",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "Windows",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "UNIX",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "Automated Meter Reading",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "Utility Billing",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "Shell Scripting",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "SharePoint",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "C/C++",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "Visual Basic",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "PHP",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "HTML",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "XML",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports,\nWindows and UNIX environments, and Automated Meter Reading and Utility Billing systems, Shell Scripting and SharePoint. Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "application development",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Lotus Approach",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Asset Management",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Billing systems",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "book",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "budget",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Develop business",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Business Process Analysis",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "C++",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "client management",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "contracts",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Crystal",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Client",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "clients",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "data collection",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "DBA",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "databases",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "database",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "features",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "financial",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "FTP",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "GIS",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "HP-UX",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "image",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "ITIL v",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Windows 95",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Windows NT",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "migration",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Enterprise",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Network",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Oracle database",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Oracle and SQL",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Oracle 8",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "OS/2",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "PC support",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "processes",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Programming",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Reading",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "reporting",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "requirements gathering",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "scanning",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "scheduling",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Servers",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "scripts",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "Software Development",
+    "evidence": "application development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business, Business Process Analysis, C,\nC++, client management, contracts, Crystal, Crystal Reports, Client, clients, data collection, DBA, databases, database, XML, features, financial,\nFTP, GIS, HP-UX, HTML, PHP, image, ITIL v, Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network,\nOracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS/2, PC support, Pro C, processes, Programming, Project\nManagement, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL"
+   },
+   {
+    "name": "System Administration",
+    "evidence": "SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface, Uniface\n5.2, UNIX, Unix Shell scripts, upgrades, upgrade, Visual Basic"
+   },
+   {
+    "name": "system configuration",
+    "evidence": "SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface, Uniface\n5.2, UNIX, Unix Shell scripts, upgrades, upgrade, Visual Basic"
+   },
+   {
+    "name": "tables",
+    "evidence": "SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface, Uniface\n5.2, UNIX, Unix Shell scripts, upgrades, upgrade, Visual Basic"
+   },
+   {
+    "name": "taxes",
+    "evidence": "SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface, Uniface\n5.2, UNIX, Unix Shell scripts, upgrades, upgrade, Visual Basic"
+   },
+   {
+    "name": "Desktop support",
+    "evidence": "SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface, Uniface\n5.2, UNIX, Unix Shell scripts, upgrades, upgrade, Visual Basic"
+   },
+   {
+    "name": "upgrades",
+    "evidence": "SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface, Uniface\n5.2, UNIX, Unix Shell scripts, upgrades, upgrade, Visual Basic"
+   },
+   {
+    "name": "upgrade",
+    "evidence": "SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface, Uniface\n5.2, UNIX, Unix Shell scripts, upgrades, upgrade, Visual Basic"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Bachelor of Science",
+    "field": "Computer Science",
+    "institution": "GEORGIA INTITUTE OF TECHNOLOGY - City , State",
+    "end": "1993",
+    "evidence": "Bachelor of Science : Computer Science , December 1993\nGEORGIA INTITUTE OF TECHNOLOGY - City , State"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Led configuration requirements gathering effort",
+    "company": "Cityworks",
+    "start": null,
+    "end": null,
+    "evidence": "Led configuration requirements gathering effort for Cityworks application implementation."
+   },
+   {
+    "title": "Prepared and provided training",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Prepared and provided training for CIS, Meter Reading software, and CMMS applications."
+   },
+   {
+    "title": "Provided Application support",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Provided Application support for CIS, CMMS, and AMR applications."
+   },
+   {
+    "title": "Developed data import file layouts and Crystal Reports",
+    "company": "Lucity CMMS",
+    "start": null,
+    "end": null,
+    "evidence": "Developed data import file layouts and Crystal Reports for Lucity CMMS application."
+   },
+   {
+    "title": "Performed system configuration",
+    "company": "Lucity CMMS",
+    "start": null,
+    "end": null,
+    "evidence": "Performed system configuration for Lucity CMMS application."
+   },
+   {
+    "title": "Installed and configured",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Installed and configured Infor Enterprise Asset Management 11.1 application and SQL Server database."
+   },
+   {
+    "title": "Led System Administration team to design and configure user security",
+    "company": "Infor Public Sector",
+    "start": null,
+    "end": null,
+    "evidence": "Led System Administration team to design and configure user security for Infor Public Sector application."
+   },
+   {
+    "title": "Led configuration requirements gathering effort",
+    "company": "Infor Public Sector",
+    "start": null,
+    "end": null,
+    "evidence": "Led configuration requirements gathering effort for Infor Public Sector application upgrade."
+   },
+   {
+    "title": "Provide Application support",
+    "company": null,
+    "start": null,
+    "end": null,
+    "evidence": "Provide Application support for CIS, CMMS, and AMR applications."
+   },
+   {
+    "title": "Assisted",
+    "company": "City of Cleveland",
+    "start": null,
+    "end": null,
+    "evidence": "Assisted the City of Cleveland with the installation of their AMI Fixed Network."
+   },
+   {
+    "title": "Developed",
+    "company": "City of Cleveland",
+    "start": null,
+    "end": null,
+    "evidence": "Developed the Residential AMI Meter Deployment schedule for City of Cleveland AMI Project."
+   },
+   {
+    "title": "Led",
+    "company": "City of Atlanta",
+    "start": null,
+    "end": null,
+    "evidence": "Led team to manage data interfaces between City of Atlanta and Contractor systems during the AMR replacement program."
+   },
+   {
+    "title": "CEO/Consultant",
+    "company": null,
+    "start": "2000-02",
+    "end": "2006-02",
+    "evidence": "CEO/Consultant , 02/2000 to 02/2006\nCompany Name â€"
+   },
+   {
+    "title": "Managed",
+    "company": "Griffin Technology Group",
+    "start": null,
+    "end": null,
+    "evidence": "Managed Griffin Technology Group budget, taxes, expenses and contracts Hired and managed employees, including scheduling client\nappointments for on-site PC support service."
+   }
+  ],
+  "uncertain": [
+   "skill 'Project management': evidence re-anchored to the CV line that names it",
+   "skill 'GIS system': name 'GIS system' is not written in its evidence, removed",
+   "skill 'Business process development': name 'Business process development' is not written in its evidence, removed",
+   "skill 'Productivity reports': name 'Productivity reports' is not written in its evidence, removed",
+   "skill 'Application support': name 'Application support' is not written in its evidence, removed",
+   "skill 'SharePoint': name 'SharePoint' is not written in its evidence, removed",
+   "skill 'Desktop support': name 'Desktop support' is not written in its evidence, removed",
+   "skill 'Ransomware attack response': name 'Ransomware attack response' is not written in its evidence, removed",
+   "skill 'Cityworks CMMS': evidence re-anchored to the CV line that names it",
+   "skill 'XML modifications': evidence re-anchored to the CV line that names it",
+   "experience 'Consultant': no evidence, dropped",
+   "experience 'Utility Solutions Consultant': no evidence, dropped",
+   "experience 'Prepared and provided training': company 'CIS, Meter Reading software, CMMS' is not written in its evidence, removed",
+   "experience 'Provided Application support': company 'CIS, CMMS, AMR' is not written in its evidence, removed",
+   "experience 'Installed and configured': company 'Infor Enterprise Asset Management 11.1, SQL Server database' is not written in its evidence, removed",
+   "experience 'Provide Application support': company 'CIS, CMMS, AMR' is not written in its evidence, removed",
+   "skill 'AMI': evidence re-anchored to the CV line that names it",
+   "skill 'AMR': evidence re-anchored to the CV line that names it",
+   "skill 'data interfaces': evidence re-anchored to the CV line that names it",
+   "skill 'business process': evidence re-anchored to the CV line that names it",
+   "experience 'Assisted': start 'present' not found in its evidence, removed",
+   "experience 'Assisted': end 'present' not found in its evidence, removed",
+   "experience 'Developed': start 'present' not found in its evidence, removed",
+   "experience 'Developed': end 'present' not found in its evidence, removed",
+   "experience 'Led': start 'present' not found in its evidence, removed",
+   "experience 'Led': end 'present' not found in its evidence, removed",
+   "experience 'Developed': title 'Developed' is not written in its evidence, removed",
+   "experience 'Developed': company 'City of Atlanta' is not written in its evidence, removed",
+   "experience 'Developed': start 'present' not found in its evidence, removed",
+   "experience 'Developed': end 'present' not found in its evidence, removed",
+   "experience 'Developed': neither title nor company, dropped",
+   "experience 'CEO/Consultant': company 'Griffin Technology Group' is not written in its evidence, removed",
+   "experience 'Managed': start '02/2000' not found in its evidence, removed",
+   "experience 'Managed': end '02/2006' not found in its evidence, removed",
+   "skill 'PL/SQL': evidence re-anchored to the CV line that names it",
+   "skill 'SQL': evidence re-anchored to the CV line that names it",
+   "skill 'Oracle': evidence re-anchored to the CV line that names it",
+   "skill 'Access': evidence re-anchored to the CV line that names it",
+   "skill 'Visual basic for Application': evidence re-anchored to the CV line that names it",
+   "experience 'Information Technology Consultant': no evidence, dropped",
+   "skill 'Oracle': evidence re-anchored to the CV line that names it",
+   "skill 'Uniface': evidence re-anchored to the CV line that names it",
+   "skill 'Unix Shell scripts': evidence re-anchored to the CV line that names it",
+   "skill 'Oracle': evidence re-anchored to the CV line that names it",
+   "skill 'procedures': evidence re-anchored to the CV line that names it",
+   "skill 'triggers': evidence re-anchored to the CV line that names it",
+   "skill 'process': evidence re-anchored to the CV line that names it",
+   "experience 'Information Technology Specialist': no evidence, dropped",
+   "skill 'Lotus Approach 96': evidence re-anchored to the CV line that names it",
+   "skill 'Uniface 6.1': evidence re-anchored to the CV line that names it",
+   "skill 'Uniface 5.2': evidence re-anchored to the CV line that names it",
+   "skill 'Oracle 7.3': evidence re-anchored to the CV line that names it",
+   "skill 'PowerImage': evidence re-anchored to the CV line that names it",
+   "skill 'Oracle': evidence re-anchored to the CV line that names it",
+   "skill 'Oracle': evidence re-anchored to the CV line that names it",
+   "experience 'Senior Programmer': no evidence, dropped",
+   "experience 'Develop and maintain application': no evidence, dropped",
+   "experience 'Maintained an Oracle database': no evidence, dropped",
+   "experience 'Led sessions with users': no evidence, dropped"
+  ],
+  "prompt_version": "profile-v3"
+ }
+}

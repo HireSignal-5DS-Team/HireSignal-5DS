@@ -1,0 +1,106 @@
+{
+ "row": {
+  "id": "P47",
+  "set": "gold",
+  "calls": 5,
+  "json_valid": 1,
+  "cut_calls": 4,
+  "partial": true,
+  "raw_skills": 15,
+  "raw_skills_in_cv": 15,
+  "skills_kept": 14,
+  "experience": 0,
+  "education": 0,
+  "terms_present": 13,
+  "terms_found": 4,
+  "terms_missed": [
+   "ML",
+   "Python",
+   "Tensorflow",
+   "Pytorch",
+   "Scikit-learn",
+   "time series",
+   "Docker",
+   "Kubernetes",
+   "big data"
+  ],
+  "latency_s": 62.6,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "Machine Learning",
+    "evidence": "Senior / Lead Data Scientist with over 10 years of total commercial experience in data science, software development, and machine learning related projects."
+   },
+   {
+    "name": "Statistical Data Models",
+    "evidence": "Data Analysis, Statistical Data Models, Machine Learning Models."
+   },
+   {
+    "name": "Machine Learning Models",
+    "evidence": "Data Analysis, Statistical Data Models, Machine Learning Models."
+   },
+   {
+    "name": "Deep Learning",
+    "evidence": "Excellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics."
+   },
+   {
+    "name": "Statistics",
+    "evidence": "Excellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics."
+   },
+   {
+    "name": "Data Collection",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+   },
+   {
+    "name": "Preprocessing",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+   },
+   {
+    "name": "Feature Engineering",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+   },
+   {
+    "name": "Training",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+   },
+   {
+    "name": "Data Augmentation",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+   },
+   {
+    "name": "Validation",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+   },
+   {
+    "name": "Testing",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+   },
+   {
+    "name": "Post-deployment monitoring",
+    "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+   },
+   {
+    "name": "Distributed Systems",
+    "evidence": "Experience in working with distributed systems."
+   }
+  ],
+  "education": [],
+  "experience": [],
+  "uncertain": [
+   "skill 'Data Analysis': name 'Data Analysis' is not written in its evidence, removed",
+   "part 2/3: answer cut off at the token limit",
+   "part 2/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 2/3: answer cut off at the token limit",
+   "part 2/3: attempt 2: unreadable answer (no JSON object in the model answer)",
+   "part 3/3: answer cut off at the token limit",
+   "part 3/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 3/3: answer cut off at the token limit",
+   "part 3/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}

@@ -1,0 +1,395 @@
+{
+ "row": {
+  "id": "K05",
+  "set": "kaggle",
+  "calls": 10,
+  "json_valid": 8,
+  "cut_calls": 2,
+  "partial": true,
+  "raw_skills": 73,
+  "raw_skills_in_cv": 72,
+  "skills_kept": 51,
+  "experience": 16,
+  "education": 1,
+  "terms_present": 0,
+  "terms_found": 0,
+  "terms_missed": [],
+  "latency_s": 98.3,
+  "max_completion_tokens": 768
+ },
+ "profile": {
+  "schema_version": "0.1.0",
+  "candidate_id": "cv-00000000",
+  "skills": [
+   {
+    "name": "GIS",
+    "evidence": "collect Water Main data and update GIS system"
+   },
+   {
+    "name": "business process",
+    "evidence": "Develop business process and productivity reports to manage field book scanning project and Water Main data collection project"
+   },
+   {
+    "name": "productivity reports",
+    "evidence": "Develop business process and productivity reports to manage field book scanning project and Water Main data collection project"
+   },
+   {
+    "name": "CIS",
+    "evidence": "Provide Application support for CIS, Infor CMMS, and Neptune AMR applications"
+   },
+   {
+    "name": "Infor CMMS",
+    "evidence": "Provide Application support for CIS, Infor CMMS, and Neptune AMR applications"
+   },
+   {
+    "name": "Neptune AMR",
+    "evidence": "Provide Application support for CIS, Infor CMMS, and Neptune AMR applications"
+   },
+   {
+    "name": "SharePoint",
+    "evidence": "Maintained SharePoint site for I/T department"
+   },
+   {
+    "name": "desktop support",
+    "evidence": "Assist Desktop support team with desktop and application user issues"
+   },
+   {
+    "name": "FTP",
+    "evidence": "Developed secure FTP scripts during implementation of CIS and AMR applications after Ransomware attack"
+   },
+   {
+    "name": "Cityworks CMMS",
+    "evidence": "Install and configured Cityworks CMMS application, including XML modifications"
+   },
+   {
+    "name": "AMI",
+    "evidence": "Assisted the City of Cleveland with the installation of their AMI Fixed Network."
+   },
+   {
+    "name": "AMR",
+    "evidence": "Led team to manage data interfaces between City of Atlanta and Contractor systems during the AMR replacement program."
+   },
+   {
+    "name": "Crystal Reports",
+    "evidence": "Developed Crystal Reports for client management team to manage business within the Customer Information System."
+   },
+   {
+    "name": "Budget",
+    "evidence": "Managed Griffin Technology Group budget, taxes, expenses and contracts"
+   },
+   {
+    "name": "Crystal Info Server",
+    "evidence": "Installed and configured Crystal Info Server 7."
+   },
+   {
+    "name": "PL/SQL",
+    "evidence": "Developed PL/SQL views to handle difficult data issues in reporting."
+   },
+   {
+    "name": "PL/SQL Stored Procedures",
+    "evidence": "Developed new PL/SQL Stored Procedures and Functions to build financial summary data."
+   },
+   {
+    "name": "SQL",
+    "evidence": "Developed SQL queries against Oracle 8 database."
+   },
+   {
+    "name": "Oracle 8",
+    "evidence": "Developed SQL queries against Oracle 8 database."
+   },
+   {
+    "name": "Access",
+    "evidence": "Developed new applications using Access and Visual basic for Application for clients to track new projects."
+   },
+   {
+    "name": "Visual basic for Application",
+    "evidence": "Developed new applications using Access and Visual basic for Application for clients to track new projects."
+   },
+   {
+    "name": "Maximo",
+    "evidence": "Provided Application Support for Maximo, Maintenance Management Software and CSTAR, Customer Information System."
+   },
+   {
+    "name": "CSTAR",
+    "evidence": "Provided Application Support for Maximo, Maintenance Management Software and CSTAR, Customer Information System."
+   },
+   {
+    "name": "HP-UX Servers",
+    "evidence": "Assisted System Administrators in infrastructure upgrades and daily administration of HP-UX Servers."
+   },
+   {
+    "name": "Pro C",
+    "evidence": "Created a new system functionality using Pro C code."
+   },
+   {
+    "name": "C",
+    "evidence": "Maintained and Enhanced C and Uniface program code and Unix Shell scripts."
+   },
+   {
+    "name": "Uniface",
+    "evidence": "Maintained and Enhanced C and Uniface program code and Unix Shell scripts."
+   },
+   {
+    "name": "Unix Shell scripts",
+    "evidence": "Maintained and Enhanced C and Uniface program code and Unix Shell scripts."
+   },
+   {
+    "name": "Oracle",
+    "evidence": "Worked with DBA to build Oracle triggers and procedures and test programs."
+   },
+   {
+    "name": "triggers",
+    "evidence": "Worked with DBA to build Oracle triggers and procedures and test programs."
+   },
+   {
+    "name": "procedures",
+    "evidence": "Worked with DBA to build Oracle triggers and procedures and test programs."
+   },
+   {
+    "name": "application development environment",
+    "evidence": "Developed new application development environment for future MMI software development."
+   },
+   {
+    "name": "process",
+    "evidence": "Developed new process to replace outdated or broken processes."
+   },
+   {
+    "name": "GQL",
+    "evidence": "Developed management reports using GQL\\User and Sybase SQL Server database in OS/2 environment."
+   },
+   {
+    "name": "Sybase SQL Server",
+    "evidence": "Developed management reports using GQL\\User and Sybase SQL Server database in OS/2 environment."
+   },
+   {
+    "name": "Lotus Approach 96",
+    "evidence": "Developed reports database using Lotus Approach 96 in Windows 95 environment."
+   },
+   {
+    "name": "Oracle 7.3",
+    "evidence": "Develop and maintain application using Uniface 5.2, Oracle 7.3, and image software PowerImage."
+   },
+   {
+    "name": "PowerImage",
+    "evidence": "Develop and maintain application using Uniface 5.2, Oracle 7.3, and image software PowerImage."
+   },
+   {
+    "name": "Software Development Life Cycle",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases."
+   },
+   {
+    "name": "Project Management",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases."
+   },
+   {
+    "name": "SQL Server",
+    "evidence": "Proficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases."
+   },
+   {
+    "name": "C/C++",
+    "evidence": "Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "Visual Basic",
+    "evidence": "Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "PHP",
+    "evidence": "Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "HTML",
+    "evidence": "Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "XML",
+    "evidence": "Programming\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML."
+   },
+   {
+    "name": "System Administration",
+    "evidence": "SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface, Uniface"
+   },
+   {
+    "name": "system configuration",
+    "evidence": "SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface, Uniface"
+   },
+   {
+    "name": "tables",
+    "evidence": "SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface, Uniface"
+   },
+   {
+    "name": "taxes",
+    "evidence": "SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface, Uniface"
+   },
+   {
+    "name": "Uniface 6.1",
+    "evidence": "SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface, Uniface"
+   }
+  ],
+  "education": [
+   {
+    "degree": "Bachelor of Science",
+    "field": "Computer Science",
+    "institution": "GEORGIA INTITUTE OF TECHNOLOGY - City , State",
+    "end": "1993",
+    "evidence": "Bachelor of Science : Computer Science , December 1993\nGEORGIA INTITUTE OF TECHNOLOGY - City , State\nComputer Science"
+   }
+  ],
+  "experience": [
+   {
+    "title": "Led configuration requirements gathering effort",
+    "company": "Cityworks application implementation",
+    "start": null,
+    "end": null,
+    "evidence": "Led configuration requirements gathering effort for Cityworks application implementation."
+   },
+   {
+    "title": "Prepared and provided training",
+    "company": "CIS, Meter Reading software, and CMMS applications",
+    "start": null,
+    "end": null,
+    "evidence": "Prepared and provided training for CIS, Meter Reading software, and CMMS applications."
+   },
+   {
+    "title": "Provided Application support",
+    "company": "CIS, CMMS, and AMR applications",
+    "start": null,
+    "end": null,
+    "evidence": "Provided Application support for CIS, CMMS, and AMR applications."
+   },
+   {
+    "title": "Developed data import file layouts and Crystal Reports",
+    "company": "Lucity CMMS application",
+    "start": null,
+    "end": null,
+    "evidence": "Developed data import file layouts and Crystal Reports for Lucity CMMS application."
+   },
+   {
+    "title": "Performed system configuration",
+    "company": "Lucity CMMS application",
+    "start": null,
+    "end": null,
+    "evidence": "Performed system configuration for Lucity CMMS application."
+   },
+   {
+    "title": "Installed and configured",
+    "company": "Infor Enterprise Asset Management 11.1 application and SQL Server database",
+    "start": null,
+    "end": null,
+    "evidence": "Installed and configured Infor Enterprise Asset Management 11.1 application and SQL Server database."
+   },
+   {
+    "title": "Led System Administration team to design and configure user security",
+    "company": "Infor Public Sector application",
+    "start": null,
+    "end": null,
+    "evidence": "Led System Administration team to design and configure user security for Infor Public Sector application."
+   },
+   {
+    "title": "Led configuration requirements gathering effort",
+    "company": "Infor Public Sector application upgrade",
+    "start": null,
+    "end": null,
+    "evidence": "Led configuration requirements gathering effort for Infor Public Sector application upgrade."
+   },
+   {
+    "title": "Provide Application support",
+    "company": "CIS, CMMS, and AMR applications",
+    "start": null,
+    "end": null,
+    "evidence": "Provide Application support for CIS, CMMS, and AMR applications."
+   },
+   {
+    "title": "Assisted the City of Cleveland with the installation of their AMI Fixed Network",
+    "company": "City of Cleveland",
+    "start": null,
+    "end": null,
+    "evidence": "Assisted the City of Cleveland with the installation of their AMI Fixed Network."
+   },
+   {
+    "title": "Developed the Residential AMI Meter Deployment schedule for City of Cleveland AMI Project",
+    "company": "City of Cleveland",
+    "start": null,
+    "end": null,
+    "evidence": "Developed the Residential AMI Meter Deployment schedule for City of Cleveland AMI Project."
+   },
+   {
+    "title": "Led team to manage data interfaces between City of Atlanta and Contractor systems during the AMR replacement program",
+    "company": "City of Atlanta",
+    "start": null,
+    "end": null,
+    "evidence": "Led team to manage data interfaces between City of Atlanta and Contractor systems during the AMR replacement program."
+   },
+   {
+    "title": "CEO/Consultant",
+    "company": null,
+    "start": "2000-02",
+    "end": "2006-02",
+    "evidence": "CEO/Consultant , 02/2000 to 02/2006\nCompany Name â€"
+   },
+   {
+    "title": "Managed Griffin Technology Group budget, taxes, expenses and contracts",
+    "company": "Griffin Technology Group",
+    "start": null,
+    "end": null,
+    "evidence": "Managed Griffin Technology Group budget, taxes, expenses and contracts Hired and managed employees, including scheduling client\nappointments for on-site PC support service."
+   },
+   {
+    "title": "Hired and managed employees, including scheduling client appointments for on-site PC support service",
+    "company": "Griffin Technology Group",
+    "start": null,
+    "end": null,
+    "evidence": "Managed Griffin Technology Group budget, taxes, expenses and contracts Hired and managed employees, including scheduling client\nappointments for on-site PC support service."
+   },
+   {
+    "title": "Developed Crystal Reports for client management team to manage business within the Customer Information System",
+    "company": "Customer Information System",
+    "start": null,
+    "end": null,
+    "evidence": "Developed Crystal Reports for client management team to manage business within the Customer Information System."
+   }
+  ],
+  "uncertain": [
+   "experience 'Consultant': no evidence, dropped",
+   "skill 'Automated Meter Reading': name 'Automated Meter Reading' is not written in its evidence, removed",
+   "experience 'Assisted the City of Cleveland with the installation of their AMI Fixed Network': start 'present' not found in its evidence, removed",
+   "experience 'Assisted the City of Cleveland with the installation of their AMI Fixed Network': end 'present' not found in its evidence, removed",
+   "experience 'Developed the Residential AMI Meter Deployment schedule for City of Cleveland AMI Project': start 'present' not found in its evidence, removed",
+   "experience 'Developed the Residential AMI Meter Deployment schedule for City of Cleveland AMI Project': end 'present' not found in its evidence, removed",
+   "experience 'Led team to manage data interfaces between City of Atlanta and Contractor systems during the AMR replacement program': start 'present' not found in its evidence, removed",
+   "experience 'Led team to manage data interfaces between City of Atlanta and Contractor systems during the AMR replacement program': end 'present' not found in its evidence, removed",
+   "experience 'Developed business process and reports to manage Automated Meter Reading meter replacement program for City of Atlanta, Bureau of Drinking Water': title 'Developed business process and reports to manage Automated Meter Reading meter replacement program for City of Atlanta, Bureau of Drinking Water' is not written in its evidence, removed",
+   "experience 'Developed business process and reports to manage Automated Meter Reading meter replacement program for City of Atlanta, Bureau of Drinking Water': company 'City of Atlanta' is not written in its evidence, removed",
+   "experience 'Developed business process and reports to manage Automated Meter Reading meter replacement program for City of Atlanta, Bureau of Drinking Water': start 'present' not found in its evidence, removed",
+   "experience 'Developed business process and reports to manage Automated Meter Reading meter replacement program for City of Atlanta, Bureau of Drinking Water': end 'present' not found in its evidence, removed",
+   "experience 'Developed business process and reports to manage Automated Meter Reading meter replacement program for City of Atlanta, Bureau of Drinking Water': neither title nor company, dropped",
+   "experience 'CEO/Consultant': company 'City, State' is not written in its evidence, removed",
+   "experience 'Managed Griffin Technology Group budget, taxes, expenses and contracts': start 'present' not found in its evidence, removed",
+   "experience 'Managed Griffin Technology Group budget, taxes, expenses and contracts': end 'present' not found in its evidence, removed",
+   "experience 'Hired and managed employees, including scheduling client appointments for on-site PC support service': start 'present' not found in its evidence, removed",
+   "experience 'Hired and managed employees, including scheduling client appointments for on-site PC support service': end 'present' not found in its evidence, removed",
+   "experience 'Developed Crystal Reports for client management team to manage business within the Customer Information System': start 'present' not found in its evidence, removed",
+   "experience 'Developed Crystal Reports for client management team to manage business within the Customer Information System': end 'present' not found in its evidence, removed",
+   "skill 'PL/SQL Functions': name 'PL/SQL Functions' is not written in its evidence, removed",
+   "experience 'Information Technology Consultant': no evidence, dropped",
+   "experience 'Information Technology Specialist': no evidence, dropped",
+   "experience 'Led sessions with users': no evidence, dropped",
+   "skill 'Crystal Reports': name 'Crystal Reports' is not written in its evidence, removed",
+   "skill 'Windows': name 'Windows' is not written in its evidence, removed",
+   "skill 'UNIX': name 'UNIX' is not written in its evidence, removed",
+   "skill 'Automated Meter Reading and Utility Billing systems': name 'Automated Meter Reading and Utility Billing systems' is not written in its evidence, removed",
+   "skill 'Shell Scripting': name 'Shell Scripting' is not written in its evidence, removed",
+   "skill 'SharePoint': name 'SharePoint' is not written in its evidence, removed",
+   "part 8/9: answer cut off at the token limit",
+   "part 8/9: attempt 1: unreadable answer (no JSON object in the model answer)",
+   "part 8/9: answer cut off at the token limit",
+   "part 8/9: attempt 2: unreadable answer (no JSON object in the model answer)",
+   "skill 'UNIX': name 'UNIX' is not written in its evidence, removed",
+   "skill 'Unix Shell scripts': name 'Unix Shell scripts' is not written in its evidence, removed",
+   "skill 'upgrades': name 'upgrades' is not written in its evidence, removed",
+   "skill 'upgrade': name 'upgrade' is not written in its evidence, removed",
+   "skill 'Visual Basic': name 'Visual Basic' is not written in its evidence, removed"
+  ],
+  "prompt_version": "profile-v1"
+ }
+}
