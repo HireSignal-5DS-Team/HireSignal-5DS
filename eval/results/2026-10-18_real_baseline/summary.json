@@ -1,0 +1,1016 @@
+{
+ "label": "real-GPU",
+ "rows": 280,
+ "matcher": {
+  "dev": {
+   "n": 140,
+   "accuracy": 0.786,
+   "macro_f1": 0.558,
+   "f1_per_class": {
+    "MET": 0.708,
+    "MISSING": 0.88,
+    "UNCERTAIN": 0.087
+   },
+   "confusion_gold_x_pred": {
+    "MET": {
+     "MET": 17,
+     "MISSING": 6,
+     "UNCERTAIN": 1
+    },
+    "MISSING": {
+     "MET": 3,
+     "MISSING": 92,
+     "UNCERTAIN": 2
+    },
+    "UNCERTAIN": {
+     "MET": 4,
+     "MISSING": 14,
+     "UNCERTAIN": 1
+    }
+   },
+   "gold_counts": {
+    "UNCERTAIN": 19,
+    "MISSING": 97,
+    "MET": 24
+   },
+   "pred_counts": {
+    "MET": 24,
+    "MISSING": 112,
+    "UNCERTAIN": 4
+   },
+   "false_met": 7,
+   "false_met_rate_of_non_met_gold": 0.06,
+   "false_met_share_of_pred_met": 0.292,
+   "met_with_verified_quote": 1.0,
+   "rows_with_review_reasons": 6,
+   "mean_model_latency_s": 1.78,
+   "mean_match_elapsed_s": 2.81
+  },
+  "test": {
+   "n": 140,
+   "accuracy": 0.8,
+   "macro_f1": 0.608,
+   "f1_per_class": {
+    "MET": 0.762,
+    "MISSING": 0.887,
+    "UNCERTAIN": 0.174
+   },
+   "confusion_gold_x_pred": {
+    "MET": {
+     "MET": 24,
+     "MISSING": 4,
+     "UNCERTAIN": 0
+    },
+    "MISSING": {
+     "MET": 5,
+     "MISSING": 86,
+     "UNCERTAIN": 1
+    },
+    "UNCERTAIN": {
+     "MET": 6,
+     "MISSING": 12,
+     "UNCERTAIN": 2
+    }
+   },
+   "gold_counts": {
+    "MISSING": 92,
+    "UNCERTAIN": 20,
+    "MET": 28
+   },
+   "pred_counts": {
+    "MET": 35,
+    "MISSING": 102,
+    "UNCERTAIN": 3
+   },
+   "false_met": 11,
+   "false_met_rate_of_non_met_gold": 0.098,
+   "false_met_share_of_pred_met": 0.314,
+   "met_with_verified_quote": 1.0,
+   "rows_with_review_reasons": 6,
+   "mean_model_latency_s": 1.92,
+   "mean_match_elapsed_s": 2.98
+  },
+  "all": {
+   "n": 280,
+   "accuracy": 0.793,
+   "macro_f1": 0.584,
+   "f1_per_class": {
+    "MET": 0.739,
+    "MISSING": 0.883,
+    "UNCERTAIN": 0.13
+   },
+   "confusion_gold_x_pred": {
+    "MET": {
+     "MET": 41,
+     "MISSING": 10,
+     "UNCERTAIN": 1
+    },
+    "MISSING": {
+     "MET": 8,
+     "MISSING": 178,
+     "UNCERTAIN": 3
+    },
+    "UNCERTAIN": {
+     "MET": 10,
+     "MISSING": 26,
+     "UNCERTAIN": 3
+    }
+   },
+   "gold_counts": {
+    "UNCERTAIN": 39,
+    "MISSING": 189,
+    "MET": 52
+   },
+   "pred_counts": {
+    "MET": 59,
+    "MISSING": 214,
+    "UNCERTAIN": 7
+   },
+   "false_met": 18,
+   "false_met_rate_of_non_met_gold": 0.079,
+   "false_met_share_of_pred_met": 0.305,
+   "met_with_verified_quote": 1.0,
+   "rows_with_review_reasons": 12,
+   "mean_model_latency_s": 1.85,
+   "mean_match_elapsed_s": 2.9
+  }
+ },
+ "temp_outcome_PROVISIONAL": {
+  "note": "pairs_gold.csv outcomes are NOT human-checked yet and contain 0 invites",
+  "dev": {
+   "n": 20,
+   "agreement": 0.8,
+   "confusion_gold_x_temp": {
+    "invite": {
+     "invite": 0,
+     "review": 0,
+     "reject": 0
+    },
+    "review": {
+     "invite": 0,
+     "review": 2,
+     "reject": 1
+    },
+    "reject": {
+     "invite": 0,
+     "review": 3,
+     "reject": 14
+    }
+   },
+   "review_rate": 0.25
+  },
+  "test": {
+   "n": 20,
+   "agreement": 0.7,
+   "confusion_gold_x_temp": {
+    "invite": {
+     "invite": 0,
+     "review": 0,
+     "reject": 0
+    },
+    "review": {
+     "invite": 0,
+     "review": 2,
+     "reject": 0
+    },
+    "reject": {
+     "invite": 0,
+     "review": 6,
+     "reject": 12
+    }
+   },
+   "review_rate": 0.4
+  },
+  "all": {
+   "n": 40,
+   "agreement": 0.75,
+   "confusion_gold_x_temp": {
+    "invite": {
+     "invite": 0,
+     "review": 0,
+     "reject": 0
+    },
+    "review": {
+     "invite": 0,
+     "review": 4,
+     "reject": 1
+    },
+    "reject": {
+     "invite": 0,
+     "review": 9,
+     "reject": 26
+    }
+   },
+   "review_rate": 0.325
+  },
+  "per_pair": [
+   {
+    "pair_id": "P01",
+    "split": "dev",
+    "gold_outcome": "review",
+    "temp_outcome": "review",
+    "score": 13,
+    "review_reasons": [
+     "profile:partial_extraction_requires_review",
+     "match:r1:duration_not_in_evidence"
+    ]
+   },
+   {
+    "pair_id": "P02",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "review",
+    "score": 13,
+    "review_reasons": [
+     "profile:name_not_found",
+     "match:r1:duration_not_in_evidence"
+    ]
+   },
+   {
+    "pair_id": "P03",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 27,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P04",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 13,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P05",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 13,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P06",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 27,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P07",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "review",
+    "score": 27,
+    "review_reasons": [
+     "match:r1:contradiction_refuted_by_evidence"
+    ]
+   },
+   {
+    "pair_id": "P08",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 0,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P09",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 0,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P10",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 13,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P11",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 17,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P12",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "review",
+    "score": 17,
+    "review_reasons": [
+     "profile:partial_extraction_requires_review"
+    ]
+   },
+   {
+    "pair_id": "P13",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "review",
+    "score": 67,
+    "review_reasons": [
+     "profile:partial_extraction_requires_review"
+    ]
+   },
+   {
+    "pair_id": "P14",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 33,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P15",
+    "split": "dev",
+    "gold_outcome": "review",
+    "temp_outcome": "reject",
+    "score": 58,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P16",
+    "split": "test",
+    "gold_outcome": "review",
+    "temp_outcome": "review",
+    "score": 83,
+    "review_reasons": [
+     "profile:partial_extraction_requires_review",
+     "match:r3:evidence_not_in_cv",
+     "match:r4:evidence_not_in_cv"
+    ]
+   },
+   {
+    "pair_id": "P17",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 17,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P18",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 50,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P19",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 25,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P20",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "review",
+    "score": 33,
+    "review_reasons": [
+     "profile:partial_extraction_requires_review"
+    ]
+   },
+   {
+    "pair_id": "P21",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "review",
+    "score": 32,
+    "review_reasons": [
+     "profile:name_not_found",
+     "match:r1:evidence_not_in_cv",
+     "match:r1:duration_not_in_evidence",
+     "match:r3:evidence_not_in_cv",
+     "match:r7:evidence_not_in_cv",
+     "match:r7:met_without_verified_evidence"
+    ]
+   },
+   {
+    "pair_id": "P22",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "review",
+    "score": 50,
+    "review_reasons": [
+     "profile:partial_extraction_requires_review"
+    ]
+   },
+   {
+    "pair_id": "P23",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 14,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P24",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 14,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P25",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 18,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P26",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "review",
+    "score": 43,
+    "review_reasons": [
+     "match:r4:evidence_not_in_cv"
+    ]
+   },
+   {
+    "pair_id": "P27",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 29,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P28",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 36,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P29",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 0,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P30",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 21,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P31",
+    "split": "dev",
+    "gold_outcome": "review",
+    "temp_outcome": "review",
+    "score": 44,
+    "review_reasons": [
+     "profile:name_not_found",
+     "match:r2:duration_not_in_evidence"
+    ]
+   },
+   {
+    "pair_id": "P32",
+    "split": "test",
+    "gold_outcome": "review",
+    "temp_outcome": "review",
+    "score": 78,
+    "review_reasons": [
+     "profile:partial_extraction_requires_review",
+     "match:r2:evidence_not_in_cv",
+     "match:r2:duration_not_in_evidence"
+    ]
+   },
+   {
+    "pair_id": "P33",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 0,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P34",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "review",
+    "score": 33,
+    "review_reasons": [
+     "match:r2:duration_not_in_evidence"
+    ]
+   },
+   {
+    "pair_id": "P35",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 0,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P36",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 0,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P37",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 0,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P38",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 0,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P39",
+    "split": "dev",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 0,
+    "review_reasons": []
+   },
+   {
+    "pair_id": "P40",
+    "split": "test",
+    "gold_outcome": "reject",
+    "temp_outcome": "reject",
+    "score": 0,
+    "review_reasons": []
+   }
+  ]
+ },
+ "job_agent": {
+  "total": {
+   "gold_requirements": 28,
+   "agent_requirements": 58,
+   "gold_found": 28,
+   "must_nice_agree": 27,
+   "agent_extra": 11
+  },
+  "per_job": {
+   "J1": {
+    "gold_requirements": 8,
+    "agent_requirements": 19,
+    "gold_found": 8,
+    "gold_missed": [],
+    "agent_extra": [
+     {
+      "req_id": "r12",
+      "kind": "must",
+      "evidence": "Hands-on experience with data preparation, cleansing, feature engineering, and visualization"
+     },
+     {
+      "req_id": "r13",
+      "kind": "must",
+      "evidence": "Hands-on experience with data preparation, cleansing, feature engineering, and visualization"
+     },
+     {
+      "req_id": "r14",
+      "kind": "must",
+      "evidence": "Hands-on experience with data preparation, cleansing, feature engineering, and visualization"
+     },
+     {
+      "req_id": "r15",
+      "kind": "must",
+      "evidence": "Hands-on experience with data preparation, cleansing, feature engineering, and visualization"
+     },
+     {
+      "req_id": "r17",
+      "kind": "must",
+      "evidence": "Good communication skills and interpersonal skills."
+     },
+     {
+      "req_id": "r18",
+      "kind": "nice",
+      "evidence": "Experience in working across different global cultures a plus."
+     }
+    ],
+    "must_nice_agree": 7,
+    "aligned": [
+     {
+      "gold": "r1",
+      "gold_kind": "must",
+      "agent": [
+       "r1"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r2",
+      "gold_kind": "must",
+      "agent": [
+       "r2",
+       "r3"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r3",
+      "gold_kind": "must",
+      "agent": [
+       "r4",
+       "r5",
+       "r6"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r4",
+      "gold_kind": "must",
+      "agent": [
+       "r7",
+       "r8",
+       "r9"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r5",
+      "gold_kind": "must",
+      "agent": [
+       "r10"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r6",
+      "gold_kind": "must",
+      "agent": [
+       "r11"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r7",
+      "gold_kind": "must",
+      "agent": [
+       "r16"
+      ],
+      "agent_kinds": [
+       "nice"
+      ],
+      "kind_agrees": false
+     },
+     {
+      "gold": "r8",
+      "gold_kind": "nice",
+      "agent": [
+       "r19"
+      ],
+      "agent_kinds": [
+       "nice"
+      ],
+      "kind_agrees": true
+     }
+    ],
+    "review_reasons": [
+     "job_agent:validation_warnings"
+    ],
+    "wall_s": 13.91
+   },
+   "J2": {
+    "gold_requirements": 6,
+    "agent_requirements": 7,
+    "gold_found": 6,
+    "gold_missed": [],
+    "agent_extra": [],
+    "must_nice_agree": 6,
+    "aligned": [
+     {
+      "gold": "r1",
+      "gold_kind": "must",
+      "agent": [
+       "r1",
+       "r2"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r2",
+      "gold_kind": "must",
+      "agent": [
+       "r4"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r3",
+      "gold_kind": "must",
+      "agent": [
+       "r5"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r4",
+      "gold_kind": "must",
+      "agent": [
+       "r6"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r5",
+      "gold_kind": "must",
+      "agent": [
+       "r7"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r6",
+      "gold_kind": "must",
+      "agent": [
+       "r3"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     }
+    ],
+    "review_reasons": [],
+    "wall_s": 6.54
+   },
+   "J3": {
+    "gold_requirements": 8,
+    "agent_requirements": 19,
+    "gold_found": 8,
+    "gold_missed": [],
+    "agent_extra": [
+     {
+      "req_id": "r16",
+      "kind": "nice",
+      "evidence": "Experience with ML “understanding” techniques: explainability, confidence, drift, etc;"
+     },
+     {
+      "req_id": "r17",
+      "kind": "nice",
+      "evidence": "Experience with ML “understanding” techniques: explainability, confidence, drift, etc;"
+     },
+     {
+      "req_id": "r18",
+      "kind": "nice",
+      "evidence": "Experience with ML “understanding” techniques: explainability, confidence, drift, etc;"
+     }
+    ],
+    "must_nice_agree": 8,
+    "aligned": [
+     {
+      "gold": "r1",
+      "gold_kind": "must",
+      "agent": [
+       "r1"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r2",
+      "gold_kind": "must",
+      "agent": [
+       "r2",
+       "r3"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r3",
+      "gold_kind": "must",
+      "agent": [
+       "r4"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r4",
+      "gold_kind": "must",
+      "agent": [
+       "r5",
+       "r6",
+       "r7",
+       "r8"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r5",
+      "gold_kind": "must",
+      "agent": [
+       "r9",
+       "r10"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r6",
+      "gold_kind": "must",
+      "agent": [
+       "r11",
+       "r12",
+       "r13",
+       "r14"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r7",
+      "gold_kind": "nice",
+      "agent": [
+       "r15"
+      ],
+      "agent_kinds": [
+       "nice"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r8",
+      "gold_kind": "nice",
+      "agent": [
+       "r19"
+      ],
+      "agent_kinds": [
+       "nice"
+      ],
+      "kind_agrees": true
+     }
+    ],
+    "review_reasons": [
+     "job_agent:validation_warnings"
+    ],
+    "wall_s": 13.35
+   },
+   "J4": {
+    "gold_requirements": 6,
+    "agent_requirements": 13,
+    "gold_found": 6,
+    "gold_missed": [],
+    "agent_extra": [
+     {
+      "req_id": "r12",
+      "kind": "nice",
+      "evidence": "Excellent analytical and time management skills"
+     },
+     {
+      "req_id": "r13",
+      "kind": "nice",
+      "evidence": "Teamwork skills with a problem-solving attitude."
+     }
+    ],
+    "must_nice_agree": 6,
+    "aligned": [
+     {
+      "gold": "r1",
+      "gold_kind": "must",
+      "agent": [
+       "r1"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r2",
+      "gold_kind": "must",
+      "agent": [
+       "r1"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r3",
+      "gold_kind": "must",
+      "agent": [
+       "r2",
+       "r3"
+      ],
+      "agent_kinds": [
+       "must"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r4",
+      "gold_kind": "nice",
+      "agent": [
+       "r4",
+       "r5",
+       "r6"
+      ],
+      "agent_kinds": [
+       "nice"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r5",
+      "gold_kind": "nice",
+      "agent": [
+       "r7"
+      ],
+      "agent_kinds": [
+       "nice"
+      ],
+      "kind_agrees": true
+     },
+     {
+      "gold": "r6",
+      "gold_kind": "nice",
+      "agent": [
+       "r8",
+       "r9",
+       "r10",
+       "r11"
+      ],
+      "agent_kinds": [
+       "nice"
+      ],
+      "kind_agrees": true
+     }
+    ],
+    "review_reasons": [],
+    "wall_s": 9.28
+   }
+  }
+ }
+}

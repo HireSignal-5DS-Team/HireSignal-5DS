@@ -1,0 +1,1084 @@
+{
+ "label": "Matcher + Judge rows real-GPU; NLI recomputed real-GPU",
+ "gold_summary": {
+  "pairs": 52,
+  "gold_outcomes": {
+   "review": 14,
+   "reject": 35,
+   "invite": 3
+  },
+  "outcomes_by_split": {
+   "dev": {
+    "review": 7,
+    "reject": 17,
+    "invite": 2
+   },
+   "test": {
+    "reject": 18,
+    "review": 7,
+    "invite": 1
+   }
+  },
+  "row_sources": {
+   "ai_checked_ok": 351,
+   "human_changed": 12,
+   "changed_without_decision": 1
+  },
+  "pair_sources": {
+   "human_changed": 6,
+   "ai_checked_ok": 46
+  }
+ },
+ "judge_v2_recomputed_equals_saved_verdicts": "364/364",
+ "temp_rule": {
+  "dev": {
+   "n": 26,
+   "confusion_gold_x_gate": {
+    "invite": {
+     "invite": 0,
+     "review": 2,
+     "reject": 0
+    },
+    "review": {
+     "invite": 0,
+     "review": 7,
+     "reject": 0
+    },
+    "reject": {
+     "invite": 0,
+     "review": 14,
+     "reject": 3
+    }
+   },
+   "false_invites": 0,
+   "false_rejects": 0,
+   "invites_found": 0,
+   "review_rate": 0.885,
+   "agreement": 0.385
+  },
+  "test": {
+   "n": 26,
+   "confusion_gold_x_gate": {
+    "invite": {
+     "invite": 0,
+     "review": 1,
+     "reject": 0
+    },
+    "review": {
+     "invite": 0,
+     "review": 7,
+     "reject": 0
+    },
+    "reject": {
+     "invite": 0,
+     "review": 17,
+     "reject": 1
+    }
+   },
+   "false_invites": 0,
+   "false_rejects": 0,
+   "invites_found": 0,
+   "review_rate": 0.962,
+   "agreement": 0.308
+  },
+  "all": {
+   "n": 52,
+   "confusion_gold_x_gate": {
+    "invite": {
+     "invite": 0,
+     "review": 3,
+     "reject": 0
+    },
+    "review": {
+     "invite": 0,
+     "review": 14,
+     "reject": 0
+    },
+    "reject": {
+     "invite": 0,
+     "review": 31,
+     "reject": 4
+    }
+   },
+   "false_invites": 0,
+   "false_rejects": 0,
+   "invites_found": 0,
+   "review_rate": 0.923,
+   "agreement": 0.346
+  }
+ },
+ "best_per_family": {
+  "a": {
+   "template": "v2",
+   "settings": {
+    "t_invite": 100,
+    "pair_flags": "info"
+   },
+   "metrics": {
+    "dev": {
+     "n": 26,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 2,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 1,
+       "reject": 6
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 17
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 6,
+     "invites_found": 0,
+     "review_rate": 0.115,
+     "agreement": 0.692
+    },
+    "test": {
+     "n": 26,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 1,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 3,
+       "reject": 4
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 18
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 4,
+     "invites_found": 0,
+     "review_rate": 0.154,
+     "agreement": 0.808
+    },
+    "all": {
+     "n": 52,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 3,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 4,
+       "reject": 10
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 35
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 10,
+     "invites_found": 0,
+     "review_rate": 0.135,
+     "agreement": 0.75
+    }
+   },
+   "per_pair": {
+    "P01": "reject",
+    "P02": "reject",
+    "P03": "reject",
+    "P04": "reject",
+    "P05": "reject",
+    "P06": "reject",
+    "P07": "reject",
+    "P08": "reject",
+    "P09": "reject",
+    "P10": "reject",
+    "P11": "reject",
+    "P12": "reject",
+    "P13": "reject",
+    "P14": "reject",
+    "P15": "review",
+    "P16": "reject",
+    "P17": "reject",
+    "P18": "reject",
+    "P19": "reject",
+    "P20": "reject",
+    "P21": "reject",
+    "P22": "reject",
+    "P23": "reject",
+    "P24": "reject",
+    "P25": "reject",
+    "P26": "reject",
+    "P27": "reject",
+    "P28": "reject",
+    "P29": "reject",
+    "P30": "reject",
+    "P31": "reject",
+    "P32": "review",
+    "P33": "reject",
+    "P34": "reject",
+    "P35": "reject",
+    "P36": "reject",
+    "P37": "reject",
+    "P38": "reject",
+    "P39": "reject",
+    "P40": "reject",
+    "P41": "reject",
+    "P42": "reject",
+    "P43": "reject",
+    "P44": "reject",
+    "P45": "reject",
+    "P46": "reject",
+    "P47": "review",
+    "P48": "review",
+    "P49": "review",
+    "P50": "review",
+    "P51": "reject",
+    "P52": "review"
+   }
+  },
+  "b": {
+   "template": "v2",
+   "settings": {
+    "t_invite": 85,
+    "pair_flags": "info",
+    "judge_met_max_conf": 0.999
+   },
+   "metrics": {
+    "dev": {
+     "n": 26,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 1,
+       "review": 1,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 1,
+       "reject": 6
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 17
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 6,
+     "invites_found": 1,
+     "review_rate": 0.077,
+     "agreement": 0.731
+    },
+    "test": {
+     "n": 26,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 1,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 3,
+       "reject": 4
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 18
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 4,
+     "invites_found": 0,
+     "review_rate": 0.154,
+     "agreement": 0.808
+    },
+    "all": {
+     "n": 52,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 1,
+       "review": 2,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 4,
+       "reject": 10
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 35
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 10,
+     "invites_found": 1,
+     "review_rate": 0.115,
+     "agreement": 0.769
+    }
+   },
+   "per_pair": {
+    "P01": "reject",
+    "P02": "reject",
+    "P03": "reject",
+    "P04": "reject",
+    "P05": "reject",
+    "P06": "reject",
+    "P07": "reject",
+    "P08": "reject",
+    "P09": "reject",
+    "P10": "reject",
+    "P11": "reject",
+    "P12": "reject",
+    "P13": "reject",
+    "P14": "reject",
+    "P15": "review",
+    "P16": "reject",
+    "P17": "reject",
+    "P18": "reject",
+    "P19": "reject",
+    "P20": "reject",
+    "P21": "reject",
+    "P22": "reject",
+    "P23": "reject",
+    "P24": "reject",
+    "P25": "reject",
+    "P26": "reject",
+    "P27": "reject",
+    "P28": "reject",
+    "P29": "reject",
+    "P30": "reject",
+    "P31": "reject",
+    "P32": "review",
+    "P33": "reject",
+    "P34": "reject",
+    "P35": "reject",
+    "P36": "reject",
+    "P37": "reject",
+    "P38": "reject",
+    "P39": "reject",
+    "P40": "reject",
+    "P41": "reject",
+    "P42": "reject",
+    "P43": "reject",
+    "P44": "reject",
+    "P45": "reject",
+    "P46": "reject",
+    "P47": "review",
+    "P48": "review",
+    "P49": "review",
+    "P50": "invite",
+    "P51": "reject",
+    "P52": "review"
+   }
+  },
+  "c": {
+   "template": "v2",
+   "settings": {
+    "t_invite": 100,
+    "pair_flags": "info",
+    "judge_max_support": 0.5
+   },
+   "metrics": {
+    "dev": {
+     "n": 26,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 2,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 1,
+       "reject": 6
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 17
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 6,
+     "invites_found": 0,
+     "review_rate": 0.115,
+     "agreement": 0.692
+    },
+    "test": {
+     "n": 26,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 1,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 3,
+       "reject": 4
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 18
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 4,
+     "invites_found": 0,
+     "review_rate": 0.154,
+     "agreement": 0.808
+    },
+    "all": {
+     "n": 52,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 3,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 4,
+       "reject": 10
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 35
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 10,
+     "invites_found": 0,
+     "review_rate": 0.135,
+     "agreement": 0.75
+    }
+   },
+   "per_pair": {
+    "P01": "reject",
+    "P02": "reject",
+    "P03": "reject",
+    "P04": "reject",
+    "P05": "reject",
+    "P06": "reject",
+    "P07": "reject",
+    "P08": "reject",
+    "P09": "reject",
+    "P10": "reject",
+    "P11": "reject",
+    "P12": "reject",
+    "P13": "reject",
+    "P14": "reject",
+    "P15": "review",
+    "P16": "reject",
+    "P17": "reject",
+    "P18": "reject",
+    "P19": "reject",
+    "P20": "reject",
+    "P21": "reject",
+    "P22": "reject",
+    "P23": "reject",
+    "P24": "reject",
+    "P25": "reject",
+    "P26": "reject",
+    "P27": "reject",
+    "P28": "reject",
+    "P29": "reject",
+    "P30": "reject",
+    "P31": "reject",
+    "P32": "review",
+    "P33": "reject",
+    "P34": "reject",
+    "P35": "reject",
+    "P36": "reject",
+    "P37": "reject",
+    "P38": "reject",
+    "P39": "reject",
+    "P40": "reject",
+    "P41": "reject",
+    "P42": "reject",
+    "P43": "reject",
+    "P44": "reject",
+    "P45": "reject",
+    "P46": "reject",
+    "P47": "review",
+    "P48": "review",
+    "P49": "review",
+    "P50": "review",
+    "P51": "reject",
+    "P52": "review"
+   }
+  },
+  "d": {
+   "template": "v2",
+   "settings": {
+    "t_invite": 100,
+    "pair_flags": "info",
+    "judge_skip_proven": true
+   },
+   "metrics": {
+    "dev": {
+     "n": 26,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 2,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 1,
+       "reject": 6
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 17
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 6,
+     "invites_found": 0,
+     "review_rate": 0.115,
+     "agreement": 0.692
+    },
+    "test": {
+     "n": 26,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 1,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 3,
+       "reject": 4
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 18
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 4,
+     "invites_found": 0,
+     "review_rate": 0.154,
+     "agreement": 0.808
+    },
+    "all": {
+     "n": 52,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 3,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 4,
+       "reject": 10
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 35
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 10,
+     "invites_found": 0,
+     "review_rate": 0.135,
+     "agreement": 0.75
+    }
+   },
+   "per_pair": {
+    "P01": "reject",
+    "P02": "reject",
+    "P03": "reject",
+    "P04": "reject",
+    "P05": "reject",
+    "P06": "reject",
+    "P07": "reject",
+    "P08": "reject",
+    "P09": "reject",
+    "P10": "reject",
+    "P11": "reject",
+    "P12": "reject",
+    "P13": "reject",
+    "P14": "reject",
+    "P15": "review",
+    "P16": "reject",
+    "P17": "reject",
+    "P18": "reject",
+    "P19": "reject",
+    "P20": "reject",
+    "P21": "reject",
+    "P22": "reject",
+    "P23": "reject",
+    "P24": "reject",
+    "P25": "reject",
+    "P26": "reject",
+    "P27": "reject",
+    "P28": "reject",
+    "P29": "reject",
+    "P30": "reject",
+    "P31": "reject",
+    "P32": "review",
+    "P33": "reject",
+    "P34": "reject",
+    "P35": "reject",
+    "P36": "reject",
+    "P37": "reject",
+    "P38": "reject",
+    "P39": "reject",
+    "P40": "reject",
+    "P41": "reject",
+    "P42": "reject",
+    "P43": "reject",
+    "P44": "reject",
+    "P45": "reject",
+    "P46": "reject",
+    "P47": "review",
+    "P48": "review",
+    "P49": "review",
+    "P50": "review",
+    "P51": "reject",
+    "P52": "review"
+   }
+  },
+  "e": {
+   "template": "v1",
+   "settings": {
+    "t_invite": 100,
+    "pair_flags": "info"
+   },
+   "metrics": {
+    "dev": {
+     "n": 26,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 1,
+       "reject": 1
+      },
+      "review": {
+       "invite": 0,
+       "review": 1,
+       "reject": 6
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 17
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 7,
+     "invites_found": 0,
+     "review_rate": 0.077,
+     "agreement": 0.692
+    },
+    "test": {
+     "n": 26,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 1,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 2,
+       "reject": 5
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 18
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 5,
+     "invites_found": 0,
+     "review_rate": 0.115,
+     "agreement": 0.769
+    },
+    "all": {
+     "n": 52,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 2,
+       "reject": 1
+      },
+      "review": {
+       "invite": 0,
+       "review": 3,
+       "reject": 11
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 35
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 12,
+     "invites_found": 0,
+     "review_rate": 0.096,
+     "agreement": 0.731
+    }
+   },
+   "per_pair": {
+    "P01": "reject",
+    "P02": "reject",
+    "P03": "reject",
+    "P04": "reject",
+    "P05": "reject",
+    "P06": "reject",
+    "P07": "reject",
+    "P08": "reject",
+    "P09": "reject",
+    "P10": "reject",
+    "P11": "reject",
+    "P12": "reject",
+    "P13": "reject",
+    "P14": "reject",
+    "P15": "reject",
+    "P16": "reject",
+    "P17": "reject",
+    "P18": "reject",
+    "P19": "reject",
+    "P20": "reject",
+    "P21": "reject",
+    "P22": "reject",
+    "P23": "reject",
+    "P24": "reject",
+    "P25": "reject",
+    "P26": "reject",
+    "P27": "reject",
+    "P28": "reject",
+    "P29": "reject",
+    "P30": "reject",
+    "P31": "reject",
+    "P32": "review",
+    "P33": "reject",
+    "P34": "reject",
+    "P35": "reject",
+    "P36": "reject",
+    "P37": "reject",
+    "P38": "reject",
+    "P39": "reject",
+    "P40": "reject",
+    "P41": "reject",
+    "P42": "reject",
+    "P43": "reject",
+    "P44": "reject",
+    "P45": "reject",
+    "P46": "reject",
+    "P47": "review",
+    "P48": "review",
+    "P49": "reject",
+    "P50": "review",
+    "P51": "reject",
+    "P52": "review"
+   }
+  },
+  "f": {
+   "template": "v2",
+   "settings": {
+    "t_invite": 85,
+    "pair_flags": "info",
+    "judge": "none"
+   },
+   "metrics": {
+    "dev": {
+     "n": 26,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 1,
+       "review": 0,
+       "reject": 1
+      },
+      "review": {
+       "invite": 0,
+       "review": 1,
+       "reject": 6
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 17
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 7,
+     "invites_found": 1,
+     "review_rate": 0.038,
+     "agreement": 0.731
+    },
+    "test": {
+     "n": 26,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 0,
+       "review": 1,
+       "reject": 0
+      },
+      "review": {
+       "invite": 0,
+       "review": 2,
+       "reject": 5
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 18
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 5,
+     "invites_found": 0,
+     "review_rate": 0.115,
+     "agreement": 0.769
+    },
+    "all": {
+     "n": 52,
+     "confusion_gold_x_gate": {
+      "invite": {
+       "invite": 1,
+       "review": 1,
+       "reject": 1
+      },
+      "review": {
+       "invite": 0,
+       "review": 3,
+       "reject": 11
+      },
+      "reject": {
+       "invite": 0,
+       "review": 0,
+       "reject": 35
+      }
+     },
+     "false_invites": 0,
+     "false_rejects": 12,
+     "invites_found": 1,
+     "review_rate": 0.077,
+     "agreement": 0.75
+    }
+   },
+   "per_pair": {
+    "P01": "reject",
+    "P02": "reject",
+    "P03": "reject",
+    "P04": "reject",
+    "P05": "reject",
+    "P06": "reject",
+    "P07": "reject",
+    "P08": "reject",
+    "P09": "reject",
+    "P10": "reject",
+    "P11": "reject",
+    "P12": "reject",
+    "P13": "reject",
+    "P14": "reject",
+    "P15": "reject",
+    "P16": "reject",
+    "P17": "reject",
+    "P18": "reject",
+    "P19": "reject",
+    "P20": "reject",
+    "P21": "reject",
+    "P22": "reject",
+    "P23": "reject",
+    "P24": "reject",
+    "P25": "reject",
+    "P26": "reject",
+    "P27": "reject",
+    "P28": "reject",
+    "P29": "reject",
+    "P30": "reject",
+    "P31": "reject",
+    "P32": "review",
+    "P33": "reject",
+    "P34": "reject",
+    "P35": "reject",
+    "P36": "reject",
+    "P37": "reject",
+    "P38": "reject",
+    "P39": "reject",
+    "P40": "reject",
+    "P41": "reject",
+    "P42": "reject",
+    "P43": "reject",
+    "P44": "reject",
+    "P45": "reject",
+    "P46": "reject",
+    "P47": "review",
+    "P48": "review",
+    "P49": "reject",
+    "P50": "invite",
+    "P51": "reject",
+    "P52": "review"
+   }
+  }
+ },
+ "chosen_family": "b",
+ "chosen": {
+  "template": "v2",
+  "settings": {
+   "t_invite": 85,
+   "pair_flags": "info",
+   "judge_met_max_conf": 0.999
+  },
+  "metrics": {
+   "dev": {
+    "n": 26,
+    "confusion_gold_x_gate": {
+     "invite": {
+      "invite": 1,
+      "review": 1,
+      "reject": 0
+     },
+     "review": {
+      "invite": 0,
+      "review": 1,
+      "reject": 6
+     },
+     "reject": {
+      "invite": 0,
+      "review": 0,
+      "reject": 17
+     }
+    },
+    "false_invites": 0,
+    "false_rejects": 6,
+    "invites_found": 1,
+    "review_rate": 0.077,
+    "agreement": 0.731
+   },
+   "test": {
+    "n": 26,
+    "confusion_gold_x_gate": {
+     "invite": {
+      "invite": 0,
+      "review": 1,
+      "reject": 0
+     },
+     "review": {
+      "invite": 0,
+      "review": 3,
+      "reject": 4
+     },
+     "reject": {
+      "invite": 0,
+      "review": 0,
+      "reject": 18
+     }
+    },
+    "false_invites": 0,
+    "false_rejects": 4,
+    "invites_found": 0,
+    "review_rate": 0.154,
+    "agreement": 0.808
+   },
+   "all": {
+    "n": 52,
+    "confusion_gold_x_gate": {
+     "invite": {
+      "invite": 1,
+      "review": 2,
+      "reject": 0
+     },
+     "review": {
+      "invite": 0,
+      "review": 4,
+      "reject": 10
+     },
+     "reject": {
+      "invite": 0,
+      "review": 0,
+      "reject": 35
+     }
+    },
+    "false_invites": 0,
+    "false_rejects": 10,
+    "invites_found": 1,
+    "review_rate": 0.115,
+    "agreement": 0.769
+   }
+  },
+  "per_pair": {
+   "P01": "reject",
+   "P02": "reject",
+   "P03": "reject",
+   "P04": "reject",
+   "P05": "reject",
+   "P06": "reject",
+   "P07": "reject",
+   "P08": "reject",
+   "P09": "reject",
+   "P10": "reject",
+   "P11": "reject",
+   "P12": "reject",
+   "P13": "reject",
+   "P14": "reject",
+   "P15": "review",
+   "P16": "reject",
+   "P17": "reject",
+   "P18": "reject",
+   "P19": "reject",
+   "P20": "reject",
+   "P21": "reject",
+   "P22": "reject",
+   "P23": "reject",
+   "P24": "reject",
+   "P25": "reject",
+   "P26": "reject",
+   "P27": "reject",
+   "P28": "reject",
+   "P29": "reject",
+   "P30": "reject",
+   "P31": "reject",
+   "P32": "review",
+   "P33": "reject",
+   "P34": "reject",
+   "P35": "reject",
+   "P36": "reject",
+   "P37": "reject",
+   "P38": "reject",
+   "P39": "reject",
+   "P40": "reject",
+   "P41": "reject",
+   "P42": "reject",
+   "P43": "reject",
+   "P44": "reject",
+   "P45": "reject",
+   "P46": "reject",
+   "P47": "review",
+   "P48": "review",
+   "P49": "review",
+   "P50": "invite",
+   "P51": "reject",
+   "P52": "review"
+  }
+ }
+}

@@ -1,0 +1,26 @@
+Native language: Ukrainian
+Position: Data Scientist/Machine Learning Engineer
+Experience years: 5
+English level: fluent
+
+- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc.
+- As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems).
+- As a domain expert and engineer, significantly improved and refactored pivotal piece of data pipeline for search extraction. Technologies: Scala, Spark.
+- As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet
+- Multiple times hackathons winner
+Full-cycle ML product development from problem definition and gathering requirements to deployment in production systems. 
+I worked on both, ML and non-ML based solutions to solve business problems. 
+
+ML competencies:
+- text classification 
+- time-series forecasting
+- data preparation
+- feature engineering
+- model evaluation
+
+I'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models.
+- Not a data engineer, DevOps, BI, Scala developer positions
+- Not interested in gambling, porn, banking, adtech industries
+- Prefer product-oriented company, not "service"/outsource/"boutique" company, please
+- Preferably mid-size product company (~50-500 people)
+- Flexible environment with collaboration style rather than micro-management

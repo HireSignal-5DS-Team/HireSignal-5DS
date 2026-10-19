@@ -1,0 +1,282 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "73",
+ "cv_id": "cv-f5e93826",
+ "job_id": "J4",
+ "job_title": "Python BackEnd Developer",
+ "outcome": "review",
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "score": 78,
+ "reasons": [
+  "r2: must MET doubted (judge:disagrees): possible false invite",
+  "r3: must MET doubted (judge:disagrees): possible false invite"
+ ],
+ "listed_flags": [
+  "r4 (nice): judge:disagrees",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "message": null,
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": "http://localhost:5678/form-waiting/73?signature=7a77785e25e033e7a3cdfcc0e49a283e9572e44684a423cf2a709c6cb924398c",
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Software development: 5 years of experience or more",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Over 10 years of experience as a Software Developer mostly using python",
+     "start": 819,
+     "end": 890
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999732,
+    "MISSING": 0.000268,
+    "UNCERTAIN": 0
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9528
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Over 10 years of experience as a Software Developer mostly using python",
+     "start": 819,
+     "end": 890
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.998768,
+    "MISSING": 0.001226,
+    "UNCERTAIN": 6e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.8994
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)",
+     "start": 1102,
+     "end": 1189
+    },
+    {
+     "quote": "Designed and implemented a distributed RESTful task queue based on key-value DB using python and lua",
+     "start": 681,
+     "end": 781
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.998994,
+    "MISSING": 0.000975,
+    "UNCERTAIN": 3.1e-05
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9543
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Working with AWS, Docker and microservices",
+   "kind": "nice",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Build projects with microservices",
+     "start": 1068,
+     "end": 1101
+    },
+    {
+     "quote": "Build an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)",
+     "start": 982,
+     "end": 1067
+    },
+    {
+     "quote": "Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)",
+     "start": 1102,
+     "end": 1189
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.99729,
+    "MISSING": 0.002618,
+    "UNCERTAIN": 9.2e-05
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.956
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Experience with Machine Learning",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 5.3e-05,
+    "MISSING": 0.996599,
+    "UNCERTAIN": 0.003348
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9985
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000187,
+    "MISSING": 0.988187,
+    "UNCERTAIN": 0.011626
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9379
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is sent for review because two must-have requirements were met with uncertainty despite the evidence. The CV shows over 10 years of Python development, which meets the 5-year requirement. The experience with developing big systems in Python and asynchronous programming is present in the CV, but the automated system doubts the evidence. The candidate has experience with microservices and AWS, but these are nice-to-haves. Machine learning and algorithms development are not mentioned. The score is 78.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Over 10 years of experience as a Software Developer mostly using python",
+    "line": "Met: the CV shows over 10 years of experience as a Software Developer using Python."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Over 10 years of experience as a Software Developer mostly using python",
+    "line": "Met: the CV mentions extensive Python experience, including work on big systems."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)",
+    "line": "Met: the CV explicitly mentions building systems with asynchronous approaches (tornado, aiohttp, celery)."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Build projects with microservices",
+    "line": "Met: the CV mentions building projects with microservices."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No mention of experience with Machine Learning."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No mention of experience with algorithms development (e.g., collaborative filtering, clustering)."
+   }
+  ],
+  "candidate_letter": "",
+  "flags_for_recruiter": [],
+  "source": "llm",
+  "info_flags": [],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [],
+  "would_be_outcome": "review",
+  "swap": {
+   "ran": false,
+   "skipped": "gate would answer review: a person reviews it anyway"
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.052,
+  "profile": 51.221,
+  "job": 0,
+  "match_and_judge": 11.778
+ }
+}

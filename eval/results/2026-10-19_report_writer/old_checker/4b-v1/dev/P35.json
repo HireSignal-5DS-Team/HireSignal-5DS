@@ -1,0 +1,59 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v1.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because two must-have requirements are missing. The CV shows only 2 years of software development, below the required 5 years. There is no evidence of 2+ years of experience developing big systems with Python. The score is 17.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "Experience years: 2",
+    "line": "Missing: only 2 years of software development experience, below the required 5 years."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no evidence of 2+ years of experience developing big systems with Python."
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: asynchronous programming and performance-critical apps are not clearly mentioned."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no mention of AWS, Docker, or microservices."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no experience with machine learning is indicated."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: no evidence of algorithms development experience."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show the required experience: at least 5 years of software development and 2 years of experience developing big systems with Python.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about asynchronous programming and algorithms development (r3, r6); please verify these points."
+  ]
+ },
+ "source": "llm",
+ "latency_s": 8.35,
+ "peak_vram_mib": 3267,
+ "id": "P35",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

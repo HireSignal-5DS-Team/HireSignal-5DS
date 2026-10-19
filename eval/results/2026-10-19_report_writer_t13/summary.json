@@ -1,0 +1,105 @@
+{
+ "4b-v2/dev": {
+  "n": 28,
+  "pass_first_try": "21/28",
+  "pass_after_retry_llm": "22/28",
+  "template_fallback": "6/28",
+  "checker_errors_first_try_mean": 0.39,
+  "must_covered_final": "150/150",
+  "words_mean": 124.6,
+  "latency_s_mean": 12.71,
+  "latency_s_max": 26.04,
+  "peak_vram_mib": 3267,
+  "first_error_kinds": {
+   "quote is not in its verified CV quotes": 4,
+   "reject letter names (must, UNCERTAIN), which is not a missing must-have": 2,
+   "reject letter names (nice, MISSING), which is not a missing must-have": 2,
+   "reject letter names (must, MET), which is not a missing must-have": 2,
+   "line contradicts its decision (MET)": 1
+  }
+ },
+ "4b-v2/dev_human": {
+  "n": 4,
+  "pass_first_try": "1/4",
+  "pass_after_retry_llm": "3/4",
+  "template_fallback": "1/4",
+  "checker_errors_first_try_mean": 0.75,
+  "must_covered_final": "25/25",
+  "words_mean": 144.5,
+  "latency_s_mean": 22.5,
+  "latency_s_max": 33.73,
+  "peak_vram_mib": 3267,
+  "first_error_kinds": {
+   "reject letter names (nice, MISSING), which is not a missing must-have": 3
+  }
+ },
+ "4b-v3/dev": {
+  "n": 28,
+  "pass_first_try": "22/28",
+  "pass_after_retry_llm": "23/28",
+  "template_fallback": "5/28",
+  "checker_errors_first_try_mean": 0.29,
+  "must_covered_final": "150/150",
+  "words_mean": 124.9,
+  "latency_s_mean": 12.52,
+  "latency_s_max": 25.36,
+  "peak_vram_mib": 3267,
+  "first_error_kinds": {
+   "quote is not in its verified CV quotes": 4,
+   "reject letter names (must, MET), which is not a missing must-have": 2,
+   "reject letter does not name missing must-have": 1,
+   "reject letter names (must, UNCERTAIN), which is not a missing must-have": 1
+  }
+ },
+ "4b-v3/dev_human": {
+  "n": 4,
+  "pass_first_try": "3/4",
+  "pass_after_retry_llm": "3/4",
+  "template_fallback": "1/4",
+  "checker_errors_first_try_mean": 0.25,
+  "must_covered_final": "25/25",
+  "words_mean": 132,
+  "latency_s_mean": 16.0,
+  "latency_s_max": 31.19,
+  "peak_vram_mib": 3267,
+  "first_error_kinds": {
+   "reject letter names (nice, MISSING), which is not a missing must-have": 1
+  }
+ },
+ "4b-v3/test": {
+  "n": 28,
+  "pass_first_try": "21/28",
+  "pass_after_retry_llm": "22/28",
+  "template_fallback": "6/28",
+  "checker_errors_first_try_mean": 0.43,
+  "must_covered_final": "151/151",
+  "words_mean": 122,
+  "latency_s_mean": 12.89,
+  "latency_s_max": 25.94,
+  "peak_vram_mib": 3267,
+  "first_error_kinds": {
+   "quote is not in its verified CV quotes": 9,
+   "reject letter names (must, UNCERTAIN), which is not a missing must-have": 2,
+   "reject letter names (must, MET), which is not a missing must-have": 1
+  }
+ },
+ "4b-v3/test_human": {
+  "n": 6,
+  "pass_first_try": "1/6",
+  "pass_after_retry_llm": "2/6",
+  "template_fallback": "4/6",
+  "checker_errors_first_try_mean": 2.67,
+  "must_covered_final": "32/32",
+  "words_mean": 92.3,
+  "latency_s_mean": 21.58,
+  "latency_s_max": 27.44,
+  "peak_vram_mib": 3267,
+  "first_error_kinds": {
+   "reject letter names (nice, MISSING), which is not a missing must-have": 6,
+   "reject letter names (must, MET), which is not a missing must-have": 4,
+   "quote is not in its verified CV quotes": 4,
+   "candidate letter missing": 1,
+   "summary states another outcome (invite)": 1
+  }
+ }
+}

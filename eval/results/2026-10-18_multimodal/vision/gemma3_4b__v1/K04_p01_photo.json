@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K04_p01_photo",
+  "file": "K04_p01_photo.jpg",
+  "source": "K05.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "<start_of_image>\nCONSULTANT\nExperience 02/2017 to Current\nCompany Name: â€“ City, State\n• Developed project schedule and local and remote staff to collect Water Main data and update GIS system\n• Managed business process and productivity reports to manage field book scanning project and Water Main data collection project.\n• Provided Application support for CIS, Meter Reading, AMI applications, and Neptune AMR applications.\n• Maintained SharePoint site for IT department.\n• Assisted desktop support team with desktop and application user issues.\n• Developed source FTP scripts during implementation of CIS and AMR applications after ransomware attack.\n\nUtility Solutions Consultant, 02/2006 to 04/2017\nCompany Name: â€“ City, State\n• Installed and configured CMWs application, including XML modifications.\n• Led configuration requirements gathering effort for CMWs application implementation.\n• Provided Application support for CIS, Meter Reading, AMI applications, and CMWs applications.\n• Provided Application support for CIS, CMMS, and AMR applications.\n• Developed data import files and Crystal Reports for CMWs application.\n• Performed configuration management for CMWs application.\n• Installed and configured Enterprise Asset Management 1.1 application and SQL Server database.\n• Led System Administration team to design and configure user security for Infor Public Sector application.\n• Provided Application support for CIS, CMMS, and AMR applications.\n• Assisted the City of Cleveland with the installation of their Fixed Network.\n• Developed the Residential AMI Meter Deployment schedule for City of Cleveland AMI Project.\n• Led team to manage data interfaces between City of Atlanta and Contractor systems during the AMR replacement program.\n• Developed business process and reports to manage Automated Meter Reading meter replacement program for City of Atlanta, Bureau of Drinking Water.\n\nCEO/Consultant 02/2000 to 02/2006\nCompany Name: â€“ City, State\n• Managed Griffin Technology Group budget, taxes, expenses and contracts hired and managed employees, including scheduling client support for PC support service.\n• Developed Crystal Reports for client management team to manage business within the Customer Information System.\n• Installed and configured SQL servers for IT support.\n• Developed PL/SQL views to manage difficult data issues in Reporting.\n• Gathered requirements for handoff of reports, analyses, and dashboards.\n• Provided application support to implement and install new applications and tracks software.\n• Developed new PL/SQL solutions for Access and Application Management to client to track new Projects.\n• Provided Application Support for Access and Application Management and HP-CX servers.\n• Assisted System Administrators in infrastructure upgrades and daily administration of Citrix servers.\n\nInformation Technology Consultant, 10/1999 to 12/2000\nCompany Name: â€“ City, State\n• Developed new PL/SQL Scripts. Gathering and Functions for XML Import.\n• Developed new PL/SQL Scripts.\n• Assisted the Development Team with the implementation of the new application.\n• Developed the Web Application.\n\n<end_of_image>",
+   "model": "gemma3:4b",
+   "latency_s": 17.01,
+   "eval_count": 651,
+   "done_reason": "stop",
+   "peak_vram_mib": 3889
+  }
+ ]
+}

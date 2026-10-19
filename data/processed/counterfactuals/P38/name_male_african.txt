@@ -1,0 +1,29 @@
+Kwame Mensah
+Pronouns: he/him
+Position: Junior Python Developer
+Experience years: 0.5
+English level: intermediate
+
+I worked on several overseas projects related to business, marketing and security systems.
+The first project is a scalable platform for the development of B2B and B2C businesses, which deals with finding customers, marketing, business development and its support
+The second project is related to the field of security. Connects cities, districts, buildings and displays surveillance devices, scanners and other security devices including data about them.
+
+WORK EXPERIENCES
+PROJECTS:
+Puppy SPA(API):
+Technologies:
+Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic
+
+Application “Quiz project“(API):
+Technologies:
+Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic
+
+Application for brows studio (with templates):
+Technologies:
+Python3, Django, HTML, CSS, Bootstrap,
+SQLite
+
+Application for brows studio (API)
+Technologies:
+Python3, Django, Django Rest Framework,
+SQLite

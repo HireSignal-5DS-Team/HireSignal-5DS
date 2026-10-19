@@ -1,0 +1,62 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is sent for review because two must-have requirements were met with uncertainty by the automated system, raising a possible false invite. The candidate has 10 years of web development experience, which meets the 5-year requirement. Evidence for Python and big systems experience is present, but the system disagreed on whether it meets the 2-year threshold. Similarly, the system doubted whether asynchronous programming and performance-critical applications were demonstrated. The candidate lacks experience with machine learning, which is a missing nice-to-have. Docker and AWS are mentioned in a project, but the confidence is low.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"I have 10 years of experience in web application development.\", \"line\": \"Met: the CV shows 10 years of experience in web application development.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Project \\\"Business Process System\\\"\", \"line\": \"Met: the CV mentions a project as a fullstack developer with Python, though the system disagreed on the evidence.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)\", \"line\": \"Met: the CV lists technologies including Python, Celery, and Channels, indicating asynchronous programming experience.\"}, {\"req_id\": \"r4\", \"decision\": \"UNCERTAIN\", \"quote\": \"Project \\\"Backend of Web service for recommendation system\\\"\", \"line\": \"Uncertain: the CV mentions Docker and AWS in a project, but the Matcher was unsure about the relevance and experience level.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: the CV does not mention any experience with machine learning.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: no evidence is provided for algorithms development such as collaborative filtering or clustering.\"}], \"candidate_letter\": \"\", \"flags_for_recruiter\": [\"The Matcher was unsure about r4: Docker and AWS usage in a project is mentioned but not clearly linked to experience.\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is sent for review because two must-have requirements were met with uncertainty by the automated system, raising a possible false invite. The candidate has 10 years of web development experience, which meets the 5-year requirement. Evidence for Python and big systems experience is present, but the system disagreed on whether it meets the 2-year threshold. Similarly, the system doubted whether asynchronous programming and performance-critical applications were demonstrated. The candidate lacks experience with machine learning, which is a missing nice-to-have. Docker and AWS are mentioned in a project, but the confidence is low.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "I have 10 years of experience in web application development.",
+    "line": "Met: the CV shows 10 years of experience in web application development."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Project \"Business Process System\"",
+    "line": "Met: the CV mentions a project as a fullstack developer with Python, though the system disagreed on the evidence."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)",
+    "line": "Met: the CV lists technologies including Python, Celery, and Channels, indicating asynchronous programming experience."
+   },
+   {
+    "req_id": "r4",
+    "decision": "UNCERTAIN",
+    "quote": "Project \"Backend of Web service for recommendation system\"",
+    "line": "Uncertain: the CV mentions Docker and AWS in a project, but the Matcher was unsure about the relevance and experience level."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: the CV does not mention any experience with machine learning."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: no evidence is provided for algorithms development such as collaborative filtering or clustering."
+   }
+  ],
+  "candidate_letter": "",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about r4: Docker and AWS usage in a project is mentioned but not clearly linked to experience."
+  ]
+ },
+ "source": "llm",
+ "latency_s": 8.89,
+ "peak_vram_mib": 3267,
+ "id": "P32",
+ "outcome": "review",
+ "synthetic_flags": false
+}

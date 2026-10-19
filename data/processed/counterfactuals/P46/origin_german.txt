@@ -1,0 +1,19 @@
+Nationality: German
+Location: Berlin, Germany
+Position: BI/Data Lead/Architect
+Experience years: 11
+English level: upper
+
+Designed and implemented a BI project(DWH, ETL, Data visualization) from scratch. Extended the team from one person to 5 engineers
+Extensive experience in R&D, Product Development, Engineering and QC
+
+DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL
+Tools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho
+Markup languages, template engines: HTML, XML
+SCMs: Git, Subversion
+Programming languages: Python, Ruby, JS
+Web frameworks: Ruby on Rails
+Operating systems: Windows, Linux
+
+Development methodology: Agile, Scrum, Waterfall
+Task-tracker: JIRA, YouTrack

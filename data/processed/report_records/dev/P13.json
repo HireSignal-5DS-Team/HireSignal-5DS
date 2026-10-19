@@ -1,0 +1,130 @@
+{
+ "job_title": "Data Engineer",
+ "decided_by": "gate",
+ "outcome": "reject",
+ "score": 68,
+ "gate_rule": "1 reject: must-have MISSING",
+ "gate_reasons": [
+  "r3: must-have MISSING"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+   "decision": "UNCERTAIN",
+   "quotes": [
+    "Successfully managed a team of up to 10 Data Engineers, at the same time",
+    "Currently transitioning from Team Lead role to the Delivery Manager.",
+    "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+   ],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": true,
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "skill_terms": [
+    "Data Warehousing",
+    "Data Lakes"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Hands-on experience with SQL",
+   "decision": "MET",
+   "quotes": [
+    "Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop)."
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "SQL"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Knowledge of Python",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Python"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "must",
+   "text": "Experience with GCP or another cloud provider",
+   "decision": "MET",
+   "quotes": [
+    "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "GCP"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "must",
+   "text": "Good spoken English",
+   "decision": "MET",
+   "quotes": [
+    "English level: fluent"
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "English"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "nice",
+   "text": "Willingness to research business logic",
+   "decision": "UNCERTAIN",
+   "quotes": [
+    "Interpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+   ],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": true,
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "skill_terms": [],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P13",
+ "pair_id": "P13",
+ "split": "dev",
+ "synthetic_flags": false
+}

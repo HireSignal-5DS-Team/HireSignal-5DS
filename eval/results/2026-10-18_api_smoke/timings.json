@@ -1,0 +1,74 @@
+[
+ {
+  "call": "reader_kaggle_pdf",
+  "endpoint": "/reader",
+  "wall_s": 0.046,
+  "server_s": 0.035
+ },
+ {
+  "call": "profile_kaggle_pdf",
+  "endpoint": "/profile",
+  "wall_s": 146.346,
+  "server_s": 146.337
+ },
+ {
+  "call": "reader_djinni_cv",
+  "endpoint": "/reader",
+  "wall_s": 0.159,
+  "server_s": 0.152
+ },
+ {
+  "call": "profile_djinni_cv",
+  "endpoint": "/profile",
+  "wall_s": 5.782,
+  "server_s": 5.774
+ },
+ {
+  "call": "job_J2",
+  "endpoint": "/job",
+  "wall_s": 6.944,
+  "server_s": 6.935
+ },
+ {
+  "call": "match_r1",
+  "endpoint": "/match",
+  "wall_s": 2.672,
+  "server_s": 2.666
+ },
+ {
+  "call": "match_r2",
+  "endpoint": "/match",
+  "wall_s": 2.42,
+  "server_s": 2.413
+ },
+ {
+  "call": "match_r3",
+  "endpoint": "/match",
+  "wall_s": 2.291,
+  "server_s": 2.282
+ },
+ {
+  "call": "match_r4",
+  "endpoint": "/match",
+  "wall_s": 2.324,
+  "server_s": 2.317
+ },
+ {
+  "call": "match_r5",
+  "endpoint": "/match",
+  "wall_s": 2.279,
+  "server_s": 2.272
+ },
+ {
+  "call": "match_r6",
+  "endpoint": "/match",
+  "wall_s": 2.352,
+  "server_s": 2.344
+ },
+ {
+  "call": "match_r7",
+  "endpoint": "/match",
+  "wall_s": 5.993,
+  "server_s": 5.986
+ }
+]

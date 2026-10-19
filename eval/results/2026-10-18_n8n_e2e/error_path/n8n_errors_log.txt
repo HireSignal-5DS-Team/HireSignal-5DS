@@ -1,0 +1,1 @@
+2026-10-18T08:47:37.331Z	workflow=HireSignal v1	node=HTTP /reader	execution=11	message=The service refused the connection - perhaps it is offline

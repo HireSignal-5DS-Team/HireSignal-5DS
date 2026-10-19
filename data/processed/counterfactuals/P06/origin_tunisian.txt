@@ -1,0 +1,24 @@
+Nationality: Tunisian
+Location: Tunis, Tunisia
+Position: Data Science/Machine Learning Trainee
+Experience years: 1
+English level: fluent
+
+english: C1 certificate+C2 course
+german: C1 certificate
+kaggle competitions: Cassava Leaf Disease Classification - top 11%; Mechanisms of Action (MoA) Prediction - top 25%
+Also currently participating in Optiver Realized Volatility Prediction competition (top 20%)
+Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling 
+Languages: C++, Python, SQL, R(basic)
+Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging
+Experience in regression and neural models for stock prediction (bachelor thesis is uploaded on my github)
+Kaggle competitions CV and tabular (CNN pytorch, tabnet, xgboost)
+my kaggle: equinxx
+Courses: 
+* Python, SQL
+* Deep Learning Specialization by DeepLearning.AI (5 courses) 
+* Build Better Generative Adversarial Networks (GANs) by DeepLearning.AI
+* Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning by DeepLearning.AI
+I also have knowledge in binary classification models
+Looking for any job experience that involves personal growth and progress, especially research opportunities :)
+Even though I have experience in mathematical finance and economic modelling, I am also interested in CV/NLP projects and I would gladly be involved in projects from international clients due to my strong language skills

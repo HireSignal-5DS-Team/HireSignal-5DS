@@ -1,0 +1,45 @@
+{
+ "pairs": 52,
+ "requirement_rows": 364,
+ "row_sources": {
+  "ai_checked_ok": 351,
+  "human_changed": 12,
+  "changed_without_decision": 1
+ },
+ "changed_rate_checked": 0.033,
+ "gold_decisions": {
+  "UNCERTAIN": 55,
+  "MISSING": 203,
+  "MET": 106
+ },
+ "pair_sources": {
+  "human_changed": 6,
+  "ai_checked_ok": 46
+ },
+ "gold_outcomes": {
+  "review": 14,
+  "reject": 35,
+  "invite": 3
+ },
+ "outcomes_by_split": {
+  "dev": {
+   "review": 7,
+   "reject": 17,
+   "invite": 2
+  },
+  "test": {
+   "reject": 18,
+   "review": 7,
+   "invite": 1
+  }
+ },
+ "decision_log": [
+  "J2 r6 must -> nice (Approver, 2026-10-18)"
+ ],
+ "flags": [
+  "P13 r6: CHANGED without a decision; AI kept",
+  "P23 r8: gold MET quote not exact",
+  "P30 r6: CHECK=OK but human decision MET written; human decision used",
+  "P30 r6: gold MET quote not exact"
+ ]
+}

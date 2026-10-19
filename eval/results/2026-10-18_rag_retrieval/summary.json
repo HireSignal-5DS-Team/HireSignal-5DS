@@ -1,0 +1,2917 @@
+{
+ "label": "real-GPU (embeddings / rerankers on cuda)",
+ "queries": {
+  "dev": 24,
+  "test": 22
+ },
+ "chosen_on_dev": {
+  "config": {
+   "chunking": "A",
+   "search": "dense",
+   "embed": "all-MiniLM-L6-v2",
+   "reranker": null,
+   "graph": false
+  },
+  "build_s": 23.79,
+  "dev": {
+   "n": 24,
+   "hit@1": 0.708,
+   "hit@3": 0.792,
+   "mrr@10": 0.762,
+   "latency_ms": 38.05
+  },
+  "test": {
+   "n": 22,
+   "hit@1": 0.455,
+   "hit@3": 0.727,
+   "mrr@10": 0.591,
+   "latency_ms": 28.98
+  },
+  "per_query": {
+   "dev": [
+    {
+     "qid": "E01",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+      "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333",
+      "http://data.europa.eu/esco/skill/bf4d884f-c848-402a-b130-69c266b04164"
+     ]
+    },
+    {
+     "qid": "E04",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/598de5b0-5b58-4ea7-8058-a4bc4d18c742",
+      "http://data.europa.eu/esco/skill/7369f779-4b71-4aab-8836-48b69c676eec",
+      "http://data.europa.eu/esco/skill/9cf681c7-89ec-470c-b651-7fe03786f586"
+     ]
+    },
+    {
+     "qid": "E06",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/38d49d88-9069-467b-b29e-3cae739bdd4d",
+      "http://data.europa.eu/esco/skill/be727774-46d7-43d7-aee9-1a51b5cd8c71",
+      "http://data.europa.eu/esco/skill/875eeec4-fc70-4e6a-80ef-4d18356976e3"
+     ]
+    },
+    {
+     "qid": "E09",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/fff0e2cd-d0bd-4b02-9daf-158b79d9688a",
+      "http://data.europa.eu/esco/skill/696e3b5b-8b61-45af-ae4c-3ab700f197ec",
+      "http://data.europa.eu/esco/skill/25f0ea33-b4a2-4f31-b7b4-7d20e827b180"
+     ]
+    },
+    {
+     "qid": "E11",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/e46291c7-52b9-4174-bd59-178884861038",
+      "http://data.europa.eu/esco/skill/76ef6ed3-1658-4a1a-9593-204d799c6d0c",
+      "http://data.europa.eu/esco/skill/e819cc1e-09d9-47f2-b418-93972852daef"
+     ]
+    },
+    {
+     "qid": "E13",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/7b0d5000-00da-4864-b776-6de49a87a669",
+      "http://data.europa.eu/esco/skill/945b8655-5577-4c3a-946a-842d4527afa8",
+      "http://data.europa.eu/esco/skill/734b6025-0d14-499d-8e95-fdf512058e77"
+     ]
+    },
+    {
+     "qid": "N01",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce",
+      "http://data.europa.eu/esco/skill/a4e31589-3632-4926-91d0-15b889c90b9b",
+      "http://data.europa.eu/esco/skill/6195c5f7-a4fb-425d-a3dd-c4467c4471a3"
+     ]
+    },
+    {
+     "qid": "O01",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/598de5b0-5b58-4ea7-8058-a4bc4d18c742",
+      "http://data.europa.eu/esco/skill/9cf681c7-89ec-470c-b651-7fe03786f586",
+      "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655"
+     ]
+    },
+    {
+     "qid": "O03",
+     "rank": 8,
+     "top3": [
+      "http://data.europa.eu/esco/skill/a8d07b5a-c1a1-42c6-9d53-db9c7a2ca996",
+      "http://data.europa.eu/esco/skill/14fdac88-6d4a-4e47-9df5-02c6d1e86fdd",
+      "http://data.europa.eu/esco/skill/3ec2e4d6-7000-4905-bf1a-c5b1679416de"
+     ]
+    },
+    {
+     "qid": "O05",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/ecc4552a-92c5-4222-b18d-faf5ac841080",
+      "http://data.europa.eu/esco/skill/7b0d5000-00da-4864-b776-6de49a87a669",
+      "http://data.europa.eu/esco/skill/3e2ab38a-4519-4bef-b762-a8bf4836a775"
+     ]
+    },
+    {
+     "qid": "O07",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/be727774-46d7-43d7-aee9-1a51b5cd8c71",
+      "http://data.europa.eu/esco/skill/875eeec4-fc70-4e6a-80ef-4d18356976e3",
+      "http://data.europa.eu/esco/skill/8fa840f7-e66a-4370-8e6d-7d554260c31c"
+     ]
+    },
+    {
+     "qid": "O09",
+     "rank": 8,
+     "top3": [
+      "http://data.europa.eu/esco/skill/6b643893-0a1f-4f6c-83a1-e7eef75849b9",
+      "http://data.europa.eu/esco/skill/ce8ae6ca-61d8-4174-b457-641de96cbff4",
+      "http://data.europa.eu/esco/skill/6195c5f7-a4fb-425d-a3dd-c4467c4471a3"
+     ]
+    },
+    {
+     "qid": "O10",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/3ec2e4d6-7000-4905-bf1a-c5b1679416de",
+      "http://data.europa.eu/esco/skill/fd6d2981-3d4a-4ce2-9741-cfc98c5b74bd",
+      "http://data.europa.eu/esco/skill/143769cb-b61e-47d8-a61e-eedfbec1016c"
+     ]
+    },
+    {
+     "qid": "O12",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/b758675a-b03b-4e4b-897c-57ca14b1a3d0",
+      "http://data.europa.eu/esco/skill/7ee4c2ea-b349-4bd2-81a3-ec31475d4833",
+      "http://data.europa.eu/esco/skill/1dabb413-18e8-48ed-a963-44978e67ad32"
+     ]
+    },
+    {
+     "qid": "O14",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/9d0d89be-bffa-4393-b6f6-8d05bea49051",
+      "http://data.europa.eu/esco/skill/9faa44df-0821-4f69-8f86-184c799cf44f",
+      "http://data.europa.eu/esco/skill/fdf15b35-9028-4acb-bfd2-43f00a015cd9"
+     ]
+    },
+    {
+     "qid": "O16",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/598de5b0-5b58-4ea7-8058-a4bc4d18c742",
+      "http://data.europa.eu/esco/skill/7369f779-4b71-4aab-8836-48b69c676eec",
+      "http://data.europa.eu/esco/skill/29fb0fb5-dfc4-4098-ac9b-3a712000f48f"
+     ]
+    },
+    {
+     "qid": "O18",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/64ff8d5f-58a8-4efb-af5a-e161854b3e9a",
+      "http://data.europa.eu/esco/skill/6d3edede-8951-4621-a835-e04323300fa0",
+      "http://data.europa.eu/esco/skill/7ee20fe2-facd-4cc5-837b-927429e0e7ac"
+     ]
+    },
+    {
+     "qid": "O20",
+     "rank": 5,
+     "top3": [
+      "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433",
+      "http://data.europa.eu/esco/skill/3e2ab38a-4519-4bef-b762-a8bf4836a775",
+      "http://data.europa.eu/esco/skill/31eecea5-c1ef-4e5c-96a9-808ff4e43813"
+     ]
+    },
+    {
+     "qid": "O22",
+     "rank": 3,
+     "top3": [
+      "http://data.europa.eu/esco/skill/0fb753a1-2ef2-4429-84d2-ecb2b24daf7a",
+      "http://data.europa.eu/esco/skill/afd63e8c-a4e7-42d3-86c9-3b2dd549a353",
+      "http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce"
+     ]
+    },
+    {
+     "qid": "O24",
+     "rank": 2,
+     "top3": [
+      "http://data.europa.eu/esco/skill/b4dc6e4f-dc7d-445f-8ce2-d7b9d225e282",
+      "http://data.europa.eu/esco/skill/25b291b5-8245-4d9d-b391-86a8a31d7109",
+      "http://data.europa.eu/esco/skill/bf6c5ed4-84af-440f-abcc-7fa5ba19c738"
+     ]
+    },
+    {
+     "qid": "O26",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/07889c08-7220-47c8-96f7-6068fbea00dc",
+      "http://data.europa.eu/esco/skill/c5e8abde-d2ba-4e8e-a65e-720b71180666",
+      "http://data.europa.eu/esco/skill/3e2ab38a-4519-4bef-b762-a8bf4836a775"
+     ]
+    },
+    {
+     "qid": "O28",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/7193cb6d-8334-494f-86e5-21e6d03a47c3",
+      "http://data.europa.eu/esco/skill/7d10fcb2-b368-48ab-996b-7c9fafcf68ed",
+      "http://data.europa.eu/esco/skill/24c200e5-be20-4370-a137-ab53797f3a17"
+     ]
+    },
+    {
+     "qid": "O30",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433",
+      "http://data.europa.eu/esco/skill/3a2d5b45-56e4-4f5a-a55a-4a4a65afdc43",
+      "http://data.europa.eu/esco/skill/ecc4552a-92c5-4222-b18d-faf5ac841080"
+     ]
+    },
+    {
+     "qid": "O32",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/50b100ea-74fd-4706-99db-3e4ca55e51b8",
+      "http://data.europa.eu/esco/skill/3e2ab38a-4519-4bef-b762-a8bf4836a775",
+      "http://data.europa.eu/esco/skill/07889c08-7220-47c8-96f7-6068fbea00dc"
+     ]
+    }
+   ],
+   "test": [
+    {
+     "qid": "E03",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/ecc4552a-92c5-4222-b18d-faf5ac841080",
+      "http://data.europa.eu/esco/skill/5608d5a0-6d5e-43b7-be37-616501729bb4",
+      "http://data.europa.eu/esco/skill/3a2d5b45-56e4-4f5a-a55a-4a4a65afdc43"
+     ]
+    },
+    {
+     "qid": "E05",
+     "rank": 3,
+     "top3": [
+      "http://data.europa.eu/esco/skill/89db623e-e1fc-4ec2-9a0f-7b72b4c35303",
+      "http://data.europa.eu/esco/skill/8316979b-df5a-4dc7-98ef-61ec6a10df84",
+      "http://data.europa.eu/esco/skill/7ee4c2ea-b349-4bd2-81a3-ec31475d4833"
+     ]
+    },
+    {
+     "qid": "E07",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/9d0d89be-bffa-4393-b6f6-8d05bea49051",
+      "http://data.europa.eu/esco/skill/cb5cccc9-abe4-4b11-abe6-d27e5cd85fb1",
+      "http://data.europa.eu/esco/skill/fd6d2981-3d4a-4ce2-9741-cfc98c5b74bd"
+     ]
+    },
+    {
+     "qid": "E10",
+     "rank": 2,
+     "top3": [
+      "http://data.europa.eu/esco/skill/b216d9a2-7d4e-4312-8d05-e375f4ab44d8",
+      "http://data.europa.eu/esco/skill/60c78287-22eb-4103-9c8c-28deaa460da0",
+      "http://data.europa.eu/esco/skill/fcc0a1c8-d36e-4f8e-b928-00d5bca10a47"
+     ]
+    },
+    {
+     "qid": "E12",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/1973c966-f236-40c9-b2d4-5d71a89019be",
+      "http://data.europa.eu/esco/skill/b0a3bb25-a02f-43ed-ab1f-994fa66a424a",
+      "http://data.europa.eu/esco/skill/c3a03c5a-c260-4c26-9b9a-873abb396f4d"
+     ]
+    },
+    {
+     "qid": "E14",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/8ff015a0-98ea-4d80-a23e-1f68110a919e",
+      "http://data.europa.eu/esco/skill/dba46f87-0831-49cd-a1c7-340a653c0221",
+      "http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4"
+     ]
+    },
+    {
+     "qid": "N02",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/36fccad9-1d20-4104-bcc2-a8ea9d1ce5ea",
+      "http://data.europa.eu/esco/skill/0f00f63f-3ab4-4057-b92f-500584b51757",
+      "http://data.europa.eu/esco/skill/1605025e-a179-421f-8f35-5b07d182a6b2"
+     ]
+    },
+    {
+     "qid": "O02",
+     "rank": 2,
+     "top3": [
+      "http://data.europa.eu/esco/skill/e46291c7-52b9-4174-bd59-178884861038",
+      "http://data.europa.eu/esco/skill/3ec2e4d6-7000-4905-bf1a-c5b1679416de",
+      "http://data.europa.eu/esco/skill/42c3287f-5e50-4559-a2d1-2000c70e0aab"
+     ]
+    },
+    {
+     "qid": "O04",
+     "rank": 3,
+     "top3": [
+      "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+      "http://data.europa.eu/esco/skill/53780150-1581-4ae6-b435-34068c172caf",
+      "http://data.europa.eu/esco/skill/ecc4552a-92c5-4222-b18d-faf5ac841080"
+     ]
+    },
+    {
+     "qid": "O06",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/9d0d89be-bffa-4393-b6f6-8d05bea49051",
+      "http://data.europa.eu/esco/skill/966f2fd3-3de6-42da-b87c-da924c6d7960",
+      "http://data.europa.eu/esco/skill/925463a7-d51f-4d5b-9f79-4d28cf30acde"
+     ]
+    },
+    {
+     "qid": "O08",
+     "rank": 3,
+     "top3": [
+      "http://data.europa.eu/esco/skill/7482a123-e801-48de-9733-262125671410",
+      "http://data.europa.eu/esco/skill/1dabb413-18e8-48ed-a963-44978e67ad32",
+      "http://data.europa.eu/esco/skill/b758675a-b03b-4e4b-897c-57ca14b1a3d0"
+     ]
+    },
+    {
+     "qid": "O11",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/4f5c1208-62fd-4e5a-a51e-306c06947e11",
+      "http://data.europa.eu/esco/skill/c3e36d05-8ae8-447f-bb2b-6f9409f85389",
+      "http://data.europa.eu/esco/skill/9ff9db9d-d14b-426e-83f3-e7449af6c79f"
+     ]
+    },
+    {
+     "qid": "O13",
+     "rank": 2,
+     "top3": [
+      "http://data.europa.eu/esco/skill/1dabb413-18e8-48ed-a963-44978e67ad32",
+      "http://data.europa.eu/esco/skill/b758675a-b03b-4e4b-897c-57ca14b1a3d0",
+      "http://data.europa.eu/esco/skill/8316979b-df5a-4dc7-98ef-61ec6a10df84"
+     ]
+    },
+    {
+     "qid": "O15",
+     "rank": 5,
+     "top3": [
+      "http://data.europa.eu/esco/skill/e46291c7-52b9-4174-bd59-178884861038",
+      "http://data.europa.eu/esco/skill/4e6d2538-a48e-48a7-8dad-14b067cfcb8b",
+      "http://data.europa.eu/esco/skill/b8eb2517-37d8-43e6-9856-9c29d5c51fde"
+     ]
+    },
+    {
+     "qid": "O17",
+     "rank": 5,
+     "top3": [
+      "http://data.europa.eu/esco/skill/6b643893-0a1f-4f6c-83a1-e7eef75849b9",
+      "http://data.europa.eu/esco/skill/c13fb093-5ffb-491a-b8b7-fa2d42a57e2e",
+      "http://data.europa.eu/esco/skill/d3286405-49f8-4e8a-8046-a4376b4e7963"
+     ]
+    },
+    {
+     "qid": "O19",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+      "http://data.europa.eu/esco/skill/bf4d884f-c848-402a-b130-69c266b04164",
+      "http://data.europa.eu/esco/skill/2c4e11ef-da18-4e19-816b-e6bc19e12424"
+     ]
+    },
+    {
+     "qid": "O21",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/81b082fb-9a00-4660-976a-10c985979100",
+      "http://data.europa.eu/esco/skill/83218cac-3599-417e-93d2-26013cdccd98",
+      "http://data.europa.eu/esco/skill/a4e31589-3632-4926-91d0-15b889c90b9b"
+     ]
+    },
+    {
+     "qid": "O23",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/e46291c7-52b9-4174-bd59-178884861038",
+      "http://data.europa.eu/esco/skill/47a49cd6-097d-457a-9f7b-c290c14930d5",
+      "http://data.europa.eu/esco/skill/3ec2e4d6-7000-4905-bf1a-c5b1679416de"
+     ]
+    },
+    {
+     "qid": "O25",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/505e4ef3-7ce4-437d-b7b4-5c608f71c258",
+      "http://data.europa.eu/esco/skill/95ee5e38-5c1e-4cd2-a21d-6921390025a9",
+      "http://data.europa.eu/esco/skill/3e2ab38a-4519-4bef-b762-a8bf4836a775"
+     ]
+    },
+    {
+     "qid": "O27",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/25f0ea33-b4a2-4f31-b7b4-7d20e827b180",
+      "http://data.europa.eu/esco/skill/3e2ab38a-4519-4bef-b762-a8bf4836a775",
+      "http://data.europa.eu/esco/skill/0d6714c6-720e-4985-9791-5ab85d28da79"
+     ]
+    },
+    {
+     "qid": "O29",
+     "rank": 9,
+     "top3": [
+      "http://data.europa.eu/esco/skill/294cf13e-4fdf-4cb8-bb6b-31b9da7f4819",
+      "http://data.europa.eu/esco/skill/633a3637-2c6b-40ae-ac38-289eb2a62aa6",
+      "http://data.europa.eu/esco/skill/143769cb-b61e-47d8-a61e-eedfbec1016c"
+     ]
+    },
+    {
+     "qid": "O31",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/4339176e-3acd-4f7f-a5d9-445bee3d23f2",
+      "http://data.europa.eu/esco/skill/1c582939-d981-4325-a2ac-f87fc6cf2315",
+      "http://data.europa.eu/esco/skill/55e910e4-736d-44cf-bfa9-b15adc5d91d2"
+     ]
+    }
+   ]
+  }
+ },
+ "current_v0": {
+  "config": {
+   "chunking": "A",
+   "search": "bm25",
+   "embed": null,
+   "reranker": null,
+   "graph": false
+  },
+  "build_s": 0.04,
+  "dev": {
+   "n": 24,
+   "hit@1": 0.333,
+   "hit@3": 0.5,
+   "mrr@10": 0.436,
+   "latency_ms": 0.09
+  },
+  "test": {
+   "n": 22,
+   "hit@1": 0.273,
+   "hit@3": 0.455,
+   "mrr@10": 0.382,
+   "latency_ms": 0.08
+  },
+  "per_query": {
+   "dev": [
+    {
+     "qid": "E01",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+      "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333",
+      "http://data.europa.eu/esco/skill/07dd856d-6141-48a7-a228-918f88494812"
+     ]
+    },
+    {
+     "qid": "E04",
+     "rank": 7,
+     "top3": [
+      "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+      "http://data.europa.eu/esco/skill/76ef6ed3-1658-4a1a-9593-204d799c6d0c",
+      "http://data.europa.eu/esco/skill/7369f779-4b71-4aab-8836-48b69c676eec"
+     ]
+    },
+    {
+     "qid": "E06",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/38d49d88-9069-467b-b29e-3cae739bdd4d",
+      "http://data.europa.eu/esco/skill/27910071-8dcd-40e5-9b58-7db56e9d6d2c",
+      "http://data.europa.eu/esco/skill/fbafa41f-cd05-4109-a649-8b44d306d779"
+     ]
+    },
+    {
+     "qid": "E09",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/fff0e2cd-d0bd-4b02-9daf-158b79d9688a",
+      "http://data.europa.eu/esco/skill/637ca2e2-0624-48b1-be6e-9ff4580344ac",
+      "http://data.europa.eu/esco/skill/25f0ea33-b4a2-4f31-b7b4-7d20e827b180"
+     ]
+    },
+    {
+     "qid": "E11",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/e46291c7-52b9-4174-bd59-178884861038",
+      "http://data.europa.eu/esco/skill/e819cc1e-09d9-47f2-b418-93972852daef"
+     ]
+    },
+    {
+     "qid": "E13",
+     "rank": 7,
+     "top3": [
+      "http://data.europa.eu/esco/skill/734b6025-0d14-499d-8e95-fdf512058e77",
+      "http://data.europa.eu/esco/skill/945b8655-5577-4c3a-946a-842d4527afa8",
+      "http://data.europa.eu/esco/skill/727eb829-28da-4d6a-8552-ba5b5d280c41"
+     ]
+    },
+    {
+     "qid": "N01",
+     "rank": 2,
+     "top3": [
+      "http://data.europa.eu/esco/skill/0fb753a1-2ef2-4429-84d2-ecb2b24daf7a",
+      "http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce"
+     ]
+    },
+    {
+     "qid": "O01",
+     "rank": 2,
+     "top3": [
+      "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+      "http://data.europa.eu/esco/skill/598de5b0-5b58-4ea7-8058-a4bc4d18c742",
+      "http://data.europa.eu/esco/skill/ab1e97ed-2319-4293-a8b7-072d2648822f"
+     ]
+    },
+    {
+     "qid": "O03",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/a8d07b5a-c1a1-42c6-9d53-db9c7a2ca996"
+     ]
+    },
+    {
+     "qid": "O05",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/7b0d5000-00da-4864-b776-6de49a87a669"
+     ]
+    },
+    {
+     "qid": "O07",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/875eeec4-fc70-4e6a-80ef-4d18356976e3",
+      "http://data.europa.eu/esco/skill/27910071-8dcd-40e5-9b58-7db56e9d6d2c",
+      "http://data.europa.eu/esco/skill/d9013e0e-e937-43d5-ab71-0e917ee882b8"
+     ]
+    },
+    {
+     "qid": "O09",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/d908a818-70ef-419e-9d60-8f459114cb2f",
+      "http://data.europa.eu/esco/skill/fb3bc9b5-2297-4bba-85b1-60f696a92db8",
+      "http://data.europa.eu/esco/skill/debb8d81-ed7f-447d-853a-5d107fda6fcf"
+     ]
+    },
+    {
+     "qid": "O10",
+     "rank": 6,
+     "top3": [
+      "http://data.europa.eu/esco/skill/fd6d2981-3d4a-4ce2-9741-cfc98c5b74bd",
+      "http://data.europa.eu/esco/skill/f2d57f41-43b4-4f5b-8100-3df5c21eda50",
+      "http://data.europa.eu/esco/skill/0d6714c6-720e-4985-9791-5ab85d28da79"
+     ]
+    },
+    {
+     "qid": "O12",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/b758675a-b03b-4e4b-897c-57ca14b1a3d0",
+      "http://data.europa.eu/esco/skill/7ee4c2ea-b349-4bd2-81a3-ec31475d4833",
+      "http://data.europa.eu/esco/skill/4f060129-8b75-4d58-a8dd-515bd8fef349"
+     ]
+    },
+    {
+     "qid": "O14",
+     "rank": null,
+     "top3": []
+    },
+    {
+     "qid": "O16",
+     "rank": 2,
+     "top3": [
+      "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+      "http://data.europa.eu/esco/skill/598de5b0-5b58-4ea7-8058-a4bc4d18c742",
+      "http://data.europa.eu/esco/skill/13b4a3d2-abdf-4442-8e52-d7464a58ecbc"
+     ]
+    },
+    {
+     "qid": "O18",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/64ff8d5f-58a8-4efb-af5a-e161854b3e9a",
+      "http://data.europa.eu/esco/skill/6d3edede-8951-4621-a835-e04323300fa0",
+      "http://data.europa.eu/esco/skill/0ee9e985-0ee5-4a73-8a12-78b53b261bb2"
+     ]
+    },
+    {
+     "qid": "O20",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/cb89a5c0-b5cb-4c62-8e7e-7714631b66b5"
+     ]
+    },
+    {
+     "qid": "O22",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce"
+     ]
+    },
+    {
+     "qid": "O24",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/b4dc6e4f-dc7d-445f-8ce2-d7b9d225e282",
+      "http://data.europa.eu/esco/skill/94579fbb-0485-48d4-b97e-ca85e15691d3",
+      "http://data.europa.eu/esco/skill/b105ec9b-0857-41d6-8d07-a83e58b73d90"
+     ]
+    },
+    {
+     "qid": "O26",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/f2d57f41-43b4-4f5b-8100-3df5c21eda50",
+      "http://data.europa.eu/esco/skill/0d6714c6-720e-4985-9791-5ab85d28da79",
+      "http://data.europa.eu/esco/skill/57231a22-4da7-49c8-97b8-75672feadf1e"
+     ]
+    },
+    {
+     "qid": "O28",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/b8c01891-e3df-4a4b-948d-95b45e1788f5",
+      "http://data.europa.eu/esco/skill/251b5528-693c-4ef9-a7f6-9924bb8d7ef8",
+      "http://data.europa.eu/esco/skill/c453cf81-6197-428e-84c6-70c773b63f27"
+     ]
+    },
+    {
+     "qid": "O30",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/3a2d5b45-56e4-4f5a-a55a-4a4a65afdc43",
+      "http://data.europa.eu/esco/skill/ecc4552a-92c5-4222-b18d-faf5ac841080",
+      "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+     ]
+    },
+    {
+     "qid": "O32",
+     "rank": 2,
+     "top3": [
+      "http://data.europa.eu/esco/skill/3e2ab38a-4519-4bef-b762-a8bf4836a775",
+      "http://data.europa.eu/esco/skill/50b100ea-74fd-4706-99db-3e4ca55e51b8",
+      "http://data.europa.eu/esco/skill/cc7370dd-69fa-4c67-a96f-d4d135d38700"
+     ]
+    }
+   ],
+   "test": [
+    {
+     "qid": "E03",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/ecc4552a-92c5-4222-b18d-faf5ac841080",
+      "http://data.europa.eu/esco/skill/3a2d5b45-56e4-4f5a-a55a-4a4a65afdc43",
+      "http://data.europa.eu/esco/skill/5608d5a0-6d5e-43b7-be37-616501729bb4"
+     ]
+    },
+    {
+     "qid": "E05",
+     "rank": 3,
+     "top3": [
+      "http://data.europa.eu/esco/skill/89db623e-e1fc-4ec2-9a0f-7b72b4c35303",
+      "http://data.europa.eu/esco/skill/ad59afe4-6f8a-4bc4-acfd-0f228277508a",
+      "http://data.europa.eu/esco/skill/382c11ed-20d5-4ae7-b60e-15fec527fa6c"
+     ]
+    },
+    {
+     "qid": "E07",
+     "rank": 2,
+     "top3": [
+      "http://data.europa.eu/esco/skill/b19e0820-a96f-4c0a-a724-3c056180c1b3",
+      "http://data.europa.eu/esco/skill/9d0d89be-bffa-4393-b6f6-8d05bea49051",
+      "http://data.europa.eu/esco/skill/38d49d88-9069-467b-b29e-3cae739bdd4d"
+     ]
+    },
+    {
+     "qid": "E10",
+     "rank": 2,
+     "top3": [
+      "http://data.europa.eu/esco/skill/b216d9a2-7d4e-4312-8d05-e375f4ab44d8",
+      "http://data.europa.eu/esco/skill/60c78287-22eb-4103-9c8c-28deaa460da0",
+      "http://data.europa.eu/esco/skill/f28617ad-afdd-4041-814c-216153a38998"
+     ]
+    },
+    {
+     "qid": "E12",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/1973c966-f236-40c9-b2d4-5d71a89019be",
+      "http://data.europa.eu/esco/skill/6a536b36-c5c7-4d10-bf67-a4fb0f8549b2",
+      "http://data.europa.eu/esco/skill/db77825e-0f3e-47d0-abdb-356794484272"
+     ]
+    },
+    {
+     "qid": "E14",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/bec4359e-cb92-468f-a997-8fb28e32fba9",
+      "http://data.europa.eu/esco/skill/dba46f87-0831-49cd-a1c7-340a653c0221",
+      "http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4"
+     ]
+    },
+    {
+     "qid": "N02",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/36fccad9-1d20-4104-bcc2-a8ea9d1ce5ea",
+      "http://data.europa.eu/esco/skill/a9b68e58-766a-403d-b5fe-955b57bdad1b",
+      "http://data.europa.eu/esco/skill/f88002a8-6355-4d33-9496-285c166ff375"
+     ]
+    },
+    {
+     "qid": "O02",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/9433da85-70fa-4a25-8f96-71fa59dd1989",
+      "http://data.europa.eu/esco/skill/7111b95d-0ce3-441a-9d92-4c75d05c4388",
+      "http://data.europa.eu/esco/skill/63f0aa84-5e4c-4eb6-8e8c-876d9feedf1f"
+     ]
+    },
+    {
+     "qid": "O04",
+     "rank": null,
+     "top3": []
+    },
+    {
+     "qid": "O06",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/9d0d89be-bffa-4393-b6f6-8d05bea49051",
+      "http://data.europa.eu/esco/skill/94dd823c-148e-4614-a6e8-99249b16357d",
+      "http://data.europa.eu/esco/skill/cd5efa8c-e44d-4cbc-91c6-796018dbed68"
+     ]
+    },
+    {
+     "qid": "O08",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/f929c89e-c363-4132-a918-e021d57b307c",
+      "http://data.europa.eu/esco/skill/b7e57889-a84f-440c-9e60-459aa69979e9",
+      "http://data.europa.eu/esco/skill/96d549bb-3e62-4c45-92a7-f114df089581"
+     ]
+    },
+    {
+     "qid": "O11",
+     "rank": 5,
+     "top3": [
+      "http://data.europa.eu/esco/skill/f2d57f41-43b4-4f5b-8100-3df5c21eda50",
+      "http://data.europa.eu/esco/skill/0d6714c6-720e-4985-9791-5ab85d28da79",
+      "http://data.europa.eu/esco/skill/57231a22-4da7-49c8-97b8-75672feadf1e"
+     ]
+    },
+    {
+     "qid": "O13",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/7a34b3d9-bd3b-4f4e-a0f6-f97439901cb7",
+      "http://data.europa.eu/esco/skill/ee8fee1a-75c1-43fb-b08d-779929f99249",
+      "http://data.europa.eu/esco/skill/38788a64-6271-40ff-9e0b-5644c38322ff"
+     ]
+    },
+    {
+     "qid": "O15",
+     "rank": null,
+     "top3": []
+    },
+    {
+     "qid": "O17",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/1c2978b8-bb0d-4249-9c23-877571a4dffa",
+      "http://data.europa.eu/esco/skill/8efa6a7a-6556-4cb8-908d-59d3b5c58d2f",
+      "http://data.europa.eu/esco/skill/709ef32a-7435-48e2-8fa2-16e389ecab8a"
+     ]
+    },
+    {
+     "qid": "O19",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+      "http://data.europa.eu/esco/skill/bf4d884f-c848-402a-b130-69c266b04164",
+      "http://data.europa.eu/esco/skill/c32ad607-0c4d-4e34-b73f-668298f7bf13"
+     ]
+    },
+    {
+     "qid": "O21",
+     "rank": 8,
+     "top3": [
+      "http://data.europa.eu/esco/skill/f7e2eb04-3e50-4561-bce1-7e51a1fec308",
+      "http://data.europa.eu/esco/skill/4d85b881-e490-4b4c-897a-2faa4ef53956",
+      "http://data.europa.eu/esco/skill/11430d93-c835-48ed-8e70-285fa69c9ae6"
+     ]
+    },
+    {
+     "qid": "O23",
+     "rank": 1,
+     "top3": [
+      "http://data.europa.eu/esco/skill/47a49cd6-097d-457a-9f7b-c290c14930d5",
+      "http://data.europa.eu/esco/skill/f2d57f41-43b4-4f5b-8100-3df5c21eda50",
+      "http://data.europa.eu/esco/skill/0d6714c6-720e-4985-9791-5ab85d28da79"
+     ]
+    },
+    {
+     "qid": "O25",
+     "rank": 4,
+     "top3": [
+      "http://data.europa.eu/esco/skill/9faa44df-0821-4f69-8f86-184c799cf44f",
+      "http://data.europa.eu/esco/skill/945b8655-5577-4c3a-946a-842d4527afa8",
+      "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+     ]
+    },
+    {
+     "qid": "O27",
+     "rank": null,
+     "top3": []
+    },
+    {
+     "qid": "O29",
+     "rank": null,
+     "top3": [
+      "http://data.europa.eu/esco/skill/410540a4-b88c-4073-9da2-8aa5d7eaf780",
+      "http://data.europa.eu/esco/skill/294cf13e-4fdf-4cb8-bb6b-31b9da7f4819",
+      "http://data.europa.eu/esco/skill/27ed854c-15b8-4ba2-90e9-ae888a219703"
+     ]
+    },
+    {
+     "qid": "O31",
+     "rank": 2,
+     "top3": [
+      "http://data.europa.eu/esco/skill/1c582939-d981-4325-a2ac-f87fc6cf2315",
+      "http://data.europa.eu/esco/skill/4339176e-3acd-4f7f-a5d9-445bee3d23f2",
+      "http://data.europa.eu/esco/skill/db77825e-0f3e-47d0-abdb-356794484272"
+     ]
+    }
+   ]
+  }
+ },
+ "stores_on": {
+  "chunking": "A",
+  "search": "dense",
+  "embed": "all-MiniLM-L6-v2",
+  "reranker": null,
+  "graph": false
+ },
+ "stores": {
+  "numpy": {
+   "build_s_incl_embedding": 0.79,
+   "query_latency_ms": 4.19,
+   "disk_bytes": 2489856,
+   "same_top10_as_numpy": 46,
+   "queries": 46
+  },
+  "qdrant": {
+   "build_s_incl_embedding": 4.22,
+   "query_latency_ms": 8.23,
+   "disk_bytes": 6717990,
+   "same_top10_as_numpy": 46,
+   "queries": 46
+  },
+  "chroma": {
+   "build_s_incl_embedding": 1.75,
+   "query_latency_ms": 5.43,
+   "disk_bytes": 4483532,
+   "same_top10_as_numpy": 46,
+   "queries": 46
+  }
+ },
+ "all": [
+  {
+   "config": {
+    "chunking": "A",
+    "search": "bm25",
+    "embed": null,
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 0.04,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.333,
+    "hit@3": 0.5,
+    "mrr@10": 0.436,
+    "latency_ms": 0.09
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.273,
+    "hit@3": 0.455,
+    "mrr@10": 0.382,
+    "latency_ms": 0.08
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 23.79,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.708,
+    "hit@3": 0.792,
+    "mrr@10": 0.762,
+    "latency_ms": 38.05
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.455,
+    "hit@3": 0.727,
+    "mrr@10": 0.591,
+    "latency_ms": 28.98
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "multilingual-e5-base",
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 15.91,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.792,
+    "mrr@10": 0.686,
+    "latency_ms": 59.2
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.318,
+    "hit@3": 0.727,
+    "mrr@10": 0.542,
+    "latency_ms": 63.92
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "bge-small-en-v1.5",
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 3.75,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.708,
+    "hit@3": 0.75,
+    "mrr@10": 0.751,
+    "latency_ms": 57.45
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.455,
+    "hit@3": 0.591,
+    "mrr@10": 0.542,
+    "latency_ms": 54.65
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 2.02,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.708,
+    "mrr@10": 0.592,
+    "latency_ms": 34.12
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.636,
+    "mrr@10": 0.546,
+    "latency_ms": 32.88
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "multilingual-e5-base",
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 5.38,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.579,
+    "latency_ms": 64.61
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.636,
+    "mrr@10": 0.557,
+    "latency_ms": 61.68
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "bge-small-en-v1.5",
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 2.77,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.5,
+    "hit@3": 0.708,
+    "mrr@10": 0.612,
+    "latency_ms": 58.41
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.591,
+    "mrr@10": 0.563,
+    "latency_ms": 57.99
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "bm25",
+    "embed": null,
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 0.04,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.333,
+    "hit@3": 0.542,
+    "mrr@10": 0.431,
+    "latency_ms": 0.88
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.273,
+    "hit@3": 0.5,
+    "mrr@10": 0.414,
+    "latency_ms": 0.77
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 23.79,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.708,
+    "hit@3": 0.75,
+    "mrr@10": 0.761,
+    "latency_ms": 36.66
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.455,
+    "hit@3": 0.591,
+    "mrr@10": 0.569,
+    "latency_ms": 36.34
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "multilingual-e5-base",
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 15.91,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.667,
+    "mrr@10": 0.658,
+    "latency_ms": 59.8
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.318,
+    "hit@3": 0.545,
+    "mrr@10": 0.494,
+    "latency_ms": 62.63
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "bge-small-en-v1.5",
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 3.75,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.708,
+    "hit@3": 0.75,
+    "mrr@10": 0.748,
+    "latency_ms": 56.19
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.455,
+    "hit@3": 0.545,
+    "mrr@10": 0.532,
+    "latency_ms": 53.78
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 2.02,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.625,
+    "mrr@10": 0.571,
+    "latency_ms": 31.89
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.591,
+    "mrr@10": 0.538,
+    "latency_ms": 29.42
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "multilingual-e5-base",
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 5.38,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.583,
+    "mrr@10": 0.551,
+    "latency_ms": 58.64
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.636,
+    "mrr@10": 0.555,
+    "latency_ms": 58.27
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "bge-small-en-v1.5",
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 2.77,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.5,
+    "hit@3": 0.667,
+    "mrr@10": 0.595,
+    "latency_ms": 57.7
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.591,
+    "mrr@10": 0.566,
+    "latency_ms": 56.15
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "bm25",
+    "embed": null,
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 0.04,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.542,
+    "hit@3": 0.625,
+    "mrr@10": 0.576,
+    "latency_ms": 80.36
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.455,
+    "hit@3": 0.591,
+    "mrr@10": 0.523,
+    "latency_ms": 37.49
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 23.79,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.833,
+    "mrr@10": 0.689,
+    "latency_ms": 81.61
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.545,
+    "hit@3": 0.591,
+    "mrr@10": 0.596,
+    "latency_ms": 77.76
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "multilingual-e5-base",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 15.91,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.833,
+    "mrr@10": 0.698,
+    "latency_ms": 106.98
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.591,
+    "mrr@10": 0.588,
+    "latency_ms": 107.34
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 3.75,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.75,
+    "mrr@10": 0.689,
+    "latency_ms": 98.59
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.636,
+    "mrr@10": 0.58,
+    "latency_ms": 102.43
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 2.02,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.75,
+    "mrr@10": 0.669,
+    "latency_ms": 96.97
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.636,
+    "mrr@10": 0.574,
+    "latency_ms": 81.68
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "multilingual-e5-base",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 5.38,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.75,
+    "mrr@10": 0.677,
+    "latency_ms": 114.74
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.545,
+    "mrr@10": 0.562,
+    "latency_ms": 105.79
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 2.77,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.708,
+    "mrr@10": 0.674,
+    "latency_ms": 105.38
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.636,
+    "mrr@10": 0.568,
+    "latency_ms": 105.86
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "bm25",
+    "embed": null,
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 0.04,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.542,
+    "hit@3": 0.625,
+    "mrr@10": 0.585,
+    "latency_ms": 46.49
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.455,
+    "hit@3": 0.591,
+    "mrr@10": 0.517,
+    "latency_ms": 37.06
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 23.79,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.792,
+    "mrr@10": 0.689,
+    "latency_ms": 83.85
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.545,
+    "hit@3": 0.682,
+    "mrr@10": 0.612,
+    "latency_ms": 80.22
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "multilingual-e5-base",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 15.91,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.75,
+    "mrr@10": 0.688,
+    "latency_ms": 107.95
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.591,
+    "mrr@10": 0.571,
+    "latency_ms": 103.54
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 3.75,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.708,
+    "mrr@10": 0.68,
+    "latency_ms": 101.78
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.636,
+    "mrr@10": 0.577,
+    "latency_ms": 105.6
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 2.02,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.75,
+    "mrr@10": 0.672,
+    "latency_ms": 94.6
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.636,
+    "mrr@10": 0.553,
+    "latency_ms": 82.45
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "multilingual-e5-base",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 5.38,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.708,
+    "mrr@10": 0.67,
+    "latency_ms": 121.16
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.591,
+    "mrr@10": 0.551,
+    "latency_ms": 109.35
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 2.77,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.708,
+    "mrr@10": 0.669,
+    "latency_ms": 103.43
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.636,
+    "mrr@10": 0.567,
+    "latency_ms": 99.93
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "bm25",
+    "embed": null,
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 0.04,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.583,
+    "mrr@10": 0.52,
+    "latency_ms": 502.33
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.591,
+    "mrr@10": 0.477,
+    "latency_ms": 70.73
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 23.79,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.605,
+    "latency_ms": 160.17
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.636,
+    "mrr@10": 0.532,
+    "latency_ms": 152.86
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "multilingual-e5-base",
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 15.91,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.625,
+    "mrr@10": 0.575,
+    "latency_ms": 219.0
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.682,
+    "mrr@10": 0.596,
+    "latency_ms": 195.62
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 3.75,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.5,
+    "hit@3": 0.708,
+    "mrr@10": 0.623,
+    "latency_ms": 181.04
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.682,
+    "mrr@10": 0.552,
+    "latency_ms": 175.2
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 2.02,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.583,
+    "mrr@10": 0.568,
+    "latency_ms": 172.55
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.591,
+    "mrr@10": 0.496,
+    "latency_ms": 146.66
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "multilingual-e5-base",
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 5.38,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.583,
+    "mrr@10": 0.559,
+    "latency_ms": 211.91
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.682,
+    "mrr@10": 0.508,
+    "latency_ms": 187.12
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 2.77,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.625,
+    "mrr@10": 0.576,
+    "latency_ms": 186.59
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.682,
+    "mrr@10": 0.528,
+    "latency_ms": 157.99
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "bm25",
+    "embed": null,
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 0.04,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.583,
+    "mrr@10": 0.52,
+    "latency_ms": 95.51
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.545,
+    "mrr@10": 0.492,
+    "latency_ms": 69.6
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 23.79,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.708,
+    "mrr@10": 0.599,
+    "latency_ms": 154.19
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.591,
+    "mrr@10": 0.526,
+    "latency_ms": 155.83
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "multilingual-e5-base",
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 15.91,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.575,
+    "latency_ms": 212.11
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.591,
+    "mrr@10": 0.594,
+    "latency_ms": 188.05
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "dense",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 3.75,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.5,
+    "hit@3": 0.625,
+    "mrr@10": 0.608,
+    "latency_ms": 172.3
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.636,
+    "mrr@10": 0.549,
+    "latency_ms": 170.99
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 2.02,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.567,
+    "latency_ms": 171.77
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.545,
+    "mrr@10": 0.49,
+    "latency_ms": 146.67
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "multilingual-e5-base",
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 5.38,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.563,
+    "latency_ms": 214.32
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.545,
+    "mrr@10": 0.497,
+    "latency_ms": 189.3
+   }
+  },
+  {
+   "config": {
+    "chunking": "A",
+    "search": "hybrid",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 2.77,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.567,
+    "latency_ms": 188.15
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.591,
+    "mrr@10": 0.535,
+    "latency_ms": 165.05
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "bm25",
+    "embed": null,
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 0.31,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.333,
+    "hit@3": 0.5,
+    "mrr@10": 0.424,
+    "latency_ms": 0.76
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.273,
+    "hit@3": 0.455,
+    "mrr@10": 0.367,
+    "latency_ms": 0.7
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 1.89,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.708,
+    "hit@3": 0.75,
+    "mrr@10": 0.754,
+    "latency_ms": 28.52
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.727,
+    "mrr@10": 0.564,
+    "latency_ms": 30.68
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "multilingual-e5-base",
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 6.5,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.625,
+    "hit@3": 0.792,
+    "mrr@10": 0.72,
+    "latency_ms": 56.53
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.273,
+    "hit@3": 0.727,
+    "mrr@10": 0.481,
+    "latency_ms": 62.26
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "bge-small-en-v1.5",
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 3.2,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.708,
+    "hit@3": 0.792,
+    "mrr@10": 0.757,
+    "latency_ms": 55.49
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.545,
+    "mrr@10": 0.515,
+    "latency_ms": 51.99
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 2.22,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.587,
+    "latency_ms": 38.86
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.591,
+    "mrr@10": 0.541,
+    "latency_ms": 30.77
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "multilingual-e5-base",
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 6.47,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.417,
+    "hit@3": 0.625,
+    "mrr@10": 0.556,
+    "latency_ms": 60.95
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.591,
+    "mrr@10": 0.499,
+    "latency_ms": 63.12
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "bge-small-en-v1.5",
+    "reranker": null,
+    "graph": false
+   },
+   "build_s": 3.01,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.542,
+    "hit@3": 0.708,
+    "mrr@10": 0.636,
+    "latency_ms": 56.02
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.591,
+    "mrr@10": 0.514,
+    "latency_ms": 54.66
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "bm25",
+    "embed": null,
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 0.31,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.333,
+    "hit@3": 0.5,
+    "mrr@10": 0.426,
+    "latency_ms": 0.85
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.273,
+    "hit@3": 0.5,
+    "mrr@10": 0.397,
+    "latency_ms": 0.81
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 1.89,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.708,
+    "hit@3": 0.75,
+    "mrr@10": 0.757,
+    "latency_ms": 33.66
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.636,
+    "mrr@10": 0.522,
+    "latency_ms": 32.85
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "multilingual-e5-base",
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 6.5,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.625,
+    "hit@3": 0.708,
+    "mrr@10": 0.703,
+    "latency_ms": 59.7
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.273,
+    "hit@3": 0.5,
+    "mrr@10": 0.43,
+    "latency_ms": 56.76
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "bge-small-en-v1.5",
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 3.2,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.708,
+    "hit@3": 0.75,
+    "mrr@10": 0.754,
+    "latency_ms": 56.64
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.545,
+    "mrr@10": 0.505,
+    "latency_ms": 59.95
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 2.22,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.581,
+    "latency_ms": 34.74
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.545,
+    "mrr@10": 0.513,
+    "latency_ms": 32.13
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "multilingual-e5-base",
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 6.47,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.417,
+    "hit@3": 0.625,
+    "mrr@10": 0.524,
+    "latency_ms": 62.32
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.545,
+    "mrr@10": 0.497,
+    "latency_ms": 55.43
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "bge-small-en-v1.5",
+    "reranker": null,
+    "graph": true
+   },
+   "build_s": 3.01,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.542,
+    "hit@3": 0.708,
+    "mrr@10": 0.636,
+    "latency_ms": 52.48
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.545,
+    "mrr@10": 0.509,
+    "latency_ms": 54.45
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "bm25",
+    "embed": null,
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 0.31,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.667,
+    "mrr@10": 0.618,
+    "latency_ms": 52.69
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.455,
+    "hit@3": 0.591,
+    "mrr@10": 0.527,
+    "latency_ms": 37.77
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 1.89,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.792,
+    "mrr@10": 0.684,
+    "latency_ms": 82.86
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.545,
+    "hit@3": 0.591,
+    "mrr@10": 0.608,
+    "latency_ms": 81.02
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "multilingual-e5-base",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 6.5,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.75,
+    "mrr@10": 0.679,
+    "latency_ms": 115.29
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.591,
+    "mrr@10": 0.583,
+    "latency_ms": 115.21
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 3.2,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.75,
+    "mrr@10": 0.687,
+    "latency_ms": 105.49
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.591,
+    "mrr@10": 0.574,
+    "latency_ms": 100.21
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 2.22,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.792,
+    "mrr@10": 0.681,
+    "latency_ms": 83.93
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.636,
+    "mrr@10": 0.577,
+    "latency_ms": 78.24
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "multilingual-e5-base",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 6.47,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.75,
+    "mrr@10": 0.674,
+    "latency_ms": 115.76
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.636,
+    "mrr@10": 0.577,
+    "latency_ms": 104.89
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": false
+   },
+   "build_s": 3.01,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.75,
+    "mrr@10": 0.686,
+    "latency_ms": 110.37
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.636,
+    "mrr@10": 0.567,
+    "latency_ms": 104.85
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "bm25",
+    "embed": null,
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 0.31,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.667,
+    "mrr@10": 0.626,
+    "latency_ms": 48.35
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.455,
+    "hit@3": 0.591,
+    "mrr@10": 0.508,
+    "latency_ms": 37.26
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 1.89,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.75,
+    "mrr@10": 0.683,
+    "latency_ms": 80.16
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.545,
+    "hit@3": 0.682,
+    "mrr@10": 0.624,
+    "latency_ms": 74.85
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "multilingual-e5-base",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 6.5,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.708,
+    "mrr@10": 0.673,
+    "latency_ms": 113.28
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.636,
+    "mrr@10": 0.572,
+    "latency_ms": 111.9
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 3.2,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.708,
+    "mrr@10": 0.679,
+    "latency_ms": 98.38
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.636,
+    "mrr@10": 0.553,
+    "latency_ms": 107.04
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 2.22,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.75,
+    "mrr@10": 0.68,
+    "latency_ms": 82.24
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.636,
+    "mrr@10": 0.553,
+    "latency_ms": 81.51
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "multilingual-e5-base",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 6.47,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.708,
+    "mrr@10": 0.667,
+    "latency_ms": 117.0
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.591,
+    "mrr@10": 0.549,
+    "latency_ms": 109.88
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "ms-marco-MiniLM-L-6-v2",
+    "graph": true
+   },
+   "build_s": 3.01,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.583,
+    "hit@3": 0.708,
+    "mrr@10": 0.678,
+    "latency_ms": 114.74
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.5,
+    "hit@3": 0.591,
+    "mrr@10": 0.547,
+    "latency_ms": 106.67
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "bm25",
+    "embed": null,
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 0.31,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.5,
+    "hit@3": 0.625,
+    "mrr@10": 0.562,
+    "latency_ms": 108.6
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.545,
+    "mrr@10": 0.485,
+    "latency_ms": 72.94
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 1.89,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.605,
+    "latency_ms": 155.32
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.636,
+    "mrr@10": 0.524,
+    "latency_ms": 156.43
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "multilingual-e5-base",
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 6.5,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.625,
+    "mrr@10": 0.576,
+    "latency_ms": 183.66
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.455,
+    "hit@3": 0.636,
+    "mrr@10": 0.569,
+    "latency_ms": 146.72
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 3.2,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.597,
+    "latency_ms": 107.35
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.455,
+    "hit@3": 0.636,
+    "mrr@10": 0.575,
+    "latency_ms": 109.98
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 2.22,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.625,
+    "mrr@10": 0.587,
+    "latency_ms": 121.78
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.636,
+    "mrr@10": 0.502,
+    "latency_ms": 101.75
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "multilingual-e5-base",
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 6.47,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.625,
+    "mrr@10": 0.577,
+    "latency_ms": 151.53
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.682,
+    "mrr@10": 0.514,
+    "latency_ms": 117.14
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "bge-reranker-base",
+    "graph": false
+   },
+   "build_s": 3.01,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.625,
+    "mrr@10": 0.592,
+    "latency_ms": 127.41
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.636,
+    "mrr@10": 0.527,
+    "latency_ms": 106.92
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "bm25",
+    "embed": null,
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 0.31,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.5,
+    "hit@3": 0.625,
+    "mrr@10": 0.562,
+    "latency_ms": 78.2
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.545,
+    "mrr@10": 0.492,
+    "latency_ms": 53.93
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 1.89,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.708,
+    "mrr@10": 0.599,
+    "latency_ms": 110.01
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.545,
+    "mrr@10": 0.517,
+    "latency_ms": 109.89
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "multilingual-e5-base",
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 6.5,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.568,
+    "latency_ms": 155.61
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.455,
+    "hit@3": 0.591,
+    "mrr@10": 0.549,
+    "latency_ms": 146.91
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "dense",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 3.2,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.589,
+    "latency_ms": 108.05
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.455,
+    "hit@3": 0.636,
+    "mrr@10": 0.579,
+    "latency_ms": 112.03
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "all-MiniLM-L6-v2",
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 2.22,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.577,
+    "latency_ms": 124.28
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.5,
+    "mrr@10": 0.488,
+    "latency_ms": 103.49
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "multilingual-e5-base",
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 6.47,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.569,
+    "latency_ms": 153.07
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.364,
+    "hit@3": 0.591,
+    "mrr@10": 0.5,
+    "latency_ms": 118.63
+   }
+  },
+  {
+   "config": {
+    "chunking": "B",
+    "search": "hybrid",
+    "embed": "bge-small-en-v1.5",
+    "reranker": "bge-reranker-base",
+    "graph": true
+   },
+   "build_s": 3.01,
+   "dev": {
+    "n": 24,
+    "hit@1": 0.458,
+    "hit@3": 0.667,
+    "mrr@10": 0.577,
+    "latency_ms": 128.39
+   },
+   "test": {
+    "n": 22,
+    "hit@1": 0.409,
+    "hit@3": 0.591,
+    "mrr@10": 0.536,
+    "latency_ms": 107.14
+   }
+  }
+ ]
+}

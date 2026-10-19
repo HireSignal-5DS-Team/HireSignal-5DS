@@ -1,0 +1,66 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "summary does not state the outcome (invite)"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate has strong qualifications for the Python Backend Developer role, with over 12 years of backend development experience and extensive experience in Python-based systems. They have demonstrated expertise in high-performance, asynchronous applications handling up to 15k+ requests per second and 60k+ concurrent connections, as well as experience with microservices, APIs, and social media platform integrations. The candidate meets all mandatory requirements, including 5+ years of software development and 2+ years of Python backend development. Additional strengths include experience with AWS, Docker, and real-time systems. While the candidate has some exposure to machine learning (e.g., advertising systems) and algorithms, the evidence for algorithmic development (e.g., collaborative filtering) is insufficient and marked as 'uncertain' with low confidence. This is noted as a potential gap, though not a dealbreaker given the high overall score of 94. The candidate is recommended for an interview.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MET\",\n      \"quote\": \"More than 12+ years of experience working in Backend development:\",\n      \"line\": \"Software development: 5 years of experience or more\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MET\",\n      \"quote\": \"Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)\",\n      \"line\": \"Developing big systems with Python: 2 years of experience or more\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MET\",\n      \"quote\": \"Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)\",\n      \"line\": \"Asynchronous programming and developing performance-critical applications\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MET\",\n      \"quote\": \"Implemented LocationBased Social Network architecture, API and microservices.\",\n      \"line\": \"Working with AWS, Docker and microservices\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MET\",\n      \"quote\": \"Implemented an advertising system\",\n      \"line\": \"Experience with Machine Learning\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"Algorithms development (collaborative filtering, similarity, data normalization, clustering)\"\n    }\n  ],\n  \"candidate_letter\": \"Dear Recruiter,\\n\\nWe are excited to invite you to review the candidate for the Python Backend Developer position. The candidate has a strong technical background with over 12 years of experience in backend development, including extensive work in Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent) and high-performance asynchronous systems handling up to 15k+ requests per second and 60k+ concurrent connections.\\n\\nThey have successfully implemented scalable backend systems for taxi platforms, social media reputation management, and smartwatches, demonstrating solid experience with microservices, APIs, and real-time data processing. The candidate also has exposure to machine learning through advertising systems.\\n\\nHowever, there is limited evidence regarding their experience with algorithmic development (e.g., collaborative filtering, clustering), which is currently marked as 'uncertain' with low confidence. This area may require further clarification during the interview.\\n\\nWith a total score of 94, the candidate clearly meets all mandatory requirements and exceeds expectations in key technical domains. We recommend proceeding with an interview to assess their deeper technical fit and discuss the algorithmic development aspect in more detail.\\n\\nBest regards,\\nAutomated Screening System\",\n  \"flags_for_recruiter\": [\n    \"low confidence: the Matcher was unsure on r6 (Algorithms development)\",\n    \"Candidate has strong experience in high-load asynchronous systems, but limited evidence on algorithmic development (collaborative filtering, clustering).\"\n  ]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is invited to the next step. 3 of 3 must-have requirements are met; the score is 94.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "More than 12+ years of experience working in Backend development:",
+    "line": "must: Software development: 5 years of experience or more - met (CV: More than 12+ years of experience working in Backend development:)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "More than 12+ years of experience working in Backend development:",
+    "line": "must: Developing big systems with Python: 2 years of experience or more - met (CV: More than 12+ years of experience working in Backend development:)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)",
+    "line": "must: Asynchronous programming and developing performance-critical applications - met (CV: Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices))"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)",
+    "line": "nice: Working with AWS, Docker and microservices - met (CV: - Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices))"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "- Implemented an advertising system",
+    "line": "nice: Experience with Machine Learning - met (CV: - Implemented an advertising system)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "nice: Algorithms development (collaborative filtering, similarity, data normalization, clustering) - uncertain (unclear in the CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. Your profile meets the requirements of this position, and we would like to invite you to the next step of the process.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r6"
+  ]
+ },
+ "source": "template",
+ "latency_s": 14.5,
+ "peak_vram_mib": 3267,
+ "id": "P50",
+ "outcome": "invite",
+ "synthetic_flags": false
+}

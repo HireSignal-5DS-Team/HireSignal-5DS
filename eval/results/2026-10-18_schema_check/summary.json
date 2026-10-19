@@ -1,0 +1,76 @@
+{
+ "base_k": {
+  "n": 30,
+  "valid_json_rate": 1.0,
+  "accuracy": 0.7333333333333333,
+  "macro_f1": 0.7279942279942281,
+  "f1_per_class": {
+   "MET": 0.8333333333333333,
+   "MISSING": 0.7142857142857143,
+   "UNCERTAIN": 0.6363636363636364
+  },
+  "false_met": 0,
+  "quotes_total": 25,
+  "quotes_verbatim": 25,
+  "mean_latency_s": 1.8122333333333331,
+  "pred_counts": {
+   "MET": 10,
+   "MISSING": 5,
+   "UNCERTAIN": 15
+  },
+  "confusion": {
+   "MET": {
+    "MET": 10,
+    "MISSING": 0,
+    "UNCERTAIN": 4
+   },
+   "MISSING": {
+    "MET": 0,
+    "MISSING": 5,
+    "UNCERTAIN": 4
+   },
+   "UNCERTAIN": {
+    "MET": 0,
+    "MISSING": 0,
+    "UNCERTAIN": 7
+   }
+  }
+ },
+ "lora_k": {
+  "n": 30,
+  "valid_json_rate": 1.0,
+  "accuracy": 0.9333333333333333,
+  "macro_f1": 0.9111111111111111,
+  "f1_per_class": {
+   "MET": 1.0,
+   "MISSING": 0.9,
+   "UNCERTAIN": 0.8333333333333333
+  },
+  "false_met": 0,
+  "quotes_total": 24,
+  "quotes_verbatim": 24,
+  "mean_latency_s": 1.4738,
+  "pred_counts": {
+   "MET": 14,
+   "MISSING": 11,
+   "UNCERTAIN": 5
+  },
+  "confusion": {
+   "MET": {
+    "MET": 14,
+    "MISSING": 0,
+    "UNCERTAIN": 0
+   },
+   "MISSING": {
+    "MET": 0,
+    "MISSING": 9,
+    "UNCERTAIN": 0
+   },
+   "UNCERTAIN": {
+    "MET": 0,
+    "MISSING": 2,
+    "UNCERTAIN": 5
+   }
+  }
+ }
+}

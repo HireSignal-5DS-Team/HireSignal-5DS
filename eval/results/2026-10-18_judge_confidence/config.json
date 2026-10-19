@@ -1,0 +1,24 @@
+{
+ "date": "2026-10-18 12:33:41",
+ "label": "Matcher rows: real-GPU (T06 run, reused, no Matcher re-run). NLI: real-GPU (RTX 4050, cuda). n8n e2e: real-GPU.",
+ "command": ".venv\\Scripts\\python scripts\\eval_judge_confidence.py --out eval\\results\\2026-10-18_judge_confidence --device cuda",
+ "inputs": "eval/results/2026-10-18_real_baseline/rows.jsonl + profiles.json; private/<cv_id>.reader.json for the regeneration check",
+ "judge": {
+  "model": "models/DeBERTa-v3-base-mnli-fever-anli (MoritzLaurer @ 6f5cf0a2)",
+  "templates_compared": [
+   "v1",
+   "v2"
+  ],
+  "chosen_on_dev": {
+   "template": "v2",
+   "tau_pass": 0.05,
+   "tau_fail": 0.15
+  },
+  "selection": "max dev F1 of flag->wrong row, Judge flags <= 25% of judged dev rows"
+ },
+ "confidence": {
+  "tau_conf": 0.72,
+  "selection": "max dev macro-F1 over 0.50..0.99 (step 0.01)"
+ },
+ "tuned_on_test": false
+}

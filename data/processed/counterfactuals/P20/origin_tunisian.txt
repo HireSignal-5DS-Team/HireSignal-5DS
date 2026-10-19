@@ -1,0 +1,21 @@
+Nationality: Tunisian
+Location: Tunis, Tunisia
+Position: Oracle/Postgres DBA
+Experience years: 11
+English level: fluent
+
+Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products. Postgres DBA with 3 years of experience.
+Objective. 
+	Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c looking for a position of Oracle/Postgres DBA / Database Administrator / DevOps.
+
+Summary. 
+•	Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres; 
+•	Operating Systems: AIX, Solaris, Red Hat Linux, HP-UX, Windows NT/2000;
+•	Hardware Platforms: IBM RS/6000, Sun V880, Sun V890, Sun E4000, Sun E5000, Dell4300, IBM PC; 
+•	Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;
+•	Programming Languages: SQL, PL/SQL, C/C++, HTML, Korn Shell, C Shell, Bash;
+•	Project Management System: Confluence, Jira;
+•	Version Control: Git, SVN;
+•	Continuous Integration: TeamCity, Jenkins;
+•	Agile Methodologies: Kanban, Scrum.
+Remote work.

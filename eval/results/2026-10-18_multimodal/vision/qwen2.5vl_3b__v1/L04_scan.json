@@ -1,0 +1,35 @@
+{
+ "item": {
+  "id": "L04_scan",
+  "file": "L04_scan.pdf",
+  "source": "L04.pdf",
+  "pages": [
+   1,
+   2
+  ],
+  "pair": "P52",
+  "split": "test",
+  "condition": "scan",
+  "job": "J4"
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "CURRICULUM VITAE\nSenior Python Developer, Team Lead\nPosition: Senior Python Developer\nExperience years: 11\nEnglish level: upper\nArchitecture and implementation of analytics dashboard based on django, celery and D3.js\nImplemented a bunch of features for b2b coffee business project\nImplemented new features to Django corporate task-management system\nDesigned and implemented destibuted CRM.\nImplemented business intelligence system for game application\nDesigned and developed RESTful API for game application\nIntegrated a corporate ticket system with Facebook and Twitter APIs\nDesigned and developed a websocket web-chat for a corporate ticket system using JavaScript and Tornado\nWrote SQL reports for the company clients\nDesigned and implemented a distributed RESTful task queue based on key-value DB using python and lua\nSupported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using python\nBuild a CI pipelines in gitlab-ci with testing and code standard checks (pyflakes, pylint)\nBuild an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuild projects with microservices\nBuild systems with multi-threading and asynchronous approach (tornado, aichttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review\nSkillset:\nGit\nDocker\nDocker Compose\nDjango\nDjango RESTful Framework\nCelery\nFlask SQLAlchemy\naiohttp\nTornado\nRabbitMQ\nPython3\nJavaScript\nLUA\nSQL (PostgreSQL/MySQL)\nNoSQL (MongoDB/DynamoDB/Kyototycoon/Redis/Memcached/MongoDB/ElasticSearch)\nProxy (Nginx)\nDevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Azure Cloud)\nScrum\nMicroservices\nAutomated Testing\nCD/CI (Gitlab runners/Github actions/Circle CI/Jenkins)\nCode quality tools\nAPI (REST, GraphQL, JSONRPC)\nWeb Scraping (Selenium + beautifulsoup)\nTeam leading",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 11.28,
+   "eval_count": 422,
+   "done_reason": "stop",
+   "peak_vram_mib": 4253
+  },
+  {
+   "text": "Blockchain (BTC/LTC/ETH/ERC20)\nNFT\nI want to work with people who is more experienced than me.\nAI project will be just great",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 6.63,
+   "eval_count": 35,
+   "done_reason": "stop",
+   "peak_vram_mib": 4271
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+  "cv": "p04_fr_labelled",
+  "language": "fr",
+  "must_hide": [
+    {
+      "kind": "NAME",
+      "value": "Mohamed Ali"
+    },
+    {
+      "kind": "NAME",
+      "value": "Ben Salah"
+    },
+    {
+      "kind": "DOB",
+      "value": "21/09/1995"
+    },
+    {
+      "kind": "BIRTHPLACE",
+      "value": "Sousse"
+    },
+    {
+      "kind": "GENDER",
+      "value": "Masculin"
+    },
+    {
+      "kind": "PHONE",
+      "value": "+216 55 111 222"
+    },
+    {
+      "kind": "EMAIL",
+      "value": "medali.bensalah@gmail.com"
+    }
+  ],
+  "other_people": [],
+  "must_keep": [
+    "Sopra HR Software (2019 – 2023)",
+    "Spring Boot",
+    "PostgreSQL",
+    "Angular"
+  ]
+}

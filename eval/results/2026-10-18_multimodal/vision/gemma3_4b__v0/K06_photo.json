@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K06_photo",
+  "file": "K06_photo.jpg",
+  "source": "K03.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "Okay, here's a breakdown of the CV you provided, summarizing the key information:\n\n**Overall Impression:**\n\nThis CV presents a seasoned professional with a strong background in healthcare IT, particularly focused on compliance and strategic management. The candidate demonstrates experience in both technical and managerial roles, highlighting a strategic and analytical approach.\n\n**Key Highlights:**\n\n*   **Experience Level:**  The candidate has held progressively responsible roles, culminating in a Practice Manager position.\n*   **Education:** MBA with extensive experience in analyzing systems/processes and implementing critical infrastructure improvements.\n*   **Core Qualifications:**  Proficient in Windows (2000, 2007, XP), NetWare, Enterprise Backup/Recover, EMR (Allscripts and McKesson), TCP/IP Enterprise Networks, Enterprise Windows Server 2000/2007, HIPAA/HITEC.\n*   **Practice Manager (Aug 2014 to Current):**\n    *   Strategic and analytical leadership.\n    *   Proven track record of success in developing solutions that significantly improve efficiency and optimize operations.\n    *   Experience in collaborating effectively with stakeholders, including executives and client groups.\n    *   Responsibilities included: annual planning, budgeting, productivity levels, financial reports, growth improvements, risk mitigation, asset protection, inventory management, and compliance.\n    *   Developed and deployed new hospital initiatives including training physician partners and implementing efficient patient workflow.\n    *   Built client base by providing extraordinary service and initiating new marketing plans.\n*   **Information Technology Manager (Feb 2012 to Sep 2013):**\n    *   Ensured regulatory compliance and integrity of health information systems.\n    *   Provided support during surveys, ADR, and internal audits.\n    *   Mentored and ensured the professional development of new clinical employees.\n    *   Member of the Performance Improvement Committee and oversaw compliance department operations.\n*   **Information Technology Manager (Sep 2008 to Sept 2011):**\n    *   Provided technical support and developed operational plans in clinical hospitals.\n    *   Revised legacy initiatives, and an EMR system.\n    *   Championed innovation, and implemented new technologies.\n    *   Responsible for vendor management, and contract negotiations.\n    *   Improved network infrastructure, and security.\n*   **Previous Role (July 2006 to June 2008):**\n    *   Worked as a Systems Administrator, supporting network infrastructure and providing technical support.\n\n**Skills:**\n\n*   **Technical:** Windows Administration, NetWare, EMR Systems (Allscripts, McKesson), TCP/IP, Backup/Recovery, HIPAA/HITEC\n*   **Management/Soft Skills:** Strategic Planning, Budgeting, Leadership, Collaboration, Problem-Solving, Compliance Management, Process Improvement, Training, Vendor Management.\n\n---\n\nDo you want me to:\n\n*   Focus on a specific aspect of the CV (e.g., the skills section, the experience at a particular role)?\n*   Compare this CV to a specific job description?",
+   "model": "gemma3:4b",
+   "latency_s": 16.91,
+   "eval_count": 650,
+   "done_reason": "stop",
+   "peak_vram_mib": 3887
+  }
+ ]
+}

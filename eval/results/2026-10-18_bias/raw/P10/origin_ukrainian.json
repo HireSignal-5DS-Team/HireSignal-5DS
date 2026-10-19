@@ -1,0 +1,42 @@
+{
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "UNCERTAIN",
+  "r3": "MISSING",
+  "r4": "MISSING",
+  "r5": "MISSING",
+  "r6": "MISSING",
+  "r7": "MET",
+  "r8": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "must",
+  "r7": "must",
+  "r8": "nice"
+ },
+ "outcome": "reject",
+ "score": 20,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [
+   "I worked as a customer success data analyst in an event industry company for the past year."
+  ],
+  "r2": [],
+  "r3": [],
+  "r4": [],
+  "r5": [],
+  "r6": [],
+  "r7": [
+   "scheduling queries in GQB, and writing complex SQL queries to process large amounts of data;"
+  ],
+  "r8": []
+ },
+ "elapsed_s": 21.32,
+ "identical_to_base": false,
+ "ran": true
+}

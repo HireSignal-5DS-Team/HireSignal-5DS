@@ -1,0 +1,103 @@
+{
+ "condition": "gpu_free",
+ "label": "real-GPU (RTX 4050 6 GB) + real-CPU (Tesseract)",
+ "pages": 10,
+ "identical_outputs": "10/10",
+ "sequential_s_per_page_mean": 25.36,
+ "parallel_s_per_page_mean": 15.66,
+ "sequential_s_per_page_median": 26.84,
+ "parallel_s_per_page_median": 16.62,
+ "speedup_mean": 1.62,
+ "rows": [
+  {
+   "item": "K04_p01_photo",
+   "sequential_s": 29.29,
+   "parallel_s": 18.03,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  },
+  {
+   "item": "K04_p02_photo",
+   "sequential_s": 18.17,
+   "parallel_s": 16.06,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  },
+  {
+   "item": "K05_p01_photo",
+   "sequential_s": 26.29,
+   "parallel_s": 17.46,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  },
+  {
+   "item": "K09_photo",
+   "sequential_s": 18.8,
+   "parallel_s": 10.84,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  },
+  {
+   "item": "K06_photo",
+   "sequential_s": 33.04,
+   "parallel_s": 17.17,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  },
+  {
+   "item": "K05_p02_photo",
+   "sequential_s": 14.68,
+   "parallel_s": 11.34,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  },
+  {
+   "item": "K07_p01_photo",
+   "sequential_s": 27.4,
+   "parallel_s": 18.69,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  },
+  {
+   "item": "K07_p02_photo",
+   "sequential_s": 20.25,
+   "parallel_s": 12.89,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  },
+  {
+   "item": "K08_p01_photo",
+   "sequential_s": 37.19,
+   "parallel_s": 19.64,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  },
+  {
+   "item": "K08_p02_photo",
+   "sequential_s": 28.52,
+   "parallel_s": 14.5,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  }
+ ]
+}

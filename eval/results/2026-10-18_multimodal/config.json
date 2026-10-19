@@ -1,0 +1,62 @@
+{
+ "label": "real-GPU (RTX 4050 Laptop 6 GB; Ollama 0.40.6, llama-server stopped during the Reader benchmark) + real-CPU (Tesseract 5.5.3)",
+ "commands": [
+  ".venv/Scripts/python scripts/eval_multimodal.py --out eval/results/2026-10-18_multimodal --stage ocr",
+  ".venv/Scripts/python scripts/eval_multimodal.py --out eval/results/2026-10-18_multimodal --stage vision --models qwen2.5vl:3b,granite3.2-vision:2b,gemma3:4b --prompts v0,v1 --split dev",
+  ".venv/Scripts/python scripts/eval_multimodal.py --out eval/results/2026-10-18_multimodal --stage early --models qwen2.5vl:3b --prompts v0,v1 --split dev",
+  ".venv/Scripts/python scripts/eval_multimodal.py --out eval/results/2026-10-18_multimodal --stage vision --models qwen2.5vl:3b --prompts v1 --split test",
+  ".venv/Scripts/python scripts/eval_multimodal.py --out eval/results/2026-10-18_multimodal --stage early --models qwen2.5vl:3b --prompts v1 --split test",
+  ".venv/Scripts/python scripts/eval_multimodal.py --out eval/results/2026-10-18_multimodal --stage report --vision qwen2.5vl_3b__v1 --early qwen2.5vl_3b__v1",
+  ".venv/Scripts/python scripts/eval_multimodal_chain.py --mm eval/results/2026-10-18_multimodal --vision qwen2.5vl_3b__v1 --early qwen2.5vl_3b__v1 --out eval/results/2026-10-18_multimodal/chain"
+ ],
+ "ollama_options": {
+  "temperature": 0,
+  "seed": 0,
+  "num_ctx": 8192,
+  "num_predict": 2048
+ },
+ "keep_alive": "0",
+ "image_max_side": 1536,
+ "image_format": "JPEG q90",
+ "prompts": {
+  "vision": [
+   "prompts/reader/vision_v0.md",
+   "prompts/reader/vision_v1.md"
+  ],
+  "early": [
+   "prompts/reader/early_fusion_v0.md",
+   "prompts/reader/early_fusion_v1.md"
+  ]
+ },
+ "late_fusion": {
+  "merges": [
+   "ocr_backbone",
+   "vision_backbone"
+  ],
+  "min_conf_grid": [
+   0,
+   20,
+   40,
+   50,
+   60,
+   70,
+   80,
+   90,
+   101
+  ],
+  "support_share": 0.5,
+  "fuzzy_support": 75,
+  "max_kept_insert": 2,
+  "chosen_on_dev": {
+   "merge": "vision_backbone",
+   "min_conf": 101
+  }
+ },
+ "split": "dev = photos of Kaggle source PDFs (10); test = photos + scans of L source PDFs (11); PHOTO_MAPPING.csv with MAPPING_FIX L01_scan<->L02_scan",
+ "ocr_dirs": {
+  "ocr": "T10 Reader (OSD rotation kept only if OCR confidence improves)",
+  "ocr_t09_reader": "Reader before the fix"
+ },
+ "early_on_t09_ocr_discarded": "first early-fusion dev run, made on the pre-fix OCR text; not used",
+ "chain": "station API: /reader (txt) -> /profile -> confirmed card J1-J4 -> /rag/search (V6) -> /match -> /judge -> /outcome (T08b gate + T10 rule 0)"
+}

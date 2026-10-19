@@ -1,0 +1,422 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "18",
+ "cv_id": "cv-afa64db6",
+ "job_id": "job-6b9a0fad",
+ "job_title": "Python BackEnd Developer",
+ "outcome": "review",
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "score": 75,
+ "reasons": [
+  "r1: must MET doubted (judge:disagrees): possible false invite",
+  "r2: must MET doubted (judge:disagrees): possible false invite",
+  "r3: must MET doubted (judge:disagrees): possible false invite"
+ ],
+ "listed_flags": [
+  "r4 (nice): judge:disagrees",
+  "r5 (nice): judge:disagrees",
+  "r6 (nice): evidence_not_in_cv",
+  "r6 (nice): judge:disagrees",
+  "r7 (nice): evidence_not_in_cv",
+  "r7 (nice): met_without_verified_evidence",
+  "r8 (nice): evidence_not_in_cv",
+  "r8 (nice): contradiction_without_evidence",
+  "r8 (nice): match:low_confidence",
+  "r9 (nice): match:low_confidence",
+  "r10 (nice): match:low_confidence",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "message": null,
+ "gate_settings": {
+  "t_invite": 80,
+  "pair_flags": "info"
+ },
+ "decided_by": "gate",
+ "review_form_url": "http://localhost:5678/form-waiting/18?signature=17a9160afc7895131db160d76d9fbcada025bce17ff65ea732d49b182e3faa8b",
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "5 years of experience in development (At least 2 years experience in developing big systems with Python)",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "More than 12+ years of experience working in Backend development:",
+     "start": 989,
+     "end": 1054
+    },
+    {
+     "quote": "Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)",
+     "start": 1057,
+     "end": 1117
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999684,
+    "MISSING": 0.000314,
+    "UNCERTAIN": 2e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.5979
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "asynchronous programming",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)",
+     "start": 1057,
+     "end": 1117
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999501,
+    "MISSING": 0.000497,
+    "UNCERTAIN": 2e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.7595
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "performance-critical applications",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)",
+     "start": 102,
+     "end": 209
+    },
+    {
+     "quote": "Implemented CallCenter system based on Asterisk which processes 200+ calls at one moment.",
+     "start": 212,
+     "end": 301
+    },
+    {
+     "quote": "Implemented LocationBased Social Network architecture, API and microservices.",
+     "start": 304,
+     "end": 381
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999221,
+    "MISSING": 0.000777,
+    "UNCERTAIN": 2e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9874
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Working with AWS – Advantages",
+   "kind": "nice",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Kubernetes, Docker, AWS, Azure",
+     "start": 1245,
+     "end": 1275
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.99955,
+    "MISSING": 0.000431,
+    "UNCERTAIN": 1.9e-05
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.994
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Working with Docker – Advantages",
+   "kind": "nice",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)",
+     "start": 100,
+     "end": 209
+    },
+    {
+     "quote": "- Implemented CallCenter system based on Asterisk which processes 200+ calls at one moment.",
+     "start": 210,
+     "end": 301
+    },
+    {
+     "quote": "- Implemented LocationBased Social Network architecture, API and microservices.",
+     "start": 302,
+     "end": 381
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.998912,
+    "MISSING": 0.001062,
+    "UNCERTAIN": 2.6e-05
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9975
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Working with microservices – Advantages",
+   "kind": "nice",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)",
+     "start": 102,
+     "end": 209
+    },
+    {
+     "quote": "Implemented LocationBased Social Network architecture, API and microservices.",
+     "start": 304,
+     "end": 381
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "evidence_not_in_cv",
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999556,
+    "MISSING": 0.000434,
+    "UNCERTAIN": 1e-05
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9647
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r7",
+   "text": "Experience with Machine Learning",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "MET",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "evidence_not_in_cv",
+    "met_without_verified_evidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.803275,
+    "MISSING": 0.094716,
+    "UNCERTAIN": 0.10201
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r8",
+   "text": "Algorithms development (collaborative filtering) - Advantages",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [
+    "evidence_not_in_cv",
+    "contradiction_without_evidence",
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.027723,
+    "MISSING": 0.503336,
+    "UNCERTAIN": 0.468941
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r9",
+   "text": "Algorithms development (similarity) - Advantages",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.007211,
+    "MISSING": 0.669765,
+    "UNCERTAIN": 0.323025
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r10",
+   "text": "Algorithms development (data normalization) - Advantages",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.014268,
+    "MISSING": 0.636399,
+    "UNCERTAIN": 0.349333
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r11",
+   "text": "Algorithms development (clustering) - Advantages",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.001825,
+    "MISSING": 0.722498,
+    "UNCERTAIN": 0.275677
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.8901
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r12",
+   "text": "Excellent analytical and time management skills",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000261,
+    "MISSING": 0.406252,
+    "UNCERTAIN": 0.593487
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r13",
+   "text": "Teamwork skills with a problem-solving attitude.",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.001343,
+    "MISSING": 0.444561,
+    "UNCERTAIN": 0.554096
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  }
+ ],
+ "timings_s": {
+  "reader": 0.002,
+  "profile": 42.634,
+  "job": 9.247,
+  "match_and_judge": 42.92
+ }
+}

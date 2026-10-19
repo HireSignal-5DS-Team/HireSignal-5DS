@@ -1,0 +1,19 @@
+Date of birth: 14/03/1971
+Position: Junior Python Developer
+Experience years: 0.5
+English level: pre
+
+Took first place in the group rating during studying in IT Step Academy 2019.
+Up to year experience in pure Python3, and Django powered back-end application development. Creating and setting up the databases with PostgreSQL DBMS. I am a quick learner, responsible, good time-management skills, and aiming at best both personal and team results.
+
+TODOList project. 
+  • Developed the database (tables, views, procedures, and functions) using       PostgreSQL.
+    • Used the cursor from Django model connection for executing the database operations.
+    • Wrapped the application business logic into services modules.
+    • Implemented the API via Django REST framework, for sending the JSON data to the client application.
+
+djangostamp project for the quick Django layout creation.
+    • Used the Python module shutil to copy the directory layouts.
+    • Applied the command pattern.
+    • Developed console-based interaction with a user.
+Improving skills in Python 3, Django, and databases. Getting new development skills.

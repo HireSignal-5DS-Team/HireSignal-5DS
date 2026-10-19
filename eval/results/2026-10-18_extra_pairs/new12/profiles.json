@@ -1,0 +1,1414 @@
+{
+ "P41": {
+  "reader": {
+   "cv_id": "cv-1f2b8ca3",
+   "file_type": "text",
+   "text_chars": 1067,
+   "sections": {
+    "header": 1067
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.026
+  },
+  "profile": {
+   "cv_id": "cv-1f2b8ca3",
+   "anonymised_text": "Position: Data Scientist | Machine Learning Engineer\nExperience years: 5\nEnglish level: upper\n\n- M.SC computer science, Thesis on Automatic wordnet construction using sense embedding for local language\n\n- finished data science and visualization training offered by UN Analytics & Visualization Team, 6 months of rigorous training.\nDeveloped machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.\n\nLast projects:\nDevelopment of Chatbot for health care assistance using DialoGPT, Sbert for sentence similarity, BiLSTM+CNN for predictive modeling\n\nMachine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-1f2b8ca3",
+    "skills": [
+     {
+      "name": "Machine learning",
+      "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more."
+     },
+     {
+      "name": "Computer vision",
+      "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more."
+     },
+     {
+      "name": "Tabular data",
+      "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more."
+     },
+     {
+      "name": "Time series",
+      "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more."
+     },
+     {
+      "name": "Digital signals processing",
+      "evidence": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more."
+     },
+     {
+      "name": "MLOps",
+      "evidence": "Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     }
+    ],
+    "education": [
+     {
+      "degree": "M.SC",
+      "field": "Computer Science",
+      "institution": null,
+      "end": null,
+      "evidence": "- M.SC computer science, Thesis on Automatic wordnet construction using sense embedding for local language"
+     }
+    ],
+    "experience": [],
+    "uncertain": [
+     "education 'M.SC': institution 'unspecified' is not written in its evidence, removed",
+     "education 'M.SC': end 'unspecified' not found in its evidence, removed",
+     "part 2/2: answer cut off at the token limit",
+     "part 2/2: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 2/2: answer cut off at the token limit",
+     "part 2/2: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 35.641
+  },
+  "elapsed_s": 35.68
+ },
+ "P42": {
+  "reader": {
+   "cv_id": "cv-5c94b59e",
+   "file_type": "text",
+   "text_chars": 1932,
+   "sections": {
+    "header": 1932
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.004
+  },
+  "profile": {
+   "cv_id": "cv-5c94b59e",
+   "anonymised_text": "Position: Data Scientist\nExperience years: 4\nEnglish level: upper\n\nLeading project based on highly complex business logic.\n\nWas invited as a mathematician to the project to develop in a short term and present the solution to clients.\n\nTogether with team achieved TOP 14% in AMEX Kaggle competition.\n\nWas a college lecturer for 1 term. Probability and statistics.\nBA in Mathematics\nMaster degree in Mathematics\n(Stochastic differential equations area)\nMaster degree in Financial Economics / Applied economics\nPhD in Mathematics (currently) (Stochastic differential equations area)\n\nData scientist:\n- Building a recommendation system\n(Collaborative filtering, LSTM)\n- Making research on behavioral biases' impact on traders' performance\n- Doing analytics with parsed data from Facebook\n- [URL] the best traffic routes with dynamical visualization\n- Finance project:\nCreating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization\n\nData Analyst / Engineer\n- Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)\n- Sales Forecasting using ARIMA model\n- Rewriting MSSQL queries to PySpark\n- Developing Machine Learning approach\n\nMachine Learning Engineer / Data Scientist\n- Time Series forecasting using FFT, Facebook Prophet model\n- Developing method for probability calculation in clinical trials which is based on Diophantine inequality, Monte Carlo method for multiple integral derivation\n- Binary imbalanced classification, anomaly detection based on complex business logic in financial market. AWS Sagemaker, sklearn processing jobs. Leading Junior Data Scientist.\n\nCollege lecturer (1 term): Probability theory and statistics\nData Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {
+     "[URL]": 1
+    },
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-5c94b59e",
+    "skills": [
+     {
+      "name": "Collaborative filtering",
+      "evidence": "- Building a recommendation system\n(Collaborative filtering, LSTM)"
+     },
+     {
+      "name": "LSTM",
+      "evidence": "- Building a recommendation system\n(Collaborative filtering, LSTM)"
+     },
+     {
+      "name": "Behavioral biases",
+      "evidence": "- Making research on behavioral biases' impact on traders' performance"
+     },
+     {
+      "name": "Facebook",
+      "evidence": "- Doing analytics with parsed data from Facebook"
+     },
+     {
+      "name": "Stochastic differential equations",
+      "evidence": "PhD in Mathematics (currently) (Stochastic differential equations area)"
+     },
+     {
+      "name": "Applied economics",
+      "evidence": "Master degree in Financial Economics / Applied economics"
+     },
+     {
+      "name": "Mathematics",
+      "evidence": "Master degree in Mathematics"
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     },
+     {
+      "name": "PySpark",
+      "evidence": "Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)"
+     },
+     {
+      "name": "unittest",
+      "evidence": "Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)"
+     },
+     {
+      "name": "pyodbc",
+      "evidence": "Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)"
+     },
+     {
+      "name": "ARIMA",
+      "evidence": "Sales Forecasting using ARIMA model"
+     },
+     {
+      "name": "FFT",
+      "evidence": "Time Series forecasting using FFT, Facebook Prophet model"
+     },
+     {
+      "name": "Facebook Prophet",
+      "evidence": "Time Series forecasting using FFT, Facebook Prophet model"
+     },
+     {
+      "name": "Cluster analysis",
+      "evidence": "Creating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization"
+     },
+     {
+      "name": "PCA",
+      "evidence": "Creating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization"
+     },
+     {
+      "name": "Autoencoder",
+      "evidence": "Creating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization"
+     },
+     {
+      "name": "t-SNE",
+      "evidence": "Creating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization"
+     },
+     {
+      "name": "Wavelet/Fourier transformation",
+      "evidence": "Creating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization"
+     },
+     {
+      "name": "Monte Carlo",
+      "evidence": "Developing method for probability calculation in clinical trials which is based on Diophantine inequality, Monte Carlo method for multiple integral derivation"
+     },
+     {
+      "name": "Diophantine inequality",
+      "evidence": "Developing method for probability calculation in clinical trials which is based on Diophantine inequality, Monte Carlo method for multiple integral derivation"
+     },
+     {
+      "name": "Binary imbalanced classification",
+      "evidence": "Binary imbalanced classification, anomaly detection based on complex business logic in financial market."
+     },
+     {
+      "name": "anomaly detection",
+      "evidence": "Binary imbalanced classification, anomaly detection based on complex business logic in financial market."
+     },
+     {
+      "name": "complex business logic",
+      "evidence": "Binary imbalanced classification, anomaly detection based on complex business logic in financial market."
+     },
+     {
+      "name": "AWS Sagemaker",
+      "evidence": "AWS Sagemaker, sklearn processing jobs."
+     },
+     {
+      "name": "sklearn",
+      "evidence": "AWS Sagemaker, sklearn processing jobs."
+     },
+     {
+      "name": "Data Science",
+      "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+     },
+     {
+      "name": "Predictive analytics",
+      "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+     },
+     {
+      "name": "Quantitative Finance",
+      "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+     },
+     {
+      "name": "Time Series Forecasting",
+      "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+     },
+     {
+      "name": "Signal Processing",
+      "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+     },
+     {
+      "name": "Mathematical modeling",
+      "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+     },
+     {
+      "name": "Gambling",
+      "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+     },
+     {
+      "name": "Portfolio optimization",
+      "evidence": "Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization"
+     }
+    ],
+    "education": [
+     {
+      "degree": "BA",
+      "field": "Mathematics",
+      "institution": null,
+      "end": null,
+      "evidence": "BA in Mathematics"
+     },
+     {
+      "degree": "Master",
+      "field": "Mathematics",
+      "institution": null,
+      "end": null,
+      "evidence": "Master degree in Mathematics\n(Stochastic differential equations area)"
+     },
+     {
+      "degree": "PhD",
+      "field": "Mathematics",
+      "institution": null,
+      "end": null,
+      "evidence": "PhD in Mathematics (currently) (Stochastic differential equations area)"
+     }
+    ],
+    "experience": [
+     {
+      "title": "Data Scientist",
+      "company": null,
+      "start": null,
+      "end": null,
+      "evidence": "Data scientist:\n- Building a recommendation system\n(Collaborative filtering, LSTM)\n- Making research on behavioral biases' impact on traders' performance\n- Doing analytics with parsed data from Facebook"
+     },
+     {
+      "title": "College lecturer",
+      "company": null,
+      "start": null,
+      "end": null,
+      "evidence": "College lecturer (1 term): Probability theory and statistics"
+     }
+    ],
+    "uncertain": [
+     "education 'BA': institution 'null' is not written in its evidence, removed",
+     "education 'BA': end 'null' not found in its evidence, removed",
+     "education 'Master': institution 'null' is not written in its evidence, removed",
+     "education 'Master': end 'null' not found in its evidence, removed",
+     "education 'Master': institution 'null' is not written in its evidence, removed",
+     "education 'Master': end 'null' not found in its evidence, removed",
+     "education 'PhD': institution 'null' is not written in its evidence, removed",
+     "education 'PhD': end 'null' not found in its evidence, removed",
+     "experience 'Data Scientist': company 'null' is not written in its evidence, removed",
+     "experience 'Data Scientist': start 'null' not found in its evidence, removed",
+     "experience 'Data Scientist': end 'null' not found in its evidence, removed",
+     "experience 'Data Analyst / Engineer': title 'Data Analyst / Engineer' is not written in its evidence, removed",
+     "experience 'Data Analyst / Engineer': company 'null' is not written in its evidence, removed",
+     "experience 'Data Analyst / Engineer': start 'null' not found in its evidence, removed",
+     "experience 'Data Analyst / Engineer': end 'null' not found in its evidence, removed",
+     "experience 'Data Analyst / Engineer': neither title nor company, dropped",
+     "experience 'Machine Learning Engineer / Data Scientist': title 'Machine Learning Engineer / Data Scientist' is not written in its evidence, removed",
+     "experience 'Machine Learning Engineer / Data Scientist': company 'null' is not written in its evidence, removed",
+     "experience 'Machine Learning Engineer / Data Scientist': start 'null' not found in its evidence, removed",
+     "experience 'Machine Learning Engineer / Data Scientist': end 'null' not found in its evidence, removed",
+     "experience 'Machine Learning Engineer / Data Scientist': neither title nor company, dropped",
+     "experience 'College lecturer': company 'None' is not written in its evidence, removed",
+     "experience 'College lecturer': start '1 term' not found in its evidence, removed",
+     "experience 'College lecturer': end 'present' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:name_not_found"
+   ],
+   "info_flags": [],
+   "elapsed_s": 30.073
+  },
+  "elapsed_s": 30.09
+ },
+ "P43": {
+  "reader": {
+   "cv_id": "cv-ffb70fea",
+   "file_type": "text",
+   "text_chars": 1835,
+   "sections": {
+    "header": 1053,
+    "skills": 772
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [],
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-ffb70fea",
+   "anonymised_text": "Position: Data Scientist\nExperience years: 5\nEnglish level: upper\n\nSelf-motivated Data Scientist with 4+ years of experience (8+ years in IT Data Analytics ). I constantly bring high-quality business solutions to businesses seeking higher efficiency.\nStrong analytical mindset and proactive team player\nExcellent problem-solver and collaborative with expertise in algorithm design and data collection.\n\nResponsibilities:\n- Development a set of ML solutions: Classification / Regression / Clustering / [NAME] / MAB for Real-Time Bidding auction, which allowed to automatically buy traffic from the most prominent advertising platforms for more than $500k+ monthly with positive margins.\n- Creating complex resolutions to provide RTB (real-time bidding) in a highly loaded platform.\n- Generating ideas for founding triggers and forming specific, accurate proposals for product improvement.\nProfound analysis and finding hidden patterns/causes.\n- Controlling all the main KPIs, A/B testing, rolling, and validation of results.\n- A/B testing.\n\nSkills:\n- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, AirFlow, MLFlow\n- ML: supervised and unsupervised learning,\nclustering, regression, classification,\nrecommendation systems,time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word,Access,PowerPoint,Excel,Microsoft\nOffice\n- End-to-end experience with data collection, processing,aggregation, analyzing and visualization\n- Agile methodologies : Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management\nI am considering only part-time vacancies for around ~20-25 hours on the english-speaking market: Only Canada/USA\nProgressive project with professional growth",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {
+     "[NAME]": 1
+    },
+    "detectors": [
+     "rules"
+    ],
+    "name_found": true,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": false,
+    "warnings": []
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-ffb70fea",
+    "skills": [],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "part 1/1: answer cut off at the token limit",
+     "part 1/1: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 1/1: answer cut off at the token limit",
+     "part 1/1: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [],
+   "elapsed_s": 29.813
+  },
+  "elapsed_s": 29.83
+ },
+ "P44": {
+  "reader": {
+   "cv_id": "cv-f4e04297",
+   "file_type": "text",
+   "text_chars": 839,
+   "sections": {
+    "header": 839
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.005
+  },
+  "profile": {
+   "cv_id": "cv-f4e04297",
+   "anonymised_text": "Position: Big Data Engineer\nExperience years: 11\nEnglish level: upper\n\nA lot of successful projects, up to production deployment, using most powerful development practices and Agile methodology.\nProgramming languages: Python, Java, SQL\nRelational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum\nBig data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift\nCloud: AWS(EC2, RDS, S3)\nETL: Apache Airflow, Informatica\nVersion control tools: Git, GitHub, Bitbucket\n\nResponsibility areas: Scope defining, requirements definition, database design, data analysis, ETL pipelines, data migration, data integration, DWH design\nI'm Interesting to develop complex products using modern cloud technologies, AWS is preferable. It would be great to work within the team of talented developers with high tech/soft skills level.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-f4e04297",
+    "skills": [],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "part 1/2: answer cut off at the token limit",
+     "part 1/2: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 1/2: answer cut off at the token limit",
+     "part 1/2: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 29.886
+  },
+  "elapsed_s": 29.9
+ },
+ "P45": {
+  "reader": {
+   "cv_id": "cv-a4000d47",
+   "file_type": "text",
+   "text_chars": 1327,
+   "sections": {
+    "header": 1218,
+    "interests": 97
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [],
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-a4000d47",
+   "anonymised_text": "Position: Data Architect\nExperience years: 11\nEnglish level: fluent\n\nExperienced data engineer/ data architect / system analyst.\n\nLatest projects:\n- Migration from Vertica to Snowflake\n- Analytical system for Fund management company\n- Data Warehouse for Investment bank (system connected with 100+ different ERP up to 20 bln transactions per month, 20 years of data collected)\n- CRM integrations (financial companies with up to 20 mln of clients)\n- E-commerce analytics project (small startup spending 500KUSD per month in ads).\n- Risks analytics for top 10 bank in Ukraine.\n\nTechnologies used tools:\n- Databases: Snowflake/Oracle / Postgres / Clickhouse/ DuckDB/ MS SQL\n- BI tools: Cognos, SAP business objects, [NAME], Power BI, GoodData\n- Python\n- Linux\n- Azure/ AWS\n- CASE tools (Enterprise Architect, Power Designer)\n- ETL: Matillion, DBT, Airbyte\n\nOther:\n- Jira, Confluence, HP ALM, Gsnow, Mantis etc\n- Agile / Waterfall\n- Apache Airflow\n\nRecent certifications:\n- Microsoft Certified: Azure Fundamentals\n- Microsoft Certified: Azure Data Fundamentals\n- Microsoft Certified: Azure Data Engineer Associate\n- Microsoft Certified: Azure Developer Associate\n- Microsoft Certified: Azure Solutions Architect Expert\nInterests:\n-High load\n-Analytics/ Data driven projects / Big data\n-Healthcare, Advertising, Machine Learning",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {
+     "[NAME]": 1
+    },
+    "detectors": [
+     "rules"
+    ],
+    "name_found": true,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": false,
+    "warnings": []
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-a4000d47",
+    "skills": [],
+    "education": [],
+    "experience": [],
+    "uncertain": [],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 0.038
+  },
+  "elapsed_s": 0.06
+ },
+ "P46": {
+  "reader": {
+   "cv_id": "cv-191eefa5",
+   "file_type": "text",
+   "text_chars": 669,
+   "sections": {
+    "header": 669
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.003
+  },
+  "profile": {
+   "cv_id": "cv-191eefa5",
+   "anonymised_text": "Position: BI/Data Lead/Architect\nExperience years: 11\nEnglish level: upper\n\nDesigned and implemented a BI project(DWH, ETL, Data visualization) from scratch. Extended the team from one person to 5 engineers\nExtensive experience in R&D, Product Development, Engineering and QC\n\nDBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\nTools: Azure DataFactory, DataBricks, AirFlow, SSIS, SSAS, SSRS, Pentaho\nMarkup languages, template engines: HTML, XML\nSCMs: Git, Subversion\nProgramming languages: Python, Ruby, JS\nWeb frameworks: Ruby on Rails\nOperating systems: Windows, Linux\n\nDevelopment methodology: Agile, Scrum, Waterfall\nTask-tracker: JIRA, YouTrack",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-191eefa5",
+    "skills": [],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "part 1/1: answer cut off at the token limit",
+     "part 1/1: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 1/1: answer cut off at the token limit",
+     "part 1/1: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 29.666
+  },
+  "elapsed_s": 29.68
+ },
+ "P47": {
+  "reader": {
+   "cv_id": "cv-1aca381a",
+   "file_type": "text",
+   "text_chars": 1741,
+   "sections": {
+    "header": 1741
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-1aca381a",
+   "anonymised_text": "Position: Lead / Senior Data Scientist\nExperience years: 10\nEnglish level: fluent\n\nSenior / Lead Data Scientist with over 10 years of total commercial experience in data science, software development, and machine learning related projects.\n\nExperienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems.\n\nMachine Learning\nLinear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more.\n\nDeep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks.\n\nNatural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy.\n\nProgramming and Machine Learning Libraries:\nPython, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi\n\nDatabases:\nBigQuery, MSSQL, MySQL, PostgreSQL, MongoDB\n\nCloud Services, DevOps and Big Data\nDocker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-1aca381a",
+    "skills": [
+     {
+      "name": "Machine Learning",
+      "evidence": "Senior / Lead Data Scientist with over 10 years of total commercial experience in data science, software development, and machine learning related projects."
+     },
+     {
+      "name": "Statistical Data Models",
+      "evidence": "Data Analysis, Statistical Data Models, Machine Learning Models."
+     },
+     {
+      "name": "Machine Learning Models",
+      "evidence": "Data Analysis, Statistical Data Models, Machine Learning Models."
+     },
+     {
+      "name": "Deep Learning",
+      "evidence": "Excellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics."
+     },
+     {
+      "name": "Statistics",
+      "evidence": "Excellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics."
+     },
+     {
+      "name": "Data Collection",
+      "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+     },
+     {
+      "name": "Preprocessing",
+      "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+     },
+     {
+      "name": "Feature Engineering",
+      "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+     },
+     {
+      "name": "Training",
+      "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+     },
+     {
+      "name": "Data Augmentation",
+      "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+     },
+     {
+      "name": "Validation",
+      "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+     },
+     {
+      "name": "Testing",
+      "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+     },
+     {
+      "name": "Post-deployment monitoring",
+      "evidence": "Experienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+     },
+     {
+      "name": "Distributed Systems",
+      "evidence": "Experience in working with distributed systems."
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "skill 'Data Analysis': name 'Data Analysis' is not written in its evidence, removed",
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 2: unreadable answer (no JSON object in the model answer)",
+     "part 3/3: answer cut off at the token limit",
+     "part 3/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 3/3: answer cut off at the token limit",
+     "part 3/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 68.602
+  },
+  "elapsed_s": 68.62
+ },
+ "P48": {
+  "reader": {
+   "cv_id": "cv-94d4b990",
+   "file_type": "text",
+   "text_chars": 1948,
+   "sections": {
+    "header": 1948
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.013
+  },
+  "profile": {
+   "cv_id": "cv-94d4b990",
+   "anonymised_text": "Position: Data Scientist/Machine Learning Engineer\nExperience years: 5\nEnglish level: fluent\n\n- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc.\n- As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems).\n- As a domain expert and engineer, significantly improved and refactored pivotal piece of data pipeline for search extraction. Technologies: Scala, Spark.\n- As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet\n- Multiple times hackathons winner\nFull-cycle ML product development from problem definition and gathering requirements to deployment in production systems.\nI worked on both, ML and non-ML based solutions to solve business problems.\n\nML competencies:\n- text classification\n- time-series forecasting\n- data preparation\n- feature engineering\n- model evaluation\n\nI'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models.\n- Not a data engineer, DevOps, BI, Scala developer positions\n- Not interested in gambling, porn, banking, adtech industries\n- Prefer product-oriented company, not \"service\"/outsource/\"boutique\" company, please\n- Preferably mid-size product company (~50-500 people)\n- Flexible environment with collaboration style rather than micro-management",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-94d4b990",
+    "skills": [
+     {
+      "name": "python",
+      "evidence": "- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+     },
+     {
+      "name": "matplotlib",
+      "evidence": "- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+     },
+     {
+      "name": "seaborn",
+      "evidence": "- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+     },
+     {
+      "name": "bokeh",
+      "evidence": "- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+     },
+     {
+      "name": "pandas",
+      "evidence": "- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+     },
+     {
+      "name": "numpy",
+      "evidence": "- As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc."
+     },
+     {
+      "name": "text classification",
+      "evidence": "- text classification"
+     },
+     {
+      "name": "time-series forecasting",
+      "evidence": "- time-series forecasting"
+     },
+     {
+      "name": "data preparation",
+      "evidence": "- data preparation"
+     },
+     {
+      "name": "feature engineering",
+      "evidence": "- feature engineering"
+     },
+     {
+      "name": "model evaluation",
+      "evidence": "- model evaluation"
+     },
+     {
+      "name": "deep learning",
+      "evidence": "I'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+     },
+     {
+      "name": "NLP",
+      "evidence": "I'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+     },
+     {
+      "name": "CV",
+      "evidence": "I'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+     },
+     {
+      "name": "deployment",
+      "evidence": "I'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+     },
+     {
+      "name": "serving",
+      "evidence": "I'm interested in deep learning based approaches in NLP or CV, including deployment (serving) of DL models."
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 43.712
+  },
+  "elapsed_s": 43.74
+ },
+ "P49": {
+  "reader": {
+   "cv_id": "cv-caae0750",
+   "file_type": "text",
+   "text_chars": 2587,
+   "sections": {
+    "header": 1533,
+    "summary": 1044
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [],
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 0.005
+  },
+  "profile": {
+   "cv_id": "cv-caae0750",
+   "anonymised_text": "Position: Data Scientist\nExperience years: 4\nEnglish level: upper\n\n- Developed and deployed a driver behavior estimation model that can accurately estimate user driving and identify potentially dangerous events in real-time.\n- Designed, developed, and deployed a predictive maintenance model that provides crucial car maintenance recommendations based on detailed analysis of vehicle data.\n- Created a proof of concept for a car bumping detection model that can detect and alert users of potential collisions.\n- Built a GPS filtering model that effectively removes noise from GPS data in real-time.\n- Built an ML model that proposes the optimal path for a driver, taking into account fuel consumption to help users save on gas.\n- Co-designed and developed a user verification model based on pictures, ensuring reliable user authentication.\n- Built a churn prediction model for banking data, helping the company retain customers.\n- Served as a part-time backend developer for a startup platform, contributing to the development of their platform.\n- Mentored new team members.\n- Conducted extensive research, reviewing papers and creating proof of concept models for possible automotive, locating, dentistry, and interior design projects.\n- [NAME] Master\n- Bronze medal for Google QUEST Q&A Labeling Competition ([NAME])\n\nMy main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment.\nABOUT ME\nI am a data scientist with 4+ years of experience, specializing in data exploration, processing, and building ML and NN models. My work has been focused on the automotive industry, but I am always eager to learn and take on new challenges. I approach my work with passion and a strong work ethic, with an ability to quickly adapt to new situations. Overall, I am a motivated and skilled data scientist who is eager to take on new projects and advance my knowledge and skills.\n\nMY SKILLS\nApproaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers\n\nTasks: image classification, image generation, time series forecasting/classification, clustering, sentence classification\n\nTechnologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS\nI'm open to all interesting opportunities",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {
+     "[NAME]": 2
+    },
+    "detectors": [
+     "rules"
+    ],
+    "name_found": true,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": false,
+    "warnings": []
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-caae0750",
+    "skills": [],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "part 1/2: answer cut off at the token limit",
+     "part 1/2: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 1/2: answer cut off at the token limit",
+     "part 1/2: attempt 2: unreadable answer (no JSON object in the model answer)",
+     "part 2/2: answer cut off at the token limit",
+     "part 2/2: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 2/2: answer cut off at the token limit",
+     "part 2/2: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [],
+   "elapsed_s": 57.32
+  },
+  "elapsed_s": 57.34
+ },
+ "P50": {
+  "reader": {
+   "cv_id": "cv-95d4084a",
+   "file_type": "text",
+   "text_chars": 1696,
+   "sections": {
+    "header": 1696
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-95d4084a",
+   "anonymised_text": "Position: Lead Backend Developer (Python, Golang)\nExperience years: 11\nEnglish level: intermediate\n\n- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)\n- Implemented CallCenter system based on Asterisk which processes 200+ calls at one moment.\n- Implemented LocationBased Social Network architecture, API and microservices.\n- Developing platform for manage social media reputation (working with instagram, Facebook and other social networks API).\n- Implemented platform for children's smartwatches\n- Implemented platform (API, billing, services) for Pre-order food and Food Delivery\n- Implemented service for traffic monitoring and billing for ISP.\n- Implemented service for motion detection for IoT and other IoT things.\n- Implemented an advertising system\n- Implemented payment gateway\n- Implemented smart home software and hardware IoT things (LoRaWAN, ZigBee).\n- Implemented highload datastore with lot of ETL pipelines\n- Etc.\nMore than 12+ years of experience working in Backend development:\n- Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)\n- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool\n- Kubernetes, Docker, AWS, Azure\n- Development of large, complex systems with highload\n- Embedded software development (C, MicroPython)\n- IoT development (LoRaWan, zwave, Raspberry Pi, Arduino, ESP32)\n- Device drivers development for Linux\n- Machine Learning (SparkNLP, StanfordNLP, TensorFlow, PyTorch, nltk etc)\n- VOIP (asterisk, asterisk AGI scripts)\n- Blockchain development (Basic Knowledges)\n- Linux/MacOS Expert :)\nprefer Highload or IoT projects",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-95d4084a",
+    "skills": [
+     {
+      "name": "Python",
+      "evidence": "Position: Lead Backend Developer (Python, Golang)"
+     },
+     {
+      "name": "Golang",
+      "evidence": "Position: Lead Backend Developer (Python, Golang)"
+     },
+     {
+      "name": "API",
+      "evidence": "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)"
+     },
+     {
+      "name": "Microservices",
+      "evidence": "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)"
+     },
+     {
+      "name": "Asterisk",
+      "evidence": "- Implemented CallCenter system based on Asterisk which processes 200+ calls at one moment."
+     },
+     {
+      "name": "LocationBased Social Network",
+      "evidence": "- Implemented LocationBased Social Network architecture, API and microservices."
+     },
+     {
+      "name": "Social media reputation",
+      "evidence": "- Developing platform for manage social media reputation (working with instagram, Facebook and other social networks API)."
+     },
+     {
+      "name": "Instagram",
+      "evidence": "- Developing platform for manage social media reputation (working with instagram, Facebook and other social networks API)."
+     },
+     {
+      "name": "Facebook",
+      "evidence": "- Developing platform for manage social media reputation (working with instagram, Facebook and other social networks API)."
+     },
+     {
+      "name": "Social networks API",
+      "evidence": "- Developing platform for manage social media reputation (working with instagram, Facebook and other social networks API)."
+     },
+     {
+      "name": "Children's smartwatches",
+      "evidence": "- Implemented platform for children's smartwatches"
+     },
+     {
+      "name": "Traffic monitoring",
+      "evidence": "- Implemented service for traffic monitoring and billing for ISP."
+     },
+     {
+      "name": "ISP",
+      "evidence": "- Implemented service for traffic monitoring and billing for ISP."
+     },
+     {
+      "name": "Motion detection",
+      "evidence": "- Implemented service for motion detection for IoT and other IoT things."
+     },
+     {
+      "name": "IoT",
+      "evidence": "- Implemented service for motion detection for IoT and other IoT things."
+     },
+     {
+      "name": "VOIP",
+      "evidence": "- VOIP (asterisk, asterisk AGI scripts)"
+     },
+     {
+      "name": "asterisk AGI scripts",
+      "evidence": "- VOIP (asterisk, asterisk AGI scripts)"
+     },
+     {
+      "name": "Blockchain development",
+      "evidence": "- Blockchain development (Basic Knowledges)"
+     },
+     {
+      "name": "Basic Knowledges",
+      "evidence": "- Blockchain development (Basic Knowledges)"
+     },
+     {
+      "name": "Linux",
+      "evidence": "- Linux/MacOS Expert :)"
+     },
+     {
+      "name": "MacOS",
+      "evidence": "- Linux/MacOS Expert :)"
+     },
+     {
+      "name": "Highload",
+      "evidence": "prefer Highload or IoT projects"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "skill 'Pre-order food and Food Delivery': evidence not in the CV (not found (closest 0.81)), dropped",
+     "skill 'API': evidence not in the CV (not found (closest 0.81)), dropped",
+     "skill 'Billing': evidence not in the CV (not found (closest 0.81)), dropped",
+     "skill 'Services': evidence not in the CV (not found (closest 0.81)), dropped",
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 43.432
+  },
+  "elapsed_s": 43.45
+ },
+ "P51": {
+  "reader": {
+   "cv_id": "cv-fb52e26d",
+   "file_type": "text",
+   "text_chars": 2565,
+   "sections": {
+    "header": 2565
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.011
+  },
+  "profile": {
+   "cv_id": "cv-fb52e26d",
+   "anonymised_text": "Position: Python Developer\nExperience years: 11\nEnglish level: fluent\n\nMaster's degree, Professional Python Developer with experience in building complete cycles of applications.\nMy latest 3 jobs:\n\n- Sentinels AI (acquired by Fenergo) (Netherlands)\n\nSenior Backend Engineer\n\nA transaction Monitoring solution that helps compliance officers to find transactions that are related to Money Laundering or Terrorism Financing. I\ndesigned and execute well-engineered, easy-to-maintain, reliable, and bug-free code for various company apps (microservices) in collaboration with AI engineers, data scientists, programmers, and other software personnel.\nConfigured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK.\n\nPython 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA\n\n- Visualfabriq (Netherlands)\n\nDevelopment Team Lead / Senior Python Engineer\n\nVisualfabriq is a web tool for FMCGs to plan and manage promotions, make invoices, and build reports and data forecasts. My team was responsible for the Invoices module (which is a part of the Promotions module). The team consisted of 5 people (3 backend developers). I provided coaching, performance review, 1 to 1 sessions, and was the first person for contact. As a developer, I built new features, supported existing ones, optimized\nperformance, raised tests code coverage from 60% to 87%, and successfully led the project transition from\nPython 2.7 to 3.8\n\nLinux, Python 3.8 & 2.7, Flask, Docker/Docker-Compose, MongoDB, AWS, CI/CD, logging(Sentry), Git(Bitbucket), Scrum, Agile, JIRA\n\n- Lukkien (Netherlands)\n\nPython developer\n\nWorked on multiple projects: two web stores(one from scratch) and a multilingual website. Wrote an easy-to-maintain, reliable, and bug-free code wrapped in Docker and deployed on AWS. Configured pipelines for\nContinuous Integration and Continuous Delivery.\n\nLinux, Python 3.6, Django + Django ORM, Oscar E-Commerce, GraphQL(graphene), Docker-Compose, pytest, Wagtail, PostgreSQL, ReactJS, AWS, CI/CD, logging(Sentry), GitLab, Scrum, Agile, JIRA\nI'm a professional Software Engineer with 10 years of experience, specializing in Python backend\ndevelopment. I've been working both as an individual contributor as well as a tech and team lead. I am now\nlooking for a Python Backend/Full Stack Engineer or a Tech/Team Lead role. A permanent or\ncontract-based role in a company with a technology-first approach with challenging projects and a remote or\nhybrid work option.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-fb52e26d",
+    "skills": [
+     {
+      "name": "Python",
+      "evidence": "Professional Python Developer with experience in building complete cycles of applications."
+     },
+     {
+      "name": "AWS CDK",
+      "evidence": "managed and provisioned infrastructure as a code using AWS CDK."
+     },
+     {
+      "name": "FastAPI",
+      "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+     },
+     {
+      "name": "AWS",
+      "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+     },
+     {
+      "name": "lambda",
+      "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+     },
+     {
+      "name": "SNS",
+      "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+     },
+     {
+      "name": "SQS",
+      "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+     },
+     {
+      "name": "Athena",
+      "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+     },
+     {
+      "name": "DynamoDB",
+      "evidence": "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK)"
+     },
+     {
+      "name": "Git",
+      "evidence": "Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+     },
+     {
+      "name": "Gitlab",
+      "evidence": "Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+     },
+     {
+      "name": "CI/CD",
+      "evidence": "Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+     },
+     {
+      "name": "Scrum",
+      "evidence": "Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+     },
+     {
+      "name": "Agile",
+      "evidence": "Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+     },
+     {
+      "name": "JIRA",
+      "evidence": "Git(Gitlab CI/CD), Scrum, Agile, JIRA"
+     }
+    ],
+    "education": [
+     {
+      "degree": "Master's degree",
+      "field": "Professional Python Developer",
+      "institution": null,
+      "end": null,
+      "evidence": "Master's degree, Professional Python Developer with experience in building complete cycles of applications."
+     }
+    ],
+    "experience": [
+     {
+      "title": "Senior Backend Engineer",
+      "company": null,
+      "start": null,
+      "end": null,
+      "evidence": "Senior Backend Engineer\n\nA transaction Monitoring solution that helps compliance officers to find transactions that are related to Money Laundering or Terrorism Financing. I\ndesigned and execute well-engineered, easy-to-maintain, reliable, and bug-free code for various company apps (microservices) in collaboration with AI engineers, data scientists, programmers, and other software personnel.\nConfigured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK."
+     },
+     {
+      "title": "Development Team Lead / Senior Python Engineer",
+      "company": "Visualfabriq",
+      "start": null,
+      "end": null,
+      "evidence": "- Visualfabriq (Netherlands)\n\nDevelopment Team Lead / Senior Python Engineer\n\nVisualfabriq is a web tool for FMCGs to plan and manage promotions, make invoices, and build reports and data forecasts. My team was responsible for the Invoices module (which is a part of the Promotions module). The team consisted of 5 people (3 backend developers). I provided coaching, performance review, 1 to 1 sessions, and was the first person for contact. As a developer, I built new features, supported existing ones, optimized\nperformance, raised tests code coverage from 60% to 87%, and successfully led the project transition from\nPython 2.7 to 3.8"
+     }
+    ],
+    "uncertain": [
+     "education 'Master's degree': institution 'null' is not written in its evidence, removed",
+     "education 'Master's degree': end 'null' not found in its evidence, removed",
+     "experience 'Senior Backend Engineer': company 'Sentinels AI (acquired by Fenergo)' is not written in its evidence, removed",
+     "experience 'Senior Backend Engineer': start 'null' not found in its evidence, removed",
+     "experience 'Senior Backend Engineer': end 'null' not found in its evidence, removed",
+     "experience 'Development Team Lead / Senior Python Engineer': start 'present' not found in its evidence, removed",
+     "experience 'Development Team Lead / Senior Python Engineer': end 'present' not found in its evidence, removed",
+     "part 3/4: answer cut off at the token limit",
+     "part 3/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 3/4: answer cut off at the token limit",
+     "part 3/4: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 47.946
+  },
+  "elapsed_s": 47.97
+ },
+ "P52": {
+  "reader": {
+   "cv_id": "cv-0e428cdb",
+   "file_type": "text",
+   "text_chars": 1934,
+   "sections": {
+    "header": 1934
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.001
+  },
+  "profile": {
+   "cv_id": "cv-0e428cdb",
+   "anonymised_text": "Position: Senior Python Developer, Team Lead\nExperience years: 11\nEnglish level: upper\n\nArchitecture and implementation of analitycs dashboard based on django, celery and D3.js\nImplemented a bunch of features for b2b coffee business project\nImplemented new features to Django corporate task-management system\nDesigned and implemented destibuted CRM.\nImplemented business intellegence system for game application\nDesigned and developed RESTful API for game application\nIntegrated a corporate ticket system with Facebook and Twitter APIs\nDesigned and developed a websocket web-chat for a corporate ticket system using JavaScript and Tornado\nWrote SQL reports for the company clients\nDesigned and implemented a distributed RESTful task queue based on key-value DB using python and lua\nSupported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using python\nBuild a CI pipelines in gitlab-[URL] with testing and code standard checks (pyflakes, pylint)\nBuild an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuild projects with microservices\nBuild systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review\n\nSkillset:\nGit\nDocker\nDocker Compose\nDjango\nDjango RESTFul Framework\nCelery\nFlask SQLAlchemy\naiohttp\nTornado\nRabbitMQ\nPython3\nJavaScript\nLUA\nSQL (PostgreSQL/MySQL)\nNoSQL (MongoDB/DynamoDB/Kyototycoon/Redis/Memcached/MongoDB/ElasticSearch)\nProxy (Nginx)\nDevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Asure Cloud)\n\nScrum\nMicroservices\nAutomated Testing\nCD/CI (Gitlab runners/Github actions/Circle CI/Jenkins)\nCode quality tools\nAPI (REST, GraphQL, JSONRPC)\nWeb Scraping (Selenium+beautifulsoup)\nTeam leading\nBlockchain (BTC/LTC/ETH/ERC20)\nNFT\nI want to work with people who is more experienced than me.\nAI project will be just great",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {
+     "[URL]": 1
+    },
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-0e428cdb",
+    "skills": [
+     {
+      "name": "Linux",
+      "evidence": "DevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Asure Cloud)"
+     },
+     {
+      "name": "Terraform",
+      "evidence": "DevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Asure Cloud)"
+     },
+     {
+      "name": "Ansible",
+      "evidence": "DevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Asure Cloud)"
+     },
+     {
+      "name": "Amazon AWS Cloud",
+      "evidence": "DevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Asure Cloud)"
+     },
+     {
+      "name": "MS Asure Cloud",
+      "evidence": "DevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Asure Cloud)"
+     },
+     {
+      "name": "Scrum",
+      "evidence": "Scrum"
+     },
+     {
+      "name": "Microservices",
+      "evidence": "Microservices"
+     },
+     {
+      "name": "Automated Testing",
+      "evidence": "Automated Testing"
+     },
+     {
+      "name": "CD/CI",
+      "evidence": "CD/CI (Gitlab runners/Github actions/Circle CI/Jenkins)"
+     },
+     {
+      "name": "Gitlab runners",
+      "evidence": "CD/CI (Gitlab runners/Github actions/Circle CI/Jenkins)"
+     },
+     {
+      "name": "Github actions",
+      "evidence": "CD/CI (Gitlab runners/Github actions/Circle CI/Jenkins)"
+     },
+     {
+      "name": "Circle CI",
+      "evidence": "CD/CI (Gitlab runners/Github actions/Circle CI/Jenkins)"
+     },
+     {
+      "name": "Jenkins",
+      "evidence": "CD/CI (Gitlab runners/Github actions/Circle CI/Jenkins)"
+     },
+     {
+      "name": "Code quality tools",
+      "evidence": "Code quality tools"
+     },
+     {
+      "name": "API",
+      "evidence": "API (REST, GraphQL, JSONRPC)"
+     },
+     {
+      "name": "REST",
+      "evidence": "API (REST, GraphQL, JSONRPC)"
+     },
+     {
+      "name": "GraphQL",
+      "evidence": "API (REST, GraphQL, JSONRPC)"
+     },
+     {
+      "name": "JSONRPC",
+      "evidence": "API (REST, GraphQL, JSONRPC)"
+     },
+     {
+      "name": "Web Scraping",
+      "evidence": "Web Scraping (Selenium+beautifulsoup)"
+     },
+     {
+      "name": "Selenium",
+      "evidence": "Web Scraping (Selenium+beautifulsoup)"
+     },
+     {
+      "name": "beautifulsoup",
+      "evidence": "Web Scraping (Selenium+beautifulsoup)"
+     },
+     {
+      "name": "Team leading",
+      "evidence": "Team leading"
+     },
+     {
+      "name": "Blockchain",
+      "evidence": "Blockchain (BTC/LTC/ETH/ERC20)"
+     },
+     {
+      "name": "BTC",
+      "evidence": "Blockchain (BTC/LTC/ETH/ERC20)"
+     },
+     {
+      "name": "LTC",
+      "evidence": "Blockchain (BTC/LTC/ETH/ERC20)"
+     },
+     {
+      "name": "ETH",
+      "evidence": "Blockchain (BTC/LTC/ETH/ERC20)"
+     },
+     {
+      "name": "ERC20",
+      "evidence": "Blockchain (BTC/LTC/ETH/ERC20)"
+     },
+     {
+      "name": "NFT",
+      "evidence": "NFT"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "part 1/3: answer cut off at the token limit",
+     "part 1/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 1/3: answer cut off at the token limit",
+     "part 1/3: attempt 2: unreadable answer (no JSON object in the model answer)",
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:name_not_found",
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [],
+   "elapsed_s": 69.103
+  },
+  "elapsed_s": 69.11
+ }
+}

@@ -1,0 +1,31 @@
+# hs-qwen3-4b: plain Qwen3-4B-Instruct-2507 Q4_K_M (Profile, Job Agent).
+# Weights: unsloth/Qwen3-4B-Instruct-2507-GGUF @ a06e946b (see models/MANIFEST.md).
+# Chat template: ChatML, same as the GGUF's embedded template that V2's llama.cpp server used
+# (tool-calling branch omitted; Instruct-2507 has no thinking mode).
+# num_ctx 6144 = V2 plain alias (llama_v2.json / scripts/start_v2_windows.ps1).
+FROM ../../models/Qwen3-4B-Instruct-2507-Q4_K_M.gguf
+PARAMETER num_ctx 6144
+TEMPLATE """{{- if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}
+{{- range $i, $_ := .Messages }}
+{{- $last := eq (len (slice $.Messages $i)) 1 -}}
+{{- if eq .Role "user" }}<|im_start|>user
+{{ .Content }}<|im_end|>
+{{ else if eq .Role "assistant" }}<|im_start|>assistant
+{{ .Content }}{{ if not $last }}<|im_end|>
+{{ end }}
+{{- end }}
+{{- if and (ne .Role "assistant") $last }}<|im_start|>assistant
+{{ end }}
+{{- end }}"""
+
+# Decoding = V2 Matcher/upstream calls: temperature 0, top_p 1, seed 0
+# (V2 matcher/backends_api.py:124-125); repeat_penalty 1.1 = llama-cpp-python
+# server default V2 ran with (llama_cpp/server/types.py:64-65, not overridden by V2).
+PARAMETER temperature 0
+PARAMETER top_p 1
+PARAMETER seed 0
+PARAMETER repeat_penalty 1.1
+PARAMETER stop <|im_start|>
+PARAMETER stop <|im_end|>

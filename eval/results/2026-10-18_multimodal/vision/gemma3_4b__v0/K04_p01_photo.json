@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K04_p01_photo",
+  "file": "K04_p01_photo.jpg",
+  "source": "K05.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "Okay, here's a breakdown of the CV you provided, highlighting key experiences and skills:\n\n**Overall Summary:**\n\nThis CV represents a consultant with a diverse background in utilities, metering, and IT support, spanning from 2002 to the present. The individual demonstrates experience across multiple companies and roles, showcasing adaptability and a broad skillset.\n\n**Detailed Breakdown by Experience:**\n\n*   **Consultant (05/2017 – Current)**\n    *   **Company Name:** “City Name”, State\n    *   **Key Responsibilities:**\n        *   Develop business process and productivity reports to manage field book scanning project and Water Main data collection project.\n        *   Provide application support for CIS, Meter Reading, and AMR applications.\n        *   Maintained SharePoint site for IT department.\n        *   Assisted desktop support team with desktop and application user issues.\n        *   Developed secure FTP scripts during implementation of CIS and AMR applications after ransomware attack.\n\n*   **Utility Solutions Consultant (02/2006 – 04/2017)**\n    *   **Company Name:** “City Name”, State\n    *   **Key Responsibilities:**\n        *   Managed and configured Keyworks CMMS application, including XML modifications.\n        *   Led configuration requirements gathering effort for Keyworks application implementation.\n        *   Provided application support for CIS, Meter Reading, and CMMS applications.\n        *   Provided application support for CIS, CMMS, and AMR applications.\n        *   Developed data import/export files and Crystal Reports for Keyworks application.\n        *   Performed system configuration for Keyworks CMMS application.\n        *   Installed and configured Enterprise Asset Management 1.1 application and SQL Server database.\n        *   Led System Administration team to design and configure user security for Keyworks Public Sector application.\n        *   Provided application support for CIS, CMMS, and AMR applications.\n\n*   **CEO/Consultant (02/2000 – 02/2006)**\n    *   **Company Name:** “City Name”, State\n    *   **Key Responsibilities:**\n        *   Managed Griffin Technology Group budget, taxes, expenses and contracts hired and managed employees, including scheduling client support for on-site PC support.\n        *   Developed Crystal Reports for client management team to manage business within the Customer Information System.\n        *   Installed and configured Keyworks Info Server 7.\n        *   Developed PL/SQL views to manage difficult data issues in Reporting, and tracking software.\n        *   Gathered requirements for handoff of reports analysis applications.\n        *   Provided application support for access and install base in Manhattan, and stable counts to new customer Projects.\n        *   Developed Manhattan System for Access and Information Management and HP- Citrix Servers.\n        *   Assisted System Administrators in infrastructure upgrades and daily administration of HP- Citrix Servers.\n\n*   **Information Technology Consultant (10/1999 – 12/2000)**\n    *   **Company Name:** “City Name”, State\n    *   **Key Responsibilities:**\n        *   Developed new PL/SQL stored procedures and functions for limit authorization.\n        *   Developed new PL/SQL stored procedures and functions for limit authorization.\n        *   Provided technical support and troubleshooting for various systems.\n\n**Key Skills & Technologies:**\n\n*   **CMMS Systems:** Keyworks (significant experience)\n*   **Database Technologies:** PL/SQL, SQL Server\n*   **Reporting Tools:** Crystal Reports\n*   **Operating Systems:** Windows, HP-Citrix Servers\n*   **IT Support:** Desktop Support, Application Support, System Administration\n*   **Project Management:**  (Implied through process development and configuration efforts)\n*   **Risk Management:** (Demonstrated by developing secure FTP scripts after a ransomware attack)\n\n**Overall Impression:**\n\nThis CV paints a picture of a seasoned IT professional with a strong background in utilities and metering. The individual has a good understanding of CMMS systems, database technologies, and reporting tools. The experience with ransomware mitigation is a valuable and increasingly relevant skill.\n\n---\n\nDo you want me to:\n\n*   Focus on a specific aspect of the CV (e.g., the Keyworks experience)?\n*   Compare this CV to a particular job description?\n*   Extract specific information (e.g., list all the technologies mentioned)?",
+   "model": "gemma3:4b",
+   "latency_s": 45.31,
+   "eval_count": 938,
+   "done_reason": "stop",
+   "peak_vram_mib": 4251
+  }
+ ]
+}

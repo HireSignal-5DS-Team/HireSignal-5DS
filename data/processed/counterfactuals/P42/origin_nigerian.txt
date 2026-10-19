@@ -1,0 +1,42 @@
+Nationality: Nigerian
+Location: Lagos, Nigeria
+Position: Data Scientist
+Experience years: 4
+English level: upper
+
+Leading project based on highly complex business logic.
+
+Was invited as a mathematician to the project to develop in a short term and present the solution to clients.
+
+Together with team achieved TOP 14% in AMEX Kaggle competition.
+
+Was a college lecturer for 1 term. Probability and statistics.
+BA in Mathematics
+Master degree in Mathematics
+(Stochastic differential equations area)
+Master degree in Financial Economics / Applied economics
+PhD in Mathematics (currently) (Stochastic differential equations area)
+
+Data scientist:
+-	Building a recommendation system
+        (Collaborative filtering,  LSTM)
+-	Making research on behavioral biases’ impact on traders’ performance
+-	Doing analytics with parsed data from Facebook
+-	Finding the best traffic routes with dynamical visualization
+-	Finance project:
+        Creating technical indicators, Wavelet/Fourier transformation for features extraction, Cluster analysis, PCA, Autoencoder network for dimension reduction, t-SNE for visualization
+
+Data Analyst / Engineer
+-	Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)
+-	Sales Forecasting using ARIMA model
+-	Rewriting MSSQL queries to PySpark
+-	Developing Machine Learning approach
+
+Machine Learning Engineer / Data Scientist
+-       Time Series forecasting using FFT, Facebook Prophet model
+-       Developing method for probability calculation in clinical trials which is based on Diophantine inequality, Monte Carlo method for multiple integral derivation
+-       Binary imbalanced classification, anomaly detection based on complex business logic in financial market. AWS Sagemaker, sklearn processing jobs. Leading Junior Data Scientist.
+
+
+College lecturer (1 term): Probability theory and statistics
+Data Science, Predictive analytics, Quantitative Finance, Time Series Forecasting, Signal Processing, Mathematical modeling, Gambling, Portfolio optimization

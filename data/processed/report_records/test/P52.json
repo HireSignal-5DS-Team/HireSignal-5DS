@@ -1,0 +1,136 @@
+{
+ "job_title": "Python BackEnd Developer",
+ "decided_by": "gate",
+ "outcome": "review",
+ "score": 78,
+ "gate_rule": "2 review: outcome-relevant flag on a must-have",
+ "gate_reasons": [
+  "r2: must MET doubted (judge:disagrees): possible false invite"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Software development: 5 years of experience or more",
+   "decision": "MET",
+   "quotes": [
+    "Over 10 years of experience as a Software Developer mostly using python"
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": 5.0,
+   "evidence_years": 10.0
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "decision": "MET",
+   "quotes": [
+    "Over 10 years of experience as a Software Developer mostly using python"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Python"
+   ],
+   "min_years": 2.0,
+   "evidence_years": 10.0
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "decision": "MET",
+   "quotes": [
+    "Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)",
+    "Designed and implemented a distributed RESTful task queue based on key-value DB using python and lua"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "asynchronous programming",
+    "performance-critical applications"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "nice",
+   "text": "Working with AWS, Docker and microservices",
+   "decision": "MET",
+   "quotes": [
+    "Build projects with microservices",
+    "Build an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)",
+    "Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "AWS",
+    "Docker",
+    "microservices"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "nice",
+   "text": "Experience with Machine Learning",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Machine Learning"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "nice",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "collaborative filtering",
+    "similarity",
+    "data normalization",
+    "clustering"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P52",
+ "pair_id": "P52",
+ "split": "test",
+ "synthetic_flags": false
+}

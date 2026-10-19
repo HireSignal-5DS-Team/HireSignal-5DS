@@ -1,0 +1,78 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "reject letter without the right to a human review"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate has significant experience in machine learning and data science across multiple domains including computer vision, tabular data, time series, and digital signal processing. They have hands-on experience with cloud platforms (AWS SageMaker, Azure ML Studio) and tools like PySpark and SQL. However, the candidate fails to meet a critical requirement: hands-on experience with probabilistic programming frameworks such as Pyro, PyMC3, or JAGS (req_id: r4), which is a must-have for the Data Scientist role. Additionally, while the candidate demonstrates experience in probability theory and statistics, the assessment of their understanding of Bayesian methods and time series analysis is marked as uncertain due to low confidence. The candidate holds a Master’s in Computer Science, not a Ph.D. in Mathematics, which disqualifies them from meeting the preferred qualification (req_id: r8). Despite meeting several other technical requirements, the absence of the mandatory probabilistic programming experience leads to a rejection.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MET\",\n      \"quote\": \"Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.\",\n      \"line\": \"Data Science: 4 years of experience or more\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MET\",\n      \"quote\": \"Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.\",\n      \"line\": \"Good knowledge of probability theory and statistics\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more.\",\n      \"line\": \"Understanding of Bayesian methods, time series analysis or sensor signal processing\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MET\",\n      \"quote\": \"AWS S3, AWS Sagemaker, MS Azure ML Studio\",\n      \"line\": \"Experience with cloud (Amazon SageMaker)\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"MET\",\n      \"quote\": \"Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.\",\n      \"line\": \"Experience with PySpark\"\n    },\n    {\n      \"req_id\": \"r7\",\n      \"decision\": \"MET\",\n      \"quote\": \"Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.\",\n      \"line\": \"Strong working knowledge of SQL\"\n    },\n    {\n      \"req_id\": \"r8\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"- M.SC computer science, Thesis on Automatic wordnet construction using sense embedding for local language\",\n      \"line\": \"Ph.D. in Mathematics\"\n    }\n  ],\n  \"candidate_letter\": \"Dear Recruiter,\\n\\nWe have reviewed the candidate’s profile for the Data Scientist role and determined that they do not meet the mandatory requirement of hands-on experience with probabilistic programming frameworks such as Pyro, PyMC3, or JAGS (req_id: r4). This is a critical gap in their qualifications, as the role specifically requires such experience.\\n\\nWhile the candidate has strong experience in machine learning across multiple domains and demonstrates familiarity with cloud platforms (AWS SageMaker, Azure ML Studio), PySpark, and SQL, the absence of probabilistic programming experience is a decisive factor in the rejection.\\n\\nAdditionally, the candidate holds a Master’s in Computer Science and does not have a Ph.D. in Mathematics, which disqualifies them from meeting the preferred qualification (req_id: r8).\\n\\nGiven these key gaps, we recommend rejecting this candidate for the position.\\n\\nBest regards,\\nAutomated Screening System\",\n  \"flags_for_recruiter\": [\n    \"The candidate lacks hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS), a must-have requirement.\",\n    \"The understanding of Bayesian methods and time series analysis is uncertain due to low confidence in the assessment.\",\n    \"Candidate does not hold a Ph.D. in Mathematics, missing the preferred qualification.\",\n    \"Multiple technical decisions were flagged as 'FAIL' by the judge, indicating potential misalignment with the role’s expectations.\"\n  ]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 5 of 7 must-have requirements are met; the score is 73. Missing must-haves: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar). Unclear must-haves: Understanding of Bayesian methods, time series analysis or sensor signal processing.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.",
+    "line": "must: Data Science: 4 years of experience or more - met (CV: Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.",
+    "line": "must: Good knowledge of probability theory and statistics - met (CV: Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Understanding of Bayesian methods, time series analysis or sensor signal processing - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "AWS S3, AWS Sagemaker, MS Azure ML Studio",
+    "line": "must: Experience with cloud (Amazon SageMaker) - met (CV: AWS S3, AWS Sagemaker, MS Azure ML Studio)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MET",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.",
+    "line": "must: Experience with PySpark - met (CV: Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "MET",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.",
+    "line": "must: Strong working knowledge of SQL - met (CV: Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Ph.D. in Mathematics - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar).\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r3"
+  ]
+ },
+ "source": "template",
+ "latency_s": 19.71,
+ "peak_vram_mib": 3267,
+ "id": "P41",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

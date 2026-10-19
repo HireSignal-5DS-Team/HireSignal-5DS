@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K08_p02_photo",
+  "file": "K08_p02_photo.jpg",
+  "source": "K01.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "Sure, here is the corrected text based on the image:\n\n---\n\n**Education**\n\nM.S. Public Administration, Government Law, Sul Ross University, 1/4 City, State Public Administration, Government Law\n\nB.S. Psychology, Education, Morgan State University, 1/4 City, State Psychology, Education\n\nJun 2014\n\nSPECIALIZED TRAINING *Security + Certified, CE 20+\n\nAug 2011\n\n*Cyber 200 Advance Continuing Education Course 26-\n\nSep 2010\n\n*Basic Computer Operations Planner's Course 24-\n\nSep 2009\n\n*DISA Action Officers Course 10-Dec-2009 *DOD Information Assurance Boot Camp 06-Nov-2009 *Computer Network Defense/Computer Network Threat 24-\n\n**Skills**\n\nAir Force, art, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec, direction, documentation, edge, feasibility studies, forms, functional, Government, Information Systems, information technology, computer support, meetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication, software development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend, written\n\n\n\n---",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 11.4,
+   "eval_count": 283,
+   "done_reason": "stop",
+   "peak_vram_mib": 4537
+  }
+ ]
+}

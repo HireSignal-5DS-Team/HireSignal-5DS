@@ -1,0 +1,467 @@
+{
+ "workflow": "HireSignal v1",
+ "outcome_step": "TEMP outcome (temporary rule, replaced by the Outcome gate later)",
+ "execution_id": "9",
+ "cv_id": "cv-f4f98214",
+ "job_id": "job-f90b0427",
+ "job_title": "Python BackEnd Developer",
+ "outcome": "review",
+ "outcome_reason": "review reasons present",
+ "score": 13,
+ "score_formula": "round(100*sum(w*v)/sum(w)); must 2, nice 1; MET 1, UNCERTAIN 0.5, MISSING 0",
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "5 years of experience in development (At least 2 years experience in developing big systems with Python)",
+   "kind": "must",
+   "category": "experience",
+   "min_years": 5,
+   "job_evidence": "5 years of experience in development (At least 2 years experience in developing big systems with Python) - Must",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+     "title": "Python (computer programming)"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333",
+     "title": "use scripting programming"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 3.293
+  },
+  {
+   "req_id": "r2",
+   "text": "asynchronous programming",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Asynchronous programming and experience in developing performance-critical applications",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/b4dc6e4f-dc7d-445f-8ce2-d7b9d225e282",
+     "title": "AJAX"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/94579fbb-0485-48d4-b97e-ca85e15691d3",
+     "title": "develop programming schedule"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/b105ec9b-0857-41d6-8d07-a83e58b73d90",
+     "title": "ICT system programming"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 2.912
+  },
+  {
+   "req_id": "r3",
+   "text": "performance-critical applications",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Asynchronous programming and experience in developing performance-critical applications",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/8dcbcabe-09f7-4d11-940d-125af57bbc40",
+     "title": "track key performance indicators"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/eca40476-bf90-44fd-b318-c609ab083bc4",
+     "title": "store performance equipment"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/79edf815-70bf-48fc-a2f4-86ae5d372918",
+     "title": "assemble performance equipment"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 3.011
+  },
+  {
+   "req_id": "r4",
+   "text": "Working with AWS – Advantages",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Working with AWS, Docker, and microservices – Advantages",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 2.717
+  },
+  {
+   "req_id": "r5",
+   "text": "Working with Docker – Advantages",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Working with AWS, Docker, and microservices – Advantages",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/ae4f0cc6-e0b9-47f5-bdca-2fc2e6316dce",
+     "title": "manage ICT virtualisation environments"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 2.769
+  },
+  {
+   "req_id": "r6",
+   "text": "Working with microservices – Advantages",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Working with AWS, Docker, and microservices – Advantages",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 2.718
+  },
+  {
+   "req_id": "r7",
+   "text": "Experience with Machine Learning",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Experience with Machine Learning – Advantages",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/3a2d5b45-56e4-4f5a-a55a-4a4a65afdc43",
+     "title": "machine learning"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/ecc4552a-92c5-4222-b18d-faf5ac841080",
+     "title": "deep learning"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433",
+     "title": "utilise machine learning"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 2.954
+  },
+  {
+   "req_id": "r8",
+   "text": "Algorithms development (collaborative filtering) - Advantages",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/9faa44df-0821-4f69-8f86-184c799cf44f",
+     "title": "HeroEngine"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/945b8655-5577-4c3a-946a-842d4527afa8",
+     "title": "digital image processing"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433",
+     "title": "utilise machine learning"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 2.961
+  },
+  {
+   "req_id": "r9",
+   "text": "Algorithms development (similarity) - Advantages",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 1.893
+  },
+  {
+   "req_id": "r10",
+   "text": "Algorithms development (data normalization) - Advantages",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/f2d57f41-43b4-4f5b-8100-3df5c21eda50",
+     "title": "process data"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/0d6714c6-720e-4985-9791-5ab85d28da79",
+     "title": "gather data"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/57231a22-4da7-49c8-97b8-75672feadf1e",
+     "title": "manage quantitative data"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 1.983
+  },
+  {
+   "req_id": "r11",
+   "text": "Algorithms development (clustering) - Advantages",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 2.723
+  },
+  {
+   "req_id": "r12",
+   "text": "Excellent analytical and time management skills",
+   "kind": "nice",
+   "category": "other",
+   "min_years": null,
+   "job_evidence": "Excellent analytical and time management skills",
+   "decision": "MET",
+   "basis": "supported",
+   "model_decision": "MET",
+   "quotes": [
+    {
+     "quote": "Troubleshooting hardware and software problems over the telephone and through remote PC administration software.",
+     "start": 5963,
+     "end": 6075
+    },
+    {
+     "quote": "Reviewing, evaluating, and analyzing departmental policies, guidelines, procedures, and standards with management and staff.",
+     "start": 2159,
+     "end": 2283
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "evidence_years": null,
+   "review_reasons": [
+    "evidence_not_in_cv"
+   ],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/f263da7f-0708-42c2-b1a9-39083416f632",
+     "title": "communicate analytical insights"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/c32ad607-0c4d-4e34-b73f-668298f7bf13",
+     "title": "apply technical communication skills"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/7111b95d-0ce3-441a-9d92-4c75d05c4388",
+     "title": "project management"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 4.922
+  },
+  {
+   "req_id": "r13",
+   "text": "Teamwork skills with a problem-solving attitude.",
+   "kind": "nice",
+   "category": "other",
+   "min_years": null,
+   "job_evidence": "Teamwork skills with a problem-solving attitude.",
+   "decision": "MET",
+   "basis": "supported",
+   "model_decision": "MET",
+   "quotes": [
+    {
+     "quote": "Collaborating on project plan for Office 365 migration.",
+     "start": 1294,
+     "end": 1349
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "evidence_years": null,
+   "review_reasons": [
+    "evidence_not_in_cv"
+   ],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/adc6dc11-3376-467b-96c5-9b0a21edc869",
+     "title": "solve problems"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/2618f336-8e71-4666-83b5-f368edb0906d",
+     "title": "cognitive psychology"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/a5b0cd5c-e13a-4ab3-8d93-4d242adcfb01",
+     "title": "teamwork principles"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 4.563
+  }
+ ],
+ "review_reasons": [
+  "profile:partial_extraction_requires_review",
+  "match:r12:evidence_not_in_cv",
+  "match:r13:evidence_not_in_cv"
+ ],
+ "info_flags": [],
+ "request_human_review": null,
+ "timings_s": {
+  "reader": 0.056,
+  "profile": 146.544,
+  "job": 8.974,
+  "match_total": 39.419,
+  "match_each": [
+   {
+    "req_id": "r1",
+    "s": 3.293
+   },
+   {
+    "req_id": "r2",
+    "s": 2.912
+   },
+   {
+    "req_id": "r3",
+    "s": 3.011
+   },
+   {
+    "req_id": "r4",
+    "s": 2.717
+   },
+   {
+    "req_id": "r5",
+    "s": 2.769
+   },
+   {
+    "req_id": "r6",
+    "s": 2.718
+   },
+   {
+    "req_id": "r7",
+    "s": 2.954
+   },
+   {
+    "req_id": "r8",
+    "s": 2.961
+   },
+   {
+    "req_id": "r9",
+    "s": 1.893
+   },
+   {
+    "req_id": "r10",
+    "s": 1.983
+   },
+   {
+    "req_id": "r11",
+    "s": 2.723
+   },
+   {
+    "req_id": "r12",
+    "s": 4.922
+   },
+   {
+    "req_id": "r13",
+    "s": 4.563
+   }
+  ]
+ }
+}

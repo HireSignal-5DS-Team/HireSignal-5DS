@@ -1,0 +1,118 @@
+{
+ "label": "real-GPU",
+ "execution_id": 28,
+ "pair": "P15",
+ "rows": [
+  {
+   "req_id": "r1",
+   "rag_ms": 20916,
+   "skipped": false,
+   "retriever": "esco/A/dense/all-MiniLM-L6-v2/qdrant +only-when-missing",
+   "refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/3ec2e4d6-7000-4905-bf1a-c5b1679416de",
+     "title": "data warehouse"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/fd6d2981-3d4a-4ce2-9741-cfc98c5b74bd",
+     "title": "implement data warehousing techniques"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/4f5c1208-62fd-4e5a-a51e-306c06947e11",
+     "title": "manage findable accessible interoperable and reusable data"
+    }
+   ],
+   "match_decision": "MISSING",
+   "match_knowledge": "esco/A/dense/all-MiniLM-L6-v2/qdrant +only-when-missing",
+   "match_refs": [
+    "data warehouse",
+    "implement data warehousing techniques",
+    "manage findable accessible interoperable and reusable data"
+   ]
+  },
+  {
+   "req_id": "r2",
+   "rag_ms": 14,
+   "skipped": true,
+   "retriever": "esco/A/dense/all-MiniLM-L6-v2/qdrant +only-when-missing",
+   "refs": [],
+   "match_decision": "MET",
+   "match_knowledge": "esco/A/dense/all-MiniLM-L6-v2/qdrant +only-when-missing",
+   "match_refs": []
+  },
+  {
+   "req_id": "r3",
+   "rag_ms": 5,
+   "skipped": true,
+   "retriever": "esco/A/dense/all-MiniLM-L6-v2/qdrant +only-when-missing",
+   "refs": [],
+   "match_decision": "MET",
+   "match_knowledge": "esco/A/dense/all-MiniLM-L6-v2/qdrant +only-when-missing",
+   "match_refs": []
+  },
+  {
+   "req_id": "r4",
+   "rag_ms": 12,
+   "skipped": false,
+   "retriever": "esco/A/dense/all-MiniLM-L6-v2/qdrant +only-when-missing",
+   "refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/81b082fb-9a00-4660-976a-10c985979100",
+     "title": "IBM InfoSphere Information Server"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/6195c5f7-a4fb-425d-a3dd-c4467c4471a3",
+     "title": "deploy cloud resource"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/6b643893-0a1f-4f6c-83a1-e7eef75849b9",
+     "title": "develop with cloud services"
+    }
+   ],
+   "match_decision": "MISSING",
+   "match_knowledge": "esco/A/dense/all-MiniLM-L6-v2/qdrant +only-when-missing",
+   "match_refs": [
+    "IBM InfoSphere Information Server",
+    "deploy cloud resource",
+    "develop with cloud services"
+   ]
+  },
+  {
+   "req_id": "r5",
+   "rag_ms": 4,
+   "skipped": true,
+   "retriever": "esco/A/dense/all-MiniLM-L6-v2/qdrant +only-when-missing",
+   "refs": [],
+   "match_decision": "UNCERTAIN",
+   "match_knowledge": "esco/A/dense/all-MiniLM-L6-v2/qdrant +only-when-missing",
+   "match_refs": []
+  },
+  {
+   "req_id": "r6",
+   "rag_ms": 14,
+   "skipped": false,
+   "retriever": "esco/A/dense/all-MiniLM-L6-v2/qdrant +only-when-missing",
+   "refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/294cf13e-4fdf-4cb8-bb6b-31b9da7f4819",
+     "title": "logic"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/143769cb-b61e-47d8-a61e-eedfbec1016c",
+     "title": "business intelligence"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/633a3637-2c6b-40ae-ac38-289eb2a62aa6",
+     "title": "business analysis"
+    }
+   ],
+   "match_decision": "UNCERTAIN",
+   "match_knowledge": "esco/A/dense/all-MiniLM-L6-v2/qdrant +only-when-missing",
+   "match_refs": [
+    "logic",
+    "business intelligence",
+    "business analysis"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "1_pipeline": "n8n/hiresignal_v1.json",
+ "2_rag_retrieval": "eval/results/2026-10-18_rag_retrieval_checked/summary.json",
+ "3_multimodal_cer": "eval/results/2026-10-18_multimodal/summary.json",
+ "4_bias": "eval/results/2026-10-18_bias/summary.json + data/processed/counterfactuals/ (recomputed with the current anonymiser and guard)",
+ "5_final_outcomes": "eval/results/2026-10-19_final_eval/final_summary.json",
+ "6_report_writer": "eval/results/2026-10-19_report_writer/summary.json + eval/results/2026-10-19_report_writer_t13/summary.json",
+ "7_gate_variants": "eval/results/2026-10-18_outcome_gate/gate/summary.json",
+ "8_latency": "eval/results/2026-10-19_final_eval/final_summary.json"
+}

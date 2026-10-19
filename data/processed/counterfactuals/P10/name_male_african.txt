@@ -1,0 +1,16 @@
+Chukwuemeka Okafor
+Pronouns: he/him
+Position: Data Analyst / BI Developer
+Experience years: 4
+English level: upper
+
+One of my biggest projects was designing and managing a database to store all company's data for further analysis. I've created interfaces for inputting the data via PowerApps, and dashboards for accessing data via Power BI.
+I worked as a customer success data analyst in an event industry company for the past year. My responsibilities included:
+- creating Looker dashboards for enterprise customers; 
+- modeling data in LookML;
+- scheduling queries in GQB, and writing complex SQL queries to process large amounts of data;
+- analyzing particular customer data as well as overall industry trends;
+- conducting Looker training sessions for other team members.
+
+I also have experience in analyzing sales and internal HR data, worked with Looker, Tableau, and Power BI, and can write basic JS scripts.
+I'm willing to work on challenging projects, and ready to learn new things.

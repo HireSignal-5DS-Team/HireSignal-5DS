@@ -1,0 +1,51 @@
+{
+ "item": {
+  "id": "L04_p02_photo",
+  "file": "L04_p02_photo.jpg",
+  "source": "L04.pdf",
+  "pages": [
+   2
+  ],
+  "pair": "P52",
+  "split": "test",
+  "condition": "hard photo",
+  "job": "J4"
+ },
+ "pages": [
+  {
+   "text": "@® Demander a Copilot ~\n\nBlockchain (BTC/LTC/ETH/E\nNFT\n\nwant to work with people\nAl project will be just great\n\nRC20)\n\nwho is more experienced than me",
+   "conf": 86.9,
+   "layout": "two_column",
+   "word_confs": [
+    55.0,
+    85.0,
+    86.0,
+    87.0,
+    61.0,
+    86.0,
+    90.0,
+    90.0,
+    6.0,
+    96.0,
+    96.0,
+    96.0,
+    95.0,
+    91.0,
+    96.0,
+    95.0,
+    95.0,
+    95.0,
+    96.0,
+    87.0,
+    96.0,
+    96.0,
+    96.0,
+    96.0,
+    96.0,
+    96.0
+   ],
+   "warnings": [],
+   "latency_s": 2.9
+  }
+ ]
+}

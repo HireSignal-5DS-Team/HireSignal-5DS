@@ -1,0 +1,29 @@
+status,job,req_id,kind,category,min_years,requirement,source_sentence
+DRAFT,J1,r1,must,experience,4,Data Science: 4 years of experience or more,Data scientist with 4+ years of experience
+DRAFT,J1,r2,must,skill,,Good knowledge of probability theory and statistics,Good knowledge of the probability theory and statistics
+DRAFT,J1,r3,must,skill,,"Understanding of Bayesian methods, time series analysis or sensor signal processing","Understanding of Bayesian methods, time series analysis, sensor signal processing"
+DRAFT,J1,r4,must,skill,,"Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)","Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar)"
+DRAFT,J1,r5,must,skill,,Experience with cloud (Amazon SageMaker),Experience with cloud (Amazon SageMaker) is required
+DRAFT,J1,r6,must,skill,,Experience with PySpark,Experience with PySpark is required
+DRAFT,J1,r7,must,skill,,Strong working knowledge of SQL,"Strong working knowledge of SQL, Teradata preferred"
+DRAFT,J1,r8,nice,education,,Ph.D. in Mathematics,Ph.D. in Mathematics will be a plus.
+DRAFT,J2,r1,must,skill,,Knowledge of the general principles of Data Warehousing and Data Lakes,Knowledge of the general principles of Data Warehousing and Data Lakes
+DRAFT,J2,r2,must,skill,,Hands-on experience with SQL,Hands-on experience with SQL
+DRAFT,J2,r3,must,skill,,Knowledge of Python,Knowledge of Python
+DRAFT,J2,r4,must,skill,,Experience with GCP or another cloud provider,Experience with GCP or other cloud providers
+DRAFT,J2,r5,must,language,,Good spoken English,Good spoken English
+DRAFT,J2,r6,must,other,,Willingness to research business logic,Wiliness to do research on business logic
+DRAFT,J3,r1,must,experience,3,"ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models)","3+ years industrial experience with ML, including training, testing, deployment, and monitoring real-time (or near real-time) machine learning models in production"
+DRAFT,J3,r2,must,skill,,Proven experience with modern deep learning techniques and Gradient Boosting Trees,Proven experience with modern DL techniques and Gradient Boosting Trees
+DRAFT,J3,r3,must,skill,,Excellent Python coding skills,Excellent Python coding skills
+DRAFT,J3,r4,must,skill,,"Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn)","Proficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn)"
+DRAFT,J3,r5,must,skill,,Practical experience with tabular data and time series,Vast practical experience with tabular data and time series
+DRAFT,J3,r6,must,skill,,"Experience with microservices architecture, cloud technologies, Docker and Kubernetes","Experience in Microservices architecture, cloud technologies, Docker, Kubernetes."
+DRAFT,J3,r7,nice,skill,,Experience with data pipelines or big data,Experience with data pipelines / big data
+DRAFT,J3,r8,nice,skill,,Experience designing and implementing AutoML flows or frameworks,Experience designing and implementing AutoML flows/frameworks.
+DRAFT,J4,r1,must,experience,5,Software development: 5 years of experience or more,5 years of experience in development (At least 2 years experience in developing big systems with Python) - Must
+DRAFT,J4,r2,must,experience,2,Developing big systems with Python: 2 years of experience or more,5 years of experience in development (At least 2 years experience in developing big systems with Python) - Must
+DRAFT,J4,r3,must,skill,,Asynchronous programming and developing performance-critical applications,Asynchronous programming and experience in developing performance-critical applications
+DRAFT,J4,r4,nice,skill,,"Working with AWS, Docker and microservices","Working with AWS, Docker, and microservices – Advantages"
+DRAFT,J4,r5,nice,skill,,Experience with Machine Learning,Experience with Machine Learning – Advantages
+DRAFT,J4,r6,nice,skill,,"Algorithms development (collaborative filtering, similarity, data normalization, clustering)","Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages"

@@ -1,0 +1,33 @@
+{
+ "cv": "L03",
+ "pair": "P47",
+ "job": "J3",
+ "condition": "scan",
+ "setup": "ocr",
+ "items": [
+  "L03_scan"
+ ],
+ "reader_reasons": [],
+ "ocr_confidence": 90.8,
+ "outcome": "review",
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "score": 79,
+ "reasons": [
+  "r1: must UNCERTAIN",
+  "r5: must UNCERTAIN",
+  "r6: must MET doubted (judge:disagrees): possible false invite"
+ ],
+ "pair_review_reasons": [
+  "profile:partial_extraction_requires_review"
+ ],
+ "decisions": {
+  "r1": "UNCERTAIN",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MET",
+  "r5": "UNCERTAIN",
+  "r6": "MET",
+  "r7": "MET",
+  "r8": "MISSING"
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "cv": "L04",
+ "pair": "P52",
+ "job": "J4",
+ "condition": "scan",
+ "setup": "ocr",
+ "items": [
+  "L04_scan"
+ ],
+ "reader_reasons": [
+  "reader:low_confidence_or_little_text"
+ ],
+ "ocr_confidence": 51.2,
+ "outcome": "review",
+ "rule": "0 review: CV image too poor to decide",
+ "score": 78,
+ "reasons": [
+  "pair: reader:low_confidence_or_little_text"
+ ],
+ "pair_review_reasons": [
+  "reader:low_confidence_or_little_text",
+  "profile:name_not_found",
+  "profile:partial_extraction_requires_review"
+ ],
+ "decisions": {
+  "r1": "MET",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MET",
+  "r5": "MISSING",
+  "r6": "MISSING"
+ }
+}

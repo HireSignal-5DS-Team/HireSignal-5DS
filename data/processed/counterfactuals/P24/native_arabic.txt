@@ -1,0 +1,15 @@
+Native language: Arabic
+Position: Data Scientist
+Experience years: 2
+English level: fluent
+
+Effective 'out-of-the-box' money laundering detection model.
+- machine learning models for fraud detection and anti-money laundering
+- time-series modelling 
+- anomalies detection 
+- customer segmentation 
+- customer lifetime value 
+- various data analysis tasks
+- Positive and supportive workplace culture is a must. 
+- Preferably product company. 
+- Flexible working hours and possibility to work from home.

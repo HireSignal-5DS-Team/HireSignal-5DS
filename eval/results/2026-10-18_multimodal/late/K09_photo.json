@@ -1,0 +1,33 @@
+{
+ "item": {
+  "id": "K09_photo",
+  "file": "K09_photo.jpg",
+  "source": "K04.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "text": "Education and Training\nBachelor of Science: Computers and Information Technology, UNIVERSITY OF PHOENIX 1/4 City, State Computers and Information Technology\nAssociate's of Arts: Finance and Business Administration, LAKE SUMTER COMMUNITY COLLEGE 1/4 City, State Finance and Business Administration\n2016\nITIL Foundation Course\nMicrosoft Certified Professional (MCP), CompTia A+, CompTia N+\nSkills\nA+, acquisitions, backup, budget planning, Budgeting, budgets, budget, business development, change management, conversion, decision making, delivery, direction, disaster planning, documentation, ERP, Enterprise Resource Planning, Facilities Management, Financials, focus, Forecasting, help desk, information technology, ITIL, Leadership, Team-Building, managing, materials, access, Microsoft Certified Professional, MCP, network, networks, operations management, organizational, PC systems, people skills, policies, POS, process design, Procurement, Project Management, proposal development, sales, Scheduling, SDLC, SLA, strategic, Strategic Planning, technical support, user training, training material, Upgrades, Windows server, workflow",
+ "pages": [
+  {
+   "text": "Education and Training\nBachelor of Science: Computers and Information Technology, UNIVERSITY OF PHOENIX 1/4 City, State Computers and Information Technology\nAssociate's of Arts: Finance and Business Administration, LAKE SUMTER COMMUNITY COLLEGE 1/4 City, State Finance and Business Administration\n2016\nITIL Foundation Course\nMicrosoft Certified Professional (MCP), CompTia A+, CompTia N+\nSkills\nA+, acquisitions, backup, budget planning, Budgeting, budgets, budget, business development, change management, conversion, decision making, delivery, direction, disaster planning, documentation, ERP, Enterprise Resource Planning, Facilities Management, Financials, focus, Forecasting, help desk, information technology, ITIL, Leadership, Team-Building, managing, materials, access, Microsoft Certified Professional, MCP, network, networks, operations management, organizational, PC systems, people skills, policies, POS, process design, Procurement, Project Management, proposal development, sales, Scheduling, SDLC, SLA, strategic, Strategic Planning, technical support, user training, training material, Upgrades, Windows server, workflow",
+   "low_trust_lines": [],
+   "stats": {
+    "agree": 74,
+    "ocr_kept": 0,
+    "vision_used": 52,
+    "ocr_dropped": 22,
+    "vision_kept_short": 0,
+    "vision_kept_supported": 3,
+    "low_trust_words": 0
+   }
+  }
+ ],
+ "min_conf": 101,
+ "merge": "vision_backbone",
+ "vision": "qwen2.5vl_3b__v1"
+}

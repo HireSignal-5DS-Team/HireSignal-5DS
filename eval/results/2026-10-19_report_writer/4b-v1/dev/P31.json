@@ -1,0 +1,62 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v1.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because a must-have requirement is missing. The candidate has 5 years of software development experience, which meets the requirement. Experience in developing big systems with Python is reported, but the evidence is insufficient to confirm 2 years of work. The must-have requirement for asynchronous programming and performance-critical applications is not present. The score is 50.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-[URL] websites.\", \"line\": \"Met: the CV shows 5+ years of software development experience.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Lead redesign and optimization of backend and deployment for two legacy projects in 3-4 member teams.\", \"line\": \"Met: the candidate mentions backend optimization and complex systems development, though years are not clearly specified.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No evidence of experience with asynchronous programming or performance-critical applications.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No mention of AWS, Docker, or microservices.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No experience with machine learning is indicated.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: The Matcher was unsure about algorithms development experience.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show the required experience in asynchronous programming and performance-critical applications.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about algorithms development (r6); please check it.\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because a must-have requirement is missing. The candidate has 5 years of software development experience, which meets the requirement. Experience in developing big systems with Python is reported, but the evidence is insufficient to confirm 2 years of work. The must-have requirement for asynchronous programming and performance-critical applications is not present. The score is 50.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-[URL] websites.",
+    "line": "Met: the CV shows 5+ years of software development experience."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Lead redesign and optimization of backend and deployment for two legacy projects in 3-4 member teams.",
+    "line": "Met: the candidate mentions backend optimization and complex systems development, though years are not clearly specified."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of experience with asynchronous programming or performance-critical applications."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No mention of AWS, Docker, or microservices."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No experience with machine learning is indicated."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: The Matcher was unsure about algorithms development experience."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show the required experience in asynchronous programming and performance-critical applications.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about algorithms development (r6); please check it."
+  ]
+ },
+ "source": "llm",
+ "latency_s": 9.78,
+ "peak_vram_mib": 3267,
+ "id": "P31",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

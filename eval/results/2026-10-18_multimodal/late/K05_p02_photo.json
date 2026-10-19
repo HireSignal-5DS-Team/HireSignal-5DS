@@ -1,0 +1,33 @@
+{
+ "item": {
+  "id": "K05_p02_photo",
+  "file": "K05_p02_photo.jpg",
+  "source": "K03.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "text": "Education\nMaster of Business Administration (MBA) Keller Graduate School of Management 1/4 City, State\nBachelor of Science, Telecommunications Management DeVry University 1/4 City, State\nCertifications\nCisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed Training Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation\nSkills\nADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations, Cable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients, Customer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction, internal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing, market, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging, Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling, Staff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee development, VoIP, website, workflow",
+ "pages": [
+  {
+   "text": "Education\nMaster of Business Administration (MBA) Keller Graduate School of Management 1/4 City, State\nBachelor of Science, Telecommunications Management DeVry University 1/4 City, State\nCertifications\nCisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed Training Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation\nSkills\nADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations, Cable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients, Customer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction, internal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing, market, Window, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging, Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling, Staff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee development, VoIP, website, workflow",
+   "low_trust_lines": [],
+   "stats": {
+    "agree": 137,
+    "ocr_kept": 0,
+    "vision_used": 18,
+    "ocr_dropped": 4,
+    "vision_kept_short": 0,
+    "vision_kept_supported": 0,
+    "low_trust_words": 0
+   }
+  }
+ ],
+ "min_conf": 101,
+ "merge": "vision_backbone",
+ "vision": "qwen2.5vl_3b__v1"
+}

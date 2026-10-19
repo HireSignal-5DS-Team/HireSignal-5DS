@@ -1,0 +1,245 @@
+{
+ "run": "P15",
+ "pair": "P15",
+ "job": "J2",
+ "stratum_in_pairs_csv": "partial",
+ "execution_id": "7",
+ "n8n_started": "2026-10-18 08:40:49.023",
+ "n8n_stopped": "2026-10-18 08:41:45.502",
+ "total_wall_s": 56.8,
+ "outcome": "reject",
+ "score": 43,
+ "review_reasons": [],
+ "info_flags": [
+  "reader:No section headings recognised (Experience, Education, ...)."
+ ],
+ "decisions": {
+  "r1": [
+   "must",
+   "MISSING"
+  ],
+  "r2": [
+   "must",
+   "MISSING"
+  ],
+  "r3": [
+   "must",
+   "MISSING"
+  ],
+  "r4": [
+   "must",
+   "MET"
+  ],
+  "r5": [
+   "must",
+   "MET"
+  ],
+  "r6": [
+   "must",
+   "MISSING"
+  ],
+  "r7": [
+   "must",
+   "MET"
+  ]
+ },
+ "station_timings_s": {
+  "reader": 0.004,
+  "profile": 28.879,
+  "job": 6.518,
+  "match_total": 20.139,
+  "match_each": [
+   {
+    "req_id": "r1",
+    "s": 2.45
+   },
+   {
+    "req_id": "r2",
+    "s": 2.342
+   },
+   {
+    "req_id": "r3",
+    "s": 2.229
+   },
+   {
+    "req_id": "r4",
+    "s": 3.094
+   },
+   {
+    "req_id": "r5",
+    "s": 2.612
+   },
+   {
+    "req_id": "r6",
+    "s": 3.304
+   },
+   {
+    "req_id": "r7",
+    "s": 4.108
+   }
+  ]
+ },
+ "node_timings": {
+  "Webhook (CV file + job text)": [
+   {
+    "start": 1792312849075,
+    "ms": 8,
+    "status": "success"
+   }
+  ],
+  "Normalize input": [
+   {
+    "start": 1792312849086,
+    "ms": 147,
+    "status": "success"
+   }
+  ],
+  "HTTP /reader": [
+   {
+    "start": 1792312849234,
+    "ms": 53,
+    "status": "success"
+   }
+  ],
+  "HTTP /profile": [
+   {
+    "start": 1792312849288,
+    "ms": 29018,
+    "status": "success"
+   }
+  ],
+  "HTTP /job": [
+   {
+    "start": 1792312878307,
+    "ms": 6626,
+    "status": "success"
+   }
+  ],
+  "Merge": [
+   {
+    "start": 1792312884934,
+    "ms": 48,
+    "status": "success"
+   }
+  ],
+  "Split requirements": [
+   {
+    "start": 1792312884982,
+    "ms": 35,
+    "status": "success"
+   }
+  ],
+  "Loop requirements (1 at a time)": [
+   {
+    "start": 1792312885018,
+    "ms": 2,
+    "status": "success"
+   },
+   {
+    "start": 1792312887535,
+    "ms": 2,
+    "status": "success"
+   },
+   {
+    "start": 1792312889905,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792312892163,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792312895283,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792312897918,
+    "ms": 3,
+    "status": "success"
+   },
+   {
+    "start": 1792312901254,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792312905386,
+    "ms": 1,
+    "status": "success"
+   }
+  ],
+  "HTTP /match": [
+   {
+    "start": 1792312885021,
+    "ms": 2514,
+    "status": "success"
+   },
+   {
+    "start": 1792312887538,
+    "ms": 2366,
+    "status": "success"
+   },
+   {
+    "start": 1792312889906,
+    "ms": 2257,
+    "status": "success"
+   },
+   {
+    "start": 1792312892164,
+    "ms": 3119,
+    "status": "success"
+   },
+   {
+    "start": 1792312895284,
+    "ms": 2634,
+    "status": "success"
+   },
+   {
+    "start": 1792312897922,
+    "ms": 3332,
+    "status": "success"
+   },
+   {
+    "start": 1792312901255,
+    "ms": 4131,
+    "status": "success"
+   }
+  ],
+  "Aggregate": [
+   {
+    "start": 1792312905388,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "TEMP outcome": [
+   {
+    "start": 1792312905393,
+    "ms": 52,
+    "status": "success"
+   }
+  ],
+  "Respond to Webhook": [
+   {
+    "start": 1792312905445,
+    "ms": 55,
+    "status": "success"
+   }
+  ]
+ },
+ "checks": {
+  "http_status": 200,
+  "valid_json": true,
+  "execution_status": "success",
+  "identity_values_in_private_file": 2,
+  "identity_values_found_in_execution_data": 0,
+  "raw_cv_text_in_execution_data": false,
+  "all_match_lora_scale_1": true,
+  "quotes_verified_positions": 6,
+  "uploaded_file_kept_by_n8n_binary_store": 1,
+  "changed_raw_lines_checked": 4
+ }
+}

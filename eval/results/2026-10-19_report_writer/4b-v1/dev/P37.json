@@ -1,0 +1,60 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v1.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because three must-have requirements are missing: at least 5 years of software development experience, 2 years of Python-based big system development, and experience with asynchronous programming for performance-critical applications. The CV shows only 1 year of experience, which falls short of the required thresholds. No evidence is provided for the missing must-have skills.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"As a skilled Backend Developer with over 1 year of experience\", \"line\": \"Missing: only 1 year of software development experience is stated, below the required 5 years.\"}, {\"req_id\": \"r2\", \"decision\": \"MISSING\", \"quote\": \"As a skilled Backend Developer with over 1 year of experience, I have a strong proficiency in programming languages including Python, Go lang, and C#.\", \"line\": \"Missing: only 1 year of Python-based big system development is mentioned, below the required 2 years.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of asynchronous programming or performance-critical applications.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of AWS, Docker, or microservices experience.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of Machine Learning experience.\"}, {\"req_id\": \"r6\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no reference to algorithms development like collaborative filtering or clustering.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We regret to inform you that your application is not moving forward, as your CV does not meet the required must-have qualifications: at least 5 years of software development experience, 2 years of experience developing big systems with Python, and experience with asynchronous programming for performance-critical applications.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": []}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because three must-have requirements are missing: at least 5 years of software development experience, 2 years of Python-based big system development, and experience with asynchronous programming for performance-critical applications. The CV shows only 1 year of experience, which falls short of the required thresholds. No evidence is provided for the missing must-have skills.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "As a skilled Backend Developer with over 1 year of experience",
+    "line": "Missing: only 1 year of software development experience is stated, below the required 5 years."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "As a skilled Backend Developer with over 1 year of experience, I have a strong proficiency in programming languages including Python, Go lang, and C#.",
+    "line": "Missing: only 1 year of Python-based big system development is mentioned, below the required 2 years."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no mention of asynchronous programming or performance-critical applications."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no evidence of AWS, Docker, or microservices experience."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no mention of Machine Learning experience."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no reference to algorithms development like collaborative filtering or clustering."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Python BackEnd Developer position. We regret to inform you that your application is not moving forward, as your CV does not meet the required must-have qualifications: at least 5 years of software development experience, 2 years of experience developing big systems with Python, and experience with asynchronous programming for performance-critical applications.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": []
+ },
+ "source": "llm",
+ "latency_s": 9.42,
+ "peak_vram_mib": 3267,
+ "id": "P37",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

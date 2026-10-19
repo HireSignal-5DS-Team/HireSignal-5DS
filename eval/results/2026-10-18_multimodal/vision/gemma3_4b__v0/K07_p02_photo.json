@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K07_p02_photo",
+  "file": "K07_p02_photo.jpg",
+  "source": "K02.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "Okay, here's a breakdown of the CV information you provided:\n\n**Education**\n\n*   **Master of Science:** Computer & Information Science, 2015 University of Houston ¼ City, State, USA\n    *   Top 15% of class\n    *   Emphasis in Cyber Security and IA Information Awareness\n    *   Coursework in Operating Systems and System Programming\n    *   Coursework in Computer Networking and Information Technology\n*   **Bachelor of Science:** Management of Information Systems, 2011 University of Maryland University College ¼ City, State, USA\n    *   Coursework in Computer Networking and Information Technology\n    *   4.0 GPA\n\n**Skills**\n\n*   System Administration\n*   Windows Server 2003\n*   Windows Server 2008\n*   VMwareÂ\n*   Active Directory\n*   Microsoft Exchange 2013\n*   Large computer networks\n*   Linux\n*   Mac OS\n*   Microsoft Dynamics\n*   Access Control SecurityÂ\n\n**Certifications**\n\n*   Certified Naval Information Systems Technician â€“ First Class Petty Officer (E6)\n*   Information Systems Security Professional (CISSP)\n*   Microsoft Certified Systems Administrator (MCSA)\n*   PMI - Project Management Professional (PMP)\n*   ISA - Certified Automation Professional\n*   Cisco\n*   Certified Network Associate (CCNA)\n*   Certified Network Professional (CCNP)\n*   Video Security Professional (VCSP)\n*   CompTIA\n*   Security+\n*   Network+\n*   A+\n\n**If you'd like me to extract specific information or answer questions about this CV, just let me know!**",
+   "model": "gemma3:4b",
+   "latency_s": 11.28,
+   "eval_count": 365,
+   "done_reason": "stop",
+   "peak_vram_mib": 3887
+  }
+ ]
+}

@@ -1,0 +1,424 @@
+{
+ "run": "P35",
+ "pair": "P35",
+ "job": "J4",
+ "stratum_in_pairs_csv": "partial",
+ "execution_id": "23",
+ "n8n_started": "2026-10-18 12:28:28.093",
+ "n8n_stopped": "2026-10-18 12:29:13.080",
+ "total_wall_s": 45.18,
+ "outcome": "reject",
+ "score": 22,
+ "rule": "1 reject: must-have MISSING",
+ "reasons": [
+  "r1: must-have MISSING",
+  "r3: must-have MISSING"
+ ],
+ "listed_flags": [
+  "r6 (nice): match:low_confidence",
+  "r9 (nice): match:low_confidence",
+  "r10 (nice): match:low_confidence",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found"
+ ],
+ "review_form_url": null,
+ "decisions": {
+  "r1": [
+   "must",
+   "MISSING"
+  ],
+  "r2": [
+   "must",
+   "UNCERTAIN"
+  ],
+  "r3": [
+   "must",
+   "MISSING"
+  ],
+  "r4": [
+   "nice",
+   "MISSING"
+  ],
+  "r5": [
+   "nice",
+   "MISSING"
+  ],
+  "r6": [
+   "nice",
+   "UNCERTAIN"
+  ],
+  "r7": [
+   "nice",
+   "MISSING"
+  ],
+  "r8": [
+   "nice",
+   "MISSING"
+  ],
+  "r9": [
+   "nice",
+   "UNCERTAIN"
+  ],
+  "r10": [
+   "nice",
+   "UNCERTAIN"
+  ],
+  "r11": [
+   "nice",
+   "MISSING"
+  ],
+  "r12": [
+   "nice",
+   "UNCERTAIN"
+  ],
+  "r13": [
+   "nice",
+   "UNCERTAIN"
+  ]
+ },
+ "station_timings_s": {
+  "reader": 0.006,
+  "profile": 1.818,
+  "job": 9.333,
+  "match_and_judge": 32.846
+ },
+ "node_timings": {
+  "Webhook (CV file + job text)": [
+   {
+    "start": 1792326508122,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "Normalize input": [
+   {
+    "start": 1792326508122,
+    "ms": 15,
+    "status": "success"
+   }
+  ],
+  "HTTP /reader": [
+   {
+    "start": 1792326508137,
+    "ms": 25,
+    "status": "success"
+   }
+  ],
+  "HTTP /profile": [
+   {
+    "start": 1792326508162,
+    "ms": 1844,
+    "status": "success"
+   }
+  ],
+  "HTTP /job": [
+   {
+    "start": 1792326510007,
+    "ms": 9365,
+    "status": "success"
+   }
+  ],
+  "Merge": [
+   {
+    "start": 1792326519373,
+    "ms": 8,
+    "status": "success"
+   }
+  ],
+  "Split requirements": [
+   {
+    "start": 1792326519382,
+    "ms": 17,
+    "status": "success"
+   }
+  ],
+  "Loop requirements (1 at a time)": [
+   {
+    "start": 1792326519400,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792326522530,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792326525066,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792326527694,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792326530225,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792326532672,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792326535130,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792326537841,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792326540552,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792326542888,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792326545432,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792326547856,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792326550321,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792326552829,
+    "ms": 1,
+    "status": "success"
+   }
+  ],
+  "HTTP /match": [
+   {
+    "start": 1792326519401,
+    "ms": 2995,
+    "status": "success"
+   },
+   {
+    "start": 1792326522531,
+    "ms": 2513,
+    "status": "success"
+   },
+   {
+    "start": 1792326525067,
+    "ms": 2472,
+    "status": "success"
+   },
+   {
+    "start": 1792326527695,
+    "ms": 2386,
+    "status": "success"
+   },
+   {
+    "start": 1792326530226,
+    "ms": 2300,
+    "status": "success"
+   },
+   {
+    "start": 1792326532673,
+    "ms": 2443,
+    "status": "success"
+   },
+   {
+    "start": 1792326535130,
+    "ms": 2557,
+    "status": "success"
+   },
+   {
+    "start": 1792326537842,
+    "ms": 2574,
+    "status": "success"
+   },
+   {
+    "start": 1792326540553,
+    "ms": 2308,
+    "status": "success"
+   },
+   {
+    "start": 1792326542888,
+    "ms": 2511,
+    "status": "success"
+   },
+   {
+    "start": 1792326545432,
+    "ms": 2271,
+    "status": "success"
+   },
+   {
+    "start": 1792326547857,
+    "ms": 2438,
+    "status": "success"
+   },
+   {
+    "start": 1792326550321,
+    "ms": 2471,
+    "status": "success"
+   }
+  ],
+  "HTTP /judge": [
+   {
+    "start": 1792326522396,
+    "ms": 133,
+    "status": "success"
+   },
+   {
+    "start": 1792326525044,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792326527539,
+    "ms": 155,
+    "status": "success"
+   },
+   {
+    "start": 1792326530081,
+    "ms": 144,
+    "status": "success"
+   },
+   {
+    "start": 1792326532527,
+    "ms": 145,
+    "status": "success"
+   },
+   {
+    "start": 1792326535116,
+    "ms": 13,
+    "status": "success"
+   },
+   {
+    "start": 1792326537687,
+    "ms": 153,
+    "status": "success"
+   },
+   {
+    "start": 1792326540417,
+    "ms": 134,
+    "status": "success"
+   },
+   {
+    "start": 1792326542862,
+    "ms": 26,
+    "status": "success"
+   },
+   {
+    "start": 1792326545399,
+    "ms": 32,
+    "status": "success"
+   },
+   {
+    "start": 1792326547703,
+    "ms": 153,
+    "status": "success"
+   },
+   {
+    "start": 1792326550296,
+    "ms": 25,
+    "status": "success"
+   },
+   {
+    "start": 1792326552793,
+    "ms": 36,
+    "status": "success"
+   }
+  ],
+  "Aggregate": [
+   {
+    "start": 1792326552830,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "Outcome input": [
+   {
+    "start": 1792326552830,
+    "ms": 26,
+    "status": "success"
+   }
+  ],
+  "HTTP /outcome": [
+   {
+    "start": 1792326552856,
+    "ms": 32,
+    "status": "success"
+   }
+  ],
+  "Result": [
+   {
+    "start": 1792326552889,
+    "ms": 48,
+    "status": "success"
+   }
+  ],
+  "Respond to Webhook": [
+   {
+    "start": 1792326552938,
+    "ms": 27,
+    "status": "success"
+   }
+  ],
+  "Switch outcome": [
+   {
+    "start": 1792326552968,
+    "ms": 20,
+    "status": "success"
+   }
+  ],
+  "Decided by gate": [
+   {
+    "start": 1792326552988,
+    "ms": 21,
+    "status": "success"
+   }
+  ],
+  "Outbox letter": [
+   {
+    "start": 1792326553009,
+    "ms": 26,
+    "status": "success"
+   }
+  ],
+  "To JSON file": [
+   {
+    "start": 1792326553035,
+    "ms": 24,
+    "status": "success"
+   }
+  ],
+  "Write eval/outbox file": [
+   {
+    "start": 1792326553060,
+    "ms": 19,
+    "status": "success"
+   }
+  ]
+ },
+ "checks": {
+  "http_status": 200,
+  "valid_json": true,
+  "execution_status": "success",
+  "identity_values_in_private_file": 0,
+  "identity_values_found_in_execution_data": 0,
+  "raw_cv_text_in_execution_data": false,
+  "all_match_lora_scale_1": true,
+  "quotes_verified_positions": 1,
+  "uploaded_file_kept_by_n8n_binary_store": 2,
+  "changed_raw_lines_checked": 0
+ }
+}

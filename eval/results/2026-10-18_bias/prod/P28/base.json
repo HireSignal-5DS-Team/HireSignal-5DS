@@ -1,0 +1,44 @@
+{
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "UNCERTAIN",
+  "r3": "UNCERTAIN",
+  "r4": "UNCERTAIN",
+  "r5": "MET",
+  "r6": "MISSING",
+  "r7": "MISSING",
+  "r8": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "must",
+  "r7": "nice",
+  "r8": "nice"
+ },
+ "outcome": "reject",
+ "score": 36,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [
+   "Last years I started working with Python machine learning libraries to have more tools and flexibility."
+  ],
+  "r2": [],
+  "r3": [],
+  "r4": [
+   "Last years I started working with Python machine learning libraries to have more tools and flexibility."
+  ],
+  "r5": [
+   "I have more than 8 years of academic research working as a lecturer and associate professor. Throughout that time I built plenty of macroeconomic models, mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+  ],
+  "r6": [],
+  "r7": [],
+  "r8": []
+ },
+ "elapsed_s": 24.33,
+ "identical_to_base": true,
+ "ran": true
+}

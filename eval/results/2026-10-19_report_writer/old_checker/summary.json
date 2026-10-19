@@ -1,0 +1,55 @@
+{
+ "4b-v0/dev": {
+  "n": 28,
+  "pass_first_try": "0/28",
+  "pass_after_retry_llm": "0/28",
+  "template_fallback": "28/28",
+  "checker_errors_first_try_mean": 2.25,
+  "must_covered_final": "150/150",
+  "words_mean": 120.3,
+  "latency_s_mean": 15.01,
+  "latency_s_max": 22.72,
+  "peak_vram_mib": 3267,
+  "first_error_kinds": {
+   "reject letter without the right to a human review": 23,
+   "": 15,
+   "nice requirement dropped": 9,
+   "must requirement dropped": 7,
+   "candidate letter for a review case": 4,
+   "candidate letter mentions internals (bias / reader / model)": 3,
+   "reject letter does not name missing must-have": 1,
+   "summary does not state the outcome (invite)": 1
+  }
+ },
+ "4b-v1/dev": {
+  "n": 28,
+  "pass_first_try": "15/28",
+  "pass_after_retry_llm": "19/28",
+  "template_fallback": "9/28",
+  "checker_errors_first_try_mean": 1.04,
+  "must_covered_final": "150/150",
+  "words_mean": 125.4,
+  "latency_s_mean": 15.66,
+  "latency_s_max": 26.78,
+  "peak_vram_mib": 3267,
+  "first_error_kinds": {
+   "reject letter does not name missing must-have": 9,
+   "nice requirement dropped": 9,
+   "": 8,
+   "must requirement dropped": 3
+  }
+ },
+ "template/dev": {
+  "n": 28,
+  "pass_first_try": "28/28",
+  "pass_after_retry_llm": "28/28",
+  "template_fallback": "0/28",
+  "checker_errors_first_try_mean": 0,
+  "must_covered_final": "150/150",
+  "words_mean": 120.3,
+  "latency_s_mean": 0.0,
+  "latency_s_max": 0.0023,
+  "peak_vram_mib": 0,
+  "first_error_kinds": {}
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "model": "qwen3-0.6b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 2,
+ "first_errors": [
+  "candidate letter for a review case"
+ ],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate is reviewed due to one must-have requirement being missing. The CV shows a lack of knowledge of the general principles of Data Warehousing and Data Lakes, which is a must-have. The score is 50, indicating a strong candidate.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Missing: The candidate lacks knowledge of the general principles of Data Warehousing and Data Lakes.\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MET\",\n      \"quote\": \"Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.\",\n      \"line\": \"Met: The CV shows hands-on experience with SQL.\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MET\",\n      \"quote\": \"Python: Experience in using Python for file and database manipulation tasks.\",\n      \"line\": \"Met: The CV shows knowledge of Python.\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner.\",\n      \"line\": \"Missing: The candidate lacks experience with GCP or another cloud provider.\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"English level: upper\",\n      \"line\": \"Uncertain: The candidate's English level is not clearly specified.\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"Uncertain: The candidate's willingness to research business logic is not clearly stated.\"\n    }\n  ],\n  \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show this required point: knowledge of the general principles of Data Warehousing and Data Lakes.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\",\n  \"flags_for_recruiter\": [\"The Matcher was unsure about r5.\"]\n}",
+  "{\n  \"recruiter_summary\": \"The candidate is reviewed due to one must-have requirement being missing. The CV shows a lack of knowledge of the general principles of Data Warehousing and Data Lakes, which is a must-have. The score is 50, indicating a strong candidate.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Missing: The candidate lacks knowledge of the general principles of Data Warehousing and Data Lakes.\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MET\",\n      \"quote\": \"Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.\",\n      \"line\": \"Met: The CV shows hands-on experience with SQL.\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MET\",\n      \"quote\": \"Python: Experience in using Python for file and database manipulation tasks.\",\n      \"line\": \"Met: The CV shows knowledge of Python.\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner.\",\n      \"line\": \"Missing: The candidate lacks experience with GCP or another cloud provider.\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"English level: upper\",\n      \"line\": \"Uncertain: The candidate's English level is not clearly specified.\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"Uncertain: The candidate's willingness to research business logic is not clearly stated.\"\n    }\n  ],\n  \"candidate_letter\": \"\",\n  \"flags_for_recruiter\": [\"low confidence: the Matcher was unsure about r5\"]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is reviewed due to one must-have requirement being missing. The CV shows a lack of knowledge of the general principles of Data Warehousing and Data Lakes, which is a must-have. The score is 50, indicating a strong candidate.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: The candidate lacks knowledge of the general principles of Data Warehousing and Data Lakes."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.",
+    "line": "Met: The CV shows hands-on experience with SQL."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Python: Experience in using Python for file and database manipulation tasks.",
+    "line": "Met: The CV shows knowledge of Python."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner.",
+    "line": "Missing: The candidate lacks experience with GCP or another cloud provider."
+   },
+   {
+    "req_id": "r5",
+    "decision": "UNCERTAIN",
+    "quote": "English level: upper",
+    "line": "Uncertain: The candidate's English level is not clearly specified."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: The candidate's willingness to research business logic is not clearly stated."
+   }
+  ],
+  "candidate_letter": "",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure about r5"
+  ]
+ },
+ "source": "llm",
+ "latency_s": 12.08,
+ "peak_vram_mib": 4910,
+ "id": "P15",
+ "outcome": "review",
+ "synthetic_flags": false
+}

@@ -1,0 +1,436 @@
+{
+ "run": "P43_L05_photo",
+ "pair": "P43",
+ "job": "J1",
+ "cv_file": "data/raw/scans/L05_photo.jpg",
+ "requirements": "data/processed/jobs/J1_requirements.json (confirmed card)",
+ "execution_id": "72",
+ "n8n_started": "2026-10-19 05:21:37.966",
+ "n8n_stopped": "2026-10-19 05:24:06.577",
+ "total_wall_s": 148.78,
+ "outcome": "reject",
+ "score": 60,
+ "rule": "1 reject: must-have MISSING",
+ "reasons": [
+  "r4: must-have MISSING",
+  "r5: must-have MISSING"
+ ],
+ "listed_flags": [
+  "r6 (must, not outcome-relevant): judge:disagrees",
+  "r7 (must, not outcome-relevant): judge:disagrees",
+  "pair: reader:Image file: text was read with mode late.",
+  "pair: reader:5 line(s) read only by the vision model (no OCR support): kept out of the text, listed as low-trust.",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "review_form_url": null,
+ "decisions": {
+  "r1": [
+   "must",
+   "MET"
+  ],
+  "r2": [
+   "must",
+   "MET"
+  ],
+  "r3": [
+   "must",
+   "UNCERTAIN"
+  ],
+  "r4": [
+   "must",
+   "MISSING"
+  ],
+  "r5": [
+   "must",
+   "MISSING"
+  ],
+  "r6": [
+   "must",
+   "MET"
+  ],
+  "r7": [
+   "must",
+   "MET"
+  ],
+  "r8": [
+   "nice",
+   "MISSING"
+  ]
+ },
+ "station_timings_s": {
+  "reader": 87.515,
+  "profile": 38.018,
+  "job": 0,
+  "match_and_judge": 11.279
+ },
+ "reader": {
+  "file_type": "image",
+  "mode": "late",
+  "read_path": [
+   "late"
+  ],
+  "pages": [
+   {
+    "route": "late",
+    "vision_model": "qwen2.5vl:3b",
+    "vision_latency_s": 87.45,
+    "unclear_share": 0,
+    "fusion": {
+     "agree": 128,
+     "ocr_kept": 0,
+     "vision_used": 86,
+     "ocr_dropped": 1,
+     "vision_kept_short": 0,
+     "vision_kept_supported": 8,
+     "low_trust_words": 34
+    },
+    "low_trust_lines": 5
+   }
+  ],
+  "ocr_confidence": 87.6,
+  "review_reasons": []
+ },
+ "node_timings": {
+  "Webhook (CV file + job text)": [
+   {
+    "start": 1792387297971,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "Check token": [
+   {
+    "start": 1792387297971,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Normalize input": [
+   {
+    "start": 1792387297973,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "HTTP /reader": [
+   {
+    "start": 1792387297976,
+    "ms": 87520,
+    "status": "success"
+   }
+  ],
+  "HTTP /profile": [
+   {
+    "start": 1792387385496,
+    "ms": 38024,
+    "status": "success"
+   }
+  ],
+  "Confirmed requirements?": [
+   {
+    "start": 1792387423520,
+    "ms": 1,
+    "status": "success"
+   }
+  ],
+  "Confirmed job card": [
+   {
+    "start": 1792387423521,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Job card": [
+   {
+    "start": 1792387423525,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Merge": [
+   {
+    "start": 1792387423527,
+    "ms": 1,
+    "status": "success"
+   }
+  ],
+  "Split requirements": [
+   {
+    "start": 1792387423528,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Loop requirements (1 at a time)": [
+   {
+    "start": 1792387423531,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792387425400,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792387426832,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792387428565,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792387429849,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792387431108,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792387432461,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792387433731,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792387434971,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "RAG lookup": [
+   {
+    "start": 1792387423531,
+    "ms": 13,
+    "status": "success"
+   },
+   {
+    "start": 1792387425400,
+    "ms": 11,
+    "status": "success"
+   },
+   {
+    "start": 1792387426832,
+    "ms": 12,
+    "status": "success"
+   },
+   {
+    "start": 1792387428566,
+    "ms": 12,
+    "status": "success"
+   },
+   {
+    "start": 1792387429850,
+    "ms": 13,
+    "status": "success"
+   },
+   {
+    "start": 1792387431108,
+    "ms": 3,
+    "status": "success"
+   },
+   {
+    "start": 1792387432461,
+    "ms": 4,
+    "status": "success"
+   },
+   {
+    "start": 1792387433731,
+    "ms": 13,
+    "status": "success"
+   }
+  ],
+  "HTTP /match": [
+   {
+    "start": 1792387423544,
+    "ms": 1835,
+    "status": "success"
+   },
+   {
+    "start": 1792387425411,
+    "ms": 1399,
+    "status": "success"
+   },
+   {
+    "start": 1792387426844,
+    "ms": 1717,
+    "status": "success"
+   },
+   {
+    "start": 1792387428578,
+    "ms": 1232,
+    "status": "success"
+   },
+   {
+    "start": 1792387429863,
+    "ms": 1206,
+    "status": "success"
+   },
+   {
+    "start": 1792387431111,
+    "ms": 1328,
+    "status": "success"
+   },
+   {
+    "start": 1792387432465,
+    "ms": 1244,
+    "status": "success"
+   },
+   {
+    "start": 1792387433744,
+    "ms": 1188,
+    "status": "success"
+   }
+  ],
+  "HTTP /judge": [
+   {
+    "start": 1792387425379,
+    "ms": 21,
+    "status": "success"
+   },
+   {
+    "start": 1792387426811,
+    "ms": 21,
+    "status": "success"
+   },
+   {
+    "start": 1792387428561,
+    "ms": 4,
+    "status": "success"
+   },
+   {
+    "start": 1792387429810,
+    "ms": 39,
+    "status": "success"
+   },
+   {
+    "start": 1792387431069,
+    "ms": 38,
+    "status": "success"
+   },
+   {
+    "start": 1792387432439,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792387433709,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792387434932,
+    "ms": 39,
+    "status": "success"
+   }
+  ],
+  "Aggregate": [
+   {
+    "start": 1792387434971,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "Bias Auditor": [
+   {
+    "start": 1792387434971,
+    "ms": 15,
+    "status": "success"
+   }
+  ],
+  "Outcome input": [
+   {
+    "start": 1792387434986,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "HTTP /outcome": [
+   {
+    "start": 1792387434990,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "Report Writer": [
+   {
+    "start": 1792387434995,
+    "ms": 11555,
+    "status": "success"
+   }
+  ],
+  "Result": [
+   {
+    "start": 1792387446550,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "Respond to Webhook": [
+   {
+    "start": 1792387446555,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Switch outcome": [
+   {
+    "start": 1792387446558,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Decided by gate": [
+   {
+    "start": 1792387446560,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Outbox letter": [
+   {
+    "start": 1792387446564,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "To JSON file": [
+   {
+    "start": 1792387446569,
+    "ms": 6,
+    "status": "success"
+   }
+  ],
+  "Write eval/outbox file": [
+   {
+    "start": 1792387446575,
+    "ms": 2,
+    "status": "success"
+   }
+  ]
+ },
+ "checks": {
+  "http_status": 200,
+  "valid_json": true,
+  "execution_status": "success",
+  "identity_values_in_private_file": 0,
+  "identity_values_found_in_execution_data": 0,
+  "raw_cv_text_in_execution_data": false,
+  "all_match_lora_scale_1": true,
+  "quotes_verified_positions": 5,
+  "uploaded_file_kept_by_n8n_binary_store": 2,
+  "changed_raw_lines_checked": 0
+ }
+}

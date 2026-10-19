@@ -1,0 +1,30 @@
+{
+ "cv": "L04",
+ "pair": "P52",
+ "job": "J4",
+ "condition": "hard photo",
+ "setup": "ocr",
+ "items": [
+  "L04_p01_photo",
+  "L04_p02_photo"
+ ],
+ "reader_reasons": [],
+ "ocr_confidence": 65.7,
+ "outcome": "review",
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "score": 56,
+ "reasons": [
+  "r1: must MET doubted (duration_not_in_evidence, judge:disagrees): possible false invite",
+  "r2: must UNCERTAIN",
+  "r3: must UNCERTAIN"
+ ],
+ "pair_review_reasons": [],
+ "decisions": {
+  "r1": "MET",
+  "r2": "UNCERTAIN",
+  "r3": "UNCERTAIN",
+  "r4": "MET",
+  "r5": "MISSING",
+  "r6": "MISSING"
+ }
+}

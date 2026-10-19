@@ -1,0 +1,38 @@
+{
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MISSING",
+  "r5": "MET",
+  "r6": "UNCERTAIN"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "nice"
+ },
+ "outcome": "reject",
+ "score": 59,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [],
+  "r2": [
+   "As a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights."
+  ],
+  "r3": [
+   "As a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights."
+  ],
+  "r4": [],
+  "r5": [
+   "English level: upper"
+  ],
+  "r6": []
+ },
+ "elapsed_s": 15.69,
+ "identical_to_base": true,
+ "ran": true
+}

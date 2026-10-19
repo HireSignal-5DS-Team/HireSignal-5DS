@@ -1,0 +1,141 @@
+{
+ "job_title": "Python BackEnd Developer",
+ "decided_by": "human",
+ "outcome": "reject",
+ "score": 78,
+ "gate_rule": "2 review: outcome-relevant flag on a must-have",
+ "gate_reasons": [
+  "r2: must MET doubted (judge:disagrees): possible false invite",
+  "r3: must MET doubted (judge:disagrees): possible false invite",
+  "decided by a recruiter after review: reject"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Software development: 5 years of experience or more",
+   "decision": "MET",
+   "quotes": [
+    "I have 10 years of experience in web application development."
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": 5.0,
+   "evidence_years": 10.0
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "decision": "MET",
+   "quotes": [
+    "I have 10 years of experience in web application development.",
+    "Project \"Business Process System\"",
+    "Role: Fullstack developer"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Python"
+   ],
+   "min_years": 2.0,
+   "evidence_years": 10.0
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "decision": "MET",
+   "quotes": [
+    "Project \"Business Process System\"",
+    "Role: Fullstack developer",
+    "Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "asynchronous programming",
+    "performance-critical applications"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "nice",
+   "text": "Working with AWS, Docker and microservices",
+   "decision": "UNCERTAIN",
+   "quotes": [
+    "Project \"Backend of Web service for recommendation system\"",
+    "Role: Backend developer",
+    "Technologies: Python (Flask), SQLAlchemy, PostgreSQL, REST, Git, Docker, Celery, AWS, CI/CD"
+   ],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": true,
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "skill_terms": [
+    "AWS",
+    "Docker",
+    "microservices"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "nice",
+   "text": "Experience with Machine Learning",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Machine Learning"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "nice",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "decision": "UNCERTAIN",
+   "quotes": [],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "collaborative filtering",
+    "similarity",
+    "data normalization",
+    "clustering"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P32_human_reject",
+ "pair_id": "P32",
+ "split": "test",
+ "synthetic_flags": false
+}

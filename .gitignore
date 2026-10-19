@@ -19,8 +19,11 @@ npm-debug.log*
 !config/.env.example
 private/
 
-# Raw data (licences / size)
-data/raw/
+# Raw data (licences / size): djinni (366 MB) and kaggle_resume (119 MB) are re-downloaded (data/DATA_CARD.md),
+# vanetik is GPL-3.0 (not redistributed), esco_tabiya is replaced by the subset in rag/data/esco.
+# Kept (T14): data/raw/scans/ = our own photos / scans of the MIT / CC0 source PDFs (9 MB, no EXIF, no author).
+data/raw/*
+!data/raw/scans/
 
 # Model files
 *.gguf
@@ -34,3 +37,28 @@ data/raw/
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Local models, portable tools, n8n data (CLAUDE.md rule 7b)
+models/*
+!models/MANIFEST.md
+tools/
+.n8n/
+
+# Local logs
+*.log
+
+# n8n outbox (T08): decision files written by the workflow (stand in for e-mails)
+eval/outbox/
+
+# vector store files (T09: Qdrant local mode, rebuilt from rag/data at start)
+rag/index/
+
+# n8n UI asset cache (written by n8n at start; T14)
+.cache/
+
+# Python test / tool caches
+.coverage
+htmlcov/
+
+# vector stores built by the T09 retrieval benchmark (rebuilt by rag/evaluate.py)
+eval/results/*/stores/

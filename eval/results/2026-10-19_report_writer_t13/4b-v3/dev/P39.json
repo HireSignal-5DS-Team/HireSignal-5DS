@@ -1,0 +1,60 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because two must-have requirements are missing: 5 years of software development experience and experience with asynchronous programming for performance-critical applications. The CV shows only 0.5 years of experience in software development and no mention of asynchronous programming. The score is 0.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"Experience years: 0.5\", \"line\": \"Missing: the CV shows only 0.5 years of software development experience, below the required 5 years.\"}, {\"req_id\": \"r2\", \"decision\": \"MISSING\", \"quote\": \"Up to year experience in pure Python3, and Django powered back-end application development.\", \"line\": \"Missing: the CV does not show 2 years of experience in developing big systems with Python.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with asynchronous programming and performance-critical applications.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of working with AWS, Docker, or microservices.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with Machine Learning.\"}, {\"req_id\": \"r6\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with algorithms like collaborative filtering or clustering.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show the following required points:\\n- 5 years of software development experience\\n- Experience with asynchronous programming and developing performance-critical applications\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": []}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because two must-have requirements are missing: 5 years of software development experience and experience with asynchronous programming for performance-critical applications. The CV shows only 0.5 years of experience in software development and no mention of asynchronous programming. The score is 0.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "Experience years: 0.5",
+    "line": "Missing: the CV shows only 0.5 years of software development experience, below the required 5 years."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "Up to year experience in pure Python3, and Django powered back-end application development.",
+    "line": "Missing: the CV does not show 2 years of experience in developing big systems with Python."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no evidence of experience with asynchronous programming and performance-critical applications."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no mention of working with AWS, Docker, or microservices."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no evidence of experience with Machine Learning."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no evidence of experience with algorithms like collaborative filtering or clustering."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show the following required points:\n- 5 years of software development experience\n- Experience with asynchronous programming and developing performance-critical applications\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": []
+ },
+ "source": "llm",
+ "latency_s": 7.91,
+ "peak_vram_mib": 3267,
+ "id": "P39",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K04_p02_photo",
+  "file": "K04_p02_photo.jpg",
+  "source": "K05.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "<start_of_image>\n• Developed reports database using SQLUser and Sybase SQL Server database in OS2 environment.\n• Developed reports database using Lotus Approach 96 in Windows 95 environment.\n• Modified and maintained Uniface 6.1 Code in the Windows NT environment, during migration from Uniface 5.2 in OS2 environment.\nSenior Programmer, 03/1994 to 04/1996\nCompany Name: [sic] City, State\n• Develop and maintain application using Uniface 5.2, Oracle 7.3, and image software PowerImage.\n• Maintained an Oracle database, including creating new tables and triggers and Application Support.\n• Led sessions with users to collect requirements, develop new features and improve current features of application.\n\nEducation\nBachelor of Science - Computer Science, December 1993\nGEORGIA INSTITUTE OF TECHNOLOGY - City, State\nComputer Science\n\nSummary\nInformation Technology professional with 20+ years of experience working in various roles. Possesses written and verbal communication skills and excellent interpersonal and leadership skills.\n\nHighlights\nProficient in Software Development Life Cycle, Project Management, Oracle and SQL Server databases. Proficient in Crystal Reports, Windows and UNIX environments, and Automated Meter Reading and Utility Billing systems. Shell Scripting and SharePoint Programming.\nLanguages: C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, XML\n\nSkills\napplication development, Lotus Approach, Asset Management, Billing systems, book, budget, Develop business Process Analysis, C-, C++, client management, contracts, Crystal Reports, Client, clients, data collection, DBA, database, database XML, features, financial, FTP, GIS, HP-UX, HTML, PHP, images, ITIL v. Access, SharePoint, Windows, Windows 95, Windows NT, migration, Enterprise, Network, Oracle 7.3, Oracle, Oracle database, PL/SQL, Oracle and SQL, Oracle 8, OS2, PC support, Pro C, processes, Programming, Project Management, Reading, reporting, requirements gathering, scanning, scheduling, Servers, scripts, Shell Scripting, Software Development, SQL, SQL Server, Sybase SQL Server, System Administration, system configuration, tables, taxes, Desktop support, Uniface 6.1, Uniface 5.2, UNIX, Linux, Shell scripts, upgrades, upgrades, Visual Basic \n<end_of_image>",
+   "model": "gemma3:4b",
+   "latency_s": 14.73,
+   "eval_count": 522,
+   "done_reason": "stop",
+   "peak_vram_mib": 3889
+  }
+ ]
+}

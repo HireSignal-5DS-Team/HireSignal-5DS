@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "L04_p02_photo",
+  "file": "L04_p02_photo.jpg",
+  "source": "L04.pdf",
+  "pages": [
+   2
+  ],
+  "pair": "P52",
+  "split": "test",
+  "condition": "hard photo",
+  "job": "J4"
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "Demander à Copilot\n2 sur 2\nBlockchain (BTC/LTC/ETH/ERC20)\nNFT\nI want to work with people who is more experienced than me.\nAI project will be just great",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 6.29,
+   "eval_count": 46,
+   "done_reason": "stop",
+   "peak_vram_mib": 4253
+  }
+ ]
+}

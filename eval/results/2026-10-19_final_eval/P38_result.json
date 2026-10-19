@@ -1,0 +1,250 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "60",
+ "cv_id": "cv-5b508b9d",
+ "job_id": "J4",
+ "job_title": "Python BackEnd Developer",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 0,
+ "reasons": [
+  "r1: must-have MISSING",
+  "r2: must-have MISSING",
+  "r3: must-have MISSING"
+ ],
+ "listed_flags": [
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Software development: 5 years of experience or more",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "contradicted",
+   "quotes": [
+    {
+     "quote": "Experience years: 0.5",
+     "start": 34,
+     "end": 55
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.00037,
+    "MISSING": 0.999262,
+    "UNCERTAIN": 0.000368
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.8929
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "contradicted",
+   "quotes": [
+    {
+     "quote": "Experience years: 0.5",
+     "start": 34,
+     "end": 55
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.001451,
+    "MISSING": 0.991972,
+    "UNCERTAIN": 0.006577
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.832
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000683,
+    "MISSING": 0.960563,
+    "UNCERTAIN": 0.038754
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9962
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Working with AWS, Docker and microservices",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.007594,
+    "MISSING": 0.891371,
+    "UNCERTAIN": 0.101035
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9933
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Experience with Machine Learning",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000133,
+    "MISSING": 0.995767,
+    "UNCERTAIN": 0.0041
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9992
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000313,
+    "MISSING": 0.964608,
+    "UNCERTAIN": 0.035079
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9638
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because three must-have requirements are missing: 5 years of software development experience, 2 years of Python-based big system development, and experience with asynchronous programming for performance-critical applications. The score is 0, indicating no evidence of required skills. No nice-to-have requirements are met either.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "Experience years: 0.5",
+    "line": "Missing: the CV shows only 0.5 years of software development experience, below the 5-year requirement."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "Experience years: 0.5",
+    "line": "Missing: the CV shows only 0.5 years of Python-based big system development, below the 2-year requirement."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no evidence of experience with asynchronous programming or performance-critical applications."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no mention of AWS, Docker, or microservices."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no evidence of experience with Machine Learning."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no evidence of experience with algorithms like collaborative filtering or clustering."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show the following required points:\n- 5 years of software development experience\n- 2 years of experience developing big systems with Python\n- Experience with asynchronous programming and performance-critical applications\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [],
+  "source": "llm",
+  "info_flags": [],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [],
+  "would_be_outcome": "reject",
+  "swap": {
+   "ran": true,
+   "counterfactual": "female_arab",
+   "how": "name + pronouns added",
+   "identical_matcher_input": true,
+   "latency_s": 0.004
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.001,
+  "profile": 8.874,
+  "job": 0,
+  "match_and_judge": 7.644
+ }
+}

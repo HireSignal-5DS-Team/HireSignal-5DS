@@ -1,0 +1,12 @@
+P02 clean reject 1 reject: must-have MISSING changed: {} praise: False template
+P02 pdf_clean reject 1 reject: must-have MISSING changed: {} praise: False template
+P02 photo_clean reject 1 reject: must-have MISSING changed: {} praise: False template
+P15 clean review 2 review: outcome-relevant flag on a must-have changed: {} praise: False llm
+P15 pdf_clean review 2 review: outcome-relevant flag on a must-have changed: {'r5': ('UNCERTAIN', 'MET')} praise: False llm
+P15 photo_clean review 2 review: outcome-relevant flag on a must-have changed: {'r5': ('UNCERTAIN', 'MET')} praise: False llm
+P50 clean invite 3 invite: all must-haves MET, score >= t_invite changed: {} praise: False llm
+P50 pdf_clean invite 3 invite: all must-haves MET, score >= t_invite changed: {} praise: False template
+P50 photo_clean invite 3 invite: all must-haves MET, score >= t_invite changed: {} praise: False template
+P13 clean reject 1 reject: must-have MISSING changed: {} praise: False llm
+P13 pdf_clean reject 1 reject: must-have MISSING changed: {} praise: False llm
+P13 photo_clean reject 1 reject: must-have MISSING changed: {'r4': ('MET', 'UNCERTAIN')} praise: False llm

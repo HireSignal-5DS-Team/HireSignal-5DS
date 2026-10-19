@@ -1,0 +1,4600 @@
+{
+ "P01": {
+  "reader": {
+   "cv_id": "cv-8bfb0c81",
+   "file_type": "text",
+   "text_chars": 731,
+   "sections": {
+    "header": 731
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.12
+  },
+  "profile": {
+   "cv_id": "cv-8bfb0c81",
+   "anonymised_text": "Position: Senior ML/DL Developer\nExperience years: 11\nEnglish level: intermediate\n\nOver 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.\nI have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.\nI also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-8bfb0c81",
+    "skills": [],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "part 1/1: answer cut off at the token limit",
+     "part 1/1: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 1/1: answer cut off at the token limit",
+     "part 1/1: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 29.452
+  },
+  "elapsed_s": 29.59
+ },
+ "P02": {
+  "reader": {
+   "cv_id": "cv-3c64f6de",
+   "file_type": "text",
+   "text_chars": 1315,
+   "sections": {
+    "header": 1315
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-3c64f6de",
+   "anonymised_text": "Position: Senior Computer Vision Engineer\nExperience years: 5\nEnglish level: fluent\n\n- IEEE Conference Poster in the Human-Computer Interaction field\n[ADDRESS]\n- Apps in App Store and Google Play\n- Master Degree in Data Science\nHighly performing Research Engineer with Computer Vision/Deep Learning specialization. I'm focused on applying Computer Vision algorithms (classical and deep-learning based) for enterprise-level solutions.\n\nPosition: Lead C++ Engineer, Computer Vision\nDescription: Low-level Computer Vision algorithms application for manufacturing, algorithms vectorization and parallelization; Computer Vision library architecture; code review, mentoring\nTechnologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins\n\nPosition: Research Engineer, HCI\nDescription: Various projects focused on new ways of Human-Computer Interaction: navigation in AR, touchless interfaces, combining different forms of interaction\nTechnologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore\n\nPosition: Unity Developer, Computer Vision\nDescription: App in App Store and Google Play: SLAM system for Augmented Reality at mobile\nTechnologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia\nDeveloping new algorithms/approaches in Computer Vision-related topics",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {
+     "[ADDRESS]": 1
+    },
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-3c64f6de",
+    "skills": [
+     {
+      "name": "Computer Vision",
+      "evidence": "Highly performing Research Engineer with Computer Vision/Deep Learning specialization. I'm focused on applying Computer Vision algorithms (classical and deep-learning based) for enterprise-level solutions."
+     },
+     {
+      "name": "Deep Learning",
+      "evidence": "Highly performing Research Engineer with Computer Vision/Deep Learning specialization. I'm focused on applying Computer Vision algorithms (classical and deep-learning based) for enterprise-level solutions."
+     },
+     {
+      "name": "C++17",
+      "evidence": "Technologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins"
+     },
+     {
+      "name": "OpenCV",
+      "evidence": "Technologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins"
+     },
+     {
+      "name": "Multithreading",
+      "evidence": "Technologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins"
+     },
+     {
+      "name": "TDD",
+      "evidence": "Technologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins"
+     },
+     {
+      "name": "CMake",
+      "evidence": "Technologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins"
+     },
+     {
+      "name": "Jenkins",
+      "evidence": "Technologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins"
+     },
+     {
+      "name": "Human-Computer Interaction",
+      "evidence": "IEEE Conference Poster in the Human-Computer Interaction field"
+     },
+     {
+      "name": "App Store",
+      "evidence": "- Apps in App Store and Google Play"
+     },
+     {
+      "name": "Google Play",
+      "evidence": "- Apps in App Store and Google Play"
+     },
+     {
+      "name": "Data Science",
+      "evidence": "Master Degree in Data Science"
+     },
+     {
+      "name": "Enterprise-level solutions",
+      "evidence": "I'm focused on applying Computer Vision algorithms (classical and deep-learning based) for enterprise-level solutions."
+     },
+     {
+      "name": "3D Math",
+      "evidence": "Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore"
+     },
+     {
+      "name": "Computer Graphics",
+      "evidence": "Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore"
+     },
+     {
+      "name": "CUDA",
+      "evidence": "Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore"
+     },
+     {
+      "name": "Google Glass",
+      "evidence": "Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore"
+     },
+     {
+      "name": "ARKit",
+      "evidence": "Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore"
+     },
+     {
+      "name": "ARCore",
+      "evidence": "Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore"
+     },
+     {
+      "name": "Unity3D",
+      "evidence": "Technologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia"
+     },
+     {
+      "name": "C#",
+      "evidence": "Technologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia"
+     },
+     {
+      "name": "Native Mobile",
+      "evidence": "Technologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia"
+     },
+     {
+      "name": "Vuforia",
+      "evidence": "Technologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia"
+     }
+    ],
+    "education": [
+     {
+      "degree": "Master",
+      "field": "Data Science",
+      "institution": null,
+      "end": null,
+      "evidence": "Master Degree in Data Science"
+     }
+    ],
+    "experience": [
+     {
+      "title": "Senior Computer Vision Engineer",
+      "company": null,
+      "start": null,
+      "end": null,
+      "evidence": "Position: Senior Computer Vision Engineer"
+     },
+     {
+      "title": "Lead C++ Engineer, Computer Vision",
+      "company": null,
+      "start": null,
+      "end": null,
+      "evidence": "Position: Lead C++ Engineer, Computer Vision"
+     },
+     {
+      "title": "Research Engineer, HCI",
+      "company": null,
+      "start": null,
+      "end": null,
+      "evidence": "Position: Research Engineer, HCI"
+     },
+     {
+      "title": "Unity Developer",
+      "company": "Computer Vision",
+      "start": null,
+      "end": null,
+      "evidence": "Position: Unity Developer, Computer Vision\nDescription: App in App Store and Google Play: SLAM system for Augmented Reality at mobile\nTechnologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia\nDeveloping new algorithms/approaches in Computer Vision-related topics"
+     }
+    ],
+    "uncertain": [
+     "education 'Master': institution 'null' is not written in its evidence, removed",
+     "education 'Master': end 'null' not found in its evidence, removed",
+     "experience 'Senior Computer Vision Engineer': company 'null' is not written in its evidence, removed",
+     "experience 'Senior Computer Vision Engineer': start 'null' not found in its evidence, removed",
+     "experience 'Senior Computer Vision Engineer': end 'null' not found in its evidence, removed",
+     "experience 'Lead C++ Engineer, Computer Vision': company 'null' is not written in its evidence, removed",
+     "experience 'Lead C++ Engineer, Computer Vision': start 'null' not found in its evidence, removed",
+     "experience 'Lead C++ Engineer, Computer Vision': end 'null' not found in its evidence, removed",
+     "experience 'Research Engineer, HCI': company 'null' is not written in its evidence, removed",
+     "experience 'Research Engineer, HCI': start 'null' not found in its evidence, removed",
+     "experience 'Research Engineer, HCI': end 'null' not found in its evidence, removed",
+     "experience 'Unity Developer': start 'present' not found in its evidence, removed",
+     "experience 'Unity Developer': end 'present' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:name_not_found"
+   ],
+   "info_flags": [],
+   "elapsed_s": 20.418
+  },
+  "elapsed_s": 20.44
+ },
+ "P03": {
+  "reader": {
+   "cv_id": "cv-d97e6fb1",
+   "file_type": "text",
+   "text_chars": 766,
+   "sections": {
+    "header": 766
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.02
+  },
+  "profile": {
+   "cv_id": "cv-d97e6fb1",
+   "anonymised_text": "Position: Data Scientist / ML Engineer\nExperience years: 5\nEnglish level: upper\n\nI have worked for one of the best Georgian bank's chatbot project especially in speech-to-text and text-to-speech parts. As we don't have good NLP models, I trained language models from scratch. That chatbot engine works successfully.\nI'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL. I know PyTorch and TensorFlow on expert level.\nI expect to work with interesting and challenging Engineering team,where I can develop my skills even more. . Turning into a better professional is my ultimate goal.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-d97e6fb1",
+    "skills": [
+     {
+      "name": "Java",
+      "evidence": "I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL. I know PyTorch and TensorFlow on expert level."
+     },
+     {
+      "name": "JavaScript",
+      "evidence": "I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL. I know PyTorch and TensorFlow on expert level."
+     },
+     {
+      "name": "SQL",
+      "evidence": "I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL. I know PyTorch and TensorFlow on expert level."
+     },
+     {
+      "name": "PyTorch",
+      "evidence": "I know PyTorch and TensorFlow on expert level."
+     },
+     {
+      "name": "TensorFlow",
+      "evidence": "I know PyTorch and TensorFlow on expert level."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": null,
+      "company": "one of the best Georgian bank",
+      "start": null,
+      "end": null,
+      "evidence": "I have worked for one of the best Georgian bank's chatbot project especially in speech-to-text and text-to-speech parts. As we don't have good NLP models, I trained language models from scratch. That chatbot engine works successfully."
+     }
+    ],
+    "uncertain": [
+     "skill 'Python': name 'Python' is not written in its evidence, removed",
+     "experience 'Data Scientist / ML Engineer': title 'Data Scientist / ML Engineer' is not written in its evidence, removed",
+     "experience 'Data Scientist / ML Engineer': start 'present' not found in its evidence, removed",
+     "experience 'Data Scientist / ML Engineer': end 'present' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 8.536
+  },
+  "elapsed_s": 8.57
+ },
+ "P04": {
+  "reader": {
+   "cv_id": "cv-146f2dfd",
+   "file_type": "text",
+   "text_chars": 1093,
+   "sections": {
+    "header": 1093
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.006
+  },
+  "profile": {
+   "cv_id": "cv-146f2dfd",
+   "anonymised_text": "Position: Machine learning engineer\nExperience years: 3\nEnglish level: intermediate\n\nMar 2020 - Present\nRESPONSIBILITIES:\n- Design, build and launch efficient and reliable machine learning (ML) services\n- Research, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively\n- Develop deep-learning software prototypes that demonstrate potential usefulness to our customers\n- Design and develop machine learning systems to create, train and deploy ML models\n- Establish reusable data processing pipelines to enable rapid re-training and iteration through different ML methodologies\n- Select appropriate datasets and data representation methods\n- Design experiments and analysis methodologies that are statistically rigorous\n- Perform statistical analysis and fine-tuning using test results\nMAIN PROJECTS:\n- pose estimation and images classification\n- financial trading prediction\nProject use new technologies, I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-146f2dfd",
+    "skills": [
+     {
+      "name": "machine learning",
+      "evidence": "- Design, build and launch efficient and reliable machine learning (ML) services"
+     },
+     {
+      "name": "deep-learning",
+      "evidence": "- Develop deep-learning software prototypes that demonstrate potential usefulness to our customers"
+     },
+     {
+      "name": "neural networks",
+      "evidence": "- Research, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively"
+     },
+     {
+      "name": "data processing pipelines",
+      "evidence": "- Establish reusable data processing pipelines to enable rapid re-training and iteration through different ML methodologies"
+     },
+     {
+      "name": "datasets",
+      "evidence": "- Select appropriate datasets and data representation methods"
+     },
+     {
+      "name": "experiments and analysis methodologies",
+      "evidence": "- Design experiments and analysis methodologies that are statistically rigorous"
+     },
+     {
+      "name": "statistical analysis",
+      "evidence": "- Perform statistical analysis and fine-tuning using test results"
+     },
+     {
+      "name": "test results",
+      "evidence": "- Perform statistical analysis and fine-tuning using test results"
+     },
+     {
+      "name": "pose estimation",
+      "evidence": "- pose estimation and images classification"
+     },
+     {
+      "name": "images classification",
+      "evidence": "- pose estimation and images classification"
+     },
+     {
+      "name": "financial trading prediction",
+      "evidence": "- financial trading prediction"
+     },
+     {
+      "name": "geodata",
+      "evidence": "I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+     },
+     {
+      "name": "satellite imaginary",
+      "evidence": "I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+     },
+     {
+      "name": "maps",
+      "evidence": "I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+     },
+     {
+      "name": "logistics",
+      "evidence": "I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+     },
+     {
+      "name": "urbanism",
+      "evidence": "I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "experience 'Machine learning engineer': title 'Machine learning engineer' is not written in its evidence, removed",
+     "experience 'Machine learning engineer': company contained a placeholder, removed",
+     "experience 'Machine learning engineer': neither title nor company, dropped"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 12.153
+  },
+  "elapsed_s": 12.18
+ },
+ "P05": {
+  "reader": {
+   "cv_id": "cv-56165c36",
+   "file_type": "text",
+   "text_chars": 685,
+   "sections": {
+    "header": 685
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.003
+  },
+  "profile": {
+   "cv_id": "cv-56165c36",
+   "anonymised_text": "Position: Senior Data Scientist\nExperience years: 3\nEnglish level: pre\n\nI work as a data scientist for 3 years in product IT company.I did different types of tasks.Most of my responsibilities were сollection, processing and preliminary analysis of data.\nFormulation and testing of statistical hypotheses, building models, both based on classical statistical methods and ML algorithms.\nImprovement of ready-made mathematical models.\nOptimization, implementation and further support in production of mathematical models.\nHands-on experience and a good understanding of various machine learning algorithms. Knowledge of probability theory and higher mathematics, strong analytical skills.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-56165c36",
+    "skills": [
+     {
+      "name": "preliminary analysis of data",
+      "evidence": "сollection, processing and preliminary analysis of data"
+     },
+     {
+      "name": "formulation and testing of statistical hypotheses",
+      "evidence": "Formulation and testing of statistical hypotheses, building models, both based on classical statistical methods and ML algorithms"
+     },
+     {
+      "name": "building models",
+      "evidence": "Formulation and testing of statistical hypotheses, building models, both based on classical statistical methods and ML algorithms"
+     },
+     {
+      "name": "classical statistical methods",
+      "evidence": "Formulation and testing of statistical hypotheses, building models, both based on classical statistical methods and ML algorithms"
+     },
+     {
+      "name": "ML algorithms",
+      "evidence": "Formulation and testing of statistical hypotheses, building models, both based on classical statistical methods and ML algorithms"
+     },
+     {
+      "name": "improvement of ready-made mathematical models",
+      "evidence": "Improvement of ready-made mathematical models"
+     },
+     {
+      "name": "optimization",
+      "evidence": "Optimization, implementation and further support in production of mathematical models"
+     },
+     {
+      "name": "implementation",
+      "evidence": "Optimization, implementation and further support in production of mathematical models"
+     },
+     {
+      "name": "support in production",
+      "evidence": "Optimization, implementation and further support in production of mathematical models"
+     },
+     {
+      "name": "machine learning algorithms",
+      "evidence": "Hands-on experience and a good understanding of various machine learning algorithms"
+     },
+     {
+      "name": "probability theory",
+      "evidence": "Knowledge of probability theory and higher mathematics"
+     },
+     {
+      "name": "higher mathematics",
+      "evidence": "Knowledge of probability theory and higher mathematics"
+     },
+     {
+      "name": "analytical skills",
+      "evidence": "strong analytical skills"
+     },
+     {
+      "name": "English",
+      "evidence": "English level: pre"
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": null,
+      "company": "product IT company",
+      "start": null,
+      "end": null,
+      "evidence": "I work as a data scientist for 3 years in product IT company."
+     }
+    ],
+    "uncertain": [
+     "skill 'data collection': name 'data collection' is not written in its evidence, removed",
+     "skill 'data processing': name 'data processing' is not written in its evidence, removed",
+     "experience 'Senior Data Scientist': title 'Senior Data Scientist' is not written in its evidence, removed",
+     "experience 'Senior Data Scientist': start '2021' not found in its evidence, removed",
+     "experience 'Senior Data Scientist': end '2024' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 9.443
+  },
+  "elapsed_s": 9.46
+ },
+ "P06": {
+  "reader": {
+   "cv_id": "cv-b80a4935",
+   "file_type": "text",
+   "text_chars": 1577,
+   "sections": {
+    "header": 532,
+    "languages": 1033
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [],
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 0.003
+  },
+  "profile": {
+   "cv_id": "cv-b80a4935",
+   "anonymised_text": "Position: Data Science/Machine Learning Trainee\nExperience years: 1\nEnglish level: fluent\n\nenglish: C1 certificate+C2 course\n[PERSONAL]: C1 certificate\nkaggle competitions: [NAME] Classification - top 11%; Mechanisms of Action (MoA) Prediction - top 25%\nAlso currently participating in Optiver Realized Volatility Prediction competition (top 20%)\nBachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling\nLanguages: C++, Python, SQL, R(basic)\nStrong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging\nExperience in regression and neural models for stock prediction (bachelor thesis is uploaded on my github)\nKaggle competitions CV and tabular (CNN pytorch, tabnet, xgboost)\nmy kaggle: [URL]\nCourses:\n* Python, SQL\n* Deep Learning Specialization by [URL] (5 courses)\n* Build Better Generative Adversarial Networks (GANs) by [URL]\n* Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning by [URL]\nI also have knowledge in binary classification models\nLooking for any job experience that involves personal growth and progress, especially research opportunities :)\nEven though I have experience in mathematical finance and economic modelling, I am also interested in CV/NLP projects and I would gladly be involved in projects from international clients due to my strong language skills",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {
+     "[PERSONAL]": 1,
+     "[NAME]": 1,
+     "[URL]": 4
+    },
+    "detectors": [
+     "rules"
+    ],
+    "name_found": true,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": false,
+    "warnings": []
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-b80a4935",
+    "skills": [
+     {
+      "name": "C++",
+      "evidence": "Languages: C++, Python, SQL, R(basic)"
+     },
+     {
+      "name": "Python",
+      "evidence": "Languages: C++, Python, SQL, R(basic)"
+     },
+     {
+      "name": "SQL",
+      "evidence": "Languages: C++, Python, SQL, R(basic)"
+     },
+     {
+      "name": "R",
+      "evidence": "Languages: C++, Python, SQL, R(basic)"
+     },
+     {
+      "name": "mathematical finance",
+      "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+     },
+     {
+      "name": "stock prediction",
+      "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+     },
+     {
+      "name": "LSTM",
+      "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+     },
+     {
+      "name": "ARIMA",
+      "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+     },
+     {
+      "name": "Monte Carlo Markov Chain",
+      "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+     },
+     {
+      "name": "investment portfolio optimization",
+      "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+     },
+     {
+      "name": "hedging",
+      "evidence": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+     },
+     {
+      "name": "quantitative finance",
+      "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling"
+     },
+     {
+      "name": "risk modelling",
+      "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling"
+     },
+     {
+      "name": "credit scoring modelling",
+      "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling"
+     },
+     {
+      "name": "regression",
+      "evidence": "Experience in regression and neural models for stock prediction"
+     },
+     {
+      "name": "neural models",
+      "evidence": "Experience in regression and neural models for stock prediction"
+     },
+     {
+      "name": "CNN",
+      "evidence": "CNN pytorch, tabnet, xgboost"
+     },
+     {
+      "name": "pytorch",
+      "evidence": "CNN pytorch, tabnet, xgboost"
+     },
+     {
+      "name": "tabnet",
+      "evidence": "CNN pytorch, tabnet, xgboost"
+     },
+     {
+      "name": "xgboost",
+      "evidence": "CNN pytorch, tabnet, xgboost"
+     },
+     {
+      "name": "binary classification models",
+      "evidence": "I also have knowledge in binary classification models"
+     },
+     {
+      "name": "Deep Learning",
+      "evidence": "Deep Learning Specialization by [URL] (5 courses)"
+     },
+     {
+      "name": "GANs",
+      "evidence": "Build Better Generative Adversarial Networks (GANs) by [URL]"
+     },
+     {
+      "name": "TensorFlow",
+      "evidence": "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning by [URL]"
+     },
+     {
+      "name": "economic modelling",
+      "evidence": "Even though I have experience in mathematical finance and economic modelling, I am also interested in CV/NLP projects and I would gladly be involved in projects from international clients due to my strong language skills"
+     },
+     {
+      "name": "CV/NLP projects",
+      "evidence": "Even though I have experience in mathematical finance and economic modelling, I am also interested in CV/NLP projects and I would gladly be involved in projects from international clients due to my strong language skills"
+     },
+     {
+      "name": "international clients",
+      "evidence": "Even though I have experience in mathematical finance and economic modelling, I am also interested in CV/NLP projects and I would gladly be involved in projects from international clients due to my strong language skills"
+     },
+     {
+      "name": "language skills",
+      "evidence": "Even though I have experience in mathematical finance and economic modelling, I am also interested in CV/NLP projects and I would gladly be involved in projects from international clients due to my strong language skills"
+     }
+    ],
+    "education": [
+     {
+      "degree": "Bachelor",
+      "field": "Economic Cybernetics (KPI)",
+      "institution": "KPI",
+      "end": null,
+      "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling"
+     },
+     {
+      "degree": "Master",
+      "field": "Economic Cybernetics (KPI)",
+      "institution": "KPI",
+      "end": null,
+      "evidence": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field), knowledge in quantitative finance, risk modelling, credit scoring modelling"
+     }
+    ],
+    "experience": [],
+    "uncertain": [
+     "education 'Bachelor': end 'present' not found in its evidence, removed",
+     "education 'Master': end 'present' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 23.915
+  },
+  "elapsed_s": 23.93
+ },
+ "P07": {
+  "reader": {
+   "cv_id": "cv-10c8146b",
+   "file_type": "text",
+   "text_chars": 1220,
+   "sections": {
+    "header": 1220
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.003
+  },
+  "profile": {
+   "cv_id": "cv-10c8146b",
+   "anonymised_text": "Position: Data Scientist\nExperience years: 1.5\nEnglish level: intermediate\n\n2020 - Present Data analyst/Data scientist\n- Sales forecasting of CPG products\n- Data analysis, reports preparation and insights generation based on the historical data\n- Data manipulation, data preparation according to requests using python\n2017 - 2019 Sr. Business Analyst\n- Support and coordination of work of BAs group as a regional team lead.\n- Automatization of the internal processes.\n- Business analysis and demand forecasting.\n- Client communication and support, analysis of clients' requests.\n- Development specifications for new features of the product.\n2013 - 2016 Business Analyst\n- Business analysis and demand forecasting, data mining and analysis, trends research and analysis.\n- Software testing.\n- Development of videos for clients training.\n- Preparation and analysis of the reports with work results.\n2012 - 2013\nSpecialist of Business Intelligence and Report Development Department, bank\n- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover.\n- Writing explanatory documentation about developed reports.\n- Testing and performance analysis of developed reports.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-10c8146b",
+    "skills": [
+     {
+      "name": "Sales forecasting",
+      "evidence": "- Sales forecasting of CPG products"
+     },
+     {
+      "name": "Data analysis",
+      "evidence": "- Data analysis, reports preparation and insights generation based on the historical data"
+     },
+     {
+      "name": "Reports preparation",
+      "evidence": "- Data analysis, reports preparation and insights generation based on the historical data"
+     },
+     {
+      "name": "Insights generation",
+      "evidence": "- Data analysis, reports preparation and insights generation based on the historical data"
+     },
+     {
+      "name": "Data manipulation",
+      "evidence": "- Data manipulation, data preparation according to requests using python"
+     },
+     {
+      "name": "Data preparation",
+      "evidence": "- Data manipulation, data preparation according to requests using python"
+     },
+     {
+      "name": "Python",
+      "evidence": "- Data manipulation, data preparation according to requests using python"
+     },
+     {
+      "name": "Automatization",
+      "evidence": "- Automatization of the internal processes."
+     },
+     {
+      "name": "Demand forecasting",
+      "evidence": "- Business analysis and demand forecasting."
+     },
+     {
+      "name": "Client communication",
+      "evidence": "- Client communication and support, analysis of clients' requests."
+     },
+     {
+      "name": "Software testing",
+      "evidence": "- Software testing."
+     },
+     {
+      "name": "Trends research",
+      "evidence": "- Business analysis and demand forecasting, data mining and analysis, trends research and analysis."
+     },
+     {
+      "name": "Data mining",
+      "evidence": "- Business analysis and demand forecasting, data mining and analysis, trends research and analysis."
+     },
+     {
+      "name": "Analysis",
+      "evidence": "- Business analysis and demand forecasting, data mining and analysis, trends research and analysis."
+     },
+     {
+      "name": "DB ORACLE 10g",
+      "evidence": "- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover."
+     },
+     {
+      "name": "PL SQL Developer",
+      "evidence": "- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover."
+     },
+     {
+      "name": "Oracle Discover",
+      "evidence": "- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover."
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Data analyst/Data scientist",
+      "company": null,
+      "start": "2020",
+      "end": "present",
+      "evidence": "2020 - Present Data analyst/Data scientist"
+     },
+     {
+      "title": "Sr. Business Analyst",
+      "company": null,
+      "start": "2017",
+      "end": "2019",
+      "evidence": "2017 - 2019 Sr. Business Analyst"
+     },
+     {
+      "title": "Business Analyst",
+      "company": null,
+      "start": "2013",
+      "end": "2016",
+      "evidence": "2013 - 2016 Business Analyst"
+     },
+     {
+      "title": "Specialist of Business Intelligence and Report Development Department",
+      "company": "bank",
+      "start": null,
+      "end": null,
+      "evidence": "Specialist of Business Intelligence and Report Development Department, bank\n- Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover.\n- Writing explanatory documentation about developed reports.\n- Testing and performance analysis of developed reports."
+     }
+    ],
+    "uncertain": [
+     "skill 'Business analysis': name 'Business analysis' is not written in its evidence, removed",
+     "experience 'Data analyst/Data scientist': company 'null' is not written in its evidence, removed",
+     "experience 'Sr. Business Analyst': company 'null' is not written in its evidence, removed",
+     "experience 'Business Analyst': company 'null' is not written in its evidence, removed",
+     "experience 'Specialist of Business Intelligence and Report Development Department': start '2012' not found in its evidence, removed",
+     "experience 'Specialist of Business Intelligence and Report Development Department': end '2013' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 14.528
+  },
+  "elapsed_s": 14.55
+ },
+ "P08": {
+  "reader": {
+   "cv_id": "cv-1057bb6f",
+   "file_type": "text",
+   "text_chars": 732,
+   "sections": {
+    "header": 732
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.003
+  },
+  "profile": {
+   "cv_id": "cv-1057bb6f",
+   "anonymised_text": "Position: Junior Data Scientist\nExperience years: 0.5\nEnglish level: fluent\n\nIn 2019, I have been granted presidential scholarship due to achieving the highest university entrance score in my country, Azerbaijan. I have BC IELTS 8.0 score, and I have certificates regarding ML & DL and Data Science which are shown in my LinkedIn profile.\nI have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python. I have several projects published on my Github, one of which involving wine score prediction using various models with TF & IDF implementation.\nI would be happy to work in a project involving Deep Learning.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-1057bb6f",
+    "skills": [
+     {
+      "name": "Python",
+      "evidence": "I have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python."
+     },
+     {
+      "name": "NLP",
+      "evidence": "I have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python."
+     },
+     {
+      "name": "Computer Vision",
+      "evidence": "I have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python."
+     },
+     {
+      "name": "data analysis",
+      "evidence": "I have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python."
+     },
+     {
+      "name": "TF",
+      "evidence": "one of which involving wine score prediction using various models with TF & IDF implementation."
+     },
+     {
+      "name": "IDF",
+      "evidence": "one of which involving wine score prediction using various models with TF & IDF implementation."
+     },
+     {
+      "name": "Deep Learning",
+      "evidence": "I would be happy to work in a project involving Deep Learning."
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Cyber Risk Specialist",
+      "company": null,
+      "start": null,
+      "end": null,
+      "evidence": "I have previously worked as a Cyber Risk Specialist."
+     },
+     {
+      "title": "Junior Data Scientist",
+      "company": "PRODATA",
+      "start": null,
+      "end": null,
+      "evidence": "I have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python."
+     }
+    ],
+    "uncertain": [
+     "experience 'Cyber Risk Specialist': company 'null' is not written in its evidence, removed",
+     "experience 'Cyber Risk Specialist': start 'null' not found in its evidence, removed",
+     "experience 'Cyber Risk Specialist': end 'null' not found in its evidence, removed",
+     "experience 'Junior Data Scientist': start 'null' not found in its evidence, removed",
+     "experience 'Junior Data Scientist': end 'null' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 8.469
+  },
+  "elapsed_s": 8.49
+ },
+ "P09": {
+  "reader": {
+   "cv_id": "cv-8aa224e3",
+   "file_type": "text",
+   "text_chars": 590,
+   "sections": {
+    "header": 590
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.003
+  },
+  "profile": {
+   "cv_id": "cv-8aa224e3",
+   "anonymised_text": "Position: Data Scientist\nExperience years: 0.5\nEnglish level: upper\n\nI have finished a Machine Learning course at IT-HILLEL.\n\nNow diving into Deep Learning, especially Hugging Face, PyTorch, OpenAI API\n\nHave experience in creating a pet project for predicting eSports matches, which gives up to 65% accuracy.\n\nDeveloped an app to help students prepare for their exams using OpenAI API\n\nI also had experience in a distribution company - my task was to organize the names of products in the database.\nWould like to be part of the Data Scientist team, where I can gain experience and knowledge",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-8aa224e3",
+    "skills": [
+     {
+      "name": "Machine Learning",
+      "evidence": "I have finished a Machine Learning course at IT-HILLEL."
+     },
+     {
+      "name": "Deep Learning",
+      "evidence": "Now diving into Deep Learning, especially Hugging Face, PyTorch, OpenAI API"
+     },
+     {
+      "name": "Hugging Face",
+      "evidence": "Now diving into Deep Learning, especially Hugging Face, PyTorch, OpenAI API"
+     },
+     {
+      "name": "PyTorch",
+      "evidence": "Now diving into Deep Learning, especially Hugging Face, PyTorch, OpenAI API"
+     },
+     {
+      "name": "OpenAI API",
+      "evidence": "Now diving into Deep Learning, especially Hugging Face, PyTorch, OpenAI API"
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Data Scientist",
+      "company": null,
+      "start": null,
+      "end": null,
+      "evidence": "Position: Data Scientist\nExperience years: 0.5\nEnglish level: upper"
+     },
+     {
+      "title": "pet project",
+      "company": null,
+      "start": null,
+      "end": null,
+      "evidence": "Have experience in creating a pet project for predicting eSports matches, which gives up to 65% accuracy."
+     },
+     {
+      "title": null,
+      "company": "distribution company",
+      "start": null,
+      "end": null,
+      "evidence": "I also had experience in a distribution company - my task was to organize the names of products in the database."
+     }
+    ],
+    "uncertain": [
+     "experience 'Data Scientist': company 'self' is not written in its evidence, removed",
+     "experience 'Data Scientist': start '0.5' not found in its evidence, removed",
+     "experience 'pet project': company 'self' is not written in its evidence, removed",
+     "experience 'app development': title 'app development' is not written in its evidence, removed",
+     "experience 'app development': company 'self' is not written in its evidence, removed",
+     "experience 'app development': neither title nor company, dropped",
+     "experience 'database organization': title 'database organization' is not written in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 7.431
+  },
+  "elapsed_s": 7.45
+ },
+ "P10": {
+  "reader": {
+   "cv_id": "cv-396d4995",
+   "file_type": "text",
+   "text_chars": 954,
+   "sections": {
+    "header": 954
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.004
+  },
+  "profile": {
+   "cv_id": "cv-396d4995",
+   "anonymised_text": "Position: Data Analyst / BI Developer\nExperience years: 4\nEnglish level: upper\n\nOne of my biggest projects was designing and managing a database to store all company's data for further analysis. I've created interfaces for inputting the data via PowerApps, and dashboards for accessing data via Power BI.\nI worked as a customer success data analyst in an event industry company for the past year. My responsibilities included:\n- creating Looker dashboards for enterprise customers;\n- modeling data in LookML;\n- scheduling queries in GQB, and writing complex SQL queries to process large amounts of data;\n- analyzing particular customer data as well as overall industry trends;\n- conducting Looker training sessions for other team members.\n\nI also have experience in analyzing sales and internal HR data, worked with Looker, Tableau, and Power BI, and can write basic JS scripts.\nI'm willing to work on challenging projects, and ready to learn new things.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-396d4995",
+    "skills": [
+     {
+      "name": "PowerApps",
+      "evidence": "I've created interfaces for inputting the data via PowerApps, and dashboards for accessing data via Power BI."
+     },
+     {
+      "name": "Power BI",
+      "evidence": "I've created interfaces for inputting the data via PowerApps, and dashboards for accessing data via Power BI."
+     },
+     {
+      "name": "Looker",
+      "evidence": "creating Looker dashboards for enterprise customers;"
+     },
+     {
+      "name": "Tableau",
+      "evidence": "worked with Looker, Tableau, and Power BI, and can write basic JS scripts."
+     },
+     {
+      "name": "JS",
+      "evidence": "can write basic JS scripts."
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": null,
+      "company": "event industry company",
+      "start": null,
+      "end": null,
+      "evidence": "I worked as a customer success data analyst in an event industry company for the past year. My responsibilities included:\n- creating Looker dashboards for enterprise customers;\n- modeling data in LookML;\n- scheduling queries in GQB, and writing complex SQL queries to process large amounts of data;\n- analyzing particular customer data as well as overall industry trends;\n- conducting Looker training sessions for other team members."
+     }
+    ],
+    "uncertain": [
+     "experience 'Data Analyst / BI Developer': title 'Data Analyst / BI Developer' is not written in its evidence, removed",
+     "experience 'Data Analyst / BI Developer': start '2020' not found in its evidence, removed",
+     "experience 'Data Analyst / BI Developer': end 'present' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 7.443
+  },
+  "elapsed_s": 7.46
+ },
+ "P11": {
+  "reader": {
+   "cv_id": "cv-56a06930",
+   "file_type": "text",
+   "text_chars": 931,
+   "sections": {
+    "header": 931
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.005
+  },
+  "profile": {
+   "cv_id": "cv-56a06930",
+   "anonymised_text": "Position: Big Data Engineer\nExperience years: 5\nEnglish level: upper\n\nThe two startups I've worked for are now unicorns with an overall evaluation of ~10B.\nT-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering. Took part in a variety of Data Science projects for e-commerce and advertising companies. My work covered both Engineering and Product parts. On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions. On the Product side I worked with stakeholders to formalize requirements and present results.\nI'm looking for rather engineering kind of work such as MLOps, Machine Learning, Big Data, then related to the theoretical part of DS. Companies with strong Data Science/Engineering cultures or solid revenue streams are preferred.\nSorry, I'm not considering any Data Science or Analytics positions any longer",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-56a06930",
+    "skills": [
+     {
+      "name": "Machine Learning",
+      "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering."
+     },
+     {
+      "name": "DataScience",
+      "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering."
+     },
+     {
+      "name": "Software Engineering",
+      "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering."
+     },
+     {
+      "name": "R&D",
+      "evidence": "On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions."
+     },
+     {
+      "name": "System design",
+      "evidence": "On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions."
+     },
+     {
+      "name": "Requirements",
+      "evidence": "On the Product side I worked with stakeholders to formalize requirements and present results."
+     },
+     {
+      "name": "Product",
+      "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 6.274
+  },
+  "elapsed_s": 6.29
+ },
+ "P12": {
+  "reader": {
+   "cv_id": "cv-96c49f96",
+   "file_type": "text",
+   "text_chars": 2661,
+   "sections": {
+    "header": 2661
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.005
+  },
+  "profile": {
+   "cv_id": "cv-96c49f96",
+   "anonymised_text": "Position: Data Engineer\nExperience years: 11\nEnglish level: intermediate\n\n- SSIS\n- Talend ETL\n- SAP BODS\n- Oracle ODI / OBI - SAP BO\n- Power BI\n- Qlik View/Sense\n- SSRS\nDWH & BI Unit Manager - PayCore Payment Systems - Jun 2021 - Working\n- Designed, DWH architecture of Payment Management Systems, Mastercard systems and many related systems.\n- Uses SSIS, Talend Open Studio, SAP BO/BI, Power BI\n- Managed an agile team.\nSenior Solution Architect - MDS ap Turkey(Midis Group Inc.) - Feb 2019 - May 2021\n- Adaptation of ETL and Business Intelligence projects.\n- ETL/BI project in Türkiye Insurance Inc.\n- Consolidation project for TWF([PERSONAL] Wealth Fund).\n- ETL Development project for Rotana Dubai.\n\nFounder - Fox Analytics - Jun 2019\n- Developed ETL processes and BI Reports any tools\n- Served consultancy solutions and project management\n\nEnterprise Applications Manager - NETAS Telecommunication Inc. - May 2015 - Jan 2019\n- DWH: Project management for the creation of company DWH in SAP BODS and Oracle.\n- Responsible for SAP BI, Power BI: Created structures in accordance with DB and DWH, developed BI dashboard.\n- Managed SAP R/3 and Oracle E-BS HR: Team management supporting Logistics, Finance and HR units, managment of consulting firms.\n- Led a team in Salesforce CRM: Management of the team that develops and supports internal and external applications.\n\nSenior Software Developer - Yataş Inc. - Agu 2011 - May 2015\n- Java ADF Developer; developed Store applications with Java within the scope of Mobile Field Sales Applications project\n- Oracle E-BS Developer; developed Oracle Forms, OAF, PL / SQL, Workflow, Discoverer, XML Publisher.\n- After the R12 transition was completed, developed warehouse and shop handheld terminal applications. Made improvements within the scope of Production, Sales, Purchasing, Shipping, Warehouse process improvement projects.\n- As part of Oracle R12 Project, responsible for additional enhancements, personalized and report enhancements in the production and logistics modules. Re-coded the applications used in the current E-BS 11.5.9 in R12.\n\nIT Project Manager - Tırsan Logistics Inc. - Nov 2009 - Agu 2011.\n- Developed software used by the Shipping, Warehouse, Accounting, Sales and HR unit, project management, process analysis and accounting unit.\n- Executed improvements in logistics operations and oversaw management of projects that were developed according to customer demand.\n- Headed the team that develops software with .Net, Java and Oracle\n- Met new customer / project automation / integration needs in shipping and warehouse units, coordinated the project at the stage of developing B2B applications",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {
+     "[PERSONAL]": 1
+    },
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-96c49f96",
+    "skills": [
+     {
+      "name": "SSIS",
+      "evidence": "- SSIS"
+     },
+     {
+      "name": "Talend ETL",
+      "evidence": "- Talend ETL"
+     },
+     {
+      "name": "SAP BODS",
+      "evidence": "- SAP BODS"
+     },
+     {
+      "name": "Oracle ODI / OBI - SAP BO",
+      "evidence": "- Oracle ODI / OBI - SAP BO"
+     },
+     {
+      "name": "Power BI",
+      "evidence": "- Power BI"
+     },
+     {
+      "name": "Qlik View/Sense",
+      "evidence": "- Qlik View/Sense"
+     },
+     {
+      "name": "SSRS",
+      "evidence": "- SSRS"
+     },
+     {
+      "name": "DWH",
+      "evidence": "- Designed, DWH architecture of Payment Management Systems, Mastercard systems and many related systems."
+     },
+     {
+      "name": "ETL",
+      "evidence": "- Adaptation of ETL and Business Intelligence projects."
+     },
+     {
+      "name": "ETL Development",
+      "evidence": "- ETL Development project for Rotana Dubai."
+     },
+     {
+      "name": "ETL processes",
+      "evidence": "- Developed ETL processes and BI Reports any tools"
+     },
+     {
+      "name": "SAP BI",
+      "evidence": "Responsible for SAP BI, Power BI: Created structures in accordance with DB and DWH, developed BI dashboard."
+     },
+     {
+      "name": "SAP R/3",
+      "evidence": "Managed SAP R/3 and Oracle E-BS HR: Team management supporting Logistics, Finance and HR units, managment of consulting firms."
+     },
+     {
+      "name": "Oracle E-BS HR",
+      "evidence": "Managed SAP R/3 and Oracle E-BS HR: Team management supporting Logistics, Finance and HR units, managment of consulting firms."
+     },
+     {
+      "name": "Salesforce CRM",
+      "evidence": "Led a team in Salesforce CRM: Management of the team that develops and supports internal and external applications."
+     },
+     {
+      "name": "Java",
+      "evidence": "Java ADF Developer; developed Store applications with Java within the scope of Mobile Field Sales Applications project"
+     },
+     {
+      "name": "ADF",
+      "evidence": "Java ADF Developer; developed Store applications with Java within the scope of Mobile Field Sales Applications project"
+     },
+     {
+      "name": "Mobile Field Sales Applications",
+      "evidence": "Java ADF Developer; developed Store applications with Java within the scope of Mobile Field Sales Applications project"
+     },
+     {
+      "name": "Net",
+      "evidence": "Headed the team that develops software with .Net, Java and Oracle"
+     },
+     {
+      "name": "Oracle",
+      "evidence": "Headed the team that develops software with .Net, Java and Oracle"
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "DWH & BI Unit Manager",
+      "company": "PayCore Payment Systems",
+      "start": "2021-06",
+      "end": null,
+      "evidence": "DWH & BI Unit Manager - PayCore Payment Systems - Jun 2021 - Working\n- Designed, DWH architecture of Payment Management Systems, Mastercard systems and many related systems.\n- Uses SSIS, Talend Open Studio, SAP BO/BI, Power BI\n- Managed an agile team."
+     },
+     {
+      "title": "Senior Solution Architect",
+      "company": "MDS ap Turkey(Midis Group Inc.)",
+      "start": "2019-02",
+      "end": "2021-05",
+      "evidence": "Senior Solution Architect - MDS ap Turkey(Midis Group Inc.) - Feb 2019 - May 2021\n- Adaptation of ETL and Business Intelligence projects.\n- ETL/BI project in Türkiye Insurance Inc.\n- Consolidation project for TWF([PERSONAL] Wealth Fund).\n- ETL Development project for Rotana Dubai."
+     },
+     {
+      "title": "Founder",
+      "company": "Fox Analytics",
+      "start": "2019-06",
+      "end": null,
+      "evidence": "Founder - Fox Analytics - Jun 2019\n- Developed ETL processes and BI Reports any tools"
+     },
+     {
+      "title": "Enterprise Applications Manager",
+      "company": "NETAS Telecommunication Inc.",
+      "start": "2015-05",
+      "end": "2019-01",
+      "evidence": "Enterprise Applications Manager - NETAS Telecommunication Inc. - May 2015 - Jan 2019"
+     },
+     {
+      "title": "Senior Software Developer",
+      "company": "Yataş Inc.",
+      "start": "2011-09",
+      "end": "2015-05",
+      "evidence": "Senior Software Developer - Yataş Inc. - Agu 2011 - May 2015"
+     }
+    ],
+    "uncertain": [
+     "skill 'BI': name 'BI' is not written in its evidence, removed",
+     "experience 'DWH & BI Unit Manager': end 'present' not found in its evidence, removed",
+     "part 3/4: answer cut off at the token limit",
+     "part 3/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 3/4: answer cut off at the token limit",
+     "part 3/4: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 49.967
+  },
+  "elapsed_s": 49.99
+ },
+ "P13": {
+  "reader": {
+   "cv_id": "cv-bb2cee3e",
+   "file_type": "text",
+   "text_chars": 1600,
+   "sections": {
+    "header": 1600
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.003
+  },
+  "profile": {
+   "cv_id": "cv-bb2cee3e",
+   "anonymised_text": "Position: Data Team Lead/Data Delivery Manager\nExperience years: 8\nEnglish level: fluent\n\nWill be described in CV.\nSeasoned Team Leader on a complex project. Successfully managed a team of up to 10 Data Engineers, at the same time\nacting as a Resource/Functional Manager for a pool of up to 20 Data/Data Quality Engineers.\nCurrently transitioning from Team Lead role to the Delivery Manager.\nExperience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL.\nConducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile.\nInterested only in DWBI/DWH/ETL projects as a Team/Tech Lead or Data Delivery Manager. No preferences for team size. Cloud stack is mandatory (Azure preferred).",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-bb2cee3e",
+    "skills": [
+     {
+      "name": "Azure",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "ADLS",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "SFTP",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "CosmosDB",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "Azure SQL",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "GCP",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "Oracle",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "Postgres",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "Azure DevOps",
+      "evidence": "Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+     },
+     {
+      "name": "CI/CD",
+      "evidence": "Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+     },
+     {
+      "name": "ADF",
+      "evidence": "Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+     },
+     {
+      "name": "Snowflake",
+      "evidence": "Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: fluent"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 42.234
+  },
+  "elapsed_s": 42.25
+ },
+ "P14": {
+  "reader": {
+   "cv_id": "cv-7ff10339",
+   "file_type": "text",
+   "text_chars": 501,
+   "sections": {
+    "header": 501
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.005
+  },
+  "profile": {
+   "cv_id": "cv-7ff10339",
+   "anonymised_text": "Position: Data engineer\nExperience years: 1\nEnglish level: upper\n\nI have been able to work with a team and have done a great deal of some couple of works together.\nAs a data engineer I have been able to make data more easily accessible to the organization.\nI used the open source ELT .\nAm a co-worker in the team.\nI would want to improve my skills and technology level if am employed by your organization.\nTo work with individual who are advance than me so I can also improve my skills along the line.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-7ff10339",
+    "skills": [
+     {
+      "name": "ELT",
+      "evidence": "I used the open source ELT ."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 1.651
+  },
+  "elapsed_s": 1.67
+ },
+ "P15": {
+  "reader": {
+   "cv_id": "cv-67625430",
+   "file_type": "text",
+   "text_chars": 2331,
+   "sections": {
+    "header": 2331
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.008
+  },
+  "profile": {
+   "cv_id": "cv-67625430",
+   "anonymised_text": "Position: Junior or Middle Data Engineer\nExperience years: 2\nEnglish level: upper\n\nHere is a summary of my qualifications:\n- Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.\n- Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner.\n- BI Tools: Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis.\n- ETL Tools: Experience in working with Azure Data Factory and SSIS for efficient data extraction, transformation, and loading processes.\n- Technical Proficiencies: Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT.\n- UNIX Administration: Experience in administering UNIX-based systems.\n- Container Technologies: Experience in working with Kubernetes for containerization.\n- Python: Experience in using Python for file and database manipulation tasks.\n- Telecom Knowledge: Experience with Charging and Billing Systems in the telecommunications industry.\n- Collaborative Experience: Worked effectively as a member of globally distributed and cross-functional teams.\n- EPAM Data Analytics and Data Engineering Internal Lab: Currently a member since 06.2022, involved in various projects including the development of ETL pipelines in Azure Data Factory, implementation of ETL processes using SSIS and Python with PostgreSQL in AWS, and creating reports in Power BI and Tableau for data analysis.\n\nI am highly motivated to further enhance my skills and expand my knowledge in the field of data engineering and analytics. I have obtained the following certifications:\n\nDP-203 Microsoft Certified: Azure Data Engineer Associate\nCLF-C01 AWS Certified Cloud Practitioner\nDP-900 Microsoft Certified: Azure Data Fundamentals\nPL-300 Microsoft Certified: Power BI Data Analyst Associate\nAcademy Accreditation - Databricks Lakehouse Fundamentals\nI am looking forward to the opportunity to further enhance my skills, engage in an interesting project, and collaborate with a friendly and supportive team.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-67625430",
+    "skills": [
+     {
+      "name": "Oracle",
+      "evidence": "Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates."
+     },
+     {
+      "name": "SQL",
+      "evidence": "Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates."
+     },
+     {
+      "name": "Azure",
+      "evidence": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+     },
+     {
+      "name": "AWS",
+      "evidence": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+     },
+     {
+      "name": "DP-203",
+      "evidence": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+     },
+     {
+      "name": "CLF-C01",
+      "evidence": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+     },
+     {
+      "name": "PowerBI",
+      "evidence": "Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis."
+     },
+     {
+      "name": "PL-300",
+      "evidence": "Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis."
+     },
+     {
+      "name": "Tableau",
+      "evidence": "Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis."
+     },
+     {
+      "name": "Sisense",
+      "evidence": "Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis."
+     },
+     {
+      "name": "Azure Data Factory",
+      "evidence": "Experience in working with Azure Data Factory and SSIS for efficient data extraction, transformation, and loading processes."
+     },
+     {
+      "name": "SSIS",
+      "evidence": "Experience in working with Azure Data Factory and SSIS for efficient data extraction, transformation, and loading processes."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     },
+     {
+      "name": "JIRA",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "Confluence",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "Postman",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "Kubernetes",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "Jenkins",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "Cassandra",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "MongoDB",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "Microsoft SQL Server",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "PostgreSQL",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "GIT",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "UNIX",
+      "evidence": "Experience in administering UNIX-based systems."
+     },
+     {
+      "name": "Containerization",
+      "evidence": "Experience in working with Kubernetes for containerization."
+     },
+     {
+      "name": "Python",
+      "evidence": "Experience in using Python for file and database manipulation tasks."
+     },
+     {
+      "name": "Charging and Billing Systems",
+      "evidence": "Experience with Charging and Billing Systems in the telecommunications industry."
+     },
+     {
+      "name": "Power BI",
+      "evidence": "creating reports in Power BI and Tableau for data analysis"
+     },
+     {
+      "name": "DP-900",
+      "evidence": "DP-900 Microsoft Certified: Azure Data Fundamentals"
+     },
+     {
+      "name": "Databricks Lakehouse Fundamentals",
+      "evidence": "Academy Accreditation - Databricks Lakehouse Fundamentals"
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Member",
+      "company": "EPAM Data Analytics and Data Engineering Internal Lab",
+      "start": "2022-06",
+      "end": "present",
+      "evidence": "- EPAM Data Analytics and Data Engineering Internal Lab: Currently a member since 06.2022, involved in various projects including the development of ETL pipelines in Azure Data Factory, implementation of ETL processes using SSIS and Python with PostgreSQL in AWS, and creating reports in Power BI and Tableau for data analysis."
+     }
+    ],
+    "uncertain": [
+     "skill 'ETL': name 'ETL' is not written in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 30.949
+  },
+  "elapsed_s": 30.97
+ },
+ "P16": {
+  "reader": {
+   "cv_id": "cv-5cad0f97",
+   "file_type": "text",
+   "text_chars": 2407,
+   "sections": {
+    "header": 72,
+    "experience": 1131,
+    "certifications": 80,
+    "projects": 1063
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [],
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-5cad0f97",
+   "anonymised_text": "Position: Junior Data Engineer\nExperience years: 1\nEnglish level: fluent\n\nWork Experience:\n\nCloud Support Engineer, Devoteam G Cloud, Warsaw:\n- Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)\n- Contribution to local support automation projects (Developing Cloud Functions)\n- First line support for Clients with the Google Cloud based infrastructure (Google\nKubernetes Engine,Cloud DataProc, Cloud Dataflow, Cloud SQL, Big-Table, BigQuery)\n\nStudent Data Engineer/DevOps, Abbott, Warsaw:\n- Supporting AWS Infrastructure (Debugging Issues related to resource Provisioning,\nDeployment and Exploitation)\n- Creating ETL Glue Jobs and AWS Lambdas for Data Processing and Automation\n- Assisting in Deployment, Updating and Creation of IaC Cloud-Formation Templates\n- Creating Bash scripts for automation of AWS Processes\n\nIntern Software Developer, CASE, Warsaw\n- Writing automated jobs in Python for extracting and processing data from different\nresources\n- Managing, tuning and maintaining EC-2 Virtual Machines for running jobs in AWS\nCloud\n- Filtering data in the database by using SQL\n\nCertifications:\n\n- Associalte Cloud Engineer\n- Terraform Associate\n- GCP Data Engineer (Upcoming)\n\nPersonal Projects:\n\n- Batch Data Pipeline for extraction of Cryptocurrencies' data and calculation of price\ndifferences between various cryptocurrency categories on different time ranges.\n(GCP, Spark, Airflow, Pandas, GCS, BigQuery. Terraform, Docker, Java, Cloud Run, NodeJS)\n\n- Building a Serverless Data Pipeline by using Python, AWS Lambda, Amazon S3 and AWS\nCloud-Formation for processing CSV files.\n\n- Building a real-time Data Processing/Visualization pipeline for processing Web\nApplication's access logs (Python, Pandas, Flask, PostgreSQL, SQLite, Django)\n\n- Developing a Web Scraper for Ebay Website (BeautifulSoup, Python, Pandas)\n\nOn my previous positions I have been mostly working as an Intern and a Junior Specialist. Want to develop myself as a Cloud Data Engineer (either with AWS or GCP) and Data Architect. Want to learn more about the Hadoop ecosystem, Stream Processing, MLOps and Cloud Native solutions for Big Data.\n\nWill be happy to contribute to projects with my existing background and impact company's success with my passion to Data, Cloud and Programming",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-5cad0f97",
+    "skills": [
+     {
+      "name": "Bash",
+      "evidence": "Creating Bash scripts for automation of AWS Processes"
+     },
+     {
+      "name": "Python",
+      "evidence": "Writing automated jobs in Python for extracting and processing data from different\nresources"
+     },
+     {
+      "name": "AWS",
+      "evidence": "Creating Bash scripts for automation of AWS Processes"
+     },
+     {
+      "name": "EC-2",
+      "evidence": "Managing, tuning and maintaining EC-2 Virtual Machines for running jobs in AWS\nCloud"
+     },
+     {
+      "name": "SQL",
+      "evidence": "Filtering data in the database by using SQL"
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Intern Software Developer",
+      "company": "CASE",
+      "start": null,
+      "end": null,
+      "evidence": "Intern Software Developer, CASE, Warsaw"
+     }
+    ],
+    "uncertain": [
+     "part 1/4: answer cut off at the token limit",
+     "part 1/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 1/4: answer cut off at the token limit",
+     "part 1/4: attempt 2: unreadable answer (no JSON object in the model answer)",
+     "experience 'Intern Software Developer': start 'present' not found in its evidence, removed",
+     "experience 'Intern Software Developer': end 'present' not found in its evidence, removed",
+     "part 3/4: answer cut off at the token limit",
+     "part 3/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 3/4: answer cut off at the token limit",
+     "part 3/4: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 61.407
+  },
+  "elapsed_s": 61.43
+ },
+ "P17": {
+  "reader": {
+   "cv_id": "cv-7ca55d1d",
+   "file_type": "text",
+   "text_chars": 1469,
+   "sections": {
+    "header": 1469
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.003
+  },
+  "profile": {
+   "cv_id": "cv-7ca55d1d",
+   "anonymised_text": "Position: Machine Learning Engineer\nExperience years: 2.5\nEnglish level: upper\n\nFreelance | .Net / Machine Learning Engineer\n06/2019 - present\nOne of the managers of the shared account. I also take the role of Team\nLead on projects related to my technology stack. (team of up to 5 people)\n\nVideo Object Recognition | Machine Learning Engineer\n03/2022 - 06/2022\nA neural network based on the yolov4 architecture for video object\nrecognition.\n\nArticle Generator | Machine Learning Engineer\n10/2021 - 02/2022\nA neural network for generating scientific articles in the field of crypto\u0002trading.\n\nArticle Generator | Machine Learning Engineer\n10/2021 - 02/2022\nA neural network for generating scientific articles in the field of crypto\u0002trading.\n\nImage Clasificator | Machine Learning Engineer\n05/2021 - 09/2021\nA neural network for image classification using AlexNet.\n\nChat Bot | Machine Learning Engineer\n01/2021 - 03/2021\nA chat bot using Self-Attention architecture to conduct specific dialog\n\nDuplicate Searcher | Machine Learning Engineer\n09/2020 - 12/2020\nA neural network using a Siamese architecture to identify similar\nquestions in forums.\n\nProduct Cluster | Machine Learning Engineer\n05/2020 - 08/2020\nUsed K-Means and Affinity Propagation to cluster products by name and\ndescription.\n\n.Net Fullstack Developer\n01/2020 - 05/2022\nWorked as a .Net fullstack developer. I have done 10+ projects in various\ncompanies such as CRM systems, backends for modern games, etc.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-7ca55d1d",
+    "skills": [
+     {
+      "name": "Net",
+      "evidence": "Freelance | .Net / Machine Learning Engineer"
+     },
+     {
+      "name": "Machine Learning",
+      "evidence": "Freelance | .Net / Machine Learning Engineer"
+     },
+     {
+      "name": "neural network",
+      "evidence": "A neural network based on the yolov4 architecture for video object\nrecognition."
+     },
+     {
+      "name": "image clasificator",
+      "evidence": "Image Clasificator | Machine Learning Engineer"
+     },
+     {
+      "name": "yolov4",
+      "evidence": "A neural network based on the yolov4 architecture for video object\nrecognition."
+     },
+     {
+      "name": "video object recognition",
+      "evidence": "A neural network based on the yolov4 architecture for video object\nrecognition."
+     },
+     {
+      "name": "scientific articles",
+      "evidence": "A neural network for generating scientific articles in the field of crypto\u0002trading."
+     },
+     {
+      "name": "AlexNet",
+      "evidence": "A neural network for image classification using AlexNet."
+     },
+     {
+      "name": "Self-Attention",
+      "evidence": "A chat bot using Self-Attention architecture to conduct specific dialog"
+     },
+     {
+      "name": "Siamese architecture",
+      "evidence": "A neural network using a Siamese architecture to identify similar\nquestions in forums"
+     },
+     {
+      "name": "K-Means",
+      "evidence": "Used K-Means and Affinity Propagation to cluster products by name and\ndescription."
+     },
+     {
+      "name": "Affinity Propagation",
+      "evidence": "Used K-Means and Affinity Propagation to cluster products by name and\ndescription."
+     },
+     {
+      "name": "fullstack",
+      "evidence": "Worked as a .Net fullstack developer."
+     },
+     {
+      "name": "CRM systems",
+      "evidence": "I have done 10+ projects in various\ncompanies such as CRM systems, backends for modern games, etc."
+     },
+     {
+      "name": "backends",
+      "evidence": "I have done 10+ projects in various\ncompanies such as CRM systems, backends for modern games, etc."
+     },
+     {
+      "name": "modern games",
+      "evidence": "I have done 10+ projects in various\ncompanies such as CRM systems, backends for modern games, etc."
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Freelance",
+      "start": "2019-06",
+      "end": "present",
+      "evidence": "Freelance | .Net / Machine Learning Engineer\n06/2019 - present\nOne of the managers of the shared account. I also take the role of Team\nLead on projects related to my technology stack. (team of up to 5 people)"
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Video Object Recognition",
+      "start": "2022-03",
+      "end": "2022-06",
+      "evidence": "Video Object Recognition | Machine Learning Engineer\n03/2022 - 06/2022\nA neural network based on the yolov4 architecture for video object\nrecognition."
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Article Generator",
+      "start": null,
+      "end": null,
+      "evidence": "Article Generator | Machine Learning Engineer"
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Image Clasificator",
+      "start": null,
+      "end": null,
+      "evidence": "Image Clasificator | Machine Learning Engineer"
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Chat Bot",
+      "start": "2021-01",
+      "end": "2021-03",
+      "evidence": "Chat Bot | Machine Learning Engineer\n01/2021 - 03/2021"
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Duplicate Searcher",
+      "start": "2020-09",
+      "end": "2020-12",
+      "evidence": "Duplicate Searcher | Machine Learning Engineer\n09/2020 - 12/2020"
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Product Cluster",
+      "start": "2020-05",
+      "end": "2020-08",
+      "evidence": "Product Cluster | Machine Learning Engineer\n05/2020 - 08/2020"
+     },
+     {
+      "title": ".Net Fullstack Developer",
+      "company": null,
+      "start": "2020-01",
+      "end": "2022-05",
+      "evidence": ".Net Fullstack Developer\n01/2020 - 05/2022"
+     }
+    ],
+    "uncertain": [
+     "skill 'crypto-trading': name 'crypto-trading' is not written in its evidence, removed",
+     "experience 'Machine Learning Engineer': start '10/2021' not found in its evidence, removed",
+     "experience 'Machine Learning Engineer': end '02/2022' not found in its evidence, removed",
+     "experience 'Machine Learning Engineer': start '10/2021' not found in its evidence, removed",
+     "experience 'Machine Learning Engineer': end '02/2022' not found in its evidence, removed",
+     "experience 'Machine Learning Engineer': start 'null' not found in its evidence, removed",
+     "experience 'Machine Learning Engineer': end 'null' not found in its evidence, removed",
+     "experience '.Net Fullstack Developer': company 'None' is not written in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 24.777
+  },
+  "elapsed_s": 24.79
+ },
+ "P18": {
+  "reader": {
+   "cv_id": "cv-470066d0",
+   "file_type": "text",
+   "text_chars": 1866,
+   "sections": {
+    "header": 1866
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.005
+  },
+  "profile": {
+   "cv_id": "cv-470066d0",
+   "anonymised_text": "Position: Data Engineer, Data Science\nExperience years: 0.5\nEnglish level: upper\n\nAs a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights. My role encompasses a wide range of responsibilities, including:\n\n1. Data Pipeline Development: I design, develop, and maintain robust data pipelines and ETL processes to ensure accurate and timely delivery of data for various banking products and services. This involves collaborating with cross-functional teams to understand data requirements and implementing effective solutions.\n\n2. Data Modeling and Optimization: I optimize data models and database performance to enhance the efficiency and scalability of data processing operations. By writing complex SQL queries, I ensure that data is readily accessible for analysis and reporting purposes.\n\n3. Data Quality and Integrity: I am committed to ensuring data quality and integrity throughout the data lifecycle. This involves implementing data validation, cleansing, and normalization techniques to maintain high standards and accuracy.\n\n4. Collaboration and Communication: I actively collaborate with cross-functional teams, including Data Scientists, Analysts, and Software Engineers, to understand their data requirements and provide them with the necessary support. Clear and effective communication is key to ensuring alignment and successful execution of data-related projects.\n\nWorking as a Data Engineer requires a combination of technical expertise, analytical skills, and a deep understanding of banking products and services. By leveraging my SQL, Python and Data Engineering skills, I contribute to the overall success of the organization by delivering accurate and actionable insights that drive strategic business decisions.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-470066d0",
+    "skills": [
+     {
+      "name": "SQL",
+      "evidence": "leveraging my expertise in SQL, Python, and other relevant tools"
+     },
+     {
+      "name": "Python",
+      "evidence": "leveraging my expertise in SQL, Python, and other relevant tools"
+     },
+     {
+      "name": "ETL",
+      "evidence": "design, develop, and maintain robust data pipelines and ETL processes"
+     },
+     {
+      "name": "database performance",
+      "evidence": "I optimize data models and database performance to enhance the efficiency and scalability of data processing operations."
+     },
+     {
+      "name": "data processing",
+      "evidence": "I optimize data models and database performance to enhance the efficiency and scalability of data processing operations."
+     },
+     {
+      "name": "data validation",
+      "evidence": "I am committed to ensuring data quality and integrity throughout the data lifecycle. This involves implementing data validation, cleansing, and normalization techniques to maintain high standards and accuracy."
+     },
+     {
+      "name": "data quality",
+      "evidence": "I am committed to ensuring data quality and integrity throughout the data lifecycle."
+     },
+     {
+      "name": "Data Engineering",
+      "evidence": "By leveraging my SQL, Python and Data Engineering skills, I contribute to the overall success of the organization by delivering accurate and actionable insights that drive strategic business decisions."
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Data Engineer",
+      "company": "Space International",
+      "start": null,
+      "end": null,
+      "evidence": "As a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights."
+     }
+    ],
+    "uncertain": [
+     "experience 'Data Engineer': start '0.5' not found in its evidence, removed",
+     "skill 'data modeling': name 'data modeling' is not written in its evidence, removed",
+     "skill 'data accessibility': name 'data accessibility' is not written in its evidence, removed",
+     "skill 'data cleansing': name 'data cleansing' is not written in its evidence, removed",
+     "skill 'data normalization': name 'data normalization' is not written in its evidence, removed",
+     "skill 'data integrity': name 'data integrity' is not written in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 13.374
+  },
+  "elapsed_s": 13.39
+ },
+ "P19": {
+  "reader": {
+   "cv_id": "cv-9a618d54",
+   "file_type": "text",
+   "text_chars": 769,
+   "sections": {
+    "header": 769
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.005
+  },
+  "profile": {
+   "cv_id": "cv-9a618d54",
+   "anonymised_text": "Position: Trainee / Intern / Junior Data Engineer\nExperience years: 0.5\nEnglish level: upper\n\nTrainee Data Engineer\n\n- Finished the theoretical part of a Big Data education plan in a big outsourcing company with practical tasks for each module.\n- This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.).\n- During this course qualified mentors teach you how and when to use these tools.\n- To further consolidate our knowledge we implemented these techniques in practical exercises.\nI want to develop my skills, gain more hands-on experience and learn something new from seasoned developers to become a high-class specialist.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-9a618d54",
+    "skills": [
+     {
+      "name": "Hadoop",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Spark",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Spark Streaming",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Hive",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Kafka",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Cloud Computing",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Docker",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Airflow",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "NoSQL",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "ELK",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     }
+    ],
+    "education": [
+     {
+      "degree": "Big Data education plan",
+      "field": "Big Data",
+      "institution": "a big outsourcing company",
+      "end": null,
+      "evidence": "- Finished the theoretical part of a Big Data education plan in a big outsourcing company with practical tasks for each module."
+     }
+    ],
+    "experience": [
+     {
+      "title": "Trainee Data Engineer",
+      "company": "a big outsourcing company",
+      "start": null,
+      "end": null,
+      "evidence": "Trainee Data Engineer\n\n- Finished the theoretical part of a Big Data education plan in a big outsourcing company with practical tasks for each module."
+     }
+    ],
+    "uncertain": [
+     "education 'Big Data education plan': end 'present' not found in its evidence, removed",
+     "experience 'Trainee Data Engineer': start 'present' not found in its evidence, removed",
+     "experience 'Trainee Data Engineer': end 'present' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 14.379
+  },
+  "elapsed_s": 14.4
+ },
+ "P20": {
+  "reader": {
+   "cv_id": "cv-b7a649b8",
+   "file_type": "text",
+   "text_chars": 1219,
+   "sections": {
+    "header": 228,
+    "summary": 970
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [],
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-b7a649b8",
+   "anonymised_text": "Position: Oracle/Postgres DBA\nExperience years: 11\nEnglish level: fluent\n\nOracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products. Postgres DBA with 3 years of experience.\nObjective.\nOracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c looking for a position of Oracle/Postgres DBA / Database Administrator / DevOps.\n\nSummary.\n- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;\n- Operating Systems: AIX, Solaris, Red Hat Linux, HP-UX, Windows NT/2000;\n- Hardware Platforms: IBM RS/6000, Sun V880, Sun V890, Sun E4000, Sun E5000, Dell4300, IBM PC;\n- Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;\n- Programming Languages: SQL, PL/SQL, C/C++, HTML, Korn Shell, C Shell, Bash;\n- Project Management System: Confluence, Jira;\n- Version Control: Git, SVN;\n- Continuous Integration: TeamCity, Jenkins;\n- Agile Methodologies: Kanban, Scrum.\nRemote work.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-b7a649b8",
+    "skills": [
+     {
+      "name": "Oracle Certified Professional",
+      "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c"
+     },
+     {
+      "name": "Agile Methodologies",
+      "evidence": "- Agile Methodologies: Kanban, Scrum."
+     },
+     {
+      "name": "Kanban",
+      "evidence": "- Agile Methodologies: Kanban, Scrum."
+     },
+     {
+      "name": "Scrum",
+      "evidence": "- Agile Methodologies: Kanban, Scrum."
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 32.075
+  },
+  "elapsed_s": 32.1
+ },
+ "P21": {
+  "reader": {
+   "cv_id": "cv-d126210c",
+   "file_type": "text",
+   "text_chars": 2794,
+   "sections": {
+    "header": 543,
+    "skills": 2226
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [],
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-d126210c",
+   "anonymised_text": "Position: MLOps Engineer\nExperience years: 3\nEnglish level: upper\n\nMLOps Engineer - PASHA Bank OJSC [ 01/01/2023 - Current ]\nCity: [ADDRESS]\nCountry: Azerbaijan\nResponsibilities:\n- Successfully migrated seven ML models to the Dataiku Platform by applying MLOps best practices\n- Implemented automated monitoring and alerting systems to ensure the health and performance of deployed machine\nlearning models\n- Actively participated in knowledge sharing and peer reviews, fostering a culture of continuous learning and improvement\nwithin the MLOps team\nSkills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL\n\nData Scientist - PASHA Bank OJSC [ 22/11/2021 - 30/12/2022 ]\nCity: [ADDRESS]\nCountry: Azerbaijan\nResponsibilities:\n- Redeveloped product recommendation engines for seven different Banking products (ML models, RFM, and Rule-Based\napproaches)\n- Developed and constructed data pipelines to be used in the model, ensuring efficient and effective flow of data for analysis\nand modeling purposes\n- Implemented a hyper-parameter optimization package using Optuna to improve the performance of the recommendation\nengines\nSkills: Python (Programming Language) · Bash · Data Operations · Research and Development (R&D) · Machine Learning ·\nOracle Database · PostgreSQL · Data Science\n\nData Scientist - International Bank of Azerbaijan [ 01/12/2020 - 19/11/2021 ]\nCity: [ADDRESS]\nCountry: Azerbaijan\nResponsibilities:\n- Demonstrated expertise in manipulating large datasets using statistical and numerical languages\n- Communicated analytical solutions to stakeholders on how to leverage data-driven insights and recommended necessary\nimprovements\n- Conducted extensive research on various machine learning approaches, including reinforcement learning, unsupervised\nlearning, and recommendation systems, to develop a comprehensive understanding of the latest industry trends and best\npractices\n- Built Recommendation System using advanced techniques such as Matrix Factorization, Clustering Based model, and\nimplemented Deep and Cross network via TFRS to offer a product that customers most likely to buy and increased conversion\nrate from 4 to 16 %\nSkills: Python (Programming Language) · Research and Development (R&D) · Machine Learning · Data Science · Data Analysis · TensorFlow\nI value maintaining a healthy work-life balance and strive to avoid situations where it becomes imbalanced. Additionally, I am not comfortable with excessive micromanagement.\n\nI deeply appreciate and respect trust within the work environment, as it encourages collaboration, innovation, and a sense of ownership.\n\nHowever, I am not particularly inclined towards the practice of time tracking during regular working hours, as I believe it can sometimes hinder productivity and creativity.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {
+     "[ADDRESS]": 3
+    },
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-d126210c",
+    "skills": [
+     {
+      "name": "MLOps",
+      "evidence": "Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL"
+     },
+     {
+      "name": "Dataiku DSS",
+      "evidence": "Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL"
+     },
+     {
+      "name": "Python",
+      "evidence": "Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL"
+     },
+     {
+      "name": "Knowledge Sharing",
+      "evidence": "Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL"
+     },
+     {
+      "name": "Bash",
+      "evidence": "Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL"
+     },
+     {
+      "name": "PostgreSQL",
+      "evidence": "Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL"
+     },
+     {
+      "name": "Data Operations",
+      "evidence": "Skills: Python (Programming Language) · Bash · Data Operations · Research and Development (R&D) · Machine Learning ·\nOracle Database · PostgreSQL · Data Science"
+     },
+     {
+      "name": "Research and Development",
+      "evidence": "Skills: Python (Programming Language) · Bash · Data Operations · Research and Development (R&D) · Machine Learning ·\nOracle Database · PostgreSQL · Data Science"
+     },
+     {
+      "name": "Machine Learning",
+      "evidence": "Skills: Python (Programming Language) · Bash · Data Operations · Research and Development (R&D) · Machine Learning ·\nOracle Database · PostgreSQL · Data Science"
+     },
+     {
+      "name": "Oracle Database",
+      "evidence": "Skills: Python (Programming Language) · Bash · Data Operations · Research and Development (R&D) · Machine Learning ·\nOracle Database · PostgreSQL · Data Science"
+     },
+     {
+      "name": "Data Science",
+      "evidence": "Skills: Python (Programming Language) · Bash · Data Operations · Research and Development (R&D) · Machine Learning ·\nOracle Database · PostgreSQL · Data Science"
+     },
+     {
+      "name": "Data Analysis",
+      "evidence": "Skills: Python (Programming Language) · Research and Development (R&D) · Machine Learning · Data Science · Data Analysis · TensorFlow"
+     },
+     {
+      "name": "TensorFlow",
+      "evidence": "Skills: Python (Programming Language) · Research and Development (R&D) · Machine Learning · Data Science · Data Analysis · TensorFlow"
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "MLOps Engineer",
+      "company": "PASHA Bank OJSC",
+      "start": "2023-01",
+      "end": "present",
+      "evidence": "MLOps Engineer - PASHA Bank OJSC [ 01/01/2023 - Current ]"
+     },
+     {
+      "title": "Data Scientist",
+      "company": "PASHA Bank OJSC",
+      "start": "2021-11",
+      "end": "2022-12",
+      "evidence": "Data Scientist - PASHA Bank OJSC [ 22/11/2021 - 30/12/2022 ]"
+     },
+     {
+      "title": "Data Scientist",
+      "company": "International Bank of Azerbaijan",
+      "start": "2020-12",
+      "end": "2021-11",
+      "evidence": "Data Scientist - International Bank of Azerbaijan [ 01/12/2020 - 19/11/2021 ]\nCity: [ADDRESS]\nCountry: Azerbaijan\nResponsibilities:\n- Demonstrated expertise in manipulating large datasets using statistical and numerical languages"
+     }
+    ],
+    "uncertain": [],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:name_not_found"
+   ],
+   "info_flags": [],
+   "elapsed_s": 21.977
+  },
+  "elapsed_s": 22.0
+ },
+ "P22": {
+  "reader": {
+   "cv_id": "cv-734871a3",
+   "file_type": "text",
+   "text_chars": 2553,
+   "sections": {
+    "header": 2553
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.009
+  },
+  "profile": {
+   "cv_id": "cv-734871a3",
+   "anonymised_text": "Position: Data/System analyst\nExperience years: 6\nEnglish level: intermediate\n\nContinuous monitoring and analysis of key indicators fraud risks. Understanding the ways, methods and procedures of fraud. Investigation fraud incidents in the system and organization.\nCounteracting the risks of negative consequences of malware, scammers, crawlers, bots, financial fraud, illegal actions of users and customers of the system.\nInterpreting large amounts of data to formulate a problem statement, conclusions about dynamics, trends and opportunities for major fraud risks.\nExperience working with payment and KYC providers.\nVerification of clients, analysis of activities and anomalies for fraud behavior, blocking of fraudsters.\nExperience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.\nAutomation in the field of fraud protection, creation an effective system of antifraud protection.\nProvide consolidated reporting of trends in fraud risk across the organization to general management.\nGood knowledge of data science, data mining, statistical analysis methods, mathematical model building.\nExperience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn.\nWorking with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue).\nExperience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks, user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.\nAnalysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements.\nExperience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc.\nConsulting and training the anti-fraud team in the use of specialized software, creating instructions and regulating the escalation of cases. Analysis and recommendations for improving the software taking into account the requirements of the fraud protection functionality.\nA clear understanding of the Software Development Lifecycle for Enterprise, web, mobile applications. Using agile development methodology (Scrum). Understanding the internal structure of web projects.\nAnalysis of the IT solutions market of business needs, their implementation, verification of sold products for compliance with requirements.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-734871a3",
+    "skills": [
+     {
+      "name": "Continuous monitoring",
+      "evidence": "Continuous monitoring and analysis of key indicators fraud risks."
+     },
+     {
+      "name": "KYC providers",
+      "evidence": "Experience working with payment and KYC providers."
+     },
+     {
+      "name": "Python",
+      "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+     },
+     {
+      "name": "numpy",
+      "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+     },
+     {
+      "name": "pandas",
+      "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+     },
+     {
+      "name": "scipy",
+      "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+     },
+     {
+      "name": "scikit-learn",
+      "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+     },
+     {
+      "name": "plotly",
+      "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+     },
+     {
+      "name": "seaborn",
+      "evidence": "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+     },
+     {
+      "name": "data science",
+      "evidence": "Good knowledge of data science, data mining, statistical analysis methods, mathematical model building."
+     },
+     {
+      "name": "data mining",
+      "evidence": "Good knowledge of data science, data mining, statistical analysis methods, mathematical model building."
+     },
+     {
+      "name": "statistical analysis",
+      "evidence": "Good knowledge of data science, data mining, statistical analysis methods, mathematical model building."
+     },
+     {
+      "name": "mathematical model building",
+      "evidence": "Good knowledge of data science, data mining, statistical analysis methods, mathematical model building."
+     },
+     {
+      "name": "antifraud protection",
+      "evidence": "Automation in the field of fraud protection, creation an effective system of antifraud protection."
+     },
+     {
+      "name": "consolidated reporting",
+      "evidence": "Provide consolidated reporting of trends in fraud risk across the organization to general management."
+     },
+     {
+      "name": "MySQL",
+      "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+     },
+     {
+      "name": "Clickhouse",
+      "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+     },
+     {
+      "name": "MongoDB",
+      "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+     },
+     {
+      "name": "HDFS",
+      "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+     },
+     {
+      "name": "Hive",
+      "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+     },
+     {
+      "name": "Hue",
+      "evidence": "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+     },
+     {
+      "name": "agile development methodology",
+      "evidence": "Using agile development methodology (Scrum)."
+     },
+     {
+      "name": "Software Development Lifecycle",
+      "evidence": "A clear understanding of the Software Development Lifecycle for Enterprise, web, mobile applications."
+     },
+     {
+      "name": "web projects",
+      "evidence": "Understanding the internal structure of web projects."
+     },
+     {
+      "name": "IT solutions market",
+      "evidence": "Analysis of the IT solutions market of business needs, their implementation, verification of sold products for compliance with requirements."
+     },
+     {
+      "name": "fraud protection functionality",
+      "evidence": "Analysis and recommendations for improving the software taking into account the requirements of the fraud protection functionality."
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Data/System analyst",
+      "company": null,
+      "start": null,
+      "end": null,
+      "evidence": "Position: Data/System analyst\nExperience years: 6\nEnglish level: intermediate\n\nContinuous monitoring and analysis of key indicators fraud risks. Understanding the ways, methods and procedures of fraud. Investigation fraud incidents in the system and organization.\nCounteracting the risks of negative consequences of malware, scammers, crawlers, bots, financial fraud, illegal actions of users and customers of the system.\nInterpreting large amounts of data to formulate a problem statement, conclusions about dynamics, trends and opportunities for major fraud risks.\nExperience working with payment and KYC providers.\nVerification of clients, analysis of activities and anomalies for fraud behavior, blocking of fraudsters."
+     }
+    ],
+    "uncertain": [
+     "skill 'Analysis': name 'Analysis' is not written in its evidence, removed",
+     "skill 'Fraud investigation': name 'Fraud investigation' is not written in its evidence, removed",
+     "skill 'Risk counteraction': name 'Risk counteraction' is not written in its evidence, removed",
+     "skill 'Data interpretation': name 'Data interpretation' is not written in its evidence, removed",
+     "skill 'Payment providers': name 'Payment providers' is not written in its evidence, removed",
+     "skill 'Client verification': name 'Client verification' is not written in its evidence, removed",
+     "skill 'Anomaly analysis': name 'Anomaly analysis' is not written in its evidence, removed",
+     "skill 'Fraud behavior analysis': name 'Fraud behavior analysis' is not written in its evidence, removed",
+     "skill 'Fraudster blocking': name 'Fraudster blocking' is not written in its evidence, removed",
+     "experience 'Data/System analyst': company 'null' is not written in its evidence, removed",
+     "experience 'Data/System analyst': start 'null' not found in its evidence, removed",
+     "experience 'Data/System analyst': end 'null' not found in its evidence, removed",
+     "skill 'fraud detection': name 'fraud detection' is not written in its evidence, removed",
+     "skill 'fraud prevention': name 'fraud prevention' is not written in its evidence, removed",
+     "part 3/4: answer cut off at the token limit",
+     "part 3/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 3/4: answer cut off at the token limit",
+     "part 3/4: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 54.571
+  },
+  "elapsed_s": 54.6
+ },
+ "P23": {
+  "reader": {
+   "cv_id": "cv-9ef3ff89",
+   "file_type": "text",
+   "text_chars": 864,
+   "sections": {
+    "header": 864
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.011
+  },
+  "profile": {
+   "cv_id": "cv-9ef3ff89",
+   "anonymised_text": "Position: R / VBA / C++ Programmer, PhD (Mathematics)\nExperience years: 3\nEnglish level: intermediate\n\nPhD in Mathematics.\n\nData Science, a 9-course specialization by Johns Hopkins University on Coursera. Specialization Certificate earned on December 2, 2015 (Data Science Tools, R programming, Getting and cleaning data, Exploratory data analysis, Reproducible research, Statistical inference, Regression models, Machine learning and Developing data products).\n\nPassed course of Beginning Game Programming with C# at Coursera and received Verified Certificate.\n\nConduct lectures and laboratory classes with students in such courses:\n\n- Object-oriented programming in C++;\n\n- Automata theory and formal languages;\n\n- VBA and VB .NET;\n\n- Mathematical modelling of system\nR, Vba, C/C++, STL, Python\nR, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-9ef3ff89",
+    "skills": [
+     {
+      "name": "R",
+      "evidence": "Data Science, a 9-course specialization by Johns Hopkins University on Coursera. Specialization Certificate earned on December 2, 2015 (Data Science Tools, R programming, Getting and cleaning data, Exploratory data analysis, Reproducible research, Statistical inference, Regression models, Machine learning and Developing data products)."
+     },
+     {
+      "name": "VBA",
+      "evidence": "Conduct lectures and laboratory classes with students in such courses:\n\n- Object-oriented programming in C++;\n\n- Automata theory and formal languages;\n\n- VBA and VB .NET;\n\n- Mathematical modelling of system"
+     },
+     {
+      "name": "C++",
+      "evidence": "Position: R / VBA / C++ Programmer, PhD (Mathematics)"
+     },
+     {
+      "name": "C#",
+      "evidence": "Passed course of Beginning Game Programming with C# at Coursera and received Verified Certificate."
+     },
+     {
+      "name": "Python",
+      "evidence": "R, Vba, C/C++, STL, Python"
+     },
+     {
+      "name": "STL",
+      "evidence": "R, Vba, C/C++, STL, Python"
+     },
+     {
+      "name": "Web scraping",
+      "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+     },
+     {
+      "name": "Data scraping",
+      "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+     },
+     {
+      "name": "C/C++ STL",
+      "evidence": "R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net"
+     }
+    ],
+    "education": [
+     {
+      "degree": "PhD",
+      "field": "Mathematics",
+      "institution": "PhD in Mathematics.",
+      "end": null,
+      "evidence": "PhD in Mathematics."
+     }
+    ],
+    "experience": [],
+    "uncertain": [
+     "skill 'vb . net': name 'vb . net' is not written in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 11.781
+  },
+  "elapsed_s": 11.81
+ },
+ "P24": {
+  "reader": {
+   "cv_id": "cv-7915b7d1",
+   "file_type": "text",
+   "text_chars": 471,
+   "sections": {
+    "header": 471
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.006
+  },
+  "profile": {
+   "cv_id": "cv-7915b7d1",
+   "anonymised_text": "Position: Data Scientist\nExperience years: 2\nEnglish level: fluent\n\nEffective 'out-of-the-box' money laundering detection model.\n- machine learning models for fraud detection and anti-money laundering\n- time-series modelling\n- anomalies detection\n- customer segmentation\n- customer lifetime value\n- various data analysis tasks\n- Positive and supportive workplace culture is a must.\n- Preferably product company.\n- Flexible working hours and possibility to work from home.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-7915b7d1",
+    "skills": [
+     {
+      "name": "machine learning",
+      "evidence": "- machine learning models for fraud detection and anti-money laundering"
+     },
+     {
+      "name": "time-series modelling",
+      "evidence": "- time-series modelling"
+     },
+     {
+      "name": "anomalies detection",
+      "evidence": "- anomalies detection"
+     },
+     {
+      "name": "customer segmentation",
+      "evidence": "- customer segmentation"
+     },
+     {
+      "name": "customer lifetime value",
+      "evidence": "- customer lifetime value"
+     },
+     {
+      "name": "data analysis",
+      "evidence": "- various data analysis tasks"
+     },
+     {
+      "name": "English",
+      "evidence": "English level: fluent"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 3.149
+  },
+  "elapsed_s": 3.17
+ },
+ "P25": {
+  "reader": {
+   "cv_id": "cv-ba614e08",
+   "file_type": "text",
+   "text_chars": 507,
+   "sections": {
+    "header": 507
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.006
+  },
+  "profile": {
+   "cv_id": "cv-ba614e08",
+   "anonymised_text": "Position: Data Analyst\nExperience years: 1.5\nEnglish level: intermediate\n\nI took part in developing and implementing two risk assessment systems for national procurement systems in the countries of the former USSR\nDevelopment of online analytical tools for auditors. Responsible for exploring opportunities to design red flags and risk indicators algorithms considering the available procurement data set and for designed red flags and risk indicators algorithms testing, ensuring their correct performance.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-ba614e08",
+    "skills": [
+     {
+      "name": "risk assessment systems",
+      "evidence": "I took part in developing and implementing two risk assessment systems for national procurement systems in the countries of the former USSR"
+     },
+     {
+      "name": "online analytical tools",
+      "evidence": "Development of online analytical tools for auditors."
+     },
+     {
+      "name": "red flags and risk indicators algorithms",
+      "evidence": "Responsible for exploring opportunities to design red flags and risk indicators algorithms considering the available procurement data set and for designed red flags and risk indicators algorithms testing, ensuring their correct performance."
+     },
+     {
+      "name": "procurement data set",
+      "evidence": "considering the available procurement data set and for designed red flags and risk indicators algorithms testing, ensuring their correct performance."
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "experience 'Data Analyst': title 'Data Analyst' is not written in its evidence, removed",
+     "experience 'Data Analyst': company 'null' is not written in its evidence, removed",
+     "experience 'Data Analyst': start 'null' not found in its evidence, removed",
+     "experience 'Data Analyst': end 'null' not found in its evidence, removed",
+     "experience 'Data Analyst': neither title nor company, dropped"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 5.352
+  },
+  "elapsed_s": 5.37
+ },
+ "P26": {
+  "reader": {
+   "cv_id": "cv-7b1366f3",
+   "file_type": "text",
+   "text_chars": 752,
+   "sections": {
+    "header": 163,
+    "languages": 575
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [],
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 0.006
+  },
+  "profile": {
+   "cv_id": "cv-7b1366f3",
+   "anonymised_text": "Position: Data Scientist\nExperience years: 1.5\nEnglish level: fluent\n\nMaster's degree in Computer Science and Data Analytics at George Washington University (USA).\n- Languages: Python, SQL, C/C++\nI have 1.5 -years of experience as a Data Scientist. I have worked with\n-Data modeling of IFRS9 standards for the banking system.\n-Generating python scripts for data cleaning and preprocessing.\n-Development of Machine Learning models for various business domains.\n- Prediction of Acute Pancreatitis with medical data\n- Analysis and Application of Automatic Text Classification with\nSupervised Machine Learning\n- Modeling, data mining, and identifying anomalies using statistical, math, and probability theory tools (regressions, data sampling, clustering).",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-7b1366f3",
+    "skills": [
+     {
+      "name": "Python",
+      "evidence": "Languages: Python, SQL, C/C++"
+     },
+     {
+      "name": "SQL",
+      "evidence": "Languages: Python, SQL, C/C++"
+     },
+     {
+      "name": "C/C++",
+      "evidence": "Languages: Python, SQL, C/C++"
+     },
+     {
+      "name": "Data modeling",
+      "evidence": "Data modeling of IFRS9 standards for the banking system."
+     },
+     {
+      "name": "Data cleaning",
+      "evidence": "Generating python scripts for data cleaning and preprocessing."
+     },
+     {
+      "name": "Machine Learning",
+      "evidence": "Development of Machine Learning models for various business domains."
+     },
+     {
+      "name": "Prediction",
+      "evidence": "- Prediction of Acute Pancreatitis with medical data"
+     },
+     {
+      "name": "Text Classification",
+      "evidence": "- Analysis and Application of Automatic Text Classification with\nSupervised Machine Learning"
+     },
+     {
+      "name": "Data mining",
+      "evidence": "- Modeling, data mining, and identifying anomalies using statistical, math, and probability theory tools (regressions, data sampling, clustering)."
+     }
+    ],
+    "education": [
+     {
+      "degree": "Master's degree",
+      "field": "Computer Science and Data Analytics",
+      "institution": "George Washington University",
+      "end": null,
+      "evidence": "Master's degree in Computer Science and Data Analytics at George Washington University (USA)."
+     }
+    ],
+    "experience": [
+     {
+      "title": "Data Scientist",
+      "company": null,
+      "start": null,
+      "end": null,
+      "evidence": "I have 1.5 -years of experience as a Data Scientist. I have worked with\n-Data modeling of IFRS9 standards for the banking system.\n-Generating python scripts for data cleaning and preprocessing.\n-Development of Machine Learning models for various business domains.\n- Prediction of Acute Pancreatitis with medical data\n- Analysis and Application of Automatic Text Classification with\nSupervised Machine Learning\n- Modeling, data mining, and identifying anomalies using statistical, math, and probability theory tools (regressions, data sampling, clustering)."
+     }
+    ],
+    "uncertain": [
+     "education 'Master's degree': end 'present' not found in its evidence, removed",
+     "experience 'Data Scientist': company 'null' is not written in its evidence, removed",
+     "experience 'Data Scientist': start '1.5' not found in its evidence, removed",
+     "experience 'Data Scientist': end 'null' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 8.531
+  },
+  "elapsed_s": 8.55
+ },
+ "P27": {
+  "reader": {
+   "cv_id": "cv-91225c56",
+   "file_type": "text",
+   "text_chars": 1283,
+   "sections": {
+    "header": 1283
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.006
+  },
+  "profile": {
+   "cv_id": "cv-91225c56",
+   "anonymised_text": "Position: Data Analyst, Product Analyst, Data Scientist\nExperience years: 1\nEnglish level: upper\n\nUsed SQL Server Management Studio to implement changes in databases requested via clients of internal business systems.\nCollaborated with cross-functional development team members to analyze potential system solutions based on evolving client requirements.\nParticipated in testing modules for new releases of business systems on every stage of it (Training, UAT, Production) as a part of the BSS team.\nCategorized incidents according to SLA standards and to relevant resolution teams, provided transparent communication to clients; used professional and high quality Business English in the incidents.\n\nUsing Python to build optimization methods.\nImplementation of numerical methods in Python.\nTraining project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library.\nCoursework: Analysis and prediction of the popularity of the top 50 songs according to Spotify.\nAttempt to create multiple startups.\nA good team of specialists who will be able to point out mistakes, in which case - to consult;\nData analysis, product analytics, application of machine learning algorithms for data analysis, creation of visualizations.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-91225c56",
+    "skills": [
+     {
+      "name": "SQL",
+      "evidence": "Used SQL Server Management Studio to implement changes in databases requested via clients of internal business systems."
+     },
+     {
+      "name": "Python",
+      "evidence": "Using Python to build optimization methods."
+     },
+     {
+      "name": "numerical methods",
+      "evidence": "Implementation of numerical methods in Python."
+     },
+     {
+      "name": "Business English",
+      "evidence": "used professional and high quality Business English in the incidents."
+     },
+     {
+      "name": "neural network",
+      "evidence": "creation of a neural network that classifies images of waste into organic and inorganic"
+     },
+     {
+      "name": "fastai",
+      "evidence": "using the fastai Python library"
+     },
+     {
+      "name": "data analysis",
+      "evidence": "Data analysis, product analytics, application of machine learning algorithms for data analysis, creation of visualizations"
+     },
+     {
+      "name": "machine learning",
+      "evidence": "application of machine learning algorithms for data analysis, creation of visualizations"
+     },
+     {
+      "name": "product analytics",
+      "evidence": "Data analysis, product analytics, application of machine learning algorithms for data analysis, creation of visualizations"
+     },
+     {
+      "name": "visualizations",
+      "evidence": "creation of visualizations"
+     },
+     {
+      "name": "Spotify",
+      "evidence": "Analysis and prediction of the popularity of the top 50 songs according to Spotify"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "skill 'image classification': name 'image classification' is not written in its evidence, removed",
+     "skill 'song popularity prediction': name 'song popularity prediction' is not written in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 7.47
+  },
+  "elapsed_s": 7.49
+ },
+ "P28": {
+  "reader": {
+   "cv_id": "cv-bb3563df",
+   "file_type": "text",
+   "text_chars": 1073,
+   "sections": {
+    "header": 1073
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-bb3563df",
+   "anonymised_text": "Position: Data Scientist\nExperience years: 0.5\nEnglish level: fluent\n\nPh. D. in Economics, more than two dozens of publication papers (full list upon request).\nEducational YouTube channel devoted to explaining basics of machine learning and deep learning for non-STEM students.\n\"Machine Learning, Data Science and Deep Learning with Python\" course completion certificate.\nA couple of side-projects available on my Github.\nI have more than 8 years of academic research working as a lecturer and associate professor. Throughout that time I built plenty of macroeconomic models, mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner.\nLast years I started working with Python machine learning libraries to have more tools and flexibility.\nDetailed work experience available in my resume.\nLooking for a company (of any size), preferably with an experienced tech lead, that will allow me to apply my skill set and grow, with a friendly atmosphere, remote/international if needed.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-bb3563df",
+    "skills": [
+     {
+      "name": "Machine Learning",
+      "evidence": "Educational YouTube channel devoted to explaining basics of machine learning and deep learning for non-STEM students."
+     },
+     {
+      "name": "Deep Learning",
+      "evidence": "Educational YouTube channel devoted to explaining basics of machine learning and deep learning for non-STEM students."
+     },
+     {
+      "name": "Python",
+      "evidence": "Machine Learning, Data Science and Deep Learning with Python"
+     },
+     {
+      "name": "Statsoft Statistica",
+      "evidence": "mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+     },
+     {
+      "name": "SPSS Statistics",
+      "evidence": "mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+     },
+     {
+      "name": "Matlab",
+      "evidence": "mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+     },
+     {
+      "name": "RapidMiner",
+      "evidence": "mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: fluent"
+     }
+    ],
+    "education": [
+     {
+      "degree": "Ph. D.",
+      "field": "Economics",
+      "institution": null,
+      "end": null,
+      "evidence": "Ph. D. in Economics, more than two dozens of publication papers (full list upon request)."
+     }
+    ],
+    "experience": [],
+    "uncertain": [
+     "skill 'Data Science': name 'Data Science' is not written in its evidence, removed",
+     "education 'Ph. D.': institution 'unspecified' is not written in its evidence, removed",
+     "education 'Ph. D.': end 'more than two dozens of publication papers (full list upon request)' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 9.134
+  },
+  "elapsed_s": 9.15
+ },
+ "P29": {
+  "reader": {
+   "cv_id": "cv-2a294b84",
+   "file_type": "text",
+   "text_chars": 530,
+   "sections": {
+    "header": 530
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.005
+  },
+  "profile": {
+   "cv_id": "cv-2a294b84",
+   "anonymised_text": "Position: Junior Data Scientist\nExperience years: 0.5\nEnglish level: fluent\n\nSuccessfully finished 14 weeks of Data Science program by Data Root University. Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask.\nHighly experienced scientist with a strong background in analytical chemistry and scientific research. Looking for new opportunities in the field of Data Science. Particularly motivated towards Machine Learning, Data Analysis and Prediction.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-2a294b84",
+    "skills": [
+     {
+      "name": "Machine Learning",
+      "evidence": "Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+     },
+     {
+      "name": "supervised/unsupervised learning",
+      "evidence": "Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+     },
+     {
+      "name": "RESTful API development",
+      "evidence": "Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+     },
+     {
+      "name": "Flask",
+      "evidence": "Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: fluent"
+     }
+    ],
+    "education": [
+     {
+      "degree": "Data Science program",
+      "field": "Data Science",
+      "institution": "Data Root University",
+      "end": null,
+      "evidence": "Successfully finished 14 weeks of Data Science program by Data Root University."
+     }
+    ],
+    "experience": [],
+    "uncertain": [
+     "education 'Data Science program': end '14 weeks' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 5.042
+  },
+  "elapsed_s": 5.06
+ },
+ "P30": {
+  "reader": {
+   "cv_id": "cv-c8ffa98e",
+   "file_type": "text",
+   "text_chars": 893,
+   "sections": {
+    "header": 893
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-c8ffa98e",
+   "anonymised_text": "Position: Python Developer\nExperience years: 6\nEnglish level: upper\n\nCERTIFICATE:\nAWS Certified Developer - Associate\nLast two years I worked for an ad-tech company. I developed a tool which measures and analyses data privacy for digital advertisers. I started from the MVP of the project and helped it grow to finished product.\n- Developed data scraping tool using Selenium and MITM Proxy.\n- Created serverless RESTful API using AWS Lambda, API Gateway, and RDS.\n- Built cloud infrastructure on AWS with ECS, S3 and CloudFormation.\n- Collaborated with cross-functional teams to deliver new features on time.\n- Mentored junior developers\n\nAlso I have experience developing web and mobile backends using\nDjango, DRF, Celery, PostgreSQL, MongoDB and Redis. Worked with product owners, designers and managers, to ensure that applications met user needs. Worked independenly and as a part of team.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-c8ffa98e",
+    "skills": [
+     {
+      "name": "Python",
+      "evidence": "Position: Python Developer"
+     },
+     {
+      "name": "Selenium",
+      "evidence": "- Developed data scraping tool using Selenium and MITM Proxy."
+     },
+     {
+      "name": "MITM Proxy",
+      "evidence": "- Developed data scraping tool using Selenium and MITM Proxy."
+     },
+     {
+      "name": "AWS Lambda",
+      "evidence": "Created serverless RESTful API using AWS Lambda, API Gateway, and RDS."
+     },
+     {
+      "name": "API Gateway",
+      "evidence": "Created serverless RESTful API using AWS Lambda, API Gateway, and RDS."
+     },
+     {
+      "name": "RDS",
+      "evidence": "Created serverless RESTful API using AWS Lambda, API Gateway, and RDS."
+     },
+     {
+      "name": "ECS",
+      "evidence": "Built cloud infrastructure on AWS with ECS, S3 and CloudFormation."
+     },
+     {
+      "name": "S3",
+      "evidence": "Built cloud infrastructure on AWS with ECS, S3 and CloudFormation."
+     },
+     {
+      "name": "CloudFormation",
+      "evidence": "Built cloud infrastructure on AWS with ECS, S3 and CloudFormation."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     },
+     {
+      "name": "Django",
+      "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+     },
+     {
+      "name": "DRF",
+      "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+     },
+     {
+      "name": "Celery",
+      "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+     },
+     {
+      "name": "PostgreSQL",
+      "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+     },
+     {
+      "name": "MongoDB",
+      "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+     },
+     {
+      "name": "Redis",
+      "evidence": "Django, DRF, Celery, PostgreSQL, MongoDB and Redis."
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": null,
+      "company": "ad-tech company",
+      "start": null,
+      "end": null,
+      "evidence": "Last two years I worked for an ad-tech company. I developed a tool which measures and analyses data privacy for digital advertisers. I started from the MVP of the project and helped it grow to finished product."
+     }
+    ],
+    "uncertain": [
+     "experience 'Python Developer': title 'Python Developer' is not written in its evidence, removed",
+     "experience 'Python Developer': start '2018' not found in its evidence, removed",
+     "experience 'Python Developer': end '2024' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 10.413
+  },
+  "elapsed_s": 10.43
+ },
+ "P31": {
+  "reader": {
+   "cv_id": "cv-bbf29d24",
+   "file_type": "text",
+   "text_chars": 777,
+   "sections": {
+    "header": 777
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.009
+  },
+  "profile": {
+   "cv_id": "cv-bbf29d24",
+   "anonymised_text": "Position: Python/Django full-stack web developer\nExperience years: 5\nEnglish level: fluent\n\n- Lead redesign and optimization of backend and deployment for two legacy projects in 3-4 member teams.\n- Developed a custom full-text search with complex ranking logics.\n- Implemented complex filter systems.\nI am a full-stack web developer and team lead with 5+ years of experience developing small and medium-[URL] websites. I have expertise in building projects from scratch and improving legacy codebases concerning best practices. Excellent communication skills help me facilitate teamwork, mentor junior developers, and transform ideas into business value.\nI appreciate challenging tasks, good planning, and healthy corporate culture. I would prefer to work in product companies.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {
+     "[URL]": 1
+    },
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-bbf29d24",
+    "skills": [
+     {
+      "name": "Python",
+      "evidence": "Position: Python/Django full-stack web developer"
+     },
+     {
+      "name": "Django",
+      "evidence": "Position: Python/Django full-stack web developer"
+     },
+     {
+      "name": "full-text search",
+      "evidence": "Developed a custom full-text search with complex ranking logics."
+     },
+     {
+      "name": "complex filter systems",
+      "evidence": "Implemented complex filter systems."
+     },
+     {
+      "name": "legacy codebases",
+      "evidence": "improving legacy codebases concerning best practices"
+     },
+     {
+      "name": "best practices",
+      "evidence": "improving legacy codebases concerning best practices"
+     },
+     {
+      "name": "teamwork",
+      "evidence": "Excellent communication skills help me facilitate teamwork, mentor junior developers, and transform ideas into business value."
+     },
+     {
+      "name": "communication",
+      "evidence": "Excellent communication skills help me facilitate teamwork, mentor junior developers, and transform ideas into business value."
+     },
+     {
+      "name": "planning",
+      "evidence": "I appreciate challenging tasks, good planning, and healthy corporate culture."
+     },
+     {
+      "name": "corporate culture",
+      "evidence": "I appreciate challenging tasks, good planning, and healthy corporate culture."
+     },
+     {
+      "name": "product companies",
+      "evidence": "I would prefer to work in product companies."
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "skill 'mentoring': name 'mentoring' is not written in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:name_not_found"
+   ],
+   "info_flags": [],
+   "elapsed_s": 6.605
+  },
+  "elapsed_s": 6.63
+ },
+ "P32": {
+  "reader": {
+   "cv_id": "cv-e0e4574a",
+   "file_type": "text",
+   "text_chars": 1411,
+   "sections": {
+    "header": 1411
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.008
+  },
+  "profile": {
+   "cv_id": "cv-e0e4574a",
+   "anonymised_text": "Position: Разработчик Python\nExperience years: 11\nEnglish level: pre\n\nbusiness process automation,\nsoftware development automation,\nscalable solutions\nI have 10 years of experience in web application development.\n\nI use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL.\nAnd I know PHP, CSS, HTML, Bash, Linux, Git.\n\nIn my work, I try to automate all processes in order to be productive.\n\nProject \"Business Process System\"\nRole: Fullstack developer\nTechnologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)\n\nProject \"CRM for shopping mall\"\nRole: Backend developer\nTechnologies: Python, JavaScript, Django (DRF), PostgreSQL, Celery, React, Electron, Git, Linux, Docker, REST, Swagger, SMS Api\n\nProject \"Backend of Web service for recommendation system\"\nRole: Backend developer\nTechnologies: Python (Flask), SQLAlchemy, PostgreSQL, REST, Git, Docker, Celery, AWS, CI/CD\n\nProject \"System for prepare build projects\"\nRole: Backend developer\nTechnologies: Python, Django (DRF), PostgreSQL, Celery, Git, Linux, Docker, REST, Google API, CI/CD (Gitlab)\n\nProject \"MS Teams Application\"\nRole: Fullstack developer\nTechnologies: Python, Django (DRF), PostgreSQL, Celery, Git, Linux, Docker, REST, 1C, React, Microsoft Azure, CI/CD (Azure)\n\nIn past PHP Developer on Drupal, Wordpress.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-e0e4574a",
+    "skills": [],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "part 1/2: answer cut off at the token limit",
+     "part 1/2: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 1/2: answer cut off at the token limit",
+     "part 1/2: attempt 2: unreadable answer (no JSON object in the model answer)",
+     "part 2/2: answer cut off at the token limit",
+     "part 2/2: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 2/2: answer cut off at the token limit",
+     "part 2/2: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 57.734
+  },
+  "elapsed_s": 57.76
+ },
+ "P33": {
+  "reader": {
+   "cv_id": "cv-087f0ae5",
+   "file_type": "text",
+   "text_chars": 989,
+   "sections": {
+    "header": 989
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.006
+  },
+  "profile": {
+   "cv_id": "cv-087f0ae5",
+   "anonymised_text": "Position: Senior Finance Analyst\nExperience years: 3\nEnglish level: fluent\n\nBP Spot Award\n- Finalist - JPMorgan \"Data for Good\" Hackathon\n- Finalist - P&G CEO Challenge Europe\n- 1st place winner- Azerbaijan Business Case Competition led by the US-Educated Azerbaijani Alumni Association\n- Awardee - University of Iowa Recruitment Fellowship\n- 2nd place winner - \"Young Investor\" business case contest of Baku Stock Exchange\n- Awardee - Special Scholarship Program of Bank of Baku\n- Awardee - Scholarship program by the Ministry of Education\nSenior Finance Analyst at Amazon. Working in Pricing Finance team and collaborate with Product Managers, Software Development Engineer and Senior Leadership team. Working on tools - Excel, SQL, Tableau, Python.\nI am open to both startups and big firms. Excited about working on large-scale projects. I am passionate about technology products and firms.\n\nNOTE: I do NOT want to consider banking, investment management, insurance firms, and projects.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-087f0ae5",
+    "skills": [
+     {
+      "name": "Excel",
+      "evidence": "Working on tools - Excel, SQL, Tableau, Python."
+     },
+     {
+      "name": "SQL",
+      "evidence": "Working on tools - Excel, SQL, Tableau, Python."
+     },
+     {
+      "name": "Tableau",
+      "evidence": "Working on tools - Excel, SQL, Tableau, Python."
+     },
+     {
+      "name": "Python",
+      "evidence": "Working on tools - Excel, SQL, Tableau, Python."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: fluent"
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Senior Finance Analyst",
+      "company": "Amazon",
+      "start": null,
+      "end": null,
+      "evidence": "Senior Finance Analyst at Amazon. Working in Pricing Finance team and collaborate with Product Managers, Software Development Engineer and Senior Leadership team. Working on tools - Excel, SQL, Tableau, Python."
+     }
+    ],
+    "uncertain": [
+     "experience 'Senior Finance Analyst': start '2021' not found in its evidence, removed",
+     "experience 'Senior Finance Analyst': end 'present' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 4.86
+  },
+  "elapsed_s": 4.88
+ },
+ "P34": {
+  "reader": {
+   "cv_id": "cv-69736c72",
+   "file_type": "text",
+   "text_chars": 893,
+   "sections": {
+    "header": 893
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.006
+  },
+  "profile": {
+   "cv_id": "cv-69736c72",
+   "anonymised_text": "Position: Software Engineer\nExperience years: 2\nEnglish level: intermediate\n\nDuring my work experience, I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript. I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3. In addition to serverless development, I also have experience with front-end development using Angular and TypeScript. I collaborated with other developers, product managers, and business analytics to create user-friendly and responsive interfaces that integrated seamlessly with AWS services. In addition to my development work, I also gained experience in testing using JMeter and wrote automated tests using PyTest. I want to continue to expand my knowledge of cloud technologies and continue to improve my skills.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-69736c72",
+    "skills": [
+     {
+      "name": "English",
+      "evidence": "English level: intermediate"
+     },
+     {
+      "name": "Amazon Web Services",
+      "evidence": "I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript."
+     },
+     {
+      "name": "AWS SDK",
+      "evidence": "I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript."
+     },
+     {
+      "name": "Python",
+      "evidence": "I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript."
+     },
+     {
+      "name": "TypeScript",
+      "evidence": "I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript."
+     },
+     {
+      "name": "Lambda",
+      "evidence": "built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+     },
+     {
+      "name": "DynamoDB",
+      "evidence": "built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+     },
+     {
+      "name": "StepFunctions",
+      "evidence": "built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+     },
+     {
+      "name": "CloudFormation",
+      "evidence": "built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+     },
+     {
+      "name": "CloudWatch",
+      "evidence": "built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+     },
+     {
+      "name": "S3",
+      "evidence": "built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+     },
+     {
+      "name": "Angular",
+      "evidence": "In addition to serverless development, I also have experience with front-end development using Angular and TypeScript."
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "skill 'JMeter': evidence not in the CV (not found (closest 0.80)), dropped",
+     "skill 'PyTest': evidence not in the CV (not found (closest 0.80)), dropped"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 10.522
+  },
+  "elapsed_s": 10.54
+ },
+ "P35": {
+  "reader": {
+   "cv_id": "cv-7ee3853c",
+   "file_type": "text",
+   "text_chars": 487,
+   "sections": {
+    "header": 487
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.006
+  },
+  "profile": {
+   "cv_id": "cv-7ee3853c",
+   "anonymised_text": "Position: Full Stack Web Developer\nExperience years: 2\nEnglish level: fluent\n\nExceptionally creative and dependable Web Developer with a stellar customer service record and superb work ethic. Broadly and deeply knowledgeable in a wide variety of computer languages as well as the principles and techniques of website construction and maintenance. Highly adept at conveying complex technical information to a variety of professional and lay audiences in a clear and understandable manner.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-7ee3853c",
+    "skills": [
+     {
+      "name": "English",
+      "evidence": "English level: fluent"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 1.242
+  },
+  "elapsed_s": 1.26
+ },
+ "P36": {
+  "reader": {
+   "cv_id": "cv-f5e17bf0",
+   "file_type": "text",
+   "text_chars": 1850,
+   "sections": {
+    "header": 1850
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-f5e17bf0",
+   "anonymised_text": "Position: Python Developer\nExperience years: 1\nEnglish level: intermediate\n\nWhen I was working as a marketing strategist, I was responsible for conducting economic calculations, analyzing competitors, researching market trends, and determining market share to develop effective advertising strategies. In addition, I supported the email marketing and YouTube departments by helping them with their respective tasks.\nAfter I made adjustments to the company's project pages, the conversion rate of these pages increased by more than 20 percent.\nI am a developer with experience in Python, Django, SQL, and Django REST Framework. Passionate about building efficient and scalable web applications. My strongest skills are problem-solving and close attention to detail, which ensures that I deliver clean and maintainable code. I am eager to collaborate with experienced teams to develop innovative solutions, constantly learn and get better.\nRecently, I've been working on my own projects:\nTaskFlow Manager\nDeveloped a task manager application specially designed for IT companies.\nThe Python and Django frameworks were used to develop the backend.\nImplemented HTML and CSS to create an intuitive and user-friendly interface.\nCreated task tracking and tagging features.\n\nAPI project for library automation\nCreated an API project to automate the library and increase efficiency.\nUsed Django REST Framework for fast API development and adherence to REST architecture standards.\nDeveloped endpoints for searching, booking, and managing books.\nIntegrated Django ORM for seamless interaction with databases and query execution.\nSecure and reliable data processing is ensured.\nIn the company I will be working for, my main goal is to use my technical skills, work on interesting projects and collaborate with experts in the field to achieve high-quality results",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-f5e17bf0",
+    "skills": [
+     {
+      "name": "Python",
+      "evidence": "Position: Python Developer"
+     },
+     {
+      "name": "Django",
+      "evidence": "I am a developer with experience in Python, Django, SQL, and Django REST Framework."
+     },
+     {
+      "name": "SQL",
+      "evidence": "I am a developer with experience in Python, Django, SQL, and Django REST Framework."
+     },
+     {
+      "name": "Django REST Framework",
+      "evidence": "I am a developer with experience in Python, Django, SQL, and Django REST Framework."
+     },
+     {
+      "name": "HTML",
+      "evidence": "Implemented HTML and CSS to create an intuitive and user-friendly interface."
+     },
+     {
+      "name": "CSS",
+      "evidence": "Implemented HTML and CSS to create an intuitive and user-friendly interface."
+     },
+     {
+      "name": "task tracking",
+      "evidence": "Created task tracking and tagging features."
+     },
+     {
+      "name": "tagging",
+      "evidence": "Created task tracking and tagging features."
+     },
+     {
+      "name": "REST Framework",
+      "evidence": "Used Django REST Framework for fast API development and adherence to REST architecture standards."
+     },
+     {
+      "name": "REST architecture",
+      "evidence": "Used Django REST Framework for fast API development and adherence to REST architecture standards."
+     },
+     {
+      "name": "Django ORM",
+      "evidence": "Integrated Django ORM for seamless interaction with databases and query execution."
+     },
+     {
+      "name": "data processing",
+      "evidence": "Secure and reliable data processing is ensured."
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 8.242
+  },
+  "elapsed_s": 8.26
+ },
+ "P37": {
+  "reader": {
+   "cv_id": "cv-ac5ed63d",
+   "file_type": "text",
+   "text_chars": 1027,
+   "sections": {
+    "header": 1027
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.006
+  },
+  "profile": {
+   "cv_id": "cv-ac5ed63d",
+   "anonymised_text": "Position: Web Developer\nExperience years: 1.5\nEnglish level: upper\n\nAs a skilled Backend Developer with over 1 year of experience, I have a strong proficiency in programming languages including Python, Go lang, and C#. My ability to quickly adapt to new languages and web frameworks allows me to efficiently tackle any project that comes my way. My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system. I also worked closely with the frontend team to integrate the frontend and backend systems. My technical skills and experience, along with my ability to work efficiently in a team, allowed me to contribute significantly to the success of the project.\nThat's a great attitude! I would suggest adding something like: \"I am constantly seeking new challenges and opportunities to further improve my skills and gain exposure to various project types.\" This emphasizes your enthusiasm and drives for growth in your career.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-ac5ed63d",
+    "skills": [
+     {
+      "name": "RESTful APIs",
+      "evidence": "My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system."
+     },
+     {
+      "name": "databases",
+      "evidence": "My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system."
+     },
+     {
+      "name": "security",
+      "evidence": "My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "skill 'Python': name 'Python' is not written in its evidence, removed",
+     "skill 'Go lang': name 'Go lang' is not written in its evidence, removed",
+     "skill 'C#': name 'C#' is not written in its evidence, removed",
+     "skill 'team collaboration': name 'team collaboration' is not written in its evidence, removed",
+     "experience 'Web Developer': title 'Web Developer' is not written in its evidence, removed",
+     "experience 'Web Developer': company 'null' is not written in its evidence, removed",
+     "experience 'Web Developer': start 'null' not found in its evidence, removed",
+     "experience 'Web Developer': end 'null' not found in its evidence, removed",
+     "experience 'Web Developer': neither title nor company, dropped"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 9.801
+  },
+  "elapsed_s": 9.82
+ },
+ "P38": {
+  "reader": {
+   "cv_id": "cv-d9d5a09f",
+   "file_type": "text",
+   "text_chars": 1000,
+   "sections": {
+    "header": 557,
+    "projects": 15,
+    "skills": 360
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [],
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 0.006
+  },
+  "profile": {
+   "cv_id": "cv-d9d5a09f",
+   "anonymised_text": "Position: Junior Python Developer\nExperience years: 0.5\nEnglish level: intermediate\n\nI worked on several overseas projects related to business, marketing and security systems.\nThe first project is a scalable platform for the development of B2B and B2C businesses, which deals with finding customers, marketing, business development and its support\nThe second project is related to the field of security. Connects cities, districts, buildings and displays surveillance devices, scanners and other security devices including data about them.\n\nWORK EXPERIENCES\nPROJECTS:\nPuppy SPA(API):\nTechnologies:\nPython3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic\n\nApplication \"Quiz project\"(API):\nTechnologies:\nPython3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic\n\nApplication for brows studio (with templates):\nTechnologies:\nPython3, Django, HTML, CSS, Bootstrap,\nSQLite\n\nApplication for brows studio (API)\nTechnologies:\nPython3, Django, Django Rest Framework,\nSQLite",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-d9d5a09f",
+    "skills": [
+     {
+      "name": "Python3",
+      "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+     },
+     {
+      "name": "FastAPI",
+      "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+     },
+     {
+      "name": "PostgreSQL",
+      "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+     },
+     {
+      "name": "Docker",
+      "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+     },
+     {
+      "name": "PyJWT",
+      "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+     },
+     {
+      "name": "SQLAlchemy",
+      "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+     },
+     {
+      "name": "Pydantic",
+      "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+     },
+     {
+      "name": "Alembic",
+      "evidence": "Python3, FastAPI, PostgreSQL, Docker, PyJWT, SQLAlchemy, Pydantic, Alembic"
+     },
+     {
+      "name": "HTML",
+      "evidence": "Python3, Django, HTML, CSS, Bootstrap,\nSQLite"
+     },
+     {
+      "name": "CSS",
+      "evidence": "Python3, Django, HTML, CSS, Bootstrap,\nSQLite"
+     },
+     {
+      "name": "Bootstrap",
+      "evidence": "Python3, Django, HTML, CSS, Bootstrap,\nSQLite"
+     },
+     {
+      "name": "Django",
+      "evidence": "Python3, Django, Django Rest Framework,\nSQLite"
+     },
+     {
+      "name": "Django Rest Framework",
+      "evidence": "Python3, Django, Django Rest Framework,\nSQLite"
+     },
+     {
+      "name": "SQLite",
+      "evidence": "Python3, Django, HTML, CSS, Bootstrap,\nSQLite"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 9.134
+  },
+  "elapsed_s": 9.15
+ },
+ "P39": {
+  "reader": {
+   "cv_id": "cv-8cead075",
+   "file_type": "text",
+   "text_chars": 1066,
+   "sections": {
+    "header": 1066
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.006
+  },
+  "profile": {
+   "cv_id": "cv-8cead075",
+   "anonymised_text": "Position: Junior Python Developer\nExperience years: 0.5\nEnglish level: pre\n\nTook first place in the group rating during studying in IT Step Academy 2019.\nUp to year experience in pure Python3, and Django powered back-end application development. Creating and setting up the databases with PostgreSQL DBMS. I am a quick learner, responsible, good time-management skills, and aiming at best both personal and team results.\n\nTODOList project.\n- Developed the database (tables, views, procedures, and functions) using PostgreSQL.\n- Used the cursor from Django model connection for executing the database operations.\n- Wrapped the application business logic into services modules.\n- Implemented the API via Django REST framework, for sending the JSON data to the client application.\n\ndjangostamp project for the quick Django layout creation.\n- Used the Python module shutil to copy the directory layouts.\n- Applied the command pattern.\n- Developed console-based interaction with a user.\nImproving skills in Python 3, Django, and databases. Getting new development skills.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-8cead075",
+    "skills": [
+     {
+      "name": "Python3",
+      "evidence": "Up to year experience in pure Python3, and Django powered back-end application development."
+     },
+     {
+      "name": "Django",
+      "evidence": "Up to year experience in pure Python3, and Django powered back-end application development."
+     },
+     {
+      "name": "PostgreSQL",
+      "evidence": "Creating and setting up the databases with PostgreSQL DBMS."
+     },
+     {
+      "name": "Django REST framework",
+      "evidence": "Implemented the API via Django REST framework, for sending the JSON data to the client application."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: pre"
+     },
+     {
+      "name": "Python",
+      "evidence": "- Used the Python module shutil to copy the directory layouts."
+     },
+     {
+      "name": "databases",
+      "evidence": "Improving skills in Python 3, Django, and databases."
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 5.129
+  },
+  "elapsed_s": 5.15
+ },
+ "P40": {
+  "reader": {
+   "cv_id": "cv-ab67283a",
+   "file_type": "text",
+   "text_chars": 878,
+   "sections": {
+    "header": 878
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.005
+  },
+  "profile": {
+   "cv_id": "cv-ab67283a",
+   "anonymised_text": "Position: Data Engineer\nExperience years: 1\nEnglish level: fluent\n\nI have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand.\nI would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack. Also, I am keen on working as a part of a team, and seeking opportunities for continuous learning.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-ab67283a",
+    "skills": [
+     {
+      "name": "Spark",
+      "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+     },
+     {
+      "name": "Spark Streaming",
+      "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+     },
+     {
+      "name": "Kafka",
+      "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+     },
+     {
+      "name": "Hadoop",
+      "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+     },
+     {
+      "name": "Airflow",
+      "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+     },
+     {
+      "name": "Hive",
+      "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+     },
+     {
+      "name": "ELK stack",
+      "evidence": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack."
+     },
+     {
+      "name": "GCP Dataproc",
+      "evidence": "I used GCP Dataproc for running services, mentioned above."
+     },
+     {
+      "name": "GCP BigQuery",
+      "evidence": "I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+     },
+     {
+      "name": "Power BI",
+      "evidence": "I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+     },
+     {
+      "name": "Spark Structured Streaming",
+      "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+     },
+     {
+      "name": "ETL/ELT processes",
+      "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+     },
+     {
+      "name": "Data Warehouses",
+      "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+     },
+     {
+      "name": "Cloud Services",
+      "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+     },
+     {
+      "name": "Python",
+      "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+     },
+     {
+      "name": "Data Engineering",
+      "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+     },
+     {
+      "name": "Big Data",
+      "evidence": "I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack."
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "skill 'databases': name 'databases' is not written in its evidence, removed",
+     "skill 'relational database design': name 'relational database design' is not written in its evidence, removed",
+     "skill 'data warehouses': name 'data warehouses' is not written in its evidence, removed",
+     "skill 'ETL': name 'ETL' is not written in its evidence, removed",
+     "skill 'BI tools': name 'BI tools' is not written in its evidence, removed",
+     "skill 'data analytics': name 'data analytics' is not written in its evidence, removed",
+     "skill 'Data Lakes': name 'Data Lakes' is not written in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 22.575
+  },
+  "elapsed_s": 22.59
+ }
+}

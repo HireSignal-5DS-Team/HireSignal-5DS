@@ -1,0 +1,32 @@
+{
+ "cv": "L05",
+ "pair": "P43",
+ "job": "J1",
+ "condition": "hard photo",
+ "setup": "vision",
+ "items": [
+  "L05_photo"
+ ],
+ "reader_reasons": [],
+ "ocr_confidence": 87.6,
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 60,
+ "reasons": [
+  "r4: must-have MISSING",
+  "r5: must-have MISSING"
+ ],
+ "pair_review_reasons": [
+  "profile:partial_extraction_requires_review"
+ ],
+ "decisions": {
+  "r1": "MET",
+  "r2": "MET",
+  "r3": "UNCERTAIN",
+  "r4": "MISSING",
+  "r5": "MISSING",
+  "r6": "MET",
+  "r7": "MET",
+  "r8": "MISSING"
+ }
+}

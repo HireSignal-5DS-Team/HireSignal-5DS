@@ -1,0 +1,230 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "24",
+ "cv_id": "cv-9beb2d26",
+ "job_id": "job-d3839a50",
+ "job_title": "Data Engineer",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 57,
+ "reasons": [
+  "r2: must-have MISSING",
+  "r3: must-have MISSING",
+  "r6: must-have MISSING"
+ ],
+ "listed_flags": [
+  "r6 (must, not outcome-relevant): judge:uncertain",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 80,
+  "pair_flags": "info"
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Knowledge of the general principles of Data Warehousing",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Responsibility areas: Scope defining, requirements definition, database design, data analysis, ETL pipelines, data migration, data integration, DWH design",
+     "start": 490,
+     "end": 644
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.98181,
+    "MISSING": 0.017773,
+    "UNCERTAIN": 0.000416
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.93
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Knowledge of the general principles of Data Lakes",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000549,
+    "MISSING": 0.853673,
+    "UNCERTAIN": 0.145778
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9967
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Wiliness to do research on business logic",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000511,
+    "MISSING": 0.799629,
+    "UNCERTAIN": 0.19986
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9976
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Hands-on experience with SQL",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Relational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum",
+     "start": 236,
+     "end": 329
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999449,
+    "MISSING": 0.000549,
+    "UNCERTAIN": 2e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9987
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Knowledge of Python",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Programming languages: Python, Java, SQL",
+     "start": 195,
+     "end": 235
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999928,
+    "MISSING": 7.2e-05,
+    "UNCERTAIN": 0
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.7426
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Experience with GCP or other cloud providers",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "contradicted",
+   "quotes": [
+    {
+     "quote": "I'm Interesting to develop complex products using modern cloud technologies, AWS is preferable.",
+     "start": 645,
+     "end": 740
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:uncertain"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000361,
+    "MISSING": 0.998887,
+    "UNCERTAIN": 0.000752
+   },
+   "judge": {
+    "verdict": "UNCERTAIN",
+    "score": 0.0117
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r7",
+   "text": "Good spoken English",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "English level: upper",
+     "start": 49,
+     "end": 69
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.973323,
+    "MISSING": 0.020932,
+    "UNCERTAIN": 0.005745
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9821
+   },
+   "lora_scale": 1
+  }
+ ],
+ "timings_s": {
+  "reader": 0.007,
+  "profile": 30.194,
+  "job": 6.588,
+  "match_and_judge": 21.484
+ }
+}

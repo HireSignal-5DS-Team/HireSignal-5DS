@@ -1,0 +1,57 @@
+{
+ "decisions": {
+  "r1": "MET",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MET",
+  "r5": "MET",
+  "r6": "MET",
+  "r7": "MET",
+  "r8": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "must",
+  "r7": "nice",
+  "r8": "nice"
+ },
+ "outcome": "review",
+ "score": 93,
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "quotes": {
+  "r1": [
+   "Experienced in ML project life cycle:",
+   "data collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+  ],
+  "r2": [
+   "Machine Learning\nLinear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+  ],
+  "r3": [
+   "Programming and Machine Learning Libraries:",
+   "Python, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi"
+  ],
+  "r4": [
+   "Programming and Machine Learning Libraries:",
+   "Python, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi"
+  ],
+  "r5": [
+   "Experienced in ML project life cycle:",
+   "data collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+  ],
+  "r6": [
+   "Cloud Services, DevOps and Big Data\nDocker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+  ],
+  "r7": [
+   "Experience in working with distributed systems.",
+   "Cloud Services, DevOps and Big Data\nDocker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+  ],
+  "r8": []
+ },
+ "elapsed_s": 32.85,
+ "identical_to_base": true,
+ "ran": true
+}

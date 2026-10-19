@@ -1,0 +1,22 @@
+photo_file,source_file,source_page,pair_id,note
+K01_photo.jpg,L02.pdf,1,P15,photo of a laptop screen (moire)
+K02_photo.jpg,L03.pdf,1,P47,photo of a laptop screen (moire)
+K03_photo.jpg,L01.pdf,1,P02,photo of a laptop screen (moire)
+K04_p01_photo.jpg,K05.pdf,1,,Kaggle CONSULTANT; screen photo
+K04_p02_photo.jpg,K05.pdf,2,,Kaggle CONSULTANT; screen photo (Georgia Institute of Technology visible; check)
+K05_p01_photo.jpg,K04.pdf,1,,Kaggle CORPORATE PROJECT MANAGER; screen photo
+K09_photo.jpg,K04.pdf,2,,Kaggle CORPORATE PROJECT MANAGER page 2 (University of Phoenix); screen photo
+K06_photo.jpg,K03.pdf,1,,Kaggle PRACTICE MANAGER; screen photo
+K05_p02_photo.jpg,K03.pdf,2,,Kaggle PRACTICE MANAGER page 2 (MBA); screen photo
+K07_p01_photo.jpg,K02.pdf,1,,Kaggle MANAGER IT AND BUILDING AUTOMATION; screen photo
+K07_p02_photo.jpg,K02.pdf,2,,Kaggle MANAGER IT AND BUILDING AUTOMATION page 2 (Houston); screen photo
+K08_p01_photo.jpg,K01.pdf,1,,Kaggle BRANCH CHIEF IT SPECIALIST; screen photo
+K08_p02_photo.jpg,K01.pdf,2,,Kaggle BRANCH CHIEF IT SPECIALIST page 2 (Sul Ross); screen photo
+L04_p01_photo.jpg,L04.pdf,1,P52,hard: whole laptop screen with PDF viewer;small text;strong moire
+L04_p02_photo.jpg,L04.pdf,2,P52,hard: glare/overexposed;page 2 has only 3 short lines
+L05_photo.jpg,L05.pdf,1,P43,medium: whole screen;readable at full resolution
+L01_scan.pdf,L01.pdf,1,P02,scan app PDF (image only;no text layer)
+L02_scan.pdf,L02.pdf,1,P15,scan app PDF (image only;no text layer)
+L03_scan.pdf,L03.pdf,1,P47,scan app PDF (image only;no text layer)
+L04_scan.pdf,L04.pdf,1-2,P52,scan app PDF 2 pages (image only; no text layer)
+L05_scan.pdf,L05.pdf,1,P43,scan app PDF (image only;no text layer)

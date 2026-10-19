@@ -1,0 +1,49 @@
+Leila Saidi
+Pronouns: she/her
+Position: MLOps Engineer
+Experience years: 3
+English level: upper
+
+MLOps Engineer - PASHA Bank OJSC [ 01/01/2023 – Current ]
+City: Baku
+Country: Azerbaijan
+Responsibilities:
+- Successfully migrated seven ML models to the Dataiku Platform by applying MLOps best practices
+- Implemented automated monitoring and alerting systems to ensure the health and performance of deployed machine
+learning models
+- Actively participated in knowledge sharing and peer reviews, fostering a culture of continuous learning and improvement
+within the MLOps team
+Skills: MLOps · Dataiku DSS · Python (Programming Language) · Knowledge Sharing · Bash · PostgreSQL
+
+Data Scientist - PASHA Bank OJSC [ 22/11/2021 – 30/12/2022 ]
+City: Baku
+Country: Azerbaijan
+Responsibilities:
+- Redeveloped product recommendation engines for seven different Banking products (ML models, RFM, and Rule-Based
+approaches)
+- Developed and constructed data pipelines to be used in the model, ensuring efficient and effective flow of data for analysis
+and modeling purposes
+- Implemented a hyper-parameter optimization package using Optuna to improve the performance of the recommendation
+engines
+Skills: Python (Programming Language) · Bash · Data Operations · Research and Development (R&D) · Machine Learning ·
+Oracle Database · PostgreSQL · Data Science
+
+Data Scientist - International Bank of Azerbaijan [ 01/12/2020 – 19/11/2021 ]
+City: Baku
+Country: Azerbaijan
+Responsibilities:
+- Demonstrated expertise in manipulating large datasets using statistical and numerical languages
+- Communicated analytical solutions to stakeholders on how to leverage data-driven insights and recommended necessary
+improvements
+- Conducted extensive research on various machine learning approaches, including reinforcement learning, unsupervised
+learning, and recommendation systems, to develop a comprehensive understanding of the latest industry trends and best
+practices
+- Built Recommendation System using advanced techniques such as Matrix Factorization, Clustering Based model, and
+implemented Deep and Cross network via TFRS to offer a product that customers most likely to buy and increased conversion
+rate from 4 to 16 %
+Skills: Python (Programming Language) · Research and Development (R&D) · Machine Learning · Data Science · Data Analysis · TensorFlow
+I value maintaining a healthy work-life balance and strive to avoid situations where it becomes imbalanced. Additionally, I am not comfortable with excessive micromanagement.
+
+I deeply appreciate and respect trust within the work environment, as it encourages collaboration, innovation, and a sense of ownership.
+
+However, I am not particularly inclined towards the practice of time tracking during regular working hours, as I believe it can sometimes hinder productivity and creativity.

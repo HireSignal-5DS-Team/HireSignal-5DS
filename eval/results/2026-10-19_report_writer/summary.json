@@ -1,0 +1,123 @@
+{
+ "0.6b-v2/dev": {
+  "n": 28,
+  "pass_first_try": "2/28",
+  "pass_after_retry_llm": "3/28",
+  "template_fallback": "25/28",
+  "checker_errors_first_try_mean": 3,
+  "must_covered_final": "150/150",
+  "words_mean": 122.8,
+  "latency_s_mean": 12.86,
+  "latency_s_max": 18.08,
+  "peak_vram_mib": 4910,
+  "first_error_kinds": {
+   "reject letter does not name missing must-have": 49,
+   "quote is not in its verified CV quotes": 14,
+   "nice requirement dropped": 8,
+   "candidate letter for a review case": 4,
+   "candidate letter mentions internals (bias / reader / model)": 2,
+   "decision MET but the record says MISSING": 2,
+   "decision MISSING but the record says UNCERTAIN": 2,
+   "recruiter_summary: number is not in the record": 1,
+   "must requirement dropped": 1,
+   "decision UNCERTAIN but the record says MISSING": 1
+  }
+ },
+ "4b-v0/dev": {
+  "n": 28,
+  "pass_first_try": "0/28",
+  "pass_after_retry_llm": "0/28",
+  "template_fallback": "28/28",
+  "checker_errors_first_try_mean": 2.29,
+  "must_covered_final": "150/150",
+  "words_mean": 120.3,
+  "latency_s_mean": 12.99,
+  "latency_s_max": 19.73,
+  "peak_vram_mib": 3267,
+  "first_error_kinds": {
+   "reject letter without the right to a human review": 23,
+   "quote is not in its verified CV quotes": 14,
+   "nice requirement dropped": 9,
+   "must requirement dropped": 7,
+   "candidate letter for a review case": 4,
+   "candidate letter mentions internals (bias / reader / model)": 3,
+   "reject letter does not name missing must-have": 2,
+   "decision UNCERTAIN but the record says MISSING": 1,
+   "summary does not state the outcome (invite)": 1
+  }
+ },
+ "4b-v1/dev": {
+  "n": 28,
+  "pass_first_try": "19/28",
+  "pass_after_retry_llm": "22/28",
+  "template_fallback": "6/28",
+  "checker_errors_first_try_mean": 0.79,
+  "must_covered_final": "150/150",
+  "words_mean": 123.7,
+  "latency_s_mean": 14.14,
+  "latency_s_max": 27.4,
+  "peak_vram_mib": 3267,
+  "first_error_kinds": {
+   "nice requirement dropped": 9,
+   "quote is not in its verified CV quotes": 8,
+   "must requirement dropped": 3,
+   "reject letter does not name missing must-have": 2
+  }
+ },
+ "4b-v2/dev": {
+  "n": 28,
+  "pass_first_try": "27/28",
+  "pass_after_retry_llm": "27/28",
+  "template_fallback": "1/28",
+  "checker_errors_first_try_mean": 0.11,
+  "must_covered_final": "150/150",
+  "words_mean": 128.4,
+  "latency_s_mean": 10.79,
+  "latency_s_max": 25.27,
+  "peak_vram_mib": 3267,
+  "first_error_kinds": {
+   "quote is not in its verified CV quotes": 3
+  }
+ },
+ "4b-v2/test": {
+  "n": 28,
+  "pass_first_try": "24/28",
+  "pass_after_retry_llm": "25/28",
+  "template_fallback": "3/28",
+  "checker_errors_first_try_mean": 0.32,
+  "must_covered_final": "151/151",
+  "words_mean": 124,
+  "latency_s_mean": 11.65,
+  "latency_s_max": 27.56,
+  "peak_vram_mib": 3267,
+  "first_error_kinds": {
+   "quote is not in its verified CV quotes": 9
+  }
+ },
+ "template/dev": {
+  "n": 28,
+  "pass_first_try": "28/28",
+  "pass_after_retry_llm": "28/28",
+  "template_fallback": "0/28",
+  "checker_errors_first_try_mean": 0,
+  "must_covered_final": "150/150",
+  "words_mean": 120.3,
+  "latency_s_mean": 0.0,
+  "latency_s_max": 0.0025,
+  "peak_vram_mib": 0,
+  "first_error_kinds": {}
+ },
+ "template/test": {
+  "n": 28,
+  "pass_first_try": "28/28",
+  "pass_after_retry_llm": "28/28",
+  "template_fallback": "0/28",
+  "checker_errors_first_try_mean": 0,
+  "must_covered_final": "151/151",
+  "words_mean": 115.7,
+  "latency_s_mean": 0.0,
+  "latency_s_max": 0.0024,
+  "peak_vram_mib": 0,
+  "first_error_kinds": {}
+ }
+}

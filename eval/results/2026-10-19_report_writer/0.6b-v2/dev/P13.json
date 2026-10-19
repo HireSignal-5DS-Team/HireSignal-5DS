@@ -1,0 +1,70 @@
+{
+ "model": "qwen3-0.6b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 2,
+ "first_errors": [
+  "reject letter does not name missing must-have r3"
+ ],
+ "retry_errors": [
+  "the answer is not valid JSON",
+  "the answer was cut at the token limit"
+ ],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate is rejected because one must-have requirement is missing. The CV shows 68% score, with a focus on Python and GCP experience. The candidate lacks experience with SQL and business logic, and Docker is unclear. The score reflects a strong candidate with a good grasp of cloud and data engineering principles.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"Successfully managed a team of up to 10 Data Engineers, at the same time\",\n      \"line\": \"Uncertain: The candidate lacks knowledge of Data Warehousing and Data Lakes.\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MET\",\n      \"quote\": \"Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\",\n      \"line\": \"Met: The candidate has hands-on experience with SQL.\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Uncertain: The candidate lacks knowledge of Python.\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MET\",\n      \"quote\": \"Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres).\",\n      \"line\": \"Met: The candidate has experience with GCP.\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MET\",\n      \"quote\": \"English level: fluent\",\n      \"line\": \"Met: The candidate has good spoken English.\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"Interpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile.\",\n      \"line\": \"Uncertain: The candidate lacks willingness to research business logic.\"\n    }\n  ],\n  \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show this required point: experience with SQL. This decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\",\n  \"flags_for_recruiter\": [\"The Matcher was unsure about r1 (knowledge of Data Warehousing and Data Lakes); the Matcher was unsure about r6 (willingness to research business logic).\"]\n}",
+  "{\n  \"recruiter_summary\": \"The candidate is rejected because one must-have requirement is missing. The CV shows 68% score, with a focus on Python and GCP experience. The candidate lacks experience with SQL and business logic, and Docker is unclear. The score reflects a strong candidate with a good grasp of cloud and data engineering principles.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"Successfully managed a team of up to 10 Data Engineers, at the same time\",\n      \"line\": \"Uncertain: The candidate lacks knowledge of Data Warehousing and Data Lakes.\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MET\",\n      \"quote\": \"Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\",\n      \"line\": \"Met: The candidate has hands-on experience with SQL.\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Uncertain: The candidate lacks knowledge of Python.\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MET\",\n      \"quote\": \"Experience in building Data project from scratch on Azure, using multiple sources"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 3 of 5 must-have requirements are met; the score is 68. Missing must-haves: Knowledge of Python. Unclear must-haves: Knowledge of the general principles of Data Warehousing and Data Lakes.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Knowledge of the general principles of Data Warehousing and Data Lakes - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).",
+    "line": "must: Hands-on experience with SQL - met (CV: Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Knowledge of Python - missing (not found in CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres).",
+    "line": "must: Experience with GCP or another cloud provider - met (CV: Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres).)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: fluent",
+    "line": "must: Good spoken English - met (CV: English level: fluent)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "nice: Willingness to research business logic - uncertain (unclear in the CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Knowledge of Python.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r1, r6"
+  ]
+ },
+ "source": "template",
+ "latency_s": 15.89,
+ "peak_vram_mib": 4910,
+ "id": "P13",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

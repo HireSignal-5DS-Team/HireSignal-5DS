@@ -1,0 +1,38 @@
+{
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "MET",
+  "r3": "UNCERTAIN",
+  "r4": "MET",
+  "r5": "MISSING",
+  "r6": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "nice",
+  "r5": "nice",
+  "r6": "nice"
+ },
+ "outcome": "reject",
+ "score": 44,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [
+   "Experience years: 2"
+  ],
+  "r2": [
+   "During my work experience, I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript. I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+  ],
+  "r3": [],
+  "r4": [
+   "During my work experience, I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript. I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3."
+  ],
+  "r5": [],
+  "r6": []
+ },
+ "elapsed_s": 19.69,
+ "identical_to_base": true,
+ "ran": true
+}

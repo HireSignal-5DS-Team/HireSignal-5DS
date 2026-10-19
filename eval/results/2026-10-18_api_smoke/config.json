@@ -1,0 +1,12 @@
+{
+ "date": "2026-10-18 08:28:37",
+ "label": "real-GPU",
+ "api": "http://127.0.0.1:8010",
+ "ready": {
+  "status": "ok",
+  "checks": {
+   "llm": "ok"
+  }
+ },
+ "llm_props": "b11139-42916d83f"
+}

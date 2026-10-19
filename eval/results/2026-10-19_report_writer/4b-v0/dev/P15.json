@@ -1,0 +1,67 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "r1: quote is not in its verified CV quotes",
+  "candidate letter for a review case"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate has met key technical requirements for the Data Engineer role, including hands-on SQL and Python experience. However, there are critical gaps in the required cloud platform experience (GCP or another cloud provider), which the candidate has not explicitly demonstrated despite mentioning Azure and AWS certifications. Additionally, the candidate's English proficiency is marked as 'uncertain' due to low confidence in the evidence, despite stating an 'upper' level. The overall score of 50 indicates a borderline match, and the decision to 'review' is recommended due to potential false rejects on mandatory requirements (r1 and r4) and uncertainty on language skills (r5).\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"Knowledge of the general principles of Data Warehousing and Data Lakes\",\n      \"line\": \"doubted (judge:disagrees): possible false reject\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MET\",\n      \"quote\": \"Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.\",\n      \"line\": \"PASS\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MET\",\n      \"quote\": \"Python: Experience in using Python for file and database manipulation tasks.\",\n      \"line\": \"PASS\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner.\",\n      \"line\": \"FAIL\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"English level: upper\",\n      \"line\": \"NOT_APPLICABLE (low confidence)\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"NOT_APPLICABLE\"\n    }\n  ],\n  \"candidate_letter\": \"Dear Recruiter,\\n\\nWe have reviewed the candidate's profile for the Data Engineer role and found a mixed match. The candidate demonstrates strong experience in SQL and Python, with over 8 years of hands-on database work and Python-based file and data manipulation. However, there are notable gaps in the required cloud platform experience (GCP or another cloud provider), which is a mandatory requirement. While the candidate holds certifications in Azure and AWS, these do not clearly indicate hands-on experience with GCP or equivalent cloud data engineering environments.\\n\\nAdditionally, the candidate's spoken English proficiency is listed as 'upper,' but the system has low confidence in this assessment, leading to an 'uncertain' decision. This uncertainty, combined with the missing requirement for data warehousing principles and cloud experience, results in a score of 50 and a recommendation to review the candidate further.\\n\\nWe recommend a human review to assess whether the candidate's cloud experience (especially in GCP) and English communication skills meet the role's expectations. Please consider the flagged requirements (r1, r4, r5) and make a final decision based on contextual knowledge.\\n\\nBest regards,\\nAutomated Screening System\",\n  \"flags_for_recruiter\": [\n    \"Missing requirement: Knowledge of Data Warehousing and Data Lakes (r1)\",\n    \"Missing requirement: Experience with GCP or another cloud provider (r4)\",\n    \"Uncertain English proficiency (r5) – low confidence in assessment\",\n    \"Potential false reject on mandatory requirements – requires human review\"\n  ]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "This case goes to a recruiter for review. 2 of 5 must-have requirements are met; the score is 50. Missing must-haves: Knowledge of the general principles of Data Warehousing and Data Lakes; Experience with GCP or another cloud provider. Unclear must-haves: Good spoken English. Reason for review: r1: must MISSING doubted (judge:disagrees): possible false reject; r4: must MISSING doubted (judge:disagrees): possible false reject; r5: must UNCERTAIN (low confidence).",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Knowledge of the general principles of Data Warehousing and Data Lakes - missing (not found in CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.",
+    "line": "must: Hands-on experience with SQL - met (CV: Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Python: Experience in using Python for file and database manipulation tasks.",
+    "line": "must: Knowledge of Python - met (CV: Python: Experience in using Python for file and database manipulation tasks.)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with GCP or another cloud provider - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Good spoken English - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "nice: Willingness to research business logic - uncertain (unclear in the CV)"
+   }
+  ],
+  "candidate_letter": "",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r5"
+  ]
+ },
+ "source": "template",
+ "latency_s": 13.54,
+ "peak_vram_mib": 3267,
+ "id": "P15",
+ "outcome": "review",
+ "synthetic_flags": false
+}

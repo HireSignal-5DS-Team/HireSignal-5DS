@@ -1,0 +1,1209 @@
+{
+  "id": "HsV1Main00000001",
+  "name": "HireSignal v1",
+  "description": null,
+  "active": false,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "hiresignal",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "59ff5741-9bbf-5a62-bd6d-e55aeb70a526",
+      "name": "Webhook (CV file + job text)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "b60711f1-2289-597a-be98-ff8015f83f07"
+    },
+    {
+      "parameters": {},
+      "id": "bce0e52f-d56a-52c6-811e-80b6a553e8b0",
+      "name": "Manual demo (sample pair P15)",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fileSelector": "data/processed/jobs/J2.txt",
+        "options": {
+          "dataPropertyName": "job"
+        }
+      },
+      "id": "3b5df193-bc6b-574f-a068-f75a1d34b50d",
+      "name": "Read sample job",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        220,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "binaryPropertyName": "job",
+        "destinationKey": "job_text",
+        "options": {}
+      },
+      "id": "22776779-a2f8-5177-982c-48fd618d2370",
+      "name": "Extract sample job text",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1.1,
+      "position": [
+        440,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fileSelector": "data/processed/cvs/d3ef2bda-20f8-5821-86ca-ea784f432789.txt",
+        "options": {
+          "dataPropertyName": "cv"
+        }
+      },
+      "id": "42990eed-2b3d-5d9f-930e-5ac9af5f4b2b",
+      "name": "Read sample CV",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        660,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Manual demo: the sample job text (read from disk) + the sample CV file, shaped like the webhook input.\nreturn [{ json: { job_text: $('Extract sample job text').first().json.job_text }, binary: { cv: $input.first().binary.cv } }];"
+      },
+      "id": "181dc5f5-2666-5698-b7a3-c37ade82d862",
+      "name": "Sample as webhook input",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Both triggers end here with the same shape: json.job_text + binary.cv (the CV file).\nconst it = $input.first();\nconst jobText = it.json.job_text ?? (it.json.body ?? {}).job_text;\nif (!jobText) throw new Error('job_text is missing (multipart field \"job_text\")');\nif (!it.binary || !it.binary.cv) throw new Error('CV file is missing (multipart field \"cv\")');\nconst reqs = it.json.requirements ?? (it.json.body ?? {}).requirements ?? '';\nreturn [{ json: { job_text: String(jobText), requirements_json: String(reqs || '') }, binary: { cv: it.binary.cv } }];"
+      },
+      "id": "89a5ba64-8a4f-5b07-9076-9193f8ad7141",
+      "name": "Normalize input",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8010/reader",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "cv"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 900000
+        }
+      },
+      "id": "d9363324-2028-52e7-8875-8fcc6f483288",
+      "name": "HTTP /reader",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1320,
+        0
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8010/profile",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ cv_id: $json.cv_id }) }}",
+        "options": {
+          "timeout": 900000
+        }
+      },
+      "id": "b755e780-1947-53ea-a528-46bce699ec09",
+      "name": "HTTP /profile",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1540,
+        -120
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $('Normalize input').first().json.requirements_json }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a9a06bee-f5ed-5da7-8ddb-6500bc6e3327",
+      "name": "Confirmed requirements?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1540,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// The recruiter confirmed the requirement list (T08b, human-in-the-loop at job level): /job is skipped.\nconst card = JSON.parse($('Normalize input').first().json.requirements_json);\nconst reqs = card.requirements || [];\nif (!reqs.length) throw new Error('confirmed requirements: empty list');\nfor (const r of reqs) {\n  if (!r.req_id || !r.text || !['must', 'nice'].includes(r.kind)) throw new Error('confirmed requirement needs req_id, text, kind must|nice');\n}\nreturn [{ json: {\n  card: { job_id: card.job_id || 'job-confirmed', title: card.title || '', language: 'en',\n          requirements: reqs.map(r => ({ req_id: r.req_id, text: r.text, kind: r.kind, category: r.category || 'skill',\n                                         min_years: r.min_years ?? null, skill_terms: r.skill_terms || [],\n                                         evidence: r.evidence || r.text, chunk_ids: [] })),\n          uncertain: [], needs_human_review: false, warnings: [] },\n  injection: { injected_sentences: [], dropped_req_ids: [] }, review_reasons: [],\n  info_flags: ['job:requirements confirmed by recruiter'], elapsed_s: 0 } }];"
+      },
+      "id": "f095227e-a1ba-5408-80d8-97a4415445ca",
+      "name": "Confirmed job card",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1760,
+        180
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// One place for the job card, whichever way it came (Job Agent or recruiter-confirmed list).\nreturn [{ json: $input.first().json }];"
+      },
+      "id": "db22ac4b-dd18-560c-bd57-e593b37b86fb",
+      "name": "Job card",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1980,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8010/job",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ job_text: $('Normalize input').first().json.job_text }) }}",
+        "options": {
+          "timeout": 600000
+        }
+      },
+      "id": "ab9eca16-bf0f-5e18-9c24-2920b738b70e",
+      "name": "HTTP /job",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1760,
+        320
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "id": "52b8e92a-3b03-5d6c-bdb2-d62c1068a8fd",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        1760,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// One item per requirement: the anonymised CV text (never the raw text) + the requirement card.\nconst p = $('HTTP /profile').first().json;\nconst job = $('Job card').first().json;\nreturn job.card.requirements.map(r => ({ json: {\n  cv_id: p.cv_id, cv_text: p.anonymised_text,\n  requirement: { req_id: r.req_id, text: r.text, kind: r.kind, category: r.category,\n                 skill_terms: r.skill_terms, min_years: r.min_years },\n} }));"
+      },
+      "id": "3f4184d0-2fb4-5597-8854-e495359ee3da",
+      "name": "Split requirements",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1980,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "574939f4-b52f-5210-a464-f3ce86be87a6",
+      "name": "Loop requirements (1 at a time)",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2200,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8010/rag/search",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ requirement: $json.requirement, cv_text: $json.cv_text }) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "46656cee-08eb-5888-bea1-b829d50d9f43",
+      "name": "RAG lookup",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2420,
+        240
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8010/match",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ cv_id: $('Loop requirements (1 at a time)').item.json.cv_id, cv_text: $('Loop requirements (1 at a time)').item.json.cv_text, requirement: $('Loop requirements (1 at a time)').item.json.requirement, knowledge_refs: $json.knowledge_refs, knowledge: $json.retriever }) }}",
+        "options": {
+          "timeout": 180000
+        }
+      },
+      "id": "0f711d2e-d285-5ca4-ac55-cbbebb5eca43",
+      "name": "HTTP /match",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2640,
+        240
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8010/judge",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ cv_text: $('Loop requirements (1 at a time)').item.json.cv_text, requirement: $('Loop requirements (1 at a time)').item.json.requirement, match: $json }) }}",
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "id": "171f2f8d-5057-5b73-9f79-a26af065c54a",
+      "name": "HTTP /judge",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2860,
+        240
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "destinationFieldName": "matches",
+        "options": {}
+      },
+      "id": "7766f1b0-1694-5275-a626-3a9f27bcd91a",
+      "name": "Aggregate",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        2420,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Station 8 input: every requirement result of the pair + the pair-level flags (reader / profile / job).\nconst reader = $('HTTP /reader').first().json, profile = $('HTTP /profile').first().json, job = $('Job card').first().json;\nconst bias = $('Bias Auditor').first().json;  // station 5 (T11)\nconst card = Object.fromEntries(job.card.requirements.map(r => [r.req_id, r]));\nreturn [{ json: {\n  cv_id: profile.cv_id, job_id: job.card.job_id,\n  requirements: $('Aggregate').first().json.matches.map(m => ({ req_id: m.req_id, kind: card[m.req_id].kind, decision: m.decision,\n                                          review_reasons: m.review_reasons, info_flags: m.info_flags,\n                                          category: card[m.req_id].category, min_years: card[m.req_id].min_years,\n                                          evidence_years: m.evidence_years,\n                                          confidence: m.confidence ? m.confidence.normalized : null,\n                                          judge: m.judge ? { verdict: m.judge.verdict, nli_probs: m.judge.nli_probs } : null })),\n  pair_review_reasons: [...reader.review_reasons, ...profile.review_reasons, ...job.review_reasons, ...bias.review_reasons],\n  pair_info_flags: [...reader.info_flags, ...profile.info_flags, ...job.info_flags, ...bias.info_flags],\n} }];"
+      },
+      "id": "198d1056-95c6-5532-be01-71bf107503d2",
+      "name": "Outcome input",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2640,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8010/outcome",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "5f400e1c-257f-5d8f-93cb-e418d0a7f611",
+      "name": "HTTP /outcome",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2860,
+        -120
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "jsCode": "// The pair result: the gate's outcome (HTTP /outcome) + per-requirement details and timings (code only, no model).\nconst gate = $('HTTP /outcome').first().json, rep = $json, job = $('Job card').first().json, profile = $('HTTP /profile').first().json;\nconst reader = $('HTTP /reader').first().json, matches = $('Aggregate').first().json.matches;\nconst card = Object.fromEntries(job.card.requirements.map(r => [r.req_id, r]));\nreturn [{ json: {\n  workflow: 'HireSignal v1', execution_id: $execution.id, cv_id: profile.cv_id, job_id: job.card.job_id,\n  job_title: job.card.title, outcome: gate.outcome, rule: gate.rule, score: gate.score, reasons: gate.reasons,\n  listed_flags: gate.listed_flags, message: gate.message, gate_settings: gate.settings, decided_by: 'gate',\n  review_form_url: gate.outcome === 'review' ? $execution.resumeFormUrl : null,\n  requirements: matches.map(m => ({ req_id: m.req_id, text: card[m.req_id].text, kind: card[m.req_id].kind,\n    decision: m.decision, model_decision: m.model_decision, basis: m.basis, quotes: m.evidence,\n    explanation: m.explanation, review_reasons: m.review_reasons, info_flags: m.info_flags,\n    confidence: m.confidence ? m.confidence.normalized : null,\n    judge: m.judge ? { verdict: m.judge.verdict, score: m.judge.score } : null, lora_scale: m.model.lora_scale })),\n  report: { recruiter_summary: rep.report.recruiter_summary, requirements: rep.report.requirements, candidate_letter: rep.report.candidate_letter, flags_for_recruiter: rep.report.flags_for_recruiter, source: rep.source, info_flags: rep.info_flags, model: rep.model },\n  bias: (b => ({ bias_flags: b.bias_flags, would_be_outcome: b.would_be_outcome, swap: b.swap, review_reasons: b.review_reasons }))($('Bias Auditor').first().json),\n  reader: { file_type: reader.file_type, mode: reader.mode, read_path: reader.read_path, pages: reader.pages,\n            ocr_confidence: reader.ocr_confidence, review_reasons: reader.review_reasons },\n  timings_s: { reader: reader.elapsed_s, profile: profile.elapsed_s, job: job.elapsed_s,\n               match_and_judge: Math.round(1000 * matches.reduce((a, m) => a + m.elapsed_s, 0)) / 1000 },\n} }];"
+      },
+      "id": "94d7f9c4-45ba-563d-b1b9-898d8abff327",
+      "name": "Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3080,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($json) }}",
+        "options": {}
+      },
+      "id": "c63a2d8f-c386-59a2-aa3e-70161c1133a4",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        3300,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "outputKey": "invite",
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.outcome }}",
+                    "rightValue": "invite",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true
+            },
+            {
+              "outputKey": "reject",
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.outcome }}",
+                    "rightValue": "reject",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true
+            },
+            {
+              "outputKey": "review",
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.outcome }}",
+                    "rightValue": "review",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6e104dcd-ee0a-5bc6-a0b1-9f36dc5b6791",
+      "name": "Switch outcome",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        3520,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Decided by the gate (invite or reject): keep the gate's result; rejects carry the reasons + the review sentence.\nconst r = { ...$json, final_decision: $json.outcome, decided_at: new Date().toISOString() };\nif (r.outcome === 'reject') r.message = 'You can request a human review of this decision.';\nreturn [{ json: r }];"
+      },
+      "id": "89ae4d9d-ce39-5d83-9f00-4918ca0cdbb4",
+      "name": "Decided by gate",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3740,
+        -240
+      ]
+    },
+    {
+      "parameters": {
+        "resume": "form",
+        "formTitle": "HireSignal: review this candidate",
+        "formDescription": "={{ 'The gate sent this pair to human review.\\n\\n' + $json.report.recruiter_summary + '\\n\\nRequirements:\\n' + $json.report.requirements.map(r => '- ' + r.req_id + ' ' + r.decision + ': ' + r.line).join('\\n') + ($json.report.flags_for_recruiter.length ? '\\n\\nFlags:\\n' + $json.report.flags_for_recruiter.map(f => '- ' + f).join('\\n') : '') }}",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Decision",
+              "fieldType": "dropdown",
+              "requiredField": true,
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "approve-invite"
+                  },
+                  {
+                    "option": "reject"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Note",
+              "fieldType": "textarea"
+            }
+          ]
+        },
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "583aed9f-cc66-5883-9beb-d716f76f7d58",
+      "name": "Wait for recruiter (form)",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        3740,
+        0
+      ],
+      "webhookId": "e236dedc-b61d-525f-831b-d6220b1f46f2"
+    },
+    {
+      "parameters": {
+        "jsCode": "// The recruiter answered the review form: final decision by a human (decided_by: human).\nconst form = $json, gate = $('Result').first().json;\nconst answer = form['Decision'] || form['decision'];\nconst final = answer === 'approve-invite' ? 'invite' : 'reject';\nreturn [{ json: { ...gate, final_decision: final, decided_by: 'human', human_note: form['Note'] || form['note'] || '',\n                  decided_at: new Date().toISOString(),\n                  message: final === 'reject' ? 'You can request a human review of this decision.' : null } }];"
+      },
+      "id": "dd4d4a16-100b-5726-8397-6aaf42fbd731",
+      "name": "Decided by human",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3960,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Outbox file (stands in for the e-mail): eval/outbox/<decision>/<execution>_<cv_id>.json\nconst r = $json, d = r.final_decision;\n// T12/T13: gate decisions use the Report Writer's checked letter; a human decision after review uses the\n// Report Writer (human decision) letter; the fixed letter is only the last resort.\nconst fixed = { invite: 'Dear candidate,\\n\\nThank you for your application. We would like to invite you to the next step of the process.\\n\\nKind regards',\n                reject: 'Dear candidate,\\n\\nThank you for your application. After a review by our team, we will not move forward with it.\\n\\nKind regards' };\nconst letter = (r.decided_by === 'gate' && r.report && r.report.candidate_letter) ? r.report.candidate_letter\n  : (r.human_report && r.human_report.candidate_letter) ? r.human_report.candidate_letter : fixed[d];\nreturn [{ json: { ...r, letter, path: 'eval/outbox/' + d + '/' + r.execution_id + '_' + r.cv_id + '.json',\n                  file_text: JSON.stringify({ ...r, letter }, null, 1) } }];"
+      },
+      "id": "ded699c5-fcb4-5d90-8632-894dc1640b3a",
+      "name": "Outbox letter",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4180,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toText",
+        "sourceProperty": "file_text",
+        "binaryPropertyName": "data",
+        "options": {
+          "fileName": "={{ $json.execution_id }}_{{ $json.cv_id }}.json"
+        }
+      },
+      "id": "6cecdcba-3dab-5c57-9f98-493c3e01baf7",
+      "name": "To JSON file",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        4400,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $('Outbox letter').item.json.path }}",
+        "dataPropertyName": "data",
+        "options": {}
+      },
+      "id": "8e5c7b92-8b48-5d36-8a28-1dac3a6b7fe5",
+      "name": "Write eval/outbox file",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        4620,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8010/bias",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify((() => { const job = $('Job card').first().json, profile = $('HTTP /profile').first().json, reader = $('HTTP /reader').first().json; const card = Object.fromEntries(job.card.requirements.map(r => [r.req_id, r])); return { cv_id: profile.cv_id, requirements: job.card.requirements.map(r => ({ req_id: r.req_id, text: r.text, kind: r.kind, category: r.category, skill_terms: r.skill_terms || [], min_years: r.min_years ?? null })), results: $json.matches.map(m => ({ req_id: m.req_id, kind: card[m.req_id].kind, decision: m.decision, review_reasons: m.review_reasons, info_flags: m.info_flags, category: card[m.req_id].category, min_years: card[m.req_id].min_years, evidence_years: m.evidence_years, confidence: m.confidence ? m.confidence.normalized : null, judge: m.judge ? { verdict: m.judge.verdict, nli_probs: m.judge.nli_probs } : null })), pair_review_reasons: [...reader.review_reasons, ...profile.review_reasons, ...job.review_reasons] }; })()) }}",
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "id": "7721207e-b007-5b3a-a34c-bafdc9419f40",
+      "name": "Bias Auditor",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2530,
+        -300
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000,
+      "notes": "Station 5 (T11): leakage flags + live identity-swap test (POST /bias); bias:swap_flip -> review"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8010/report",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify((() => { const job = $('Job card').first().json, reader = $('HTTP /reader').first().json, bias = $('Bias Auditor').first().json, profile = $('HTTP /profile').first().json; const card = Object.fromEntries(job.card.requirements.map(r => [r.req_id, r])); const matches = $('Aggregate').first().json.matches; return { cv_id: profile.cv_id, job_title: job.card.title || null, decided_by: 'gate', requirements: matches.map(m => ({ req_id: m.req_id, kind: card[m.req_id].kind, text: card[m.req_id].text, decision: m.decision, quotes: (m.evidence || []).map(e => e.quote), judge: m.judge ? m.judge.verdict : null, review_reasons: m.review_reasons, skill_terms: card[m.req_id].skill_terms || [], min_years: card[m.req_id].min_years ?? null, evidence_years: m.evidence_years ?? null })), outcome: { outcome: $json.outcome, score: $json.score, rule: $json.rule, reasons: $json.reasons }, reader: { mode: reader.mode, review_reasons: reader.review_reasons }, bias: { review_reasons: bias.review_reasons, swap: bias.swap } }; })()) }}",
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "id": "315f9359-43d4-50df-82c4-bd95d19a90be",
+      "name": "Report Writer",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2970,
+        -300
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000,
+      "notes": "Station 7 (T12): Qwen3-4B plain writes the report, code checks it, template fallback (POST /report)"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8010/report",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify((() => { const r = $json, job = $('Job card').first().json; const card = Object.fromEntries(job.card.requirements.map(q => [q.req_id, q])); return { cv_id: r.cv_id, job_title: job.card.title || null, decided_by: 'human', requirements: r.requirements.map(q => ({ req_id: q.req_id, kind: q.kind, text: q.text, decision: q.decision, quotes: (q.quotes || []).map(e => e.quote), judge: q.judge ? q.judge.verdict : null, review_reasons: q.review_reasons, skill_terms: (card[q.req_id] || {}).skill_terms || [], min_years: (card[q.req_id] || {}).min_years ?? null, evidence_years: null })), outcome: { outcome: r.final_decision, score: r.score, rule: 'decided by a recruiter after review', reasons: [...(r.reasons || []), 'decided by a recruiter after review: ' + r.final_decision] }, reader: { mode: (r.reader || {}).mode, review_reasons: (r.reader || {}).review_reasons || [] }, bias: { review_reasons: (r.bias || {}).review_reasons || [], swap: (r.bias || {}).swap || {} } }; })()) }}",
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "id": "4aaba2a1-a611-54b3-aef9-7efbe4fac564",
+      "name": "Report Writer (human decision)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3740,
+        260
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000,
+      "notes": "T13: the recruiter's decision after review gets a generated, fact-checked letter (decided_by: human). The recruiter's free-text note is not sent."
+    },
+    {
+      "parameters": {
+        "jsCode": "// T13: the human decision + its checked letter (Report Writer, decided_by: human)\nconst r = $('Decided by human').first().json;\nreturn [{ json: { ...r, human_report: { candidate_letter: $json.report.candidate_letter, source: $json.source, info_flags: $json.info_flags } } }];"
+      },
+      "id": "f23841ee-381c-556f-b7f9-63546abafde5",
+      "name": "Human letter",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3960,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ ($env.WEBHOOK_TOKEN || '') !== '' && ($json.headers['x-hiresignal-token'] || '') === $env.WEBHOOK_TOKEN }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "269ab8c5-1500-5d06-aa22-33d0d4702a45",
+      "name": "Check token",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        110,
+        -160
+      ],
+      "notes": "T13: the X-HireSignal-Token header must equal env WEBHOOK_TOKEN (set from .env by scripts/start_n8n.ps1)"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ error: 'missing or wrong X-HireSignal-Token header' }) }}",
+        "options": {
+          "responseCode": 403
+        }
+      },
+      "id": "29d1ae53-f4d8-5e38-aaaf-678e6e7e0f5c",
+      "name": "Refuse (403)",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        330,
+        -260
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook (CV file + job text)": {
+      "main": [
+        [
+          {
+            "node": "Check token",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manual demo (sample pair P15)": {
+      "main": [
+        [
+          {
+            "node": "Read sample job",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read sample job": {
+      "main": [
+        [
+          {
+            "node": "Extract sample job text",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract sample job text": {
+      "main": [
+        [
+          {
+            "node": "Read sample CV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read sample CV": {
+      "main": [
+        [
+          {
+            "node": "Sample as webhook input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sample as webhook input": {
+      "main": [
+        [
+          {
+            "node": "Normalize input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize input": {
+      "main": [
+        [
+          {
+            "node": "HTTP /reader",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP /reader": {
+      "main": [
+        [
+          {
+            "node": "HTTP /profile",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Confirmed requirements?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Confirmed requirements?": {
+      "main": [
+        [
+          {
+            "node": "Confirmed job card",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP /job",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Confirmed job card": {
+      "main": [
+        [
+          {
+            "node": "Job card",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Job card": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "HTTP /profile": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP /job": {
+      "main": [
+        [
+          {
+            "node": "Job card",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Split requirements",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split requirements": {
+      "main": [
+        [
+          {
+            "node": "Loop requirements (1 at a time)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop requirements (1 at a time)": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "RAG lookup",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RAG lookup": {
+      "main": [
+        [
+          {
+            "node": "HTTP /match",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP /match": {
+      "main": [
+        [
+          {
+            "node": "HTTP /judge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP /judge": {
+      "main": [
+        [
+          {
+            "node": "Loop requirements (1 at a time)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Bias Auditor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Outcome input": {
+      "main": [
+        [
+          {
+            "node": "HTTP /outcome",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP /outcome": {
+      "main": [
+        [
+          {
+            "node": "Report Writer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Result": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Respond to Webhook": {
+      "main": [
+        [
+          {
+            "node": "Switch outcome",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch outcome": {
+      "main": [
+        [
+          {
+            "node": "Decided by gate",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Decided by gate",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait for recruiter (form)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Decided by gate": {
+      "main": [
+        [
+          {
+            "node": "Outbox letter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait for recruiter (form)": {
+      "main": [
+        [
+          {
+            "node": "Decided by human",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Decided by human": {
+      "main": [
+        [
+          {
+            "node": "Report Writer (human decision)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Outbox letter": {
+      "main": [
+        [
+          {
+            "node": "To JSON file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "To JSON file": {
+      "main": [
+        [
+          {
+            "node": "Write eval/outbox file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bias Auditor": {
+      "main": [
+        [
+          {
+            "node": "Outcome input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Report Writer": {
+      "main": [
+        [
+          {
+            "node": "Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Report Writer (human decision)": {
+      "main": [
+        [
+          {
+            "node": "Human letter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Human letter": {
+      "main": [
+        [
+          {
+            "node": "Outbox letter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check token": {
+      "main": [
+        [
+          {
+            "node": "Normalize input",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Refuse (403)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "errorWorkflow": "HsV1Errors000001",
+    "saveManualExecutions": true,
+    "saveDataSuccessExecution": "all",
+    "saveDataErrorExecution": "all"
+  },
+  "staticData": null,
+  "meta": null,
+  "nodeGroups": [],
+  "pinData": {},
+  "versionId": "d99d5456-10f8-48bf-8925-ca9cbea48f55",
+  "sourceWorkflowId": null,
+  "tags": []
+}

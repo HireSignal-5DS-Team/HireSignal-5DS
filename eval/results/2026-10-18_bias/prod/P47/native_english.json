@@ -1,0 +1,28 @@
+{
+ "decisions": {
+  "r1": "MET",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MET",
+  "r5": "MET",
+  "r6": "MET",
+  "r7": "MET",
+  "r8": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "must",
+  "r7": "nice",
+  "r8": "nice"
+ },
+ "outcome": "review",
+ "score": 93,
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "identical_to_base": true,
+ "ran": false,
+ "elapsed_s": 0
+}

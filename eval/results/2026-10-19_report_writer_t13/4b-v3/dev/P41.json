@@ -1,0 +1,74 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because one must-have requirement is missing. The candidate has experience in data science and machine learning, including in tabular data and time series, and has experience with cloud platforms like AWS SageMaker and PySpark. However, the CV does not show hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar), which is a required must-have. The score is 73.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.\", \"line\": \"Met: the CV mentions experience in machine learning across multiple domains.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.\", \"line\": \"Met: the CV references machine learning solutions in contexts involving statistics and probability.\"}, {\"req_id\": \"r3\", \"decision\": \"UNCERTAIN\", \"quote\": \"Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more.\", \"line\": \"Uncertain: the CV mentions time series and signal processing but does not clearly confirm understanding of Bayesian methods.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) is not found in the CV.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"AWS S3, AWS Sagemaker, MS Azure ML Studio\", \"line\": \"Met: the CV explicitly lists AWS SageMaker experience.\"}, {\"req_id\": \"r6\", \"decision\": \"MET\", \"quote\": \"Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.\", \"line\": \"Met: the CV references experience in machine learning pipelines and data processing.\"}, {\"req_id\": \"r7\", \"decision\": \"MET\", \"quote\": \"Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.\", \"line\": \"Met: the CV references experience in data processing and machine learning pipelines.\"}, {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"- M.SC computer science, Thesis on Automatic wordnet construction using sense embedding for local language\", \"line\": \"Missing: the CV does not mention a Ph.D. in Mathematics.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Scientist position. We will not move forward with your application, because your CV does not show this required point: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar).\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about the understanding of Bayesian methods in time series and sensor signal processing (r3)\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because one must-have requirement is missing. The candidate has experience in data science and machine learning, including in tabular data and time series, and has experience with cloud platforms like AWS SageMaker and PySpark. However, the CV does not show hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar), which is a required must-have. The score is 73.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.",
+    "line": "Met: the CV mentions experience in machine learning across multiple domains."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.",
+    "line": "Met: the CV references machine learning solutions in contexts involving statistics and probability."
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more.",
+    "line": "Uncertain: the CV mentions time series and signal processing but does not clearly confirm understanding of Bayesian methods."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) is not found in the CV."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "AWS S3, AWS Sagemaker, MS Azure ML Studio",
+    "line": "Met: the CV explicitly lists AWS SageMaker experience."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MET",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.",
+    "line": "Met: the CV references experience in machine learning pipelines and data processing."
+   },
+   {
+    "req_id": "r7",
+    "decision": "MET",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.",
+    "line": "Met: the CV references experience in data processing and machine learning pipelines."
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "- M.SC computer science, Thesis on Automatic wordnet construction using sense embedding for local language",
+    "line": "Missing: the CV does not mention a Ph.D. in Mathematics."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Scientist position. We will not move forward with your application, because your CV does not show this required point: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar).\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about the understanding of Bayesian methods in time series and sensor signal processing (r3)"
+  ]
+ },
+ "source": "llm",
+ "latency_s": 15.41,
+ "peak_vram_mib": 3267,
+ "id": "P41",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

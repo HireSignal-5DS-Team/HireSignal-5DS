@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K05_p02_photo",
+  "file": "K05_p02_photo.jpg",
+  "source": "K03.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "Okay, here's a breakdown of the CV information you provided:\n\n**Summary (Implied - based on the listed qualifications)**\n\nThis CV represents a professional with a strong business background (MBA) combined with technical skills in networking and telecommunications. They have a diverse skillset encompassing management, operations, and project management, along with certifications in Cisco networking and leadership training.\n\n**Education:**\n\n*   **Master of Business Administration (MBA)** – Keller Graduate School of Management, City, State\n*   **Bachelor of Science, Telecommunications Management** – DeVry University, City, State\n\n**Certifications:**\n\n*   Cisco Certified Network Associate (CCNA/CCNA 5.0)\n*   Change Management\n*   ITIL Foundations Certification (Sniffer University - Sniffer Distributed Training)\n*   HIPAA/HITEC Regulation\n\n**Skills:**\n\nThe skills listed are quite extensive and cover a broad range of areas:\n\n*   **Business & Management:** Advertising, Asset Management, Agency, Budget Management, Change Resolution, Corporate Accounting, Customer Relations, Disaster Recovery, Employee Relations, Financial, Information Systems, Inventory Management, Loss Prevention, Marketing, Performance Management, Policies, Procurement, Project Management, Public Relations, Purchasing, Scheduling, Staff Development, Strategic Planning, Surveys, Website, Workflow.\n*   **Technical:** Backup Exec, Banking, Cable, Systems (specifically mentioning \"information systems\" and \"telecommunication\" suggests a focus on IT).\n*   **Specific Software/Tools:** Symantec, TCP/IP, VoIP\n\n**Overall Impression:**\n\nThis CV suggests a candidate with a well-rounded skillset, blending business acumen with technical expertise. The combination of an MBA and Cisco certifications indicates a potential role in IT management, project management within a technology environment, or a similar position requiring both strategic and operational skills.\n\n---\n\n**To help me provide even more targeted information, could you tell me:**\n\n*   What specifically are you hoping to get out of this CV analysis? (e.g., \"Does this person have the skills for a specific job?\", \"What are their key strengths?\", \"What areas could they improve?\")",
+   "model": "gemma3:4b",
+   "latency_s": 13.35,
+   "eval_count": 443,
+   "done_reason": "stop",
+   "peak_vram_mib": 3887
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K08_p02_photo",
+  "file": "K08_p02_photo.jpg",
+  "source": "K01.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "This is a resume that outlines the educational background and professional experience of an individual. Here is a summary of the key points from the resume:\n\n**Education:**\n- M.S. in Public Administration, Government Law, Sul Ross University, City, State Public Administration, Government Law\n- B.S. in Psychology, Education, Morgan State University, City, State Psychology, Education\n- Specialized Training:\n  - Security + Certified, CE 20, Aug 2011\n  - Cyber 200 Advance Continuing Education Course, Sep 2010\n  - Basic Computer Operations Planner's Course, Sep 2009\n  - DISA Action Officers Course, 10 Dec 2009\n  - DOD Information Assurance Boot Camp, 06 Nov 2009\n  - Computer Network Defense/Computer Network Threat 24\n\n**Skills:**\n- Air Force, Air, Agency, Basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, direction, documentation, edge, feasibility studies, forms, functional, Government, Information Systems, information technology, computer support, meetings, Office, enterprise, Network, personnel, policies, problem resolution, procurement, project management, publications, publication, software development, strategic, systems administration, systems analysis, systems development, systems integration, training manuals, trend, written\n\n**Professional Experience:**\n- Managed computer support, cost analysis, and acquisition to support ANG work plans.\n- Led teams to execute Air National Guard budget for computers and associated technologies.\n- Proven ability to formulate, justify, and defend assigned programs and projects.\n- Demonstrated knowledge of cost comparison procedures, directives, and communications.\n- Communicated effectively in written and oral mediums.\n- Provided technical direction concerning the acquisition of hardware and software for the entire Air National (ANG).\n- Performed analysis and evaluation of hardware and software to provide the best technical solution.\n- Advised components of the ANG on acquisition, procurement, maintenance, and feasibility for adoption of information technology hardware and software.\n\nThis resume highlights the individual's educational background, specialized training, and professional experience in managing computer support, budgeting, and technical direction for the Air National Guard.",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 14.5,
+   "eval_count": 460,
+   "done_reason": "stop",
+   "peak_vram_mib": 4537
+  }
+ ]
+}

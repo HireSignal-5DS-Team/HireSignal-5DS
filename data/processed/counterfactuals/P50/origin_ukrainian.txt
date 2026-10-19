@@ -1,0 +1,32 @@
+Nationality: Ukrainian
+Location: Kyiv, Ukraine
+Position: Lead Backend Developer (Python, Golang)
+Experience years: 11
+English level: intermediate
+
+- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices) 
+- Implemented CallCenter system based on Asterisk which processes 200+ calls at one moment. 
+- Implemented LocationBased Social Network architecture, API and microservices. 
+- Developing platform for manage social media reputation (working with instagram, Facebook and other social networks API). 
+- Implemented platform for children's smartwatches 
+- Implemented platform (API, billing, services) for Pre-order food and Food Delivery 
+- Implemented service for traffic monitoring and billing for ISP. 
+- Implemented service for motion detection for IoT and other IoT things. 
+- Implemented an advertising system 
+- Implemented payment gateway 
+- Implemented smart home software and hardware IoT things (LoRaWAN, ZigBee). 
+- Implemented highload datastore with lot of ETL pipelines 
+- Etc.
+More than 12+ years of experience working in Backend development: 
+- Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)
+- Golang (fiber, gin, beego, echo) - PostgreSQL, Redis, RabbitMQ, MongoDB, MySQL, ElasticSearch, Cassandra, Kafka, Tarantool 
+- Kubernetes, Docker, AWS, Azure 
+- Development of large, complex systems with highload 
+- Embedded software development (C, MicroPython) 
+- IoT development (LoRaWan, zwave, Raspberry Pi, Arduino, ESP32) 
+- Device drivers development for Linux 
+- Machine Learning (SparkNLP, StanfordNLP, TensorFlow, PyTorch, nltk etc) 
+- VOIP (asterisk, asterisk AGI scripts) 
+- Blockchain development (Basic Knowledges) 
+- Linux/MacOS Expert :)
+prefer Highload or IoT projects

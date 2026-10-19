@@ -1,0 +1,56 @@
+{
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 1 of 3 must-have requirements are met; the score is 44. Missing must-haves: Software development: 5 years of experience or more. Unclear must-haves: Asynchronous programming and developing performance-critical applications.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Software development: 5 years of experience or more - missing (not found in CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "During my work experience, I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript. I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3.",
+    "line": "must: Developing big systems with Python: 2 years of experience or more - met (CV: During my work experience, I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript. I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3.)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Asynchronous programming and developing performance-critical applications - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "During my work experience, I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript. I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3.",
+    "line": "nice: Working with AWS, Docker and microservices - met (CV: During my work experience, I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript. I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3.)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience with Machine Learning - missing (not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Algorithms development (collaborative filtering, similarity, data normalization, clustering) - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Software development: 5 years of experience or more.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r3"
+  ]
+ },
+ "source": "template",
+ "attempts": 0,
+ "first_errors": [],
+ "retry_errors": [],
+ "latency_s": 0.0008,
+ "peak_vram_mib": null,
+ "id": "P34",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

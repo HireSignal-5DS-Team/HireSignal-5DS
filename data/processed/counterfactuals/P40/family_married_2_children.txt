@@ -1,0 +1,7 @@
+Marital status: married, 2 children
+Position: Data Engineer
+Experience years: 1
+English level: fluent
+
+I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand.
+I would like to gain more practice in Spark Structured Streaming, working with big amounts of streaming data, ETL/ELT processes, Data Warehouses and Lakes, Cloud Services, Python, and technologies in Data Engineering and Big Data stack. Also, I am keen on working as a part of a team, and seeking opportunities for continuous learning.

@@ -1,0 +1,38 @@
+{
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MISSING",
+  "r5": "MET",
+  "r6": "UNCERTAIN"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "nice"
+ },
+ "outcome": "review",
+ "score": 59,
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "quotes": {
+  "r1": [],
+  "r2": [
+   "Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates."
+  ],
+  "r3": [
+   "Experience in using Python for file and database manipulation tasks."
+  ],
+  "r4": [],
+  "r5": [
+   "English level: upper"
+  ],
+  "r6": []
+ },
+ "elapsed_s": 17.14,
+ "identical_to_base": false,
+ "ran": true
+}

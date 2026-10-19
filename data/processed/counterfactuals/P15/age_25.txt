@@ -1,0 +1,26 @@
+Date of birth: 14/03/2001
+Position: Junior or Middle Data Engineer
+Experience years: 2
+English level: upper
+
+Here is a summary of my qualifications:
+    • Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.
+    • Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner.
+    • BI Tools: Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis.
+    • ETL Tools: Experience in working with Azure Data Factory and SSIS for efficient data extraction, transformation, and loading processes.
+    • Technical Proficiencies: Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT.
+    • UNIX Administration: Experience in administering UNIX-based systems.
+    • Container Technologies: Experience in working with Kubernetes for containerization.
+    • Python: Experience in using Python for file and database manipulation tasks.
+    • Telecom Knowledge: Experience with Charging and Billing Systems in the telecommunications industry.
+    • Collaborative Experience: Worked effectively as a member of globally distributed and cross-functional teams.
+    • EPAM Data Analytics and Data Engineering Internal Lab: Currently a member since 06.2022, involved in various projects including the development of ETL pipelines in Azure Data Factory, implementation of ETL processes using SSIS and Python with PostgreSQL in AWS, and creating reports in Power BI and Tableau for data analysis.
+
+I am highly motivated to further enhance my skills and expand my knowledge in the field of data engineering and analytics. I have obtained the following certifications:
+
+DP-203 Microsoft Certified: Azure Data Engineer Associate
+CLF-C01 AWS Certified Cloud Practitioner
+DP-900 Microsoft Certified: Azure Data Fundamentals
+PL-300 Microsoft Certified: Power BI Data Analyst Associate
+Academy Accreditation - Databricks Lakehouse Fundamentals
+I am looking forward to the opportunity to further enhance my skills, engage in an interesting project, and collaborate with a friendly and supportive team.

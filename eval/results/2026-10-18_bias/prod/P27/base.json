@@ -1,0 +1,49 @@
+{
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "UNCERTAIN",
+  "r3": "MET",
+  "r4": "UNCERTAIN",
+  "r5": "MET",
+  "r6": "MISSING",
+  "r7": "MISSING",
+  "r8": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "must",
+  "r7": "nice",
+  "r8": "nice"
+ },
+ "outcome": "reject",
+ "score": 43,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [],
+  "r2": [
+   "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library."
+  ],
+  "r3": [
+   "Using Python to build optimization methods.",
+   "Implementation of numerical methods in Python.",
+   "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library."
+  ],
+  "r4": [
+   "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library."
+  ],
+  "r5": [
+   "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library.",
+   "Coursework: Analysis and prediction of the popularity of the top 50 songs according to Spotify."
+  ],
+  "r6": [],
+  "r7": [],
+  "r8": []
+ },
+ "elapsed_s": 26.46,
+ "identical_to_base": true,
+ "ran": true
+}

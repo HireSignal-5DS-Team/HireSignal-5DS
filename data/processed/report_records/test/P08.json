@@ -1,0 +1,157 @@
+{
+ "job_title": "Data Scientist",
+ "decided_by": "gate",
+ "outcome": "reject",
+ "score": 7,
+ "gate_rule": "1 reject: must-have MISSING",
+ "gate_reasons": [
+  "r1: must-have MISSING",
+  "r3: must-have MISSING",
+  "r4: must-have MISSING",
+  "r5: must-have MISSING",
+  "r6: must-have MISSING",
+  "r7: must-have MISSING"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Data Science: 4 years of experience or more",
+   "decision": "MISSING",
+   "quotes": [
+    "I have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python."
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": 4.0,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Good knowledge of probability theory and statistics",
+   "decision": "UNCERTAIN",
+   "quotes": [],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": true,
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "skill_terms": [
+    "probability theory",
+    "statistics"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Understanding of Bayesian methods, time series analysis or sensor signal processing",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Bayesian methods",
+    "time series analysis",
+    "sensor signal processing"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "must",
+   "text": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Pyro",
+    "PyMC3",
+    "JAGS"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "must",
+   "text": "Experience with cloud (Amazon SageMaker)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Amazon SageMaker"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "must",
+   "text": "Experience with PySpark",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "PySpark"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r7",
+   "kind": "must",
+   "text": "Strong working knowledge of SQL",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "SQL"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r8",
+   "kind": "nice",
+   "text": "Ph.D. in Mathematics",
+   "decision": "MISSING",
+   "quotes": [
+    "In 2019, I have been granted presidential scholarship due to achieving the highest university entrance score in my country, Azerbaijan."
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P08",
+ "pair_id": "P08",
+ "split": "test",
+ "synthetic_flags": false
+}

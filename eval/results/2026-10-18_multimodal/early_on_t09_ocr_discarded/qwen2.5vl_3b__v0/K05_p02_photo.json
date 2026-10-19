@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K05_p02_photo",
+  "file": "K05_p02_photo.jpg",
+  "source": "K03.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "Education\nMaster of Business Administration (MBA) Keller Graduate School of Management 11/4 City, State\nBachelor of Science, Telecommunications Management DeVry University 11/4 City, State\n\nCertifications\nCisco Certified Network Associate (CCNA/CCAI) Leadership Training ITIL Foundations Certification Sniffer University - Sniffer Distributed Training Certified Novell Administrator (CNA 5.1) HIPAA/HITECH Regulation\n\nSkills\nADR, advertising, Arcserve, Asset Management, agency, Backup Exec, Backup, banking, Budget Management, budgeting, business operations, Cable, CCNA, Cisco Certified Network Associate, CNA 5.1, Change Management, Conflict Resolution, corporate accounting, client, clients, Customer Relations, disaster recovery, educational programs, Employee Relations, financial, Ghost, information systems, Innovation, instruction, internal audits, inventory management, inventory, ITIL, Leadership Training, regulatory compliance, loss prevention, marketing plans, marketing, market, Windows 2000, 2000, Enterprise, network, Networks, Novell NetWare 4.x, Certified Novell Administrator, packaging, Performance Management, Policies, processes, procurement, Project Management - Leadership, public relations, purchasing, quality, scheduling, Staff Development, strategic, Strategic Planning, surveys, Symantec, TCP/IP, technical support, telecommunication, phone, employee development, VoIP, website, workflow",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 10.31,
+   "eval_count": 292,
+   "done_reason": "stop",
+   "peak_vram_mib": 4357
+  }
+ ]
+}

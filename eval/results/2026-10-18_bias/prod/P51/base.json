@@ -1,0 +1,38 @@
+{
+ "decisions": {
+  "r1": "UNCERTAIN",
+  "r2": "MET",
+  "r3": "MISSING",
+  "r4": "MET",
+  "r5": "MISSING",
+  "r6": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "nice",
+  "r5": "nice",
+  "r6": "nice"
+ },
+ "outcome": "reject",
+ "score": 44,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [],
+  "r2": [
+   "Worked on multiple projects: two web stores(one from scratch) and a multilingual website. Wrote an easy-to-maintain, reliable, and bug-free code wrapped in Docker and deployed on AWS."
+  ],
+  "r3": [],
+  "r4": [
+   "Configured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK.",
+   "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK).",
+   "Linux, Python 3.8 & 2.7, Flask, Docker/Docker-Compose, MongoDB, AWS, CI/CD, logging(Sentry), Git(Bitbucket), Scrum, Agile, JIRA"
+  ],
+  "r5": [],
+  "r6": []
+ },
+ "elapsed_s": 26.84,
+ "identical_to_base": true,
+ "ran": true
+}

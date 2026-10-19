@@ -1,0 +1,316 @@
+{
+ "run": "P15",
+ "pair": "P15",
+ "job": "J2",
+ "stratum_in_pairs_csv": "partial",
+ "requirements": "data/processed/jobs/J2_requirements.json (confirmed card)",
+ "execution_id": "28",
+ "n8n_started": "2026-10-18 16:23:13.537",
+ "n8n_stopped": "2026-10-18 16:24:18.557",
+ "total_wall_s": 65.36,
+ "outcome": "review",
+ "score": 50,
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "reasons": [
+  "r1: must MISSING doubted (judge:disagrees): possible false reject",
+  "r4: must MISSING doubted (judge:disagrees): possible false reject",
+  "r5: must UNCERTAIN (low confidence)"
+ ],
+ "listed_flags": [
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter"
+ ],
+ "review_form_url": "http://localhost:5678/form-waiting/28?signature=646f6d03b652f0f0ccb725f85ca8b2c1691a9eea215570d357c0ec9264dea4ac",
+ "decisions": {
+  "r1": [
+   "must",
+   "MISSING"
+  ],
+  "r2": [
+   "must",
+   "MET"
+  ],
+  "r3": [
+   "must",
+   "MET"
+  ],
+  "r4": [
+   "must",
+   "MISSING"
+  ],
+  "r5": [
+   "must",
+   "UNCERTAIN"
+  ],
+  "r6": [
+   "nice",
+   "UNCERTAIN"
+  ]
+ },
+ "station_timings_s": {
+  "reader": 0.152,
+  "profile": 31.196,
+  "job": 0,
+  "match_and_judge": 11.963
+ },
+ "node_timings": {
+  "Webhook (CV file + job text)": [
+   {
+    "start": 1792340593589,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "Normalize input": [
+   {
+    "start": 1792340593597,
+    "ms": 143,
+    "status": "success"
+   }
+  ],
+  "HTTP /reader": [
+   {
+    "start": 1792340593740,
+    "ms": 233,
+    "status": "success"
+   }
+  ],
+  "HTTP /profile": [
+   {
+    "start": 1792340593974,
+    "ms": 31329,
+    "status": "success"
+   }
+  ],
+  "Confirmed requirements?": [
+   {
+    "start": 1792340625304,
+    "ms": 51,
+    "status": "success"
+   }
+  ],
+  "Confirmed job card": [
+   {
+    "start": 1792340625356,
+    "ms": 42,
+    "status": "success"
+   }
+  ],
+  "Job card": [
+   {
+    "start": 1792340625398,
+    "ms": 18,
+    "status": "success"
+   }
+  ],
+  "Merge": [
+   {
+    "start": 1792340625417,
+    "ms": 55,
+    "status": "success"
+   }
+  ],
+  "Split requirements": [
+   {
+    "start": 1792340625473,
+    "ms": 20,
+    "status": "success"
+   }
+  ],
+  "Loop requirements (1 at a time)": [
+   {
+    "start": 1792340625494,
+    "ms": 2,
+    "status": "success"
+   },
+   {
+    "start": 1792340649031,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792340651921,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792340653541,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792340655896,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792340657249,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792340658525,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "RAG lookup": [
+   {
+    "start": 1792340625497,
+    "ms": 20916,
+    "status": "success"
+   },
+   {
+    "start": 1792340649033,
+    "ms": 14,
+    "status": "success"
+   },
+   {
+    "start": 1792340651921,
+    "ms": 5,
+    "status": "success"
+   },
+   {
+    "start": 1792340653541,
+    "ms": 12,
+    "status": "success"
+   },
+   {
+    "start": 1792340655896,
+    "ms": 4,
+    "status": "success"
+   },
+   {
+    "start": 1792340657249,
+    "ms": 14,
+    "status": "success"
+   }
+  ],
+  "HTTP /match": [
+   {
+    "start": 1792340646414,
+    "ms": 1402,
+    "status": "success"
+   },
+   {
+    "start": 1792340649048,
+    "ms": 2776,
+    "status": "success"
+   },
+   {
+    "start": 1792340651926,
+    "ms": 1533,
+    "status": "success"
+   },
+   {
+    "start": 1792340653553,
+    "ms": 2135,
+    "status": "success"
+   },
+   {
+    "start": 1792340655900,
+    "ms": 1344,
+    "status": "success"
+   },
+   {
+    "start": 1792340657263,
+    "ms": 1256,
+    "status": "success"
+   }
+  ],
+  "HTTP /judge": [
+   {
+    "start": 1792340647816,
+    "ms": 1214,
+    "status": "success"
+   },
+   {
+    "start": 1792340651824,
+    "ms": 96,
+    "status": "success"
+   },
+   {
+    "start": 1792340653459,
+    "ms": 82,
+    "status": "success"
+   },
+   {
+    "start": 1792340655688,
+    "ms": 208,
+    "status": "success"
+   },
+   {
+    "start": 1792340657244,
+    "ms": 5,
+    "status": "success"
+   },
+   {
+    "start": 1792340658520,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "Aggregate": [
+   {
+    "start": 1792340658525,
+    "ms": 1,
+    "status": "success"
+   }
+  ],
+  "Outcome input": [
+   {
+    "start": 1792340658526,
+    "ms": 6,
+    "status": "success"
+   }
+  ],
+  "HTTP /outcome": [
+   {
+    "start": 1792340658532,
+    "ms": 7,
+    "status": "success"
+   }
+  ],
+  "Result": [
+   {
+    "start": 1792340658539,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "Respond to Webhook": [
+   {
+    "start": 1792340658544,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Switch outcome": [
+   {
+    "start": 1792340658548,
+    "ms": 6,
+    "status": "success"
+   }
+  ],
+  "Wait for recruiter (form)": [
+   {
+    "start": 1792340658554,
+    "ms": 3,
+    "status": "waiting"
+   }
+  ]
+ },
+ "checks": {
+  "http_status": 200,
+  "valid_json": true,
+  "execution_status": "waiting",
+  "identity_values_in_private_file": 0,
+  "identity_values_found_in_execution_data": 0,
+  "raw_cv_text_in_execution_data": false,
+  "all_match_lora_scale_1": true,
+  "quotes_verified_positions": 4,
+  "uploaded_file_kept_by_n8n_binary_store": 1,
+  "changed_raw_lines_checked": 0
+ }
+}

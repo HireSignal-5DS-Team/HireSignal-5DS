@@ -1,0 +1,144 @@
+{
+  "schema_version": "0.1.0",
+  "job_id": "usajobs-885947600",
+  "title": "IT Specialist (Data Science)",
+  "language": "en",
+  "requirements": [
+    {
+      "req_id": "r1",
+      "text": "IT related experience demonstrated by paid or unpaid experience obtained in either the private or public sector, and/or completion of specific, intensive training that demonstrates all of the following four competencies",
+      "evidence": "IT related experience demonstrated by paid or unpaid experience obtained in either the private or public sector, and/or completion of specific, intensive training that demonstrates all of the following four competencies",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r2",
+      "text": "Attention to Detail",
+      "evidence": "Attention to Detail",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Attention to Detail"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r3",
+      "text": "Customer Service",
+      "evidence": "Customer Service",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Customer Service"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r4",
+      "text": "Oral Communication",
+      "evidence": "Oral Communication",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Oral Communication"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r5",
+      "text": "Problem Solving",
+      "evidence": "Problem Solving",
+      "kind": "must",
+      "category": "skill",
+      "skill_terms": [
+        "Problem Solving"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r6",
+      "text": "you must have 1 year of specialized experience equivalent to at least the GS-11 level in the Federal service",
+      "evidence": "you must have 1 year of specialized experience equivalent to at least the GS-11 level in the Federal service",
+      "kind": "must",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": 1.0,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r7",
+      "text": "collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data",
+      "evidence": "collecting and generating data, including assisting with the design or use of surveys or other scientific instruments to collect data",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r8",
+      "text": "curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues",
+      "evidence": "curating and processing data, including performing quality checks on data sets and other information sources to identify and address data issues",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r9",
+      "text": "preparing or supporting the dissemination of data",
+      "evidence": "preparing or supporting the dissemination of data",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r10",
+      "text": "identifying and resolving routine data performance and management issues",
+      "evidence": "identifying and resolving routine data performance and management issues",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r11",
+      "text": "storing and managing high-quality data from diverse sources for use by decision makers",
+      "evidence": "storing and managing high-quality data from diverse sources for use by decision makers",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [],
+      "min_years": null,
+      "chunk_ids": []
+    },
+    {
+      "req_id": "r12",
+      "text": "analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements",
+      "evidence": "analyzing comprehensive data sets using statistical software or programming languages (e.g., R, Python) to meet established business or program requirements",
+      "kind": "nice",
+      "category": "experience",
+      "skill_terms": [
+        "R",
+        "Python"
+      ],
+      "min_years": null,
+      "chunk_ids": []
+    }
+  ],
+  "uncertain": [
+    "Entry level GS-12 annotated (GS-13 not counted). The tasks after 'such as' are examples of qualifying experience: annotated nice. The four competencies are part of the basic requirement: counted."
+  ],
+  "needs_human_review": false,
+  "warnings": []
+}

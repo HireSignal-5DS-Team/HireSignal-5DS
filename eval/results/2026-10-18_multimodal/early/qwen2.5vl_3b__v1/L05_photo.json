@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "L05_photo",
+  "file": "L05_photo.jpg",
+  "source": "L05.pdf",
+  "pages": [
+   1
+  ],
+  "pair": "P43",
+  "split": "test",
+  "condition": "hard photo",
+  "job": "J1"
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "Curriculum Vitae\nData Scientist\n\nPosition: Data Scientist\nExperience years: 5\nEnglish level: upper\n\nSelf-motivated Data Scientist with 4+ years of experience (8+ years in IT Data Analytics). I constantly bring high-quality business solutions to businesses seeking higher efficiency.\nStrong analytical mindset and proactive team player\nExcellent problem-solver and collaborative with expertise in algorithm design and data collection.\n\nResponsibilities:\n- Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction, which allowed to automatically buy traffic from the most prominent advertising platforms for more than $500k+ monthly with positive margins.\n- Creating complex resolutions to provide RTB (real-time bidding) in a highly loaded platform.\n- Generating ideas for finding triggers and forming specific, accurate proposals for product improvement.\n- Profound analysis and finding hidden patterns/causes.\n- Controlling all the main KPIs, A/B testing, rolling, and validation of results.\n- A/B testing.\n\nSkills:\n- Python,\n- Jupyter Lab/Hub\n- SQL\n- Hadoop, PySpark\n- BI Tableau, Power BI\n- Datadog, Airflow, MLFlow\n- ML supervised and unsupervised learning, clustering, regression, classification, recommendation systems, time series\n- VBA, OLAP, PowerPivot, PowerQuery\n- Word, Access, PowerPoint, Excel, Microsoft Office\n- End-to-end experience with data collection, processing, aggregation, analyzing and visualization\n- Agile methodologies: Scrum, Kanban, Safe, Waterfall\n- Jira, Confluence\n- Advanced mathematical and statistics skills\n- Excellent interpersonal skills\n- Problem solving and creative thinking\n- Team management\n\nI am considering only part-time vacancies for around ~20-25 hours on the English-speaking market: Only Canada/USA\nProgressive project with professional growth",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 10.92,
+   "eval_count": 394,
+   "done_reason": "stop",
+   "peak_vram_mib": 4251
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K05_p01_photo",
+  "file": "K05_p01_photo.jpg",
+  "source": "K04.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "CORPORATE PROJECT MANAGER\n\nCareer Overview:\nA seasoned project manager driven to achieve results through strategic planning and professional relationship building. Success in developing beneficial alliances between leaders to effectively drive growth and achieve goals. Dedicated to building strong teams within an organization through motivation and strong development. Effective in fostering collaboration and consultative relationships with senior management and across traditional boundaries. Highlighting inflection points of technology decisions. Technical leader with broad experience, brings focus on \"big picture\" business impacts of technology projects: real costs, practical benefits, risks and contingencies. Adaptable - skilled at supporting individuals, building systems, handling problems; as well as managing teams, training, developing strategies, policies and processes.\n\nQualifications:\n- Strategic Planning / Visioning & Tactical Execution Manpower Planning & Scheduling\n- SDLC Methodology/ Problem & Change Software & Application Lifecycle Management\n- Management\n- SLA Authoring & Resource Allocation Expense Budgeting & Forecasting\n- Team-Building & Front-Line Leadership Technology Upgrades & Training\n- Led highly visible initiatives to develop, define and manage the execution of several ground up IT infrastructure and application integrations through corporate acquisitions and divestitures while successfully balancing resources, timelines and budgets.\n- Experience in complete Project Management Life cycle including Planning, Execution, Monitor & Control and closure.\n- Document business performance expectations, benchmark standards and develop guidelines.\n- Interfaced with key stakeholders and project team members to prioritize requirements and information technology needs.\n- Successfully lead learning enhancement classes to improve sales knowledge and people skills for workplace success and advancement. Developed materials to successfully train associates.\n- Provided oversight of yearly and monthly budget planning activities providing forecasting and day-to-day expense management keeping projects under budget and proper tracking of expenses.\n- Direct all information technology and network system deployment and maintenance including all IT infrastructure, wireless communications, PC systems, local networks and mobile environment.\n- Assessing and recommending technology systems solutions based on operational needs while ensuring compliance with corporate standards. Interfaced with outside vendors to source materials.\n\nWork Experience:\n01/2014 to 01/2016\nCorporate Project Manager Company Name\n- Manage direct reports supporting multiple locations with annual revenues of $2M.\n- Accountable for the strategic direction, implementation, support, and development of all business applications, Enterprise Resource Planning (ERP), Facilities Management, Financials, Forecasting and Procurement.\n- Established change management and help desk solutions and policies.\n- Developed new process design workflow to ensure on-time delivery of all solutions and within budget leading to increase in monthly productivity by 20%.\n- Centralized disparate support documentation for all business applications and architecture.\n- Developed corporate process and tools for opportunities tracking, bid decision making and proposal development.\n- Developed training material for new products and technologies and delivered training classes to associates.\n\n01/2008 to 01/2014\nDirector of Information Technology and Systems Company Name\n- Responsible for managing and executing business development activities for IT and other company business lines.\n- Provided executive leadership over internal company-wide IT infrastructure.\n- Developed end user training material coordinating and conducting group and individual training sessions based on staff and organizational learning needs.\n- Introduced methods for tracking project management, workload planning and corporate business performance metrics.\n- Responsible for managing and executing business development activities for IT and other company business lines.\n- Installation of Gate and Locking systems (Safflok, Ving, Salto and Arnuco Mc Gann access control systems) in various brands resorts interfacing with PMS systems.\n\n01/2006 to 01/2008\nDirector of Information Technology and Systems Company Name\n- Manage four hotels within REIT interfacing with both management and ownership to guide the hotel through day-to-day operations.\n- Insure that the company's strategic technologies needs are the primary focus.\n- Provided first and second-tier technical support and knowledge on Windows server/desktop applications and resort PMS/POS Systems.\n- Provided operations management, including security, backup/recovery/disaster planning, off-hours staff coverage.\n- Oversaw $1.4 M capital budget and hotel conversion.",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 34.37,
+   "eval_count": 843,
+   "done_reason": "stop",
+   "peak_vram_mib": 4493
+  }
+ ]
+}

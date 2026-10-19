@@ -1,0 +1,37 @@
+Native language: English
+Position: Разработчик Python
+Experience years: 11
+English level: pre
+
+business process automation,
+software development automation,
+scalable solutions
+I have 10 years of experience in web application development. 
+
+I use Python (Django, Flask, FASTApi), SQL (Postgres), JavaScript (VUE, React, pure). For backend part i used RESTApi, graphQL. 
+And I know PHP, CSS, HTML, Bash, Linux, Git.
+
+In my work, I try to automate all processes in order to be productive.
+
+Project "Business Process System"
+Role: Fullstack developer
+Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)
+
+Project "CRM for shopping mall"
+Role: Backend developer
+Technologies: Python, JavaScript,  Django (DRF), PostgreSQL, Celery, React, Electron, Git, Linux, Docker, REST, Swagger, SMS Api
+
+Project "Backend of Web service for recommendation system"
+Role: Backend developer
+Technologies: Python (Flask), SQLAlchemy, PostgreSQL, REST, Git, Docker, Celery, AWS, CI/CD
+
+Project "System for prepare build projects"
+Role: Backend developer
+Technologies: Python, Django (DRF), PostgreSQL, Celery, Git, Linux, Docker, REST, Google API, CI/CD (Gitlab)
+
+Project "MS Teams Application"
+Role: Fullstack developer
+Technologies: Python, Django (DRF), PostgreSQL, Celery, Git, Linux, Docker, REST, 1C, React, Microsoft Azure, CI/CD (Azure)
+
+
+In past PHP Developer on Drupal, Wordpress.

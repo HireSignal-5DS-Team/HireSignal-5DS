@@ -1,0 +1,281 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "32",
+ "cv_id": "cv-ba9a42d5",
+ "job_id": "J1",
+ "job_title": "Data Scientist",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 33,
+ "reasons": [
+  "r1: must-have MISSING",
+  "r4: must-have MISSING",
+  "r5: must-have MISSING",
+  "r6: must-have MISSING"
+ ],
+ "listed_flags": [
+  "r7 (must, not outcome-relevant): judge:disagrees",
+  "pair: bias:identity placeholder line removed",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: bias:identity placeholder line removed"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Data Science: 4 years of experience or more",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "contradicted",
+   "quotes": [
+    {
+     "quote": "Experience years: 1",
+     "start": 48,
+     "end": 67
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000311,
+    "MISSING": 0.999527,
+    "UNCERTAIN": 0.000162
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9558
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Good knowledge of probability theory and statistics",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging",
+     "start": 561,
+     "end": 717
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.991938,
+    "MISSING": 0.006906,
+    "UNCERTAIN": 0.001155
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.8971
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Understanding of Bayesian methods, time series analysis or sensor signal processing",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.097357,
+    "MISSING": 0.489494,
+    "UNCERTAIN": 0.413149
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000131,
+    "MISSING": 0.998284,
+    "UNCERTAIN": 0.001585
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9938
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Experience with cloud (Amazon SageMaker)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 8e-06,
+    "MISSING": 0.998998,
+    "UNCERTAIN": 0.000994
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9947
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Experience with PySpark",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 3e-06,
+    "MISSING": 0.999653,
+    "UNCERTAIN": 0.000344
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9988
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r7",
+   "text": "Strong working knowledge of SQL",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Languages: C++, Python, SQL, R(basic)",
+     "start": 523,
+     "end": 560
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999239,
+    "MISSING": 0.000757,
+    "UNCERTAIN": 4e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9985
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r8",
+   "text": "Ph.D. in Mathematics",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "contradicted",
+   "quotes": [
+    {
+     "quote": "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field)",
+     "start": 347,
+     "end": 445
+    },
+    {
+     "quote": "Looking for any job experience that involves personal growth and progress, especially research opportunities :)",
+     "start": 1186,
+     "end": 1297
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 3e-06,
+    "MISSING": 0.999606,
+    "UNCERTAIN": 0.000391
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9987
+   },
+   "lora_scale": 1
+  }
+ ],
+ "bias": {
+  "bias_flags": [
+   {
+    "kind": "identity placeholder",
+    "rule": "placeholder-only line",
+    "line": 14,
+    "action": "line removed"
+   }
+  ],
+  "would_be_outcome": "reject",
+  "swap": {
+   "ran": true,
+   "counterfactual": "female_arab",
+   "how": "name replaced",
+   "identical_matcher_input": true,
+   "latency_s": 0.075
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.159,
+  "profile": 20.903,
+  "job": 0,
+  "match_and_judge": 30.918
+ }
+}

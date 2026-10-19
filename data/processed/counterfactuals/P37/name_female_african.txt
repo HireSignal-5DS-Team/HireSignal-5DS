@@ -1,0 +1,8 @@
+Ngozi Okonkwo
+Pronouns: she/her
+Position: Web Developer
+Experience years: 1.5
+English level: upper
+
+As a skilled Backend Developer with over 1 year of experience, I have a strong proficiency in programming languages including Python, Go lang, and C#. My ability to quickly adapt to new languages and web frameworks allows me to efficiently tackle any project that comes my way. My responsibility was to develop and maintain the backend system, which involved creating RESTful APIs, managing databases, and ensuring the security of the system. I also worked closely with the frontend team to integrate the frontend and backend systems. My technical skills and experience, along with my ability to work efficiently in a team, allowed me to contribute significantly to the success of the project.
+That's a great attitude! I would suggest adding something like: "I am constantly seeking new challenges and opportunities to further improve my skills and gain exposure to various project types." This emphasizes your enthusiasm and drives for growth in your career.

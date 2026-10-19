@@ -1,0 +1,13 @@
+Native language: English
+Position: Data Scientist
+Experience years: 0.5
+English level: fluent
+
+Ph. D. in Economics, more than two dozens of publication papers (full list upon request). 
+Educational YouTube channel devoted to explaining basics of machine learning and deep learning for non-STEM students.
+"Machine Learning, Data Science and Deep Learning with Python" course completion certificate.
+A couple of side-projects available on my Github.
+I have more than 8 years of academic research working as a lecturer and associate professor. Throughout that time I built plenty of macroeconomic models, mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner.
+Last years I started working with Python machine learning libraries to have more tools and flexibility. 
+Detailed work experience available in my resume.
+Looking for a company (of any size), preferably with an experienced tech lead, that will allow me to apply my skill set and grow, with a friendly atmosphere, remote/international if needed.

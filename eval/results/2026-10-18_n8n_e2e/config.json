@@ -1,0 +1,25 @@
+{
+ "date": "2026-10-18 09:51:21",
+ "label": "real-GPU",
+ "n8n": "2.43.7 (tools/n8n, portable Node v24.22.0)",
+ "workflow": "n8n/hiresignal_v1.json (HsV1Main00000001), error workflow n8n/hiresignal_errors.json (HsV1Errors000001)",
+ "webhook": "http://127.0.0.1:5678/webhook/hiresignal",
+ "station_api": "http://127.0.0.1:8010",
+ "llm_server": "b11139-42916d83f",
+ "command": ".venv\\Scripts\\python scripts\\n8n_e2e.py --out eval\\results\\2026-10-18_n8n_e2e",
+ "matcher": {
+  "prompt": "matcher-v1",
+  "schema": "services/matcher/schema.json",
+  "lora_scale": 1,
+  "max_tokens": 384,
+  "knowledge": "rag.bm25 k=3"
+ },
+ "profile": {
+  "prompt": "profile-v1",
+  "chunk_chars": 800,
+  "max_tokens": 768
+ },
+ "job": {
+  "prompt": "job-v1"
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "model": "qwen3-0.6b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 2,
+ "first_errors": [
+  "r6: quote is not in its verified CV quotes",
+  "r7: quote is not in its verified CV quotes",
+  "r8: quote is not in its verified CV quotes"
+ ],
+ "retry_errors": [
+  "the answer is not valid JSON",
+  "the answer was cut at the token limit"
+ ],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate is rejected because one must-have requirement is missing. The CV shows 4 years of experience or more (r1), but the candidate lacks experience with probability theory and Bayesian methods (r3). The score is 73, indicating a strong candidate, but the decision was based on incomplete requirements. The flags indicate a low confidence score on r3.\",\n  \"requirements\": [\n    {\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more.\", \"line\": \"Met: the CV shows 4 years of experience or more.\"},\n    {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more.\", \"line\": \"Met: the CV shows 4 years of experience or more.\"},\n    {\"req_id\": \"r3\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: Docker is not clearly shown in the CV.\"},\n    {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar).\"},\n    {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"AWS S3, AWS Sagemaker, MS Azure ML Studio\", \"line\": \"Met: the CV shows experience with cloud (Amazon SageMaker).\"},\n    {\"req_id\": \"r6\", \"decision\": \"MET\", \"quote\": \"Developed machine learning solutions in various contexts...\", \"line\": \"Met: the CV shows experience with PySpark.\"},\n    {\"req_id\": \"r7\", \"decision\": \"MET\", \"quote\": \"Developed machine learning solutions...\", \"line\": \"Met: the CV shows experience with SQL.\"},\n    {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"- M.SC computer science, Thesis...\", \"line\": \"Missing: Ph.D. in Mathematics.\"}\n  ],\n  \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Scientist position. We will not move forward with your application, because your CV does not show this required point: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar). This decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\",\n  \"flags_for_recruiter\": [\"low confidence: the Matcher was unsure on r3\"]\n}",
+  ""
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 5 of 7 must-have requirements are met; the score is 73. Missing must-haves: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar). Unclear must-haves: Understanding of Bayesian methods, time series analysis or sensor signal processing.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.",
+    "line": "must: Data Science: 4 years of experience or more - met (CV: Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.",
+    "line": "must: Good knowledge of probability theory and statistics - met (CV: Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Understanding of Bayesian methods, time series analysis or sensor signal processing - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "AWS S3, AWS Sagemaker, MS Azure ML Studio",
+    "line": "must: Experience with cloud (Amazon SageMaker) - met (CV: AWS S3, AWS Sagemaker, MS Azure ML Studio)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MET",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.",
+    "line": "must: Experience with PySpark - met (CV: Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "MET",
+    "quote": "Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.",
+    "line": "must: Strong working knowledge of SQL - met (CV: Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Ph.D. in Mathematics - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar).\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r3"
+  ]
+ },
+ "source": "template",
+ "latency_s": 17.95,
+ "peak_vram_mib": 4910,
+ "id": "P41",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

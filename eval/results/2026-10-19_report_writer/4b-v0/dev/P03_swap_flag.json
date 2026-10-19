@@ -1,0 +1,78 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "candidate letter for a review case"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate meets the requirement for 4+ years of data science experience and has demonstrated proficiency in SQL. However, they do not meet several critical must-have requirements, including knowledge of probability theory and statistics, Bayesian methods, time series analysis, probabilistic programming (e.g., Pyro, PyMC3), or cloud experience with Amazon SageMaker. Additionally, there is no mention of hands-on experience with PySpark. The candidate's profile is incomplete for core technical competencies required for the Data Scientist role. Despite meeting one key requirement (SQL), the overall score of 27 indicates a significant gap in required skills, leading to a 'review' decision. A potential identity swap bias was detected in the decision for requirement r1, where the 'must' requirement was correctly assessed as met, but this may have been influenced by identity-based changes, warranting further scrutiny.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MET\",\n      \"quote\": \"I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning.\",\n      \"line\": \"Data Science: 4 years of experience or more\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Good knowledge of probability theory and statistics\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Understanding of Bayesian methods, time series analysis or sensor signal processing\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Experience with cloud (Amazon SageMaker)\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Experience with PySpark\"\n    },\n    {\n      \"req_id\": \"r7\",\n      \"decision\": \"MET\",\n      \"quote\": \"I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL.\",\n      \"line\": \"Strong working knowledge of SQL\"\n    },\n    {\n      \"req_id\": \"r8\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Ph.D. in Mathematics\"\n    }\n  ],\n  \"candidate_letter\": \"Dear Recruiter,\\n\\nThank you for considering my application for the Data Scientist role. I bring over five years of experience in data science, software engineering, and machine learning, with a strong foundation in Python and SQL. I have worked extensively with programming languages including JavaScript and Java.\\n\\nWhile I have solid experience in core data science principles and SQL, I would like to clarify that I do not currently have hands-on experience with probabilistic programming frameworks such as Pyro or PyMC3, nor with Bayesian methods, time series analysis, or sensor signal processing. Additionally, I have not worked with Amazon SageMaker or PySpark.\\n\\nI am confident in my ability to grow in these areas and would welcome the opportunity to discuss how my background aligns with the role’s needs. I am particularly interested in contributing to projects involving data modeling and statistical analysis.\\n\\nBest regards,\\nCandidate Name\",\n  \"flags_for_recruiter\": [\n    \"identity swap: a must-have decision changed when only the candidate's identity was swapped (r1)\"\n  ]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "This case goes to a recruiter for review. 2 of 7 must-have requirements are met; the score is 27. Missing must-haves: Good knowledge of probability theory and statistics; Understanding of Bayesian methods, time series analysis or sensor signal processing; Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar); Experience with cloud (Amazon SageMaker); Experience with PySpark. Reason for review: pair: bias:swap_flip.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning.",
+    "line": "must: Data Science: 4 years of experience or more - met (CV: I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning.)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Good knowledge of probability theory and statistics - missing (not found in CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Understanding of Bayesian methods, time series analysis or sensor signal processing - missing (not found in CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with cloud (Amazon SageMaker) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with PySpark - missing (not found in CV)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "MET",
+    "quote": "I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL.",
+    "line": "must: Strong working knowledge of SQL - met (CV: I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL.)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Ph.D. in Mathematics - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "",
+  "flags_for_recruiter": [
+   "identity swap: a must-have decision changed when only the candidate's identity was swapped (r1)"
+  ]
+ },
+ "source": "template",
+ "latency_s": 13.76,
+ "peak_vram_mib": 3267,
+ "id": "P03_swap_flag",
+ "outcome": "review",
+ "synthetic_flags": true
+}

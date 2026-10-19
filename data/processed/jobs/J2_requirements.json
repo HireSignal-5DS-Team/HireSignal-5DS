@@ -1,0 +1,73 @@
+{
+ "job_id": "J2",
+ "title": "Data Engineer",
+ "confirmed_by": "recruiter (sample: the gold requirement list)",
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "Data Warehousing",
+    "Data Lakes"
+   ],
+   "evidence": "Knowledge of the general principles of Data Warehousing and Data Lakes"
+  },
+  {
+   "req_id": "r2",
+   "text": "Hands-on experience with SQL",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "SQL"
+   ],
+   "evidence": "Hands-on experience with SQL"
+  },
+  {
+   "req_id": "r3",
+   "text": "Knowledge of Python",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "Python"
+   ],
+   "evidence": "Knowledge of Python"
+  },
+  {
+   "req_id": "r4",
+   "text": "Experience with GCP or another cloud provider",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "GCP"
+   ],
+   "evidence": "Experience with GCP or other cloud providers"
+  },
+  {
+   "req_id": "r5",
+   "text": "Good spoken English",
+   "kind": "must",
+   "category": "language",
+   "min_years": null,
+   "skill_terms": [
+    "English"
+   ],
+   "evidence": "Good spoken English"
+  },
+  {
+   "req_id": "r6",
+   "text": "Willingness to research business logic",
+   "kind": "nice",
+   "category": "other",
+   "min_years": null,
+   "skill_terms": [],
+   "evidence": "Wiliness to do research on business logic"
+  }
+ ],
+ "skill_terms_source": "Job Agent terms (T06 run) aligned by source sentence, kept if in the requirement text"
+}

@@ -1,0 +1,60 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because a must-have requirement is missing. The candidate has knowledge of data warehousing, SQL, and Python, and fluent English, which all meet the requirements. However, experience with GCP or another cloud provider is missing. The score is 77.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Data Warehouse for Investment bank (system connected with 100+ different ERP up to 20 bln transactions per month, 20 years of data collected)\", \"line\": \"Met: the candidate has experience with data warehousing in a large-scale investment bank environment.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Databases: Snowflake/Oracle / Postgres / Clickhouse/ DuckDB/ MS SQL\", \"line\": \"Met: the candidate has hands-on experience with multiple databases including Snowflake, Oracle, and Postgres.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"Python\", \"line\": \"Met: the candidate mentions knowledge of Python.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"Azure/ AWS\", \"line\": \"Missing: the candidate lists Azure and AWS but does not show experience with GCP or another cloud provider as required.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"English level: fluent\", \"line\": \"Met: the candidate states fluent spoken English.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: the candidate's willingness to research business logic is not clearly stated.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show experience with GCP or another cloud provider, which is a required must-have.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": []}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because a must-have requirement is missing. The candidate has knowledge of data warehousing, SQL, and Python, and fluent English, which all meet the requirements. However, experience with GCP or another cloud provider is missing. The score is 77.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Data Warehouse for Investment bank (system connected with 100+ different ERP up to 20 bln transactions per month, 20 years of data collected)",
+    "line": "Met: the candidate has experience with data warehousing in a large-scale investment bank environment."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Databases: Snowflake/Oracle / Postgres / Clickhouse/ DuckDB/ MS SQL",
+    "line": "Met: the candidate has hands-on experience with multiple databases including Snowflake, Oracle, and Postgres."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Python",
+    "line": "Met: the candidate mentions knowledge of Python."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "Azure/ AWS",
+    "line": "Missing: the candidate lists Azure and AWS but does not show experience with GCP or another cloud provider as required."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: fluent",
+    "line": "Met: the candidate states fluent spoken English."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: the candidate's willingness to research business logic is not clearly stated."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show experience with GCP or another cloud provider, which is a required must-have.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": []
+ },
+ "source": "llm",
+ "latency_s": 8.53,
+ "peak_vram_mib": 3267,
+ "id": "P45",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

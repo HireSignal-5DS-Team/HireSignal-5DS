@@ -1,0 +1,1 @@
+lora_k, schema on: raw output with max_tokens 384 identical to max_tokens 192 on 30/30 items (real-GPU)

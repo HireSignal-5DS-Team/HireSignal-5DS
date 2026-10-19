@@ -1,0 +1,10 @@
+Nationality: Nigerian
+Location: Lagos, Nigeria
+Position: Big Data Engineer
+Experience years: 5
+English level: upper
+
+The two startups I've worked for are now unicorns with an overall evaluation of ~10B.
+T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering. Took part in a variety of Data Science projects for e-commerce and advertising companies. My work covered both Engineering and Product parts. On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions. On the Product side I worked with stakeholders to formalize requirements and present results.
+I'm looking for rather engineering kind of work such as MLOps, Machine Learning, Big Data, then related to the theoretical part of DS. Companies with strong Data Science/Engineering cultures or solid revenue streams are preferred.     
+Sorry, I'm not considering any Data Science or Analytics positions any longer

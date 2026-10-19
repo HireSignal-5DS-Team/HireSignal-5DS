@@ -1,0 +1,85 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v1.md",
+ "attempts": 2,
+ "first_errors": [
+  "r1: quote is not in its verified CV quotes",
+  "r2: quote is not in its verified CV quotes",
+  "reject letter does not name missing must-have r1"
+ ],
+ "retry_errors": [
+  "r1: quote is not in its verified CV quotes",
+  "r2: quote is not in its verified CV quotes",
+  "reject letter does not name missing must-have r5"
+ ],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because three must-have requirements are missing: hands-on experience with probabilistic programming, experience with Amazon SageMaker, and experience with PySpark. The candidate has only 2 years of data science experience, which falls short of the 4-year minimum. Knowledge of probability theory and Bayesian methods is uncertain and not confirmed. Strong SQL experience is met, but the core must-have requirements are not satisfied.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"2020 - Present Data analyst/Data scientist, 2017 - 2019 Sr. Business Analyst\", \"line\": \"Missing: the candidate has only 2 years of data science experience, below the 4-year requirement.\"}, {\"req_id\": \"r2\", \"decision\": \"UNCERTAIN\", \"quote\": \"Sales forecasting of CPG products, Data analysis, reports preparation and insights generation based on the historical data, Data manipulation, data preparation according to requests using python\", \"line\": \"Uncertain: the candidate's experience does not clearly demonstrate knowledge of probability theory or statistics.\"}, {\"req_id\": \"r3\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: no evidence provided for understanding of Bayesian methods or time series analysis.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of hands-on experience with probabilistic programming (e.g., Pyro, PyMC3).\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with Amazon SageMaker.\"}, {\"req_id\": \"r6\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with PySpark.\"}, {\"req_id\": \"r7\", \"decision\": \"MET\", \"quote\": \"Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover.\", \"line\": \"Met: the candidate has experience with SQL and database tools.\"}, {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of a Ph.D. in Mathematics.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Scientist position. We will not move forward with your application, because your CV does not show three required qualifications: hands-on experience with probabilistic programming (e.g., Pyro, PyMC3), experience with Amazon SageMaker, and experience with PySpark.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about probability theory and statistics (r2) and Bayesian methods (r3).\"]}",
+  "{\"recruiter_summary\": \"The candidate is rejected because three must-have requirements are missing: data science experience of 4 years or more, hands-on experience with probabilistic programming (e.g., Pyro, PyMC3), and experience with PySpark. The candidate's experience is listed as 2020–present as a data analyst/data scientist and 2017–2019 as a senior business analyst, totaling only 2 years of data science experience, which falls short of the 4-year requirement. Experience with Amazon SageMaker is also missing. The candidate has no evidence of probabilistic programming or PySpark.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"2020 - Present Data analyst/Data scientist, 2017 - 2019 Sr. Business Analyst\", \"line\": \"Missing: the candidate's data science experience is only 2 years (2020–present), below the 4-year requirement.\"}, {\"req_id\": \"r2\", \"decision\": \"UNCERTAIN\", \"quote\": \"Sales forecasting of CPG products, Data analysis, reports preparation and insights generation based on the historical data, Data manipulation, data preparation according to requests using python\", \"line\": \"Uncertain: the candidate's experience includes data analysis and forecasting, but does not clearly demonstrate knowledge of probability theory or statistics.\"}, {\"req_id\": \"r3\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: no evidence provided for understanding of Bayesian methods or time series analysis.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of hands-on experience with probabilistic programming (e.g., Pyro, PyMC3).\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with Amazon SageMaker.\"}, {\"req_id\": \"r6\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with PySpark.\"}, {\"req_id\": \"r7\", \"decision\": \"MET\", \"quote\": \"Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover.\", \"line\": \"Met: the candidate has experience with SQL and database tools.\"}, {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of a Ph.D. in Mathematics.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Scientist position. We will not move forward with your application, because your CV does not show three required qualifications: at least 4 years of data science experience, hands-on experience with probabilistic programming (e.g., Pyro, PyMC3), and experience with PySpark.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about probability theory and statistics (r2) and Bayesian methods (r3).\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 1 of 7 must-have requirements are met; the score is 27. Missing must-haves: Data Science: 4 years of experience or more; Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar); Experience with cloud (Amazon SageMaker); Experience with PySpark. Unclear must-haves: Good knowledge of probability theory and statistics; Understanding of Bayesian methods, time series analysis or sensor signal processing.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Data Science: 4 years of experience or more - missing (not found in CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Good knowledge of probability theory and statistics - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Understanding of Bayesian methods, time series analysis or sensor signal processing - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with cloud (Amazon SageMaker) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with PySpark - missing (not found in CV)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "MET",
+    "quote": "Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover.",
+    "line": "must: Strong working knowledge of SQL - met (CV: Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover.)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Ph.D. in Mathematics - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Data Science: 4 years of experience or more; Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar); Experience with cloud (Amazon SageMaker); Experience with PySpark.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r2, r3"
+  ]
+ },
+ "source": "template",
+ "latency_s": 26.12,
+ "peak_vram_mib": 3267,
+ "id": "P07",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

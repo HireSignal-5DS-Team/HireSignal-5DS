@@ -1,0 +1,31 @@
+Amira Khalil
+Pronouns: she/her
+Position: R / VBA / C++ Programmer, PhD (Mathematics)
+Experience years: 3
+English level: intermediate
+
+PhD  in Mathematics.
+
+
+Data Science, a 9-course specialization by Johns Hopkins University on Coursera. Specialization Certificate earned on December 2, 2015  (Data Science Tools, R programming, Getting and cleaning data, Exploratory data analysis, Reproducible research, Statistical inference, Regression models, Machine learning and Developing data products).
+
+
+Passed course of Beginning Game Programming with C# at Coursera and received Verified Certificate.  
+
+
+Conduct lectures and laboratory classes with students in such courses: 
+
+
+
+- Object-oriented programming in C++; 
+
+
+- Automata theory and formal languages; 
+
+
+- VBA and VB .NET; 
+
+
+- Mathematical modelling of system
+R, Vba, C/C++, STL, Python
+R, Web scraping, Data scraping, VBA, C/C++ STL, Python, C#, vb .net

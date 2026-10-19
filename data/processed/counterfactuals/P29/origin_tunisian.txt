@@ -1,0 +1,8 @@
+Nationality: Tunisian
+Location: Tunis, Tunisia
+Position: Junior Data Scientist
+Experience years: 0.5
+English level: fluent
+
+Successfully finished 14 weeks of Data Science program by Data Root University. Got In-depth knowledge of various Machine Learning technics, supervised/unsupervised learning and RESTful API development on Flask.
+Highly experienced scientist with a strong background in analytical chemistry and scientific research. Looking for new opportunities in the field of Data Science. Particularly motivated towards Machine Learning, Data Analysis and Prediction.

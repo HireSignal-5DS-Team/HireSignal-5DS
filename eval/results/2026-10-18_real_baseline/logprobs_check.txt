@@ -1,0 +1,1 @@
+real-GPU: raw output with logprobs identical to without on 30/30; confidence parsed 30/30; argmax label == model decision 30/30

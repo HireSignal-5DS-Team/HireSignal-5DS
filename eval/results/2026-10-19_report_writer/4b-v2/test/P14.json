@@ -1,0 +1,62 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because four must-have requirements are missing: knowledge of data warehousing and data lakes, hands-on SQL experience, knowledge of Python, and experience with a cloud provider. The score is 14, indicating a significant gap in core qualifications. No evidence was found for any of these must-have requirements.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: the CV does not show knowledge of data warehousing or data lakes.\"}, {\"req_id\": \"r2\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: hands-on SQL experience is not mentioned in the CV.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: knowledge of Python is not found in the CV.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: experience with GCP or another cloud provider is not present.\"}, {\"req_id\": \"r5\", \"decision\": \"UNCERTAIN\", \"quote\": \"English level: upper\", \"line\": \"Uncertain: the English level is listed as upper, but the Matcher was unsure if this meets the requirement.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: willingness to research business logic is not clearly stated in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show the following required qualifications: knowledge of data warehousing and data lakes, hands-on SQL experience, knowledge of Python, and experience with a cloud provider.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about English level (r5) and willingness to research business logic (r6)\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because four must-have requirements are missing: knowledge of data warehousing and data lakes, hands-on SQL experience, knowledge of Python, and experience with a cloud provider. The score is 14, indicating a significant gap in core qualifications. No evidence was found for any of these must-have requirements.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: the CV does not show knowledge of data warehousing or data lakes."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: hands-on SQL experience is not mentioned in the CV."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: knowledge of Python is not found in the CV."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: experience with GCP or another cloud provider is not present."
+   },
+   {
+    "req_id": "r5",
+    "decision": "UNCERTAIN",
+    "quote": "English level: upper",
+    "line": "Uncertain: the English level is listed as upper, but the Matcher was unsure if this meets the requirement."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: willingness to research business logic is not clearly stated in the CV."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show the following required qualifications: knowledge of data warehousing and data lakes, hands-on SQL experience, knowledge of Python, and experience with a cloud provider.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about English level (r5) and willingness to research business logic (r6)"
+  ]
+ },
+ "source": "llm",
+ "latency_s": 8.0,
+ "peak_vram_mib": 3267,
+ "id": "P14",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

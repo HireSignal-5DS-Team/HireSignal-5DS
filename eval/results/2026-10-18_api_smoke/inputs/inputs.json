@@ -1,0 +1,13 @@
+{
+ "kaggle_pdf": {
+  "path": "data\\raw\\kaggle_resume\\data\\data\\INFORMATION-TECHNOLOGY\\10089434.pdf",
+  "sha256": "98819185680ad47fbc77fed679f1205641114c97d9a1592b134102c3b018e1af"
+ },
+ "djinni_cv": {
+  "path": "data\\processed\\cvs\\551b9b18-2179-5b53-b776-7c0e183fbae4.txt",
+  "pair": "P11"
+ },
+ "job": {
+  "path": "data\\processed\\jobs\\J2.txt"
+ }
+}

@@ -1,0 +1,367 @@
+{
+ "run": "P38",
+ "pair": "P38",
+ "job": "J4",
+ "stratum_in_pairs_csv": "weak",
+ "requirements": "data/processed/jobs/J4_requirements.json (confirmed card)",
+ "execution_id": "60",
+ "n8n_started": "2026-10-19 04:59:39.267",
+ "n8n_stopped": "2026-10-19 05:00:04.766",
+ "total_wall_s": 25.66,
+ "outcome": "reject",
+ "score": 0,
+ "rule": "1 reject: must-have MISSING",
+ "reasons": [
+  "r1: must-have MISSING",
+  "r2: must-have MISSING",
+  "r3: must-have MISSING"
+ ],
+ "listed_flags": [
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter"
+ ],
+ "review_form_url": null,
+ "decisions": {
+  "r1": [
+   "must",
+   "MISSING"
+  ],
+  "r2": [
+   "must",
+   "MISSING"
+  ],
+  "r3": [
+   "must",
+   "MISSING"
+  ],
+  "r4": [
+   "nice",
+   "MISSING"
+  ],
+  "r5": [
+   "nice",
+   "MISSING"
+  ],
+  "r6": [
+   "nice",
+   "MISSING"
+  ]
+ },
+ "station_timings_s": {
+  "reader": 0.001,
+  "profile": 8.874,
+  "job": 0,
+  "match_and_judge": 7.644
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "node_timings": {
+  "Webhook (CV file + job text)": [
+   {
+    "start": 1792385979273,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "Check token": [
+   {
+    "start": 1792385979273,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Normalize input": [
+   {
+    "start": 1792385979275,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "HTTP /reader": [
+   {
+    "start": 1792385979278,
+    "ms": 7,
+    "status": "success"
+   }
+  ],
+  "HTTP /profile": [
+   {
+    "start": 1792385979285,
+    "ms": 8879,
+    "status": "success"
+   }
+  ],
+  "Confirmed requirements?": [
+   {
+    "start": 1792385988164,
+    "ms": 1,
+    "status": "success"
+   }
+  ],
+  "Confirmed job card": [
+   {
+    "start": 1792385988165,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Job card": [
+   {
+    "start": 1792385988169,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Merge": [
+   {
+    "start": 1792385988172,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Split requirements": [
+   {
+    "start": 1792385988174,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Loop requirements (1 at a time)": [
+   {
+    "start": 1792385988178,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385989785,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385991252,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385992425,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385993608,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385994769,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385995965,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "RAG lookup": [
+   {
+    "start": 1792385988178,
+    "ms": 20,
+    "status": "success"
+   },
+   {
+    "start": 1792385989785,
+    "ms": 4,
+    "status": "success"
+   },
+   {
+    "start": 1792385991252,
+    "ms": 15,
+    "status": "success"
+   },
+   {
+    "start": 1792385992425,
+    "ms": 15,
+    "status": "success"
+   },
+   {
+    "start": 1792385993608,
+    "ms": 11,
+    "status": "success"
+   },
+   {
+    "start": 1792385994769,
+    "ms": 11,
+    "status": "success"
+   }
+  ],
+  "HTTP /match": [
+   {
+    "start": 1792385988198,
+    "ms": 1563,
+    "status": "success"
+   },
+   {
+    "start": 1792385989789,
+    "ms": 1441,
+    "status": "success"
+   },
+   {
+    "start": 1792385991267,
+    "ms": 1134,
+    "status": "success"
+   },
+   {
+    "start": 1792385992440,
+    "ms": 1146,
+    "status": "success"
+   },
+   {
+    "start": 1792385993620,
+    "ms": 1128,
+    "status": "success"
+   },
+   {
+    "start": 1792385994781,
+    "ms": 1161,
+    "status": "success"
+   }
+  ],
+  "HTTP /judge": [
+   {
+    "start": 1792385989761,
+    "ms": 24,
+    "status": "success"
+   },
+   {
+    "start": 1792385991230,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792385992401,
+    "ms": 24,
+    "status": "success"
+   },
+   {
+    "start": 1792385993586,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792385994748,
+    "ms": 21,
+    "status": "success"
+   },
+   {
+    "start": 1792385995942,
+    "ms": 22,
+    "status": "success"
+   }
+  ],
+  "Aggregate": [
+   {
+    "start": 1792385995965,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "Bias Auditor": [
+   {
+    "start": 1792385995965,
+    "ms": 9,
+    "status": "success"
+   }
+  ],
+  "Outcome input": [
+   {
+    "start": 1792385995974,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "HTTP /outcome": [
+   {
+    "start": 1792385995978,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Report Writer": [
+   {
+    "start": 1792385995982,
+    "ms": 8759,
+    "status": "success"
+   }
+  ],
+  "Result": [
+   {
+    "start": 1792386004741,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "Respond to Webhook": [
+   {
+    "start": 1792386004746,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Switch outcome": [
+   {
+    "start": 1792386004749,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Decided by gate": [
+   {
+    "start": 1792386004751,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Outbox letter": [
+   {
+    "start": 1792386004755,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "To JSON file": [
+   {
+    "start": 1792386004759,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Write eval/outbox file": [
+   {
+    "start": 1792386004763,
+    "ms": 3,
+    "status": "success"
+   }
+  ]
+ },
+ "checks": {
+  "http_status": 200,
+  "valid_json": true,
+  "execution_status": "success",
+  "identity_values_in_private_file": 0,
+  "identity_values_found_in_execution_data": 0,
+  "raw_cv_text_in_execution_data": false,
+  "all_match_lora_scale_1": true,
+  "quotes_verified_positions": 2,
+  "uploaded_file_kept_by_n8n_binary_store": 2,
+  "changed_raw_lines_checked": 0
+ }
+}

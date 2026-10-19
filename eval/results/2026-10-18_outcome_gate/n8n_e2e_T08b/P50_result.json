@@ -1,0 +1,225 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "25",
+ "cv_id": "cv-48c47c41",
+ "job_id": "J4",
+ "job_title": "Python BackEnd Developer",
+ "outcome": "invite",
+ "rule": "3 invite: all must-haves MET, score >= t_invite",
+ "score": 89,
+ "reasons": [
+  "score 89 >= 85"
+ ],
+ "listed_flags": [
+  "r4 (nice): judge:disagrees",
+  "r5 (nice): evidence_not_in_cv",
+  "r5 (nice): met_without_verified_evidence",
+  "r3 (must, not outcome-relevant): judge:disagrees",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "message": null,
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Software development: 5 years of experience or more",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "More than 12+ years of experience working in Backend development:",
+     "start": 989,
+     "end": 1054
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999772,
+    "MISSING": 0.000228,
+    "UNCERTAIN": 0
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.4582
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "More than 12+ years of experience working in Backend development:",
+     "start": 989,
+     "end": 1054
+    },
+    {
+     "quote": "Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)",
+     "start": 1057,
+     "end": 1117
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999745,
+    "MISSING": 0.000254,
+    "UNCERTAIN": 1e-06
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.64
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)",
+     "start": 1057,
+     "end": 1117
+    },
+    {
+     "quote": "Golang (fiber, gin, beego, echo)",
+     "start": 1120,
+     "end": 1152
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999773,
+    "MISSING": 0.000226,
+    "UNCERTAIN": 1e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9899
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Working with AWS, Docker and microservices",
+   "kind": "nice",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)",
+     "start": 100,
+     "end": 209
+    },
+    {
+     "quote": "- Implemented CallCenter system based on Asterisk which processes 200+ calls at one moment.",
+     "start": 210,
+     "end": 301
+    },
+    {
+     "quote": "- Implemented LocationBased Social Network architecture, API and microservices.",
+     "start": 302,
+     "end": 381
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999848,
+    "MISSING": 0.00015,
+    "UNCERTAIN": 2e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9978
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Experience with Machine Learning",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "MET",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "evidence_not_in_cv",
+    "met_without_verified_evidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.803275,
+    "MISSING": 0.094716,
+    "UNCERTAIN": 0.10201
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.012343,
+    "MISSING": 0.291043,
+    "UNCERTAIN": 0.696614
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  }
+ ],
+ "timings_s": {
+  "reader": 0.027,
+  "profile": 41.154,
+  "job": 0,
+  "match_and_judge": 23.694
+ }
+}

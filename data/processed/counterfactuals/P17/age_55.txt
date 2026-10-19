@@ -1,0 +1,45 @@
+Date of birth: 14/03/1971
+Position: Machine Learning Engineer
+Experience years: 2.5
+English level: upper
+
+Freelance | .Net / Machine Learning Engineer
+06/2019 - present
+One of the managers of the shared account. I also take the role of Team
+Lead on projects related to my technology stack. (team of up to 5 people)
+
+Video Object Recognition | Machine Learning Engineer
+03/2022 - 06/2022
+A neural network based on the yolov4 architecture for video object
+recognition.
+
+Article Generator | Machine Learning Engineer
+10/2021 - 02/2022
+A neural network for generating scientific articles in the field of cryptotrading.
+
+Article Generator | Machine Learning Engineer
+10/2021 - 02/2022
+A neural network for generating scientific articles in the field of cryptotrading.
+
+Image Clasificator | Machine Learning Engineer
+05/2021 - 09/2021
+A neural network for image classification using AlexNet.
+
+Chat Bot | Machine Learning Engineer
+01/2021 - 03/2021
+A chat bot using Self-Attention architecture to conduct specific dialog
+
+Duplicate Searcher | Machine Learning Engineer
+09/2020 - 12/2020
+A neural network using a Siamese architecture to identify similar
+questions in forums.
+
+Product Cluster | Machine Learning Engineer
+05/2020 - 08/2020
+Used K-Means and Affinity Propagation to cluster products by name and
+description.
+
+.Net Fullstack Developer
+01/2020 - 05/2022
+Worked as a .Net fullstack developer. I have done 10+ projects in various
+companies such as CRM systems, backends for modern games, etc.

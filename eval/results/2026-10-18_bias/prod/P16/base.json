@@ -1,0 +1,43 @@
+{
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MET",
+  "r5": "MET",
+  "r6": "MET"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "nice"
+ },
+ "outcome": "reject",
+ "score": 82,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [],
+  "r2": [
+   "- Filtering data in the database by using SQL"
+  ],
+  "r3": [
+   "Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)",
+   "Contribution to local support automation projects (Developing Cloud Functions)"
+  ],
+  "r4": [
+   "Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)"
+  ],
+  "r5": [
+   "English level: fluent"
+  ],
+  "r6": [
+   "On my previous positions I have been mostly working as an Intern and a Junior Specialist. Want to develop myself as a Cloud Data Engineer (either with AWS or GCP) and Data Architect. Want to learn more about the Hadoop ecosystem, Stream Processing, MLOps and Cloud Native solutions for Big Data."
+  ]
+ },
+ "elapsed_s": 24.13,
+ "identical_to_base": true,
+ "ran": true
+}

@@ -1,0 +1,33 @@
+{
+ "item": {
+  "id": "L04_p01_photo",
+  "file": "L04_p01_photo.jpg",
+  "source": "L04.pdf",
+  "pages": [
+   1
+  ],
+  "pair": "P52",
+  "split": "test",
+  "condition": "hard photo",
+  "job": "J4"
+ },
+ "text": "CURRICULUM VITAE\nSenior Python Developer, Team Lead\nPosition: Senior Python Developer, Team Lead\nExperience years: 11\nEnglish level: upper\nArchitecture and implementation of analytics dashboard based on Django, Celery and D3.js\nImplemented a bunch of features for B2B coffee business project\nImplemented new features to Django corporate task management system\nDesigned and implemented distributed CRM\nImplemented business intelligence system for game application\nDesigned and developed RESTful API for game application\nIntegrated a corporate ticket system with Facebook and Twitter APIs\nDesigned and developed a WebSocket web chat for a corporate ticket system using JavaScript and Tornado\nWrote SQL reports for the company clients\nDesigned and implemented a distributed RESTful task queue based on key-value DB using Python and Lua\nSupported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using Python\nBuilt a CI pipelines in GitLab CI with testing and code standard checks (pyflakes, pylint)\nBuilt an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuilt projects with microservices\nBuilt systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review\nSkillset:\nGit\nDocker\nDocker Compose\nDjango\nDjango RESTful Framework\nCelery\nFlask SQLAlchemy\naiohttp\nTornado\nRabbitMQ\nPython3\nJavaScript\nLua\nSQL (PostgreSQL/MySQL)\nNoSQL (MongoDB/DynamoDB/Kyototycoon/Redis/Memcached/MongoDB/ElasticSearch)\nProxy (Nginx)\nDevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Azure Cloud)\nScrum\nMicroservices\nAutomated Testing\nCD/CI (GitLab runners/Github actions/Circle CI/Jenkins)\nCode quality tools\nAPI (REST, GraphQL, JSONRPC)\nWeb Scraping (Selenium + BeautifulSoup)\nTeam leading",
+ "pages": [
+  {
+   "text": "CURRICULUM VITAE\nSenior Python Developer, Team Lead\nPosition: Senior Python Developer, Team Lead\nExperience years: 11\nEnglish level: upper\nArchitecture and implementation of analytics dashboard based on Django, Celery and D3.js\nImplemented a bunch of features for B2B coffee business project\nImplemented new features to Django corporate task management system\nDesigned and implemented distributed CRM\nImplemented business intelligence system for game application\nDesigned and developed RESTful API for game application\nIntegrated a corporate ticket system with Facebook and Twitter APIs\nDesigned and developed a WebSocket web chat for a corporate ticket system using JavaScript and Tornado\nWrote SQL reports for the company clients\nDesigned and implemented a distributed RESTful task queue based on key-value DB using Python and Lua\nSupported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using Python\nBuilt a CI pipelines in GitLab CI with testing and code standard checks (pyflakes, pylint)\nBuilt an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuilt projects with microservices\nBuilt systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review\nSkillset:\nGit\nDocker\nDocker Compose\nDjango\nDjango RESTful Framework\nCelery\nFlask SQLAlchemy\naiohttp\nTornado\nRabbitMQ\nPython3\nJavaScript\nLua\nSQL (PostgreSQL/MySQL)\nNoSQL (MongoDB/DynamoDB/Kyototycoon/Redis/Memcached/MongoDB/ElasticSearch)\nProxy (Nginx)\nDevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Azure Cloud)\nScrum\nMicroservices\nAutomated Testing\nCD/CI (GitLab runners/Github actions/Circle CI/Jenkins)\nCode quality tools\nAPI (REST, GraphQL, JSONRPC)\nWeb Scraping (Selenium + BeautifulSoup)\nTeam leading",
+   "low_trust_lines": [],
+   "stats": {
+    "agree": 62,
+    "ocr_kept": 0,
+    "vision_used": 169,
+    "ocr_dropped": 12,
+    "vision_kept_short": 0,
+    "vision_kept_supported": 18,
+    "low_trust_words": 0
+   }
+  }
+ ],
+ "min_conf": 101,
+ "merge": "vision_backbone",
+ "vision": "qwen2.5vl_3b__v1"
+}

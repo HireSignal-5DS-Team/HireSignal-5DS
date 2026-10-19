@@ -1,0 +1,30 @@
+{
+  "additionalProperties": false,
+  "description": "What the Matcher model must emit for one requirement (strict JSON). Adapted from team V2: matcher/json_schemas/ModelAnswer.schema.json (feature/agent-integration @ a5a03ff); change: evidence is required (V2 defaults it to []), so every reply has the 4 keys of prompt matcher-v1. Property order = generation order under llama.cpp grammar.",
+  "properties": {
+    "decision": {
+      "enum": ["MET", "MISSING", "UNCERTAIN"],
+      "title": "Decision",
+      "type": "string"
+    },
+    "basis": {
+      "enum": ["supported", "contradicted", "not_documented", "ambiguous"],
+      "title": "Basis",
+      "type": "string"
+    },
+    "evidence": {
+      "items": {"type": "string"},
+      "maxItems": 3,
+      "title": "Evidence",
+      "type": "array"
+    },
+    "explanation": {
+      "maxLength": 600,
+      "title": "Explanation",
+      "type": "string"
+    }
+  },
+  "required": ["decision", "basis", "evidence", "explanation"],
+  "title": "ModelAnswer",
+  "type": "object"
+}

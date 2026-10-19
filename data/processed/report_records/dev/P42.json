@@ -1,0 +1,179 @@
+{
+ "job_title": "Data Scientist",
+ "decided_by": "gate",
+ "outcome": "reject",
+ "score": 80,
+ "gate_rule": "1 reject: must-have MISSING",
+ "gate_reasons": [
+  "r4: must-have MISSING"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Data Science: 4 years of experience or more",
+   "decision": "MET",
+   "quotes": [
+    "Together with team achieved TOP 14% in AMEX Kaggle competition.",
+    "Data scientist:"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "evidence_not_in_cv",
+    "duration_not_in_evidence",
+    "judge:disagrees"
+   ],
+   "skill_terms": [],
+   "min_years": 4.0,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Good knowledge of probability theory and statistics",
+   "decision": "MET",
+   "quotes": [
+    "College lecturer (1 term): Probability theory and statistics"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "probability theory",
+    "statistics"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Understanding of Bayesian methods, time series analysis or sensor signal processing",
+   "decision": "MET",
+   "quotes": [
+    "- Making research on behavioral biases' impact on traders' performance",
+    "- Time Series forecasting using FFT, Facebook Prophet model",
+    "- Developing method for probability calculation in clinical trials which is based on Diophantine inequality, Monte Carlo method for multiple integral derivation"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Bayesian methods",
+    "time series analysis",
+    "sensor signal processing"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "must",
+   "text": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Pyro",
+    "PyMC3",
+    "JAGS"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "must",
+   "text": "Experience with cloud (Amazon SageMaker)",
+   "decision": "MET",
+   "quotes": [
+    "Leading Junior Data Scientist.",
+    "AWS Sagemaker, sklearn processing jobs."
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Amazon SageMaker"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "must",
+   "text": "Experience with PySpark",
+   "decision": "MET",
+   "quotes": [
+    "Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)",
+    "Rewriting MSSQL queries to PySpark"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "PySpark"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r7",
+   "kind": "must",
+   "text": "Strong working knowledge of SQL",
+   "decision": "UNCERTAIN",
+   "quotes": [
+    "Rewriting MSSQL queries to PySpark"
+   ],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": true,
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "skill_terms": [
+    "SQL"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r8",
+   "kind": "nice",
+   "text": "Ph.D. in Mathematics",
+   "decision": "MET",
+   "quotes": [
+    "PhD in Mathematics (currently) (Stochastic differential equations area)"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P42",
+ "pair_id": "P42",
+ "split": "dev",
+ "synthetic_flags": false
+}

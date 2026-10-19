@@ -1,0 +1,370 @@
+{
+ "run": "P12",
+ "pair": "P12",
+ "job": "J2",
+ "stratum_in_pairs_csv": "strong",
+ "requirements": "data/processed/jobs/J2_requirements.json (confirmed card)",
+ "execution_id": "47",
+ "n8n_started": "2026-10-19 04:49:03.709",
+ "n8n_stopped": "2026-10-19 04:50:06.725",
+ "total_wall_s": 63.18,
+ "outcome": "reject",
+ "score": 32,
+ "rule": "1 reject: must-have MISSING",
+ "reasons": [
+  "r2: must-have MISSING",
+  "r3: must-have MISSING",
+  "r4: must-have MISSING"
+ ],
+ "listed_flags": [
+  "r6 (nice): match:low_confidence",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "review_form_url": null,
+ "decisions": {
+  "r1": [
+   "must",
+   "MET"
+  ],
+  "r2": [
+   "must",
+   "MISSING"
+  ],
+  "r3": [
+   "must",
+   "MISSING"
+  ],
+  "r4": [
+   "must",
+   "MISSING"
+  ],
+  "r5": [
+   "must",
+   "UNCERTAIN"
+  ],
+  "r6": [
+   "nice",
+   "UNCERTAIN"
+  ]
+ },
+ "station_timings_s": {
+  "reader": 0.001,
+  "profile": 45.514,
+  "job": 0,
+  "match_and_judge": 8.93
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "node_timings": {
+  "Webhook (CV file + job text)": [
+   {
+    "start": 1792385343716,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "Check token": [
+   {
+    "start": 1792385343716,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Normalize input": [
+   {
+    "start": 1792385343718,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "HTTP /reader": [
+   {
+    "start": 1792385343721,
+    "ms": 6,
+    "status": "success"
+   }
+  ],
+  "HTTP /profile": [
+   {
+    "start": 1792385343727,
+    "ms": 45522,
+    "status": "success"
+   }
+  ],
+  "Confirmed requirements?": [
+   {
+    "start": 1792385389249,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Confirmed job card": [
+   {
+    "start": 1792385389251,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Job card": [
+   {
+    "start": 1792385389254,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Merge": [
+   {
+    "start": 1792385389257,
+    "ms": 1,
+    "status": "success"
+   }
+  ],
+  "Split requirements": [
+   {
+    "start": 1792385389258,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Loop requirements (1 at a time)": [
+   {
+    "start": 1792385389261,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385391642,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385392938,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385394331,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385395720,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385396995,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385398319,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "RAG lookup": [
+   {
+    "start": 1792385389261,
+    "ms": 17,
+    "status": "success"
+   },
+   {
+    "start": 1792385391642,
+    "ms": 4,
+    "status": "success"
+   },
+   {
+    "start": 1792385392938,
+    "ms": 13,
+    "status": "success"
+   },
+   {
+    "start": 1792385394331,
+    "ms": 12,
+    "status": "success"
+   },
+   {
+    "start": 1792385395721,
+    "ms": 3,
+    "status": "success"
+   },
+   {
+    "start": 1792385396995,
+    "ms": 16,
+    "status": "success"
+   }
+  ],
+  "HTTP /match": [
+   {
+    "start": 1792385389278,
+    "ms": 2341,
+    "status": "success"
+   },
+   {
+    "start": 1792385391646,
+    "ms": 1250,
+    "status": "success"
+   },
+   {
+    "start": 1792385392951,
+    "ms": 1339,
+    "status": "success"
+   },
+   {
+    "start": 1792385394343,
+    "ms": 1335,
+    "status": "success"
+   },
+   {
+    "start": 1792385395725,
+    "ms": 1265,
+    "status": "success"
+   },
+   {
+    "start": 1792385397011,
+    "ms": 1304,
+    "status": "success"
+   }
+  ],
+  "HTTP /judge": [
+   {
+    "start": 1792385391619,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792385392896,
+    "ms": 42,
+    "status": "success"
+   },
+   {
+    "start": 1792385394290,
+    "ms": 41,
+    "status": "success"
+   },
+   {
+    "start": 1792385395679,
+    "ms": 41,
+    "status": "success"
+   },
+   {
+    "start": 1792385396990,
+    "ms": 5,
+    "status": "success"
+   },
+   {
+    "start": 1792385398315,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Aggregate": [
+   {
+    "start": 1792385398319,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "Bias Auditor": [
+   {
+    "start": 1792385398319,
+    "ms": 19,
+    "status": "success"
+   }
+  ],
+  "Outcome input": [
+   {
+    "start": 1792385398338,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "HTTP /outcome": [
+   {
+    "start": 1792385398342,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "Report Writer": [
+   {
+    "start": 1792385398347,
+    "ms": 8353,
+    "status": "success"
+   }
+  ],
+  "Result": [
+   {
+    "start": 1792385406700,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Respond to Webhook": [
+   {
+    "start": 1792385406704,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Switch outcome": [
+   {
+    "start": 1792385406707,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Decided by gate": [
+   {
+    "start": 1792385406710,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Outbox letter": [
+   {
+    "start": 1792385406713,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "To JSON file": [
+   {
+    "start": 1792385406717,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Write eval/outbox file": [
+   {
+    "start": 1792385406721,
+    "ms": 3,
+    "status": "success"
+   }
+  ]
+ },
+ "checks": {
+  "http_status": 200,
+  "valid_json": true,
+  "execution_status": "success",
+  "identity_values_in_private_file": 1,
+  "identity_values_found_in_execution_data": 0,
+  "raw_cv_text_in_execution_data": false,
+  "all_match_lora_scale_1": true,
+  "quotes_verified_positions": 2,
+  "uploaded_file_kept_by_n8n_binary_store": 2,
+  "changed_raw_lines_checked": 1
+ }
+}

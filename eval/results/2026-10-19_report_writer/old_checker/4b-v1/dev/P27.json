@@ -1,0 +1,71 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v1.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because two must-have requirements are missing: experience with ML in production and experience with microservices architecture, cloud technologies, Docker, and Kubernetes. The candidate has met Python skills and experience with tabular and time series data. There is uncertainty about deep learning techniques and ML libraries, but these are not must-have requirements.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of 3+ years of ML in production (training, testing, deployment, monitoring)."
+   },
+   {
+    "req_id": "r2",
+    "decision": "UNCERTAIN",
+    "quote": "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library.",
+    "line": "Uncertain: The candidate's project does not clearly show proven experience with Gradient Boosting Trees or modern deep learning techniques."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Using Python to build optimization methods.",
+    "line": "Met: The candidate demonstrates excellent Python coding skills."
+   },
+   {
+    "req_id": "r4",
+    "decision": "UNCERTAIN",
+    "quote": "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library.",
+    "line": "Uncertain: The candidate's project does not clearly show proficiency with TensorFlow, PyTorch, LightGBM, or Scikit-learn."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library.",
+    "line": "Met: The candidate has experience with tabular and time series data."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of experience with microservices architecture, cloud technologies, Docker, or Kubernetes."
+   },
+   {
+    "req_id": "r7",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of experience with data pipelines or big data."
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of experience with AutoML flows or frameworks."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the ML Engineer position. We will not move forward with your application, because your CV does not show two required experiences: 3+ years of ML in production (training, testing, deployment, monitoring) and experience with microservices architecture, cloud technologies, Docker, and Kubernetes.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about deep learning techniques (r2) and ML libraries (r4)."
+  ]
+ },
+ "source": "llm",
+ "latency_s": 13.22,
+ "peak_vram_mib": 3267,
+ "id": "P27",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

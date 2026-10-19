@@ -1,0 +1,127 @@
+{
+ "job_title": "Python BackEnd Developer",
+ "decided_by": "gate",
+ "outcome": "reject",
+ "score": 0,
+ "gate_rule": "1 reject: must-have MISSING",
+ "gate_reasons": [
+  "r1: must-have MISSING",
+  "r2: must-have MISSING",
+  "r3: must-have MISSING"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Software development: 5 years of experience or more",
+   "decision": "MISSING",
+   "quotes": [
+    "Experience years: 1"
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": 5.0,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "decision": "MISSING",
+   "quotes": [
+    "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+   ],
+   "judge": "UNCERTAIN",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:uncertain"
+   ],
+   "skill_terms": [
+    "Python"
+   ],
+   "min_years": 2.0,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "asynchronous programming",
+    "performance-critical applications"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "nice",
+   "text": "Working with AWS, Docker and microservices",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "AWS",
+    "Docker",
+    "microservices"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "nice",
+   "text": "Experience with Machine Learning",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Machine Learning"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "nice",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "collaborative filtering",
+    "similarity",
+    "data normalization",
+    "clustering"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P40",
+ "pair_id": "P40",
+ "split": "test",
+ "synthetic_flags": false
+}

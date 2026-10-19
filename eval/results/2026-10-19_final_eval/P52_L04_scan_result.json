@@ -1,0 +1,327 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "71",
+ "cv_id": "cv-de9365c9",
+ "job_id": "J4",
+ "job_title": "Python BackEnd Developer",
+ "outcome": "review",
+ "rule": "0 review: CV image too poor to decide",
+ "score": 78,
+ "reasons": [
+  "pair: reader:low_confidence_or_little_text"
+ ],
+ "listed_flags": [
+  "r4 (nice): judge:disagrees",
+  "r3 (must, not outcome-relevant): judge:disagrees",
+  "pair: reader:Noisy image: denoised before OCR (median 5), confidence 66.4 -> 68.3.",
+  "pair: reader:Noisy image: denoised before OCR (median 5), confidence 33.0 -> 34.2.",
+  "pair: reader:2 page(s) had no text layer and were read with mode late.",
+  "pair: reader:Low OCR confidence (51.2/100): the text may contain errors.",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: job:requirements confirmed by recruiter"
+ ],
+ "message": null,
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": "http://localhost:5678/form-waiting/71?signature=3b6cb1b2d39110fef7329cf8216c4c985664590b6df2b0cf5d1ca16dd4fee2c3",
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Software development: 5 years of experience or more",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Over 10 years of experience as a Software Developer mostly using python",
+     "start": 859,
+     "end": 930
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999857,
+    "MISSING": 0.000143,
+    "UNCERTAIN": 0
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9528
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Over 10 years of experience as a Software Developer mostly using python",
+     "start": 859,
+     "end": 930
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.998814,
+    "MISSING": 0.001177,
+    "UNCERTAIN": 9e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.8994
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Build systems with multi-threading and asynchronous approach (tornado, aichttp, celery)",
+     "start": 1145,
+     "end": 1232
+    },
+    {
+     "quote": "Designed and implemented destibuted CRM.",
+     "start": 349,
+     "end": 389
+    },
+    {
+     "quote": "Designed and developed RESTful API for game application",
+     "start": 452,
+     "end": 507
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999476,
+    "MISSING": 0.000504,
+    "UNCERTAIN": 2e-05
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.8898
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Working with AWS, Docker and microservices",
+   "kind": "nice",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Build projects with microservices",
+     "start": 1111,
+     "end": 1144
+    },
+    {
+     "quote": "Build systems with multi-threading and asynchronous approach (tornado, aichttp, celery)",
+     "start": 1145,
+     "end": 1232
+    },
+    {
+     "quote": "Build an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)",
+     "start": 1025,
+     "end": 1110
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999243,
+    "MISSING": 0.000734,
+    "UNCERTAIN": 2.3e-05
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.932
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Experience with Machine Learning",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000151,
+    "MISSING": 0.987907,
+    "UNCERTAIN": 0.011942
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9984
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000562,
+    "MISSING": 0.964111,
+    "UNCERTAIN": 0.035326
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.914
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is sent for review because the automated system had low confidence in the text quality of the CV, and some must-have requirements were not clearly met. The candidate has over 10 years of Python development experience, which satisfies the 5-year requirement. Experience with developing big systems in Python is met, as shown in the CV. Asynchronous programming and performance-critical applications are also supported by the CV. However, the system had low confidence in reading the text, so a human review is needed to confirm all must-have requirements.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Over 10 years of experience as a Software Developer mostly using python",
+    "line": "Met: the CV shows over 10 years of experience as a Software Developer using Python."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Over 10 years of experience as a Software Developer mostly using python",
+    "line": "Met: the CV shows over 10 years of experience as a Software Developer using Python."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Build systems with multi-threading and asynchronous approach (tornado, aichttp, celery)",
+    "line": "Met: the CV mentions asynchronous programming with tornado, aichttp, and celery."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Build projects with microservices",
+    "line": "Met: the CV mentions building projects with microservices."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with Machine Learning is not mentioned in the CV."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with algorithms development (collaborative filtering, similarity, data normalization, clustering) is not mentioned in the CV."
+   }
+  ],
+  "candidate_letter": "",
+  "flags_for_recruiter": [
+   "The CV image was hard to read, leading to low confidence in text extraction."
+  ],
+  "source": "llm",
+  "info_flags": [],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [],
+  "would_be_outcome": "review",
+  "swap": {
+   "ran": false,
+   "skipped": "gate would answer review: a person reviews it anyway"
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "pdf",
+  "mode": "late",
+  "read_path": [
+   "late",
+   "late"
+  ],
+  "pages": [
+   {
+    "route": "late",
+    "vision_model": "qwen2.5vl:3b",
+    "vision_latency_s": 88.05,
+    "unclear_share": 0,
+    "fusion": {
+     "agree": 194,
+     "ocr_kept": 0,
+     "vision_used": 40,
+     "ocr_dropped": 148,
+     "vision_kept_short": 0,
+     "vision_kept_supported": 10,
+     "low_trust_words": 0
+    },
+    "low_trust_lines": 0
+   },
+   {
+    "route": "late",
+    "vision_model": "qwen2.5vl:3b",
+    "vision_latency_s": 76.11,
+    "unclear_share": 0,
+    "fusion": {
+     "agree": 1,
+     "ocr_kept": 0,
+     "vision_used": 20,
+     "ocr_dropped": 1,
+     "vision_kept_short": 0,
+     "vision_kept_supported": 0,
+     "low_trust_words": 0
+    },
+    "low_trust_lines": 0
+   }
+  ],
+  "ocr_confidence": 51.2,
+  "review_reasons": [
+   "reader:low_confidence_or_little_text"
+  ]
+ },
+ "timings_s": {
+  "reader": 182.45,
+  "profile": 36.838,
+  "job": 0,
+  "match_and_judge": 10.189
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "decisions": {
+  "r1": "MET",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MET",
+  "r5": "MET",
+  "r6": "MISSING",
+  "r7": "MISSING",
+  "r8": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "must",
+  "r7": "nice",
+  "r8": "nice"
+ },
+ "outcome": "review",
+ "score": 71,
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "quotes": {
+  "r1": [
+   "Developed and deployed a driver behavior estimation model that can accurately estimate user driving and identify potentially dangerous events in real-time.",
+   "Designed, developed, and deployed a predictive maintenance model that provides crucial car maintenance recommendations based on detailed analysis of vehicle data.",
+   "Created a proof of concept for a car bumping detection model that can detect and alert users of potential collisions."
+  ],
+  "r2": [
+   "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment."
+  ],
+  "r3": [
+   "Built a GPS filtering model that effectively removes noise from GPS data in real-time.",
+   "Built an ML model that proposes the optimal path for a driver, taking into account fuel consumption to help users save on gas.",
+   "Co-designed and developed a user verification model based on pictures, ensuring reliable user authentication."
+  ],
+  "r4": [
+   "Built an ML model that proposes the optimal path for a driver, taking into account fuel consumption to help users save on gas.",
+   "Co-designed and developed a user verification model based on pictures, ensuring reliable user authentication.",
+   "Built a GPS filtering model that effectively removes noise from GPS data in real-time."
+  ],
+  "r5": [
+   "My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment.",
+   "I am a data scientist with 4+ years of experience, specializing in data exploration, processing, and building ML and NN models. My work has been focused on the automotive industry, but I am always eager to learn and take on new challenges."
+  ],
+  "r6": [],
+  "r7": [],
+  "r8": []
+ },
+ "elapsed_s": 35.24,
+ "identical_to_base": false,
+ "ran": true
+}

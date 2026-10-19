@@ -1,0 +1,8 @@
+Date of birth: 14/03/2001
+Position: Junior Data Scientist
+Experience years: 0.5
+English level: fluent
+
+In 2019, I have been granted presidential scholarship due to achieving the highest university entrance score in my country, Azerbaijan. I have BC IELTS 8.0 score, and I have certificates regarding ML & DL and Data Science which are shown in my LinkedIn profile.
+I have previously worked as a Cyber Risk Specialist. Right now, I am a Junior Data Scientist at PRODATA, with working experience of NLP, Computer Vision, data analysis, mostly in Python. I have several projects published on my Github, one of which involving wine score prediction using various models with TF & IDF implementation.
+I would be happy to work in a project involving Deep Learning.

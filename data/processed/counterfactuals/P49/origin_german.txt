@@ -1,0 +1,30 @@
+Nationality: German
+Location: Berlin, Germany
+Position: Data Scientist
+Experience years: 4
+English level: upper
+
+- Developed and deployed a driver behavior estimation model that can accurately estimate user driving and identify potentially dangerous events in real-time.
+- Designed, developed, and deployed a predictive maintenance model that provides crucial car maintenance recommendations based on detailed analysis of vehicle data.
+- Created a proof of concept for a car bumping detection model that can detect and alert users of potential collisions.
+- Built a GPS filtering model that effectively removes noise from GPS data in real-time.
+- Built an ML model that proposes the optimal path for a driver, taking into account fuel consumption to help users save on gas.
+- Co-designed and developed a user verification model based on pictures, ensuring reliable user authentication.
+- Built a churn prediction model for banking data, helping the company retain customers.
+- Served as a part-time backend developer for a startup platform, contributing to the development of their platform.
+- Mentored new team members.
+- Conducted extensive research, reviewing papers and creating proof of concept models for possible automotive, locating, dentistry, and interior design projects.
+- Kaggle Notebooks Master
+- Bronze medal for Google QUEST Q&A Labeling Competition (Kaggle)
+
+My main responsibilities: exploratory data analysis, paper analysis, data cleaning, data preprocessing, machine learning and deep learning model training and tuning, error analysis, and model deployment.
+ABOUT ME
+I am a data scientist with 4+ years of experience, specializing in data exploration, processing, and building ML and NN models. My work has been focused on the automotive industry, but I am always eager to learn and take on new challenges. I approach my work with passion and a strong work ethic, with an ability to quickly adapt to new situations. Overall, I am a motivated and skilled data scientist who is eager to take on new projects and advance my knowledge and skills.
+-----------------------------------------------------------
+MY SKILLS
+Approaches: linear models, SVM, Decision Trees, Random Forest, Gradient Boosting, k-nearest neighbours, PCA, MLP, CNN, RNN (LSTM, GRU), GAN, Transformers
+
+Tasks: image classification, image generation, time series forecasting/classification, clustering, sentence classification
+
+Technologies: python, pandas, numpy, pytorch ,tensorflow/keras, scikit-learn, xgboost, lightgbm, transformers, plotly, matplotlib, seaborn, streamlit, FastAPI, Django REST framework, PostgreSQL, Docker, Docker-compose, Gitlab CI/CD, AWS
+I'm open to all interesting opportunities

@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K08_p01_photo",
+  "file": "K08_p01_photo.jpg",
+  "source": "K01.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "Okay, here's a breakdown of the CV you provided, summarizing the key information about the Branch Chief Information Technology Specialist:\n\n**Overall Profile:**\n\n*   **Motivated & Experienced:** This specialist is described as motivated, skilled in communication, and possessing extensive experience in communication technology and cybersecurity. They have a track record of successful team leadership, training, and problem-solving.\n*   **Key Skills:** They highlight strong knowledge of INFORSEC/NETOPS, budget and cost analysis, Office of Management and Budget (OMB) processes, Department of Defense (DoD) and U.S. Air Force regulations, and cybersecurity practices. They also have expertise in planning, programming, and risk management (RBP).\n*   **Security Clearance:** Holds a TOP SECRET (TS) security clearance.\n\n**Professional Experience (Branch Chief Information Technology Company Name: V/C City):**\n\n*   **07/2014 to Current:**\n    *   **Program Evaluation & Support:**  Effectively manages, reviews, and evaluates multiple enterprise-level IT programs, serving as a senior technical advisor and evaluator for programs cutting-edge technology for the Headquarters Air Force (HAF) command, control, communications, computer, intelligence, surveillance, and reconnaissance (C4ISR).\n    *   **Collaboration & Management:** Establishes, develops, and maintains effective working relationships with top-level managers, program managers, commanders, contractors, DoD and other non-DoD agencies, and communications and information personnel in the National Capital Region.\n    *   **Research & Recommendations:** Researches and recommends innovative approaches to resolve major IT problems.\n    *   **Systems Analysis:** Performs complex analysis of systems integration, implementation, management, evaluation, and problem resolution.\n\n**Information Operations Specialist (INFORSEC/NETOPS Company Name: V/C City):**\n\n*   **08/2015 to 07/2018:**\n    *   **Cyber Workload Analysis:** Develops, evaluates, and plans for INFORSEC/NETOPS and other DoD operations support.\n    *   **Enabled Cases:** Enables case management and provides support for the strategic, operational, and tactical use of information.\n    *   **Risk Management:**  Identifies and mitigates risks associated with information operations.\n    *   **Training & Support:** Provides training and support to users of INFORSEC/NETOPS systems.\n\n**Key Takeaways:**\n\n*   This individual is a seasoned IT professional with a strong background in cybersecurity, INFORSEC/NETOPS, and program management.\n*   They have experience working with high-level leadership and managing complex IT projects.\n*   Their TOP SECRET security clearance indicates a high level of trust and access to sensitive information.\n\nDo you want me to focus on a specific aspect of this CV, such as their skills, experience, or security clearance?",
+   "model": "gemma3:4b",
+   "latency_s": 16.1,
+   "eval_count": 605,
+   "done_reason": "stop",
+   "peak_vram_mib": 3887
+  }
+ ]
+}

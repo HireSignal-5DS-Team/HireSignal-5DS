@@ -1,0 +1,25 @@
+Native language: Arabic
+Position: Data Scientist
+Experience years: 1.5
+English level: intermediate
+
+2020 - Present   Data analyst/Data scientist
+•	Sales forecasting of CPG products
+•	Data analysis, reports preparation and insights generation based on the historical data
+•	Data manipulation, data preparation according to requests using python
+2017 – 2019	 Sr. Business Analyst
+•	Support and coordination of work of BAs group as a regional team lead. 
+•	Automatization of the internal processes. 
+•	Business analysis and demand forecasting. 
+•	Client communication and support, analysis of clients’ requests.
+•	Development specifications for new features of the product. 
+2013 – 2016	 Business Analyst
+•	Business analysis and demand forecasting, data mining and analysis, trends research and analysis. 
+•	Software testing. 
+•	Development of videos for clients training.
+•	Preparation and analysis of the reports with work results.
+2012 – 2013	 
+Specialist of Business Intelligence and Report Development   Department, bank
+•	Development internal reports according to requests using DB ORACLE 10g, tools of PL SQL Developer, Oracle Discover.  
+•	Writing explanatory documentation about developed reports.
+•	Testing and performance analysis of developed reports.

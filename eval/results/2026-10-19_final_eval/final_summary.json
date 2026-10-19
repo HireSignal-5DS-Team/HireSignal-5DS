@@ -1,0 +1,647 @@
+{
+ "label": "real-GPU, full production chain through n8n (Reader late fusion, Profile + guard, confirmed cards, RAG V6, Matcher + confidence, Judge, Bias Auditor, gate, Report Writer v3)",
+ "groups": {
+  "test pairs (original files)": {
+   "pairs": 26,
+   "requirements": 182,
+   "req_accuracy": 0.753,
+   "req_macro_f1": 0.644,
+   "req_f1": {
+    "MET": 0.771,
+    "MISSING": 0.87,
+    "UNCERTAIN": 0.291
+   },
+   "false_met": 13,
+   "outcome_confusion_gold_rows_pred_cols": {
+    "invite": {
+     "invite": 0,
+     "review": 1,
+     "reject": 0
+    },
+    "review": {
+     "invite": 0,
+     "review": 3,
+     "reject": 4
+    },
+    "reject": {
+     "invite": 0,
+     "review": 0,
+     "reject": 18
+    }
+   },
+   "outcome_agreement": 21,
+   "false_invites": 0,
+   "false_rejects": 4,
+   "review_rate": 0.154,
+   "report_llm": 20,
+   "report_template_fallback": 6,
+   "bias_swap_ran": 22,
+   "bias_swap_flips": 0,
+   "bias_swap_identical_input": 22,
+   "latency_s_per_cv_mean": 55.2,
+   "latency_s_per_cv_max": 162.2,
+   "station_s_mean": {
+    "reader": 0.01,
+    "profile": 25.75,
+    "job card": 0.0,
+    "rag": 4.59,
+    "match": 10.67,
+    "judge": 0.24,
+    "bias": 0.01,
+    "outcome": 0.01,
+    "report": 13.73
+   },
+   "station_s_max": {
+    "reader": 0.07,
+    "profile": 69.55,
+    "job card": 0.01,
+    "rag": 117.39,
+    "match": 19.47,
+    "judge": 2.24,
+    "bias": 0.03,
+    "outcome": 0.01,
+    "report": 28.12
+   }
+  },
+  "photo / scan cases": {
+   "pairs": 5,
+   "requirements": 36,
+   "req_accuracy": 0.806,
+   "req_macro_f1": 0.57,
+   "req_f1": {
+    "MET": 0.842,
+    "MISSING": 0.867,
+    "UNCERTAIN": 0.0
+   },
+   "false_met": 3,
+   "outcome_confusion_gold_rows_pred_cols": {
+    "invite": {
+     "invite": 0,
+     "review": 2,
+     "reject": 0
+    },
+    "review": {
+     "invite": 0,
+     "review": 1,
+     "reject": 1
+    },
+    "reject": {
+     "invite": 0,
+     "review": 0,
+     "reject": 1
+    }
+   },
+   "outcome_agreement": 2,
+   "false_invites": 0,
+   "false_rejects": 1,
+   "review_rate": 0.6,
+   "report_llm": 5,
+   "report_template_fallback": 0,
+   "bias_swap_ran": 2,
+   "bias_swap_flips": 0,
+   "bias_swap_identical_input": 2,
+   "latency_s_per_cv_mean": 187.7,
+   "latency_s_per_cv_max": 238.5,
+   "station_s_mean": {
+    "reader": 128.07,
+    "profile": 37.26,
+    "job card": 0.0,
+    "rag": 0.1,
+    "match": 11.78,
+    "judge": 0.18,
+    "bias": 0.01,
+    "outcome": 0.01,
+    "report": 10.09
+   },
+   "station_s_max": {
+    "reader": 182.46,
+    "profile": 62.74,
+    "job card": 0.0,
+    "rag": 0.24,
+    "match": 18.32,
+    "judge": 0.21,
+    "bias": 0.01,
+    "outcome": 0.01,
+    "report": 11.55
+   }
+  }
+ },
+ "privacy": {
+  "identity_values_found": 2,
+  "raw_text_in_execution": 0
+ },
+ "rows": {
+  "test pairs (original files)": [
+   {
+    "run": "P02",
+    "pair": "P02",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 162.23,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.008
+    }
+   },
+   {
+    "run": "P04",
+    "pair": "P04",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 33.83,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.005
+    }
+   },
+   {
+    "run": "P06",
+    "pair": "P06",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 42.27,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.007
+    }
+   },
+   {
+    "run": "P08",
+    "pair": "P08",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 30.96,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.004
+    }
+   },
+   {
+    "run": "P10",
+    "pair": "P10",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 28.08,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.004
+    }
+   },
+   {
+    "run": "P12",
+    "pair": "P12",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 63.18,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.012
+    }
+   },
+   {
+    "run": "P14",
+    "pair": "P14",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 17.21,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.003
+    }
+   },
+   {
+    "run": "P16",
+    "pair": "P16",
+    "outcome": "reject",
+    "gold_outcome": "review",
+    "report_source": "llm",
+    "wall_s": 79.66,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.008
+    }
+   },
+   {
+    "run": "P18",
+    "pair": "P18",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 30.48,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.007
+    }
+   },
+   {
+    "run": "P20",
+    "pair": "P20",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 48.54,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.005
+    }
+   },
+   {
+    "run": "P22",
+    "pair": "P22",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "template",
+    "wall_s": 86.25,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.009
+    }
+   },
+   {
+    "run": "P24",
+    "pair": "P24",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 34.21,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.003
+    }
+   },
+   {
+    "run": "P26",
+    "pair": "P26",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "template",
+    "wall_s": 49.03,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.003
+    }
+   },
+   {
+    "run": "P28",
+    "pair": "P28",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 32.31,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.005
+    }
+   },
+   {
+    "run": "P30",
+    "pair": "P30",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 31.67,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.005
+    }
+   },
+   {
+    "run": "P32",
+    "pair": "P32",
+    "outcome": "review",
+    "gold_outcome": "review",
+    "report_source": "llm",
+    "wall_s": 72.95,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": false,
+     "skipped": "gate would answer review: a person reviews it anyway"
+    }
+   },
+   {
+    "run": "P34",
+    "pair": "P34",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "template",
+    "wall_s": 41.44,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.004
+    }
+   },
+   {
+    "run": "P36",
+    "pair": "P36",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "template",
+    "wall_s": 35.35,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.007
+    }
+   },
+   {
+    "run": "P38",
+    "pair": "P38",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 25.66,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.004
+    }
+   },
+   {
+    "run": "P40",
+    "pair": "P40",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 41.73,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.004
+    }
+   },
+   {
+    "run": "P43",
+    "pair": "P43",
+    "outcome": "reject",
+    "gold_outcome": "review",
+    "report_source": "llm",
+    "wall_s": 59.86,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.007
+    }
+   },
+   {
+    "run": "P44",
+    "pair": "P44",
+    "outcome": "reject",
+    "gold_outcome": "review",
+    "report_source": "llm",
+    "wall_s": 44.76,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.004
+    }
+   },
+   {
+    "run": "P46",
+    "pair": "P46",
+    "outcome": "reject",
+    "gold_outcome": "review",
+    "report_source": "llm",
+    "wall_s": 43.68,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "male_western",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.004
+    }
+   },
+   {
+    "run": "P47",
+    "pair": "P47",
+    "outcome": "review",
+    "gold_outcome": "review",
+    "report_source": "template",
+    "wall_s": 103.41,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": false,
+     "skipped": "gate would answer review: a person reviews it anyway"
+    }
+   },
+   {
+    "run": "P49",
+    "pair": "P49",
+    "outcome": "review",
+    "gold_outcome": "review",
+    "report_source": "template",
+    "wall_s": 113.22,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": false,
+     "skipped": "gate would answer review: a person reviews it anyway"
+    }
+   },
+   {
+    "run": "P52",
+    "pair": "P52",
+    "outcome": "review",
+    "gold_outcome": "invite",
+    "report_source": "llm",
+    "wall_s": 84.21,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": false,
+     "skipped": "gate would answer review: a person reviews it anyway"
+    }
+   }
+  ],
+  "photo / scan cases": [
+   {
+    "run": "P02_K03_photo",
+    "pair": "P02",
+    "outcome": "reject",
+    "gold_outcome": "reject",
+    "report_source": "llm",
+    "wall_s": 154.85,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.006
+    }
+   },
+   {
+    "run": "P15_K01_photo",
+    "pair": "P15",
+    "outcome": "review",
+    "gold_outcome": "invite",
+    "report_source": "llm",
+    "wall_s": 186.67,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": false,
+     "skipped": "gate would answer review: a person reviews it anyway"
+    }
+   },
+   {
+    "run": "P43_L05_photo",
+    "pair": "P43",
+    "outcome": "reject",
+    "gold_outcome": "review",
+    "report_source": "llm",
+    "wall_s": 148.78,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": true,
+     "counterfactual": "female_arab",
+     "how": "name + pronouns added",
+     "identical_matcher_input": true,
+     "latency_s": 0.007
+    }
+   },
+   {
+    "run": "P47_K02_photo",
+    "pair": "P47",
+    "outcome": "review",
+    "gold_outcome": "review",
+    "report_source": "llm",
+    "wall_s": 209.79,
+    "reader_mode": "late",
+    "reader_reasons": [],
+    "swap": {
+     "ran": false,
+     "skipped": "gate would answer review: a person reviews it anyway"
+    }
+   },
+   {
+    "run": "P52_L04_scan",
+    "pair": "P52",
+    "outcome": "review",
+    "gold_outcome": "invite",
+    "report_source": "llm",
+    "wall_s": 238.46,
+    "reader_mode": "late",
+    "reader_reasons": [
+     "reader:low_confidence_or_little_text"
+    ],
+    "swap": {
+     "ran": false,
+     "skipped": "gate would answer review: a person reviews it anyway"
+    }
+   }
+  ]
+ }
+}

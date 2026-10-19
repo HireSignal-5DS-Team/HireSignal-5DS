@@ -1,0 +1,126 @@
+{
+ "job_title": "Python BackEnd Developer",
+ "decided_by": "gate",
+ "outcome": "reject",
+ "score": 0,
+ "gate_rule": "1 reject: must-have MISSING",
+ "gate_reasons": [
+  "r1: must-have MISSING",
+  "r3: must-have MISSING"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Software development: 5 years of experience or more",
+   "decision": "MISSING",
+   "quotes": [
+    "Experience years: 0.5"
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": 5.0,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "decision": "MISSING",
+   "quotes": [
+    "Up to year experience in pure Python3, and Django powered back-end application development."
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Python"
+   ],
+   "min_years": 2.0,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "asynchronous programming",
+    "performance-critical applications"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "nice",
+   "text": "Working with AWS, Docker and microservices",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "AWS",
+    "Docker",
+    "microservices"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "nice",
+   "text": "Experience with Machine Learning",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Machine Learning"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "nice",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "collaborative filtering",
+    "similarity",
+    "data normalization",
+    "clustering"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P39",
+ "pair_id": "P39",
+ "split": "dev",
+ "synthetic_flags": false
+}

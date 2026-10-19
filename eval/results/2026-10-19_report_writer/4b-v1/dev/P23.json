@@ -1,0 +1,76 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v1.md",
+ "attempts": 2,
+ "first_errors": [
+  "nice requirement r7 dropped",
+  "nice requirement r8 dropped"
+ ],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because four must-have requirements are missing: experience with ML in production, modern deep learning and Gradient Boosting Trees, proficiency with ML libraries like TensorFlow or PyTorch, and experience with microservices, cloud, Docker, and Kubernetes. The candidate's Coursera certificate mentions machine learning and data analysis but does not provide evidence of real-world deployment or hands-on experience with required tools. The score is 21.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No evidence of 3+ years of ML in production (training, testing, deployment, monitoring).\"}, {\"req_id\": \"r2\", \"decision\": \"MISSING\", \"quote\": \"Data Science, a 9-course specialization by Johns Hopkins University on Coursera. Specialization Certificate earned on December 2, 2015 (Data Science Tools, R programming, Getting and cleaning data, Exploratory data analysis, Reproducible research, Statistical inference, Regression models, Machine learning and Developing data products).\", \"line\": \"Missing: The certificate mentions machine learning but does not prove practical experience with modern deep learning or Gradient Boosting Trees.\"}, {\"req_id\": \"r3\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: Python coding skills are not clearly demonstrated in the CV.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No evidence of proficiency with TensorFlow, PyTorch, LightGBM, or Scikit-learn.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"Data Science, a 9-course specialization by Johns Hopkins University on Coursera. Specialization Certificate earned on December 2, 2015 (Data Science Tools, R programming, Getting and cleaning data, Exploratory data analysis, Reproducible research, Statistical inference, Regression models, Machine learning and Developing data products).\", \"line\": \"Met: The certificate references machine learning and data analysis, which may imply exposure to tabular and time series data.\"}, {\"req_id\": \"r6\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No evidence of experience with microservices, cloud technologies, Docker, or Kubernetes.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the ML Engineer position. We regret to inform you that your application is not moving forward. The CV does not show the required experience in ML in production, modern deep learning and Gradient Boosting Trees, proficiency with key ML libraries such as TensorFlow or PyTorch, or experience with microservices, cloud technologies, Docker, and Kubernetes.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": []}",
+  "{\"recruiter_summary\": \"The candidate is rejected because four must-have requirements are missing: experience with ML in production, proven experience with modern deep learning and Gradient Boosting Trees, proficiency with ML libraries such as TensorFlow, PyTorch, LightGBM, or Scikit-learn, and experience with microservices, cloud technologies, Docker, and Kubernetes. The candidate's Coursera certificate references machine learning but does not demonstrate practical experience with required techniques or tools. The score is 21.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No evidence of 3+ years of ML in production (training, testing, deployment, monitoring).\"}, {\"req_id\": \"r2\", \"decision\": \"MISSING\", \"quote\": \"Data Science, a 9-course specialization by Johns Hopkins University on Coursera. Specialization Certificate earned on December 2, 2015 (Data Science Tools, R programming, Getting and cleaning data, Exploratory data analysis, Reproducible research, Statistical inference, Regression models, Machine learning and Developing data products).\", \"line\": \"Missing: The certificate mentions machine learning but does not prove practical experience with modern deep learning or Gradient Boosting Trees.\"}, {\"req_id\": \"r3\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: Python coding skills are not clearly demonstrated in the CV.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No evidence of proficiency with TensorFlow, PyTorch, LightGBM, or Scikit-learn.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"Data Science, a 9-course specialization by Johns Hopkins University on Coursera. Specialization Certificate earned on December 2, 2015 (Data Science Tools, R programming, Getting and cleaning data, Exploratory data analysis, Reproducible research, Statistical inference, Regression models, Machine learning and Developing data products).\", \"line\": \"Met: The certificate references machine learning and data analysis, which may imply exposure to tabular and time series data.\"}, {\"req_id\": \"r6\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No evidence of experience with microservices, cloud technologies, Docker, or Kubernetes.\"}, {\"req_id\": \"r7\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No evidence of experience with data pipelines or big data.\"}, {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No evidence of experience designing or implementing AutoML flows or frameworks.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the ML Engineer position. We regret to inform you that your application is not moving forward. The CV does not show the required experience in ML in production, modern deep learning and Gradient Boosting Trees, proficiency with key ML libraries such as TensorFlow or PyTorch, or experience with microservices, cloud technologies, Docker, and Kubernetes. Additionally, there is no evidence of experience with data pipelines or big data, or with designing and implementing AutoML flows or frameworks.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": []}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because four must-have requirements are missing: experience with ML in production, proven experience with modern deep learning and Gradient Boosting Trees, proficiency with ML libraries such as TensorFlow, PyTorch, LightGBM, or Scikit-learn, and experience with microservices, cloud technologies, Docker, and Kubernetes. The candidate's Coursera certificate references machine learning but does not demonstrate practical experience with required techniques or tools. The score is 21.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of 3+ years of ML in production (training, testing, deployment, monitoring)."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "Data Science, a 9-course specialization by Johns Hopkins University on Coursera. Specialization Certificate earned on December 2, 2015 (Data Science Tools, R programming, Getting and cleaning data, Exploratory data analysis, Reproducible research, Statistical inference, Regression models, Machine learning and Developing data products).",
+    "line": "Missing: The certificate mentions machine learning but does not prove practical experience with modern deep learning or Gradient Boosting Trees."
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Python coding skills are not clearly demonstrated in the CV."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of proficiency with TensorFlow, PyTorch, LightGBM, or Scikit-learn."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "Data Science, a 9-course specialization by Johns Hopkins University on Coursera. Specialization Certificate earned on December 2, 2015 (Data Science Tools, R programming, Getting and cleaning data, Exploratory data analysis, Reproducible research, Statistical inference, Regression models, Machine learning and Developing data products).",
+    "line": "Met: The certificate references machine learning and data analysis, which may imply exposure to tabular and time series data."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of experience with microservices, cloud technologies, Docker, or Kubernetes."
+   },
+   {
+    "req_id": "r7",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of experience with data pipelines or big data."
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of experience designing or implementing AutoML flows or frameworks."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the ML Engineer position. We regret to inform you that your application is not moving forward. The CV does not show the required experience in ML in production, modern deep learning and Gradient Boosting Trees, proficiency with key ML libraries such as TensorFlow or PyTorch, or experience with microservices, cloud technologies, Docker, and Kubernetes. Additionally, there is no evidence of experience with data pipelines or big data, or with designing and implementing AutoML flows or frameworks.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": []
+ },
+ "source": "llm",
+ "latency_s": 27.4,
+ "peak_vram_mib": 3267,
+ "id": "P23",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

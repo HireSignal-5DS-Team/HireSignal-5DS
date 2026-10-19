@@ -1,0 +1,281 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "63",
+ "cv_id": "cv-b7fc91f0",
+ "job_id": "J2",
+ "job_title": "Data Engineer",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 77,
+ "reasons": [
+  "r4: must-have MISSING"
+ ],
+ "listed_flags": [
+  "r2 (must, not outcome-relevant): judge:disagrees",
+  "r3 (must, not outcome-relevant): judge:disagrees",
+  "r4 (must, not outcome-relevant): judge:uncertain",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Responsibility areas: Scope defining, requirements definition, database design, data analysis, ETL pipelines, data migration, data integration, DWH design",
+     "start": 490,
+     "end": 644
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.968135,
+    "MISSING": 0.027937,
+    "UNCERTAIN": 0.003927
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9867
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Hands-on experience with SQL",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Programming languages: Python, Java, SQL",
+     "start": 195,
+     "end": 235
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999561,
+    "MISSING": 0.000436,
+    "UNCERTAIN": 3e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.999
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Knowledge of Python",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Programming languages: Python, Java, SQL",
+     "start": 195,
+     "end": 235
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999923,
+    "MISSING": 7.7e-05,
+    "UNCERTAIN": 0
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.7426
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Experience with GCP or another cloud provider",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "contradicted",
+   "quotes": [
+    {
+     "quote": "I'm Interesting to develop complex products using modern cloud technologies, AWS is preferable.",
+     "start": 645,
+     "end": 740
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:uncertain"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000146,
+    "MISSING": 0.999529,
+    "UNCERTAIN": 0.000325
+   },
+   "judge": {
+    "verdict": "UNCERTAIN",
+    "score": 0.0095
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Good spoken English",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "English level: upper",
+     "start": 49,
+     "end": 69
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.965129,
+    "MISSING": 0.029191,
+    "UNCERTAIN": 0.00568
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9821
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Willingness to research business logic",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.002571,
+    "MISSING": 0.322494,
+    "UNCERTAIN": 0.674935
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because a must-have requirement is missing. The candidate has knowledge of data warehousing, SQL, and Python, and good spoken English, which meet the required criteria. However, experience with GCP or another cloud provider is not found in the CV. The score is 77.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Responsibility areas: Scope defining, requirements definition, database design, data analysis, ETL pipelines, data migration, data integration, DWH design",
+    "line": "Met: the CV mentions responsibility areas including DWH design and data integration."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Programming languages: Python, Java, SQL",
+    "line": "Met: the CV lists SQL as a programming language."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Programming languages: Python, Java, SQL",
+    "line": "Met: the CV lists Python as a programming language."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "I'm Interesting to develop complex products using modern cloud technologies, AWS is preferable.",
+    "line": "Missing: Experience with GCP or another cloud provider is not found in the CV."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: upper",
+    "line": "Met: the CV states an upper level of English."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Willingness to research business logic is not clearly stated in the CV."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show this required point: experience with GCP or another cloud provider.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [],
+  "source": "llm",
+  "info_flags": [],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [],
+  "would_be_outcome": "reject",
+  "swap": {
+   "ran": true,
+   "counterfactual": "female_arab",
+   "how": "name + pronouns added",
+   "identical_matcher_input": true,
+   "latency_s": 0.004
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.001,
+  "profile": 26.821,
+  "job": 0,
+  "match_and_judge": 8.724
+ }
+}

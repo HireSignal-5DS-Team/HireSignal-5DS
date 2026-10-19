@@ -1,0 +1,5 @@
+pair_id,split,cv_file,phrase_category,why_picked,occurrences_masked,after_fix
+P06,test,see data/labels/gold/pairs_gold.csv,project / competition title,header rule: segment after a label in a ';' list (CV with a 'languages' heading),1,not taken (list item)
+P43,test,see data/labels/gold/pairs_gold.csv,ML technique (skill),header rule: bullet line; segment after ':' in a '/' list,1,not taken (bullet line)
+P45,dev,see data/labels/gold/pairs_gold.csv,BI tool (skill),header rule: bullet line; item of a ',' list after 'BI tools:',1,not taken (bullet line)
+P49,test,see data/labels/gold/pairs_gold.csv,platform title (achievement),header rule: bullet line,2,not taken (bullet line)

@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K04_p01_photo",
+  "file": "K04_p01_photo.jpg",
+  "source": "K05.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "Certainly! Here is a summary of the key points from the CV:\n\n### Consultant\n- Managed project schedule and local and remote staff to collect Water Main data and update GIS system.\n- Developed business process and productivity reports to manage field book scanning project and Water Main data collection project.\n- Provided Application support for CIS, Infor CMMS, and Neptune AMR applications.\n- Maintained SharePoint site for IT department.\n- Assisted Desktop support team with desktop and application user issues.\n- Developed secure FTP scripts during implementation of CIS and AMR applications after Ransomware attack.\n\n### Utility Solutions Consultant\n- Installed and configured Cityworks CMMS application, including XML modifications.\n- Led configuration requirements gathering effort for Cityworks application implementation.\n- Prepared and provided training for CIS, Meter Reading software, and CMMS applications.\n- Provided Application support for CIS, CMMS, and AMR applications.\n- Developed data import file layouts and Crystal Reports for Luxity CMMS application.\n- Performed system configuration for Luxity CMMS application.\n- Installed and configured Infor Enterprise Asset Management 11.1 application and SQL Server database.\n- Led System Administration team to design and configure user security for Infor Public Sector application.\n- Led configuration requirements gathering effort for Infor Public Sector application upgrade.\n- Provided Application support for CIS, CMMS, and AMR applications.\n- Assisted the City of Cleveland with the installation of their AMI Fixed Network.\n- Developed the Residential AMI Meter Deployment schedule for City of Cleveland AMI Project.\n- Led team to manage data interfaces between City of Atlanta and Contractor systems during the AMR replacement program.\n- Developed business process and reports to manage Automated Meter Reading meter replacement program for City of Atlanta, Bureau of Drinking Water.\n\n### CEO/Consultant\n- Managed Griffin Technology Group budget, taxes, expenses and contracts.\n- Hired and managed employees, including scheduling client appointments for on-site PC support service.\n- Developed Crystal Reports for client management team to manage business within the Customer Information System.\n- Installed and configured Crystal Info Server 7.\n- Developed PL/SQL views to handle difficult data issues in reporting.\n- Gathered requirements for management reports, application changes, and tracking software.\n- Developed new applications using Access and Visual Basic for Application for clients to track new projects.\n- Provided Application Support for Maximo, Maintenance Management Software and CSTAR, Customer Information System.\n- Assisted System Administrators in infrastructure upgrades and daily administration of HP-UX Servers.\n\n### Information Technology Consultant\n- Developed new PL/SQL Stored Procedures and Functions to build financial summary data.\n- Developed SQL queries against Oracle 8 database.\n\n### Information Technology Consultant\n- Created a new system functionality using Pro C code.\n- Modified existing program to fix errors with other processes.\n- Worked with DBA to build Oracle triggers and procedures and test programs.\n\n### Information Technology Consultant\n- Maintained and Enhanced C and Unix shell program code and Unix Shell scripts.\n- Developed new application development environment for future MML software development.\n- Developed new process to replace outdated or broken processes.\n\n### Information Technology Specialist\n- Developed new application development environment for future MML software development.\n- Developed new process to replace outdated or broken processes.\n\nThis summary captures the key responsibilities and achievements in each role listed in the CV.",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 117.08,
+   "eval_count": 665,
+   "done_reason": "stop",
+   "peak_vram_mib": 4269
+  }
+ ]
+}

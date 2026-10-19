@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K05_p02_photo",
+  "file": "K05_p02_photo.jpg",
+  "source": "K03.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "granite3.2-vision:2b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "<doc>     Education \n     MasterofBusiness Administration(MBA)KellerGraduateSchoolofManagement(C.City,State \n     Certifications \n     CertifiedNetworkAssociate(CCNA/CCAD)LeadershipTraining(TIE)FoundationsCertificationSofterUniversity-SofterDistribution \n     TrainingCertifiedNovelAdministrator(CNA5.1)HIPAA/HITECH(HIP)Regulations \n     Cable,CCNA,CiscoCertifiedNetworkAssociate(CNA5.1)ChangeManagement,ConflictResolution,corporateaccounting,client, \n     internalaudits,marketingplans,marketing \n     dNovelAdministrator,packaging, \n     relations,purchasing,quality,scheduling, \n     minication,phone,employee \n     development,VolP,website,workflow </doc>",
+   "model": "granite3.2-vision:2b",
+   "latency_s": 6.97,
+   "eval_count": 172,
+   "done_reason": "stop",
+   "peak_vram_mib": 3249
+  }
+ ]
+}

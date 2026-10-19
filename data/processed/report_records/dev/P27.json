@@ -1,0 +1,178 @@
+{
+ "job_title": "ML Engineer",
+ "decided_by": "gate",
+ "outcome": "reject",
+ "score": 43,
+ "gate_rule": "1 reject: must-have MISSING",
+ "gate_reasons": [
+  "r1: must-have MISSING",
+  "r6: must-have MISSING"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "ML",
+    "training",
+    "testing",
+    "deployment",
+    "monitoring",
+    "real-time"
+   ],
+   "min_years": 3.0,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Proven experience with modern deep learning techniques and Gradient Boosting Trees",
+   "decision": "UNCERTAIN",
+   "quotes": [
+    "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library."
+   ],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": true,
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "skill_terms": [
+    "Gradient Boosting Trees"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Excellent Python coding skills",
+   "decision": "MET",
+   "quotes": [
+    "Using Python to build optimization methods.",
+    "Implementation of numerical methods in Python.",
+    "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library."
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Python"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "must",
+   "text": "Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn)",
+   "decision": "UNCERTAIN",
+   "quotes": [
+    "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library."
+   ],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": true,
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "skill_terms": [
+    "Tensorflow",
+    "Pytorch",
+    "LightGBM",
+    "Scikit-learn"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "must",
+   "text": "Practical experience with tabular data and time series",
+   "decision": "MET",
+   "quotes": [
+    "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library.",
+    "Coursework: Analysis and prediction of the popularity of the top 50 songs according to Spotify."
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "tabular data",
+    "time series"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "must",
+   "text": "Experience with microservices architecture, cloud technologies, Docker and Kubernetes",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Microservices architecture",
+    "cloud technologies",
+    "Docker",
+    "Kubernetes"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r7",
+   "kind": "nice",
+   "text": "Experience with data pipelines or big data",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "data pipelines",
+    "big data"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r8",
+   "kind": "nice",
+   "text": "Experience designing and implementing AutoML flows or frameworks",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "AutoML flows"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P27",
+ "pair_id": "P27",
+ "split": "dev",
+ "synthetic_flags": false
+}

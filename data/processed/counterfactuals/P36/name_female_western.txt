@@ -1,0 +1,23 @@
+Sarah Thompson
+Pronouns: she/her
+Position: Python Developer
+Experience years: 1
+English level: intermediate
+
+When I was working as a marketing strategist, I was responsible for conducting economic calculations, analyzing competitors, researching market trends, and determining market share to develop effective advertising strategies. In addition, I supported the email marketing and YouTube departments by helping them with their respective tasks. 
+After I made adjustments to the company's project pages, the conversion rate of these pages increased by more than 20 percent.
+I am a developer with experience in Python, Django, SQL, and Django REST Framework. Passionate about building efficient and scalable web applications. My strongest skills are problem-solving and close attention to detail, which ensures that I deliver clean and maintainable code. I am eager to collaborate with experienced teams to develop innovative solutions, constantly learn and get better.
+Recently, I've been working on my own projects:
+TaskFlow Manager
+Developed a task manager application specially designed for IT companies.
+The Python and Django frameworks were used to develop the backend.
+Implemented HTML and CSS to create an intuitive and user-friendly interface.
+Created task tracking and tagging features.
+
+API project for library automation
+Created an API project to automate the library and increase efficiency.
+Used Django REST Framework for fast API development and adherence to REST architecture standards.
+Developed endpoints for searching, booking, and managing books.
+Integrated Django ORM for seamless interaction with databases and query execution.
+Secure and reliable data processing is ensured.
+In the company I will be working for, my main goal is to use my technical skills, work on interesting projects and collaborate with experts in the field to achieve high-quality results

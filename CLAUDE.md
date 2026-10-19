@@ -1,6 +1,7 @@
 # HireSignal (our version) — rules for Claude Code
 
 Read this file fully before every task. It is the contract between the team roles.
+Project context (decisions and why): `claude/HireSignal_Living_Spec.md` and `claude/HireSignal_Handoff.md`. Read them when a task needs background; never edit them (the Brain maintains them).
 
 ## Roles
 - **Brain** (Claude, web chat): plans, writes tasks in `tasks/`, reviews your work by reading this folder directly, explains it to the team.
@@ -43,12 +44,13 @@ n8n Trigger (CV file + job text)
 3. A MET decision needs a verbatim CV quote that code verifies (exact substring + position). No quote, no MET.
 4. Identity (name, contacts, photo) is stored apart (git-ignored `private/`) and never reaches the Matcher.
 5. Secrets: never print, log or commit keys. Use `.env` (git-ignored) and keep `config/.env.example` with placeholders.
-6. **Reference code (team V2) is READ-ONLY:** `C:\Users\semah\HireSignal-Integration\v2-agent-integration`. Never modify it, never run git commands that change it. When you reuse code, copy it into this repo and put at the top: `# Adapted from team V2: <relative path> (feature/agent-integration @ 725923b)`, then adapt it.
-7. Do not touch the V1 repo (`C:\Users\semah\HireSignal-Integration\repo`) or the ports used by V1/V2: 5173, 5174, 8000, 8001, 8081, 8082. Our ports: n8n 5678, station API 8010, local LLM server 8090 (change only if busy, and report it).
+6. **Reference code (team V2) is READ-ONLY:** `C:\Users\semah\HireSignal-Integration\v2-agent-integration`. Never modify it, never run git commands that change it. When you reuse code, copy it into this repo and put at the top: `# Adapted from team V2: <relative path> (feature/agent-integration @ a5a03ff)`, then adapt it.
+7. Do not touch the V1 repo (`C:\Users\semah\HireSignal-Integration\repo`) or the ports used by V1/V2: 5173, 5174, 8000, 8001, 8081, 8082. Our ports: n8n 5678, station API 8010, llama-server 8090 (main Qwen3-4B + LoRA server, see T02b), Ollama 11434 (vision and tiny models later). Change only if busy, and report it.
+7b. Model files are COPIED into our git-ignored `models/` folder (never loaded from the V1 repo cache). Tools we install for this project (portable Node, n8n data) live in git-ignored `tools/` and `.n8n/` inside this folder; do not change global system settings (global Node, PATH) without asking in the report.
 8. Prompts: every prompt lives in `prompts/<station>/v<N>.md` with a header (role, technique, date, change vs previous version). Never edit an old version: create a new one and log it in `prompts/PROMPT_LIBRARY.md`.
 9. Evidence: never write "works", "fixed", "accurate" without a test or a measured result. Label results as mock / real-CPU / real-GPU. Save experiment results in `eval/results/<date>_<name>/` with the config used.
 10. One Python environment (`.venv`, Python 3.12) and one dependency set that installs cleanly. No hard-coded user paths in code; use config/env.
-11. Git: work on `main`, small commits with clear messages, never force-push, never rewrite history.
+11. **No git for now.** Do not run any git command (no commit, add, branch, push) until the Approver says so. We finish the app locally first, then push the whole folder once. Track progress in the task reports instead.
 12. Keep it simple: no feature that is not in a task.
 
 ## Report format (`tasks/Txx_report.md`)

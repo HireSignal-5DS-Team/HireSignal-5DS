@@ -1,0 +1,43 @@
+{
+ "decisions": {
+  "r1": "MET",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MET",
+  "r5": "MISSING",
+  "r6": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "nice",
+  "r5": "nice",
+  "r6": "nice"
+ },
+ "outcome": "review",
+ "score": 78,
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "quotes": {
+  "r1": [
+   "Over 10 years of experience as a Software Developer mostly using python"
+  ],
+  "r2": [
+   "Over 10 years of experience as a Software Developer mostly using python"
+  ],
+  "r3": [
+   "Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)",
+   "Designed and implemented a distributed RESTful task queue based on key-value DB using python and lua"
+  ],
+  "r4": [
+   "Build projects with microservices",
+   "Build an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)",
+   "Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)"
+  ],
+  "r5": [],
+  "r6": []
+ },
+ "elapsed_s": 20.12,
+ "identical_to_base": true,
+ "ran": true
+}

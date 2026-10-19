@@ -1,0 +1,39 @@
+Native language: English
+Position: Data Architect
+Experience years: 11
+English level: fluent
+
+Experienced data engineer/ data architect / system analyst.
+
+Latest projects:
+- Migration from Vertica to Snowflake
+- Analytical system for Fund management company
+- Data Warehouse for Investment bank (system connected with 100+ different ERP up to 20 bln transactions per month, 20 years of data collected)
+- CRM integrations (financial companies with up to 20 mln of clients)
+- E-commerce  analytics project (small startup spending 500KUSD per month in ads).
+- Risks analytics for top 10 bank in Ukraine.
+
+Technologies used tools:
+- Databases: Snowflake/Oracle / Postgres / Clickhouse/ DuckDB/ MS SQL
+- BI tools: Cognos, SAP business objects, Qlik Sense, Power BI, GoodData
+- Python
+- Linux
+- Azure/ AWS
+- CASE tools (Enterprise Architect, Power Designer)
+- ETL: Matillion, DBT, Airbyte
+
+Other: 
+- Jira, Confluence, HP ALM, Gsnow, Mantis etc
+- Agile / Waterfall
+- Apache Airflow
+
+Recent certifications:
+- Microsoft Certified: Azure Fundamentals
+- Microsoft Certified: Azure Data Fundamentals
+- Microsoft Certified: Azure Data Engineer Associate
+- Microsoft Certified: Azure Developer Associate
+- Microsoft Certified: Azure Solutions Architect Expert
+Interests:
+-High load 
+-Analytics/ Data driven projects / Big data
+-Healthcare, Advertising, Machine Learning

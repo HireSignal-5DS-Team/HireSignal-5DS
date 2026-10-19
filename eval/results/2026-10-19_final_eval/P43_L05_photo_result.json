@@ -1,0 +1,355 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "72",
+ "cv_id": "cv-8851e35a",
+ "job_id": "J1",
+ "job_title": "Data Scientist",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 60,
+ "reasons": [
+  "r4: must-have MISSING",
+  "r5: must-have MISSING"
+ ],
+ "listed_flags": [
+  "r6 (must, not outcome-relevant): judge:disagrees",
+  "r7 (must, not outcome-relevant): judge:disagrees",
+  "pair: reader:Image file: text was read with mode late.",
+  "pair: reader:5 line(s) read only by the vision model (no OCR support): kept out of the text, listed as low-trust.",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Data Science: 4 years of experience or more",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Self-motivated Data Scientist with 4+ years of experience (8+ years in IT Data Analytics).",
+     "start": 98,
+     "end": 188
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.998569,
+    "MISSING": 0.001428,
+    "UNCERTAIN": 3e-06
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9956
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Good knowledge of probability theory and statistics",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Advanced mathematical and statistics skills",
+     "start": 1546,
+     "end": 1589
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.998925,
+    "MISSING": 0.001003,
+    "UNCERTAIN": 7.2e-05
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9744
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Understanding of Bayesian methods, time series analysis or sensor signal processing",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "MET",
+   "basis": "ambiguous",
+   "quotes": [
+    {
+     "quote": "ML: supervised and unsupervised learning, clustering, regression, classification, recommendation systems, time series",
+     "start": 1166,
+     "end": 1283
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.42757,
+    "MISSING": 0.306173,
+    "UNCERTAIN": 0.266258
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000117,
+    "MISSING": 0.998977,
+    "UNCERTAIN": 0.000906
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9963
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Experience with cloud (Amazon SageMaker)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 8.1e-05,
+    "MISSING": 0.998179,
+    "UNCERTAIN": 0.00174
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9919
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Experience with PySpark",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Hadoop, PySpark",
+     "start": 1098,
+     "end": 1113
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999743,
+    "MISSING": 0.000257,
+    "UNCERTAIN": 0
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9778
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r7",
+   "text": "Strong working knowledge of SQL",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "SQL",
+     "start": 1092,
+     "end": 1095
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.99978,
+    "MISSING": 0.000219,
+    "UNCERTAIN": 1e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9922
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r8",
+   "text": "Ph.D. in Mathematics",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 4e-06,
+    "MISSING": 0.994035,
+    "UNCERTAIN": 0.005961
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9967
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because two must-have requirements are missing: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) and experience with cloud platforms (Amazon SageMaker). The candidate has 8 years of data science experience and shows knowledge of statistics and PySpark, but does not meet the required skills in probabilistic programming or cloud platforms. The score is 60.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Self-motivated Data Scientist with 4+ years of experience (8+ years in IT Data Analytics).",
+    "line": "Met: the CV shows 8 years of data science experience."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Advanced mathematical and statistics skills",
+    "line": "Met: the CV mentions advanced mathematical and statistics skills."
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "ML: supervised and unsupervised learning, clustering, regression, classification, recommendation systems, time series",
+    "line": "Uncertain: the CV mentions time series but it is unclear if this refers to sensor signal processing or Bayesian methods."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) is not found in the CV."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: experience with Amazon SageMaker is not found in the CV."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MET",
+    "quote": "Hadoop, PySpark",
+    "line": "Met: the CV mentions PySpark experience."
+   },
+   {
+    "req_id": "r7",
+    "decision": "MET",
+    "quote": "SQL",
+    "line": "Met: the CV mentions SQL experience."
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Ph.D. in Mathematics is not mentioned in the CV."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Scientist position. We will not move forward with your application, because your CV does not show these required points: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) and experience with Amazon SageMaker.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about r3: the mention of time series analysis does not clearly indicate understanding of Bayesian methods or sensor signal processing."
+  ],
+  "source": "llm",
+  "info_flags": [],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [],
+  "would_be_outcome": "reject",
+  "swap": {
+   "ran": true,
+   "counterfactual": "female_arab",
+   "how": "name + pronouns added",
+   "identical_matcher_input": true,
+   "latency_s": 0.007
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "image",
+  "mode": "late",
+  "read_path": [
+   "late"
+  ],
+  "pages": [
+   {
+    "route": "late",
+    "vision_model": "qwen2.5vl:3b",
+    "vision_latency_s": 87.45,
+    "unclear_share": 0,
+    "fusion": {
+     "agree": 128,
+     "ocr_kept": 0,
+     "vision_used": 86,
+     "ocr_dropped": 1,
+     "vision_kept_short": 0,
+     "vision_kept_supported": 8,
+     "low_trust_words": 34
+    },
+    "low_trust_lines": 5
+   }
+  ],
+  "ocr_confidence": 87.6,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 87.515,
+  "profile": 38.018,
+  "job": 0,
+  "match_and_judge": 11.279
+ }
+}

@@ -1,0 +1,97 @@
+{
+ "job_id": "J1",
+ "title": "Data Scientist",
+ "confirmed_by": "recruiter (sample: the gold requirement list)",
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Data Science: 4 years of experience or more",
+   "kind": "must",
+   "category": "experience",
+   "min_years": 4.0,
+   "skill_terms": [],
+   "evidence": "Data scientist with 4+ years of experience"
+  },
+  {
+   "req_id": "r2",
+   "text": "Good knowledge of probability theory and statistics",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "probability theory",
+    "statistics"
+   ],
+   "evidence": "Good knowledge of the probability theory and statistics"
+  },
+  {
+   "req_id": "r3",
+   "text": "Understanding of Bayesian methods, time series analysis or sensor signal processing",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "Bayesian methods",
+    "time series analysis",
+    "sensor signal processing"
+   ],
+   "evidence": "Understanding of Bayesian methods, time series analysis, sensor signal processing"
+  },
+  {
+   "req_id": "r4",
+   "text": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "Pyro",
+    "PyMC3",
+    "JAGS"
+   ],
+   "evidence": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar)"
+  },
+  {
+   "req_id": "r5",
+   "text": "Experience with cloud (Amazon SageMaker)",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "Amazon SageMaker"
+   ],
+   "evidence": "Experience with cloud (Amazon SageMaker) is required"
+  },
+  {
+   "req_id": "r6",
+   "text": "Experience with PySpark",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "PySpark"
+   ],
+   "evidence": "Experience with PySpark is required"
+  },
+  {
+   "req_id": "r7",
+   "text": "Strong working knowledge of SQL",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "SQL"
+   ],
+   "evidence": "Strong working knowledge of SQL, Teradata preferred"
+  },
+  {
+   "req_id": "r8",
+   "text": "Ph.D. in Mathematics",
+   "kind": "nice",
+   "category": "education",
+   "min_years": null,
+   "skill_terms": [],
+   "evidence": "Ph.D. in Mathematics will be a plus."
+  }
+ ],
+ "skill_terms_source": "Job Agent terms (T06 run) aligned by source sentence, kept if in the requirement text"
+}

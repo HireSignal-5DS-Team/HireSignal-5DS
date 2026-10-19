@@ -1,0 +1,131 @@
+{
+ "job_title": "Data Engineer",
+ "decided_by": "gate",
+ "outcome": "reject",
+ "score": 77,
+ "gate_rule": "1 reject: must-have MISSING",
+ "gate_reasons": [
+  "r4: must-have MISSING"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+   "decision": "MET",
+   "quotes": [
+    "Data Warehouse for Investment bank (system connected with 100+ different ERP up to 20 bln transactions per month, 20 years of data collected)",
+    "Analytical system for Fund management company"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Data Warehousing",
+    "Data Lakes"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Hands-on experience with SQL",
+   "decision": "MET",
+   "quotes": [
+    "Databases: Snowflake/Oracle / Postgres / Clickhouse/ DuckDB/ MS SQL"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "SQL"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Knowledge of Python",
+   "decision": "MET",
+   "quotes": [
+    "Python"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Python"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "must",
+   "text": "Experience with GCP or another cloud provider",
+   "decision": "MISSING",
+   "quotes": [
+    "Azure/ AWS"
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "GCP"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "must",
+   "text": "Good spoken English",
+   "decision": "MET",
+   "quotes": [
+    "English level: fluent"
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "English"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "nice",
+   "text": "Willingness to research business logic",
+   "decision": "UNCERTAIN",
+   "quotes": [],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P45",
+ "pair_id": "P45",
+ "split": "dev",
+ "synthetic_flags": false
+}

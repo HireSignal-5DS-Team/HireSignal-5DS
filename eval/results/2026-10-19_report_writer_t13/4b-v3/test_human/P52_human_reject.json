@@ -1,0 +1,72 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 2,
+ "first_errors": [
+  "summary states another outcome (invite)",
+  "reject letter names r2 (must, MET), which is not a missing must-have",
+  "reject letter names r5 (nice, MISSING), which is not a missing must-have",
+  "reject letter names r6 (nice, MISSING), which is not a missing must-have"
+ ],
+ "retry_errors": [
+  "reject letter names r2 (must, MET), which is not a missing must-have",
+  "reject letter names r5 (nice, MISSING), which is not a missing must-have",
+  "reject letter names r6 (nice, MISSING), which is not a missing must-have"
+ ],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected after a human review, despite meeting most requirements. The CV shows over 10 years of Python development, which satisfies the 5-year requirement. The requirement for developing big systems with Python is met based on the evidence, but the judge disagreed, indicating possible false invite. The requirement for asynchronous programming and performance-critical applications is also met, yet the judge found it doubtful. The candidate lacks experience with Machine Learning and algorithms development, which are both nice-to-haves. The score is 78.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Over 10 years of experience as a Software Developer mostly using python\", \"line\": \"Met: the CV shows over 10 years of experience as a Software Developer using Python.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Over 10 years of experience as a Software Developer mostly using python\", \"line\": \"Met: the CV shows over 10 years of experience as a Software Developer using Python.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\", \"line\": \"Met: the CV mentions building systems with multi-threading and asynchronous approaches using tornado, aiohttp, and celery.\"}, {\"req_id\": \"r4\", \"decision\": \"MET\", \"quote\": \"Build projects with microservices\", \"line\": \"Met: the CV mentions building projects with microservices.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Experience with Machine Learning is not mentioned in the CV.\"}, {\"req_id\": \"r6\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Experience with algorithms development (collaborative filtering, similarity, data normalization, clustering) is not mentioned in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We regret to inform you that we will not be moving forward with your application.\\n\\nThe following requirements were not met:\\n- Experience with Machine Learning\\n- Experience with algorithms development (collaborative filtering, similarity, data normalization, clustering)\\n\\nThese are nice-to-have qualifications, and their absence is the reason for the rejection.\\n\\nYou are welcome to reply with questions or to request a human review of this decision.\\n\\nKind regards\", \"flags_for_recruiter\": []}",
+  "{\"recruiter_summary\": \"The candidate is rejected after a human review. The CV shows over 10 years of software development using Python, meeting the 5-year requirement. The requirement for developing big systems with Python is met, but the judge disagreed, indicating uncertainty. The requirement for asynchronous programming and performance-critical applications is met based on the evidence. The candidate lacks experience with Machine Learning and algorithms development, which are nice-to-haves. The score is 78.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Over 10 years of experience as a Software Developer mostly using python\", \"line\": \"Met: the CV shows over 10 years of experience as a Software Developer using Python.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Over 10 years of experience as a Software Developer mostly using python\", \"line\": \"Met: the CV shows over 10 years of experience as a Software Developer using Python.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\", \"line\": \"Met: the CV mentions building systems with multi-threading and asynchronous approaches using tornado, aiohttp, and celery.\"}, {\"req_id\": \"r4\", \"decision\": \"MET\", \"quote\": \"Build projects with microservices\", \"line\": \"Met: the CV mentions building projects with microservices.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Experience with Machine Learning is not mentioned in the CV.\"}, {\"req_id\": \"r6\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Experience with algorithms development (collaborative filtering, similarity, data normalization, clustering) is not mentioned in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We regret to inform you that we will not be moving forward with your application.\\n\\nThe following requirements are missing and are not met:\\n- Experience with Machine Learning\\n- Experience with algorithms development (collaborative filtering, similarity, data normalization, clustering)\\n\\nThese are nice-to-have qualifications, and their absence is the reason for the rejection.\\n\\nYou are welcome to reply with questions or to request a human review of this decision.\\n\\nKind regards\", \"flags_for_recruiter\": []}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 3 of 3 must-have requirements are met; the score is 78.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Over 10 years of experience as a Software Developer mostly using python",
+    "line": "Met: Software development: 5 years of experience or more (must; CV: Over 10 years of experience as a Software Developer mostly using python)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Over 10 years of experience as a Software Developer mostly using python",
+    "line": "Met: Developing big systems with Python: 2 years of experience or more (must; CV: Over 10 years of experience as a Software Developer mostly using python)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)",
+    "line": "Met: Asynchronous programming and developing performance-critical applications (must; CV: Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery))"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Build projects with microservices",
+    "line": "Met: Working with AWS, Docker and microservices (nice; CV: Build projects with microservices)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with Machine Learning (nice; not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Algorithms development (collaborative filtering, similarity, data normalization, clustering) (nice; not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After a review by our team, we will not move forward with it.\n\nIf you have questions about this decision, simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": []
+ },
+ "source": "template",
+ "latency_s": 19.61,
+ "peak_vram_mib": 3267,
+ "id": "P52_human_reject",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

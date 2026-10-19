@@ -1,0 +1,67 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "must requirement r2 dropped",
+  "nice requirement r4 dropped",
+  "nice requirement r5 dropped",
+  "nice requirement r6 dropped",
+  "reject letter without the right to a human review"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 0 of 3 must-have requirements are met; the score is 11. Missing must-haves: Software development: 5 years of experience or more; Asynchronous programming and developing performance-critical applications. Unclear must-haves: Developing big systems with Python: 2 years of experience or more.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Software development: 5 years of experience or more - missing (not found in CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Developing big systems with Python: 2 years of experience or more - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Asynchronous programming and developing performance-critical applications - missing (not found in CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Working with AWS, Docker and microservices - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience with Machine Learning - missing (not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Algorithms development (collaborative filtering, similarity, data normalization, clustering) - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Software development: 5 years of experience or more; Asynchronous programming and developing performance-critical applications.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r2"
+  ]
+ },
+ "source": "template",
+ "latency_s": 10.16,
+ "peak_vram_mib": 3267,
+ "id": "P33",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

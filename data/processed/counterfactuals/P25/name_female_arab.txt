@@ -1,0 +1,8 @@
+Fatma Trabelsi
+Pronouns: she/her
+Position: Data Analyst
+Experience years: 1.5
+English level: intermediate
+
+I took part in developing and implementing two risk assessment systems for national procurement systems in the countries of the former USSR
+Development of online analytical tools for auditors. Responsible for exploring opportunities to design red flags and risk indicators algorithms considering the available procurement data set and for designed red flags and risk indicators algorithms testing, ensuring their correct performance.

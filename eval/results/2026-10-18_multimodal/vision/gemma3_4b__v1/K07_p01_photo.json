@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K07_p01_photo",
+  "file": "K07_p01_photo.jpg",
+  "source": "K02.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "MANAGER - INFORMATION TECHNOLOGY AND BUILDING AUTOMATION SYSTEMS\nSummary\nManager - Information Technology and Building Automation Systems\n\nVersatile Building Automation System engineer and IT professional with about knowledge of Enterprise Project Lifecycle methodology\nand experience to deliver insightful network infrastructure and building automation solutions. Networking engineer expert with strong background\nin project management and product support. Proven communication skills, for quality development of standard documentation, as well as guidance\nleadership and assistance for associates and clients. .\n\nHighlights\n• Current Priority Platforms\n• Current CMP Certification\n• Project tracking\n• Hardware and software upgrade planning\n• Certified Information Security Manager\n• User experience (UX) design\n• Self-motivated\n\nAccomplishments\nAwarded the Navy and Marine Corps Achievement Medal in 2010, 2011 & 2013.\nAwarded Sailor of the Year designation for the Pacific Naval Fleet in 2013.\nSuccessfully managed the network infrastructure and building automation for 150+ users and 300+ PC and network systems.\nResponsible for the training and development of 8 technicians and project/A coordinators within my team.\n\nExperience\nManager - Information Technology and Building Automation Systems\nOctober 2014 to Current Company Name W 4 City, State\n\n• Led a cross-functional team of engineers, QAs and UX designers to develop features and fix product defects.\n• Delivered detailed feature roadmaps that included action items and targets for projects.\n• Leveraged in-depth understanding of end-to-end customer identity and payment points and built customer needs.\n• Managed the 8-person local IT team, allocating resources to ongoing projects and offering deadlines.\n• Conducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n• Worked on large enterprise and business critical applications.\n• Analyzed and created new configuration for packaged software sets of businesses and system requirements.\n• Configured, maintained and provided networking and performance analysis to meet business class storage systems.\n• Performed second-level support for all workstation and server class software.\n• Served as the technical lead for server infrastructure development, QA, staging and production systems.\n• Provided educational training, mechanical and microprocessing controls.\n• Analyzed, modified and repaired digital controls, systems and environments.\n• Set up, tested, configured and deployed desktops, laptops and printers.\n• Created, compiled training materials and procedures to teach users how to work proper software and hardware protocol.\n• Diagnosed, troubleshooted and repaired network and local area network (LAN) issues.\n\nEDUCATION\n[unclear] October 2014 Company Name W 4 City, State",
+   "model": "gemma3:4b",
+   "latency_s": 15.29,
+   "eval_count": 552,
+   "done_reason": "stop",
+   "peak_vram_mib": 3889
+  }
+ ]
+}

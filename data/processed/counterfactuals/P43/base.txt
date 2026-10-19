@@ -1,0 +1,38 @@
+Position: Data Scientist
+Experience years: 5
+English level: upper
+
+Self-motivated Data Scientist with 4+ years of experience (8+ years in IT Data Analytics ). I constantly bring high-quality business solutions to businesses seeking higher efficiency.
+Strong analytical mindset and proactive team player
+Excellent problem-solver and collaborative with expertise in algorithm design and data collection.
+
+Responsibilities: 
+ - Development a set of ML solutions: Classification / Regression / Clustering / Recommendation System / MAB for Real-Time Bidding auction, which allowed to automatically buy traffic from the most prominent advertising platforms  for more than $500k+ monthly with positive margins.
+ - Creating complex resolutions to provide RTB (real-time bidding) in a highly loaded platform.
+ - Generating ideas for founding triggers and forming specific, accurate proposals for product improvement.
+Profound analysis and finding hidden patterns/causes.
+ - Controlling all the main KPIs, A/B testing, rolling, and validation of results.
+ - A/B testing.
+
+Skills:
+  — Python,
+  —  Jupyter Lab/Hub
+  —  SQL
+  —  Hadoop, PySpark
+  —  BI Tableau, Power BI
+  —  Datadog, AirFlow, MLFlow
+  —  ML: supervised and unsupervised learning,
+clustering, regression, classification,
+recommendation systems,time series
+  —  VBA, OLAP, PowerPivot, PowerQuery
+  —  Word,Access,PowerPoint,Excel,Microsoft
+Office
+  —  End-to-end experience with data collection, processing,aggregation, analyzing and visualization
+   —  Agile methodologies : Scrum, Kanban, Safe, Waterfall
+  —  Jira, Confluence
+  —  Advanced mathematical and statistics skills
+  —  Excellent interpersonal skills
+  —  Problem solving and creative thinking
+  —  Team management
+I am considering only part-time vacancies for around ~20-25 hours on the english-speaking market: Only Canada/USA
+Progressive project with professional growth

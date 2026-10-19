@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K09_photo",
+  "file": "K09_photo.jpg",
+  "source": "K04.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "Okay, here's a breakdown of the CV information extracted from the image:\n\n**Education and Training**\n\n*   **Bachelor of Science:** Computers and Information Technology\n    *   UNIVERSITY OF PHOENIX ½ ¼ City, State Computers and Information Technology\n*   **Associate of Arts:** Finance and Business Administration\n    *   LAKE SUMTER COMMUNITY COLLEGE ¼ City, State Finance and Business Administration\n    *   2016\n\n**ITIL Foundation Course**\n\n*   Microsoft Certified Professional (MCP), CompTIA A+, CompTIA N+\n\n**Skills**\n\nThe CV lists a wide range of skills, categorized as follows:\n\n*   **General/Business:** Acquisitions, backup, budget planning, budgeting, business development, change management, conversion decision making, delivery, direction, disaster planning, documentation, ERP, Enterprise Resource Planning, Facilities Management, Financials, focus, forecasting, help desk, information technology, ITIL, Leadership, Team-Building, managing materials, access, Microsoft Certified Professional, MCP, network, operations management, organizational PC systems, people skills, policies, POS, process design, Procurement, Project Management, proposal development, sales, Scheduling, SDLC, SLA, strategic planning, technical support, user training, training material, Upgrades, Windows server, workflow\n\n**Important Notes:**\n\n*   The image quality is a bit low, so some words are slightly blurry.\n*   The CV is quite dense with information, listing a large number of skills.\n\nWould you like me to extract specific information, such as the degree names, or perhaps summarize the skills into broader categories?",
+   "model": "gemma3:4b",
+   "latency_s": 10.6,
+   "eval_count": 332,
+   "done_reason": "stop",
+   "peak_vram_mib": 3887
+  }
+ ]
+}

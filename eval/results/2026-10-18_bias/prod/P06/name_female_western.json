@@ -1,0 +1,47 @@
+{
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "MET",
+  "r3": "UNCERTAIN",
+  "r4": "MISSING",
+  "r5": "MISSING",
+  "r6": "MISSING",
+  "r7": "MET",
+  "r8": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "must",
+  "r7": "must",
+  "r8": "nice"
+ },
+ "outcome": "reject",
+ "score": 33,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [
+   "Experience years: 1"
+  ],
+  "r2": [
+   "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+  ],
+  "r3": [],
+  "r4": [],
+  "r5": [],
+  "r6": [],
+  "r7": [
+   "Languages: C++, Python, SQL, R(basic)"
+  ],
+  "r8": [
+   "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field)",
+   "Looking for any job experience that involves personal growth and progress, especially research opportunities :)"
+  ]
+ },
+ "elapsed_s": 24.11,
+ "identical_to_base": false,
+ "ran": true
+}

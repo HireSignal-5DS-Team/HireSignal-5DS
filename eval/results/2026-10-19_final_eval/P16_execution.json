@@ -1,0 +1,366 @@
+{
+ "run": "P16",
+ "pair": "P16",
+ "job": "J2",
+ "stratum_in_pairs_csv": "partial",
+ "requirements": "data/processed/jobs/J2_requirements.json (confirmed card)",
+ "execution_id": "49",
+ "n8n_started": "2026-10-19 04:50:26.157",
+ "n8n_stopped": "2026-10-19 04:51:45.646",
+ "total_wall_s": 79.66,
+ "outcome": "reject",
+ "score": 82,
+ "rule": "1 reject: must-have MISSING",
+ "reasons": [
+  "r1: must-have MISSING"
+ ],
+ "listed_flags": [
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "review_form_url": null,
+ "decisions": {
+  "r1": [
+   "must",
+   "MISSING"
+  ],
+  "r2": [
+   "must",
+   "MET"
+  ],
+  "r3": [
+   "must",
+   "MET"
+  ],
+  "r4": [
+   "must",
+   "MET"
+  ],
+  "r5": [
+   "must",
+   "MET"
+  ],
+  "r6": [
+   "nice",
+   "MET"
+  ]
+ },
+ "station_timings_s": {
+  "reader": 0.002,
+  "profile": 56.087,
+  "job": 0,
+  "match_and_judge": 12.714
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "node_timings": {
+  "Webhook (CV file + job text)": [
+   {
+    "start": 1792385426164,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "Check token": [
+   {
+    "start": 1792385426164,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Normalize input": [
+   {
+    "start": 1792385426166,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "HTTP /reader": [
+   {
+    "start": 1792385426170,
+    "ms": 7,
+    "status": "success"
+   }
+  ],
+  "HTTP /profile": [
+   {
+    "start": 1792385426177,
+    "ms": 56095,
+    "status": "success"
+   }
+  ],
+  "Confirmed requirements?": [
+   {
+    "start": 1792385482272,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Confirmed job card": [
+   {
+    "start": 1792385482274,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Job card": [
+   {
+    "start": 1792385482277,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Merge": [
+   {
+    "start": 1792385482280,
+    "ms": 1,
+    "status": "success"
+   }
+  ],
+  "Split requirements": [
+   {
+    "start": 1792385482281,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Loop requirements (1 at a time)": [
+   {
+    "start": 1792385482284,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385483691,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792385485209,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385488165,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385491031,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792385492433,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792385495107,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "RAG lookup": [
+   {
+    "start": 1792385482284,
+    "ms": 15,
+    "status": "success"
+   },
+   {
+    "start": 1792385483692,
+    "ms": 3,
+    "status": "success"
+   },
+   {
+    "start": 1792385485209,
+    "ms": 4,
+    "status": "success"
+   },
+   {
+    "start": 1792385488165,
+    "ms": 4,
+    "status": "success"
+   },
+   {
+    "start": 1792385491032,
+    "ms": 3,
+    "status": "success"
+   },
+   {
+    "start": 1792385492433,
+    "ms": 12,
+    "status": "success"
+   }
+  ],
+  "HTTP /match": [
+   {
+    "start": 1792385482299,
+    "ms": 1354,
+    "status": "success"
+   },
+   {
+    "start": 1792385483695,
+    "ms": 1490,
+    "status": "success"
+   },
+   {
+    "start": 1792385485213,
+    "ms": 2931,
+    "status": "success"
+   },
+   {
+    "start": 1792385488169,
+    "ms": 2840,
+    "status": "success"
+   },
+   {
+    "start": 1792385491035,
+    "ms": 1373,
+    "status": "success"
+   },
+   {
+    "start": 1792385492445,
+    "ms": 2639,
+    "status": "success"
+   }
+  ],
+  "HTTP /judge": [
+   {
+    "start": 1792385483654,
+    "ms": 37,
+    "status": "success"
+   },
+   {
+    "start": 1792385485185,
+    "ms": 24,
+    "status": "success"
+   },
+   {
+    "start": 1792385488144,
+    "ms": 21,
+    "status": "success"
+   },
+   {
+    "start": 1792385491009,
+    "ms": 22,
+    "status": "success"
+   },
+   {
+    "start": 1792385492408,
+    "ms": 25,
+    "status": "success"
+   },
+   {
+    "start": 1792385495084,
+    "ms": 23,
+    "status": "success"
+   }
+  ],
+  "Aggregate": [
+   {
+    "start": 1792385495107,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "Bias Auditor": [
+   {
+    "start": 1792385495107,
+    "ms": 15,
+    "status": "success"
+   }
+  ],
+  "Outcome input": [
+   {
+    "start": 1792385495123,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "HTTP /outcome": [
+   {
+    "start": 1792385495126,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "Report Writer": [
+   {
+    "start": 1792385495131,
+    "ms": 10483,
+    "status": "success"
+   }
+  ],
+  "Result": [
+   {
+    "start": 1792385505614,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Respond to Webhook": [
+   {
+    "start": 1792385505618,
+    "ms": 3,
+    "status": "success"
+   }
+  ],
+  "Switch outcome": [
+   {
+    "start": 1792385505621,
+    "ms": 2,
+    "status": "success"
+   }
+  ],
+  "Decided by gate": [
+   {
+    "start": 1792385505623,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "Outbox letter": [
+   {
+    "start": 1792385505627,
+    "ms": 4,
+    "status": "success"
+   }
+  ],
+  "To JSON file": [
+   {
+    "start": 1792385505631,
+    "ms": 12,
+    "status": "success"
+   }
+  ],
+  "Write eval/outbox file": [
+   {
+    "start": 1792385505643,
+    "ms": 3,
+    "status": "success"
+   }
+  ]
+ },
+ "checks": {
+  "http_status": 200,
+  "valid_json": true,
+  "execution_status": "success",
+  "identity_values_in_private_file": 0,
+  "identity_values_found_in_execution_data": 0,
+  "raw_cv_text_in_execution_data": false,
+  "all_match_lora_scale_1": true,
+  "quotes_verified_positions": 6,
+  "uploaded_file_kept_by_n8n_binary_store": 2,
+  "changed_raw_lines_checked": 0
+ }
+}

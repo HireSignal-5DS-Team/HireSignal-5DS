@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K08_p02_photo",
+  "file": "K08_p02_photo.jpg",
+  "source": "K01.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "<start_of_image>\nManaged computer support, cost analysis, and acquisition to support ANG work plans.\nLead teams to execute Air National Guard budget for computers and associated technologies.\nProven ability to formulate, justify, and defend assigned programs and projects.\nDemonstrated knowledge of cost comparison procedures, directives, and communications.\nCommunicated effectively in written and oral mediums.\nProvided technical direction concerning the acquisition of hardware and software for the entire Air National (ANG).\nPerformed analysis and evaluation of hardware and software to provide the best technical solution.\nAdvised components of the ANG on acquisition, procurement, maintenance and feasibility for adoption of information technology hardware and software.\n\nEducation\nM.S: Public Administration, Government Law Sul Ross University ¼ City, State Public Administration, Government Law\nB.S: Psychology, Education Morgan State University ¼ City, State Psychology, Education\nJun-2014\n\nSPECIALIZED TRAINING * Security + Certified, CE20-\nAug-2011\n*Cyber 200 Advance Continuing Education Course 26-\nSep-2010\n*Basic Computer Operations Planner’s Course 24-\nSep-2009\n*DISA Action Officers Course 10-Dec-2009 * DOD Information Assurance Boot Camp 06-Nov-2009 *Computer Network Defense/Computer Network Threat 24-\n\nSkills\nAir Force, art, Agency, basic, budget, oral, hardware, Computer Operations, configuration management, cost analysis, data management, Dec, direction, documentation, edge, feasibility studies, forms, functional, Government, Information Systems, information technology, computer support, meetings, Office, enterprise, Network, personnel policies, problem resolution, procurement, project management, publications, publication, software development, strategic, systems administration, training, systems analysis, systems development, systems integration, public manuals, trend, written",
+   "model": "gemma3:4b",
+   "latency_s": 12.17,
+   "eval_count": 399,
+   "done_reason": "stop",
+   "peak_vram_mib": 3889
+  }
+ ]
+}

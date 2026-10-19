@@ -1,0 +1,62 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v1.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because a must-have requirement is missing. The candidate has hands-on SQL experience and cloud experience, and fluent English, but lacks demonstrated knowledge of Python, which is a required must-have. The score is 68, and the gate reason is missing knowledge of Python.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"UNCERTAIN\", \"quote\": \"Successfully managed a team of up to 10 Data Engineers, at the same time\", \"line\": \"Uncertain: the CV mentions team leadership and ETL projects but does not clearly show knowledge of data warehousing or data lakes principles.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\", \"line\": \"Met: the candidate has hands-on experience with multiple databases, including SQL-based systems.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: the candidate's CV does not mention any knowledge or experience with Python.\"}, {\"req_id\": \"r4\", \"decision\": \"MET\", \"quote\": \"Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres).\", \"line\": \"Met: the candidate has experience with Azure and GCP, including ETL and migration projects.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"English level: fluent\", \"line\": \"Met: the candidate has fluent spoken English.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"Interpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile.\", \"line\": \"Uncertain: the candidate shows a willingness to learn and communicate, but this is not directly linked to researching business logic.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show the required knowledge of Python.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about data warehousing principles (r1) and willingness to research business logic (r6)\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because a must-have requirement is missing. The candidate has hands-on SQL experience and cloud experience, and fluent English, but lacks demonstrated knowledge of Python, which is a required must-have. The score is 68, and the gate reason is missing knowledge of Python.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "UNCERTAIN",
+    "quote": "Successfully managed a team of up to 10 Data Engineers, at the same time",
+    "line": "Uncertain: the CV mentions team leadership and ETL projects but does not clearly show knowledge of data warehousing or data lakes principles."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).",
+    "line": "Met: the candidate has hands-on experience with multiple databases, including SQL-based systems."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: the candidate's CV does not mention any knowledge or experience with Python."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres).",
+    "line": "Met: the candidate has experience with Azure and GCP, including ETL and migration projects."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: fluent",
+    "line": "Met: the candidate has fluent spoken English."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "Interpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile.",
+    "line": "Uncertain: the candidate shows a willingness to learn and communicate, but this is not directly linked to researching business logic."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show the required knowledge of Python.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about data warehousing principles (r1) and willingness to research business logic (r6)"
+  ]
+ },
+ "source": "llm",
+ "latency_s": 11.23,
+ "peak_vram_mib": 3267,
+ "id": "P13",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

@@ -1,0 +1,164 @@
+{
+ "job_title": "Data Scientist",
+ "decided_by": "gate",
+ "outcome": "reject",
+ "score": 33,
+ "gate_rule": "1 reject: must-have MISSING",
+ "gate_reasons": [
+  "r1: must-have MISSING",
+  "r4: must-have MISSING",
+  "r5: must-have MISSING",
+  "r6: must-have MISSING"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Data Science: 4 years of experience or more",
+   "decision": "MISSING",
+   "quotes": [
+    "Experience years: 1"
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": 4.0,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Good knowledge of probability theory and statistics",
+   "decision": "MET",
+   "quotes": [
+    "Strong knowledge in mathematical finance including stock prediction (LSTM + ARIMA + Monte Carlo Markov Chain), investment portfolio optimization and hedging"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "probability theory",
+    "statistics"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Understanding of Bayesian methods, time series analysis or sensor signal processing",
+   "decision": "UNCERTAIN",
+   "quotes": [],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": true,
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "skill_terms": [
+    "Bayesian methods",
+    "time series analysis",
+    "sensor signal processing"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "must",
+   "text": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Pyro",
+    "PyMC3",
+    "JAGS"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "must",
+   "text": "Experience with cloud (Amazon SageMaker)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Amazon SageMaker"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "must",
+   "text": "Experience with PySpark",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "PySpark"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r7",
+   "kind": "must",
+   "text": "Strong working knowledge of SQL",
+   "decision": "MET",
+   "quotes": [
+    "Languages: C++, Python, SQL, R(basic)"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "SQL"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r8",
+   "kind": "nice",
+   "text": "Ph.D. in Mathematics",
+   "decision": "MISSING",
+   "quotes": [
+    "Bachelor degree in Economic Cybernetics (KPI), currently studying for master's degree (same field)",
+    "Even though I have experience in mathematical finance and economic modelling, I am also interested in CV/NLP projects and I would gladly be involved in projects from international clients due to my strong language skills"
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P06",
+ "pair_id": "P06",
+ "split": "test",
+ "synthetic_flags": false
+}

@@ -1,0 +1,48 @@
+{
+ "decisions": {
+  "r1": "UNCERTAIN",
+  "r2": "MISSING",
+  "r3": "UNCERTAIN",
+  "r4": "MET",
+  "r5": "MET",
+  "r6": "MISSING",
+  "r7": "UNCERTAIN",
+  "r8": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "must",
+  "r7": "nice",
+  "r8": "nice"
+ },
+ "outcome": "reject",
+ "score": 46,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [],
+  "r2": [],
+  "r3": [
+   "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+  ],
+  "r4": [
+   "Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.",
+   "Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn."
+  ],
+  "r5": [
+   "Interpreting large amounts of data to formulate a problem statement, conclusions about dynamics, trends and opportunities for major fraud risks.",
+   "Analysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements."
+  ],
+  "r6": [],
+  "r7": [
+   "Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue)."
+  ],
+  "r8": []
+ },
+ "elapsed_s": 26.34,
+ "identical_to_base": true,
+ "ran": true
+}

@@ -1,0 +1,19 @@
+Ngozi Okonkwo
+Pronouns: she/her
+Position: Data Team Lead/Data Delivery Manager
+Experience years: 8
+English level: fluent
+
+Will be described in CV.
+Seasoned Team Leader on a complex project. Successfully managed a team of up to 10 Data Engineers, at the same time
+acting as a Resource/Functional Manager for a pool of up to 20 Data/Data Quality Engineers.
+Currently transitioning from Team Lead role to the Delivery Manager. 
+Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL.
+Conducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.
+Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).
+Experience in major cloud technologies: Azure (main), AWS, GCP.
+Proactive and continuously growing. Always trying to deliver more and ahead of schedule.
+Responsible for architectural decisions in various teams.
+Can easily communicate with the customer and present the progress to teams and/or stakeholders.
+Interpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile.
+Interested only in DWBI/DWH/ETL projects as a Team/Tech Lead or Data Delivery Manager. No preferences for team size. Cloud stack is mandatory (Azure preferred).

@@ -1,0 +1,887 @@
+{
+ "reader_kaggle_pdf": {
+  "cv_id": "cv-55f04718",
+  "file_type": "pdf",
+  "text": {
+   "chars": 8289,
+   "sha256": "ba3571685025dd5f"
+  },
+  "sections": {
+   "header": {
+    "chars": 35,
+    "sha256": "a311e26a9c406aa1"
+   },
+   "summary": {
+    "chars": 722,
+    "sha256": "a3a3f0d0b3bc6ed8"
+   },
+   "experience": {
+    "chars": 6601,
+    "sha256": "0ec82a81e2f08ce4"
+   },
+   "education": {
+    "chars": 320,
+    "sha256": "160d7c13911e113a"
+   },
+   "certifications": {
+    "chars": 23,
+    "sha256": "49653e9bf377dd49"
+   },
+   "skills": {
+    "chars": 525,
+    "sha256": "b0a7c7437b2805ae"
+   }
+  },
+  "read_path": [
+   "text",
+   "text"
+  ],
+  "layout": "single_column",
+  "ocr_confidence": null,
+  "needs_human_review": false,
+  "warnings": [],
+  "elapsed_s": 0.035
+ },
+ "profile_kaggle_pdf": {
+  "cv_id": "cv-55f04718",
+  "anonymised_text": "[NAME] TECHNICIAN I\nSummary\n\nVersatile Systems Administrator possessing superior troubleshooting skills for networking issues, end user problems, and network security.\nExperienced in server management, systems analysis, and offering in-depth understanding of IT infrastructure areas. Detail-oriented, independent,\nand focused on taking a systematic approach to solving complex problems. Demonstrated exceptional technical knowledge and skills while\nworking with various teams to achieve shared goals and objectives.\n\nHighlights\n\nActive Directory\nGroup Policy Objects\nPowerShell and VBScript\nMicrosoft Exchange\nVMWare experience\n\nNew technology and product research\nOffice 365 and Azure\nStorage management\nEnterprise backup management\nDisaster recovery\n\nExperience\n[NAME] Technician I Aug 2007 to Current\nCompany Name ï1⁄4 City , State\n\nMigrating and managing user accounts in Microsoft Office 365 and Exchange Online.\nCreating and managing virtual machines for systems such as domain controllers and Active Directory Federation Services (ADFS) in\nMicrosoft Windows Azure (IaaS).\nCreating and managing storage in Microsoft Windows Azure (IaaS).\nInstalling and configuring StorSimple iSCSI cloud array (STaaS/BaaS).\nInstalling, configuring, and testing Twinstrata iSCSI cloud array (STaaS/BaaS).\nCollaborating on project plan for Office 365 migration.\nDeveloping detailed specifications for the Office 365 migration, including business-case documentation, cost benefit analyses, technical\ndiagrams, and work flow documentation.\nReceived training in MVC 4 for Visual Studio using .Net Framework 4/4.5 to develop application using HTML5 and CSS3.\nInstalling, configuring, and supporting Linux machines for the open Wi-Fi network project.\nCompiling and generating statistical information concerning wireless network traffic using Cacti.\nConfiguring wireless LAN router networking and security access.\nInstalling and configuring wireless certificates.\nDeveloping detailed specifications for the acquisition of an Enterprise backup system including systems design, business-case\ndocumentation, cost benefit analysis, technical diagrams, and work flow documentation.\nReviewing, evaluating, and analyzing departmental policies, guidelines, procedures, and standards with management and staff.\nDeveloping test scripts for acceptance, unit, and system testing of Hyperion Phase 1 and MiamiBiz Phase 2.\nDeveloping Quality Assurance and testing plan for Hyperion Phase 1 and MiamiBiz Phase 2.\nDebugging and logging of errors in Hyperion and MiamiBiz using Team Foundation Server (TFS).\nParticipated in various phases of the project life cycle such as: determining requirements, design conceptualization, testing, implementation,\ndeployment, and release for the Hyperion and MiamiBiz projects.\nCollaborating on project plans for Hyperion and MiamiBiz.\nPreparing presentations and documentation to demonstrate Hyperion and MiamiBiz functionality or design.\nMonitoring network traffic, and compiling and generating statistical information using Solar Winds.\nCollaborating on Disaster Recovery plan and procedures.\nResearching, evaluating, and recommending new hardware and new software.\nCommunicating and defining systems design and requirements for new and existing systems and applications.\nResearching, evaluating, recommending, testing, and implementing third party software/utilities.\nPlanning and designing network infrastructure changes â€\" adding/removing servers, appliances, network logical flow.\nReviewing, evaluating, and analyzing existing system and application viability with management and staff.\nAdministering and maintaining shares on the file servers.\nReviewing server logs to troubleshoot issues.\nScheduling and applying hot fixes and security patches on the server infrastructure which includes the operating system and application\nsoftware.\nReviewing systems reporting in SCCM (System Center Configuration Manager).\nResolving service requests escalated by the Help Desk or other technicians.\nTroubleshooting and analyzing and system problems for root cause analysis.\nGiving and participating in training and education programs to explain upgrades to end users.\nMigrating users' documents from local computer storage to shares on the file servers.\nConfiguring, supporting, and maintaining file shares using Distributed File System (DFS)\nManaging, implementing, and testing Enterprise backup infrastructure systems such as the Symantec Veritas Netbackup, Symantec Backup\nExec System Recovery/Livestate, and VRanger backup servers.\nManaging, configuring, and supporting DataDomain storage.\nConfiguring and supporting Microsoft Windows Server 2003, 2008, and 2012.\nInstalling, configuring, and supporting Microsoft Windows 7, Windows 8, and Microsoft Office 2007, 2010, and 2013.\n\nInstalling, configuring, and supporting McAfee anti-virus software on servers.\nMigrating Exchange infrastructure from Exchange 2003 to Exchange 2007 and from Exchange 2007 to Exchange 2010.\nSupporting servers in the virtualization infrastructure using VMware vSphere.\nInstalling, configuring, and testing Veeam virtual machine backup software and Virtual Desktop Infrastructure (VDI).\nReviewing systems reporting in System Center Configuration Manager (SCCM).\nAdministering and maintaining the Symantec Enterprise Vault servers.\nManaging the Active Directory Domain Controllers (DCs).\nCreating and maintaining Group Policy Objects (GPOs) in Microsoft Active Directory.\nConfiguring and supporting Microsoft Exchange Active Sync on devices with Apple iOS and Android mobile operating systems.\nConfiguring and supporting Blackberry devices on the Blackberry Enterprise Server to receive Exchange email.\nDeveloping, testing, designing, and implementing application scripts using languages such as command batch files, Visual Basic Script, and\nPowerShell.\nCreating policies and procedural documentation.\n\n[NAME] Services Liaison, T Aug 2005 to Aug 2007\nCompany Name ï1⁄4 City , State\n\nTroubleshooting hardware and software problems over the telephone and through remote PC administration software.\nInstalling, configuring, and supporting McAfee anti-virus software on desktops.\nInstalling, configuring, and supporting BBars computer backup software.\nDeveloping and maintaining websites on servers running Microsoft SharePoint Server and Internet [NAME] Services (IIS).\nSupporting Systems Management Server (SMS)\nTroubleshooting LAN, WAN, Internet, and Intranet network and security access.\nTroubleshooting network connectivity issues related to TCP/IP, Domain Name Service (DNS), Dynamic Host Configuration Protocol\n(DHCP) protocols, Internet Security and Acceleration (ISA) proxy server, and VPN.\nTroubleshooting web application/page issues, client browsers, and related software.\nAdministering and maintaining of end user accounts, permissions, and access rights in in Microsoft Active Directory.\nAdministering and maintaining of NTFS security permissions on the file servers.\nInstalling, configuring, and maintaining hardware such as: servers, workstations, laptops, printers, and scanners in a Windows Enterprise\nenvironment.\nInstalling, configuring, and supporting printers on the print servers.\nInstalling, configuring, and supporting Microsoft Windows Server 2000 and 2003, Microsoft Windows XP and Windows Vista, and\nMicrosoft Office XP, 2003, and 2007.\n\nEducation\nBachelor of Science , [NAME] 2005 Florida International Univeristy ï1⁄4 City , State , United States\n\nCoursework in Programming, Web Administration, Network Administration, Database Administration, and Systems Administration â€\"\nLinux\nProgramming Languages: C++, Java, JSP, HTML, CSS, VB.Net, Bash, T-SQL\n\nCertifications\n\nCompTIA Network+ - 2014\n\nSkills\n\nActive Directory, Azure, anti-virus, Backup Exec, backup, Bash, batch, Cacti, Cisco ASA, databases, DHCP, DNS, documentation,\nDataDomain, EMC, Enterprise Vault, ePO, file servers, firewall, GPO, HTML, IIS, ISA, LDAP, Linux, McAfee, Exchange, Microsoft Office,\nMicrosoft Windows, security, policies, PowerShell, programming, proxy server, servers, scripts, SolarWinds, SQL, StorSimple, troubleshooting,\nTMG, Ubuntu, Visual Basic Script, VBS, Veritas Netbackup, VPN, VRanger, Veeam, VMWare, VDI, virtual manchine, NMap, ZenMap.",
+  "privacy": {
+   "schema_version": "0.1.0",
+   "placeholders": {
+    "[NAME]": 5
+   },
+   "detectors": [
+    "rules"
+   ],
+   "name_found": true,
+   "leaks_fixed": 0,
+   "leaks_left": 0,
+   "needs_human_review": false,
+   "warnings": []
+  },
+  "profile": {
+   "schema_version": "0.1.0",
+   "candidate_id": "cv-55f04718",
+   "skills": [
+    {
+     "name": "Active Directory",
+     "evidence": "Active Directory"
+    },
+    {
+     "name": "Group Policy Objects",
+     "evidence": "Group Policy Objects"
+    },
+    {
+     "name": "PowerShell",
+     "evidence": "PowerShell and VBScript"
+    },
+    {
+     "name": "VBScript",
+     "evidence": "PowerShell and VBScript"
+    },
+    {
+     "name": "Microsoft Exchange",
+     "evidence": "Microsoft Exchange"
+    },
+    {
+     "name": "VMWare",
+     "evidence": "VMWare experience"
+    },
+    {
+     "name": "New technology and product research",
+     "evidence": "New technology and product research"
+    },
+    {
+     "name": "Office 365",
+     "evidence": "Office 365 and Azure"
+    },
+    {
+     "name": "Azure",
+     "evidence": "Office 365 and Azure"
+    },
+    {
+     "name": "Storage management",
+     "evidence": "Storage management"
+    },
+    {
+     "name": "Enterprise backup management",
+     "evidence": "Enterprise backup management"
+    },
+    {
+     "name": "Disaster recovery",
+     "evidence": "Disaster recovery"
+    },
+    {
+     "name": "Microsoft Office 365",
+     "evidence": "Migrating and managing user accounts in Microsoft Office 365 and Exchange Online."
+    },
+    {
+     "name": "Exchange Online",
+     "evidence": "Migrating and managing user accounts in Microsoft Office 365 and Exchange Online."
+    },
+    {
+     "name": "Microsoft Windows Azure",
+     "evidence": "Creating and managing virtual machines for systems such as domain controllers and Active Directory Federation Services (ADFS) in\nMicrosoft Windows Azure (IaaS)."
+    },
+    {
+     "name": "IaaS",
+     "evidence": "Creating and managing virtual machines for systems such as domain controllers and Active Directory Federation Services (ADFS) in\nMicrosoft Windows Azure (IaaS)."
+    },
+    {
+     "name": "Storage",
+     "evidence": "Creating and managing storage in Microsoft Windows Azure (IaaS)."
+    },
+    {
+     "name": "StorSimple iSCSI cloud array",
+     "evidence": "Installing and configuring StorSimple iSCSI cloud array (STaaS/BaaS)."
+    },
+    {
+     "name": "Twinstrata iSCSI cloud array",
+     "evidence": "Installing, configuring, and testing Twinstrata iSCSI cloud array (STaaS/BaaS)."
+    },
+    {
+     "name": "STaaS",
+     "evidence": "Installing and configuring StorSimple iSCSI cloud array (STaaS/BaaS)."
+    },
+    {
+     "name": "BaaS",
+     "evidence": "Installing and configuring StorSimple iSCSI cloud array (STaaS/BaaS)."
+    },
+    {
+     "name": "MVC 4",
+     "evidence": "Received training in MVC 4 for Visual Studio using .Net Framework 4/4.5 to develop application using HTML5 and CSS3."
+    },
+    {
+     "name": "Visual Studio",
+     "evidence": "Received training in MVC 4 for Visual Studio using .Net Framework 4/4.5 to develop application using HTML5 and CSS3."
+    },
+    {
+     "name": "Net Framework",
+     "evidence": "Received training in MVC 4 for Visual Studio using .Net Framework 4/4.5 to develop application using HTML5 and CSS3."
+    },
+    {
+     "name": "HTML5",
+     "evidence": "Received training in MVC 4 for Visual Studio using .Net Framework 4/4.5 to develop application using HTML5 and CSS3."
+    },
+    {
+     "name": "CSS3",
+     "evidence": "Received training in MVC 4 for Visual Studio using .Net Framework 4/4.5 to develop application using HTML5 and CSS3."
+    },
+    {
+     "name": "Linux",
+     "evidence": "Installing, configuring, and supporting Linux machines for the open Wi-Fi network project."
+    },
+    {
+     "name": "Cacti",
+     "evidence": "Compiling and generating statistical information concerning wireless network traffic using Cacti."
+    },
+    {
+     "name": "wireless LAN router",
+     "evidence": "Configuring wireless LAN router networking and security access."
+    },
+    {
+     "name": "wireless certificates",
+     "evidence": "Installing and configuring wireless certificates."
+    },
+    {
+     "name": "Enterprise backup system",
+     "evidence": "Developing detailed specifications for the acquisition of an Enterprise backup system including systems design, business-case\ndocumentation, cost benefit analysis, technical diagrams, and work flow documentation."
+    },
+    {
+     "name": "departmental policies",
+     "evidence": "Reviewing, evaluating, and analyzing departmental policies, guidelines, procedures, and standards with management and staff."
+    },
+    {
+     "name": "Test scripts",
+     "evidence": "Developing test scripts for acceptance, unit, and system testing of Hyperion Phase 1 and MiamiBiz Phase 2."
+    },
+    {
+     "name": "Quality Assurance",
+     "evidence": "Developing Quality Assurance and testing plan for Hyperion Phase 1 and MiamiBiz Phase 2."
+    },
+    {
+     "name": "Debugging",
+     "evidence": "Debugging and logging of errors in Hyperion and MiamiBiz using Team Foundation Server (TFS)."
+    },
+    {
+     "name": "Team Foundation Server",
+     "evidence": "Debugging and logging of errors in Hyperion and MiamiBiz using Team Foundation Server (TFS)."
+    },
+    {
+     "name": "Solar Winds",
+     "evidence": "Monitoring network traffic, and compiling and generating statistical information using Solar Winds."
+    },
+    {
+     "name": "Design conceptualization",
+     "evidence": "Participated in various phases of the project life cycle such as: determining requirements, design conceptualization, testing, implementation,\ndeployment, and release for the Hyperion and MiamiBiz projects."
+    },
+    {
+     "name": "Testing",
+     "evidence": "Participated in various phases of the project life cycle such as: determining requirements, design conceptualization, testing, implementation,\ndeployment, and release for the Hyperion and MiamiBiz projects."
+    },
+    {
+     "name": "Implementation",
+     "evidence": "Participated in various phases of the project life cycle such as: determining requirements, design conceptualization, testing, implementation,\ndeployment, and release for the Hyperion and MiamiBiz projects."
+    },
+    {
+     "name": "Deployment",
+     "evidence": "Participated in various phases of the project life cycle such as: determining requirements, design conceptualization, testing, implementation,\ndeployment, and release for the Hyperion and MiamiBiz projects."
+    },
+    {
+     "name": "Release",
+     "evidence": "Participated in various phases of the project life cycle such as: determining requirements, design conceptualization, testing, implementation,\ndeployment, and release for the Hyperion and MiamiBiz projects."
+    },
+    {
+     "name": "Presentations",
+     "evidence": "Preparing presentations and documentation to demonstrate Hyperion and MiamiBiz functionality or design."
+    },
+    {
+     "name": "Documentation",
+     "evidence": "Preparing presentations and documentation to demonstrate Hyperion and MiamiBiz functionality or design."
+    },
+    {
+     "name": "Network infrastructure",
+     "evidence": "Planning and designing network infrastructure changes â€"
+    },
+    {
+     "name": "SCCM",
+     "evidence": "Reviewing systems reporting in SCCM (System Center Configuration Manager)."
+    },
+    {
+     "name": "Help Desk",
+     "evidence": "Resolving service requests escalated by the Help Desk or other technicians."
+    },
+    {
+     "name": "Troubleshooting",
+     "evidence": "Troubleshooting and analyzing and system problems for root cause analysis."
+    },
+    {
+     "name": "Training",
+     "evidence": "Giving and participating in training and education programs to explain upgrades to end users."
+    },
+    {
+     "name": "Distributed File System",
+     "evidence": "Configuring, supporting, and maintaining file shares using Distributed File System (DFS)"
+    },
+    {
+     "name": "Veritas Netbackup",
+     "evidence": "Managing, implementing, and testing Enterprise backup infrastructure systems such as the Symantec Veritas Netbackup, Symantec Backup\nExec System Recovery/Livestate, and VRanger backup servers."
+    },
+    {
+     "name": "Backup Exec",
+     "evidence": "Managing, implementing, and testing Enterprise backup infrastructure systems such as the Symantec Veritas Netbackup, Symantec Backup\nExec System Recovery/Livestate, and VRanger backup servers."
+    },
+    {
+     "name": "VRanger",
+     "evidence": "Managing, implementing, and testing Enterprise backup infrastructure systems such as the Symantec Veritas Netbackup, Symantec Backup\nExec System Recovery/Livestate, and VRanger backup servers."
+    },
+    {
+     "name": "DataDomain",
+     "evidence": "Managing, configuring, and supporting DataDomain storage."
+    },
+    {
+     "name": "Microsoft Active Directory",
+     "evidence": "Creating and maintaining Group Policy Objects (GPOs) in Microsoft Active Directory."
+    },
+    {
+     "name": "Microsoft Exchange Active Sync",
+     "evidence": "Configuring and supporting Microsoft Exchange Active Sync on devices with Apple iOS and Android mobile operating systems."
+    },
+    {
+     "name": "Apple iOS",
+     "evidence": "Configuring and supporting Microsoft Exchange Active Sync on devices with Apple iOS and Android mobile operating systems."
+    },
+    {
+     "name": "Android",
+     "evidence": "Configuring and supporting Microsoft Exchange Active Sync on devices with Apple iOS and Android mobile operating systems."
+    },
+    {
+     "name": "Blackberry Enterprise Server",
+     "evidence": "Configuring and supporting Blackberry devices on the Blackberry Enterprise Server to receive Exchange email."
+    },
+    {
+     "name": "Exchange email",
+     "evidence": "Configuring and supporting Blackberry devices on the Blackberry Enterprise Server to receive Exchange email."
+    },
+    {
+     "name": "command batch files",
+     "evidence": "Developing, testing, designing, and implementing application scripts using languages such as command batch files, Visual Basic Script, and\nPowerShell."
+    },
+    {
+     "name": "Visual Basic Script",
+     "evidence": "Developing, testing, designing, and implementing application scripts using languages such as command batch files, Visual Basic Script, and\nPowerShell."
+    },
+    {
+     "name": "procedural documentation",
+     "evidence": "Creating policies and procedural documentation."
+    },
+    {
+     "name": "McAfee anti-virus software",
+     "evidence": "Installing, configuring, and supporting McAfee anti-virus software on desktops."
+    },
+    {
+     "name": "BBars",
+     "evidence": "Installing, configuring, and supporting BBars computer backup software."
+    },
+    {
+     "name": "Microsoft SharePoint Server",
+     "evidence": "Developing and maintaining websites on servers running Microsoft SharePoint Server and Internet [NAME] Services (IIS)."
+    },
+    {
+     "name": "Systems Management Server",
+     "evidence": "Supporting Systems Management Server (SMS)"
+    },
+    {
+     "name": "LAN",
+     "evidence": "Troubleshooting LAN, WAN, Internet, and Intranet network and security access."
+    },
+    {
+     "name": "WAN",
+     "evidence": "Troubleshooting LAN, WAN, Internet, and Intranet network and security access."
+    },
+    {
+     "name": "Internet",
+     "evidence": "Troubleshooting LAN, WAN, Internet, and Intranet network and security access."
+    },
+    {
+     "name": "Intranet",
+     "evidence": "Troubleshooting LAN, WAN, Internet, and Intranet network and security access."
+    },
+    {
+     "name": "TCP/IP",
+     "evidence": "Troubleshooting network connectivity issues related to TCP/IP, Domain Name Service (DNS), Dynamic Host Configuration Protocol\n(DHCP) protocols, Internet Security and Acceleration (ISA) proxy server, and VPN."
+    },
+    {
+     "name": "Domain Name Service",
+     "evidence": "Troubleshooting network connectivity issues related to TCP/IP, Domain Name Service (DNS), Dynamic Host Configuration Protocol\n(DHCP) protocols, Internet Security and Acceleration (ISA) proxy server, and VPN."
+    },
+    {
+     "name": "Dynamic Host Configuration Protocol",
+     "evidence": "Troubleshooting network connectivity issues related to TCP/IP, Domain Name Service (DNS), Dynamic Host Configuration Protocol\n(DHCP) protocols, Internet Security and Acceleration (ISA) proxy server, and VPN."
+    },
+    {
+     "name": "Internet Security and Acceleration",
+     "evidence": "Troubleshooting network connectivity issues related to TCP/IP, Domain Name Service (DNS), Dynamic Host Configuration Protocol\n(DHCP) protocols, Internet Security and Acceleration (ISA) proxy server, and VPN."
+    },
+    {
+     "name": "VPN",
+     "evidence": "Troubleshooting network connectivity issues related to TCP/IP, Domain Name Service (DNS), Dynamic Host Configuration Protocol\n(DHCP) protocols, Internet Security and Acceleration (ISA) proxy server, and VPN."
+    },
+    {
+     "name": "web application",
+     "evidence": "Troubleshooting web application/page issues, client browsers, and related software."
+    },
+    {
+     "name": "client browsers",
+     "evidence": "Troubleshooting web application/page issues, client browsers, and related software."
+    },
+    {
+     "name": "NTFS",
+     "evidence": "Administering and maintaining of NTFS security permissions on the file servers."
+    }
+   ],
+   "education": [],
+   "experience": [
+    {
+     "title": "Technician I",
+     "company": "Company Name ï1⁄4 City , State",
+     "start": "2007-08",
+     "end": "present",
+     "evidence": "[NAME] Technician I Aug 2007 to Current\nCompany Name ï1⁄4 City , State"
+    },
+    {
+     "title": "Services Liaison",
+     "company": "Company Name ï1⁄4 City , State",
+     "start": "2005-08",
+     "end": "2007-08",
+     "evidence": "[NAME] Services Liaison, T Aug 2005 to Aug 2007\nCompany Name ï1⁄4 City , State"
+    }
+   ],
+   "uncertain": [
+    "skill 'Network traffic monitoring': name 'Network traffic monitoring' is not written in its evidence, removed",
+    "skill 'Requirements determination': name 'Requirements determination' is not written in its evidence, removed",
+    "skill 'Project planning': name 'Project planning' is not written in its evidence, removed",
+    "skill 'Document migration': name 'Document migration' is not written in its evidence, removed",
+    "part 7/11: answer cut off at the token limit",
+    "part 7/11: attempt 1: unreadable answer (no JSON object in the model answer)",
+    "part 7/11: answer cut off at the token limit",
+    "part 7/11: attempt 2: unreadable answer (no JSON object in the model answer)",
+    "skill 'Internet Services': name 'Internet Services' is not written in its evidence, removed",
+    "part 10/11: answer cut off at the token limit",
+    "part 10/11: attempt 1: unreadable answer (no JSON object in the model answer)",
+    "part 10/11: answer cut off at the token limit",
+    "part 10/11: attempt 2: unreadable answer (no JSON object in the model answer)",
+    "part 11/11: answer cut off at the token limit",
+    "part 11/11: attempt 1: unreadable answer (no JSON object in the model answer)",
+    "part 11/11: answer cut off at the token limit",
+    "part 11/11: attempt 2: unreadable answer (no JSON object in the model answer)"
+   ],
+   "prompt_version": "profile-v1"
+  },
+  "review_reasons": [
+   "profile:partial_extraction_requires_review"
+  ],
+  "elapsed_s": 146.337
+ },
+ "reader_djinni_cv": {
+  "cv_id": "cv-90769a7f",
+  "file_type": "text",
+  "text": {
+   "chars": 931,
+   "sha256": "1a8824b4b082e6e2"
+  },
+  "sections": {
+   "header": {
+    "chars": 931,
+    "sha256": "1a8824b4b082e6e2"
+   }
+  },
+  "read_path": [
+   "text"
+  ],
+  "layout": "unknown",
+  "ocr_confidence": null,
+  "needs_human_review": false,
+  "warnings": [
+   "No section headings recognised (Experience, Education, ...)."
+  ],
+  "elapsed_s": 0.152
+ },
+ "profile_djinni_cv": {
+  "cv_id": "cv-90769a7f",
+  "anonymised_text": "Position: Big Data Engineer\nExperience years: 5\nEnglish level: upper\n\nThe two startups I've worked for are now unicorns with an overall evaluation of ~10B.\nT-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering. Took part in a variety of Data Science projects for e-commerce and advertising companies. My work covered both Engineering and Product parts. On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions. On the Product side I worked with stakeholders to formalize requirements and present results.\nI'm looking for rather engineering kind of work such as MLOps, Machine Learning, Big Data, then related to the theoretical part of DS. Companies with strong Data Science/Engineering cultures or solid revenue streams are preferred.\nSorry, I'm not considering any Data Science or Analytics positions any longer",
+  "privacy": {
+   "schema_version": "0.1.0",
+   "placeholders": {},
+   "detectors": [
+    "rules"
+   ],
+   "name_found": false,
+   "leaks_fixed": 0,
+   "leaks_left": 0,
+   "needs_human_review": true,
+   "warnings": [
+    "candidate name not found: check the anonymised text by hand"
+   ]
+  },
+  "profile": {
+   "schema_version": "0.1.0",
+   "candidate_id": "cv-90769a7f",
+   "skills": [
+    {
+     "name": "Machine Learning",
+     "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering."
+    },
+    {
+     "name": "DataScience",
+     "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering."
+    },
+    {
+     "name": "Software Engineering",
+     "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering."
+    },
+    {
+     "name": "R&D",
+     "evidence": "On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions."
+    },
+    {
+     "name": "System design",
+     "evidence": "On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions."
+    },
+    {
+     "name": "Requirements",
+     "evidence": "On the Product side I worked with stakeholders to formalize requirements and present results."
+    },
+    {
+     "name": "Product",
+     "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering."
+    },
+    {
+     "name": "English",
+     "evidence": "English level: upper"
+    }
+   ],
+   "education": [],
+   "experience": [],
+   "uncertain": [],
+   "prompt_version": "profile-v1"
+  },
+  "review_reasons": [
+   "profile:name_not_found"
+  ],
+  "elapsed_s": 5.774
+ },
+ "job_J2": {
+  "card": {
+   "schema_version": "0.1.0",
+   "job_id": "J2",
+   "title": "Data Engineer",
+   "language": "en",
+   "requirements": [
+    {
+     "req_id": "r1",
+     "text": "Knowledge of the general principles of Data Warehousing",
+     "evidence": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Data Warehousing"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r2",
+     "text": "Knowledge of the general principles of Data Lakes",
+     "evidence": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Data Lakes"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r3",
+     "text": "Wiliness to do research on business logic",
+     "evidence": "Wiliness to do research on business logic",
+     "kind": "must",
+     "category": "other",
+     "skill_terms": [],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r4",
+     "text": "Hands-on experience with SQL",
+     "evidence": "Hands-on experience with SQL",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "SQL"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r5",
+     "text": "Knowledge of Python",
+     "evidence": "Knowledge of Python",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Python"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r6",
+     "text": "Experience with GCP or other cloud providers",
+     "evidence": "Experience with GCP or other cloud providers",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [
+      "GCP",
+      "cloud providers"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r7",
+     "text": "Good spoken English",
+     "evidence": "Good spoken English",
+     "kind": "must",
+     "category": "language",
+     "skill_terms": [
+      "English"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    }
+   ],
+   "uncertain": [],
+   "needs_human_review": false,
+   "warnings": []
+  },
+  "injection": {
+   "injected_sentences": [],
+   "dropped_req_ids": []
+  },
+  "review_reasons": [],
+  "elapsed_s": 6.935
+ },
+ "match_r1": {
+  "req_id": "r1",
+  "decision": "MISSING",
+  "basis": "not_documented",
+  "evidence": [],
+  "explanation": "The CV says nothing about this requirement.",
+  "model_decision": "MISSING",
+  "evidence_years": null,
+  "review_reasons": [],
+  "needs_human_review": false,
+  "knowledge_refs": [
+   {
+    "source_id": "http://data.europa.eu/esco/skill/fd6d2981-3d4a-4ce2-9741-cfc98c5b74bd",
+    "title": "implement data warehousing techniques"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/f2d57f41-43b4-4f5b-8100-3df5c21eda50",
+    "title": "process data"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/0d6714c6-720e-4985-9791-5ab85d28da79",
+    "title": "gather data"
+   }
+  ],
+  "model": {
+   "name": "qwen3-4b",
+   "backend": "local",
+   "lora_scale": 1.0,
+   "latency_s": 1.35,
+   "finish_reason": "stop",
+   "max_tokens": 384
+  },
+  "prompt_id": "matcher-v1",
+  "schema": "services/matcher/schema.json",
+  "knowledge": "rag.bm25 k=3",
+  "elapsed_s": 2.666
+ },
+ "match_r2": {
+  "req_id": "r2",
+  "decision": "MISSING",
+  "basis": "not_documented",
+  "evidence": [],
+  "explanation": "The CV says nothing about this requirement.",
+  "model_decision": "MISSING",
+  "evidence_years": null,
+  "review_reasons": [],
+  "needs_human_review": false,
+  "knowledge_refs": [
+   {
+    "source_id": "http://data.europa.eu/esco/skill/f2d57f41-43b4-4f5b-8100-3df5c21eda50",
+    "title": "process data"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/0d6714c6-720e-4985-9791-5ab85d28da79",
+    "title": "gather data"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/57231a22-4da7-49c8-97b8-75672feadf1e",
+    "title": "manage quantitative data"
+   }
+  ],
+  "model": {
+   "name": "qwen3-4b",
+   "backend": "local",
+   "lora_scale": 1.0,
+   "latency_s": 1.309,
+   "finish_reason": "stop",
+   "max_tokens": 384
+  },
+  "prompt_id": "matcher-v1",
+  "schema": "services/matcher/schema.json",
+  "knowledge": "rag.bm25 k=3",
+  "elapsed_s": 2.413
+ },
+ "match_r3": {
+  "req_id": "r3",
+  "decision": "MISSING",
+  "basis": "not_documented",
+  "evidence": [],
+  "explanation": "The CV says nothing about this requirement.",
+  "model_decision": "MISSING",
+  "evidence_years": null,
+  "review_reasons": [],
+  "needs_human_review": false,
+  "knowledge_refs": [
+   {
+    "source_id": "http://data.europa.eu/esco/skill/410540a4-b88c-4073-9da2-8aa5d7eaf780",
+    "title": "player logic"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/54ad8d82-17ae-4544-898c-19005ff928d3",
+    "title": "conduct costume research"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/294cf13e-4fdf-4cb8-bb6b-31b9da7f4819",
+    "title": "logic"
+   }
+  ],
+  "model": {
+   "name": "qwen3-4b",
+   "backend": "local",
+   "lora_scale": 1.0,
+   "latency_s": 1.249,
+   "finish_reason": "stop",
+   "max_tokens": 384
+  },
+  "prompt_id": "matcher-v1",
+  "schema": "services/matcher/schema.json",
+  "knowledge": "rag.bm25 k=3",
+  "elapsed_s": 2.282
+ },
+ "match_r4": {
+  "req_id": "r4",
+  "decision": "MISSING",
+  "basis": "not_documented",
+  "evidence": [],
+  "explanation": "The CV says nothing about this requirement.",
+  "model_decision": "MISSING",
+  "evidence_years": null,
+  "review_reasons": [],
+  "needs_human_review": false,
+  "knowledge_refs": [
+   {
+    "source_id": "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+    "title": "SQL Server"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/598de5b0-5b58-4ea7-8058-a4bc4d18c742",
+    "title": "SQL"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/ab1e97ed-2319-4293-a8b7-072d2648822f",
+    "title": "database management systems"
+   }
+  ],
+  "model": {
+   "name": "qwen3-4b",
+   "backend": "local",
+   "lora_scale": 1.0,
+   "latency_s": 1.271,
+   "finish_reason": "stop",
+   "max_tokens": 384
+  },
+  "prompt_id": "matcher-v1",
+  "schema": "services/matcher/schema.json",
+  "knowledge": "rag.bm25 k=3",
+  "elapsed_s": 2.317
+ },
+ "match_r5": {
+  "req_id": "r5",
+  "decision": "MISSING",
+  "basis": "not_documented",
+  "evidence": [],
+  "explanation": "The CV says nothing about this requirement.",
+  "model_decision": "MISSING",
+  "evidence_years": null,
+  "review_reasons": [],
+  "needs_human_review": false,
+  "knowledge_refs": [
+   {
+    "source_id": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+    "title": "Python (computer programming)"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333",
+    "title": "use scripting programming"
+   }
+  ],
+  "model": {
+   "name": "qwen3-4b",
+   "backend": "local",
+   "lora_scale": 1.0,
+   "latency_s": 1.253,
+   "finish_reason": "stop",
+   "max_tokens": 384
+  },
+  "prompt_id": "matcher-v1",
+  "schema": "services/matcher/schema.json",
+  "knowledge": "rag.bm25 k=3",
+  "elapsed_s": 2.272
+ },
+ "match_r6": {
+  "req_id": "r6",
+  "decision": "MISSING",
+  "basis": "not_documented",
+  "evidence": [],
+  "explanation": "The CV says nothing about this requirement.",
+  "model_decision": "MISSING",
+  "evidence_years": null,
+  "review_reasons": [],
+  "needs_human_review": false,
+  "knowledge_refs": [
+   {
+    "source_id": "http://data.europa.eu/esco/skill/1c2978b8-bb0d-4249-9c23-877571a4dffa",
+    "title": "cloud security and compliance"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/8efa6a7a-6556-4cb8-908d-59d3b5c58d2f",
+    "title": "cloud monitoring and reporting"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/4da4587a-fd0b-4ca2-886c-c42a1562d432",
+    "title": "design cloud networks"
+   }
+  ],
+  "model": {
+   "name": "qwen3-4b",
+   "backend": "local",
+   "lora_scale": 1.0,
+   "latency_s": 1.313,
+   "finish_reason": "stop",
+   "max_tokens": 384
+  },
+  "prompt_id": "matcher-v1",
+  "schema": "services/matcher/schema.json",
+  "knowledge": "rag.bm25 k=3",
+  "elapsed_s": 2.344
+ },
+ "match_r7": {
+  "req_id": "r7",
+  "decision": "MET",
+  "basis": "supported",
+  "evidence": [
+   {
+    "quote": "The two startups I've worked for are now unicorns with an overall evaluation of ~10B.",
+    "start": 70,
+    "end": 155
+   },
+   {
+    "quote": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering. Took part in a variety of Data Science projects for e-commerce and advertising companies. My work covered both Engineering and Product parts. On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions. On the Product side I worked with stakeholders to formalize requirements and present results.",
+    "start": 156,
+    "end": 622
+   },
+   {
+    "quote": "I'm looking for rather engineering kind of work such as MLOps, Machine Learning, Big Data, then related to the theoretical part of DS. Companies with strong Data Science/Engineering cultures or solid revenue streams are preferred.",
+    "start": 623,
+    "end": 853
+   }
+  ],
+  "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+  "model_decision": "MET",
+  "evidence_years": null,
+  "review_reasons": [],
+  "needs_human_review": false,
+  "knowledge_refs": [
+   {
+    "source_id": "http://data.europa.eu/esco/skill/0ee9e985-0ee5-4a73-8a12-78b53b261bb2",
+    "title": "interact verbally in English"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/64ff8d5f-58a8-4efb-af5a-e161854b3e9a",
+    "title": "understand spoken English"
+   },
+   {
+    "source_id": "http://data.europa.eu/esco/skill/7ee20fe2-facd-4cc5-837b-927429e0e7ac",
+    "title": "understand written English"
+   }
+  ],
+  "model": {
+   "name": "qwen3-4b",
+   "backend": "local",
+   "lora_scale": 1.0,
+   "latency_s": 4.97,
+   "finish_reason": "stop",
+   "max_tokens": 384
+  },
+  "prompt_id": "matcher-v1",
+  "schema": "services/matcher/schema.json",
+  "knowledge": "rag.bm25 k=3",
+  "elapsed_s": 5.986
+ }
+}

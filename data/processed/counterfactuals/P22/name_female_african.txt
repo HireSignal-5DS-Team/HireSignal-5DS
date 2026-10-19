@@ -1,0 +1,23 @@
+Ngozi Okonkwo
+Pronouns: she/her
+Position: Data/System analyst
+Experience years: 6
+English level: intermediate
+
+Continuous monitoring and analysis of key indicators fraud risks. Understanding the ways, methods and procedures of fraud. Investigation fraud incidents in the system and organization.
+Counteracting the risks of negative consequences of malware, scammers, crawlers, bots, financial fraud, illegal actions of users and customers of the system.
+Interpreting large amounts of data to formulate a problem statement, conclusions about dynamics, trends and opportunities for major fraud risks.
+Experience working with  payment and KYC providers.
+Verification of clients, analysis of activities and anomalies for fraud behavior, blocking of fraudsters.
+Experience in building, implementing and testing scoring models, developing algorithms, developing methods for detecting and methods of preventive protection against fraud.
+Automation in the field of fraud protection, creation an effective system of antifraud protection. 
+Provide consolidated reporting of trends in fraud risk across the organization to general management.
+Good knowledge of data science, data mining, statistical analysis methods, mathematical model building.
+Experience with Python, numpy, pandas, scipy, scikit-learn, plotly/seaborn. 
+Working with databases MySQL, Clickhouse, MongoDB, HDFS(Hive, Hue).
+Experience with task trackers(JIRA, Confluence, YouTrack, Redmine), the ability to prioritize tasks,  user stories, manage backlog, compile a product roadmap. Modeling and description of UML business processes.
+Analysis of the IT solutions market, analysis and identification of business needs, their implementation, verification of sold products for compliance with requirements. 
+Experience in successful certification of antifraud protection by international certification center (TAG), cooperation with international antifraud companies Forensiq, White Ops, Anura, Secure D, BotRadar, etc.
+Consulting and training the anti-fraud team in the use of specialized software, creating instructions and regulating the escalation of cases. Analysis and recommendations for improving the software taking into account the requirements of the fraud protection functionality.
+A clear understanding of the Software Development Lifecycle for Enterprise, web, mobile applications. Using agile development methodology (Scrum). Understanding the internal structure of web projects.
+Analysis of the IT solutions market of business needs, their implementation, verification of sold products for compliance with requirements.

@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K07_p01_photo",
+  "file": "K07_p01_photo.jpg",
+  "source": "K02.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "Okay, here's a breakdown of the CV you provided, summarizing the key information:\n\n**Overall Summary:**\n\nThis is a Building Automation Systems Engineer with a strong background in network infrastructure and building automation solutions. They possess experience in project management, technical support, and communication skills, and are described as highly motivated and resourceful.\n\n**Key Highlights:**\n\n*   **Technical Skills:** Possesses vast technical knowledge including server management, network and PC support, computer programming, and experience with control system design.\n*   **Soft Skills:** Highly motivated, self-motivated, and proficient in multi-tasker.\n*   **Experience:**  Experience in project tracking, hardware and software upgrade planning, and user experience (UX) design.\n\n**Experience:**\n\n*   **Manager - Information Technology and Building Automation Systems** (October 2014 - Current) - *Current Company Name* - *New City, State*\n    *   **Responsibilities:**\n        *   Led a cross-functional team of engineers, QAs, and UX designers to develop features and fix product defects.\n        *   Delivered detailed feature roadmaps that included action items and project targets.\n        *   Leveraged in-depth understanding of end-to-end customer journey points and built customer needs.\n        *   Managed the 8-person local IT team, allocating resources and networking deadlines.\n        *   Conducted computer diagnostics to investigate and resolve problems and provide technical assistance and support.\n        *   Worked on large enterprise and business critical applications.\n        *   Analyzed and created new configuration for packaged software sets of businesses and system requirements.\n        *   Configured, maintained and provided networking and performance analysis to meet business class storage systems.\n        *   Provided seamless level support for all workstation and server class software.\n        *   Served as the technical lead for server infrastructure development, QA, staging and production systems.\n        *   Serviced electrical, technical, mechanical and micro-control controls.\n        *   Set up, tested and configured related digital controls, systems and environments.\n        *   Analyzed, modified and repaired controls, laptops and printers.\n        *   Created employee training materials and procedures to teach users how to work proper software and hardware protocols.\n        *   Digitized, compiled, and replicate and maintain local technical support documentation.\n\n**Accomplishments:**\n\n*   **Awards:**\n    *   Awarded the Navy and Marine Corps Achievement Medal in 2010, 2011, & 2013.\n    *   Awarded Sailor of the Year designation for the Pacific Naval Fleet in 2013.\n*   **Training & Development:** Responsible for the training and development of 8 technicians and project A coordinators within the team.\n\n**Dates:**\n\n*   The CV was last updated in July 2014.  The previous role was from October 2014 - Current.\n\n---\n\nDo you want me to:\n\n*   Focus on a specific aspect of the CV (e.g., their technical skills, their experience)?\n*   Compare this CV to another one?\n*   Extract specific information (e.g., list all the software they've worked with)?",
+   "model": "gemma3:4b",
+   "latency_s": 17.52,
+   "eval_count": 681,
+   "done_reason": "stop",
+   "peak_vram_mib": 3887
+  }
+ ]
+}

@@ -1,0 +1,956 @@
+[
+ {
+  "run": "P15",
+  "pair": "P15",
+  "job": "J2",
+  "stratum_in_pairs_csv": "partial",
+  "execution_id": "7",
+  "n8n_started": "2026-10-18 08:40:49.023",
+  "n8n_stopped": "2026-10-18 08:41:45.502",
+  "total_wall_s": 56.8,
+  "outcome": "reject",
+  "score": 43,
+  "review_reasons": [],
+  "info_flags": [
+   "reader:No section headings recognised (Experience, Education, ...)."
+  ],
+  "decisions": {
+   "r1": [
+    "must",
+    "MISSING"
+   ],
+   "r2": [
+    "must",
+    "MISSING"
+   ],
+   "r3": [
+    "must",
+    "MISSING"
+   ],
+   "r4": [
+    "must",
+    "MET"
+   ],
+   "r5": [
+    "must",
+    "MET"
+   ],
+   "r6": [
+    "must",
+    "MISSING"
+   ],
+   "r7": [
+    "must",
+    "MET"
+   ]
+  },
+  "station_timings_s": {
+   "reader": 0.004,
+   "profile": 28.879,
+   "job": 6.518,
+   "match_total": 20.139,
+   "match_each": [
+    {
+     "req_id": "r1",
+     "s": 2.45
+    },
+    {
+     "req_id": "r2",
+     "s": 2.342
+    },
+    {
+     "req_id": "r3",
+     "s": 2.229
+    },
+    {
+     "req_id": "r4",
+     "s": 3.094
+    },
+    {
+     "req_id": "r5",
+     "s": 2.612
+    },
+    {
+     "req_id": "r6",
+     "s": 3.304
+    },
+    {
+     "req_id": "r7",
+     "s": 4.108
+    }
+   ]
+  },
+  "node_timings": {
+   "Webhook (CV file + job text)": [
+    {
+     "start": 1792312849075,
+     "ms": 8,
+     "status": "success"
+    }
+   ],
+   "Normalize input": [
+    {
+     "start": 1792312849086,
+     "ms": 147,
+     "status": "success"
+    }
+   ],
+   "HTTP /reader": [
+    {
+     "start": 1792312849234,
+     "ms": 53,
+     "status": "success"
+    }
+   ],
+   "HTTP /profile": [
+    {
+     "start": 1792312849288,
+     "ms": 29018,
+     "status": "success"
+    }
+   ],
+   "HTTP /job": [
+    {
+     "start": 1792312878307,
+     "ms": 6626,
+     "status": "success"
+    }
+   ],
+   "Merge": [
+    {
+     "start": 1792312884934,
+     "ms": 48,
+     "status": "success"
+    }
+   ],
+   "Split requirements": [
+    {
+     "start": 1792312884982,
+     "ms": 35,
+     "status": "success"
+    }
+   ],
+   "Loop requirements (1 at a time)": [
+    {
+     "start": 1792312885018,
+     "ms": 2,
+     "status": "success"
+    },
+    {
+     "start": 1792312887535,
+     "ms": 2,
+     "status": "success"
+    },
+    {
+     "start": 1792312889905,
+     "ms": 0,
+     "status": "success"
+    },
+    {
+     "start": 1792312892163,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792312895283,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792312897918,
+     "ms": 3,
+     "status": "success"
+    },
+    {
+     "start": 1792312901254,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792312905386,
+     "ms": 1,
+     "status": "success"
+    }
+   ],
+   "HTTP /match": [
+    {
+     "start": 1792312885021,
+     "ms": 2514,
+     "status": "success"
+    },
+    {
+     "start": 1792312887538,
+     "ms": 2366,
+     "status": "success"
+    },
+    {
+     "start": 1792312889906,
+     "ms": 2257,
+     "status": "success"
+    },
+    {
+     "start": 1792312892164,
+     "ms": 3119,
+     "status": "success"
+    },
+    {
+     "start": 1792312895284,
+     "ms": 2634,
+     "status": "success"
+    },
+    {
+     "start": 1792312897922,
+     "ms": 3332,
+     "status": "success"
+    },
+    {
+     "start": 1792312901255,
+     "ms": 4131,
+     "status": "success"
+    }
+   ],
+   "Aggregate": [
+    {
+     "start": 1792312905388,
+     "ms": 5,
+     "status": "success"
+    }
+   ],
+   "TEMP outcome": [
+    {
+     "start": 1792312905393,
+     "ms": 52,
+     "status": "success"
+    }
+   ],
+   "Respond to Webhook": [
+    {
+     "start": 1792312905445,
+     "ms": 55,
+     "status": "success"
+    }
+   ]
+  },
+  "checks": {
+   "http_status": 200,
+   "valid_json": true,
+   "execution_status": "success",
+   "identity_values_in_private_file": 2,
+   "identity_values_found_in_execution_data": 0,
+   "raw_cv_text_in_execution_data": false,
+   "all_match_lora_scale_1": true,
+   "quotes_verified_positions": 6,
+   "uploaded_file_kept_by_n8n_binary_store": 1,
+   "changed_raw_lines_checked": 4
+  }
+ },
+ {
+  "run": "P35",
+  "pair": "P35",
+  "job": "J4",
+  "stratum_in_pairs_csv": "partial",
+  "execution_id": "8",
+  "n8n_started": "2026-10-18 08:41:47.663",
+  "n8n_stopped": "2026-10-18 08:42:27.074",
+  "total_wall_s": 40.5,
+  "outcome": "reject",
+  "score": 13,
+  "review_reasons": [],
+  "info_flags": [
+   "reader:No section headings recognised (Experience, Education, ...).",
+   "profile:name_not_found"
+  ],
+  "decisions": {
+   "r1": [
+    "must",
+    "MISSING"
+   ],
+   "r2": [
+    "must",
+    "UNCERTAIN"
+   ],
+   "r3": [
+    "must",
+    "MISSING"
+   ],
+   "r4": [
+    "nice",
+    "MISSING"
+   ],
+   "r5": [
+    "nice",
+    "MISSING"
+   ],
+   "r6": [
+    "nice",
+    "MISSING"
+   ],
+   "r7": [
+    "nice",
+    "MISSING"
+   ],
+   "r8": [
+    "nice",
+    "MISSING"
+   ],
+   "r9": [
+    "nice",
+    "MISSING"
+   ],
+   "r10": [
+    "nice",
+    "MISSING"
+   ],
+   "r11": [
+    "nice",
+    "MISSING"
+   ],
+   "r12": [
+    "nice",
+    "UNCERTAIN"
+   ],
+   "r13": [
+    "nice",
+    "UNCERTAIN"
+   ]
+  },
+  "station_timings_s": {
+   "reader": 0.004,
+   "profile": 1.557,
+   "job": 9.215,
+   "match_total": 28.056,
+   "match_each": [
+    {
+     "req_id": "r1",
+     "s": 2.593
+    },
+    {
+     "req_id": "r2",
+     "s": 2.112
+    },
+    {
+     "req_id": "r3",
+     "s": 2.17
+    },
+    {
+     "req_id": "r4",
+     "s": 2.04
+    },
+    {
+     "req_id": "r5",
+     "s": 2.053
+    },
+    {
+     "req_id": "r6",
+     "s": 2.036
+    },
+    {
+     "req_id": "r7",
+     "s": 2.254
+    },
+    {
+     "req_id": "r8",
+     "s": 2.183
+    },
+    {
+     "req_id": "r9",
+     "s": 2.024
+    },
+    {
+     "req_id": "r10",
+     "s": 2.295
+    },
+    {
+     "req_id": "r11",
+     "s": 2.047
+    },
+    {
+     "req_id": "r12",
+     "s": 2.14
+    },
+    {
+     "req_id": "r13",
+     "s": 2.109
+    }
+   ]
+  },
+  "node_timings": {
+   "Webhook (CV file + job text)": [
+    {
+     "start": 1792312907681,
+     "ms": 1,
+     "status": "success"
+    }
+   ],
+   "Normalize input": [
+    {
+     "start": 1792312907682,
+     "ms": 20,
+     "status": "success"
+    }
+   ],
+   "HTTP /reader": [
+    {
+     "start": 1792312907703,
+     "ms": 28,
+     "status": "success"
+    }
+   ],
+   "HTTP /profile": [
+    {
+     "start": 1792312907731,
+     "ms": 1594,
+     "status": "success"
+    }
+   ],
+   "HTTP /job": [
+    {
+     "start": 1792312909328,
+     "ms": 9240,
+     "status": "success"
+    }
+   ],
+   "Merge": [
+    {
+     "start": 1792312918570,
+     "ms": 12,
+     "status": "success"
+    }
+   ],
+   "Split requirements": [
+    {
+     "start": 1792312918583,
+     "ms": 20,
+     "status": "success"
+    }
+   ],
+   "Loop requirements (1 at a time)": [
+    {
+     "start": 1792312918604,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792312921226,
+     "ms": 4,
+     "status": "success"
+    },
+    {
+     "start": 1792312923368,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792312925560,
+     "ms": 2,
+     "status": "success"
+    },
+    {
+     "start": 1792312927633,
+     "ms": 3,
+     "status": "success"
+    },
+    {
+     "start": 1792312929712,
+     "ms": 2,
+     "status": "success"
+    },
+    {
+     "start": 1792312931769,
+     "ms": 2,
+     "status": "success"
+    },
+    {
+     "start": 1792312934053,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792312936261,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792312938309,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792312940628,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792312942698,
+     "ms": 2,
+     "status": "success"
+    },
+    {
+     "start": 1792312944865,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792312946999,
+     "ms": 1,
+     "status": "success"
+    }
+   ],
+   "HTTP /match": [
+    {
+     "start": 1792312918605,
+     "ms": 2620,
+     "status": "success"
+    },
+    {
+     "start": 1792312921231,
+     "ms": 2136,
+     "status": "success"
+    },
+    {
+     "start": 1792312923369,
+     "ms": 2190,
+     "status": "success"
+    },
+    {
+     "start": 1792312925564,
+     "ms": 2068,
+     "status": "success"
+    },
+    {
+     "start": 1792312927636,
+     "ms": 2076,
+     "status": "success"
+    },
+    {
+     "start": 1792312929714,
+     "ms": 2054,
+     "status": "success"
+    },
+    {
+     "start": 1792312931773,
+     "ms": 2278,
+     "status": "success"
+    },
+    {
+     "start": 1792312934057,
+     "ms": 2204,
+     "status": "success"
+    },
+    {
+     "start": 1792312936263,
+     "ms": 2045,
+     "status": "success"
+    },
+    {
+     "start": 1792312938311,
+     "ms": 2316,
+     "status": "success"
+    },
+    {
+     "start": 1792312940629,
+     "ms": 2068,
+     "status": "success"
+    },
+    {
+     "start": 1792312942700,
+     "ms": 2165,
+     "status": "success"
+    },
+    {
+     "start": 1792312944867,
+     "ms": 2132,
+     "status": "success"
+    }
+   ],
+   "Aggregate": [
+    {
+     "start": 1792312947001,
+     "ms": 1,
+     "status": "success"
+    }
+   ],
+   "TEMP outcome": [
+    {
+     "start": 1792312947002,
+     "ms": 36,
+     "status": "success"
+    }
+   ],
+   "Respond to Webhook": [
+    {
+     "start": 1792312947038,
+     "ms": 35,
+     "status": "success"
+    }
+   ]
+  },
+  "checks": {
+   "http_status": 200,
+   "valid_json": true,
+   "execution_status": "success",
+   "identity_values_in_private_file": 0,
+   "identity_values_found_in_execution_data": 0,
+   "raw_cv_text_in_execution_data": false,
+   "all_match_lora_scale_1": true,
+   "quotes_verified_positions": 1,
+   "uploaded_file_kept_by_n8n_binary_store": 1,
+   "changed_raw_lines_checked": 0
+  }
+ },
+ {
+  "run": "kaggle",
+  "pair": null,
+  "job": "J4",
+  "kaggle_pdf": "10089434.pdf",
+  "execution_id": "9",
+  "n8n_started": "2026-10-18 08:42:29.265",
+  "n8n_stopped": "2026-10-18 08:45:44.781",
+  "total_wall_s": 196.64,
+  "outcome": "review",
+  "score": 13,
+  "review_reasons": [
+   "profile:partial_extraction_requires_review",
+   "match:r12:evidence_not_in_cv",
+   "match:r13:evidence_not_in_cv"
+  ],
+  "info_flags": [],
+  "decisions": {
+   "r1": [
+    "must",
+    "MISSING"
+   ],
+   "r2": [
+    "must",
+    "MISSING"
+   ],
+   "r3": [
+    "must",
+    "MISSING"
+   ],
+   "r4": [
+    "nice",
+    "MISSING"
+   ],
+   "r5": [
+    "nice",
+    "MISSING"
+   ],
+   "r6": [
+    "nice",
+    "MISSING"
+   ],
+   "r7": [
+    "nice",
+    "MISSING"
+   ],
+   "r8": [
+    "nice",
+    "MISSING"
+   ],
+   "r9": [
+    "nice",
+    "MISSING"
+   ],
+   "r10": [
+    "nice",
+    "MISSING"
+   ],
+   "r11": [
+    "nice",
+    "MISSING"
+   ],
+   "r12": [
+    "nice",
+    "MET"
+   ],
+   "r13": [
+    "nice",
+    "MET"
+   ]
+  },
+  "station_timings_s": {
+   "reader": 0.056,
+   "profile": 146.544,
+   "job": 8.974,
+   "match_total": 39.419,
+   "match_each": [
+    {
+     "req_id": "r1",
+     "s": 3.293
+    },
+    {
+     "req_id": "r2",
+     "s": 2.912
+    },
+    {
+     "req_id": "r3",
+     "s": 3.011
+    },
+    {
+     "req_id": "r4",
+     "s": 2.717
+    },
+    {
+     "req_id": "r5",
+     "s": 2.769
+    },
+    {
+     "req_id": "r6",
+     "s": 2.718
+    },
+    {
+     "req_id": "r7",
+     "s": 2.954
+    },
+    {
+     "req_id": "r8",
+     "s": 2.961
+    },
+    {
+     "req_id": "r9",
+     "s": 1.893
+    },
+    {
+     "req_id": "r10",
+     "s": 1.983
+    },
+    {
+     "req_id": "r11",
+     "s": 2.723
+    },
+    {
+     "req_id": "r12",
+     "s": 4.922
+    },
+    {
+     "req_id": "r13",
+     "s": 4.563
+    }
+   ]
+  },
+  "node_timings": {
+   "Webhook (CV file + job text)": [
+    {
+     "start": 1792312949298,
+     "ms": 0,
+     "status": "success"
+    }
+   ],
+   "Normalize input": [
+    {
+     "start": 1792312949299,
+     "ms": 17,
+     "status": "success"
+    }
+   ],
+   "HTTP /reader": [
+    {
+     "start": 1792312949317,
+     "ms": 77,
+     "status": "success"
+    }
+   ],
+   "HTTP /profile": [
+    {
+     "start": 1792312949395,
+     "ms": 146575,
+     "status": "success"
+    }
+   ],
+   "HTTP /job": [
+    {
+     "start": 1792313095970,
+     "ms": 8985,
+     "status": "success"
+    }
+   ],
+   "Merge": [
+    {
+     "start": 1792313104956,
+     "ms": 12,
+     "status": "success"
+    }
+   ],
+   "Split requirements": [
+    {
+     "start": 1792313104969,
+     "ms": 31,
+     "status": "success"
+    }
+   ],
+   "Loop requirements (1 at a time)": [
+    {
+     "start": 1792313105001,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792313108322,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792313111259,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792313114295,
+     "ms": 0,
+     "status": "success"
+    },
+    {
+     "start": 1792313117035,
+     "ms": 2,
+     "status": "success"
+    },
+    {
+     "start": 1792313119829,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792313122569,
+     "ms": 0,
+     "status": "success"
+    },
+    {
+     "start": 1792313125549,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792313128540,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792313130453,
+     "ms": 0,
+     "status": "success"
+    },
+    {
+     "start": 1792313132447,
+     "ms": 2,
+     "status": "success"
+    },
+    {
+     "start": 1792313135196,
+     "ms": 1,
+     "status": "success"
+    },
+    {
+     "start": 1792313140137,
+     "ms": 0,
+     "status": "success"
+    },
+    {
+     "start": 1792313144713,
+     "ms": 1,
+     "status": "success"
+    }
+   ],
+   "HTTP /match": [
+    {
+     "start": 1792313105002,
+     "ms": 3319,
+     "status": "success"
+    },
+    {
+     "start": 1792313108323,
+     "ms": 2936,
+     "status": "success"
+    },
+    {
+     "start": 1792313111261,
+     "ms": 3033,
+     "status": "success"
+    },
+    {
+     "start": 1792313114295,
+     "ms": 2740,
+     "status": "success"
+    },
+    {
+     "start": 1792313117037,
+     "ms": 2791,
+     "status": "success"
+    },
+    {
+     "start": 1792313119831,
+     "ms": 2737,
+     "status": "success"
+    },
+    {
+     "start": 1792313122569,
+     "ms": 2980,
+     "status": "success"
+    },
+    {
+     "start": 1792313125550,
+     "ms": 2990,
+     "status": "success"
+    },
+    {
+     "start": 1792313128541,
+     "ms": 1912,
+     "status": "success"
+    },
+    {
+     "start": 1792313130453,
+     "ms": 1993,
+     "status": "success"
+    },
+    {
+     "start": 1792313132449,
+     "ms": 2747,
+     "status": "success"
+    },
+    {
+     "start": 1792313135197,
+     "ms": 4939,
+     "status": "success"
+    },
+    {
+     "start": 1792313140137,
+     "ms": 4576,
+     "status": "success"
+    }
+   ],
+   "Aggregate": [
+    {
+     "start": 1792313144714,
+     "ms": 1,
+     "status": "success"
+    }
+   ],
+   "TEMP outcome": [
+    {
+     "start": 1792313144715,
+     "ms": 31,
+     "status": "success"
+    }
+   ],
+   "Respond to Webhook": [
+    {
+     "start": 1792313144746,
+     "ms": 35,
+     "status": "success"
+    }
+   ]
+  },
+  "checks": {
+   "http_status": 200,
+   "valid_json": true,
+   "execution_status": "success",
+   "identity_values_in_private_file": 3,
+   "identity_values_found_in_execution_data": 0,
+   "raw_cv_text_in_execution_data": false,
+   "all_match_lora_scale_1": true,
+   "quotes_verified_positions": 3,
+   "uploaded_file_kept_by_n8n_binary_store": 1,
+   "changed_raw_lines_checked": 5
+  }
+ }
+]

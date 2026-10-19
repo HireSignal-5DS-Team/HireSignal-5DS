@@ -1,0 +1,364 @@
+{"kind": "quotes", "probs": {"entailment": 0.8821, "neutral": 0.1005, "contradiction": 0.0173}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.4737, "neutral": 0.1128, "contradiction": 0.4135}}
+{"kind": "cv", "probs": {"entailment": 0.4028, "neutral": 0.2194, "contradiction": 0.3778}}
+{"kind": "cv", "probs": {"entailment": 0.0894, "neutral": 0.1597, "contradiction": 0.7509}}
+{"kind": "cv", "probs": {"entailment": 0.1606, "neutral": 0.3778, "contradiction": 0.4616}}
+{"kind": "cv", "probs": {"entailment": 0.0182, "neutral": 0.1059, "contradiction": 0.8759}}
+{"kind": "cv", "probs": {"entailment": 0.0021, "neutral": 0.0077, "contradiction": 0.9902}}
+{"kind": "quotes", "probs": {"entailment": 0.2714, "neutral": 0.6885, "contradiction": 0.0402}}
+{"kind": "cv", "probs": {"entailment": 0.1644, "neutral": 0.7223, "contradiction": 0.1133}}
+{"kind": "cv", "probs": {"entailment": 0.1535, "neutral": 0.4394, "contradiction": 0.4071}}
+{"kind": "cv", "probs": {"entailment": 0.1447, "neutral": 0.6376, "contradiction": 0.2177}}
+{"kind": "cv", "probs": {"entailment": 0.0641, "neutral": 0.5171, "contradiction": 0.4188}}
+{"kind": "cv", "probs": {"entailment": 0.0067, "neutral": 0.8061, "contradiction": 0.1872}}
+{"kind": "cv", "probs": {"entailment": 0.037, "neutral": 0.5199, "contradiction": 0.4431}}
+{"kind": "quotes", "probs": {"entailment": 0.0001, "neutral": 0.0022, "contradiction": 0.9977}}
+{"kind": "quotes", "probs": {"entailment": 0.9905, "neutral": 0.0041, "contradiction": 0.0054}}
+{"kind": "cv", "probs": {"entailment": 0.6288, "neutral": 0.0579, "contradiction": 0.3133}}
+{"kind": "cv", "probs": {"entailment": 0.4219, "neutral": 0.0466, "contradiction": 0.5315}}
+{"kind": "cv", "probs": {"entailment": 0.7828, "neutral": 0.0565, "contradiction": 0.1608}}
+{"kind": "cv", "probs": {"entailment": 0.2001, "neutral": 0.2347, "contradiction": 0.5651}}
+{"kind": "cv", "probs": {"entailment": 0.1144, "neutral": 0.4038, "contradiction": 0.4818}}
+{"kind": "quotes", "probs": {"entailment": 0.9965, "neutral": 0.002, "contradiction": 0.0015}}
+{"kind": "cv", "probs": {"entailment": 0.0012, "neutral": 0.0055, "contradiction": 0.9933}}
+{"kind": "quotes", "probs": {"entailment": 0.0481, "neutral": 0.9229, "contradiction": 0.029}}
+{"kind": "quotes", "probs": {"entailment": 0.0041, "neutral": 0.9933, "contradiction": 0.0026}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0835, "neutral": 0.8829, "contradiction": 0.0336}}
+{"kind": "cv", "probs": {"entailment": 0.021, "neutral": 0.9524, "contradiction": 0.0267}}
+{"kind": "cv", "probs": {"entailment": 0.0011, "neutral": 0.9978, "contradiction": 0.0011}}
+{"kind": "cv", "probs": {"entailment": 0.0092, "neutral": 0.9763, "contradiction": 0.0144}}
+{"kind": "cv", "probs": {"entailment": 0.0114, "neutral": 0.4566, "contradiction": 0.532}}
+{"kind": "quotes", "probs": {"entailment": 0.898, "neutral": 0.0454, "contradiction": 0.0566}}
+{"kind": "quotes", "probs": {"entailment": 0.7901, "neutral": 0.1906, "contradiction": 0.0193}}
+{"kind": "cv", "probs": {"entailment": 0.2966, "neutral": 0.5581, "contradiction": 0.1453}}
+{"kind": "cv", "probs": {"entailment": 0.847, "neutral": 0.1226, "contradiction": 0.0304}}
+{"kind": "cv", "probs": {"entailment": 0.0358, "neutral": 0.8551, "contradiction": 0.1091}}
+{"kind": "cv", "probs": {"entailment": 0.0009, "neutral": 0.9975, "contradiction": 0.0016}}
+{"kind": "cv", "probs": {"entailment": 0.0041, "neutral": 0.9759, "contradiction": 0.02}}
+{"kind": "cv", "probs": {"entailment": 0.0124, "neutral": 0.8351, "contradiction": 0.1525}}
+{"kind": "quotes", "probs": {"entailment": 0.0505, "neutral": 0.189, "contradiction": 0.7605}}
+{"kind": "quotes", "probs": {"entailment": 0.1381, "neutral": 0.8535, "contradiction": 0.0084}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0289, "neutral": 0.9277, "contradiction": 0.0435}}
+{"kind": "cv", "probs": {"entailment": 0.0233, "neutral": 0.871, "contradiction": 0.1056}}
+{"kind": "cv", "probs": {"entailment": 0.0055, "neutral": 0.9846, "contradiction": 0.0098}}
+{"kind": "quotes", "probs": {"entailment": 0.0046, "neutral": 0.9942, "contradiction": 0.0012}}
+{"kind": "quotes", "probs": {"entailment": 0.0058, "neutral": 0.0527, "contradiction": 0.9415}}
+{"kind": "quotes", "probs": {"entailment": 0.5967, "neutral": 0.3488, "contradiction": 0.0545}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.1472, "neutral": 0.1971, "contradiction": 0.6557}}
+{"kind": "cv", "probs": {"entailment": 0.2327, "neutral": 0.285, "contradiction": 0.4822}}
+{"kind": "cv", "probs": {"entailment": 0.1517, "neutral": 0.33, "contradiction": 0.5183}}
+{"kind": "cv", "probs": {"entailment": 0.0761, "neutral": 0.6536, "contradiction": 0.2703}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0073, "neutral": 0.2337, "contradiction": 0.759}}
+{"kind": "quotes", "probs": {"entailment": 0.9674, "neutral": 0.018, "contradiction": 0.0146}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.3986, "neutral": 0.0817, "contradiction": 0.5197}}
+{"kind": "cv", "probs": {"entailment": 0.8342, "neutral": 0.0883, "contradiction": 0.0775}}
+{"kind": "cv", "probs": {"entailment": 0.1477, "neutral": 0.3796, "contradiction": 0.4726}}
+{"kind": "cv", "probs": {"entailment": 0.0753, "neutral": 0.8771, "contradiction": 0.0475}}
+{"kind": "cv", "probs": {"entailment": 0.0239, "neutral": 0.2732, "contradiction": 0.7029}}
+{"kind": "quotes", "probs": {"entailment": 0.002, "neutral": 0.9605, "contradiction": 0.0375}}
+{"kind": "quotes", "probs": {"entailment": 0.9302, "neutral": 0.0521, "contradiction": 0.0176}}
+{"kind": "cv", "probs": {"entailment": 0.3422, "neutral": 0.638, "contradiction": 0.0197}}
+{"kind": "cv", "probs": {"entailment": 0.4079, "neutral": 0.5226, "contradiction": 0.0696}}
+{"kind": "cv", "probs": {"entailment": 0.8311, "neutral": 0.0959, "contradiction": 0.073}}
+{"kind": "cv", "probs": {"entailment": 0.4477, "neutral": 0.2662, "contradiction": 0.2862}}
+{"kind": "cv", "probs": {"entailment": 0.0296, "neutral": 0.9061, "contradiction": 0.0643}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0057, "neutral": 0.0192, "contradiction": 0.9751}}
+{"kind": "quotes", "probs": {"entailment": 0.6112, "neutral": 0.3589, "contradiction": 0.0298}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.5051, "neutral": 0.3291, "contradiction": 0.1659}}
+{"kind": "cv", "probs": {"entailment": 0.7299, "neutral": 0.0971, "contradiction": 0.173}}
+{"kind": "cv", "probs": {"entailment": 0.7399, "neutral": 0.1934, "contradiction": 0.0666}}
+{"kind": "cv", "probs": {"entailment": 0.0117, "neutral": 0.9186, "contradiction": 0.0698}}
+{"kind": "quotes", "probs": {"entailment": 0.0839, "neutral": 0.9138, "contradiction": 0.0023}}
+{"kind": "cv", "probs": {"entailment": 0.002, "neutral": 0.0208, "contradiction": 0.9773}}
+{"kind": "cv", "probs": {"entailment": 0.006, "neutral": 0.753, "contradiction": 0.241}}
+{"kind": "cv", "probs": {"entailment": 0.0009, "neutral": 0.0645, "contradiction": 0.9346}}
+{"kind": "cv", "probs": {"entailment": 0.0022, "neutral": 0.9631, "contradiction": 0.0346}}
+{"kind": "cv", "probs": {"entailment": 0.0019, "neutral": 0.9189, "contradiction": 0.0792}}
+{"kind": "quotes", "probs": {"entailment": 0.0009, "neutral": 0.9921, "contradiction": 0.0071}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.0264, "neutral": 0.9155, "contradiction": 0.0581}}
+{"kind": "cv", "probs": {"entailment": 0.5273, "neutral": 0.3593, "contradiction": 0.1134}}
+{"kind": "cv", "probs": {"entailment": 0.0219, "neutral": 0.9404, "contradiction": 0.0377}}
+{"kind": "cv", "probs": {"entailment": 0.1866, "neutral": 0.1483, "contradiction": 0.6651}}
+{"kind": null, "probs": null}
+{"kind": null, "probs": null}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.0828, "neutral": 0.9014, "contradiction": 0.0158}}
+{"kind": "cv", "probs": {"entailment": 0.0067, "neutral": 0.9692, "contradiction": 0.0241}}
+{"kind": "quotes", "probs": {"entailment": 0.743, "neutral": 0.2553, "contradiction": 0.0017}}
+{"kind": "quotes", "probs": {"entailment": 0.5097, "neutral": 0.4893, "contradiction": 0.001}}
+{"kind": "quotes", "probs": {"entailment": 0.0204, "neutral": 0.6179, "contradiction": 0.3617}}
+{"kind": "cv", "probs": {"entailment": 0.008, "neutral": 0.9856, "contradiction": 0.0064}}
+{"kind": "cv", "probs": {"entailment": 0.0139, "neutral": 0.9798, "contradiction": 0.0063}}
+{"kind": "cv", "probs": {"entailment": 0.002, "neutral": 0.9916, "contradiction": 0.0064}}
+{"kind": "cv", "probs": {"entailment": 0.0041, "neutral": 0.9908, "contradiction": 0.0051}}
+{"kind": "quotes", "probs": {"entailment": 0.0278, "neutral": 0.9652, "contradiction": 0.0069}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.9281, "neutral": 0.0508, "contradiction": 0.0211}}
+{"kind": "quotes", "probs": {"entailment": 0.9574, "neutral": 0.0414, "contradiction": 0.0013}}
+{"kind": "quotes", "probs": {"entailment": 0.9198, "neutral": 0.0788, "contradiction": 0.0014}}
+{"kind": "quotes", "probs": {"entailment": 0.1894, "neutral": 0.098, "contradiction": 0.7127}}
+{"kind": "quotes", "probs": {"entailment": 0.0212, "neutral": 0.9359, "contradiction": 0.0429}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0884, "neutral": 0.8638, "contradiction": 0.0478}}
+{"kind": "quotes", "probs": {"entailment": 0.0121, "neutral": 0.9861, "contradiction": 0.0019}}
+{"kind": "quotes", "probs": {"entailment": 0.1323, "neutral": 0.8626, "contradiction": 0.0051}}
+{"kind": "quotes", "probs": {"entailment": 0.0962, "neutral": 0.9002, "contradiction": 0.0036}}
+{"kind": "quotes", "probs": {"entailment": 0.5097, "neutral": 0.4893, "contradiction": 0.001}}
+{"kind": "quotes", "probs": {"entailment": 0.6325, "neutral": 0.2878, "contradiction": 0.0798}}
+{"kind": "cv", "probs": {"entailment": 0.1373, "neutral": 0.7682, "contradiction": 0.0945}}
+{"kind": "cv", "probs": {"entailment": 0.0894, "neutral": 0.7885, "contradiction": 0.1221}}
+{"kind": "cv", "probs": {"entailment": 0.0295, "neutral": 0.9493, "contradiction": 0.0212}}
+{"kind": "cv", "probs": {"entailment": 0.0414, "neutral": 0.9258, "contradiction": 0.0328}}
+{"kind": "quotes", "probs": {"entailment": 0.0496, "neutral": 0.9494, "contradiction": 0.001}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0312, "neutral": 0.9498, "contradiction": 0.0191}}
+{"kind": "quotes", "probs": {"entailment": 0.0441, "neutral": 0.9532, "contradiction": 0.0028}}
+{"kind": "quotes", "probs": {"entailment": 0.8992, "neutral": 0.0978, "contradiction": 0.0031}}
+{"kind": "cv", "probs": {"entailment": 0.0071, "neutral": 0.977, "contradiction": 0.0159}}
+{"kind": null, "probs": null}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.1136, "neutral": 0.7439, "contradiction": 0.1425}}
+{"kind": "cv", "probs": {"entailment": 0.0118, "neutral": 0.9825, "contradiction": 0.0058}}
+{"kind": "cv", "probs": {"entailment": 0.0047, "neutral": 0.989, "contradiction": 0.0063}}
+{"kind": "cv", "probs": {"entailment": 0.2122, "neutral": 0.695, "contradiction": 0.0928}}
+{"kind": "quotes", "probs": {"entailment": 0.0059, "neutral": 0.9827, "contradiction": 0.0114}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0309, "neutral": 0.9476, "contradiction": 0.0215}}
+{"kind": "quotes", "probs": {"entailment": 0.0055, "neutral": 0.99, "contradiction": 0.0045}}
+{"kind": "cv", "probs": {"entailment": 0.0076, "neutral": 0.8974, "contradiction": 0.095}}
+{"kind": "cv", "probs": {"entailment": 0.0153, "neutral": 0.9303, "contradiction": 0.0545}}
+{"kind": "quotes", "probs": {"entailment": 0.5097, "neutral": 0.4893, "contradiction": 0.001}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.7406, "neutral": 0.2521, "contradiction": 0.0073}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.0008, "neutral": 0.9965, "contradiction": 0.0027}}
+{"kind": "cv", "probs": {"entailment": 0.9283, "neutral": 0.0571, "contradiction": 0.0146}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0781, "neutral": 0.7578, "contradiction": 0.1641}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.6755, "neutral": 0.1752, "contradiction": 0.1493}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0906, "neutral": 0.5891, "contradiction": 0.3204}}
+{"kind": "quotes", "probs": {"entailment": 0.057, "neutral": 0.9411, "contradiction": 0.0019}}
+{"kind": "quotes", "probs": {"entailment": 0.5316, "neutral": 0.4471, "contradiction": 0.0213}}
+{"kind": "quotes", "probs": {"entailment": 0.0813, "neutral": 0.87, "contradiction": 0.0487}}
+{"kind": "cv", "probs": {"entailment": 0.1282, "neutral": 0.4706, "contradiction": 0.4012}}
+{"kind": "quotes", "probs": {"entailment": 0.0624, "neutral": 0.9336, "contradiction": 0.004}}
+{"kind": "cv", "probs": {"entailment": 0.1423, "neutral": 0.5357, "contradiction": 0.322}}
+{"kind": "cv", "probs": {"entailment": 0.8867, "neutral": 0.0747, "contradiction": 0.0386}}
+{"kind": "cv", "probs": {"entailment": 0.0627, "neutral": 0.5377, "contradiction": 0.3996}}
+{"kind": "quotes", "probs": {"entailment": 0.0066, "neutral": 0.9922, "contradiction": 0.0012}}
+{"kind": "cv", "probs": {"entailment": 0.0473, "neutral": 0.9053, "contradiction": 0.0474}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0075, "neutral": 0.2169, "contradiction": 0.7757}}
+{"kind": "cv", "probs": {"entailment": 0.908, "neutral": 0.0777, "contradiction": 0.0142}}
+{"kind": "cv", "probs": {"entailment": 0.2568, "neutral": 0.319, "contradiction": 0.4241}}
+{"kind": "cv", "probs": {"entailment": 0.4919, "neutral": 0.211, "contradiction": 0.2971}}
+{"kind": "cv", "probs": {"entailment": 0.0095, "neutral": 0.9851, "contradiction": 0.0054}}
+{"kind": "cv", "probs": {"entailment": 0.0008, "neutral": 0.9925, "contradiction": 0.0067}}
+{"kind": "cv", "probs": {"entailment": 0.0333, "neutral": 0.9505, "contradiction": 0.0162}}
+{"kind": "quotes", "probs": {"entailment": 0.0346, "neutral": 0.9248, "contradiction": 0.0406}}
+{"kind": "cv", "probs": {"entailment": 0.005, "neutral": 0.7915, "contradiction": 0.2035}}
+{"kind": "cv", "probs": {"entailment": 0.2579, "neutral": 0.7247, "contradiction": 0.0175}}
+{"kind": "cv", "probs": {"entailment": 0.014, "neutral": 0.8852, "contradiction": 0.1007}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0092, "neutral": 0.2068, "contradiction": 0.784}}
+{"kind": "cv", "probs": {"entailment": 0.0016, "neutral": 0.7545, "contradiction": 0.244}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.0236, "neutral": 0.9477, "contradiction": 0.0287}}
+{"kind": "cv", "probs": {"entailment": 0.0012, "neutral": 0.0325, "contradiction": 0.9663}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.007, "neutral": 0.0477, "contradiction": 0.9453}}
+{"kind": "quotes", "probs": {"entailment": 0.8962, "neutral": 0.0939, "contradiction": 0.0099}}
+{"kind": "cv", "probs": {"entailment": 0.0889, "neutral": 0.6655, "contradiction": 0.2456}}
+{"kind": "quotes", "probs": {"entailment": 0.0058, "neutral": 0.9934, "contradiction": 0.0008}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.1253, "neutral": 0.8517, "contradiction": 0.023}}
+{"kind": "cv", "probs": {"entailment": 0.0035, "neutral": 0.0332, "contradiction": 0.9633}}
+{"kind": "cv", "probs": {"entailment": 0.9715, "neutral": 0.0216, "contradiction": 0.0069}}
+{"kind": "cv", "probs": {"entailment": 0.3304, "neutral": 0.2891, "contradiction": 0.3805}}
+{"kind": "cv", "probs": {"entailment": 0.7035, "neutral": 0.133, "contradiction": 0.1635}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.2224, "neutral": 0.7742, "contradiction": 0.0034}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.3927, "neutral": 0.1506, "contradiction": 0.4567}}
+{"kind": "cv", "probs": {"entailment": 0.0201, "neutral": 0.0319, "contradiction": 0.948}}
+{"kind": "cv", "probs": {"entailment": 0.9522, "neutral": 0.022, "contradiction": 0.0258}}
+{"kind": "cv", "probs": {"entailment": 0.0538, "neutral": 0.0842, "contradiction": 0.862}}
+{"kind": "quotes", "probs": {"entailment": 0.9173, "neutral": 0.074, "contradiction": 0.0087}}
+{"kind": null, "probs": null}
+{"kind": null, "probs": null}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.9357, "neutral": 0.0599, "contradiction": 0.0045}}
+{"kind": "cv", "probs": {"entailment": 0.0025, "neutral": 0.9928, "contradiction": 0.0047}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0041, "neutral": 0.9893, "contradiction": 0.0066}}
+{"kind": "quotes", "probs": {"entailment": 0.9049, "neutral": 0.0862, "contradiction": 0.009}}
+{"kind": "quotes", "probs": {"entailment": 0.0285, "neutral": 0.9482, "contradiction": 0.0232}}
+{"kind": null, "probs": null}
+{"kind": null, "probs": null}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0139, "neutral": 0.0983, "contradiction": 0.8878}}
+{"kind": "cv", "probs": {"entailment": 0.962, "neutral": 0.0167, "contradiction": 0.0213}}
+{"kind": "cv", "probs": {"entailment": 0.1588, "neutral": 0.2207, "contradiction": 0.6205}}
+{"kind": "cv", "probs": {"entailment": 0.7958, "neutral": 0.0184, "contradiction": 0.1858}}
+{"kind": "cv", "probs": {"entailment": 0.0021, "neutral": 0.0059, "contradiction": 0.992}}
+{"kind": "quotes", "probs": {"entailment": 0.0088, "neutral": 0.9861, "contradiction": 0.0051}}
+{"kind": "cv", "probs": {"entailment": 0.244, "neutral": 0.0468, "contradiction": 0.7092}}
+{"kind": null, "probs": null}
+{"kind": null, "probs": null}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.2633, "neutral": 0.1033, "contradiction": 0.6334}}
+{"kind": "quotes", "probs": {"entailment": 0.98, "neutral": 0.015, "contradiction": 0.005}}
+{"kind": "quotes", "probs": {"entailment": 0.0156, "neutral": 0.9811, "contradiction": 0.0033}}
+{"kind": "cv", "probs": {"entailment": 0.2215, "neutral": 0.3716, "contradiction": 0.4069}}
+{"kind": "cv", "probs": {"entailment": 0.006, "neutral": 0.9907, "contradiction": 0.0033}}
+{"kind": "cv", "probs": {"entailment": 0.0236, "neutral": 0.4249, "contradiction": 0.5515}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.8881, "neutral": 0.1089, "contradiction": 0.003}}
+{"kind": "quotes", "probs": {"entailment": 0.124, "neutral": 0.8678, "contradiction": 0.0082}}
+{"kind": "quotes", "probs": {"entailment": 0.0156, "neutral": 0.8572, "contradiction": 0.1272}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0052, "neutral": 0.197, "contradiction": 0.7978}}
+{"kind": "cv", "probs": {"entailment": 0.0107, "neutral": 0.1636, "contradiction": 0.8257}}
+{"kind": "quotes", "probs": {"entailment": 0.2852, "neutral": 0.6245, "contradiction": 0.0902}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0456, "neutral": 0.5876, "contradiction": 0.3668}}
+{"kind": "cv", "probs": {"entailment": 0.1029, "neutral": 0.8522, "contradiction": 0.0449}}
+{"kind": "cv", "probs": {"entailment": 0.0041, "neutral": 0.122, "contradiction": 0.874}}
+{"kind": "cv", "probs": {"entailment": 0.1227, "neutral": 0.0602, "contradiction": 0.8171}}
+{"kind": "quotes", "probs": {"entailment": 0.043, "neutral": 0.5038, "contradiction": 0.4531}}
+{"kind": "quotes", "probs": {"entailment": 0.7851, "neutral": 0.2024, "contradiction": 0.0125}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.4545, "neutral": 0.5349, "contradiction": 0.0106}}
+{"kind": "cv", "probs": {"entailment": 0.0134, "neutral": 0.0744, "contradiction": 0.9122}}
+{"kind": "cv", "probs": {"entailment": 0.311, "neutral": 0.0618, "contradiction": 0.6272}}
+{"kind": "quotes", "probs": {"entailment": 0.043, "neutral": 0.5038, "contradiction": 0.4531}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.033, "neutral": 0.7805, "contradiction": 0.1864}}
+{"kind": "cv", "probs": {"entailment": 0.0014, "neutral": 0.9965, "contradiction": 0.0021}}
+{"kind": "cv", "probs": {"entailment": 0.0024, "neutral": 0.1067, "contradiction": 0.8909}}
+{"kind": "cv", "probs": {"entailment": 0.0842, "neutral": 0.4083, "contradiction": 0.5075}}
+{"kind": "quotes", "probs": {"entailment": 0.0203, "neutral": 0.1896, "contradiction": 0.7901}}
+{"kind": "quotes", "probs": {"entailment": 0.9657, "neutral": 0.0286, "contradiction": 0.0057}}
+{"kind": "cv", "probs": {"entailment": 0.4177, "neutral": 0.0332, "contradiction": 0.5491}}
+{"kind": "cv", "probs": {"entailment": 0.0422, "neutral": 0.9322, "contradiction": 0.0256}}
+{"kind": "cv", "probs": {"entailment": 0.0178, "neutral": 0.0087, "contradiction": 0.9735}}
+{"kind": "cv", "probs": {"entailment": 0.903, "neutral": 0.0063, "contradiction": 0.0908}}
+{"kind": "quotes", "probs": {"entailment": 0.6752, "neutral": 0.048, "contradiction": 0.2769}}
+{"kind": "quotes", "probs": {"entailment": 0.8476, "neutral": 0.0492, "contradiction": 0.1032}}
+{"kind": "cv", "probs": {"entailment": 0.1729, "neutral": 0.5805, "contradiction": 0.2466}}
+{"kind": "cv", "probs": {"entailment": 0.0034, "neutral": 0.9953, "contradiction": 0.0013}}
+{"kind": "cv", "probs": {"entailment": 0.0015, "neutral": 0.0366, "contradiction": 0.962}}
+{"kind": "cv", "probs": {"entailment": 0.259, "neutral": 0.0642, "contradiction": 0.6768}}
+{"kind": "quotes", "probs": {"entailment": 0.0489, "neutral": 0.4637, "contradiction": 0.4874}}
+{"kind": "quotes", "probs": {"entailment": 0.2054, "neutral": 0.6326, "contradiction": 0.162}}
+{"kind": "cv", "probs": {"entailment": 0.0527, "neutral": 0.9091, "contradiction": 0.0382}}
+{"kind": "cv", "probs": {"entailment": 0.0517, "neutral": 0.9225, "contradiction": 0.0258}}
+{"kind": "cv", "probs": {"entailment": 0.0256, "neutral": 0.3704, "contradiction": 0.6039}}
+{"kind": "cv", "probs": {"entailment": 0.2661, "neutral": 0.477, "contradiction": 0.2569}}
+{"kind": "quotes", "probs": {"entailment": 0.0489, "neutral": 0.4637, "contradiction": 0.4874}}
+{"kind": "quotes", "probs": {"entailment": 0.9602, "neutral": 0.0249, "contradiction": 0.0149}}
+{"kind": "cv", "probs": {"entailment": 0.1342, "neutral": 0.5612, "contradiction": 0.3046}}
+{"kind": "cv", "probs": {"entailment": 0.011, "neutral": 0.8346, "contradiction": 0.1544}}
+{"kind": "cv", "probs": {"entailment": 0.0007, "neutral": 0.0041, "contradiction": 0.9952}}
+{"kind": "cv", "probs": {"entailment": 0.131, "neutral": 0.0148, "contradiction": 0.8542}}
+{"kind": "quotes", "probs": {"entailment": 0.0203, "neutral": 0.1896, "contradiction": 0.7901}}
+{"kind": "quotes", "probs": {"entailment": 0.2301, "neutral": 0.7458, "contradiction": 0.0241}}
+{"kind": "cv", "probs": {"entailment": 0.0287, "neutral": 0.0347, "contradiction": 0.9366}}
+{"kind": "cv", "probs": {"entailment": 0.0422, "neutral": 0.6413, "contradiction": 0.3165}}
+{"kind": "cv", "probs": {"entailment": 0.0109, "neutral": 0.014, "contradiction": 0.975}}
+{"kind": "cv", "probs": {"entailment": 0.037, "neutral": 0.0082, "contradiction": 0.9547}}
+{"kind": "quotes", "probs": {"entailment": 0.7291, "neutral": 0.2478, "contradiction": 0.0231}}
+{"kind": "quotes", "probs": {"entailment": 0.108, "neutral": 0.8811, "contradiction": 0.0109}}
+{"kind": "quotes", "probs": {"entailment": 0.0998, "neutral": 0.3836, "contradiction": 0.5166}}
+{"kind": "cv", "probs": {"entailment": 0.1166, "neutral": 0.8179, "contradiction": 0.0655}}
+{"kind": "quotes", "probs": {"entailment": 0.0337, "neutral": 0.9642, "contradiction": 0.0021}}
+{"kind": "quotes", "probs": {"entailment": 0.0015, "neutral": 0.9953, "contradiction": 0.0032}}
+{"kind": "quotes", "probs": {"entailment": 0.0064, "neutral": 0.7589, "contradiction": 0.2346}}
+{"kind": "quotes", "probs": {"entailment": 0.001, "neutral": 0.0034, "contradiction": 0.9957}}
+{"kind": "quotes", "probs": {"entailment": 0.804, "neutral": 0.1843, "contradiction": 0.0117}}
+{"kind": "quotes", "probs": {"entailment": 0.8502, "neutral": 0.1483, "contradiction": 0.0015}}
+{"kind": "quotes", "probs": {"entailment": 0.0712, "neutral": 0.911, "contradiction": 0.0178}}
+{"kind": "cv", "probs": {"entailment": 0.4393, "neutral": 0.4622, "contradiction": 0.0985}}
+{"kind": "quotes", "probs": {"entailment": 0.6112, "neutral": 0.3819, "contradiction": 0.0069}}
+{"kind": "quotes", "probs": {"entailment": 0.069, "neutral": 0.9287, "contradiction": 0.0022}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.5458, "neutral": 0.4516, "contradiction": 0.0025}}
+{"kind": "quotes", "probs": {"entailment": 0.9861, "neutral": 0.0116, "contradiction": 0.0023}}
+{"kind": "quotes", "probs": {"entailment": 0.0138, "neutral": 0.9853, "contradiction": 0.001}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.0465, "neutral": 0.7034, "contradiction": 0.2502}}
+{"kind": "cv", "probs": {"entailment": 0.0613, "neutral": 0.8385, "contradiction": 0.1003}}
+{"kind": "quotes", "probs": {"entailment": 0.0169, "neutral": 0.9819, "contradiction": 0.0012}}
+{"kind": "quotes", "probs": {"entailment": 0.0239, "neutral": 0.9745, "contradiction": 0.0016}}
+{"kind": "cv", "probs": {"entailment": 0.0012, "neutral": 0.9914, "contradiction": 0.0074}}
+{"kind": "quotes", "probs": {"entailment": 0.0184, "neutral": 0.9723, "contradiction": 0.0093}}
+{"kind": "quotes", "probs": {"entailment": 0.0047, "neutral": 0.9935, "contradiction": 0.0018}}
+{"kind": "quotes", "probs": {"entailment": 0.0771, "neutral": 0.9214, "contradiction": 0.0014}}
+{"kind": "quotes", "probs": {"entailment": 0.0188, "neutral": 0.9499, "contradiction": 0.0313}}
+{"kind": "quotes", "probs": {"entailment": 0.0496, "neutral": 0.9494, "contradiction": 0.001}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.0091, "neutral": 0.9884, "contradiction": 0.0025}}
+{"kind": "quotes", "probs": {"entailment": 0.0101, "neutral": 0.9868, "contradiction": 0.0031}}
+{"kind": "quotes", "probs": {"entailment": 0.1415, "neutral": 0.8562, "contradiction": 0.0024}}
+{"kind": "cv", "probs": {"entailment": 0.1119, "neutral": 0.2126, "contradiction": 0.6756}}
+{"kind": "quotes", "probs": {"entailment": 0.5097, "neutral": 0.4893, "contradiction": 0.001}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.0267, "neutral": 0.9668, "contradiction": 0.0065}}
+{"kind": "quotes", "probs": {"entailment": 0.0097, "neutral": 0.9875, "contradiction": 0.0028}}
+{"kind": "quotes", "probs": {"entailment": 0.0529, "neutral": 0.9458, "contradiction": 0.0013}}
+{"kind": "cv", "probs": {"entailment": 0.0116, "neutral": 0.9783, "contradiction": 0.01}}
+{"kind": "quotes", "probs": {"entailment": 0.0496, "neutral": 0.9494, "contradiction": 0.001}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.1828, "neutral": 0.8123, "contradiction": 0.0049}}
+{"kind": "quotes", "probs": {"entailment": 0.0065, "neutral": 0.9876, "contradiction": 0.0059}}
+{"kind": "quotes", "probs": {"entailment": 0.0053, "neutral": 0.9939, "contradiction": 0.0008}}
+{"kind": "quotes", "probs": {"entailment": 0.0404, "neutral": 0.9563, "contradiction": 0.0033}}
+{"kind": "quotes", "probs": {"entailment": 0.0408, "neutral": 0.9536, "contradiction": 0.0056}}
+{"kind": "quotes", "probs": {"entailment": 0.0451, "neutral": 0.9534, "contradiction": 0.0015}}
+{"kind": "quotes", "probs": {"entailment": 0.0158, "neutral": 0.9768, "contradiction": 0.0073}}
+{"kind": "cv", "probs": {"entailment": 0.2099, "neutral": 0.4052, "contradiction": 0.3848}}
+{"kind": "quotes", "probs": {"entailment": 0.5225, "neutral": 0.4624, "contradiction": 0.0151}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.045, "neutral": 0.9442, "contradiction": 0.0108}}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.9554, "neutral": 0.041, "contradiction": 0.0037}}
+{"kind": "quotes", "probs": {"entailment": 0.8313, "neutral": 0.166, "contradiction": 0.0027}}
+{"kind": "quotes", "probs": {"entailment": 0.9782, "neutral": 0.019, "contradiction": 0.0028}}
+{"kind": "cv", "probs": {"entailment": 0.8397, "neutral": 0.0634, "contradiction": 0.0969}}
+{"kind": "quotes", "probs": {"entailment": 0.6847, "neutral": 0.2829, "contradiction": 0.0324}}
+{"kind": "quotes", "probs": {"entailment": 0.0818, "neutral": 0.9068, "contradiction": 0.0114}}
+{"kind": "quotes", "probs": {"entailment": 0.0009, "neutral": 0.9976, "contradiction": 0.0015}}
+{"kind": "quotes", "probs": {"entailment": 0.0131, "neutral": 0.9851, "contradiction": 0.0018}}
+{"kind": "quotes", "probs": {"entailment": 0.9484, "neutral": 0.0364, "contradiction": 0.0152}}
+{"kind": "cv", "probs": {"entailment": 0.4962, "neutral": 0.4935, "contradiction": 0.0103}}
+{"kind": "cv", "probs": {"entailment": 0.9724, "neutral": 0.0244, "contradiction": 0.0032}}
+{"kind": "cv", "probs": {"entailment": 0.7688, "neutral": 0.1814, "contradiction": 0.0498}}
+{"kind": "quotes", "probs": {"entailment": 0.177, "neutral": 0.5471, "contradiction": 0.2759}}
+{"kind": "quotes", "probs": {"entailment": 0.6164, "neutral": 0.2961, "contradiction": 0.0876}}
+{"kind": "quotes", "probs": {"entailment": 0.0108, "neutral": 0.9869, "contradiction": 0.0023}}
+{"kind": "quotes", "probs": {"entailment": 0.0045, "neutral": 0.9918, "contradiction": 0.0038}}
+{"kind": null, "probs": null}
+{"kind": null, "probs": null}
+{"kind": null, "probs": null}
+{"kind": "quotes", "probs": {"entailment": 0.0978, "neutral": 0.8977, "contradiction": 0.0045}}
+{"kind": "cv", "probs": {"entailment": 0.3037, "neutral": 0.6233, "contradiction": 0.0729}}
+{"kind": "quotes", "probs": {"entailment": 0.0456, "neutral": 0.952, "contradiction": 0.0023}}
+{"kind": null, "probs": null}
+{"kind": "cv", "probs": {"entailment": 0.7463, "neutral": 0.0574, "contradiction": 0.1963}}
+{"kind": "quotes", "probs": {"entailment": 0.5854, "neutral": 0.4059, "contradiction": 0.0087}}
+{"kind": "quotes", "probs": {"entailment": 0.1909, "neutral": 0.7829, "contradiction": 0.0262}}
+{"kind": "quotes", "probs": {"entailment": 0.0212, "neutral": 0.9775, "contradiction": 0.0013}}
+{"kind": "quotes", "probs": {"entailment": 0.005, "neutral": 0.9939, "contradiction": 0.0011}}
+{"kind": "cv", "probs": {"entailment": 0.0185, "neutral": 0.8857, "contradiction": 0.0959}}
+{"kind": "cv", "probs": {"entailment": 0.1102, "neutral": 0.8378, "contradiction": 0.052}}

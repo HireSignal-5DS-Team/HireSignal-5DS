@@ -1,0 +1,2042 @@
+[
+ {
+  "case_id": "val-000",
+  "req_id": "r1",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "React: 4 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+   "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+   "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+  ]
+ },
+ {
+  "case_id": "val-000",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Portuguese at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/befd434f-bb74-4144-8aa6-28b903b792a0",
+   "http://data.europa.eu/esco/skill/6b7968ae-34fc-44cf-bbe4-28bded032004",
+   "http://data.europa.eu/esco/skill/9ef06b7c-991c-46a5-9dbc-82506031e8f9"
+  ]
+ },
+ {
+  "case_id": "val-000",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of Pandas",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-000",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Microsoft Azure Administrator Associate certification",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+   "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+   "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6"
+  ]
+ },
+ {
+  "case_id": "val-000",
+  "req_id": "r5",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Ability to design cloud architecture",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/11430d93-c835-48ed-8e70-285fa69c9ae6",
+   "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+   "http://data.europa.eu/esco/skill/0a52bed5-fd29-45fb-aba6-e32bccfda1c1"
+  ]
+ },
+ {
+  "case_id": "val-000",
+  "req_id": "r6",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of FastAPI",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-001",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Django: 4 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-001",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of Vue.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-001",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Pandas: 3 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-002",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of FastAPI",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-002",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of database design",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+   "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f",
+   "http://data.europa.eu/esco/skill/29fb0fb5-dfc4-4098-ac9b-3a712000f48f"
+  ]
+ },
+ {
+  "case_id": "val-002",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Hands-on Oracle Warehouse Builder experience",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e",
+   "http://data.europa.eu/esco/skill/772a9c72-abef-4333-9788-f4cb48ad8e08",
+   "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655"
+  ]
+ },
+ {
+  "case_id": "val-002",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Microsoft Azure Administrator Associate certification",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+   "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+   "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6"
+  ]
+ },
+ {
+  "case_id": "val-003",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Flask: 4 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-003",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Node.js: 4 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-003",
+  "req_id": "r3",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Vue.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-003",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of React",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+   "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+   "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+  ]
+ },
+ {
+  "case_id": "val-004",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Ability to maintain information network hardware",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/19c0e68e-6e6c-4698-85dc-ef66a9de2c37",
+   "http://data.europa.eu/esco/skill/20c920d4-7ff7-4676-ba61-3f04490d9416",
+   "http://data.europa.eu/esco/skill/a47d194d-0ffd-4aaa-b695-fbbe0255000e"
+  ]
+ },
+ {
+  "case_id": "val-004",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "React: 3 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+   "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+   "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+  ]
+ },
+ {
+  "case_id": "val-004",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Angular: 6 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-005",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of Pandas",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-005",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of database design",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+   "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f",
+   "http://data.europa.eu/esco/skill/29fb0fb5-dfc4-4098-ac9b-3a712000f48f"
+  ]
+ },
+ {
+  "case_id": "val-005",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Spanish at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/0f58a178-1382-4df2-95e8-2b3f90e80e24",
+   "http://data.europa.eu/esco/skill/a0ccc96f-edec-4641-b053-12159ebe5b13",
+   "http://data.europa.eu/esco/skill/08759658-fffc-4951-bea0-1fb51d06eb89"
+  ]
+ },
+ {
+  "case_id": "val-005",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Postgraduate (master) degree in a computing field",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ec85cc63-4e24-4631-bf92-8789db2605c0",
+   "http://data.europa.eu/esco/skill/2de4572a-4724-4f76-afc2-72a568a264ac",
+   "http://data.europa.eu/esco/skill/9433da85-70fa-4a25-8f96-71fa59dd1989"
+  ]
+ },
+ {
+  "case_id": "val-005",
+  "req_id": "r5",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Angular: 2 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-006",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "FastAPI: 2 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-006",
+  "req_id": "r2",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Pandas: 2 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-006",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of Django",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-006",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Postgraduate (master) degree in a computing field",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ec85cc63-4e24-4631-bf92-8789db2605c0",
+   "http://data.europa.eu/esco/skill/2de4572a-4724-4f76-afc2-72a568a264ac",
+   "http://data.europa.eu/esco/skill/9433da85-70fa-4a25-8f96-71fa59dd1989"
+  ]
+ },
+ {
+  "case_id": "val-006",
+  "req_id": "r5",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "CISSP certification",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-006",
+  "req_id": "r6",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Ability to maintain information network hardware",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/19c0e68e-6e6c-4698-85dc-ef66a9de2c37",
+   "http://data.europa.eu/esco/skill/20c920d4-7ff7-4676-ba61-3f04490d9416",
+   "http://data.europa.eu/esco/skill/a47d194d-0ffd-4aaa-b695-fbbe0255000e"
+  ]
+ },
+ {
+  "case_id": "val-007",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Microsoft Azure Administrator Associate certification",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+   "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+   "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6"
+  ]
+ },
+ {
+  "case_id": "val-007",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of database design",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+   "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f",
+   "http://data.europa.eu/esco/skill/29fb0fb5-dfc4-4098-ac9b-3a712000f48f"
+  ]
+ },
+ {
+  "case_id": "val-007",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Django: 2 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-007",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of Node.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-007",
+  "req_id": "r5",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Spanish at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/0f58a178-1382-4df2-95e8-2b3f90e80e24",
+   "http://data.europa.eu/esco/skill/a0ccc96f-edec-4641-b053-12159ebe5b13",
+   "http://data.europa.eu/esco/skill/08759658-fffc-4951-bea0-1fb51d06eb89"
+  ]
+ },
+ {
+  "case_id": "val-008",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Ability to design cloud architecture",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/11430d93-c835-48ed-8e70-285fa69c9ae6",
+   "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+   "http://data.europa.eu/esco/skill/0a52bed5-fd29-45fb-aba6-e32bccfda1c1"
+  ]
+ },
+ {
+  "case_id": "val-008",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of Flask",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-008",
+  "req_id": "r3",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Vue.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-008",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of React",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+   "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+   "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+  ]
+ },
+ {
+  "case_id": "val-008",
+  "req_id": "r5",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of agile methodology",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/dba46f87-0831-49cd-a1c7-340a653c0221",
+   "http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4",
+   "http://data.europa.eu/esco/skill/bec4359e-cb92-468f-a997-8fb28e32fba9"
+  ]
+ },
+ {
+  "case_id": "val-009",
+  "req_id": "r1",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "FastAPI: 6 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-009",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "CISSP certification",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-009",
+  "req_id": "r3",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Node.js: 2 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-009",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Angular: 5 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-010",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of Flask",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-010",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of agile methodology",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/dba46f87-0831-49cd-a1c7-340a653c0221",
+   "http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4",
+   "http://data.europa.eu/esco/skill/bec4359e-cb92-468f-a997-8fb28e32fba9"
+  ]
+ },
+ {
+  "case_id": "val-010",
+  "req_id": "r3",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Vue.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-010",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "FastAPI: 6 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-010",
+  "req_id": "r5",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Ability to perform risk analysis",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1dd23dba-dd00-45ab-abf4-642902538317",
+   "http://data.europa.eu/esco/skill/e4a57b51-16d7-4dfc-bb47-6aa401e39b2e",
+   "http://data.europa.eu/esco/skill/96550830-539b-4746-96aa-92aa4959945d"
+  ]
+ },
+ {
+  "case_id": "val-011",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "FastAPI: 5 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-011",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "CISSP certification",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-011",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Postgraduate (master) degree in a computing field",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ec85cc63-4e24-4631-bf92-8789db2605c0",
+   "http://data.europa.eu/esco/skill/2de4572a-4724-4f76-afc2-72a568a264ac",
+   "http://data.europa.eu/esco/skill/9433da85-70fa-4a25-8f96-71fa59dd1989"
+  ]
+ },
+ {
+  "case_id": "val-011",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Background in model based system engineering",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/25df422a-bf0a-4f76-8631-d0be91cb8751",
+   "http://data.europa.eu/esco/skill/3c6fe585-7d12-4315-b579-e30c042088ce",
+   "http://data.europa.eu/esco/skill/9c071f1d-eac3-449d-b004-c14775b5a3b9"
+  ]
+ },
+ {
+  "case_id": "val-012",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Microsoft Azure Administrator Associate certification",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+   "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+   "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6"
+  ]
+ },
+ {
+  "case_id": "val-012",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Background in model based system engineering",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/25df422a-bf0a-4f76-8631-d0be91cb8751",
+   "http://data.europa.eu/esco/skill/3c6fe585-7d12-4315-b579-e30c042088ce",
+   "http://data.europa.eu/esco/skill/9c071f1d-eac3-449d-b004-c14775b5a3b9"
+  ]
+ },
+ {
+  "case_id": "val-012",
+  "req_id": "r3",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "FastAPI: 5 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-013",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of Flask",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-013",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "CISSP certification",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-013",
+  "req_id": "r3",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "React: 2 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+   "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+   "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+  ]
+ },
+ {
+  "case_id": "val-013",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Angular: 3 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-013",
+  "req_id": "r5",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "FastAPI: 3 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-013",
+  "req_id": "r6",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Spanish at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/0f58a178-1382-4df2-95e8-2b3f90e80e24",
+   "http://data.europa.eu/esco/skill/a0ccc96f-edec-4641-b053-12159ebe5b13",
+   "http://data.europa.eu/esco/skill/08759658-fffc-4951-bea0-1fb51d06eb89"
+  ]
+ },
+ {
+  "case_id": "val-014",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "FastAPI: 2 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-014",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Node.js: 4 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-014",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Django: 4 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-014",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Ability to design cloud architecture",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/11430d93-c835-48ed-8e70-285fa69c9ae6",
+   "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+   "http://data.europa.eu/esco/skill/0a52bed5-fd29-45fb-aba6-e32bccfda1c1"
+  ]
+ },
+ {
+  "case_id": "val-014",
+  "req_id": "r5",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of scikit-learn",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/9bf266a6-188b-4d17-a22f-2f266d76832b",
+   "http://data.europa.eu/esco/skill/fa46a48d-9cb9-422d-afab-1047654dbcdd",
+   "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+  ]
+ },
+ {
+  "case_id": "val-014",
+  "req_id": "r6",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Ability to maintain information network hardware",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/19c0e68e-6e6c-4698-85dc-ef66a9de2c37",
+   "http://data.europa.eu/esco/skill/20c920d4-7ff7-4676-ba61-3f04490d9416",
+   "http://data.europa.eu/esco/skill/a47d194d-0ffd-4aaa-b695-fbbe0255000e"
+  ]
+ },
+ {
+  "case_id": "val-015",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Spanish at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/0f58a178-1382-4df2-95e8-2b3f90e80e24",
+   "http://data.europa.eu/esco/skill/a0ccc96f-edec-4641-b053-12159ebe5b13",
+   "http://data.europa.eu/esco/skill/08759658-fffc-4951-bea0-1fb51d06eb89"
+  ]
+ },
+ {
+  "case_id": "val-015",
+  "req_id": "r2",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Flask",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-015",
+  "req_id": "r3",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Vue.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-016",
+  "req_id": "r1",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Angular: 2 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-016",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Ability to perform risk analysis",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1dd23dba-dd00-45ab-abf4-642902538317",
+   "http://data.europa.eu/esco/skill/e4a57b51-16d7-4dfc-bb47-6aa401e39b2e",
+   "http://data.europa.eu/esco/skill/96550830-539b-4746-96aa-92aa4959945d"
+  ]
+ },
+ {
+  "case_id": "val-016",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "FastAPI: 6 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-016",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Portuguese at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/befd434f-bb74-4144-8aa6-28b903b792a0",
+   "http://data.europa.eu/esco/skill/6b7968ae-34fc-44cf-bbe4-28bded032004",
+   "http://data.europa.eu/esco/skill/9ef06b7c-991c-46a5-9dbc-82506031e8f9"
+  ]
+ },
+ {
+  "case_id": "val-017",
+  "req_id": "r1",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of React",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+   "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+   "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+  ]
+ },
+ {
+  "case_id": "val-017",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of Vue.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-017",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of FastAPI",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-017",
+  "req_id": "r4",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "scikit-learn: 5 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/9bf266a6-188b-4d17-a22f-2f266d76832b",
+   "http://data.europa.eu/esco/skill/fa46a48d-9cb9-422d-afab-1047654dbcdd",
+   "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+  ]
+ },
+ {
+  "case_id": "val-018",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Node.js: 2 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-018",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Postgraduate (master) degree in a computing field",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ec85cc63-4e24-4631-bf92-8789db2605c0",
+   "http://data.europa.eu/esco/skill/2de4572a-4724-4f76-afc2-72a568a264ac",
+   "http://data.europa.eu/esco/skill/9433da85-70fa-4a25-8f96-71fa59dd1989"
+  ]
+ },
+ {
+  "case_id": "val-018",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of OWASP ZAP",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ce4cddd-4a74-458e-a2d4-152ca939475a",
+   "http://data.europa.eu/esco/skill/902fb91c-3113-4004-9b4f-79aa86b638b7"
+  ]
+ },
+ {
+  "case_id": "val-018",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of FastAPI",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-018",
+  "req_id": "r5",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Flask: 2 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-018",
+  "req_id": "r6",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Portuguese at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/befd434f-bb74-4144-8aa6-28b903b792a0",
+   "http://data.europa.eu/esco/skill/6b7968ae-34fc-44cf-bbe4-28bded032004",
+   "http://data.europa.eu/esco/skill/9ef06b7c-991c-46a5-9dbc-82506031e8f9"
+  ]
+ },
+ {
+  "case_id": "val-019",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Ability to perform risk analysis",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1dd23dba-dd00-45ab-abf4-642902538317",
+   "http://data.europa.eu/esco/skill/e4a57b51-16d7-4dfc-bb47-6aa401e39b2e",
+   "http://data.europa.eu/esco/skill/96550830-539b-4746-96aa-92aa4959945d"
+  ]
+ },
+ {
+  "case_id": "val-019",
+  "req_id": "r2",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Node.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-019",
+  "req_id": "r3",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Pandas",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-019",
+  "req_id": "r4",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Angular: 2 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-019",
+  "req_id": "r5",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Portuguese at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/befd434f-bb74-4144-8aa6-28b903b792a0",
+   "http://data.europa.eu/esco/skill/6b7968ae-34fc-44cf-bbe4-28bded032004",
+   "http://data.europa.eu/esco/skill/9ef06b7c-991c-46a5-9dbc-82506031e8f9"
+  ]
+ },
+ {
+  "case_id": "val-019",
+  "req_id": "r6",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Vue.js: 6 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-020",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of Flask",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-020",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Postgraduate (master) degree in a computing field",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ec85cc63-4e24-4631-bf92-8789db2605c0",
+   "http://data.europa.eu/esco/skill/2de4572a-4724-4f76-afc2-72a568a264ac",
+   "http://data.europa.eu/esco/skill/9433da85-70fa-4a25-8f96-71fa59dd1989"
+  ]
+ },
+ {
+  "case_id": "val-020",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Background in model based system engineering",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/25df422a-bf0a-4f76-8631-d0be91cb8751",
+   "http://data.europa.eu/esco/skill/3c6fe585-7d12-4315-b579-e30c042088ce",
+   "http://data.europa.eu/esco/skill/9c071f1d-eac3-449d-b004-c14775b5a3b9"
+  ]
+ },
+ {
+  "case_id": "val-020",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Hands-on Oracle Warehouse Builder experience",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e",
+   "http://data.europa.eu/esco/skill/772a9c72-abef-4333-9788-f4cb48ad8e08",
+   "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655"
+  ]
+ },
+ {
+  "case_id": "val-020",
+  "req_id": "r5",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Microsoft Azure Administrator Associate certification",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+   "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+   "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6"
+  ]
+ },
+ {
+  "case_id": "val-020",
+  "req_id": "r6",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Django: 5 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-021",
+  "req_id": "r1",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Angular: 2 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-021",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Microsoft Azure Administrator Associate certification",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+   "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+   "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6"
+  ]
+ },
+ {
+  "case_id": "val-021",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Django: 5 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-021",
+  "req_id": "r4",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Pandas",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-021",
+  "req_id": "r5",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of FastAPI",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-022",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "CISSP certification",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-022",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of Node.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-022",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Portuguese at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/befd434f-bb74-4144-8aa6-28b903b792a0",
+   "http://data.europa.eu/esco/skill/6b7968ae-34fc-44cf-bbe4-28bded032004",
+   "http://data.europa.eu/esco/skill/9ef06b7c-991c-46a5-9dbc-82506031e8f9"
+  ]
+ },
+ {
+  "case_id": "val-022",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Postgraduate (master) degree in a computing field",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ec85cc63-4e24-4631-bf92-8789db2605c0",
+   "http://data.europa.eu/esco/skill/2de4572a-4724-4f76-afc2-72a568a264ac",
+   "http://data.europa.eu/esco/skill/9433da85-70fa-4a25-8f96-71fa59dd1989"
+  ]
+ },
+ {
+  "case_id": "val-022",
+  "req_id": "r5",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of Pandas",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-023",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of natural language processing",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/fff0e2cd-d0bd-4b02-9daf-158b79d9688a",
+   "http://data.europa.eu/esco/skill/f9670490-8aa4-4540-b121-d440a8294aab",
+   "http://data.europa.eu/esco/skill/1b70a55d-b8a4-49fc-96c6-15ab4cff2522"
+  ]
+ },
+ {
+  "case_id": "val-023",
+  "req_id": "r2",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Django",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-023",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Postgraduate (master) degree in a computing field",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ec85cc63-4e24-4631-bf92-8789db2605c0",
+   "http://data.europa.eu/esco/skill/2de4572a-4724-4f76-afc2-72a568a264ac",
+   "http://data.europa.eu/esco/skill/9433da85-70fa-4a25-8f96-71fa59dd1989"
+  ]
+ },
+ {
+  "case_id": "val-023",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Vue.js: 3 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-024",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Pandas: 5 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-024",
+  "req_id": "r2",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Angular: 5 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-024",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Microsoft Azure Administrator Associate certification",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+   "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+   "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6"
+  ]
+ },
+ {
+  "case_id": "val-024",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Spanish at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/0f58a178-1382-4df2-95e8-2b3f90e80e24",
+   "http://data.europa.eu/esco/skill/a0ccc96f-edec-4641-b053-12159ebe5b13",
+   "http://data.europa.eu/esco/skill/08759658-fffc-4951-bea0-1fb51d06eb89"
+  ]
+ },
+ {
+  "case_id": "val-024",
+  "req_id": "r5",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of database design",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+   "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f",
+   "http://data.europa.eu/esco/skill/29fb0fb5-dfc4-4098-ac9b-3a712000f48f"
+  ]
+ },
+ {
+  "case_id": "val-024",
+  "req_id": "r6",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "React: 3 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+   "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+   "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+  ]
+ },
+ {
+  "case_id": "val-025",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of agile methodology",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/dba46f87-0831-49cd-a1c7-340a653c0221",
+   "http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4",
+   "http://data.europa.eu/esco/skill/bec4359e-cb92-468f-a997-8fb28e32fba9"
+  ]
+ },
+ {
+  "case_id": "val-025",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Background in model based system engineering",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/25df422a-bf0a-4f76-8631-d0be91cb8751",
+   "http://data.europa.eu/esco/skill/3c6fe585-7d12-4315-b579-e30c042088ce",
+   "http://data.europa.eu/esco/skill/9c071f1d-eac3-449d-b004-c14775b5a3b9"
+  ]
+ },
+ {
+  "case_id": "val-025",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of Flask",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-025",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Postgraduate (master) degree in a computing field",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ec85cc63-4e24-4631-bf92-8789db2605c0",
+   "http://data.europa.eu/esco/skill/2de4572a-4724-4f76-afc2-72a568a264ac",
+   "http://data.europa.eu/esco/skill/9433da85-70fa-4a25-8f96-71fa59dd1989"
+  ]
+ },
+ {
+  "case_id": "val-026",
+  "req_id": "r1",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of scikit-learn",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/9bf266a6-188b-4d17-a22f-2f266d76832b",
+   "http://data.europa.eu/esco/skill/fa46a48d-9cb9-422d-afab-1047654dbcdd",
+   "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+  ]
+ },
+ {
+  "case_id": "val-026",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of Vue.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-026",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Spanish at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/0f58a178-1382-4df2-95e8-2b3f90e80e24",
+   "http://data.europa.eu/esco/skill/a0ccc96f-edec-4641-b053-12159ebe5b13",
+   "http://data.europa.eu/esco/skill/08759658-fffc-4951-bea0-1fb51d06eb89"
+  ]
+ },
+ {
+  "case_id": "val-026",
+  "req_id": "r4",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of FastAPI",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-026",
+  "req_id": "r5",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of React",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+   "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+   "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+  ]
+ },
+ {
+  "case_id": "val-026",
+  "req_id": "r6",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Hands-on Oracle Warehouse Builder experience",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e",
+   "http://data.europa.eu/esco/skill/772a9c72-abef-4333-9788-f4cb48ad8e08",
+   "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655"
+  ]
+ },
+ {
+  "case_id": "val-027",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Background in model based system engineering",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/25df422a-bf0a-4f76-8631-d0be91cb8751",
+   "http://data.europa.eu/esco/skill/3c6fe585-7d12-4315-b579-e30c042088ce",
+   "http://data.europa.eu/esco/skill/9c071f1d-eac3-449d-b004-c14775b5a3b9"
+  ]
+ },
+ {
+  "case_id": "val-027",
+  "req_id": "r2",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of scikit-learn",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/9bf266a6-188b-4d17-a22f-2f266d76832b",
+   "http://data.europa.eu/esco/skill/fa46a48d-9cb9-422d-afab-1047654dbcdd",
+   "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+  ]
+ },
+ {
+  "case_id": "val-027",
+  "req_id": "r3",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Pandas: 2 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-027",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Microsoft Azure Administrator Associate certification",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+   "http://data.europa.eu/esco/skill/3d03c40c-1b83-4793-8902-2523f40af59e",
+   "http://data.europa.eu/esco/skill/86f7126d-97fd-4da5-be96-d1cf6ecd54e6"
+  ]
+ },
+ {
+  "case_id": "val-027",
+  "req_id": "r5",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Ability to design cloud architecture",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/11430d93-c835-48ed-8e70-285fa69c9ae6",
+   "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+   "http://data.europa.eu/esco/skill/0a52bed5-fd29-45fb-aba6-e32bccfda1c1"
+  ]
+ },
+ {
+  "case_id": "val-028",
+  "req_id": "r1",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "FastAPI: 6 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-028",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of Django",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-028",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Hands-on Oracle Warehouse Builder experience",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e",
+   "http://data.europa.eu/esco/skill/772a9c72-abef-4333-9788-f4cb48ad8e08",
+   "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655"
+  ]
+ },
+ {
+  "case_id": "val-028",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Vue.js: 3 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-028",
+  "req_id": "r5",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Node.js: 3 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-028",
+  "req_id": "r6",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Flask",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-029",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of agile methodology",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/dba46f87-0831-49cd-a1c7-340a653c0221",
+   "http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4",
+   "http://data.europa.eu/esco/skill/bec4359e-cb92-468f-a997-8fb28e32fba9"
+  ]
+ },
+ {
+  "case_id": "val-029",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of natural language processing",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/fff0e2cd-d0bd-4b02-9daf-158b79d9688a",
+   "http://data.europa.eu/esco/skill/f9670490-8aa4-4540-b121-d440a8294aab",
+   "http://data.europa.eu/esco/skill/1b70a55d-b8a4-49fc-96c6-15ab4cff2522"
+  ]
+ },
+ {
+  "case_id": "val-029",
+  "req_id": "r3",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Django: 2 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-029",
+  "req_id": "r4",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Angular",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-030",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of scikit-learn",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/9bf266a6-188b-4d17-a22f-2f266d76832b",
+   "http://data.europa.eu/esco/skill/fa46a48d-9cb9-422d-afab-1047654dbcdd",
+   "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+  ]
+ },
+ {
+  "case_id": "val-030",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Ability to maintain information network hardware",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/19c0e68e-6e6c-4698-85dc-ef66a9de2c37",
+   "http://data.europa.eu/esco/skill/20c920d4-7ff7-4676-ba61-3f04490d9416",
+   "http://data.europa.eu/esco/skill/a47d194d-0ffd-4aaa-b695-fbbe0255000e"
+  ]
+ },
+ {
+  "case_id": "val-030",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Ability to maintain information network hardware",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/19c0e68e-6e6c-4698-85dc-ef66a9de2c37",
+   "http://data.europa.eu/esco/skill/20c920d4-7ff7-4676-ba61-3f04490d9416",
+   "http://data.europa.eu/esco/skill/a47d194d-0ffd-4aaa-b695-fbbe0255000e"
+  ]
+ },
+ {
+  "case_id": "val-030",
+  "req_id": "r4",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "React: 3 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+   "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+   "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+  ]
+ },
+ {
+  "case_id": "val-030",
+  "req_id": "r5",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Django: 4 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-030",
+  "req_id": "r6",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Ability to maintain information network hardware",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/19c0e68e-6e6c-4698-85dc-ef66a9de2c37",
+   "http://data.europa.eu/esco/skill/20c920d4-7ff7-4676-ba61-3f04490d9416",
+   "http://data.europa.eu/esco/skill/a47d194d-0ffd-4aaa-b695-fbbe0255000e"
+  ]
+ },
+ {
+  "case_id": "val-031",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Angular: 5 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-031",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Portuguese at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/befd434f-bb74-4144-8aa6-28b903b792a0",
+   "http://data.europa.eu/esco/skill/6b7968ae-34fc-44cf-bbe4-28bded032004",
+   "http://data.europa.eu/esco/skill/9ef06b7c-991c-46a5-9dbc-82506031e8f9"
+  ]
+ },
+ {
+  "case_id": "val-031",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Postgraduate (master) degree in a computing field",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ec85cc63-4e24-4631-bf92-8789db2605c0",
+   "http://data.europa.eu/esco/skill/2de4572a-4724-4f76-afc2-72a568a264ac",
+   "http://data.europa.eu/esco/skill/9433da85-70fa-4a25-8f96-71fa59dd1989"
+  ]
+ },
+ {
+  "case_id": "val-031",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of database design",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+   "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f",
+   "http://data.europa.eu/esco/skill/29fb0fb5-dfc4-4098-ac9b-3a712000f48f"
+  ]
+ },
+ {
+  "case_id": "val-032",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Ability to perform risk analysis",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1dd23dba-dd00-45ab-abf4-642902538317",
+   "http://data.europa.eu/esco/skill/e4a57b51-16d7-4dfc-bb47-6aa401e39b2e",
+   "http://data.europa.eu/esco/skill/96550830-539b-4746-96aa-92aa4959945d"
+  ]
+ },
+ {
+  "case_id": "val-032",
+  "req_id": "r2",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Vue.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-032",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Spanish at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/0f58a178-1382-4df2-95e8-2b3f90e80e24",
+   "http://data.europa.eu/esco/skill/a0ccc96f-edec-4641-b053-12159ebe5b13",
+   "http://data.europa.eu/esco/skill/08759658-fffc-4951-bea0-1fb51d06eb89"
+  ]
+ },
+ {
+  "case_id": "val-033",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Django: 2 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-033",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of Angular",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-033",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Background in model based system engineering",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/25df422a-bf0a-4f76-8631-d0be91cb8751",
+   "http://data.europa.eu/esco/skill/3c6fe585-7d12-4315-b579-e30c042088ce",
+   "http://data.europa.eu/esco/skill/9c071f1d-eac3-449d-b004-c14775b5a3b9"
+  ]
+ },
+ {
+  "case_id": "val-033",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of Pandas",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-033",
+  "req_id": "r5",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of Vue.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-034",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Django: 5 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-034",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of scikit-learn",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/9bf266a6-188b-4d17-a22f-2f266d76832b",
+   "http://data.europa.eu/esco/skill/fa46a48d-9cb9-422d-afab-1047654dbcdd",
+   "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+  ]
+ },
+ {
+  "case_id": "val-034",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of agile methodology",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/dba46f87-0831-49cd-a1c7-340a653c0221",
+   "http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4",
+   "http://data.europa.eu/esco/skill/bec4359e-cb92-468f-a997-8fb28e32fba9"
+  ]
+ },
+ {
+  "case_id": "val-034",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Portuguese at C1 level or above",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/befd434f-bb74-4144-8aa6-28b903b792a0",
+   "http://data.europa.eu/esco/skill/6b7968ae-34fc-44cf-bbe4-28bded032004",
+   "http://data.europa.eu/esco/skill/9ef06b7c-991c-46a5-9dbc-82506031e8f9"
+  ]
+ },
+ {
+  "case_id": "val-034",
+  "req_id": "r5",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Node.js: 3 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-035",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of natural language processing",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/fff0e2cd-d0bd-4b02-9daf-158b79d9688a",
+   "http://data.europa.eu/esco/skill/f9670490-8aa4-4540-b121-d440a8294aab",
+   "http://data.europa.eu/esco/skill/1b70a55d-b8a4-49fc-96c6-15ab4cff2522"
+  ]
+ },
+ {
+  "case_id": "val-035",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Django: 4 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-035",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of Pandas",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-035",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of React",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+   "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+   "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+  ]
+ },
+ {
+  "case_id": "val-036",
+  "req_id": "r1",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "FastAPI: 6 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-036",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of Vue.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-036",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Working knowledge of Node.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-037",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "FastAPI: 4 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-037",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "React: 4 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+   "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+   "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+  ]
+ },
+ {
+  "case_id": "val-037",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Hands-on Oracle Warehouse Builder experience",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/23900e3d-06fa-424c-a5dc-c0ea42edde1e",
+   "http://data.europa.eu/esco/skill/772a9c72-abef-4333-9788-f4cb48ad8e08",
+   "http://data.europa.eu/esco/skill/de9f85ba-e77f-48fd-8c66-f5ebaf32d655"
+  ]
+ },
+ {
+  "case_id": "val-037",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of OWASP ZAP",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ce4cddd-4a74-458e-a2d4-152ca939475a",
+   "http://data.europa.eu/esco/skill/902fb91c-3113-4004-9b4f-79aa86b638b7"
+  ]
+ },
+ {
+  "case_id": "val-037",
+  "req_id": "r5",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of Angular",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-037",
+  "req_id": "r6",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Pandas: 5 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-038",
+  "req_id": "r1",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "scikit-learn: 6 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/9bf266a6-188b-4d17-a22f-2f266d76832b",
+   "http://data.europa.eu/esco/skill/fa46a48d-9cb9-422d-afab-1047654dbcdd",
+   "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+  ]
+ },
+ {
+  "case_id": "val-038",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Django: 3 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-038",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Angular: 4 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-038",
+  "req_id": "r4",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Ability to perform risk analysis",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1dd23dba-dd00-45ab-abf4-642902538317",
+   "http://data.europa.eu/esco/skill/e4a57b51-16d7-4dfc-bb47-6aa401e39b2e",
+   "http://data.europa.eu/esco/skill/96550830-539b-4746-96aa-92aa4959945d"
+  ]
+ },
+ {
+  "case_id": "val-039",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of agile methodology",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/dba46f87-0831-49cd-a1c7-340a653c0221",
+   "http://data.europa.eu/esco/skill/0a9acb6b-1139-4be9-b431-3a80a959f2f4",
+   "http://data.europa.eu/esco/skill/bec4359e-cb92-468f-a997-8fb28e32fba9"
+  ]
+ },
+ {
+  "case_id": "val-039",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Ability to design cloud architecture",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/11430d93-c835-48ed-8e70-285fa69c9ae6",
+   "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+   "http://data.europa.eu/esco/skill/0a52bed5-fd29-45fb-aba6-e32bccfda1c1"
+  ]
+ },
+ {
+  "case_id": "val-039",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Background in model based system engineering",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/25df422a-bf0a-4f76-8631-d0be91cb8751",
+   "http://data.europa.eu/esco/skill/3c6fe585-7d12-4315-b579-e30c042088ce",
+   "http://data.europa.eu/esco/skill/9c071f1d-eac3-449d-b004-c14775b5a3b9"
+  ]
+ },
+ {
+  "case_id": "val-040",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of OWASP ZAP",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ce4cddd-4a74-458e-a2d4-152ca939475a",
+   "http://data.europa.eu/esco/skill/902fb91c-3113-4004-9b4f-79aa86b638b7"
+  ]
+ },
+ {
+  "case_id": "val-040",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of Angular",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-040",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "scikit-learn: 3 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/9bf266a6-188b-4d17-a22f-2f266d76832b",
+   "http://data.europa.eu/esco/skill/fa46a48d-9cb9-422d-afab-1047654dbcdd",
+   "http://data.europa.eu/esco/skill/8369c2d6-c100-4cf6-bd83-9668d8678433"
+  ]
+ },
+ {
+  "case_id": "val-041",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of database design",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/7e796b51-49d7-4e73-95af-2e7323763f15",
+   "http://data.europa.eu/esco/skill/84f58e3d-8669-4d83-8c1d-5dd1e73a654f",
+   "http://data.europa.eu/esco/skill/29fb0fb5-dfc4-4098-ac9b-3a712000f48f"
+  ]
+ },
+ {
+  "case_id": "val-041",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "FastAPI: 5 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-041",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of Pandas",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-042",
+  "req_id": "r1",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "React: 3 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ef7562b2-f176-4d7c-a0b2-27ae8cce0b7d",
+   "http://data.europa.eu/esco/skill/b40584aa-7c63-4eed-9422-a9798fb95fdc",
+   "http://data.europa.eu/esco/skill/20012caa-b63c-4cb9-b2b8-01a1cfdfc1d1"
+  ]
+ },
+ {
+  "case_id": "val-042",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "not_documented",
+  "requirement": "Postgraduate (master) degree in a computing field",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/ec85cc63-4e24-4631-bf92-8789db2605c0",
+   "http://data.europa.eu/esco/skill/2de4572a-4724-4f76-afc2-72a568a264ac",
+   "http://data.europa.eu/esco/skill/9433da85-70fa-4a25-8f96-71fa59dd1989"
+  ]
+ },
+ {
+  "case_id": "val-042",
+  "req_id": "r3",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Angular: 6 years of experience or more",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-042",
+  "req_id": "r4",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of FastAPI",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-043",
+  "req_id": "r1",
+  "gold": "UNCERTAIN",
+  "gold_basis": "ambiguous",
+  "requirement": "Working knowledge of Vue.js",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-043",
+  "req_id": "r2",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Pandas: 2 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-043",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Django: 2 years of experience or more",
+  "rag_refs": []
+ },
+ {
+  "case_id": "val-044",
+  "req_id": "r1",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Working knowledge of OWASP ZAP",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ce4cddd-4a74-458e-a2d4-152ca939475a",
+   "http://data.europa.eu/esco/skill/902fb91c-3113-4004-9b4f-79aa86b638b7"
+  ]
+ },
+ {
+  "case_id": "val-044",
+  "req_id": "r2",
+  "gold": "MISSING",
+  "gold_basis": "contradicted",
+  "requirement": "Working knowledge of Angular",
+  "rag_refs": [
+   "http://data.europa.eu/esco/skill/1ffac4ac-fda7-407d-8ed1-ca8f4a8dc146"
+  ]
+ },
+ {
+  "case_id": "val-044",
+  "req_id": "r3",
+  "gold": "MET",
+  "gold_basis": "supported",
+  "requirement": "Flask: 4 years of experience or more",
+  "rag_refs": []
+ }
+]

@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K02_photo",
+  "file": "K02_photo.jpg",
+  "source": "L03.pdf",
+  "pages": [
+   1
+  ],
+  "pair": "P47",
+  "split": "test",
+  "condition": "close photo",
+  "job": "J3"
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "CURRICULUM VITAE\nLead / Senior Data Scientist\nPosition: Lead / Senior Data Scientist\nExperience years: 10\nEnglish level: fluent\n\nSenior / Lead Data Scientist with over 10 years of total commercial experience in data science, software development, and machine learning related projects.\n\nExperienced in ML project life cycle:\ndata collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\n\nData Analysis, Statistical Data Models, Machine Learning Models.\nExcellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.\nDeep knowledge in statistical and visualization packages.\nExperience in working with distributed systems.\n\nMachine Learning\nLinear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more.\n\nDeep Learning and Neural Networks\nPytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks.\n\nNatural Language Processing and Understanding\nRegexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy.\n\nProgramming and Machine Learning Libraries:\nPython, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastAPI\n\nDatabases:\nBigQuery, MSSQL, MySQL, PostgreSQL, MongoDB\n\nCloud Services, DevOps and Big Data\nDocker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more.",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 11.99,
+   "eval_count": 409,
+   "done_reason": "stop",
+   "peak_vram_mib": 4445
+  }
+ ]
+}

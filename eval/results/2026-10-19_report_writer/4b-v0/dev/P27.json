@@ -1,0 +1,86 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "must requirement r2 dropped",
+  "must requirement r3 dropped",
+  "must requirement r4 dropped",
+  "must requirement r5 dropped",
+  "nice requirement r7 dropped",
+  "nice requirement r8 dropped",
+  "r1: quote is not in its verified CV quotes",
+  "r6: quote is not in its verified CV quotes",
+  "reject letter without the right to a human review"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate has been rejected for the ML Engineer position due to missing critical requirements. Specifically, the candidate lacks 3+ years of experience in ML in production (r1) and experience with microservices architecture, cloud technologies, Docker, and Kubernetes (r6)—both of which are marked as 'must-have' and are missing. While the candidate demonstrates proficiency in Python and experience with deep learning techniques (e.g., neural networks using fastai), the absence of production-level ML experience and cloud/microservices exposure significantly undermines their suitability for the role. The candidate also lacks evidence for key technical skills like proficiency with TensorFlow/PyTorch or experience with data pipelines and AutoML, which are noted as 'nice-to-have' but not sufficient to compensate for the missing core requirements.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"must-have MISSING\",\n      \"line\": \"ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models)\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"must-have MISSING\",\n      \"line\": \"Experience with microservices architecture, cloud technologies, Docker and Kubernetes\"\n    }\n  ],\n  \"candidate_letter\": \"Dear Recruiter,\\n\\nThe candidate has been evaluated for the ML Engineer role and unfortunately does not meet the core requirements for the position. The candidate lacks 3+ years of experience in ML in production (training, testing, deployment, and monitoring of real-time models), which is a mandatory requirement (r1). Additionally, they have no demonstrated experience with microservices architecture, cloud technologies, Docker, or Kubernetes (r6)—another critical 'must-have' requirement.\\n\\nWhile the candidate shows some relevant skills, such as Python proficiency and experience with neural networks using fastai, these do not compensate for the absence of production-level ML and cloud infrastructure experience. The candidate's experience with tabular and time series data is noted, but it does not address the core technical gaps.\\n\\nWe recommend against moving forward with this candidate for the ML Engineer role at this time.\\n\\nBest regards,\\nAutomated Screening System\",\n  \"flags_for_recruiter\": [\n    \"The candidate lacks experience in ML in production (r1) and microservices/cloud infrastructure (r6), both of which are mandatory.\",\n    \"Low confidence in assessment of deep learning techniques (r2) and ML library proficiency (r4) due to limited context in the resume.\",\n    \"Candidate's Python skills are confirmed, but the evidence is limited to project descriptions without technical depth or scale.\"\n  ]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 2 of 6 must-have requirements are met; the score is 43. Missing must-haves: ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models); Experience with microservices architecture, cloud technologies, Docker and Kubernetes. Unclear must-haves: Proven experience with modern deep learning techniques and Gradient Boosting Trees; Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn).",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Proven experience with modern deep learning techniques and Gradient Boosting Trees - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Using Python to build optimization methods.",
+    "line": "must: Excellent Python coding skills - met (CV: Using Python to build optimization methods.)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library.",
+    "line": "must: Practical experience with tabular data and time series - met (CV: Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library.)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with microservices architecture, cloud technologies, Docker and Kubernetes - missing (not found in CV)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience with data pipelines or big data - missing (not found in CV)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience designing and implementing AutoML flows or frameworks - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models); Experience with microservices architecture, cloud technologies, Docker and Kubernetes.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r2, r4"
+  ]
+ },
+ "source": "template",
+ "latency_s": 9.81,
+ "peak_vram_mib": 3267,
+ "id": "P27",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

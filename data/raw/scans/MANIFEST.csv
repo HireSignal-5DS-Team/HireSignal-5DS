@@ -1,0 +1,11 @@
+file_id,source,source_file,pair_id,job,gold_outcome,split
+K01,kaggle_resume/INFORMATION-TECHNOLOGY,10840430.pdf,,,,
+K02,kaggle_resume/INFORMATION-TECHNOLOGY,11584809.pdf,,,,
+K03,kaggle_resume/INFORMATION-TECHNOLOGY,15297298.pdf,,,,
+K04,kaggle_resume/INFORMATION-TECHNOLOGY,27485716.pdf,,,,
+K05,kaggle_resume/INFORMATION-TECHNOLOGY,29975124.pdf,,,,
+L01,djinni (data/processed/cvs),9e7f6a17-3bb3-5040-b180-9f3d30e188d5.txt,P02,J1,reject,test
+L02,djinni (data/processed/cvs),d3ef2bda-20f8-5821-86ca-ea784f432789.txt,P15,J2,invite,dev
+L03,djinni (data/processed/cvs),d9b175f0-2cb8-58f3-bbce-cecb3b3bea5d.txt,P47,J3,review,test
+L04,djinni (data/processed/cvs),7dd66f67-c327-5a41-8f2f-dc37d0da0fb5.txt,P52,J4,invite,test
+L05,djinni (data/processed/cvs),7f020086-92b4-5bba-82a8-4414b03aa091.txt,P43,J1,review,test

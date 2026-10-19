@@ -1,0 +1,20 @@
+Fatma Trabelsi
+Pronouns: she/her
+Position: Machine learning engineer
+Experience years: 3
+English level: intermediate
+
+Mar 2020 – Present
+RESPONSIBILITIES:
+- Design, build and launch efficient and reliable machine learning (ML) services
+- Research, develop and expand upon algorithms that will train neural networks to deliver actionable intelligence faster and more effectively
+- Develop deep-learning software prototypes that demonstrate potential usefulness to our customers
+- Design and develop machine learning systems to create, train and deploy ML models
+- Establish reusable data processing pipelines to enable rapid re-training and iteration through different ML methodologies
+- Select appropriate datasets and data representation methods
+- Design experiments and analysis methodologies that are statistically rigorous
+- Perform statistical analysis and fine-tuning using test results
+MAIN PROJECTS:
+- pose estimation and images classification
+- financial trading prediction
+Project use new technologies, I`m interested to work with geodata, satellite imaginary and maps and something depended on logistics or urbanism

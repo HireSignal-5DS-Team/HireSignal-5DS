@@ -1,0 +1,66 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "reject letter without the right to a human review"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate has been rejected for the Python Backend Developer role due to missing critical requirements. Specifically, the candidate lacks at least 5 years of software development experience (required for 'r1') and 2 years of experience developing large-scale systems with Python (required for 'r2'). These are mandatory qualifications, and the absence of evidence for both is a decisive rejection factor. While the candidate's experience in asynchronous programming and performance-critical applications is marked as 'UNCERTAIN' due to low confidence, and there is no mention of AWS, Docker, or machine learning, the primary reasons for rejection are the missing must-have experience criteria.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"Experience years: 2\",\n      \"line\": \"must-have missing: 5+ years of software development experience required\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"must-have missing: 2+ years of Python-based large system development required\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"low confidence: asynchronous programming and performance-critical apps experience not clearly stated\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"no mention of AWS, Docker, or microservices experience\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"no mention of machine learning experience\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"low confidence: algorithms development (e.g., clustering) experience not clearly stated\"\n    }\n  ],\n  \"candidate_letter\": \"Dear Recruiter,\\n\\nThe candidate has been rejected for the Python Backend Developer position due to a lack of essential experience. The role requires at least 5 years of software development experience and 2 years of experience building large systems with Python—both of which are missing from the candidate’s profile. While some areas like asynchronous programming and algorithms development were noted as uncertain, the absence of core experience in the required domains makes the candidate unsuitable for the role.\\n\\nWe recommend focusing on candidates with demonstrable experience in Python backend development, particularly in scalable and performance-critical systems. If you have any additional context or would like to explore a different candidate, please let us know.\\n\\nBest regards,\\nAutomated Screening System\",\n  \"flags_for_recruiter\": [\n    \"low confidence: the Matcher was unsure on r3, r6\",\n    \"candidate lacks mandatory experience in software development and Python system development\",\n    \"no evidence of AWS, Docker, or microservices experience\"\n  ]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 0 of 3 must-have requirements are met; the score is 17. Missing must-haves: Software development: 5 years of experience or more; Developing big systems with Python: 2 years of experience or more. Unclear must-haves: Asynchronous programming and developing performance-critical applications.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Software development: 5 years of experience or more - missing (not found in CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Developing big systems with Python: 2 years of experience or more - missing (not found in CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Asynchronous programming and developing performance-critical applications - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Working with AWS, Docker and microservices - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience with Machine Learning - missing (not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "nice: Algorithms development (collaborative filtering, similarity, data normalization, clustering) - uncertain (unclear in the CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Software development: 5 years of experience or more; Developing big systems with Python: 2 years of experience or more.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r3, r6"
+  ]
+ },
+ "source": "template",
+ "latency_s": 10.67,
+ "peak_vram_mib": 3267,
+ "id": "P35",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

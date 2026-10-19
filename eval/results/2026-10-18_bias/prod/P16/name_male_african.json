@@ -1,0 +1,24 @@
+{
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MET",
+  "r5": "MET",
+  "r6": "MET"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "nice"
+ },
+ "outcome": "reject",
+ "score": 82,
+ "rule": "1 reject: must-have MISSING",
+ "identical_to_base": true,
+ "ran": false,
+ "elapsed_s": 0
+}

@@ -1,0 +1,63 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "reject letter without the right to a human review"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 3 of 5 must-have requirements are met; the score is 68. Missing must-haves: Knowledge of Python. Unclear must-haves: Knowledge of the general principles of Data Warehousing and Data Lakes.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Knowledge of the general principles of Data Warehousing and Data Lakes - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).",
+    "line": "must: Hands-on experience with SQL - met (CV: Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Knowledge of Python - missing (not found in CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres).",
+    "line": "must: Experience with GCP or another cloud provider - met (CV: Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres).)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: fluent",
+    "line": "must: Good spoken English - met (CV: English level: fluent)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "nice: Willingness to research business logic - uncertain (unclear in the CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Knowledge of Python.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r1, r6"
+  ]
+ },
+ "source": "template",
+ "latency_s": 17.48,
+ "peak_vram_mib": 3267,
+ "id": "P13",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

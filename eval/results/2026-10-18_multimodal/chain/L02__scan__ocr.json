@@ -1,0 +1,27 @@
+{
+ "cv": "L02",
+ "pair": "P15",
+ "job": "J2",
+ "condition": "scan",
+ "setup": "ocr",
+ "items": [
+  "L01_scan"
+ ],
+ "reader_reasons": [],
+ "ocr_confidence": 81.4,
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 41,
+ "reasons": [
+  "r4: must-have MISSING"
+ ],
+ "pair_review_reasons": [],
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "MET",
+  "r3": "UNCERTAIN",
+  "r4": "MISSING",
+  "r5": "UNCERTAIN",
+  "r6": "UNCERTAIN"
+ }
+}

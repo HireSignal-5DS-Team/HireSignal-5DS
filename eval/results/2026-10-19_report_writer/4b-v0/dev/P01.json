@@ -1,0 +1,79 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "r1: quote is not in its verified CV quotes",
+  "reject letter without the right to a human review"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate has relevant experience in machine learning competitions and cross-platform development, but fails to meet several mandatory requirements for the Data Scientist role. Key missing must-have skills include hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS), cloud platform experience (Amazon SageMaker), PySpark, and strong SQL knowledge. These gaps are critical and result in a rejection despite some relevant background in data science competitions.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MET\",\n      \"quote\": \"I have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs. I also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc.\",\n      \"line\": \"The candidate has demonstrated involvement in multiple machine learning and algorithmic competitions, indicating some data science exposure.\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"The candidate lacks clear evidence of knowledge in probability theory and statistics; confidence is low due to absence of explicit statements.\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"No evidence provided for understanding of Bayesian methods, time series analysis, or sensor signal processing; confidence is low.\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"No mention of hands-on experience with probabilistic programming tools such as Pyro, PyMC3, or JAGS.\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"No evidence of experience with Amazon SageMaker or other cloud-based data science platforms.\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"No mention of PySpark experience, which is a required tool for big data processing in data science roles.\"\n    },\n    {\n      \"req_id\": \"r7\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"No evidence of strong working knowledge of SQL, a fundamental skill for data scientists.\"\n    },\n    {\n      \"req_id\": \"r8\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"No indication of a Ph.D. in Mathematics, though not a strict requirement, it is noted as a nice-to-have.\"\n    }\n  ],\n  \"candidate_letter\": \"Dear Recruiter,\\n\\nThe candidate has demonstrated experience in machine learning competitions and cross-platform development, which shows some alignment with data science principles. However, they do not meet the mandatory requirements for the Data Scientist role, specifically lacking hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS), Amazon SageMaker, PySpark, and strong SQL skills. These are critical components of the role and are not addressed in the provided profile.\\n\\nWhile the candidate has participated in several high-level data science competitions, the absence of direct technical experience in core data science tools and frameworks makes them a poor fit for this position. We recommend rejecting this application.\\n\\nBest regards,\\nAutomated Screening System\",\n  \"flags_for_recruiter\": [\n    \"low confidence: the Matcher was unsure on r2, r3\",\n    \"critical missing requirements: r4, r5, r6, r7\",\n    \"candidate lacks foundational data science tooling (PySpark, SQL, cloud platforms)\"\n  ]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 1 of 7 must-have requirements are met; the score is 27. Missing must-haves: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar); Experience with cloud (Amazon SageMaker); Experience with PySpark; Strong working knowledge of SQL. Unclear must-haves: Good knowledge of probability theory and statistics; Understanding of Bayesian methods, time series analysis or sensor signal processing.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "I have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.",
+    "line": "must: Data Science: 4 years of experience or more - met (CV: I have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Good knowledge of probability theory and statistics - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Understanding of Bayesian methods, time series analysis or sensor signal processing - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with cloud (Amazon SageMaker) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with PySpark - missing (not found in CV)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Strong working knowledge of SQL - missing (not found in CV)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Ph.D. in Mathematics - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar); Experience with cloud (Amazon SageMaker); Experience with PySpark; Strong working knowledge of SQL.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r2, r3"
+  ]
+ },
+ "source": "template",
+ "latency_s": 14.0,
+ "peak_vram_mib": 3267,
+ "id": "P01",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

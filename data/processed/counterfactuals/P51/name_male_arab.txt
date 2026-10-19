@@ -1,0 +1,42 @@
+Youssef Mansour
+Pronouns: he/him
+Position: Python Developer
+Experience years: 11
+English level: fluent
+
+Master's degree, Professional Python Developer with experience in building complete cycles of applications.
+My latest 3 jobs:
+
+- Sentinels AI (acquired by Fenergo) (Netherlands)
+
+Senior Backend Engineer
+
+A transaction Monitoring solution that helps compliance officers to find transactions that are related to Money Laundering or Terrorism Financing. I
+designed and execute well-engineered, easy-to-maintain, reliable, and bug-free code for various company apps (microservices) in collaboration with AI engineers, data scientists, programmers, and other software personnel.
+Configured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK.
+
+Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK). Git(Gitlab CI/CD), Scrum, Agile, JIRA
+
+- Visualfabriq (Netherlands)
+
+Development Team Lead / Senior Python Engineer
+
+Visualfabriq is a web tool for FMCGs to plan and manage promotions, make invoices, and build reports and data forecasts. My team was responsible for the Invoices module (which is a part of the Promotions module). The team consisted of 5 people (3 backend developers). I provided coaching, performance review, 1 to 1 sessions, and was the first person for contact. As a developer, I built new features, supported existing ones, optimized
+performance, raised tests code coverage from 60% to 87%, and successfully led the project transition from 
+Python 2.7 to 3.8
+
+Linux, Python 3.8 & 2.7, Flask, Docker/Docker-Compose, MongoDB, AWS, CI/CD, logging(Sentry), Git(Bitbucket), Scrum, Agile, JIRA
+
+- Lukkien (Netherlands)
+
+Python developer
+
+Worked on multiple projects: two web stores(one from scratch) and a multilingual website. Wrote an easy-to-maintain, reliable, and bug-free code wrapped in Docker and deployed on AWS. Configured pipelines for
+Continuous Integration and Continuous Delivery.
+
+Linux, Python 3.6, Django + Django ORM, Oscar E-Commerce, GraphQL(graphene), Docker-Compose, pytest, Wagtail, PostgreSQL, ReactJS, AWS, CI/CD, logging(Sentry), GitLab, Scrum, Agile, JIRA
+I’m a professional Software Engineer with 10 years of experience, specializing in Python backend
+development. I’ve been working both as an individual contributor as well as a tech and team lead. I am now
+looking for a Python Backend/Full Stack Engineer or a Tech/Team Lead role. A permanent or
+contract-based role in a company with a technology-first approach with challenging projects and a remote or
+hybrid work option.

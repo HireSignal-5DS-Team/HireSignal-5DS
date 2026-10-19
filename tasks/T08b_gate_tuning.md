@@ -1,0 +1,11 @@
+# T08b — Finish T08 Part B (gold is final) + answers
+
+Read `CLAUDE.md` first. Gold is final: `build_gold.py` → `summary.json` shows 0 unchecked rows and 0 unchecked pairs (52 pairs; invites 3: P15, P50, P52). The Approver locked P44, P45, P46 as **review** (their r1 is UNCERTAIN, so not every must-have is MET). No sensitivity line needed.
+
+Answers to your T08 questions:
+1. Labels are final: run `eval_extra_pairs.py` again (gold rows changed), then the gate evaluation.
+2. **Yes, tune rule-2 variants on dev**, all with the hard constraint 0 false invites, then review ≤ 25%, then fewest false rejects. Compare: (a) current rule; (b) Judge FAIL on a MET must-have counts only when p(MET) < X; (c) Judge FAIL counts only when its supporting score < Y; (d) Judge not used for categories that code or profile fields already prove (`language`, `experience` with verified years), Judge kept for skills; (e) Judge template v1 instead of v2 for the gate; (f) **no Judge at all in the gate** (Judge results only listed as information). Variant (f) is the fallback the Approver asked for: if no Judge variant meets the targets better than (f), use (f) and say so honestly. Report each on dev and test with a short table; pick on dev only; explain the choice in plain words. Do not change the Judge model itself.
+3. **Recruiter confirms the requirement list (human-in-the-loop at job level):** the webhook accepts an optional `requirements` JSON (the confirmed job card). If present, `/job` is skipped and that list is used; if absent, the Job Agent runs as now. Add sample confirmed cards for J1–J4 from gold (`data/processed/jobs/J*_requirements.json`, J2 r6 = nice) and use them in the demo runs.
+4. Yes, fix the Profile parse bug (text before the first heading dropped / only heading skipped → nothing parsed, no flag): keep the text, or raise `partial_extraction_requires_review`. Add a test (P45-like case).
+
+Then: re-run the 3 n8n demo runs with confirmed requirement cards (one expected invite through the **gate's own invite branch**, one reject, one review via the form). Update `SUMMARY.md` and the `guard-outcome-gate` row in `PROMPT_LIBRARY.md` with the final numbers. Report in `tasks/T08b_report.md`. Stop llama-server and the API at the end.

@@ -1,0 +1,82 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 2,
+ "first_errors": [
+  "reject letter names r8 (nice, MISSING), which is not a missing must-have"
+ ],
+ "retry_errors": [
+  "the answer is not valid JSON",
+  "the answer was cut at the token limit"
+ ],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected after a human review. The automated system initially doubted whether the candidate met the must-have requirement for production ML experience due to lack of explicit duration evidence. Experience with modern deep learning techniques and Gradient Boosting Trees is uncertain due to low confidence. Proficiency with ML libraries is also uncertain. The candidate has met all other must-have requirements and nice-to-haves except for the missing experience with AutoML flows. The score was 79.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Full-cycle ML product development from problem definition and gathering requirements to deployment in production systems.\", \"line\": \"Met: the CV mentions full-cycle ML development including deployment in production systems.\"}, {\"req_id\": \"r2\", \"decision\": \"UNCERTAIN\", \"quote\": \"As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet\", \"line\": \"Uncertain: the candidate's experience with modern deep learning techniques and Gradient Boosting Trees is unclear due to low confidence.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc.\", \"line\": \"Met: the CV shows strong Python coding skills and involvement in model evaluation and improvement.\"}, {\"req_id\": \"r4\", \"decision\": \"UNCERTAIN\", \"quote\": \"As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet\", \"line\": \"Uncertain: the candidate's proficiency with ML libraries like TensorFlow, PyTorch, and Scikit-learn is not clearly demonstrated.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet\", \"line\": \"Met: the candidate has experience with time series forecasting, which satisfies the requirement.\"}, {\"req_id\": \"r6\", \"decision\": \"MET\", \"quote\": \"As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems).\", \"line\": \"Met: the candidate has experience with microservices, cloud technologies, Docker, and Kubernetes.\"}, {\"req_id\": \"r7\", \"decision\": \"MET\", \"quote\": \"As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems).\", \"line\": \"Met: the candidate has experience with data pipelines and big data technologies.\"}, {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: the candidate has no mention of experience with AutoML flows or frameworks.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the ML Engineer position. We regret to inform you that your application has been rejected. The key missing requirement is experience with AutoML flows or frameworks, which is essential for the role.\\n\\nThis decision was made after a human review. You have the right to reply with questions or request clarification.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about the candidate's experience with deep learning techniques (r2) and ML libraries (r4)\"]}",
+  "{\"recruiter_summary\": \"The candidate is rejected after a human review. The automated system initially doubted whether the candidate met the must-have requirement for production ML experience due to lack of explicit duration evidence. Experience with modern deep learning techniques and Gradient Boosting Trees is uncertain due to low confidence. Proficiency with ML libraries is also uncertain. The candidate has met all other must-have requirements and nice-to-haves except for the missing experience with AutoML flows. The score was 79.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Full-cycle ML product development from problem definition and gathering requirements to deployment in production systems.\", \"line\": \"Met: the CV mentions full-cycle ML development including deployment in production systems.\"}, {\"req_id\": \"r2\", \"decision\": \"UNCERTAIN\", \"quote\": \"As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet\", \"line\": \"Uncertain: the candidate's experience with modern deep learning techniques and Gradient Boosting Trees is unclear due to low confidence.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc.\", \"line\": \"Met: the CV shows strong Python coding skills and involvement in model evaluation and improvement.\"}, {\"req_id\": \"r4\", \"decision\": \"UNCERTAIN\", \"quote\": \"As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet\", \"line\": \"Uncertain: the candidate's proficiency with ML libraries like TensorFlow, PyTorch, and Scikit-learn is not clearly demonstrated.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet\", \"line\": \"Met: the candidate has experience with time series forecasting, which satisfies the requirement.\"}, {\"req_id\": \"r6\", \"decision\": \"MET\", \"quote\": \"As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems).\", \"line\": \"Met: the candidate has experience with microservices, cloud technologies, Docker, and Kubernetes.\"}, {\"req_id\": \"r7\", \"decision\": \"MET\", \"quote\": \"As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems).\", \"line\": \"Met: the candidate has experience with data pipelines and big data technologies.\"}, {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: the candidate has no mention of experience with AutoML flows or frameworks.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the ML Engineer position. We regret to inform you that your application has been rejected. The key missing requirement is experience with AutoML flows or frameworks, which is essential for the role"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 4 of 6 must-have requirements are met; the score is 79. Unclear must-haves: Proven experience with modern deep learning techniques and Gradient Boosting Trees; Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn).",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Full-cycle ML product development from problem definition and gathering requirements to deployment in production systems.",
+    "line": "Met: ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models) (must; CV: Full-cycle ML product development from problem definition and gathering requirements to deployment in production systems.)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Proven experience with modern deep learning techniques and Gradient Boosting Trees (must; unclear in the CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc.",
+    "line": "Met: Excellent Python coding skills (must; CV: As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc.)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) (must; unclear in the CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet",
+    "line": "Met: Practical experience with tabular data and time series (must; CV: As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MET",
+    "quote": "As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems).",
+    "line": "Met: Experience with microservices architecture, cloud technologies, Docker and Kubernetes (must; CV: As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems).)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "MET",
+    "quote": "As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems).",
+    "line": "Met: Experience with data pipelines or big data (nice; CV: As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems).)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience designing and implementing AutoML flows or frameworks (nice; not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After a review by our team, we will not move forward with it, because your CV does not clearly show these required points: Proven experience with modern deep learning techniques and Gradient Boosting Trees; Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn).\n\nIf you have questions about this decision, simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r2, r4"
+  ]
+ },
+ "source": "template",
+ "latency_s": 31.19,
+ "peak_vram_mib": 3267,
+ "id": "P48_human_reject",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

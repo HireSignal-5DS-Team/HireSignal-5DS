@@ -1,0 +1,46 @@
+[
+ {
+  "pair": "P06",
+  "outcome_before": "reject",
+  "outcome_after": "reject",
+  "gold_outcome": "reject",
+  "score_before": 33,
+  "score_after": 33,
+  "req_agree_gold_before": "4/8",
+  "req_agree_gold_after": "4/8",
+  "changed": {}
+ },
+ {
+  "pair": "P43",
+  "outcome_before": "reject",
+  "outcome_after": "reject",
+  "gold_outcome": "review",
+  "score_before": 60,
+  "score_after": 60,
+  "req_agree_gold_before": "6/8",
+  "req_agree_gold_after": "6/8",
+  "changed": {}
+ },
+ {
+  "pair": "P45",
+  "outcome_before": "reject",
+  "outcome_after": "reject",
+  "gold_outcome": "review",
+  "score_before": 77,
+  "score_after": 77,
+  "req_agree_gold_before": "4/6",
+  "req_agree_gold_after": "4/6",
+  "changed": {}
+ },
+ {
+  "pair": "P49",
+  "outcome_before": "review",
+  "outcome_after": "review",
+  "gold_outcome": "review",
+  "score_before": 71,
+  "score_after": 71,
+  "req_agree_gold_before": "7/8",
+  "req_agree_gold_after": "7/8",
+  "changed": {}
+ }
+]

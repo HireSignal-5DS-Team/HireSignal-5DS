@@ -1,0 +1,84 @@
+{
+ "model": "qwen3-0.6b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 2,
+ "first_errors": [
+  "r2: quote is not in its verified CV quotes",
+  "reject letter does not name missing must-have r4"
+ ],
+ "retry_errors": [
+  "r2: decision MISSING but the record says MET",
+  "r2: quote is not in its verified CV quotes",
+  "reject letter does not name missing must-have r4"
+ ],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate is rejected because one must-have requirement is missing. The CV shows 4 years of experience in Data Science, which meets the 4-year minimum. Strong working knowledge of SQL is not clearly shown, and hands-on experience with PySpark is not present. The score is 80.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MET\",\n      \"quote\": \"Together with team achieved TOP 14% in AMEX Kaggle competition.\",\n      \"line\": \"Met: the candidate has 4 years of experience in Data Science.\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MET\",\n      \"quote\": \"Data scientist:\",\n      \"line\": \"Met: the candidate has a background in probability theory and statistics.\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MET\",\n      \"quote\": \"- Making research on behavioral biases' impact on traders' performance\",\n      \"line\": \"Met: the candidate has experience with Bayesian methods and time series analysis.\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Uncertain: hands-on experience with probabilistic programming is missing.\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MET\",\n      \"quote\": \"Leading Junior Data Scientist.\",\n      \"line\": \"Met: the candidate has experience with cloud (Amazon SageMaker).\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"MET\",\n      \"quote\": \"Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)\",\n      \"line\": \"Met: the candidate has experience with PySpark.\"\n    },\n    {\n      \"req_id\": \"r7\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"Rewriting MSSQL queries to PySpark\",\n      \"line\": \"Uncertain: strong working knowledge of SQL is not clearly shown.\"\n    },\n    {\n      \"req_id\": \"r8\",\n      \"decision\": \"MET\",\n      \"quote\": \"PhD in Mathematics (currently) (Stochastic differential equations area)\",\n      \"line\": \"Met: the candidate has a Ph.D. in Mathematics.\"\n    }\n  ],\n  \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Scientist position. We will not move forward with your application, because your CV does not show this required point: hands-on experience with PySpark. This decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\",\n  \"flags_for_recruiter\": [\"The Matcher was unsure about SQL (r7); please check it.\"]\n}",
+  "{\n  \"recruiter_summary\": \"The candidate is rejected because one must-have requirement is missing. The CV shows 4 years of experience in Data Science, which meets the 4-year minimum. Strong working knowledge of SQL is not clearly shown, and hands-on experience with PySpark is present. The score is 80.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MET\",\n      \"quote\": \"Together with team achieved TOP 14% in AMEX Kaggle competition.\",\n      \"line\": \"Met: the candidate has 4 years of experience in Data Science.\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"Good knowledge of probability theory and statistics\",\n      \"line\": \"Missing: the candidate has a background in probability theory and statistics.\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MET\",\n      \"quote\": \"- Making research on behavioral biases' impact on traders' performance\",\n      \"line\": \"Met: the candidate has experience with Bayesian methods and time series analysis.\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Uncertain: hands-on experience with probabilistic programming is missing.\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MET\",\n      \"quote\": \"Leading Junior Data Scientist.\",\n      \"line\": \"Met: the candidate has experience with cloud (Amazon SageMaker).\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"MET\",\n      \"quote\": \"Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)\",\n      \"line\": \"Met: the candidate has experience with PySpark.\"\n    },\n    {\n      \"req_id\": \"r7\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"Rewriting MSSQL queries to PySpark\",\n      \"line\": \"Uncertain: strong working knowledge of SQL is not clearly shown.\"\n    },\n    {\n      \"req_id\": \"r8\",\n      \"decision\": \"MET\",\n      \"quote\": \"PhD in Mathematics (currently) (Stochastic differential equations area)\",\n      \"line\": \"Met: the candidate has a Ph.D. in Mathematics.\"\n    }\n  ],\n  \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Scientist position. We will not move forward with your application, because your CV does not show this required point: hands-on experience with PySpark. This decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\",\n  \"flags_for_recruiter\": [\"The Matcher was unsure about SQL (r7); please check it.\"]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 5 of 7 must-have requirements are met; the score is 80. Missing must-haves: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar). Unclear must-haves: Strong working knowledge of SQL.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Together with team achieved TOP 14% in AMEX Kaggle competition.",
+    "line": "must: Data Science: 4 years of experience or more - met (CV: Together with team achieved TOP 14% in AMEX Kaggle competition.)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "College lecturer (1 term): Probability theory and statistics",
+    "line": "must: Good knowledge of probability theory and statistics - met (CV: College lecturer (1 term): Probability theory and statistics)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "- Making research on behavioral biases' impact on traders' performance",
+    "line": "must: Understanding of Bayesian methods, time series analysis or sensor signal processing - met (CV: - Making research on behavioral biases' impact on traders' performance)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "Leading Junior Data Scientist.",
+    "line": "must: Experience with cloud (Amazon SageMaker) - met (CV: Leading Junior Data Scientist.)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MET",
+    "quote": "Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)",
+    "line": "must: Experience with PySpark - met (CV: Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc))"
+   },
+   {
+    "req_id": "r7",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Strong working knowledge of SQL - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MET",
+    "quote": "PhD in Mathematics (currently) (Stochastic differential equations area)",
+    "line": "nice: Ph.D. in Mathematics - met (CV: PhD in Mathematics (currently) (Stochastic differential equations area))"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar).\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r7"
+  ]
+ },
+ "source": "template",
+ "latency_s": 15.29,
+ "peak_vram_mib": 4910,
+ "id": "P42",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

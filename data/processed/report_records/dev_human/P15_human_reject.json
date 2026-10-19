@@ -1,0 +1,131 @@
+{
+ "job_title": "Data Engineer",
+ "decided_by": "human",
+ "outcome": "reject",
+ "score": 50,
+ "gate_rule": "2 review: outcome-relevant flag on a must-have",
+ "gate_reasons": [
+  "r1: must MISSING doubted (judge:disagrees): possible false reject",
+  "r4: must MISSING doubted (judge:disagrees): possible false reject",
+  "r5: must UNCERTAIN (low confidence)",
+  "decided by a recruiter after review: reject"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Data Warehousing",
+    "Data Lakes"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Hands-on experience with SQL",
+   "decision": "MET",
+   "quotes": [
+    "Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates."
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "SQL"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Knowledge of Python",
+   "decision": "MET",
+   "quotes": [
+    "Python: Experience in using Python for file and database manipulation tasks."
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Python"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "must",
+   "text": "Experience with GCP or another cloud provider",
+   "decision": "MISSING",
+   "quotes": [
+    "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "GCP"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "must",
+   "text": "Good spoken English",
+   "decision": "UNCERTAIN",
+   "quotes": [
+    "English level: upper"
+   ],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": true,
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "skill_terms": [
+    "English"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "nice",
+   "text": "Willingness to research business logic",
+   "decision": "UNCERTAIN",
+   "quotes": [],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P15_human_reject",
+ "pair_id": "P15",
+ "split": "dev",
+ "synthetic_flags": false
+}

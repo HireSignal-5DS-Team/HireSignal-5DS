@@ -1,0 +1,59 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v1.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because two must-have requirements are missing: 5 years of software development experience and experience with asynchronous programming for performance-critical applications. The CV mentions Python use in finance tools but does not show 5 years of development experience or any experience with asynchronous programming. The score is 11.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "Senior Finance Analyst at Amazon. Working in Pricing Finance team and collaborate with Product Managers, Software Development Engineer and Senior Leadership team. Working on tools - Excel, SQL, Tableau, Python.",
+    "line": "Missing: The CV does not show 5 years of software development experience."
+   },
+   {
+    "req_id": "r2",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: The CV does not mention Python development for big systems, and the Matcher was unsure."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of experience with asynchronous programming or performance-critical applications."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No mention of AWS, Docker, or microservices."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No experience with machine learning is indicated."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No mention of algorithms development like collaborative filtering or clustering."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application because your CV does not show two required qualifications: at least 5 years of software development experience and experience with asynchronous programming for performance-critical applications.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about r2: development of big systems with Python."
+  ]
+ },
+ "source": "llm",
+ "latency_s": 8.99,
+ "peak_vram_mib": 3267,
+ "id": "P33",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

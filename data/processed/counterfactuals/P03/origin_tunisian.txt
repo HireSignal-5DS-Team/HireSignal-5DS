@@ -1,0 +1,9 @@
+Nationality: Tunisian
+Location: Tunis, Tunisia
+Position: Data Scientist / ML Engineer
+Experience years: 5
+English level: upper
+
+I have worked for one of the best Georgian bank's chatbot project especially in speech-to-text and text-to-speech parts. As we don't have good NLP models, I trained language models from scratch. That chatbot engine works successfully.
+I'm experienced Data Scientist with more than 5 years of experience in software engineering and Machine Learning. I'm proficient in Python and Java and have worked extensively with other programming languages, such as JavaScript and SQL. I know PyTorch and TensorFlow on expert level.
+I expect to work with interesting and challenging Engineering team,where I can develop my skills even more. . Turning into a better professional is my ultimate goal.

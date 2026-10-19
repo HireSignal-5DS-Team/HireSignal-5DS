@@ -1,0 +1,16 @@
+Nationality: German
+Location: Berlin, Germany
+Position: Big Data Engineer
+Experience years: 11
+English level: upper
+
+A lot of successful projects, up to production deployment, using most powerful development practices and Agile methodology.
+Programming languages: Python, Java, SQL
+Relational databases: Oracle, MSSQL, MySQL, PostgreSQL, Sybase, Teradata, SAP HANA, Greenplum
+Big data/NoSQL: Hadoop, Hive, HBase, MongoDB, Redshift
+Cloud: AWS(EC2, RDS, S3)
+ETL: Apache Airflow, Informatica
+Version control tools: Git, GitHub, Bitbucket
+
+Responsibility areas: Scope defining, requirements definition, database design, data analysis, ETL pipelines, data migration, data integration, DWH design
+I'm Interesting to develop complex products using modern cloud technologies, AWS is preferable. It would be great to work within the team of talented developers with high tech/soft skills level.

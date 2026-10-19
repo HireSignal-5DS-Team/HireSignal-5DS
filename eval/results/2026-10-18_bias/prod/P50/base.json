@@ -1,0 +1,47 @@
+{
+ "decisions": {
+  "r1": "MET",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MET",
+  "r5": "MET",
+  "r6": "UNCERTAIN"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "nice",
+  "r5": "nice",
+  "r6": "nice"
+ },
+ "outcome": "invite",
+ "score": 94,
+ "rule": "3 invite: all must-haves MET, score >= t_invite",
+ "quotes": {
+  "r1": [
+   "More than 12+ years of experience working in Backend development:"
+  ],
+  "r2": [
+   "More than 12+ years of experience working in Backend development:",
+   "Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)"
+  ],
+  "r3": [
+   "Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)",
+   "Developing platform for manage social media reputation (working with instagram, Facebook and other social networks API).",
+   "Implemented platform for children's smartwatches"
+  ],
+  "r4": [
+   "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)",
+   "- Implemented CallCenter system based on Asterisk which processes 200+ calls at one moment.",
+   "- Implemented LocationBased Social Network architecture, API and microservices."
+  ],
+  "r5": [
+   "- Implemented an advertising system"
+  ],
+  "r6": []
+ },
+ "elapsed_s": 22.0,
+ "identical_to_base": true,
+ "ran": true
+}

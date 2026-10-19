@@ -1,0 +1,66 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "reject letter without the right to a human review"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate has been rejected for the Data Engineer role due to a missing requirement: knowledge of Python (req_id: r3). Despite strong evidence of hands-on SQL experience, Azure and GCP project experience, and fluent English, the candidate lacks demonstrable knowledge of Python, which is a mandatory requirement. The matcher identified low confidence in two other areas—general data warehousing/lakes knowledge (r1) and willingness to research business logic (r6)—but these were not the primary reason for rejection. The key gate reason is the absence of required Python skills, which directly violates a must-have criterion.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"Successfully managed a team of up to 10 Data Engineers, at the same time\",\n      \"line\": \"Currently transitioning from Team Lead role to the Delivery Manager.\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MET\",\n      \"quote\": \"Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\",\n      \"line\": \"Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Knowledge of Python is missing from the candidate's profile.\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MET\",\n      \"quote\": \"Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres).\",\n      \"line\": \"Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres).\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MET\",\n      \"quote\": \"English level: fluent\",\n      \"line\": \"English level: fluent\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"Interpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile.\",\n      \"line\": \"Interpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile.\"\n    }\n  ],\n  \"candidate_letter\": \"Dear Recruiter,\\n\\nWe have reviewed the candidate’s profile for the Data Engineer role and recommend rejection. While the candidate demonstrates strong experience in SQL, cloud platforms (Azure and GCP), and team leadership, they do not meet the mandatory requirement of having knowledge of Python. This is a critical gap for the role, as Python is a core skill expected in modern data engineering workflows.\\n\\nAdditionally, the candidate’s experience with data warehousing and lakes principles is uncertain, and their willingness to research business logic is noted as uncertain. However, the absence of Python knowledge is the primary reason for rejection, as it directly violates a must-have requirement.\\n\\nWe recommend further evaluation of candidates with proven Python experience to ensure alignment with the technical expectations of the role.\\n\\nBest regards,\\nAutomated Screening System\",\n  \"flags_for_recruiter\": [\n    \"The candidate lacks knowledge of Python, a must-have requirement (r3).\",\n    \"Low confidence in the assessment of data warehousing/lakes knowledge (r1) and willingness to research business logic (r6).\",\n    \"The rejection is primarily due to missing mandatory skill (Python), not overall fit or experience gaps.\"\n  ]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 3 of 5 must-have requirements are met; the score is 68. Missing must-haves: Knowledge of Python. Unclear must-haves: Knowledge of the general principles of Data Warehousing and Data Lakes.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Knowledge of the general principles of Data Warehousing and Data Lakes - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).",
+    "line": "must: Hands-on experience with SQL - met (CV: Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Knowledge of Python - missing (not found in CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres).",
+    "line": "must: Experience with GCP or another cloud provider - met (CV: Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres).)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: fluent",
+    "line": "must: Good spoken English - met (CV: English level: fluent)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "nice: Willingness to research business logic - uncertain (unclear in the CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Knowledge of Python.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r1, r6"
+  ]
+ },
+ "source": "template",
+ "latency_s": 14.96,
+ "peak_vram_mib": 3267,
+ "id": "P13",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

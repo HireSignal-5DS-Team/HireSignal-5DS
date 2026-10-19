@@ -1,0 +1,32 @@
+[
+ {
+  "pair": "P01",
+  "decisions_equal": true,
+  "quotes_equal": true,
+  "outcome_equal": true
+ },
+ {
+  "pair": "P02",
+  "decisions_equal": true,
+  "quotes_equal": true,
+  "outcome_equal": true
+ },
+ {
+  "pair": "P03",
+  "decisions_equal": true,
+  "quotes_equal": true,
+  "outcome_equal": true
+ },
+ {
+  "pair": "P04",
+  "decisions_equal": true,
+  "quotes_equal": true,
+  "outcome_equal": true
+ },
+ {
+  "pair": "P05",
+  "decisions_equal": true,
+  "quotes_equal": true,
+  "outcome_equal": true
+ }
+]

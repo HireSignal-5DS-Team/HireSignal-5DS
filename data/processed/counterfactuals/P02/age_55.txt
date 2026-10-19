@@ -1,0 +1,23 @@
+Date of birth: 14/03/1971
+Position: Senior Computer Vision Engineer
+Experience years: 5
+English level: fluent
+
+- IEEE Conference Poster in the Human-Computer Interaction field
+- Attended domain-related conferences in the US, UK, Japan
+- Apps in App Store and Google Play
+- Master Degree in Data Science
+Highly performing Research Engineer with Computer Vision/Deep Learning specialization. I’m focused on applying Computer Vision algorithms (classical and deep-learning based) for enterprise-level solutions.
+
+Position: Lead C++ Engineer, Computer Vision
+Description: Low-level Computer Vision algorithms application for manufacturing, algorithms vectorization and parallelization; Computer Vision library architecture; code review, mentoring
+Technologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins
+
+Position: Research Engineer, HCI
+Description: Various projects focused on new ways of Human-Computer Interaction: navigation in AR, touchless interfaces, combining different forms of interaction
+Technologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore
+
+Position: Unity Developer, Computer Vision
+Description: App in App Store and Google Play: SLAM system for Augmented Reality at mobile
+Technologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia
+Developing new algorithms/approaches in Computer Vision-related topics

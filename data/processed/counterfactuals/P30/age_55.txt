@@ -1,0 +1,16 @@
+Date of birth: 14/03/1971
+Position: Python Developer
+Experience years: 6
+English level: upper
+
+CERTIFICATE:
+AWS Certified Developer - Associate
+Last two years I worked for an ad-tech company. I developed a tool which measures and analyses data privacy for digital advertisers. I started from the MVP of the project and helped it grow to finished product.
+- Developed data scraping tool using Selenium and MITM Proxy.
+- Created serverless RESTful API using AWS Lambda, API Gateway, and RDS.
+- Built cloud infrastructure on AWS with ECS, S3 and CloudFormation.
+- Collaborated with cross-functional teams to deliver new features on time.
+- Mentored junior developers
+
+Also I have experience developing web and mobile backends using
+Django, DRF, Celery, PostgreSQL, MongoDB and Redis. Worked with product owners, designers and managers, to ensure that applications met user needs. Worked independenly and as a part of team.

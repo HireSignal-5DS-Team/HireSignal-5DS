@@ -1,0 +1,427 @@
+{
+ "label": "real-GPU (Ollama vision models, RTX 4050 6 GB) + real-CPU (Tesseract 5.5.3)",
+ "normalisation": "NFKC, lower case, * # ` and [unclear] removed, whitespace collapsed",
+ "split": "dev = photos of Kaggle source PDFs; test = photos + scans of L source PDFs (PHOTO_MAPPING.csv)",
+ "vision_selected": "qwen2.5vl_3b__v1",
+ "early_selected": "qwen2.5vl_3b__v1",
+ "late_sweep_dev": [
+  {
+   "merge": "ocr_backbone",
+   "min_conf": 0,
+   "cer": 0.2415,
+   "wer": 0.4094,
+   "halluc": 0.2415,
+   "low_trust_lines": 31
+  },
+  {
+   "merge": "ocr_backbone",
+   "min_conf": 20,
+   "cer": 0.2227,
+   "wer": 0.3773,
+   "halluc": 0.2115,
+   "low_trust_lines": 31
+  },
+  {
+   "merge": "ocr_backbone",
+   "min_conf": 40,
+   "cer": 0.1487,
+   "wer": 0.274,
+   "halluc": 0.1354,
+   "low_trust_lines": 31
+  },
+  {
+   "merge": "ocr_backbone",
+   "min_conf": 50,
+   "cer": 0.1359,
+   "wer": 0.2442,
+   "halluc": 0.1064,
+   "low_trust_lines": 31
+  },
+  {
+   "merge": "ocr_backbone",
+   "min_conf": 60,
+   "cer": 0.1279,
+   "wer": 0.2212,
+   "halluc": 0.0831,
+   "low_trust_lines": 31
+  },
+  {
+   "merge": "ocr_backbone",
+   "min_conf": 70,
+   "cer": 0.1188,
+   "wer": 0.1998,
+   "halluc": 0.0605,
+   "low_trust_lines": 31
+  },
+  {
+   "merge": "ocr_backbone",
+   "min_conf": 80,
+   "cer": 0.1134,
+   "wer": 0.1858,
+   "halluc": 0.044,
+   "low_trust_lines": 31
+  },
+  {
+   "merge": "ocr_backbone",
+   "min_conf": 90,
+   "cer": 0.099,
+   "wer": 0.1619,
+   "halluc": 0.0227,
+   "low_trust_lines": 31
+  },
+  {
+   "merge": "ocr_backbone",
+   "min_conf": 101,
+   "cer": 0.0962,
+   "wer": 0.164,
+   "halluc": 0.0196,
+   "low_trust_lines": 31
+  },
+  {
+   "merge": "vision_backbone",
+   "min_conf": 0,
+   "cer": 0.1879,
+   "wer": 0.3673,
+   "halluc": 0.2265,
+   "low_trust_lines": 1
+  },
+  {
+   "merge": "vision_backbone",
+   "min_conf": 20,
+   "cer": 0.1689,
+   "wer": 0.3348,
+   "halluc": 0.1998,
+   "low_trust_lines": 1
+  },
+  {
+   "merge": "vision_backbone",
+   "min_conf": 40,
+   "cer": 0.1048,
+   "wer": 0.2425,
+   "halluc": 0.1344,
+   "low_trust_lines": 1
+  },
+  {
+   "merge": "vision_backbone",
+   "min_conf": 50,
+   "cer": 0.0923,
+   "wer": 0.2101,
+   "halluc": 0.1069,
+   "low_trust_lines": 1
+  },
+  {
+   "merge": "vision_backbone",
+   "min_conf": 60,
+   "cer": 0.0807,
+   "wer": 0.1861,
+   "halluc": 0.0833,
+   "low_trust_lines": 1
+  },
+  {
+   "merge": "vision_backbone",
+   "min_conf": 70,
+   "cer": 0.0718,
+   "wer": 0.165,
+   "halluc": 0.0621,
+   "low_trust_lines": 1
+  },
+  {
+   "merge": "vision_backbone",
+   "min_conf": 80,
+   "cer": 0.0639,
+   "wer": 0.1489,
+   "halluc": 0.0435,
+   "low_trust_lines": 1
+  },
+  {
+   "merge": "vision_backbone",
+   "min_conf": 90,
+   "cer": 0.0328,
+   "wer": 0.1111,
+   "halluc": 0.0234,
+   "low_trust_lines": 1
+  },
+  {
+   "merge": "vision_backbone",
+   "min_conf": 101,
+   "cer": 0.0277,
+   "wer": 0.1135,
+   "halluc": 0.0203,
+   "low_trust_lines": 1
+  }
+ ],
+ "late_min_conf": 101,
+ "late_merge": "vision_backbone",
+ "dev": {
+  "1 OCR only": {
+   "n": 10,
+   "cer": 0.2381,
+   "wer": 0.3953,
+   "halluc": 0.2402,
+   "unclear": 0.0,
+   "latency_s_per_page": 4.822,
+   "peak_vram_mib": 0,
+   "skill_terms_found": null
+  },
+  "vision gemma3_4b__v0": {
+   "n": 10,
+   "cer": 0.5978,
+   "wer": 0.8221,
+   "halluc": 0.366,
+   "unclear": 0.0,
+   "latency_s_per_page": 19.795,
+   "peak_vram_mib": 4271,
+   "skill_terms_found": null
+  },
+  "vision gemma3_4b__v1": {
+   "n": 10,
+   "cer": 0.2659,
+   "wer": 0.4222,
+   "halluc": 0.1507,
+   "unclear": 0.0003,
+   "latency_s_per_page": 16.626,
+   "peak_vram_mib": 3889,
+   "skill_terms_found": null
+  },
+  "vision granite3.2-vision_2b__v0": {
+   "n": 10,
+   "cer": 0.9946,
+   "wer": 1.0,
+   "halluc": 1.0,
+   "unclear": 0.0,
+   "latency_s_per_page": 5.76,
+   "peak_vram_mib": 3249,
+   "skill_terms_found": null
+  },
+  "vision granite3.2-vision_2b__v1": {
+   "n": 10,
+   "cer": 0.8366,
+   "wer": 0.9476,
+   "halluc": 0.7912,
+   "unclear": 0.0,
+   "latency_s_per_page": 7.212,
+   "peak_vram_mib": 3249,
+   "skill_terms_found": null
+  },
+  "vision qwen2.5vl_3b__v0": {
+   "n": 10,
+   "cer": 0.5011,
+   "wer": 0.7353,
+   "halluc": 0.2306,
+   "unclear": 0.0,
+   "latency_s_per_page": 23.209,
+   "peak_vram_mib": 4537,
+   "skill_terms_found": null
+  },
+  "vision qwen2.5vl_3b__v1": {
+   "n": 10,
+   "cer": 0.0256,
+   "wer": 0.1118,
+   "halluc": 0.0203,
+   "unclear": 0.0009,
+   "latency_s_per_page": 19.081,
+   "peak_vram_mib": 4539,
+   "skill_terms_found": null
+  },
+  "early qwen2.5vl_3b__v0": {
+   "n": 10,
+   "cer": 0.2851,
+   "wer": 0.4484,
+   "halluc": 0.1238,
+   "unclear": 0.0,
+   "latency_s_per_page": 20.379,
+   "peak_vram_mib": 4537,
+   "skill_terms_found": null
+  },
+  "early qwen2.5vl_3b__v1": {
+   "n": 10,
+   "cer": 0.1914,
+   "wer": 0.3185,
+   "halluc": 0.1104,
+   "unclear": 0.0,
+   "latency_s_per_page": 20.241,
+   "peak_vram_mib": 4539,
+   "skill_terms_found": null
+  },
+  "3 late fusion (qwen2.5vl_3b__v1, vision_backbone, min_conf 101)": {
+   "n": 10,
+   "cer": 0.0277,
+   "wer": 0.1135,
+   "halluc": 0.0203,
+   "unclear": 0.0009,
+   "latency_s_per_page": 23.903,
+   "peak_vram_mib": 4539,
+   "skill_terms_found": null
+  }
+ },
+ "test": {
+  "1 OCR only": {
+   "n": 11,
+   "cer": 0.3809,
+   "wer": 0.7655,
+   "halluc": 0.2913,
+   "unclear": 0.0,
+   "latency_s_per_page": 19.3518,
+   "peak_vram_mib": 0,
+   "skill_terms_found": "43/46"
+  },
+  "vision qwen2.5vl_3b__v1": {
+   "n": 11,
+   "cer": 0.0229,
+   "wer": 0.0491,
+   "halluc": 0.0359,
+   "unclear": 0.0,
+   "latency_s_per_page": 11.4373,
+   "peak_vram_mib": 4513,
+   "skill_terms_found": "46/46"
+  },
+  "early qwen2.5vl_3b__v1": {
+   "n": 11,
+   "cer": 0.0135,
+   "wer": 0.0496,
+   "halluc": 0.0253,
+   "unclear": 0.0,
+   "latency_s_per_page": 33.1664,
+   "peak_vram_mib": 4513,
+   "skill_terms_found": "46/46"
+  },
+  "3 late fusion (qwen2.5vl_3b__v1, vision_backbone, min_conf 101)": {
+   "n": 11,
+   "cer": 0.0361,
+   "wer": 0.063,
+   "halluc": 0.0365,
+   "unclear": 0.0,
+   "latency_s_per_page": 30.7882,
+   "peak_vram_mib": 4513,
+   "skill_terms_found": "46/46"
+  }
+ },
+ "by_condition_test": {
+  "close photo": {
+   "1 OCR only": {
+    "n": 3,
+    "cer": 0.0139,
+    "wer": 0.0448,
+    "halluc": 0.0213,
+    "unclear": 0.0,
+    "latency_s_per_page": 1.64,
+    "peak_vram_mib": 0,
+    "skill_terms_found": "16/16"
+   },
+   "vision qwen2.5vl_3b__v1": {
+    "n": 3,
+    "cer": 0.0014,
+    "wer": 0.005,
+    "halluc": 0.0,
+    "unclear": 0.0,
+    "latency_s_per_page": 12.4667,
+    "peak_vram_mib": 4513,
+    "skill_terms_found": "16/16"
+   },
+   "early qwen2.5vl_3b__v1": {
+    "n": 3,
+    "cer": 0.0038,
+    "wer": 0.0125,
+    "halluc": 0.0,
+    "unclear": 0.0,
+    "latency_s_per_page": 14.0167,
+    "peak_vram_mib": 4513,
+    "skill_terms_found": "16/16"
+   },
+   "3 late fusion (qwen2.5vl_3b__v1, vision_backbone, min_conf 101)": {
+    "n": 3,
+    "cer": 0.0014,
+    "wer": 0.005,
+    "halluc": 0.0,
+    "unclear": 0.0,
+    "latency_s_per_page": 14.1067,
+    "peak_vram_mib": 4513,
+    "skill_terms_found": "16/16"
+   }
+  },
+  "hard photo": {
+   "1 OCR only": {
+    "n": 3,
+    "cer": 0.5442,
+    "wer": 0.8709,
+    "halluc": 0.3968,
+    "unclear": 0.0,
+    "latency_s_per_page": 19.02,
+    "peak_vram_mib": 0,
+    "skill_terms_found": "6/7"
+   },
+   "vision qwen2.5vl_3b__v1": {
+    "n": 3,
+    "cer": 0.0772,
+    "wer": 0.1384,
+    "halluc": 0.1086,
+    "unclear": 0.0,
+    "latency_s_per_page": 9.42,
+    "peak_vram_mib": 4253,
+    "skill_terms_found": "7/7"
+   },
+   "early qwen2.5vl_3b__v1": {
+    "n": 3,
+    "cer": 0.0151,
+    "wer": 0.069,
+    "halluc": 0.0494,
+    "unclear": 0.0,
+    "latency_s_per_page": 28.7433,
+    "peak_vram_mib": 4251,
+    "skill_terms_found": "7/7"
+   },
+   "3 late fusion (qwen2.5vl_3b__v1, vision_backbone, min_conf 101)": {
+    "n": 3,
+    "cer": 0.1216,
+    "wer": 0.1836,
+    "halluc": 0.1107,
+    "unclear": 0.0,
+    "latency_s_per_page": 28.44,
+    "peak_vram_mib": 4253,
+    "skill_terms_found": "7/7"
+   }
+  },
+  "scan": {
+   "1 OCR only": {
+    "n": 5,
+    "cer": 0.5031,
+    "wer": 1.1346,
+    "halluc": 0.39,
+    "unclear": 0.0,
+    "latency_s_per_page": 30.178,
+    "peak_vram_mib": 0,
+    "skill_terms_found": "21/23"
+   },
+   "vision qwen2.5vl_3b__v1": {
+    "n": 5,
+    "cer": 0.0033,
+    "wer": 0.0219,
+    "halluc": 0.0139,
+    "unclear": 0.0,
+    "latency_s_per_page": 12.03,
+    "peak_vram_mib": 4295,
+    "skill_terms_found": "23/23"
+   },
+   "early qwen2.5vl_3b__v1": {
+    "n": 5,
+    "cer": 0.0183,
+    "wer": 0.0603,
+    "halluc": 0.0259,
+    "unclear": 0.0,
+    "latency_s_per_page": 47.31,
+    "peak_vram_mib": 4295,
+    "skill_terms_found": "23/23"
+   },
+   "3 late fusion (qwen2.5vl_3b__v1, vision_backbone, min_conf 101)": {
+    "n": 5,
+    "cer": 0.0057,
+    "wer": 0.0254,
+    "halluc": 0.0139,
+    "unclear": 0.0,
+    "latency_s_per_page": 42.206,
+    "peak_vram_mib": 4295,
+    "skill_terms_found": "23/23"
+   }
+  }
+ }
+}

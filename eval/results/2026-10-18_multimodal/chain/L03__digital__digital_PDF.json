@@ -1,0 +1,31 @@
+{
+ "cv": "L03",
+ "pair": "P47",
+ "job": "J3",
+ "condition": "digital",
+ "setup": "digital PDF",
+ "items": [
+  "L03.pdf"
+ ],
+ "reader_reasons": [],
+ "outcome": "review",
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "score": 93,
+ "reasons": [
+  "r1: must MET doubted (evidence_not_in_cv, duration_not_in_evidence, judge:disagrees): possible false invite",
+  "r6: must MET doubted (judge:disagrees): possible false invite"
+ ],
+ "pair_review_reasons": [
+  "profile:partial_extraction_requires_review"
+ ],
+ "decisions": {
+  "r1": "MET",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MET",
+  "r5": "MET",
+  "r6": "MET",
+  "r7": "MET",
+  "r8": "MISSING"
+ }
+}

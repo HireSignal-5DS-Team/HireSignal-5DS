@@ -1,0 +1,12 @@
+Native language: English
+Position: Trainee / Intern / Junior Data Engineer
+Experience years: 0.5
+English level: upper
+
+Trainee Data Engineer
+
+• Finished the theoretical part of a Big Data education plan in a big outsourcing company with practical tasks for each module. 
+• This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.).
+• During this course qualified mentors teach you how and when to use these tools.
+• To further consolidate our knowledge we implemented these techniques in practical exercises.
+I want to develop my skills, gain more hands-on experience and learn something new from seasoned developers to become a high-class specialist.

@@ -1,0 +1,4459 @@
+{
+ "files_scanned": 3281,
+ "env_values_checked": [
+  "WEBHOOK_TOKEN"
+ ],
+ "identity_values_checked": 221,
+ "hits": {
+  "env value": 0,
+  "key pattern": 0,
+  "identity value": 1108
+ },
+ "identity_values_found": 64,
+ "identity_explained": {
+  "public dataset text": 37,
+  "synthetic test identity": 13,
+  "app text / older false detection": 5,
+  "reviewed (hash list)": 9
+ },
+ "identity_unexplained": 0,
+ "verdict": "PASS",
+ "where": {
+  "env value": [],
+  "key pattern": [],
+  "identity value": [
+   {
+    "file": "INSTALL.md",
+    "values": 2
+   },
+   {
+    "file": "claude/HireSignal_Handoff.md",
+    "values": 1
+   },
+   {
+    "file": "claude/HireSignal_Living_Spec.md",
+    "values": 2
+   },
+   {
+    "file": "data/DATA_CARD.md",
+    "values": 1
+   },
+   {
+    "file": "data/labels/ai_pass/ai_labels_extra_raw.py",
+    "values": 1
+   },
+   {
+    "file": "data/labels/ai_pass/ai_labels_raw.py",
+    "values": 4
+   },
+   {
+    "file": "data/labels/gold/pairs_gold.csv",
+    "values": 1
+   },
+   {
+    "file": "data/labels/gold/requirements_gold.csv",
+    "values": 4
+   },
+   {
+    "file": "data/processed/NOTICE_DJINNI.md",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P01/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/age_25.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/age_55.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/base.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/family_married_2_children.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/name_female_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/name_female_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/name_female_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/name_male_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/name_male_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/name_male_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/native_arabic.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/native_english.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/native_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/origin_german.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/origin_nigerian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/origin_tunisian.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P02/origin_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P03/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P04/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P05/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/age_25.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/age_55.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/base.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/family_married_2_children.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/name_female_african.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/name_female_arab.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/name_female_western.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/name_male_african.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/name_male_arab.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/name_male_western.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/native_arabic.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/native_english.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/native_ukrainian.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/origin_german.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/origin_nigerian.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/origin_tunisian.txt",
+    "values": 6
+   },
+   {
+    "file": "data/processed/counterfactuals/P06/origin_ukrainian.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/counterfactuals/P07/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P08/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P09/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P10/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P11/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/age_25.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/age_55.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/base.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/family_married_2_children.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/name_female_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/name_female_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/name_female_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/name_male_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/name_male_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/name_male_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/native_arabic.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/native_english.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/native_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/origin_german.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/origin_nigerian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/origin_tunisian.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P12/origin_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P13/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P14/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/age_25.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/age_55.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/base.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/family_married_2_children.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/name_female_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/name_female_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/name_female_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/name_male_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/name_male_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/name_male_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/native_arabic.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/native_english.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/native_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/origin_german.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/origin_nigerian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/origin_tunisian.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P15/origin_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P16/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/age_25.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/age_55.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/base.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/family_married_2_children.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/name_female_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/name_female_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/name_female_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/name_male_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/name_male_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/name_male_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/native_arabic.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/native_english.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/native_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/origin_german.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/origin_nigerian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/origin_tunisian.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P17/origin_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P18/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P19/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P20/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/age_25.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/age_55.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/base.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/family_married_2_children.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/name_female_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/name_female_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/name_female_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/name_male_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/name_male_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/name_male_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/native_arabic.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/native_english.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/native_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/origin_german.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/origin_nigerian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/origin_tunisian.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P21/origin_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P22/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P23/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P24/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P25/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P26/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/age_25.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/age_55.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/base.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/family_married_2_children.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/name_female_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/name_female_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/name_female_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/name_male_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/name_male_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/name_male_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/native_arabic.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/native_english.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/native_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/origin_german.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/origin_nigerian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/origin_tunisian.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P27/origin_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P28/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P29/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P30/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P31/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P32/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P33/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P34/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P35/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P36/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P37/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P38/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P39/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P40/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P41/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P42/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/age_25.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/age_55.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/base.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/family_married_2_children.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/name_female_african.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/name_female_arab.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/name_female_western.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/name_male_african.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/name_male_arab.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/name_male_western.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/native_arabic.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/native_english.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/native_ukrainian.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/origin_german.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/origin_nigerian.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/origin_tunisian.txt",
+    "values": 4
+   },
+   {
+    "file": "data/processed/counterfactuals/P43/origin_ukrainian.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P44/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P45/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P46/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P47/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P48/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/age_25.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/age_55.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/base.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/family_married_2_children.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/name_female_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/name_female_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/name_female_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/name_male_african.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/name_male_arab.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/name_male_western.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/native_arabic.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/native_english.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/native_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/origin_german.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/origin_nigerian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/origin_tunisian.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/counterfactuals/P49/origin_ukrainian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P50/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/age_25.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/age_55.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/base.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/family_married_2_children.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/name_female_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/name_female_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/name_female_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/name_male_african.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/name_male_arab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/name_male_western.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/native_arabic.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/native_english.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/native_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/origin_german.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/origin_nigerian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/origin_tunisian.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/counterfactuals/P51/origin_ukrainian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/P52/origin_tunisian.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/counterfactuals/manifest.json",
+    "values": 2
+   },
+   {
+    "file": "data/processed/cvs/00218629-911f-5349-8806-e2826075b439.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/05102b97-f298-569a-98ca-209d56d61c37.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/05e042f6-0293-5c13-9ac6-f728b817a811.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/154ad4f1-d0f5-5320-a78b-3fd306090d7b.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/cvs/19074d40-7114-55d7-b550-9f84fa5a8824.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/1df02ea9-218c-5b69-a08f-dac1ea5bc75d.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/1fd9c2e7-a3b4-5e44-912b-e88ea072edf1.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/cvs/26cd31ab-ce67-5991-9d6d-daddaac297ab.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/291f840e-a2d1-5d50-bd58-1a1ad2d7e237.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/3719ad2d-6f8c-5b5f-a258-c8082f3f252a.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/4ef163d7-dbac-557e-8232-60ce927f042c.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/cvs/64e09210-81b0-57b2-913c-57a0b12166c2.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/7dd66f67-c327-5a41-8f2f-dc37d0da0fb5.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/7f020086-92b4-5bba-82a8-4414b03aa091.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/cvs/837321d2-f6a1-5db8-8544-7720d1f5a406.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/941e1ef9-a41d-5902-9ee7-abd9ce594c44.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/9e7f6a17-3bb3-5040-b180-9f3d30e188d5.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/cvs/ab7b09a8-2ee2-56fd-9c47-0cce71ea5811.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/ae98cb82-ef23-5558-8738-dca944a0fee6.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/c77ac868-bb76-5deb-ae2d-f19f63cdbe05.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/c927a71b-eb8f-5794-8382-f31fca82f7ef.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/d07c090c-a310-5817-9134-0878a8014b4a.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/d1536c11-6819-558a-8a7c-4f8801c38410.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/d3ef2bda-20f8-5821-86ca-ea784f432789.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/cvs/d5bdffb0-0c06-5630-ae73-669db0c62957.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/d66dabcf-9e2b-5da0-bdee-ce7706099952.txt",
+    "values": 2
+   },
+   {
+    "file": "data/processed/cvs/dabb2a7e-9f35-5d28-91f2-55e837e9ad83.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/e785fa5f-b60d-52f9-9cc2-29902c7784c9.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/ef68c9f5-969e-59e7-926f-94a1665904a6.txt",
+    "values": 1
+   },
+   {
+    "file": "data/processed/cvs/fc7a52bd-621e-53fd-a58f-027e0d3f0a24.txt",
+    "values": 3
+   },
+   {
+    "file": "data/processed/cvs/fe026e6d-f4db-560f-aa3a-854c8bb3d166.txt",
+    "values": 5
+   },
+   {
+    "file": "data/processed/report_records/dev/P01.json",
+    "values": 1
+   },
+   {
+    "file": "data/processed/report_records/dev/P01_photo_flag.json",
+    "values": 3
+   },
+   {
+    "file": "data/processed/report_records/dev/P15.json",
+    "values": 1
+   },
+   {
+    "file": "data/processed/report_records/dev/P27.json",
+    "values": 1
+   },
+   {
+    "file": "data/processed/report_records/dev/P41.json",
+    "values": 1
+   },
+   {
+    "file": "data/processed/report_records/dev/P51.json",
+    "values": 1
+   },
+   {
+    "file": "data/processed/report_records/dev_human/P01_photo_flag_human_reject.json",
+    "values": 3
+   },
+   {
+    "file": "data/processed/report_records/dev_human/P15_human_reject.json",
+    "values": 1
+   },
+   {
+    "file": "data/processed/report_records/test/P02_photo_flag.json",
+    "values": 2
+   },
+   {
+    "file": "data/processed/report_records/test/P28.json",
+    "values": 1
+   },
+   {
+    "file": "data/processed/report_records/test/P40.json",
+    "values": 1
+   },
+   {
+    "file": "data/processed/report_records/test_human/P02_photo_flag_human_reject.json",
+    "values": 2
+   },
+   {
+    "file": "data/raw/scans/PHOTO_MAPPING.csv",
+    "values": 1
+   },
+   {
+    "file": "demo/README.md",
+    "values": 1
+   },
+   {
+    "file": "docs/BIAS_REPORT.md",
+    "values": 9
+   },
+   {
+    "file": "docs/FINAL_EVAL.md",
+    "values": 2
+   },
+   {
+    "file": "docs/LICENSES.md",
+    "values": 2
+   },
+   {
+    "file": "docs/MULTIMODAL_REPORT.md",
+    "values": 4
+   },
+   {
+    "file": "docs/PUSH_CHECKLIST.md",
+    "values": 4
+   },
+   {
+    "file": "docs/REPORT_WRITER.md",
+    "values": 1
+   },
+   {
+    "file": "docs/SECURITY_REPORT.md",
+    "values": 8
+   },
+   {
+    "file": "docs/figures/1_pipeline.svg",
+    "values": 2
+   },
+   {
+    "file": "docs/figures/2_rag_retrieval.svg",
+    "values": 1
+   },
+   {
+    "file": "docs/figures/3_multimodal_cer.svg",
+    "values": 2
+   },
+   {
+    "file": "docs/figures/4_bias.svg",
+    "values": 1
+   },
+   {
+    "file": "docs/figures/5_final_outcomes.svg",
+    "values": 1
+   },
+   {
+    "file": "docs/figures/6_report_writer.svg",
+    "values": 1
+   },
+   {
+    "file": "docs/figures/7_gate_variants.svg",
+    "values": 1
+   },
+   {
+    "file": "docs/figures/8_latency.svg",
+    "values": 1
+   },
+   {
+    "file": "docs/figures/README.md",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_anonymiser_fix/NOTES.md",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_anonymiser_fix/after/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_anonymiser_fix/before/summary.json",
+    "values": 19
+   },
+   {
+    "file": "eval/results/2026-10-18_anonymiser_fix/not_names.txt",
+    "values": 18
+   },
+   {
+    "file": "eval/results/2026-10-18_api_smoke/outputs.json",
+    "values": 4
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/prod/P01/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/prod/P15/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/prod/P27/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/prod/P28/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/prod/P40/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/prod/P41/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/prod/P51/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P15/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P15/name_female_arab.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P15/name_female_western.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P15/name_male_african.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P15/name_male_arab.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P15/name_male_western.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P15/origin_german.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P28/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P31/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P31/name_female_african.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P31/name_female_arab.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P31/name_female_western.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P31/name_male_african.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P31/name_male_arab.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P31/name_male_western.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P31/origin_german.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P31/origin_nigerian.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P31/origin_tunisian.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P31/origin_ukrainian.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P40/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P41/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P42/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/raw/P51/base.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_bias/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_extra_pairs/j2r6_nice/profiles.json",
+    "values": 11
+   },
+   {
+    "file": "eval/results/2026-10-18_extra_pairs/new12/profiles.json",
+    "values": 8
+   },
+   {
+    "file": "eval/results/2026-10-18_extra_pairs/new12/rows.jsonl",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_extra_pairs/profiles_all_52.json",
+    "values": 26
+   },
+   {
+    "file": "eval/results/2026-10-18_extra_pairs/rows_all_52_variant4.jsonl",
+    "values": 7
+   },
+   {
+    "file": "eval/results/2026-10-18_extra_pairs/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_judge_confidence/n8n_e2e/P15_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_judge_confidence/n8n_e2e/P15_result.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_judge_confidence/n8n_e2e/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_judge_confidence/rows_1_baseline.jsonl",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-18_judge_confidence/rows_2_confidence.jsonl",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-18_judge_confidence/rows_3_judge.jsonl",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-18_judge_confidence/rows_4_both.jsonl",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L01__close_photo__vision.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L01__scan__early.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L01__scan__late.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L01__scan__ocr.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L01__scan__vision.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L02__close_photo__vision.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L02__scan__vision.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L03__close_photo__vision.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L03__scan__vision.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L04__hard_photo__vision.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L04__scan__early.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L04__scan__late.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L04__scan__ocr.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L04__scan__vision.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L05__hard_photo__vision.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L05__scan__early.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L05__scan__late.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L05__scan__ocr.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/L05__scan__vision.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/chain/summary.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/config.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v0/K04_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v0/K04_p02_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v0/K05_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v0/K05_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v0/K06_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v0/K07_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v0/K07_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v0/K08_p01_photo.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v0/K08_p02_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v0/K09_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K01_photo.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K03_photo.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K04_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K04_p02_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K05_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K05_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K06_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K07_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K07_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K08_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K08_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/K09_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/L01_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/L02_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/L03_scan.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/L04_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/L04_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/L04_scan.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/L05_photo.json",
+    "values": 7
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early/qwen2.5vl_3b__v1/L05_scan.json",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early_on_t09_ocr_discarded/qwen2.5vl_3b__v0/K04_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early_on_t09_ocr_discarded/qwen2.5vl_3b__v0/K04_p02_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early_on_t09_ocr_discarded/qwen2.5vl_3b__v0/K05_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early_on_t09_ocr_discarded/qwen2.5vl_3b__v0/K05_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early_on_t09_ocr_discarded/qwen2.5vl_3b__v0/K06_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early_on_t09_ocr_discarded/qwen2.5vl_3b__v0/K07_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early_on_t09_ocr_discarded/qwen2.5vl_3b__v0/K07_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/early_on_t09_ocr_discarded/qwen2.5vl_3b__v0/K09_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K01_photo.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K03_photo.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K04_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K04_p02_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K05_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K05_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K06_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K07_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K07_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K08_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K08_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/K09_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/L01_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/L02_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/L03_scan.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/L04_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/L04_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/L04_scan.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/L05_photo.json",
+    "values": 7
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/late/L05_scan.json",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K01_photo.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K03_photo.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K04_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K04_p02_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K05_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K05_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K06_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K07_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K07_p02_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K08_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K08_p02_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/K09_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/L01_scan.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/L02_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/L03_scan.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/L04_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/L04_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/L04_scan.json",
+    "values": 5
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/L05_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr/L05_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K01_photo.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K03_photo.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K04_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K04_p02_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K05_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K05_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K06_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K07_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K07_p02_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K08_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K08_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/K09_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/L01_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/L02_scan.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/L03_scan.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/L04_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/L04_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/L04_scan.json",
+    "values": 5
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/L05_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/ocr_t09_reader/L05_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/pre_swap_cache/early/qwen2.5vl_3b__v1/L01_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/pre_swap_cache/early/qwen2.5vl_3b__v1/L02_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/pre_swap_cache/late/L01_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/pre_swap_cache/late/L02_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/pre_swap_cache/ocr/L01_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/pre_swap_cache/ocr/L02_scan.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/pre_swap_cache/vision/qwen2.5vl_3b__v1/L01_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/pre_swap_cache/vision/qwen2.5vl_3b__v1/L02_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/rows.csv",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/summary_before_swap.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/gemma3_4b__v0/K04_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/gemma3_4b__v0/K05_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/gemma3_4b__v0/K09_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/gemma3_4b__v1/K04_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/gemma3_4b__v1/K04_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/gemma3_4b__v1/K06_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/gemma3_4b__v1/K07_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/gemma3_4b__v1/K08_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/gemma3_4b__v1/K08_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v0/K04_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v0/K04_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v0/K05_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v0/K05_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v0/K06_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v0/K07_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v0/K07_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v0/K08_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v0/K08_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v0/K09_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v1/K04_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v1/K04_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v1/K05_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v1/K05_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v1/K06_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v1/K07_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v1/K07_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v1/K08_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v1/K08_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/granite3.2-vision_2b__v1/K09_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v0/K04_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v0/K04_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v0/K05_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v0/K05_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v0/K06_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v0/K07_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v0/K07_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v0/K08_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v0/K08_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v0/K09_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K01_photo.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K03_photo.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K04_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K04_p02_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K05_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K05_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K06_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K07_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K07_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K08_p01_photo.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K08_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/K09_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/L01_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/L02_scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/L03_scan.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/L04_p01_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/L04_p02_photo.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/L04_scan.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/L05_photo.json",
+    "values": 7
+   },
+   {
+    "file": "eval/results/2026-10-18_multimodal/vision/qwen2.5vl_3b__v1/L05_scan.json",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e/NOTES.md",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e/P15_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e/P15_result.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e/P35_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e/P35_result.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e/kaggle_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e/manual_trigger_P15_result.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e_bias/NOTES.md",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e_bias/P02_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e_bias/P02_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e_bias/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e_bias/swap_rerun_latency.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e_photo/NOTES.md",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e_photo/P15_K01_photo_execution.json",
+    "values": 5
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e_photo/P15_K01_photo_result.json",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e_photo/summary.json",
+    "values": 5
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e_rag/P15_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e_rag/P15_result.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_n8n_e2e_rag/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e/NOTES.md",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e/P35_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e/P35_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e/P44_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e/P44_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e/P50_review_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e/P50_review_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e/outbox_invite_18_human.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e/outbox_reject_23_gate.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e_T08b/P15_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e_T08b/P15_result.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e_T08b/P35_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e_T08b/P35_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e_T08b/P50_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e_T08b/P50_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e_T08b/outbox_invite_25_gate.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e_T08b/outbox_invite_27_human.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e_T08b/outbox_reject_26_gate.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_outcome_gate/n8n_e2e_T08b/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_rag_matcher/rows_V1.jsonl",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-18_rag_matcher/rows_V2.jsonl",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-18_rag_matcher/rows_V3.jsonl",
+    "values": 5
+   },
+   {
+    "file": "eval/results/2026-10-18_rag_matcher/rows_V4.jsonl",
+    "values": 4
+   },
+   {
+    "file": "eval/results/2026-10-18_rag_matcher/rows_V5.jsonl",
+    "values": 4
+   },
+   {
+    "file": "eval/results/2026-10-18_rag_matcher/rows_V6.jsonl",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-18_real_baseline/ERRORS.md",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-18_real_baseline/NOTES.md",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_real_baseline/config.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_real_baseline/profiles.json",
+    "values": 22
+   },
+   {
+    "file": "eval/results/2026-10-18_real_baseline/rows.jsonl",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-18_tau_recheck/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-18_tau_recheck/sweep.csv",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P02_K03_photo_execution.json",
+    "values": 5
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P02_K03_photo_result.json",
+    "values": 5
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P02_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P02_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P04_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P04_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P08_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P08_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P10_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P10_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P12_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P12_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P14_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P14_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P15_K01_photo_execution.json",
+    "values": 5
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P15_K01_photo_result.json",
+    "values": 6
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P18_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P18_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P22_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P22_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P24_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P24_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P28_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P28_result.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P30_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P30_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P32_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P32_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P34_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P34_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P36_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P36_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P40_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P40_result.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P43_L05_photo_execution.json",
+    "values": 5
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P43_L05_photo_result.json",
+    "values": 5
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P44_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P44_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P46_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P46_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P47_K02_photo_execution.json",
+    "values": 5
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P47_K02_photo_result.json",
+    "values": 5
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P47_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P47_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P52_L04_scan_execution.json",
+    "values": 9
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P52_L04_scan_result.json",
+    "values": 9
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P52_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/P52_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/final_summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/p52_rerun_after_label_fix/P52_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/p52_rerun_after_label_fix/P52_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/p52_rerun_after_label_fix/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_final_eval/summary.json",
+    "values": 11
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_human_reject/outbox_letter_exec57.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report/P02_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report/P02_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report/P15_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report/P15_result.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report/P50_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report/P50_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report_v1prompt/P02_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report_v1prompt/P02_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report_v1prompt/P15_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report_v1prompt/P15_result.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report_v1prompt/P50_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report_v1prompt/P50_result.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_n8n_e2e_report_v1prompt/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_name_overmask/after/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/0.6b-v2/dev/P01_photo_flag.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/0.6b-v2/dev/P15.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/0.6b-v2/dev/P27.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/0.6b-v2/dev/P41.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/0.6b-v2/dev/P51.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v0/dev/P01.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v0/dev/P01_photo_flag.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v0/dev/P15.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v0/dev/P27.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v0/dev/P41.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v0/dev/P51.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v1/dev/P01.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v1/dev/P01_photo_flag.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v1/dev/P15.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v1/dev/P27.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v1/dev/P41.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v1/dev/P51.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v2/dev/P01_photo_flag.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v2/dev/P15.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v2/dev/P27.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v2/dev/P41.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v2/dev/P51.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v2/test/P02_photo_flag.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v2/test/P28.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/4b-v2/test/P40.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/4b-v0/dev/P01_photo_flag.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/4b-v0/dev/P27.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/4b-v0/dev/P41.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/4b-v0/dev/P51.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/4b-v1/dev/P01_photo_flag.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/4b-v1/dev/P15.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/4b-v1/dev/P27.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/4b-v1/dev/P41.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/4b-v1/dev/P51.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/template/dev/P01_photo_flag.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/template/dev/P27.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/template/dev/P41.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/old_checker/template/dev/P51.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/template/dev/P01_photo_flag.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/template/dev/P27.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/template/dev/P41.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/template/dev/P51.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/template/test/P02_photo_flag.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer/template/test/P28.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v2/dev/P01_photo_flag.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v2/dev/P15.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v2/dev/P27.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v2/dev/P41.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v2/dev/P51.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v2/dev_human/P01_photo_flag_human_reject.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v2/dev_human/P15_human_reject.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v3/dev/P01_photo_flag.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v3/dev/P15.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v3/dev/P27.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v3/dev/P41.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v3/dev/P51.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v3/dev_human/P01_photo_flag_human_reject.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v3/dev_human/P15_human_reject.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v3/test/P02_photo_flag.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v3/test/P28.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v3/test/P40.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_report_writer_t13/4b-v3/test_human/P02_photo_flag_human_reject.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_secret_scan/scan.json",
+    "values": 3
+   },
+   {
+    "file": "eval/results/2026-10-19_security/privacy_e2e/P15_synthetic_identity_cv_execution.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_security/privacy_e2e/P15_synthetic_identity_cv_result.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_security/privacy_e2e/summary.json",
+    "values": 1
+   },
+   {
+    "file": "eval/results/2026-10-19_security/privacy_scan.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_security/synthetic_identity_cv.txt",
+    "values": 10
+   },
+   {
+    "file": "eval/results/2026-10-19_security_t14/format_controls/injection_runs.json",
+    "values": 2
+   },
+   {
+    "file": "eval/results/2026-10-19_security_t14/injection_runs.json",
+    "values": 2
+   },
+   {
+    "file": "models/MANIFEST.md",
+    "values": 2
+   },
+   {
+    "file": "n8n/hiresignal_errors.json",
+    "values": 1
+   },
+   {
+    "file": "prompts/reader/early_fusion_v0.md",
+    "values": 2
+   },
+   {
+    "file": "prompts/reader/early_fusion_v1.md",
+    "values": 3
+   },
+   {
+    "file": "prompts/reader/vision_v0.md",
+    "values": 2
+   },
+   {
+    "file": "prompts/reader/vision_v1.md",
+    "values": 3
+   },
+   {
+    "file": "prompts/report_writer/v1.md",
+    "values": 1
+   },
+   {
+    "file": "prompts/report_writer/v2.md",
+    "values": 1
+   },
+   {
+    "file": "prompts/report_writer/v3.md",
+    "values": 1
+   },
+   {
+    "file": "rag/data/esco/esco_ict_graph.jsonl",
+    "values": 3
+   },
+   {
+    "file": "rag/data/esco/esco_ict_skills.jsonl",
+    "values": 3
+   },
+   {
+    "file": "rag/eval/queries.jsonl",
+    "values": 2
+   },
+   {
+    "file": "rag/eval/queries_drafted.jsonl",
+    "values": 2
+   },
+   {
+    "file": "rag/eval/v2_queries_reviewed_en.jsonl",
+    "values": 2
+   },
+   {
+    "file": "requirements.txt",
+    "values": 1
+   },
+   {
+    "file": "scripts/download_models.py",
+    "values": 2
+   },
+   {
+    "file": "scripts/eval_extra_pairs.py",
+    "values": 1
+   },
+   {
+    "file": "scripts/eval_multimodal.py",
+    "values": 3
+   },
+   {
+    "file": "scripts/eval_multimodal_chain.py",
+    "values": 2
+   },
+   {
+    "file": "scripts/eval_reader_parallel.py",
+    "values": 2
+   },
+   {
+    "file": "scripts/eval_real.py",
+    "values": 1
+   },
+   {
+    "file": "scripts/make_counterfactuals.py",
+    "values": 2
+   },
+   {
+    "file": "scripts/make_figures.py",
+    "values": 2
+   },
+   {
+    "file": "scripts/make_report_records.py",
+    "values": 2
+   },
+   {
+    "file": "scripts/merge_labels.py",
+    "values": 1
+   },
+   {
+    "file": "scripts/n8n_e2e.py",
+    "values": 1
+   },
+   {
+    "file": "scripts/security_runs.py",
+    "values": 2
+   },
+   {
+    "file": "scripts/start_all.ps1",
+    "values": 1
+   },
+   {
+    "file": "scripts/start_ollama.ps1",
+    "values": 2
+   },
+   {
+    "file": "scripts/tau_recheck.py",
+    "values": 1
+   },
+   {
+    "file": "services/api.py",
+    "values": 1
+   },
+   {
+    "file": "services/bias/auditor.py",
+    "values": 1
+   },
+   {
+    "file": "services/contracts.py",
+    "values": 3
+   },
+   {
+    "file": "services/job/validate.py",
+    "values": 2
+   },
+   {
+    "file": "services/judge/judge.py",
+    "values": 1
+   },
+   {
+    "file": "services/outcome/gate.py",
+    "values": 3
+   },
+   {
+    "file": "services/profile/anonymise.py",
+    "values": 1
+   },
+   {
+    "file": "services/profile/contracts.py",
+    "values": 1
+   },
+   {
+    "file": "services/profile/detect.py",
+    "values": 8
+   },
+   {
+    "file": "services/profile/prompts.py",
+    "values": 1
+   },
+   {
+    "file": "services/reader/multimodal.py",
+    "values": 4
+   },
+   {
+    "file": "services/reader/reader.py",
+    "values": 7
+   },
+   {
+    "file": "services/report/checker.py",
+    "values": 2
+   },
+   {
+    "file": "services/report/record.py",
+    "values": 1
+   },
+   {
+    "file": "tasks/T02_environment.md",
+    "values": 1
+   },
+   {
+    "file": "tasks/T02_report.md",
+    "values": 1
+   },
+   {
+    "file": "tasks/T02b_lora_server.md",
+    "values": 1
+   },
+   {
+    "file": "tasks/T03_report.md",
+    "values": 1
+   },
+   {
+    "file": "tasks/T04_report.md",
+    "values": 3
+   },
+   {
+    "file": "tasks/T05_report.md",
+    "values": 2
+   },
+   {
+    "file": "tasks/T06_real_baseline.md",
+    "values": 2
+   },
+   {
+    "file": "tasks/T06_report.md",
+    "values": 4
+   },
+   {
+    "file": "tasks/T07_judge_confidence.md",
+    "values": 1
+   },
+   {
+    "file": "tasks/T07_report.md",
+    "values": 1
+   },
+   {
+    "file": "tasks/T08_outcome_gate.md",
+    "values": 1
+   },
+   {
+    "file": "tasks/T08_report.md",
+    "values": 1
+   },
+   {
+    "file": "tasks/T09_report.md",
+    "values": 2
+   },
+   {
+    "file": "tasks/T09b_report.md",
+    "values": 1
+   },
+   {
+    "file": "tasks/T10_multimodal.md",
+    "values": 3
+   },
+   {
+    "file": "tasks/T10_report.md",
+    "values": 3
+   },
+   {
+    "file": "tasks/T10b_parallel_late_fusion.md",
+    "values": 2
+   },
+   {
+    "file": "tasks/T10b_report.md",
+    "values": 2
+   },
+   {
+    "file": "tasks/T11_bias_auditor.md",
+    "values": 1
+   },
+   {
+    "file": "tasks/T11_report.md",
+    "values": 5
+   },
+   {
+    "file": "tasks/T11b_name_overmask_fix.md",
+    "values": 4
+   },
+   {
+    "file": "tasks/T11b_name_overmasking.md",
+    "values": 4
+   },
+   {
+    "file": "tasks/T11b_report.md",
+    "values": 2
+   },
+   {
+    "file": "tasks/T12_report_writer.md",
+    "values": 1
+   },
+   {
+    "file": "tasks/T13_report.md",
+    "values": 4
+   },
+   {
+    "file": "tasks/T13_security_final_eval_install.md",
+    "values": 4
+   },
+   {
+    "file": "tasks/T14_final_polish.md",
+    "values": 1
+   },
+   {
+    "file": "tasks/T14_report.md",
+    "values": 1
+   },
+   {
+    "file": "tests/conftest.py",
+    "values": 3
+   },
+   {
+    "file": "tests/fixtures/job/offers/usajobs-884301900.txt",
+    "values": 1
+   },
+   {
+    "file": "tests/fixtures/job/offers/usajobs-884783000.txt",
+    "values": 1
+   },
+   {
+    "file": "tests/fixtures/job/offers/usajobs-886071700.txt",
+    "values": 1
+   },
+   {
+    "file": "tests/fixtures/profile/cvs/p01_en_classic.txt",
+    "values": 1
+   },
+   {
+    "file": "tests/fixtures/profile/cvs/p02_fr_classic.txt",
+    "values": 1
+   },
+   {
+    "file": "tests/fixtures/profile/cvs/p03_en_two_column.txt",
+    "values": 1
+   },
+   {
+    "file": "tests/fixtures/profile/gold/p01_en_classic.json",
+    "values": 2
+   },
+   {
+    "file": "tests/fixtures/profile/gold/p02_fr_classic.json",
+    "values": 1
+   },
+   {
+    "file": "tests/fixtures/profile/gold/p03_en_two_column.json",
+    "values": 1
+   },
+   {
+    "file": "tests/fixtures/profile/gold/p07_en_personal_details.json",
+    "values": 1
+   },
+   {
+    "file": "tests/security/test_bad_files.py",
+    "values": 3
+   },
+   {
+    "file": "tests/security/test_privacy.py",
+    "values": 1
+   },
+   {
+    "file": "tests/test_anonymiser_fix.py",
+    "values": 12
+   },
+   {
+    "file": "tests/test_api.py",
+    "values": 1
+   },
+   {
+    "file": "tests/test_bias.py",
+    "values": 2
+   },
+   {
+    "file": "tests/test_gender.py",
+    "values": 1
+   },
+   {
+    "file": "tests/test_job_contract.py",
+    "values": 1
+   },
+   {
+    "file": "tests/test_multimodal.py",
+    "values": 4
+   },
+   {
+    "file": "tests/test_profile_parse.py",
+    "values": 1
+   },
+   {
+    "file": "tests/test_profile_privacy.py",
+    "values": 3
+   },
+   {
+    "file": "tests/test_reader.py",
+    "values": 3
+   },
+   {
+    "file": "tests/test_reader_parallel.py",
+    "values": 2
+   },
+   {
+    "file": "CLAUDE.md",
+    "values": 1
+   },
+   {
+    "file": "README.md",
+    "values": 1
+   },
+   {
+    "file": "config/.env.example",
+    "values": 3
+   },
+   {
+    "file": "docs/REUSE_INVENTORY.md",
+    "values": 2
+   },
+   {
+    "file": "n8n/README.md",
+    "values": 3
+   },
+   {
+    "file": "prompts/PROMPT_LIBRARY.md",
+    "values": 7
+   },
+   {
+    "file": "tasks/T01_report.md",
+    "values": 1
+   }
+  ]
+ }
+}

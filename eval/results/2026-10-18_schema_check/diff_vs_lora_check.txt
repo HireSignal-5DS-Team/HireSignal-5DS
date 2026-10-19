@@ -1,0 +1,7 @@
+== base_k: no schema (A = 2026-10-18_lora_check) vs schema (B = 2026-10-18_schema_check)
+items 30; identical raw output 27/30; decision changed 3/30
+  val-027 r1: gold MET  A UNCERTAIN (invalid) -> B MET  [fixed]
+  val-033 r3: gold MET  A UNCERTAIN (invalid) -> B MET  [fixed]
+  val-034 r3: gold MET  A UNCERTAIN (invalid) -> B MET  [fixed]
+== lora_k: no schema (A = 2026-10-18_lora_check) vs schema (B = 2026-10-18_schema_check)
+items 30; identical raw output 30/30; decision changed 0/30

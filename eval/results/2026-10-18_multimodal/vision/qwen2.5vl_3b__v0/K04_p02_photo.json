@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K04_p02_photo",
+  "file": "K04_p02_photo.jpg",
+  "source": "K05.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "This is a resume for a Senior Programmer with over 20 years of experience in various roles, particularly in Information Technology. The resume highlights proficiency in software development, project management, and various technologies such as Oracle and SQL Server databases, Crystal Reports, Windows and UNIX environments, and automation systems. The skills section lists a wide range of programming languages, tools, and technologies, including C/C++, PL/SQL, Visual Basic, Uniface, PHP, HTML, and XML. The education section indicates a Bachelor of Science in Computer Science from the Georgia Institute of Technology.",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 9.18,
+   "eval_count": 115,
+   "done_reason": "stop",
+   "peak_vram_mib": 4491
+  }
+ ]
+}

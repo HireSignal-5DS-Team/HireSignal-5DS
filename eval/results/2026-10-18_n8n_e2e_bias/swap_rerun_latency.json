@@ -1,0 +1,18 @@
+{
+ "case": "P45 base CV (over-masked 'Qlik Sense'); results = prod base decisions",
+ "wall_s": 15.86,
+ "response": {
+  "would_be_outcome": "reject",
+  "swap": {
+   "ran": true,
+   "counterfactual": "female_arab",
+   "how": "name + pronouns added",
+   "identical_matcher_input": false,
+   "must_rerun": 5,
+   "changed_must": [],
+   "latency_s": 15.665
+  },
+  "review_reasons": [],
+  "elapsed_s": 15.665
+ }
+}

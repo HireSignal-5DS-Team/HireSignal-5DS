@@ -1,0 +1,789 @@
+{
+ "J1": {
+  "card": {
+   "schema_version": "0.1.0",
+   "job_id": "J1",
+   "title": "Data Scientist",
+   "language": "en",
+   "requirements": [
+    {
+     "req_id": "r1",
+     "text": "Data scientist with 4+ years of experience",
+     "evidence": "Data scientist with 4+ years of experience",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [],
+     "min_years": 4.0,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r2",
+     "text": "Good knowledge of the probability theory",
+     "evidence": "Good knowledge of the probability theory and statistics",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "probability theory"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r3",
+     "text": "Good knowledge of the statistics",
+     "evidence": "Good knowledge of the probability theory and statistics",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "statistics"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r4",
+     "text": "Understanding of Bayesian methods",
+     "evidence": "Understanding of Bayesian methods, time series analysis, sensor signal processing",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Bayesian methods"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r5",
+     "text": "Understanding of time series analysis",
+     "evidence": "Understanding of Bayesian methods, time series analysis, sensor signal processing",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "time series analysis"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r6",
+     "text": "Understanding of sensor signal processing",
+     "evidence": "Understanding of Bayesian methods, time series analysis, sensor signal processing",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "sensor signal processing"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r7",
+     "text": "Hands-on experience with probabilistic programming (Pyro, or similar)",
+     "evidence": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar)",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Pyro"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r8",
+     "text": "Hands-on experience with probabilistic programming (PyMC3, or similar)",
+     "evidence": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar)",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "PyMC3"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r9",
+     "text": "Hands-on experience with probabilistic programming (JAGS, or similar)",
+     "evidence": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar)",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "JAGS"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r10",
+     "text": "Experience with cloud (Amazon SageMaker) is required",
+     "evidence": "Experience with cloud (Amazon SageMaker) is required",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Amazon SageMaker"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r11",
+     "text": "Experience with PySpark is required",
+     "evidence": "Experience with PySpark is required",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "PySpark"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r12",
+     "text": "Hands-on experience with data preparation",
+     "evidence": "Hands-on experience with data preparation, cleansing, feature engineering, and visualization",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "data preparation"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r13",
+     "text": "Hands-on experience with cleansing",
+     "evidence": "Hands-on experience with data preparation, cleansing, feature engineering, and visualization",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "cleansing"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r14",
+     "text": "Hands-on experience with feature engineering",
+     "evidence": "Hands-on experience with data preparation, cleansing, feature engineering, and visualization",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "feature engineering"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r15",
+     "text": "Hands-on experience with visualization",
+     "evidence": "Hands-on experience with data preparation, cleansing, feature engineering, and visualization",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "visualization"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r16",
+     "text": "Strong working knowledge of SQL, Teradata preferred",
+     "evidence": "Strong working knowledge of SQL, Teradata preferred",
+     "kind": "nice",
+     "category": "skill",
+     "skill_terms": [
+      "SQL"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r17",
+     "text": "Good communication skills and interpersonal skills",
+     "evidence": "Good communication skills and interpersonal skills.",
+     "kind": "must",
+     "category": "other",
+     "skill_terms": [
+      "communication skills",
+      "interpersonal skills"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r18",
+     "text": "Experience in working across different global cultures a plus",
+     "evidence": "Experience in working across different global cultures a plus.",
+     "kind": "nice",
+     "category": "experience",
+     "skill_terms": [],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r19",
+     "text": "Ph.D. in Mathematics will be a plus",
+     "evidence": "Ph.D. in Mathematics will be a plus.",
+     "kind": "nice",
+     "category": "education",
+     "skill_terms": [],
+     "min_years": null,
+     "chunk_ids": []
+    }
+   ],
+   "uncertain": [],
+   "needs_human_review": false,
+   "warnings": [
+    "'Strong working knowledge of SQL, Teradata preferre': kind 'must' -> 'nice' (wording says optional)"
+   ]
+  },
+  "injection": {
+   "injected_sentences": [],
+   "dropped_req_ids": []
+  },
+  "review_reasons": [
+   "job_agent:validation_warnings"
+  ],
+  "info_flags": [],
+  "elapsed_s": 13.897,
+  "wall_s": 13.91
+ },
+ "J2": {
+  "card": {
+   "schema_version": "0.1.0",
+   "job_id": "J2",
+   "title": "Data Engineer",
+   "language": "en",
+   "requirements": [
+    {
+     "req_id": "r1",
+     "text": "Knowledge of the general principles of Data Warehousing",
+     "evidence": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Data Warehousing"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r2",
+     "text": "Knowledge of the general principles of Data Lakes",
+     "evidence": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Data Lakes"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r3",
+     "text": "Wiliness to do research on business logic",
+     "evidence": "Wiliness to do research on business logic",
+     "kind": "must",
+     "category": "other",
+     "skill_terms": [],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r4",
+     "text": "Hands-on experience with SQL",
+     "evidence": "Hands-on experience with SQL",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "SQL"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r5",
+     "text": "Knowledge of Python",
+     "evidence": "Knowledge of Python",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Python"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r6",
+     "text": "Experience with GCP or other cloud providers",
+     "evidence": "Experience with GCP or other cloud providers",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [
+      "GCP",
+      "cloud providers"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r7",
+     "text": "Good spoken English",
+     "evidence": "Good spoken English",
+     "kind": "must",
+     "category": "language",
+     "skill_terms": [
+      "English"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    }
+   ],
+   "uncertain": [],
+   "needs_human_review": false,
+   "warnings": []
+  },
+  "injection": {
+   "injected_sentences": [],
+   "dropped_req_ids": []
+  },
+  "review_reasons": [],
+  "info_flags": [],
+  "elapsed_s": 6.532,
+  "wall_s": 6.54
+ },
+ "J3": {
+  "card": {
+   "schema_version": "0.1.0",
+   "job_id": "J3",
+   "title": "ML Engineer",
+   "language": "en",
+   "requirements": [
+    {
+     "req_id": "r1",
+     "text": "3+ years industrial experience with ML, including training, testing, deployment, and monitoring real-time (or near real-time) machine learning models in production",
+     "evidence": "3+ years industrial experience with ML, including training, testing, deployment, and monitoring real-time (or near real-time) machine learning models in production;",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [
+      "ML",
+      "training",
+      "testing",
+      "deployment",
+      "monitoring",
+      "real-time",
+      "near real-time",
+      "machine learning models"
+     ],
+     "min_years": 3.0,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r2",
+     "text": "Proven experience with modern DL techniques",
+     "evidence": "Proven experience with modern DL techniques and Gradient Boosting Trees;",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [
+      "modern DL techniques"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r3",
+     "text": "Proven experience with Gradient Boosting Trees",
+     "evidence": "Proven experience with modern DL techniques and Gradient Boosting Trees;",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [
+      "Gradient Boosting Trees"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r4",
+     "text": "Excellent Python coding skills",
+     "evidence": "Excellent Python coding skills;",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Python"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r5",
+     "text": "Proficiency with ML libraries (Tensorflow)",
+     "evidence": "Proficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn);",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Tensorflow"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r6",
+     "text": "Proficiency with ML libraries (Pytorch)",
+     "evidence": "Proficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn);",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Pytorch"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r7",
+     "text": "Proficiency with ML libraries (LightGBM)",
+     "evidence": "Proficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn);",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "LightGBM"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r8",
+     "text": "Proficiency with ML libraries (Scikit-learn)",
+     "evidence": "Proficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn);",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "Scikit-learn"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r9",
+     "text": "Vast practical experience with tabular data",
+     "evidence": "Vast practical experience with tabular data and time series;",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [
+      "tabular data"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r10",
+     "text": "Vast practical experience with time series",
+     "evidence": "Vast practical experience with tabular data and time series;",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [
+      "time series"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r11",
+     "text": "Experience in Microservices architecture",
+     "evidence": "Experience in Microservices architecture, cloud technologies, Docker, Kubernetes.",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [
+      "Microservices architecture"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r12",
+     "text": "Experience in cloud technologies",
+     "evidence": "Experience in Microservices architecture, cloud technologies, Docker, Kubernetes.",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [
+      "cloud technologies"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r13",
+     "text": "Experience in Docker",
+     "evidence": "Experience in Microservices architecture, cloud technologies, Docker, Kubernetes.",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [
+      "Docker"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r14",
+     "text": "Experience in Kubernetes",
+     "evidence": "Experience in Microservices architecture, cloud technologies, Docker, Kubernetes.",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [
+      "Kubernetes"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r15",
+     "text": "Experience with data pipelines / big data",
+     "evidence": "Experience with data pipelines / big data;",
+     "kind": "nice",
+     "category": "experience",
+     "skill_terms": [
+      "data pipelines",
+      "big data"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r16",
+     "text": "Experience with ML “understanding” techniques: explainability, etc",
+     "evidence": "Experience with ML “understanding” techniques: explainability, confidence, drift, etc;",
+     "kind": "nice",
+     "category": "experience",
+     "skill_terms": [
+      "explainability"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r17",
+     "text": "Experience with ML “understanding” techniques: confidence, etc",
+     "evidence": "Experience with ML “understanding” techniques: explainability, confidence, drift, etc;",
+     "kind": "nice",
+     "category": "experience",
+     "skill_terms": [
+      "confidence"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r18",
+     "text": "Experience with ML “understanding” techniques: drift, etc",
+     "evidence": "Experience with ML “understanding” techniques: explainability, confidence, drift, etc;",
+     "kind": "nice",
+     "category": "experience",
+     "skill_terms": [
+      "drift"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r19",
+     "text": "Experience designing and implementing AutoML flows/frameworks",
+     "evidence": "Experience designing and implementing AutoML flows/frameworks.",
+     "kind": "nice",
+     "category": "experience",
+     "skill_terms": [
+      "AutoML flows"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    }
+   ],
+   "uncertain": [],
+   "needs_human_review": false,
+   "warnings": [
+    "'Experience with ML \"understanding\" techniques: exp': quote repaired (fuzzy 0.98)",
+    "'Experience designing and implementing AutoML flows': skill term 'AutoML frameworks' not in the quote, removed"
+   ]
+  },
+  "injection": {
+   "injected_sentences": [],
+   "dropped_req_ids": []
+  },
+  "review_reasons": [
+   "job_agent:validation_warnings"
+  ],
+  "info_flags": [],
+  "elapsed_s": 13.344,
+  "wall_s": 13.35
+ },
+ "J4": {
+  "card": {
+   "schema_version": "0.1.0",
+   "job_id": "J4",
+   "title": "Python BackEnd Developer",
+   "language": "en",
+   "requirements": [
+    {
+     "req_id": "r1",
+     "text": "5 years of experience in development (At least 2 years experience in developing big systems with Python) - Must",
+     "evidence": "5 years of experience in development (At least 2 years experience in developing big systems with Python) - Must",
+     "kind": "must",
+     "category": "experience",
+     "skill_terms": [
+      "Python"
+     ],
+     "min_years": 5.0,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r2",
+     "text": "asynchronous programming",
+     "evidence": "Asynchronous programming and experience in developing performance-critical applications",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "asynchronous programming"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r3",
+     "text": "performance-critical applications",
+     "evidence": "Asynchronous programming and experience in developing performance-critical applications",
+     "kind": "must",
+     "category": "skill",
+     "skill_terms": [
+      "performance-critical applications"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r4",
+     "text": "Working with AWS – Advantages",
+     "evidence": "Working with AWS, Docker, and microservices – Advantages",
+     "kind": "nice",
+     "category": "skill",
+     "skill_terms": [
+      "AWS"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r5",
+     "text": "Working with Docker – Advantages",
+     "evidence": "Working with AWS, Docker, and microservices – Advantages",
+     "kind": "nice",
+     "category": "skill",
+     "skill_terms": [
+      "Docker"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r6",
+     "text": "Working with microservices – Advantages",
+     "evidence": "Working with AWS, Docker, and microservices – Advantages",
+     "kind": "nice",
+     "category": "skill",
+     "skill_terms": [
+      "microservices"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r7",
+     "text": "Experience with Machine Learning – Advantages",
+     "evidence": "Experience with Machine Learning – Advantages",
+     "kind": "nice",
+     "category": "skill",
+     "skill_terms": [
+      "Machine Learning"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r8",
+     "text": "Algorithms development (collaborative filtering) - Advantages",
+     "evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages",
+     "kind": "nice",
+     "category": "skill",
+     "skill_terms": [
+      "collaborative filtering"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r9",
+     "text": "Algorithms development (similarity) - Advantages",
+     "evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages",
+     "kind": "nice",
+     "category": "skill",
+     "skill_terms": [
+      "similarity"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r10",
+     "text": "Algorithms development (data normalization) - Advantages",
+     "evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages",
+     "kind": "nice",
+     "category": "skill",
+     "skill_terms": [
+      "data normalization"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r11",
+     "text": "Algorithms development (clustering) - Advantages",
+     "evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages",
+     "kind": "nice",
+     "category": "skill",
+     "skill_terms": [
+      "clustering"
+     ],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r12",
+     "text": "Excellent analytical and time management skills",
+     "evidence": "Excellent analytical and time management skills",
+     "kind": "nice",
+     "category": "other",
+     "skill_terms": [],
+     "min_years": null,
+     "chunk_ids": []
+    },
+    {
+     "req_id": "r13",
+     "text": "Teamwork skills with a problem-solving attitude.",
+     "evidence": "Teamwork skills with a problem-solving attitude.",
+     "kind": "nice",
+     "category": "other",
+     "skill_terms": [],
+     "min_years": null,
+     "chunk_ids": []
+    }
+   ],
+   "uncertain": [],
+   "needs_human_review": false,
+   "warnings": []
+  },
+  "injection": {
+   "injected_sentences": [],
+   "dropped_req_ids": []
+  },
+  "review_reasons": [],
+  "info_flags": [],
+  "elapsed_s": 9.267,
+  "wall_s": 9.28
+ }
+}

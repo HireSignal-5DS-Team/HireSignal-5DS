@@ -1,0 +1,60 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because three must-have requirements are missing: at least 5 years of software development experience, experience with Python for developing big systems, and experience with asynchronous programming for performance-critical applications. The CV shows only 1 year of software development experience. The experience with big systems is mentioned but not confirmed to meet the 2-year threshold. Asynchronous programming is not referenced. No evidence is provided for any of the missing must-haves.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"Experience years: 1\", \"line\": \"Missing: only 1 year of software development experience, below the required 5 years.\"}, {\"req_id\": \"r2\", \"decision\": \"MISSING\", \"quote\": \"I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand.\", \"line\": \"Missing: although the candidate mentions Python tools, there is no clear evidence of 2+ years of experience developing big systems with Python.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of asynchronous programming or performance-critical applications.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with AWS, Docker, or microservices.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of experience with machine learning.\"}, {\"req_id\": \"r6\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with algorithms like collaborative filtering or clustering.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We regret to inform you that your application is not moving forward, because your CV does not meet the following required criteria:\\n\\n- At least 5 years of software development experience (only 1 year is stated).\\n- Experience with Python for developing big systems (2+ years required).\\n- Experience with asynchronous programming and performance-critical applications.\\n\\nThis decision was made by an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": []}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because three must-have requirements are missing: at least 5 years of software development experience, experience with Python for developing big systems, and experience with asynchronous programming for performance-critical applications. The CV shows only 1 year of software development experience. The experience with big systems is mentioned but not confirmed to meet the 2-year threshold. Asynchronous programming is not referenced. No evidence is provided for any of the missing must-haves.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "Experience years: 1",
+    "line": "Missing: only 1 year of software development experience, below the required 5 years."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand.",
+    "line": "Missing: although the candidate mentions Python tools, there is no clear evidence of 2+ years of experience developing big systems with Python."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no mention of asynchronous programming or performance-critical applications."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no evidence of experience with AWS, Docker, or microservices."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no mention of experience with machine learning."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no evidence of experience with algorithms like collaborative filtering or clustering."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Python BackEnd Developer position. We regret to inform you that your application is not moving forward, because your CV does not meet the following required criteria:\n\n- At least 5 years of software development experience (only 1 year is stated).\n- Experience with Python for developing big systems (2+ years required).\n- Experience with asynchronous programming and performance-critical applications.\n\nThis decision was made by an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": []
+ },
+ "source": "llm",
+ "latency_s": 10.45,
+ "peak_vram_mib": 3267,
+ "id": "P40",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

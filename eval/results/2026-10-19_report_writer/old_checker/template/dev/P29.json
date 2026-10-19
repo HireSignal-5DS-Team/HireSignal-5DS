@@ -1,0 +1,66 @@
+{
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 0 of 6 must-have requirements are met; the score is 7. Missing must-haves: ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models); Proven experience with modern deep learning techniques and Gradient Boosting Trees; Excellent Python coding skills; Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn); Experience with microservices architecture, cloud technologies, Docker and Kubernetes. Unclear must-haves: Practical experience with tabular data and time series.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Proven experience with modern deep learning techniques and Gradient Boosting Trees - missing (not found in CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Excellent Python coding skills - missing (not found in CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Practical experience with tabular data and time series - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with microservices architecture, cloud technologies, Docker and Kubernetes - missing (not found in CV)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience with data pipelines or big data - missing (not found in CV)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience designing and implementing AutoML flows or frameworks - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models); Proven experience with modern deep learning techniques and Gradient Boosting Trees; Excellent Python coding skills; Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn); Experience with microservices architecture, cloud technologies, Docker and Kubernetes.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": []
+ },
+ "source": "template",
+ "attempts": 0,
+ "first_errors": [],
+ "retry_errors": [],
+ "latency_s": 0.0009,
+ "peak_vram_mib": null,
+ "id": "P29",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

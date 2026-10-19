@@ -1,0 +1,29 @@
+{
+ "cv": "L04",
+ "pair": "P52",
+ "job": "J4",
+ "condition": "digital",
+ "setup": "digital PDF",
+ "items": [
+  "L04.pdf"
+ ],
+ "reader_reasons": [],
+ "outcome": "review",
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "score": 78,
+ "reasons": [
+  "r2: must MET doubted (judge:disagrees): possible false invite"
+ ],
+ "pair_review_reasons": [
+  "profile:name_not_found",
+  "profile:partial_extraction_requires_review"
+ ],
+ "decisions": {
+  "r1": "MET",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MET",
+  "r5": "MISSING",
+  "r6": "MISSING"
+ }
+}

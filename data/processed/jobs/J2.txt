@@ -1,0 +1,30 @@
+Djinni job id: 1d864d06-e9ee-55a8-a42e-3ff4da68d7a8
+Position: Data Engineer
+Experience (Djinni field): 3y
+English level (Djinni field): intermediate
+
+Responsibilities
+Development and support of the core data analytics platform (Python)
+Deep diving into logic of client business
+Collaborates with multiple teams
+Understands the overall enterprise Data Architecture and executes on delivering a Next Gen Data Warehouse
+Work on the design of the new components of the solution
+
+Requirements
+Knowledge of the general principles of Data Warehousing and Data Lakes 
+Wiliness to do research on business logic 
+Hands-on experience with SQL
+Knowledge of Python
+Experience with GCP or other cloud providers
+Good spoken English
+
+We offer:
+Experienced colleagues who are ready to share knowledge
+The ability to switch projects, technology stacks, try yourself in different roles
+More than 150 workplaces for advanced training
+Study and practice of English: courses and communication with colleagues and clients from different countries
+Support speakers who make presentations at conferences and meetings of technology communities
+The ability to focus on your work: a lack of bureaucracy and micromanagement, and convenient corporate services
+Friendly atmosphere, concern for the comfort of specialists
+Flexible schedule (there are core mandatory hours), the ability to work remotely upon agreement with colleagues
+The ability to work in any of our development centers.

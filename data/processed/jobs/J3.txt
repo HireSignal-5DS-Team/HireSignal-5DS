@@ -1,0 +1,29 @@
+Djinni job id: f87c22c3-525f-5999-8a64-63cf49ae7a90
+Position: ML Engineer
+Experience (Djinni field): 3y
+English level (Djinni field): upper
+
+CHI Software looking for a highly motivated ML Engineer, who want to develop with us.
+Let's start working together...
+
+Requirements:
+
+3+ years industrial experience with ML, including training, testing, deployment, and monitoring real-time (or near real-time) machine learning models in production;
+Proven experience with modern DL techniques and Gradient Boosting Trees;
+Excellent Python coding skills;
+Proficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn);  
+Vast practical experience with tabular data and time series;
+Experience in Microservices architecture, cloud technologies, Docker, Kubernetes.
+Advantages:
+
+Experience with data pipelines / big data;
+Experience with ML “understanding” techniques: explainability, confidence, drift, etc;
+Experience designing and implementing AutoML flows/frameworks.
+Tasks:
+
+Be responsible for efficient models training, testing, deployment, and monitoring;
+Apply your scientific knowledge to analyze and collect data, identify problems, devise solutions and construct methodologies;
+Develop machine learning and deep learning models for tabular data (later: time series, NLP, CV, etc.);
+Learn and Implement cutting-edge ML algorithms;
+Create and automate data pipelines including data extraction, validation & anomaly detection, indexing, and other data-related tasks;
+Follow your project from ideation to implementation.

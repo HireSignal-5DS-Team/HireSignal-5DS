@@ -1,0 +1,254 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "51",
+ "cv_id": "cv-ad7ff412",
+ "job_id": "J2",
+ "job_title": "Data Engineer",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 36,
+ "reasons": [
+  "r1: must-have MISSING",
+  "r3: must-have MISSING",
+  "r4: must-have MISSING"
+ ],
+ "listed_flags": [
+  "r2 (must, not outcome-relevant): judge:disagrees",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000103,
+    "MISSING": 0.976278,
+    "UNCERTAIN": 0.023619
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.993
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Hands-on experience with SQL",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Programming Languages: SQL, PL/SQL, C/C++, HTML, Korn Shell, C Shell, Bash;",
+     "start": 972,
+     "end": 1047
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999482,
+    "MISSING": 0.000516,
+    "UNCERTAIN": 2e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9991
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Knowledge of Python",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 2.8e-05,
+    "MISSING": 0.995723,
+    "UNCERTAIN": 0.004249
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9991
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Experience with GCP or another cloud provider",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000171,
+    "MISSING": 0.994219,
+    "UNCERTAIN": 0.00561
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9956
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Good spoken English",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "English level: fluent",
+     "start": 51,
+     "end": 72
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999905,
+    "MISSING": 9.5e-05,
+    "UNCERTAIN": 0
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.588
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Willingness to research business logic",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000396,
+    "MISSING": 0.731891,
+    "UNCERTAIN": 0.267712
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9497
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because three must-have requirements are missing: knowledge of data warehousing and data lakes, knowledge of Python, and experience with a cloud provider. The CV shows hands-on SQL experience and good spoken English, which are met. The requirement for willingness to research business logic is not present, but it is a nice-to-have. The score is 36.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Knowledge of the general principles of Data Warehousing and Data Lakes is not found in the CV."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Programming Languages: SQL, PL/SQL, C/C++, HTML, Korn Shell, C Shell, Bash;",
+    "line": "Met: the CV lists SQL as a programming language."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Knowledge of Python is not found in the CV."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with GCP or another cloud provider is not found in the CV."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: fluent",
+    "line": "Met: the CV states the English level is fluent."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Willingness to research business logic is not mentioned in the CV."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show these required points: knowledge of the general principles of Data Warehousing and Data Lakes, knowledge of Python, and experience with GCP or another cloud provider.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [],
+  "source": "llm",
+  "info_flags": [],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [],
+  "would_be_outcome": "reject",
+  "swap": {
+   "ran": true,
+   "counterfactual": "female_arab",
+   "how": "name + pronouns added",
+   "identical_matcher_input": true,
+   "latency_s": 0.005
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.001,
+  "profile": 31.146,
+  "job": 0,
+  "match_and_judge": 8.232
+ }
+}

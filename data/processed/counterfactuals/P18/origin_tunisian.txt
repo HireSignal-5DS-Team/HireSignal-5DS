@@ -1,0 +1,17 @@
+Nationality: Tunisian
+Location: Tunis, Tunisia
+Position: Data Engineer, Data Science
+Experience years: 0.5
+English level: upper
+
+As a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights. My role encompasses a wide range of responsibilities, including:
+
+1. Data Pipeline Development: I design, develop, and maintain robust data pipelines and ETL processes to ensure accurate and timely delivery of data for various banking products and services. This involves collaborating with cross-functional teams to understand data requirements and implementing effective solutions.
+
+2. Data Modeling and Optimization: I optimize data models and database performance to enhance the efficiency and scalability of data processing operations. By writing complex SQL queries, I ensure that data is readily accessible for analysis and reporting purposes.
+
+3. Data Quality and Integrity: I am committed to ensuring data quality and integrity throughout the data lifecycle. This involves implementing data validation, cleansing, and normalization techniques to maintain high standards and accuracy.
+
+4. Collaboration and Communication: I actively collaborate with cross-functional teams, including Data Scientists, Analysts, and Software Engineers, to understand their data requirements and provide them with the necessary support. Clear and effective communication is key to ensuring alignment and successful execution of data-related projects.
+
+Working as a Data Engineer requires a combination of technical expertise, analytical skills, and a deep understanding of banking products and services. By leveraging my SQL, Python and Data Engineering skills, I contribute to the overall success of the organization by delivering accurate and actionable insights that drive strategic business decisions.

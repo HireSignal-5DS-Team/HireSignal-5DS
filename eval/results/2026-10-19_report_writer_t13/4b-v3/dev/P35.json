@@ -1,0 +1,62 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because two must-have requirements are missing. The CV shows only 2 years of software development, below the required 5 years. Experience in developing big systems with Python is not found. Asynchronous programming and performance-critical applications are unclear. The score is 17.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"Experience years: 2\", \"line\": \"Missing: the CV shows only 2 years of software development, below the required 5 years.\"}, {\"req_id\": \"r2\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: experience in developing big systems with Python is not found.\"}, {\"req_id\": \"r3\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: asynchronous programming and performance-critical applications are not clearly shown.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of AWS, Docker, or microservices in the CV.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no experience with machine learning is mentioned in the CV.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: algorithms development such as collaborative filtering or clustering is not clearly shown.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show these required points: 5 years of software development experience, and experience in developing big systems with Python.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about r3 and r6; please verify the evidence.\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because two must-have requirements are missing. The CV shows only 2 years of software development, below the required 5 years. Experience in developing big systems with Python is not found. Asynchronous programming and performance-critical applications are unclear. The score is 17.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "Experience years: 2",
+    "line": "Missing: the CV shows only 2 years of software development, below the required 5 years."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: experience in developing big systems with Python is not found."
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: asynchronous programming and performance-critical applications are not clearly shown."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no mention of AWS, Docker, or microservices in the CV."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: no experience with machine learning is mentioned in the CV."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: algorithms development such as collaborative filtering or clustering is not clearly shown."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show these required points: 5 years of software development experience, and experience in developing big systems with Python.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about r3 and r6; please verify the evidence."
+  ]
+ },
+ "source": "llm",
+ "latency_s": 7.91,
+ "peak_vram_mib": 3267,
+ "id": "P35",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

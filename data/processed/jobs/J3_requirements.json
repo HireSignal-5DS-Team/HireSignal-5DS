@@ -1,0 +1,109 @@
+{
+ "job_id": "J3",
+ "title": "ML Engineer",
+ "confirmed_by": "recruiter (sample: the gold requirement list)",
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models)",
+   "kind": "must",
+   "category": "experience",
+   "min_years": 3.0,
+   "skill_terms": [
+    "ML",
+    "training",
+    "testing",
+    "deployment",
+    "monitoring",
+    "real-time"
+   ],
+   "evidence": "3+ years industrial experience with ML, including training, testing, deployment, and monitoring real-time (or near real-time) machine learning models in production"
+  },
+  {
+   "req_id": "r2",
+   "text": "Proven experience with modern deep learning techniques and Gradient Boosting Trees",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "Gradient Boosting Trees"
+   ],
+   "evidence": "Proven experience with modern DL techniques and Gradient Boosting Trees"
+  },
+  {
+   "req_id": "r3",
+   "text": "Excellent Python coding skills",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "Python"
+   ],
+   "evidence": "Excellent Python coding skills"
+  },
+  {
+   "req_id": "r4",
+   "text": "Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn)",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "Tensorflow",
+    "Pytorch",
+    "LightGBM",
+    "Scikit-learn"
+   ],
+   "evidence": "Proficiency with ML libraries (Tensorflow, Pytorch, LightGBM, Scikit-learn)"
+  },
+  {
+   "req_id": "r5",
+   "text": "Practical experience with tabular data and time series",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "tabular data",
+    "time series"
+   ],
+   "evidence": "Vast practical experience with tabular data and time series"
+  },
+  {
+   "req_id": "r6",
+   "text": "Experience with microservices architecture, cloud technologies, Docker and Kubernetes",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "Microservices architecture",
+    "cloud technologies",
+    "Docker",
+    "Kubernetes"
+   ],
+   "evidence": "Experience in Microservices architecture, cloud technologies, Docker, Kubernetes."
+  },
+  {
+   "req_id": "r7",
+   "text": "Experience with data pipelines or big data",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "data pipelines",
+    "big data"
+   ],
+   "evidence": "Experience with data pipelines / big data"
+  },
+  {
+   "req_id": "r8",
+   "text": "Experience designing and implementing AutoML flows or frameworks",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "AutoML flows"
+   ],
+   "evidence": "Experience designing and implementing AutoML flows/frameworks."
+  }
+ ],
+ "skill_terms_source": "Job Agent terms (T06 run) aligned by source sentence, kept if in the requirement text"
+}

@@ -1,0 +1,33 @@
+{
+ "item": {
+  "id": "L04_p02_photo",
+  "file": "L04_p02_photo.jpg",
+  "source": "L04.pdf",
+  "pages": [
+   2
+  ],
+  "pair": "P52",
+  "split": "test",
+  "condition": "hard photo",
+  "job": "J4"
+ },
+ "text": "Demander à Copilot\n2 sur 2\nBlockchain (BTC/LTC/ETH/ERC20)\nNFT\nI want to work with people who is more experienced than me.\nAI project will be just great",
+ "pages": [
+  {
+   "text": "Demander à Copilot\n2 sur 2\nBlockchain (BTC/LTC/ETH/ERC20)\nNFT\nI want to work with people who is more experienced than me.\nAI project will be just great",
+   "low_trust_lines": [],
+   "stats": {
+    "agree": 15,
+    "ocr_kept": 0,
+    "vision_used": 5,
+    "ocr_dropped": 8,
+    "vision_kept_short": 1,
+    "vision_kept_supported": 6,
+    "low_trust_words": 0
+   }
+  }
+ ],
+ "min_conf": 101,
+ "merge": "vision_backbone",
+ "vision": "qwen2.5vl_3b__v1"
+}

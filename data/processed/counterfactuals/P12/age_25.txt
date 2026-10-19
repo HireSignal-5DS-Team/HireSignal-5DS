@@ -1,0 +1,43 @@
+Date of birth: 14/03/2001
+Position: Data Engineer
+Experience years: 11
+English level: intermediate
+
+•	SSIS
+•	Talend ETL
+•	SAP BODS 
+•	Oracle ODI / OBI	•	SAP BO   
+•	Power BI
+•	Qlik View/Sense
+•	SSRS
+DWH & BI Unit Manager – PayCore Payment Systems - Jun 2021 –  Working
+-	Designed, DWH architecture of Payment Management Systems, Mastercard systems and many related systems.
+-	Uses SSIS, Talend Open Studio, SAP BO/BI, Power BI
+-	Managed an agile team.
+Senior Solution Architect – MDS ap Turkey(Midis Group Inc.) - Feb 2019 – May 2021
+-	Adaptation of ETL and Business Intelligence projects.
+-	ETL/BI project in Türkiye Insurance Inc. 
+-	Consolidation project for TWF(Turkish Wealth Fund). 
+-	ETL Development project for Rotana Dubai.
+
+Founder - Fox Analytics – Jun 2019 
+-	Developed ETL processes and BI Reports any tools
+-	Served consultancy solutions and project management
+
+Enterprise Applications Manager – NETAS Telecommunication Inc. - May 2015 –  Jan 2019
+-	DWH: Project management for the creation of company DWH in SAP BODS and Oracle.
+-	Responsible for SAP BI, Power BI: Created structures in accordance with DB and DWH, developed BI dashboard. 
+-	Managed SAP R/3 and Oracle E-BS HR: Team management supporting Logistics, Finance and HR units, managment of consulting firms.
+-	Led a team in Salesforce CRM: Management of the team that develops and supports internal and external applications.
+
+Senior Software Developer - Yataş Inc. - Agu 2011 – May 2015
+-	Java ADF Developer; developed Store applications with Java within the scope of Mobile Field Sales Applications project
+-	Oracle E-BS Developer; developed Oracle Forms, OAF, PL / SQL, Workflow, Discoverer, XML Publisher.
+-	After the R12 transition was completed, developed warehouse and shop handheld terminal applications. Made improvements within the scope of Production, Sales, Purchasing, Shipping, Warehouse process improvement projects.
+-	As part of Oracle R12 Project, responsible for additional enhancements, personalized and report enhancements in the production and logistics modules.  Re-coded the applications used in the current E-BS 11.5.9 in R12.
+
+IT Project Manager – Tırsan Logistics Inc. - Nov 2009 - Agu 2011.
+-	Developed software used by the Shipping, Warehouse, Accounting, Sales and HR unit, project management, process analysis and accounting unit.
+-	Executed improvements in logistics operations and oversaw management of projects that were developed according to customer demand. 
+-	Headed the team that develops software with .Net, Java and Oracle
+-	Met new customer / project automation / integration needs in shipping and warehouse units, coordinated the project at the stage of developing B2B applications

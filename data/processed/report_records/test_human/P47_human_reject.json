@@ -1,0 +1,192 @@
+{
+ "job_title": "ML Engineer",
+ "decided_by": "human",
+ "outcome": "reject",
+ "score": 93,
+ "gate_rule": "2 review: outcome-relevant flag on a must-have",
+ "gate_reasons": [
+  "r1: must MET doubted (duration_not_in_evidence, judge:disagrees): possible false invite",
+  "r6: must MET doubted (judge:disagrees): possible false invite",
+  "decided by a recruiter after review: reject"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models)",
+   "decision": "MET",
+   "quotes": [
+    "Experienced in ML project life cycle:",
+    "data collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "duration_not_in_evidence",
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "ML",
+    "training",
+    "testing",
+    "deployment",
+    "monitoring",
+    "real-time"
+   ],
+   "min_years": 3.0,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Proven experience with modern deep learning techniques and Gradient Boosting Trees",
+   "decision": "MET",
+   "quotes": [
+    "Machine Learning\nLinear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more."
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Gradient Boosting Trees"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Excellent Python coding skills",
+   "decision": "MET",
+   "quotes": [
+    "Programming and Machine Learning Libraries:",
+    "Python, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Python"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "must",
+   "text": "Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn)",
+   "decision": "MET",
+   "quotes": [
+    "Programming and Machine Learning Libraries:",
+    "Python, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Tensorflow",
+    "Pytorch",
+    "LightGBM",
+    "Scikit-learn"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "must",
+   "text": "Practical experience with tabular data and time series",
+   "decision": "MET",
+   "quotes": [
+    "Experienced in ML project life cycle:",
+    "data collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring."
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "tabular data",
+    "time series"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "must",
+   "text": "Experience with microservices architecture, cloud technologies, Docker and Kubernetes",
+   "decision": "MET",
+   "quotes": [
+    "Cloud Services, DevOps and Big Data\nDocker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Microservices architecture",
+    "cloud technologies",
+    "Docker",
+    "Kubernetes"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r7",
+   "kind": "nice",
+   "text": "Experience with data pipelines or big data",
+   "decision": "MET",
+   "quotes": [
+    "Experience in working with distributed systems.",
+    "Cloud Services, DevOps and Big Data\nDocker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more."
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "data pipelines",
+    "big data"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r8",
+   "kind": "nice",
+   "text": "Experience designing and implementing AutoML flows or frameworks",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "AutoML flows"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P47_human_reject",
+ "pair_id": "P47",
+ "split": "test",
+ "synthetic_flags": false
+}

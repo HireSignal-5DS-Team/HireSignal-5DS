@@ -1,0 +1,9 @@
+Mohamed Ben Ali
+Pronouns: he/him
+Position: Senior ML/DL Developer
+Experience years: 11
+English level: intermediate
+
+Over 10 years of C++/Python software development experience related with medical and GIS sphere. I have an experience with PyTorch and Keras frameworks for Deep Learning. I also familiar with various GIS frameworks and tools like GDAL, rasterio, geopandas, QGIS, GEE etc.
+I have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs. 
+I also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc.

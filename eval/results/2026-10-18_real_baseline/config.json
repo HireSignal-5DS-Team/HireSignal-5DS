@@ -1,0 +1,26 @@
+{
+ "date": "2026-10-18 12:05:50",
+ "label": "real-GPU (RTX 4050 Laptop 6 GB)",
+ "command": ".venv\\Scripts\\python scripts\\eval_real.py --out eval\\results\\2026-10-18_real_baseline",
+ "llm_server": "b11139-42916d83f",
+ "gold": "data/labels/gold/requirements_gold.csv (280 rows, gold_decision only), pairs_gold.csv (provisional)",
+ "matcher": {
+  "prompt": "matcher-v1",
+  "lora_scale": 1,
+  "schema": "services/matcher/schema.json",
+  "max_tokens": 384,
+  "knowledge": "rag.bm25 k=3, query = requirement text (gold rows have no skill_terms)",
+  "validator": "v1 (evidence rules only)",
+  "logprobs": "top_logprobs=20 (confidence only, output unchanged)"
+ },
+ "profile": {
+  "prompt": "profile-v1",
+  "chunk_chars": 800,
+  "max_tokens": 768,
+  "anonymiser": "T06 fix"
+ },
+ "job": {
+  "prompt": "job-v1"
+ },
+ "tuning": "none (no setting changed on dev or test)"
+}

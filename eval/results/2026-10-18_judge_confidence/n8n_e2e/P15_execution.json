@@ -1,0 +1,287 @@
+{
+ "run": "P15",
+ "pair": "P15",
+ "job": "J2",
+ "stratum_in_pairs_csv": "partial",
+ "execution_id": "14",
+ "n8n_started": "2026-10-18 11:31:47.310",
+ "n8n_stopped": "2026-10-18 11:32:40.507",
+ "total_wall_s": 53.41,
+ "outcome": "review",
+ "score": 43,
+ "review_reasons": [
+  "match:r1:judge:disagrees",
+  "match:r2:judge:disagrees",
+  "match:r7:judge:disagrees"
+ ],
+ "info_flags": [
+  "reader:No section headings recognised (Experience, Education, ...).",
+  "profile:name_not_found"
+ ],
+ "decisions": {
+  "r1": [
+   "must",
+   "MISSING"
+  ],
+  "r2": [
+   "must",
+   "MISSING"
+  ],
+  "r3": [
+   "must",
+   "MISSING"
+  ],
+  "r4": [
+   "must",
+   "MET"
+  ],
+  "r5": [
+   "must",
+   "MET"
+  ],
+  "r6": [
+   "must",
+   "MISSING"
+  ],
+  "r7": [
+   "must",
+   "MET"
+  ]
+ },
+ "station_timings_s": {
+  "reader": 0.026,
+  "profile": 28.713,
+  "job": 6.027,
+  "match_total": 18.207,
+  "match_each": [
+   {
+    "req_id": "r1",
+    "s": 7.35
+   },
+   {
+    "req_id": "r2",
+    "s": 1.4
+   },
+   {
+    "req_id": "r3",
+    "s": 1.259
+   },
+   {
+    "req_id": "r4",
+    "s": 2.139
+   },
+   {
+    "req_id": "r5",
+    "s": 1.636
+   },
+   {
+    "req_id": "r6",
+    "s": 2.308
+   },
+   {
+    "req_id": "r7",
+    "s": 2.115
+   }
+  ]
+ },
+ "node_timings": {
+  "Webhook (CV file + job text)": [
+   {
+    "start": 1792323107318,
+    "ms": 1,
+    "status": "success"
+   }
+  ],
+  "Normalize input": [
+   {
+    "start": 1792323107320,
+    "ms": 25,
+    "status": "success"
+   }
+  ],
+  "HTTP /reader": [
+   {
+    "start": 1792323107345,
+    "ms": 42,
+    "status": "success"
+   }
+  ],
+  "HTTP /profile": [
+   {
+    "start": 1792323107387,
+    "ms": 28737,
+    "status": "success"
+   }
+  ],
+  "HTTP /job": [
+   {
+    "start": 1792323136124,
+    "ms": 6043,
+    "status": "success"
+   }
+  ],
+  "Merge": [
+   {
+    "start": 1792323142167,
+    "ms": 8,
+    "status": "success"
+   }
+  ],
+  "Split requirements": [
+   {
+    "start": 1792323142176,
+    "ms": 5,
+    "status": "success"
+   }
+  ],
+  "Loop requirements (1 at a time)": [
+   {
+    "start": 1792323142181,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792323149562,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792323150974,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792323152247,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792323154398,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792323156045,
+    "ms": 0,
+    "status": "success"
+   },
+   {
+    "start": 1792323158364,
+    "ms": 1,
+    "status": "success"
+   },
+   {
+    "start": 1792323160491,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "HTTP /match": [
+   {
+    "start": 1792323142182,
+    "ms": 1368,
+    "status": "success"
+   },
+   {
+    "start": 1792323149562,
+    "ms": 1306,
+    "status": "success"
+   },
+   {
+    "start": 1792323150975,
+    "ms": 1234,
+    "status": "success"
+   },
+   {
+    "start": 1792323152247,
+    "ms": 2113,
+    "status": "success"
+   },
+   {
+    "start": 1792323154398,
+    "ms": 1557,
+    "status": "success"
+   },
+   {
+    "start": 1792323156045,
+    "ms": 2117,
+    "status": "success"
+   },
+   {
+    "start": 1792323158365,
+    "ms": 2103,
+    "status": "success"
+   }
+  ],
+  "HTTP /judge": [
+   {
+    "start": 1792323143550,
+    "ms": 6011,
+    "status": "success"
+   },
+   {
+    "start": 1792323150868,
+    "ms": 106,
+    "status": "success"
+   },
+   {
+    "start": 1792323152209,
+    "ms": 37,
+    "status": "success"
+   },
+   {
+    "start": 1792323154360,
+    "ms": 38,
+    "status": "success"
+   },
+   {
+    "start": 1792323155955,
+    "ms": 90,
+    "status": "success"
+   },
+   {
+    "start": 1792323158163,
+    "ms": 201,
+    "status": "success"
+   },
+   {
+    "start": 1792323160468,
+    "ms": 22,
+    "status": "success"
+   }
+  ],
+  "Aggregate": [
+   {
+    "start": 1792323160491,
+    "ms": 0,
+    "status": "success"
+   }
+  ],
+  "TEMP outcome": [
+   {
+    "start": 1792323160492,
+    "ms": 7,
+    "status": "success"
+   }
+  ],
+  "Respond to Webhook": [
+   {
+    "start": 1792323160500,
+    "ms": 7,
+    "status": "success"
+   }
+  ]
+ },
+ "checks": {
+  "http_status": 200,
+  "valid_json": true,
+  "execution_status": "success",
+  "identity_values_in_private_file": 0,
+  "identity_values_found_in_execution_data": 0,
+  "raw_cv_text_in_execution_data": false,
+  "all_match_lora_scale_1": true,
+  "quotes_verified_positions": 5,
+  "uploaded_file_kept_by_n8n_binary_store": 1,
+  "changed_raw_lines_checked": 0
+ }
+}

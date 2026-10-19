@@ -1,0 +1,24 @@
+{
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MISSING",
+  "r5": "UNCERTAIN",
+  "r6": "UNCERTAIN"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "nice"
+ },
+ "outcome": "review",
+ "score": 50,
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "identical_to_base": true,
+ "ran": false,
+ "elapsed_s": 0
+}

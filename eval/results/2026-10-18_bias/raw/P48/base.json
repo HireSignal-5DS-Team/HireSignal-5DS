@@ -1,0 +1,55 @@
+{
+ "decisions": {
+  "r1": "MET",
+  "r2": "UNCERTAIN",
+  "r3": "MET",
+  "r4": "UNCERTAIN",
+  "r5": "MET",
+  "r6": "MET",
+  "r7": "MET",
+  "r8": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "must",
+  "r7": "nice",
+  "r8": "nice"
+ },
+ "outcome": "review",
+ "score": 79,
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "quotes": {
+  "r1": [
+   "Full-cycle ML product development from problem definition and gathering requirements to deployment in production systems."
+  ],
+  "r2": [
+   "As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet"
+  ],
+  "r3": [
+   "As a data analyst and domain expert, played major role in evaluation/assessment of text classification models during its' creation and improvement. Collaborated with the team of developers, communicated findings and insights through visualizations & reports in order to show system drawbacks and improvements once fixed. Technologies: python, matplotlib, seaborn, bokeh, pandas, numpy, etc.",
+   "As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems).",
+   "As a domain expert and engineer, significantly improved and refactored pivotal piece of data pipeline for search extraction. Technologies: Scala, Spark."
+  ],
+  "r4": [
+   "As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet"
+  ],
+  "r5": [
+   "As a data scientist, crunched sales prediction problem for a major FMCG company (time series forecasting). Technologies: python, pytest, pandas, LightGBM, FB Prophet"
+  ],
+  "r6": [
+   "As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems)."
+  ],
+  "r7": [
+   "As an engineer, created a micro-service system which process data from main pipeline using spark, than crawling hundred of thousands domains in order to enrich and improve processing in the main pipeline. Technologies: Docker, Kubernetes, Python, BeautifulSoup, Selenium, Scala, Apache Spark (in total 3 different subsystems).",
+   "As a domain expert and engineer, significantly improved and refactored pivotal piece of data pipeline for search extraction. Technologies: Scala, Spark."
+  ],
+  "r8": []
+ },
+ "elapsed_s": 34.27,
+ "identical_to_base": true,
+ "ran": true
+}

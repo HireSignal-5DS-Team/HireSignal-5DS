@@ -1,0 +1,24 @@
+{
+ "type": "object",
+ "additionalProperties": false,
+ "required": ["recruiter_summary", "requirements", "candidate_letter", "flags_for_recruiter"],
+ "properties": {
+  "recruiter_summary": {"type": "string", "description": "3-6 plain sentences: why this outcome"},
+  "requirements": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["req_id", "decision", "quote", "line"],
+    "properties": {
+     "req_id": {"type": "string"},
+     "decision": {"type": "string", "enum": ["MET", "MISSING", "UNCERTAIN"]},
+     "quote": {"type": "string", "description": "a verified CV quote of this requirement, or empty"},
+     "line": {"type": "string", "description": "one short line for the recruiter"}
+    }
+   }
+  },
+  "candidate_letter": {"type": "string", "description": "invite / reject: the letter; review: empty string"},
+  "flags_for_recruiter": {"type": "array", "items": {"type": "string"}}
+ }
+}

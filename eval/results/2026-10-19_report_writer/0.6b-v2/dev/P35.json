@@ -1,0 +1,69 @@
+{
+ "model": "qwen3-0.6b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 2,
+ "first_errors": [
+  "reject letter does not name missing must-have r1"
+ ],
+ "retry_errors": [
+  "reject letter does not name missing must-have r1"
+ ],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate is rejected because two must-have requirements are missing. The CV shows 5 years of experience in software development, which meets the 5-year minimum for r1, but no experience with big systems or machine learning is provided. Docker and algorithms development are unclear, and the score is 17.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"Experience years: 2\",\n      \"line\": \"Met: the CV shows 5 years of experience in software development.\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Missing: no experience with big systems or machine learning.\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"Uncertain: Docker and algorithms development are unclear.\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Not met: no AWS, Docker, or microservices experience.\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Not met: no machine learning experience.\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"Not met: no algorithms development experience.\"\n    }\n  ],\n  \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show this required point: experience with big systems or machine learning. This decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\",\n  \"flags_for_recruiter\": [\"The Matcher was unsure about Docker (r3); please check it.\"]\n}",
+  "{\n  \"recruiter_summary\": \"The candidate is rejected because two must-have requirements are missing. The CV shows 5 years of experience in software development (r1) but no experience with big systems or machine learning (r2). Docker and algorithms development are unclear (r3), and the score is 17.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"Experience years: 2\",\n      \"line\": \"Met: the CV shows 5 years of experience in software development.\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Missing: no experience with big systems or machine learning.\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"Uncertain: Docker and algorithms development are unclear.\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Not met: no AWS, Docker, or microservices experience.\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Not met: no machine learning experience.\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"Not met: no algorithms development experience.\"\n    }\n  ],\n  \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show this required point: experience with big systems or machine learning. This decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\",\n  \"flags_for_recruiter\": [\"The Matcher was unsure about Docker (r3); please check it.\"]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 0 of 3 must-have requirements are met; the score is 17. Missing must-haves: Software development: 5 years of experience or more; Developing big systems with Python: 2 years of experience or more. Unclear must-haves: Asynchronous programming and developing performance-critical applications.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Software development: 5 years of experience or more - missing (not found in CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Developing big systems with Python: 2 years of experience or more - missing (not found in CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Asynchronous programming and developing performance-critical applications - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Working with AWS, Docker and microservices - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience with Machine Learning - missing (not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "nice: Algorithms development (collaborative filtering, similarity, data normalization, clustering) - uncertain (unclear in the CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Software development: 5 years of experience or more; Developing big systems with Python: 2 years of experience or more.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r3, r6"
+  ]
+ },
+ "source": "template",
+ "latency_s": 9.58,
+ "peak_vram_mib": 4910,
+ "id": "P35",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

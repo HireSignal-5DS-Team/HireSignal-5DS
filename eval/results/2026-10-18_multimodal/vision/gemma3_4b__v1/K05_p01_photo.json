@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K05_p01_photo",
+  "file": "K05_p01_photo.jpg",
+  "source": "K04.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "CORPORATE PROJECT MANAGER\n\nCareer Overview\nSeasoned project manager driven to achieve results through strategic planning and professional relationship building. Success in developing beneficial alliances between leaders to effectively drive growth and collaboration to building strong teams with an organization ready for motivation and strong development. Effective in fostering collaboration and consultative relationships with senior management and across traditional boundaries, highlighting reflection points of technology decisions. Tech-savvy with broad experience, brings focus on “big picture” business impacts of technology projects; real costs, practical benefits, risks and contingencies. Adaptable – skilled at supporting individuals, building systems, handling problems, as well as managing teams, training developing strategies, policies and processes.\n\nQualifications\n* Strategic Planning; Visioning & Tactical Execution Planning & Scheduling\n* SDLc Methodology & Change Software & Application Lifecycle Management\n* Management\n* SLA Building & Resource Allocation Expense Budgeting & Forecasting\n* Team-Building & Front-Line Leadership Technology Upgrades & Testing\n* Led highly visible initiatives to develop, define and manage the execution of several ground up IT infrastructure and application integrations through corporate acquisitions and businesses while successfully building resources, timelines and budgets.\n* Complete Project Management Life cycle including Planning, Execution, Monitor & Control and closure.\n* Document business expectations, benchmark standards and develop guidelines.\n* Interfaced with key stakeholders and project team members to prioritize requirements and information technology needs.\n* Successfully lead training enhancement classes to improve sales knowledge and people skills for workforce access and advancement. Developed materials to successfully train associates.\n* Provide oversight of yearly and monthly budget planning activities providing forecasting and day-to-day expense management keeping proper budget and tracker of expenses.\n* Direct all information technology and network system deployment and maintenance including all IT infrastructure, wireless communications, PC systems, network infrastructure and mobile environment.\n* Assessing and recommending technology systems solution based on operational needs while ensuring compliance with corporate standards. Interfaced with outside vendors to source materials.\n\nWork Experience\n01/04 to 01/2016\nCorporate Project Manager Company Name\n\n* Manage direct reports supporting multiple locations with annual revenues of $2M.\n* Facilitate project direction, direction, implementation, support, and development of business applications to Enterprise Resource Planning (ERP), Facilities Management, Financial, Sales and Procurement.\n* Developed new process workflows to ensure order accuracy and delivery of a wish located with legal targeting increase in monthly products by 20%.\n* Centralized disparate support documentation for all business application and solutions.\n* Developed comprehensive assets for all business application and solutions.\n* Created strong documentation to support project teams and stakeholders.\n* Demonstrated ability to lead and manage projects within budget and schedule.\n\n01/22/2008 to 01/2014\nSenior Project Manager Company Name\n\n* Managed multiple projects concurrently with budgets ranging from $500K to $2M.\n* Developed and implemented project management methodologies and processes.\n* Led cross-functional teams to deliver projects on time and within budget.\n* Provided project management support to senior management.\n* Identified and mitigated project risks.\n* Created and maintained project documentation.\n* Successfully delivered over 30 projects.\n\n01/2006 to 01/2008\nProject Coordinator Company Name\n\n* Provided administrative and project support to project managers.\n* Created and maintained project documentation.\n* Assisted with project scheduling and budgeting.\n* Tracked project progress and reported on status.\n* Supported project team meetings.",
+   "model": "gemma3:4b",
+   "latency_s": 18.26,
+   "eval_count": 719,
+   "done_reason": "stop",
+   "peak_vram_mib": 3889
+  }
+ ]
+}

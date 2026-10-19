@@ -1,0 +1,60 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because a must-have requirement is missing. The candidate has experience with data warehousing, SQL, Python, and good spoken English, which all meet the requirements. However, experience with GCP or another cloud provider is not present in the CV. The score is 77.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Designed and implemented a BI project(DWH, ETL, Data visualization) from scratch.\", \"line\": \"Met: the CV references data warehousing and ETL in a BI project.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL\", \"line\": \"Met: the CV lists multiple DBMS including SQL-based systems.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"Programming languages: Python, Ruby, JS\", \"line\": \"Met: the CV explicitly lists Python as a programming language.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Experience with GCP or another cloud provider is not mentioned.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"English level: upper\", \"line\": \"Met: the CV states an upper level of spoken English.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: willingness to research business logic is not clearly stated.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show this required point: experience with GCP or another cloud provider.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": []}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because a must-have requirement is missing. The candidate has experience with data warehousing, SQL, Python, and good spoken English, which all meet the requirements. However, experience with GCP or another cloud provider is not present in the CV. The score is 77.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Designed and implemented a BI project(DWH, ETL, Data visualization) from scratch.",
+    "line": "Met: the CV references data warehousing and ETL in a BI project."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL",
+    "line": "Met: the CV lists multiple DBMS including SQL-based systems."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Programming languages: Python, Ruby, JS",
+    "line": "Met: the CV explicitly lists Python as a programming language."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with GCP or another cloud provider is not mentioned."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: upper",
+    "line": "Met: the CV states an upper level of spoken English."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: willingness to research business logic is not clearly stated."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show this required point: experience with GCP or another cloud provider.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": []
+ },
+ "source": "llm",
+ "latency_s": 7.83,
+ "peak_vram_mib": 3267,
+ "id": "P46",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

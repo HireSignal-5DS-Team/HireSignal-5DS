@@ -1,0 +1,311 @@
+{
+ "label": "real-GPU (Matcher + Judge); 12 new pairs: gold rows unchecked = AI pre-labels (provisional)",
+ "gold_changes_vs_saved_rows": [
+  "P06 r7: MET -> UNCERTAIN",
+  "P44 r1: MET -> UNCERTAIN",
+  "P45 r1: MET -> UNCERTAIN",
+  "P46 r1: MET -> UNCERTAIN"
+ ],
+ "unchecked_gold_rows": 0,
+ "matcher_variant4": {
+  "new_12": {
+   "dev": {
+    "n": 42,
+    "accuracy": 0.69,
+    "macro_f1": 0.567,
+    "f1_per_class": {
+     "MET": 0.836,
+     "MISSING": 0.615,
+     "UNCERTAIN": 0.25
+    },
+    "false_met": 4,
+    "confusion_gold_x_pred": {
+     "MET": {
+      "MET": 23,
+      "MISSING": 1,
+      "UNCERTAIN": 4
+     },
+     "MISSING": {
+      "MET": 0,
+      "MISSING": 4,
+      "UNCERTAIN": 2
+     },
+     "UNCERTAIN": {
+      "MET": 4,
+      "MISSING": 2,
+      "UNCERTAIN": 2
+     }
+    },
+    "uncertain_recall": 0.25,
+    "review_load": 0.619
+   },
+   "test": {
+    "n": 42,
+    "accuracy": 0.81,
+    "macro_f1": 0.705,
+    "f1_per_class": {
+     "MET": 0.873,
+     "MISSING": 0.842,
+     "UNCERTAIN": 0.4
+    },
+    "false_met": 4,
+    "confusion_gold_x_pred": {
+     "MET": {
+      "MET": 24,
+      "MISSING": 2,
+      "UNCERTAIN": 1
+     },
+     "MISSING": {
+      "MET": 0,
+      "MISSING": 8,
+      "UNCERTAIN": 0
+     },
+     "UNCERTAIN": {
+      "MET": 4,
+      "MISSING": 1,
+      "UNCERTAIN": 2
+     }
+    },
+    "uncertain_recall": 0.286,
+    "review_load": 0.714
+   },
+   "all": {
+    "n": 84,
+    "accuracy": 0.75,
+    "macro_f1": 0.638,
+    "f1_per_class": {
+     "MET": 0.855,
+     "MISSING": 0.75,
+     "UNCERTAIN": 0.308
+    },
+    "false_met": 8,
+    "confusion_gold_x_pred": {
+     "MET": {
+      "MET": 47,
+      "MISSING": 3,
+      "UNCERTAIN": 5
+     },
+     "MISSING": {
+      "MET": 0,
+      "MISSING": 12,
+      "UNCERTAIN": 2
+     },
+     "UNCERTAIN": {
+      "MET": 8,
+      "MISSING": 3,
+      "UNCERTAIN": 4
+     }
+    },
+    "uncertain_recall": 0.267,
+    "review_load": 0.667
+   }
+  },
+  "all_52": {
+   "dev": {
+    "n": 182,
+    "accuracy": 0.742,
+    "macro_f1": 0.651,
+    "f1_per_class": {
+     "MET": 0.772,
+     "MISSING": 0.843,
+     "UNCERTAIN": 0.339
+    },
+    "false_met": 10,
+    "confusion_gold_x_pred": {
+     "MET": {
+      "MET": 39,
+      "MISSING": 6,
+      "UNCERTAIN": 7
+     },
+     "MISSING": {
+      "MET": 2,
+      "MISSING": 86,
+      "UNCERTAIN": 15
+     },
+     "UNCERTAIN": {
+      "MET": 8,
+      "MISSING": 9,
+      "UNCERTAIN": 10
+     }
+    },
+    "uncertain_recall": 0.37,
+    "review_load": 0.385
+   },
+   "test": {
+    "n": 182,
+    "accuracy": 0.769,
+    "macro_f1": 0.661,
+    "f1_per_class": {
+     "MET": 0.804,
+     "MISSING": 0.87,
+     "UNCERTAIN": 0.308
+    },
+    "false_met": 13,
+    "confusion_gold_x_pred": {
+     "MET": {
+      "MET": 45,
+      "MISSING": 4,
+      "UNCERTAIN": 5
+     },
+     "MISSING": {
+      "MET": 2,
+      "MISSING": 87,
+      "UNCERTAIN": 11
+     },
+     "UNCERTAIN": {
+      "MET": 11,
+      "MISSING": 9,
+      "UNCERTAIN": 8
+     }
+    },
+    "uncertain_recall": 0.286,
+    "review_load": 0.423
+   },
+   "all": {
+    "n": 364,
+    "accuracy": 0.755,
+    "macro_f1": 0.656,
+    "f1_per_class": {
+     "MET": 0.789,
+     "MISSING": 0.856,
+     "UNCERTAIN": 0.324
+    },
+    "false_met": 23,
+    "confusion_gold_x_pred": {
+     "MET": {
+      "MET": 84,
+      "MISSING": 10,
+      "UNCERTAIN": 12
+     },
+     "MISSING": {
+      "MET": 4,
+      "MISSING": 173,
+      "UNCERTAIN": 26
+     },
+     "UNCERTAIN": {
+      "MET": 19,
+      "MISSING": 18,
+      "UNCERTAIN": 18
+     }
+    },
+    "uncertain_recall": 0.327,
+    "review_load": 0.404
+   }
+  }
+ },
+ "t07_rereport_j2r6_nice": {
+  "dev_baseline_macro_f1": 0.555,
+  "table": [
+   {
+    "tau_conf": 0.6,
+    "dev_macro_f1": 0.605,
+    "dev_accuracy": 0.75
+   },
+   {
+    "tau_conf": 0.65,
+    "dev_macro_f1": 0.617,
+    "dev_accuracy": 0.75
+   },
+   {
+    "tau_conf": 0.7,
+    "dev_macro_f1": 0.642,
+    "dev_accuracy": 0.757
+   },
+   {
+    "tau_conf": 0.72,
+    "dev_macro_f1": 0.642,
+    "dev_accuracy": 0.757
+   },
+   {
+    "tau_conf": 0.75,
+    "dev_macro_f1": 0.621,
+    "dev_accuracy": 0.736
+   },
+   {
+    "tau_conf": 0.8,
+    "dev_macro_f1": 0.619,
+    "dev_accuracy": 0.714
+   },
+   {
+    "tau_conf": 0.85,
+    "dev_macro_f1": 0.609,
+    "dev_accuracy": 0.7
+   },
+   {
+    "tau_conf": 0.9,
+    "dev_macro_f1": 0.591,
+    "dev_accuracy": 0.65
+   },
+   {
+    "tau_conf": 0.95,
+    "dev_macro_f1": 0.566,
+    "dev_accuracy": 0.607
+   }
+  ],
+  "best": {
+   "tau_conf": 0.7,
+   "dev_macro_f1": 0.642,
+   "dev_accuracy": 0.757
+  },
+  "test_at_0.72": {
+   "n": 140,
+   "accuracy": 0.757,
+   "macro_f1": 0.632,
+   "f1_per_class": {
+    "MET": 0.737,
+    "MISSING": 0.873,
+    "UNCERTAIN": 0.286
+   },
+   "false_met": 9,
+   "confusion_gold_x_pred": {
+    "MET": {
+     "MET": 21,
+     "MISSING": 2,
+     "UNCERTAIN": 4
+    },
+    "MISSING": {
+     "MET": 2,
+     "MISSING": 79,
+     "UNCERTAIN": 11
+    },
+    "UNCERTAIN": {
+     "MET": 7,
+     "MISSING": 8,
+     "UNCERTAIN": 6
+    }
+   },
+   "uncertain_recall": 0.286,
+   "review_load": 0.336
+  },
+  "test_baseline": {
+   "n": 140,
+   "accuracy": 0.793,
+   "macro_f1": 0.619,
+   "f1_per_class": {
+    "MET": 0.742,
+    "MISSING": 0.885,
+    "UNCERTAIN": 0.231
+   },
+   "false_met": 12,
+   "confusion_gold_x_pred": {
+    "MET": {
+     "MET": 23,
+     "MISSING": 4,
+     "UNCERTAIN": 0
+    },
+    "MISSING": {
+     "MET": 5,
+     "MISSING": 85,
+     "UNCERTAIN": 2
+    },
+    "UNCERTAIN": {
+     "MET": 7,
+     "MISSING": 11,
+     "UNCERTAIN": 3
+    }
+   },
+   "uncertain_recall": 0.143,
+   "review_load": 0.336
+  }
+ }
+}

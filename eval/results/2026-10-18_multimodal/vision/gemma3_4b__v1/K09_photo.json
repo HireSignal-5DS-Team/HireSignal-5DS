@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K09_photo",
+  "file": "K09_photo.jpg",
+  "source": "K04.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "Education and Training\nBachelor of Science : Computers and Information Technology UNIVERSITY OF PHOENIX ¼ City, State Computers and Information Technology\n\nAssociates of Arts : Finance and Business Administration LAKE SUMTER COMMUNITY COLLEGE ¼ City, State Finance and Business Administration 2016\n\nITIL Foundation Course\nMicrosoft Certified Professional (MCP), CompTIA A+, CompTIA N+\n\nSkills\nA+ acquisitions, backup, budget planning, Budgeting, budgets, business development, change management, conversion decision making, delivery, direction, disaster planning documentation, ERP, Enterprise Resource Planning, Facilities Management, Financials, focus, Forecasting, help desk, information technology, ITIL, Leadership, Team-Building, managing materials, access, Microsoft Certified Professional, MCP, network, operations management, organizational, PC systems, people skills, policies, POS, process design, Procurement, Project Management, proposal development, sales, Scheduling, SDLC, SLA, strategic, Strategic Planning, technical support, user training, training material, Upgrades, Windows server, workflow",
+   "model": "gemma3:4b",
+   "latency_s": 8.68,
+   "eval_count": 209,
+   "done_reason": "stop",
+   "peak_vram_mib": 3889
+  }
+ ]
+}

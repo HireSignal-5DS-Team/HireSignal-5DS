@@ -1,0 +1,62 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is invited because the score of 94 meets the threshold of 85. All must-have requirements are met: 12 years of backend development experience, 2+ years of Python-based system development, and experience with asynchronous programming and performance-critical applications. The candidate also meets the nice-to-have requirements for AWS, Docker, and microservices, and has experience with machine learning. However, algorithms development is uncertain due to lack of clear evidence.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"More than 12+ years of experience working in Backend development:\", \"line\": \"Met: the CV shows 12 years of backend development experience.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)\", \"line\": \"Met: the CV explicitly mentions Python development with FastAPI, asyncio, and other relevant frameworks.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)\", \"line\": \"Met: the CV references high-load backend systems with 15k+ rps and 60k+ connections, indicating experience with performance-critical applications.\"}, {\"req_id\": \"r4\", \"decision\": \"MET\", \"quote\": \"Implemented LocationBased Social Network architecture, API and microservices.\", \"line\": \"Met: the CV includes experience with microservices and API architecture in a location-based social network.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"- Implemented an advertising system\", \"line\": \"Met: the CV mentions implementation of an advertising system, indicating machine learning experience.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: no evidence is provided about algorithms development, such as collaborative filtering or clustering.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nWe are inviting you to the next stage of the Python BackEnd Developer process. Your experience in backend development, Python, and high-performance systems strongly aligns with the role.\\n\\nYou are welcome to proceed with the interview process.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about algorithms development (r6); please verify the candidate's experience in this area.\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is invited because the score of 94 meets the threshold of 85. All must-have requirements are met: 12 years of backend development experience, 2+ years of Python-based system development, and experience with asynchronous programming and performance-critical applications. The candidate also meets the nice-to-have requirements for AWS, Docker, and microservices, and has experience with machine learning. However, algorithms development is uncertain due to lack of clear evidence.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "More than 12+ years of experience working in Backend development:",
+    "line": "Met: the CV shows 12 years of backend development experience."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)",
+    "line": "Met: the CV explicitly mentions Python development with FastAPI, asyncio, and other relevant frameworks."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)",
+    "line": "Met: the CV references high-load backend systems with 15k+ rps and 60k+ connections, indicating experience with performance-critical applications."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Implemented LocationBased Social Network architecture, API and microservices.",
+    "line": "Met: the CV includes experience with microservices and API architecture in a location-based social network."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "- Implemented an advertising system",
+    "line": "Met: the CV mentions implementation of an advertising system, indicating machine learning experience."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: no evidence is provided about algorithms development, such as collaborative filtering or clustering."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nWe are inviting you to the next stage of the Python BackEnd Developer process. Your experience in backend development, Python, and high-performance systems strongly aligns with the role.\n\nYou are welcome to proceed with the interview process.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about algorithms development (r6); please verify the candidate's experience in this area."
+  ]
+ },
+ "source": "llm",
+ "latency_s": 9.66,
+ "peak_vram_mib": 3267,
+ "id": "P50",
+ "outcome": "invite",
+ "synthetic_flags": false
+}

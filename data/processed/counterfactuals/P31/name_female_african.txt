@@ -1,0 +1,11 @@
+Ngozi Okonkwo
+Pronouns: she/her
+Position: Python/Django full-stack web developer
+Experience years: 5
+English level: fluent
+
+- Lead redesign and optimization of backend and deployment for two legacy projects in 3-4 member teams. 
+- Developed a custom full-text search with complex ranking logics. 
+- Implemented complex filter systems.
+I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-sized websites. I have expertise in building projects from scratch and improving legacy codebases concerning best practices. Excellent communication skills help me facilitate teamwork, mentor junior developers, and transform ideas into business value.
+I appreciate challenging tasks, good planning, and healthy corporate culture. I would prefer to work in product companies.

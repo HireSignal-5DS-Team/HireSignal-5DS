@@ -1,0 +1,159 @@
+{
+ "job_title": "Data Scientist",
+ "decided_by": "human",
+ "outcome": "reject",
+ "score": 27,
+ "gate_rule": "0 review: CV image too poor to decide",
+ "gate_reasons": [
+  "pair: reader:low_confidence_or_little_text",
+  "decided by a recruiter after review: reject"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Data Science: 4 years of experience or more",
+   "decision": "MET",
+   "quotes": [
+    "I have experience with cross-platform development of desktop applications for Windows and Mac OS X using C++ and Qt Framework. I also have experience in embedded development, especially for ARM STM32 MCUs.",
+    "I also successfully participated in many machine learning and classical algorithm competitions at Kaggle, crowdanalytix, AIcrowd, TopCoder, Google Hashcode, ACM ICPC etc."
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "duration_not_in_evidence",
+    "judge:disagrees"
+   ],
+   "skill_terms": [],
+   "min_years": 4.0,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Good knowledge of probability theory and statistics",
+   "decision": "UNCERTAIN",
+   "quotes": [],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": true,
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "skill_terms": [
+    "probability theory",
+    "statistics"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Understanding of Bayesian methods, time series analysis or sensor signal processing",
+   "decision": "UNCERTAIN",
+   "quotes": [],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": true,
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "skill_terms": [
+    "Bayesian methods",
+    "time series analysis",
+    "sensor signal processing"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "must",
+   "text": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Pyro",
+    "PyMC3",
+    "JAGS"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "must",
+   "text": "Experience with cloud (Amazon SageMaker)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Amazon SageMaker"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "must",
+   "text": "Experience with PySpark",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "PySpark"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r7",
+   "kind": "must",
+   "text": "Strong working knowledge of SQL",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "SQL"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r8",
+   "kind": "nice",
+   "text": "Ph.D. in Mathematics",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "late",
+  "review_reasons": [
+   "reader:low_confidence_or_little_text"
+  ]
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P01_photo_flag_human_reject",
+ "pair_id": "P01",
+ "split": "dev",
+ "synthetic_flags": true
+}

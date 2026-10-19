@@ -1,0 +1,49 @@
+{
+  "cv": "p02_fr_classic",
+  "language": "fr",
+  "must_hide": [
+    {
+      "kind": "NAME",
+      "value": "Ines Trabelsi"
+    },
+    {
+      "kind": "ADDRESS",
+      "value": "5 avenue Habib Bourguiba"
+    },
+    {
+      "kind": "ADDRESS",
+      "value": "2080 Ariana"
+    },
+    {
+      "kind": "PHONE",
+      "value": "98 765 432"
+    },
+    {
+      "kind": "EMAIL",
+      "value": "ines.trabelsi@yahoo.fr"
+    },
+    {
+      "kind": "DOB",
+      "value": "4 mars 1997"
+    },
+    {
+      "kind": "NATIONALITY",
+      "value": "Tunisienne"
+    },
+    {
+      "kind": "MARITAL",
+      "value": "Mariée"
+    }
+  ],
+  "other_people": [],
+  "must_keep": [
+    "Telnet, Tunis (2020 – 2024)",
+    "4 ans d'expérience",
+    "Kubernetes",
+    "GitLab CI",
+    "INSAT, 2020",
+    "Terraform",
+    "Anglais (B2)",
+    "Ingénieure DevOps"
+  ]
+}

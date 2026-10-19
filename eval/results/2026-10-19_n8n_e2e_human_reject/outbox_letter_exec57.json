@@ -1,0 +1,310 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "57",
+ "cv_id": "cv-9fdd1f7d",
+ "job_id": "J4",
+ "job_title": "Python BackEnd Developer",
+ "outcome": "review",
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "score": 78,
+ "reasons": [
+  "r2: must MET doubted (judge:disagrees): possible false invite",
+  "r3: must MET doubted (judge:disagrees): possible false invite"
+ ],
+ "listed_flags": [
+  "r4 (nice): match:low_confidence",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "human",
+ "review_form_url": "http://localhost:5678/form-waiting/57?signature=b26ea74e7b2f25e9584017cb6760a0c23daeeab9b3416a8ca1bcfe48f12c04b4",
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Software development: 5 years of experience or more",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "I have 10 years of experience in web application development.",
+     "start": 151,
+     "end": 212
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999718,
+    "MISSING": 0.000282,
+    "UNCERTAIN": 0
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.978
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "I have 10 years of experience in web application development.",
+     "start": 151,
+     "end": 212
+    },
+    {
+     "quote": "Project \"Business Process System\"",
+     "start": 460,
+     "end": 493
+    },
+    {
+     "quote": "Role: Fullstack developer",
+     "start": 494,
+     "end": 519
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.995445,
+    "MISSING": 0.004529,
+    "UNCERTAIN": 0.000026
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9889
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Project \"Business Process System\"",
+     "start": 460,
+     "end": 493
+    },
+    {
+     "quote": "Role: Fullstack developer",
+     "start": 494,
+     "end": 519
+    },
+    {
+     "quote": "Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)",
+     "start": 520,
+     "end": 645
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.97392,
+    "MISSING": 0.024868,
+    "UNCERTAIN": 0.001211
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.988
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Working with AWS, Docker and microservices",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "MET",
+   "basis": "ambiguous",
+   "quotes": [
+    {
+     "quote": "Project \"Backend of Web service for recommendation system\"",
+     "start": 832,
+     "end": 890
+    },
+    {
+     "quote": "Role: Backend developer",
+     "start": 679,
+     "end": 702
+    },
+    {
+     "quote": "Technologies: Python (Flask), SQLAlchemy, PostgreSQL, REST, Git, Docker, Celery, AWS, CI/CD",
+     "start": 915,
+     "end": 1006
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.683624,
+    "MISSING": 0.282063,
+    "UNCERTAIN": 0.034313
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Experience with Machine Learning",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000223,
+    "MISSING": 0.994664,
+    "UNCERTAIN": 0.005113
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9991
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.11949,
+    "MISSING": 0.331429,
+    "UNCERTAIN": 0.54908
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is sent for review because two must-have requirements were met with uncertainty by the automated system, raising a possible false invite. The candidate has 10 years of web application development, which meets the 5-year software development requirement. Experience with Python in big systems is supported by evidence, but the system doubted it. Asynchronous programming and performance-critical applications are mentioned in the CV, but the system also doubted this. The score is 78.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "I have 10 years of experience in web application development.",
+    "line": "Met: the CV shows 10 years of experience in web application development."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Project \"Business Process System\"",
+    "line": "Met: the CV mentions a project in a fullstack role with Python, indicating experience in big systems."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)",
+    "line": "Met: the CV lists technologies including Celery and Channels, indicating experience with asynchronous programming and performance-critical applications."
+   },
+   {
+    "req_id": "r4",
+    "decision": "UNCERTAIN",
+    "quote": "Project \"Backend of Web service for recommendation system\"",
+    "line": "Uncertain: the CV mentions Docker and AWS in a backend project, but the Matcher was unsure about the specific experience with microservices and Docker."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: the CV does not mention any experience with Machine Learning."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: the CV does not mention algorithms development such as collaborative filtering or clustering."
+   }
+  ],
+  "candidate_letter": "",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about Docker and microservices (r4) in the backend project; please verify the candidate's experience."
+  ],
+  "source": "llm",
+  "info_flags": [],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [],
+  "would_be_outcome": "review",
+  "swap": {
+   "ran": false,
+   "skipped": "gate would answer review: a person reviews it anyway"
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.001,
+  "profile": 52.908,
+  "job": 0,
+  "match_and_judge": 10.564
+ },
+ "final_decision": "reject",
+ "human_note": "T13 e2e: human reject after review",
+ "decided_at": "2026-10-19T05:24:23.043Z",
+ "human_report": {
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After a review by our team, we will not move forward with it.\n\nIf you have questions about this decision, simply reply to this message.\n\nKind regards",
+  "source": "template",
+  "info_flags": [
+   "report:template_fallback"
+  ]
+ },
+ "letter": "Dear candidate,\n\nThank you for your application. After a review by our team, we will not move forward with it.\n\nIf you have questions about this decision, simply reply to this message.\n\nKind regards"
+}

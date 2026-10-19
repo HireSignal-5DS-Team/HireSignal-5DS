@@ -1,0 +1,1 @@
+scale-0 (LoRA loaded) vs plain server (no LoRA): identical raw output 30/30, identical decision 30/30

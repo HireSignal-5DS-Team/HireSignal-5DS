@@ -1,0 +1,132 @@
+{
+ "job_title": "Data Engineer",
+ "decided_by": "gate",
+ "outcome": "reject",
+ "score": 82,
+ "gate_rule": "1 reject: must-have MISSING",
+ "gate_reasons": [
+  "r1: must-have MISSING"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Data Warehousing",
+    "Data Lakes"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Hands-on experience with SQL",
+   "decision": "MET",
+   "quotes": [
+    "- Filtering data in the database by using SQL"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "SQL"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Knowledge of Python",
+   "decision": "MET",
+   "quotes": [
+    "Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)",
+    "Contribution to local support automation projects (Developing Cloud Functions)"
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [
+    "evidence_not_in_cv"
+   ],
+   "skill_terms": [
+    "Python"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "must",
+   "text": "Experience with GCP or another cloud provider",
+   "decision": "MET",
+   "quotes": [
+    "Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "evidence_not_in_cv",
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "GCP"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "must",
+   "text": "Good spoken English",
+   "decision": "MET",
+   "quotes": [
+    "English level: fluent"
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "English"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "nice",
+   "text": "Willingness to research business logic",
+   "decision": "MET",
+   "quotes": [
+    "On my previous positions I have been mostly working as an Intern and a Junior Specialist. Want to develop myself as a Cloud Data Engineer (either with AWS or GCP) and Data Architect. Want to learn more about the Hadoop ecosystem, Stream Processing, MLOps and Cloud Native solutions for Big Data."
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P16",
+ "pair_id": "P16",
+ "split": "test",
+ "synthetic_flags": false
+}

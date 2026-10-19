@@ -1,0 +1,307 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "37",
+ "cv_id": "cv-277f7530",
+ "job_id": "J4",
+ "job_title": "Python BackEnd Developer",
+ "outcome": "invite",
+ "rule": "3 invite: all must-haves MET, score >= t_invite",
+ "score": 94,
+ "reasons": [
+  "score 94 >= 85"
+ ],
+ "listed_flags": [
+  "r4 (nice): judge:disagrees",
+  "r5 (nice): judge:disagrees",
+  "r6 (nice): match:low_confidence",
+  "r3 (must, not outcome-relevant): judge:disagrees",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "message": null,
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Software development: 5 years of experience or more",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "More than 12+ years of experience working in Backend development:",
+     "start": 989,
+     "end": 1054
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999742,
+    "MISSING": 0.000258,
+    "UNCERTAIN": 0
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.4582
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "More than 12+ years of experience working in Backend development:",
+     "start": 989,
+     "end": 1054
+    },
+    {
+     "quote": "Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)",
+     "start": 1057,
+     "end": 1117
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999346,
+    "MISSING": 0.00065,
+    "UNCERTAIN": 4e-06
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.64
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)",
+     "start": 102,
+     "end": 209
+    },
+    {
+     "quote": "Developing platform for manage social media reputation (working with instagram, Facebook and other social networks API).",
+     "start": 384,
+     "end": 504
+    },
+    {
+     "quote": "Implemented platform for children's smartwatches",
+     "start": 507,
+     "end": 555
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999803,
+    "MISSING": 0.000196,
+    "UNCERTAIN": 1e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9061
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Working with AWS, Docker and microservices",
+   "kind": "nice",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "- Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)",
+     "start": 100,
+     "end": 209
+    },
+    {
+     "quote": "- Implemented CallCenter system based on Asterisk which processes 200+ calls at one moment.",
+     "start": 210,
+     "end": 301
+    },
+    {
+     "quote": "- Implemented LocationBased Social Network architecture, API and microservices.",
+     "start": 302,
+     "end": 381
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999899,
+    "MISSING": 9.9e-05,
+    "UNCERTAIN": 2e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9978
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Experience with Machine Learning",
+   "kind": "nice",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "- Implemented an advertising system",
+     "start": 780,
+     "end": 815
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.86459,
+    "MISSING": 0.061796,
+    "UNCERTAIN": 0.073614
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9901
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.004802,
+    "MISSING": 0.640074,
+    "UNCERTAIN": 0.355124
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is invited for the Python BackEnd Developer role because the score of 94 meets the threshold of 85. All must-have requirements are met: 12 years of backend development experience, 2+ years of Python-based system development, and experience with asynchronous programming and performance-critical applications. The candidate also meets all nice-to-have requirements, except for algorithms development, which is marked as uncertain. No must-have requirements are missing.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "More than 12+ years of experience working in Backend development:",
+    "line": "Met: the CV shows 12 years of backend development experience."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Python (FastAPI, asyncio, Django/DRF, Flask, Celery, gevent)",
+    "line": "Met: the CV explicitly mentions Python development with FastAPI, asyncio, and other relevant frameworks."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Implemented high-load backend for taxi drivers and clients 15k+ rps/60k+ connections(API and Microservices)",
+    "line": "Met: the CV includes evidence of high-load backend systems with 15k+ rps and 60k+ connections."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Implemented LocationBased Social Network architecture, API and microservices.",
+    "line": "Met: the CV mentions work with microservices and API architecture in a location-based social network."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "- Implemented an advertising system",
+    "line": "Met: the CV references an advertising system, indicating experience with machine learning applications."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: no explicit mention of algorithms development such as collaborative filtering or clustering."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nWe are pleased to invite you to the next stage of the Python BackEnd Developer process. Your experience in backend development, Python, and high-performance systems strongly aligns with the role.\n\nYou are welcome to proceed with the interview process.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about algorithms development (r6); please verify if this is a critical gap."
+  ],
+  "source": "llm",
+  "info_flags": [],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [],
+  "would_be_outcome": "invite",
+  "swap": {
+   "ran": true,
+   "counterfactual": "female_arab",
+   "how": "name + pronouns added",
+   "identical_matcher_input": true,
+   "latency_s": 0.009
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.027,
+  "profile": 39.737,
+  "job": 0,
+  "match_and_judge": 12.847
+ }
+}

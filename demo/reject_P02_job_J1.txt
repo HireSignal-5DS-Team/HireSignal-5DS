@@ -1,0 +1,40 @@
+Djinni job id: 617ef5c1-7b6c-5ef6-b0bb-9937e5879294
+Position: Data Scientist
+Experience (Djinni field): 5y
+English level (Djinni field): intermediate
+
+We develop a proactive approach, based on statistical analyses and predictive modeling, to forecast risks and provide recommendations to mitigate these uncertainties for the Fuel Supply chain. 
+
+**Responsibilities:** 
+
+Pro-active, self-managed, able to work with no clear requirements
+Drive the collection, cleaning, processing and analysis of new and existing data sources.
+Communicate with business stakeholders to clarify their requirements and present the teamwork results
+
+**Requirements:**
+
+Data scientist with 4+ years of experience
+Good knowledge of the probability theory and statistics
+Understanding of Bayesian methods, time series analysis, sensor signal processing
+Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar)
+Experience with cloud (Amazon SageMaker) is required 
+Experience with PySpark is required
+Hands-on experience with data preparation, cleansing, feature engineering, and visualization 
+Strong working knowledge of SQL, Teradata preferred
+Good communication skills and interpersonal skills.
+Experience in working across different global cultures a plus.
+Ph.D. in Mathematics will be a plus.
+
+**We offer:**
+
+Opportunity to work on bleeding-edge projects
+Work with a highly motivated and dedicated team
+Flexible schedule
+Medical insurance
+Benefits program
+Corporate social events
+Professional development opportunities
+
+**About us:**
+
+Grid Dynamics is the engineering services company known for transformative, mission-critical cloud solutions for retail, finance and technology sectors. We architected some of the busiest e-commerce services on the Internet and have never had an outage during the peak season. Founded in 2006 and headquartered in San Ramon, California with offices throughout the US and Eastern Europe, we focus on big data analytics, scalable omnichannel services, DevOps, and cloud enablement.

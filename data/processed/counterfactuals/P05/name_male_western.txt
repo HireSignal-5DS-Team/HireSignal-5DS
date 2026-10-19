@@ -1,0 +1,11 @@
+Thomas Becker
+Pronouns: he/him
+Position: Senior Data Scientist
+Experience years: 3
+English level: pre
+
+I work as a data scientist for 3 years in product IT company.I did different types of tasks.Most of my responsibilities were сollection, processing and preliminary analysis of data.
+Formulation and testing of statistical hypotheses, building models, both based on classical statistical methods and ML algorithms.
+Improvement of ready-made mathematical models.
+Optimization, implementation and further support in production of mathematical models.
+Hands-on experience and a good understanding of various machine learning algorithms. Knowledge of probability theory and higher mathematics, strong analytical skills.

@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K08_p01_photo",
+  "file": "K08_p01_photo.jpg",
+  "source": "K01.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "This is a resume for a Branch Chief Information Technology Specialist. The resume highlights the candidate's experience and skills in managing and evaluating multiple enterprise-level IT programs, developing and maintaining effective working relationships with various stakeholders, and conducting research and recommending innovative approaches to resolve major IT problems. The candidate has a strong background in cybersecurity, including developing detailed operations plans and operations orders supporting cyber requirements at the strategic, operational, and tactical levels of cyber warfare. The candidate has also worked with the Defense Information Systems Agency and other US Government partners to develop and implement directives for Global Information Grid (GIG) operations. The candidate has a strong understanding of cybersecurity and has provided expert analysis of ongoing NetOps events, malicious activity, and trend analysis. The candidate has also developed operational plans and orders to counter malicious activity and mitigate identified or potential threats to the GIG.",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 8.57,
+   "eval_count": 169,
+   "done_reason": "stop",
+   "peak_vram_mib": 4211
+  }
+ ]
+}

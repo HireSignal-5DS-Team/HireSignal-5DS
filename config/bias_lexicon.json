@@ -1,0 +1,96 @@
+{
+ "_about": "T11 Bias Auditor leakage lexicon (services/bias/auditor.py). Protected signals that are not job-relevant. Labels: a line that starts with one of them is removed. Words: masked as [PERSONAL] in running text. Placeholder-only lines (only [NAME]/[ADDRESS]/... left after anonymisation, optionally behind a label) are removed. Tuned on the dev base CVs only (false-positive check); see docs/BIAS_REPORT.md. Location is not a label here: it can be job-relevant (Remote, EU); an anonymised 'Location: [ADDRESS]' line is removed by the placeholder-only rule.",
+ "version": "v1 (2026-10-18)",
+ "labels": {
+  "nationality": [
+   "nationality",
+   "citizenship",
+   "citizen of",
+   "nationalité"
+  ],
+  "birth": [
+   "date of birth",
+   "birth date",
+   "birthdate",
+   "d.o.b",
+   "dob",
+   "born",
+   "place of birth",
+   "birthplace",
+   "age"
+  ],
+  "family": [
+   "marital status",
+   "family status",
+   "civil status",
+   "children",
+   "kids",
+   "spouse"
+  ],
+  "language_native": [
+   "native language",
+   "mother tongue",
+   "first language"
+  ],
+  "gender": [
+   "gender",
+   "sex",
+   "pronouns"
+  ],
+  "religion": [
+   "religion",
+   "faith"
+  ],
+  "photo": [
+   "photo",
+   "photograph",
+   "picture"
+  ]
+ },
+ "words": {
+  "family": [
+   "married",
+   "divorced",
+   "widowed",
+   "husband",
+   "wife",
+   "my children",
+   "my kids",
+   "mother of",
+   "father of",
+   "pregnant",
+   "maternity leave"
+  ],
+  "birth": [
+   "years old",
+   "year-old",
+   "born in"
+  ],
+  "religion": [
+   "muslim",
+   "christian",
+   "jewish",
+   "catholic",
+   "orthodox christian",
+   "hindu",
+   "buddhist",
+   "islam",
+   "church",
+   "mosque"
+  ],
+  "photo": [
+   "photo attached",
+   "see photo",
+   "[photo]"
+  ]
+ },
+ "placeholders": [
+  "[NAME]",
+  "[EMAIL]",
+  "[PHONE]",
+  "[URL]",
+  "[ADDRESS]",
+  "[PERSONAL]",
+  "[PRONOUN]"
+ ]
+}

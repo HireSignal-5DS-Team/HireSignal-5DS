@@ -1,0 +1,322 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "55",
+ "cv_id": "cv-982d2b77",
+ "job_id": "J3",
+ "job_title": "ML Engineer",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 36,
+ "reasons": [
+  "r1: must-have MISSING",
+  "r6: must-have MISSING"
+ ],
+ "listed_flags": [
+  "r7 (nice): judge:disagrees",
+  "r1 (must, not outcome-relevant): judge:uncertain",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "contradicted",
+   "quotes": [
+    {
+     "quote": "Last years I started working with Python machine learning libraries to have more tools and flexibility.",
+     "start": 731,
+     "end": 834
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:uncertain"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.002499,
+    "MISSING": 0.835404,
+    "UNCERTAIN": 0.162096
+   },
+   "judge": {
+    "verdict": "UNCERTAIN",
+    "score": 0.0224
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Proven experience with modern deep learning techniques and Gradient Boosting Trees",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.017933,
+    "MISSING": 0.357976,
+    "UNCERTAIN": 0.624091
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Excellent Python coding skills",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.330474,
+    "MISSING": 0.219696,
+    "UNCERTAIN": 0.449831
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn)",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [
+    {
+     "quote": "Last years I started working with Python machine learning libraries to have more tools and flexibility.",
+     "start": 731,
+     "end": 834
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.310581,
+    "MISSING": 0.351417,
+    "UNCERTAIN": 0.338002
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Practical experience with tabular data and time series",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "I have more than 8 years of academic research working as a lecturer and associate professor. Throughout that time I built plenty of macroeconomic models, mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner.",
+     "start": 422,
+     "end": 730
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.996682,
+    "MISSING": 0.003126,
+    "UNCERTAIN": 0.000192
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9896
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Experience with microservices architecture, cloud technologies, Docker and Kubernetes",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 6.6e-05,
+    "MISSING": 0.995896,
+    "UNCERTAIN": 0.004038
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9987
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r7",
+   "text": "Experience with data pipelines or big data",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.001456,
+    "MISSING": 0.803758,
+    "UNCERTAIN": 0.194786
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.5592
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r8",
+   "text": "Experience designing and implementing AutoML flows or frameworks",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000298,
+    "MISSING": 0.958945,
+    "UNCERTAIN": 0.040757
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9985
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because two must-have requirements are missing: experience with ML in production (3+ years) and experience with microservices architecture, cloud technologies, Docker, and Kubernetes. The CV does not show evidence of either. The score is 36.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "Last years I started working with Python machine learning libraries to have more tools and flexibility.",
+    "line": "Missing: No evidence of 3+ years of ML in production (training, testing, deployment, monitoring)."
+   },
+   {
+    "req_id": "r2",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: No clear evidence of proven experience with modern deep learning techniques and Gradient Boosting Trees."
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: No clear evidence of excellent Python coding skills."
+   },
+   {
+    "req_id": "r4",
+    "decision": "UNCERTAIN",
+    "quote": "Last years I started working with Python machine learning libraries to have more tools and flexibility.",
+    "line": "Uncertain: The Matcher was unsure about proficiency with ML libraries like TensorFlow, PyTorch, etc."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "I have more than 8 years of academic research working as a lecturer and associate professor. Throughout that time I built plenty of macroeconomic models, mostly working with time series, real-world economic data using such software as Statsoft Statistica, SPSS Statistics, and a bit of Matlab and RapidMiner.",
+    "line": "Met: The CV shows more than 8 years of work with time series data."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of experience with microservices architecture, cloud technologies, Docker, or Kubernetes."
+   },
+   {
+    "req_id": "r7",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of experience with data pipelines or big data."
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of experience designing and implementing AutoML flows or frameworks."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the ML Engineer position. We will not move forward with your application, because your CV does not show this required point: experience with ML in production (3+ years of training, testing, deployment, monitoring of real-time models).\n\nAdditionally, your CV does not show the required experience with microservices architecture, cloud technologies, Docker, and Kubernetes.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about proficiency with ML libraries (r4)"
+  ],
+  "source": "llm",
+  "info_flags": [],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [],
+  "would_be_outcome": "reject",
+  "swap": {
+   "ran": true,
+   "counterfactual": "female_arab",
+   "how": "name + pronouns added",
+   "identical_matcher_input": true,
+   "latency_s": 0.005
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.001,
+  "profile": 7.895,
+  "job": 0,
+  "match_and_judge": 11.765
+ }
+}

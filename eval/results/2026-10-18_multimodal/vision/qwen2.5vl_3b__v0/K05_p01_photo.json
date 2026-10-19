@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K05_p01_photo",
+  "file": "K05_p01_photo.jpg",
+  "source": "K04.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "This is a resume for a Corporate Project Manager. Here are the key points from the resume:\n\n### Career Overview\n- **Career Focus**: Achieving results through strategic planning and professional relationship building.\n- **Key Responsibilities**: Building strong teams, fostering collaboration, and managing technology projects.\n- **Skills**: Strategic planning, SDLC methodology, team-building, and managing budgets and timelines.\n\n### Qualifications\n- **Strategic Planning**: Visioning and tactical execution.\n- **SDLC Methodology**: Problem and change software application lifecycle management.\n- **Management**: SLA authoring, resource allocation, expense budgeting, and forecasting.\n- **Team-Building**: Front-line leadership, technology upgrades, and training.\n- **Leadership**: Leading highly visible initiatives, defining and managing IT infrastructure and application integrations.\n- **Project Management**: Experience in the complete project management lifecycle, including planning, execution, monitoring, and control.\n- **Documenting Business Performance**: Documenting business performance expectations, benchmark standards, and developing guidelines.\n- **Stakeholder Interaction**: Interfacing with key stakeholders and project team members to prioritize requirements and information technology needs.\n- **Learning Enhancement**: Leading learning enhancement classes to improve sales knowledge and people skills.\n- **Budget Management**: Providing oversight of yearly and monthly budget planning activities, forecasting, and expense management.\n- **IT Infrastructure**: Directing all information technology and network system deployment and maintenance, including IT infrastructure, wireless communications, PC systems, local networks, and mobile environments.\n- **Technology Solutions**: Assessing and recommending technology systems solutions based on operational needs while ensuring compliance with corporate standards.\n- **Training**: Developing training material for new products and technologies and delivering training classes to associates.\n\n### Work Experience\n1. **Corporate Project Manager (01/2014 to 01/2016)**\n   - Managed direct reports supporting multiple locations with annual revenues of $2M.\n   - Accountable for the strategic direction, implementation, support, and development of all business applications, Enterprise Resource Planning (ERP), Facilities Management, Financials, Forecasting, and Procurement.\n   - Established change management and help desk solutions and policies.\n   - Developed new process design workflow to ensure on-time delivery of all solutions and within budget, leading to an increase in monthly productivity by 20%.\n   - Centralized disparate support documentation for all business applications and architecture.\n   - Developed corporate process and tools for opportunities tracking, bid decision making, and proposal development.\n   - Developed training material for new products and technologies and delivered training classes to associates.\n\n2. **Director of Information Technology and Systems (01/2008 to 01/2014)**\n   - Responsible for managing and executing business development activities for IT and other company business lines.\n   - Provided executive leadership over internal company-wide IT infrastructure.\n   - Developed end user training material, coordinating and conducting group and individual training sessions based on staff and organizational learning needs.\n   - Introduced methods for tracking project management, workload planning, and corporate business performance metrics.\n   - Responsible for managing and executing business development activities for IT and other company business lines.\n   - Installed Gate and Locking systems (Safflok, Ving, Salto, and Arnuo Mc Gann access control systems) in various brands resorts interfacing with PMS systems.\n\n3. **Director of Information Technology and Systems (01/2006 to 01/2008)**\n   - Managed four hotels within REIT, interfacing with both management and ownership to guide the hotel through day-to-day operations.\n   - Ensured that the company's strategic technologies needs were the primary focus.\n   - Provided first and second-tier technical support and knowledge on Windows server/desktop applications and resort PMS/POS Systems.\n   - Provided operations management, including security, backup/recovery/disaster planning, off-hours staff coverage.\n   - Oversaw $1.4 M capital budget and hotel conversion.\n\nThis resume highlights the candidate's extensive experience in project management, IT infrastructure, and business development, making it a strong candidate for a corporate project manager position.",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 18.49,
+   "eval_count": 844,
+   "done_reason": "stop",
+   "peak_vram_mib": 4271
+  }
+ ]
+}

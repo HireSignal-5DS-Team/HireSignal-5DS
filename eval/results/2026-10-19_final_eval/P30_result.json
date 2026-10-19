@@ -1,0 +1,325 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "56",
+ "cv_id": "cv-169636eb",
+ "job_id": "J3",
+ "job_title": "ML Engineer",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 25,
+ "reasons": [
+  "r2: must-have MISSING",
+  "r4: must-have MISSING"
+ ],
+ "listed_flags": [
+  "r7 (nice): match:low_confidence",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000169,
+    "MISSING": 0.988895,
+    "UNCERTAIN": 0.010936
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.5838
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Proven experience with modern deep learning techniques and Gradient Boosting Trees",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000184,
+    "MISSING": 0.997333,
+    "UNCERTAIN": 0.002483
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9962
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Excellent Python coding skills",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "MET",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "evidence_not_in_cv",
+    "met_without_verified_evidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.994773,
+    "MISSING": 0.005096,
+    "UNCERTAIN": 0.000131
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000438,
+    "MISSING": 0.995909,
+    "UNCERTAIN": 0.003653
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.96
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Practical experience with tabular data and time series",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.126008,
+    "MISSING": 0.442242,
+    "UNCERTAIN": 0.43175
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Experience with microservices architecture, cloud technologies, Docker and Kubernetes",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [
+    {
+     "quote": "Built cloud infrastructure on AWS with ECS, S3 and CloudFormation.",
+     "start": 466,
+     "end": 532
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.03304,
+    "MISSING": 0.652807,
+    "UNCERTAIN": 0.314153
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r7",
+   "text": "Experience with data pipelines or big data",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "MET",
+   "basis": "ambiguous",
+   "quotes": [
+    {
+     "quote": "Developed data scraping tool using Selenium and MITM Proxy.",
+     "start": 331,
+     "end": 390
+    },
+    {
+     "quote": "Created serverless RESTful API using AWS Lambda, API Gateway, and RDS.",
+     "start": 393,
+     "end": 463
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.483637,
+    "MISSING": 0.355954,
+    "UNCERTAIN": 0.16041
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r8",
+   "text": "Experience designing and implementing AutoML flows or frameworks",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 2.9e-05,
+    "MISSING": 0.997682,
+    "UNCERTAIN": 0.002289
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9855
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because two must-have requirements are missing: experience with modern deep learning techniques and gradient boosting trees, and proficiency with ML libraries like TensorFlow, PyTorch, or Scikit-learn. The CV does not show any evidence of ML in production, nor any experience with deep learning or ML libraries. The score is 25.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: The CV does not show 3 years of ML in production experience."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Proven experience with modern deep learning techniques and Gradient Boosting Trees is not found."
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Excellent Python coding skills are not clearly demonstrated."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) is not found."
+   },
+   {
+    "req_id": "r5",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Practical experience with tabular data and time series is not clearly shown."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "Built cloud infrastructure on AWS with ECS, S3 and CloudFormation.",
+    "line": "Uncertain: Experience with microservices, cloud technologies, Docker and Kubernetes is unclear from the evidence."
+   },
+   {
+    "req_id": "r7",
+    "decision": "UNCERTAIN",
+    "quote": "Developed data scraping tool using Selenium and MITM Proxy.",
+    "line": "Uncertain: Experience with data pipelines or big data is not clearly demonstrated."
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with AutoML flows or frameworks is not found."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the ML Engineer position. We will not move forward with your application, because your CV does not show the following required points:\n- Experience with modern deep learning techniques and Gradient Boosting Trees\n- Proficiency with ML libraries such as TensorFlow, PyTorch, LightGBM, or Scikit-learn\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about r5, r6, and r7"
+  ],
+  "source": "llm",
+  "info_flags": [],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [],
+  "would_be_outcome": "reject",
+  "swap": {
+   "ran": true,
+   "counterfactual": "female_arab",
+   "how": "name + pronouns added",
+   "identical_matcher_input": true,
+   "latency_s": 0.005
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.001,
+  "profile": 9.154,
+  "job": 0,
+  "match_and_judge": 10.968
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "job_id": "J4",
+ "title": "Python BackEnd Developer",
+ "confirmed_by": "recruiter (sample: the gold requirement list)",
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Software development: 5 years of experience or more",
+   "kind": "must",
+   "category": "experience",
+   "min_years": 5.0,
+   "skill_terms": [],
+   "evidence": "5 years of experience in development (At least 2 years experience in developing big systems with Python) - Must"
+  },
+  {
+   "req_id": "r2",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "kind": "must",
+   "category": "experience",
+   "min_years": 2.0,
+   "skill_terms": [
+    "Python"
+   ],
+   "evidence": "5 years of experience in development (At least 2 years experience in developing big systems with Python) - Must"
+  },
+  {
+   "req_id": "r3",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "asynchronous programming",
+    "performance-critical applications"
+   ],
+   "evidence": "Asynchronous programming and experience in developing performance-critical applications"
+  },
+  {
+   "req_id": "r4",
+   "text": "Working with AWS, Docker and microservices",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "AWS",
+    "Docker",
+    "microservices"
+   ],
+   "evidence": "Working with AWS, Docker, and microservices – Advantages"
+  },
+  {
+   "req_id": "r5",
+   "text": "Experience with Machine Learning",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "Machine Learning"
+   ],
+   "evidence": "Experience with Machine Learning – Advantages"
+  },
+  {
+   "req_id": "r6",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "kind": "nice",
+   "category": "skill",
+   "min_years": null,
+   "skill_terms": [
+    "collaborative filtering",
+    "similarity",
+    "data normalization",
+    "clustering"
+   ],
+   "evidence": "Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages"
+  }
+ ],
+ "skill_terms_source": "Job Agent terms (T06 run) aligned by source sentence, kept if in the requirement text"
+}

@@ -1,0 +1,42 @@
+{
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "MISSING",
+  "r3": "UNCERTAIN",
+  "r4": "MISSING",
+  "r5": "MET",
+  "r6": "MISSING",
+  "r7": "MISSING",
+  "r8": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "must",
+  "r7": "nice",
+  "r8": "nice"
+ },
+ "outcome": "reject",
+ "score": 21,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [],
+  "r2": [
+   "Data Science, a 9-course specialization by Johns Hopkins University on Coursera. Specialization Certificate earned on December 2, 2015 (Data Science Tools, R programming, Getting and cleaning data, Exploratory data analysis, Reproducible research, Statistical inference, Regression models, Machine learning and Developing data products)."
+  ],
+  "r3": [],
+  "r4": [],
+  "r5": [
+   "Data Science, a 9-course specialization by Johns Hopkins University on Coursera. Specialization Certificate earned on December 2, 2015 (Data Science Tools, R programming, Getting and cleaning data, Exploratory data analysis, Reproducible research, Statistical inference, Regression models, Machine learning and Developing data products)."
+  ],
+  "r6": [],
+  "r7": [],
+  "r8": []
+ },
+ "elapsed_s": 25.11,
+ "identical_to_base": true,
+ "ran": true
+}

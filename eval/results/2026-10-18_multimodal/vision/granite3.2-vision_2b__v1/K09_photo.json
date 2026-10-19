@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K09_photo",
+  "file": "K09_photo.jpg",
+  "source": "K04.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "granite3.2-vision:2b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "<doc>     Information Technology UNIVERSITY PHOENIX1/4 City \n     Administration LAKE SUMTER COMMUNITY COLLEGE \n     CompTa A+, CompTa N+ \n     Education and Training \n     Technology \n     State Computers and Information \n     E1/4 City, State Finance and Business \n     management, conversion, decision making, \n     process design, Procurement, Project \n     Technical support, user training, training \n     material, Upgrades, Windows server, w </doc>",
+   "model": "granite3.2-vision:2b",
+   "latency_s": 6.05,
+   "eval_count": 102,
+   "done_reason": "stop",
+   "peak_vram_mib": 3249
+  }
+ ]
+}

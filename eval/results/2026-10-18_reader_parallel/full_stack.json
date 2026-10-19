@@ -1,0 +1,40 @@
+{
+ "condition": "full_stack",
+ "label": "real-GPU (RTX 4050 6 GB) + real-CPU (Tesseract)",
+ "pages": 3,
+ "identical_outputs": "3/3",
+ "sequential_s_per_page_mean": 26.39,
+ "parallel_s_per_page_mean": 21.52,
+ "sequential_s_per_page_median": 27.38,
+ "parallel_s_per_page_median": 19.81,
+ "speedup_mean": 1.23,
+ "rows": [
+  {
+   "item": "K04_p01_photo",
+   "sequential_s": 23.29,
+   "parallel_s": 19.38,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  },
+  {
+   "item": "K04_p02_photo",
+   "sequential_s": 28.5,
+   "parallel_s": 25.38,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  },
+  {
+   "item": "K05_p01_photo",
+   "sequential_s": 27.38,
+   "parallel_s": 19.81,
+   "identical": true,
+   "route": [
+    "late"
+   ]
+  }
+ ]
+}

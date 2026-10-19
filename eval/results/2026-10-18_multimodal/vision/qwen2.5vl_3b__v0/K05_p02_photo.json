@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K05_p02_photo",
+  "file": "K05_p02_photo.jpg",
+  "source": "K03.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "This is a resume that outlines the educational background and professional certifications of the individual. Here is a summary of the key points:\n\n**Education:**\n- Master of Business Administration (MBA) from the Keller Graduate School of Management in City, State.\n- Bachelor of Science in Telecommunications Management from DeVry University in City, State.\n\n**Certifications:**\n- Cisco Certified Network Associate (CCNA/CCAI) Leadership Training\n- ITIL Foundations Certification\n- Sniffer Distributed Training\n- Certified Novell Administrator (CNA 5.1)\n- HIPAA/HITECH Regulation\n\n**Skills:**\n- ADR\n- Advertising\n- Arcserve\n- Asset Management\n- Agency\n- Backup Exec\n- Backup\n- Banking\n- Budget Management\n- Budgeting\n- Business Operations\n- Cable\n- CCNA\n- Cisco Certified Network Associate\n- CNA 5.1\n- Change Management\n- Conflict Resolution\n- Corporate Accounting\n- Client\n- Clients\n- Customer Relations\n- Disaster Recovery\n- Educational Programs\n- Employee Relations\n- Financial\n- Ghost\n- Information Systems\n- Innovation\n- Instruction\n- Internal Audits\n- Inventory Management\n- Inventory\n- ITIL\n- Leadership Training\n- Regulatory Compliance\n- Loss Prevention\n- Marketing Plans\n- Marketing\n- Market\n- Microsoft Windows 2000, 2003\n- Network\n- Novell NetWare 4.x\n- Performance Management\n- Policies\n- Processes\n- Procurement\n- Project Management\n- Strategic Planning\n- Surveys\n- Symantec\n- TCP/IP\n- Technical Support\n- Telecommunication\n- Phone\n- Employee Development\n- VoIP\n- Website\n- Workflow\n\nThis resume provides a comprehensive overview of the individual's educational background and professional certifications, as well as a list of skills that they believe are relevant to their career.",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 12.41,
+   "eval_count": 393,
+   "done_reason": "stop",
+   "peak_vram_mib": 4357
+  }
+ ]
+}

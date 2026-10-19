@@ -1,0 +1,54 @@
+{
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 4 of 5 must-have requirements are met; the score is 77. Missing must-haves: Experience with GCP or another cloud provider.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Designed and implemented a BI project(DWH, ETL, Data visualization) from scratch.",
+    "line": "must: Knowledge of the general principles of Data Warehousing and Data Lakes - met (CV: Designed and implemented a BI project(DWH, ETL, Data visualization) from scratch.)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL",
+    "line": "must: Hands-on experience with SQL - met (CV: DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Programming languages: Python, Ruby, JS",
+    "line": "must: Knowledge of Python - met (CV: Programming languages: Python, Ruby, JS)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with GCP or another cloud provider - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: upper",
+    "line": "must: Good spoken English - met (CV: English level: upper)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "nice: Willingness to research business logic - uncertain (unclear in the CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Experience with GCP or another cloud provider.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": []
+ },
+ "source": "template",
+ "attempts": 0,
+ "first_errors": [],
+ "retry_errors": [],
+ "latency_s": 0.0006,
+ "peak_vram_mib": null,
+ "id": "P46",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

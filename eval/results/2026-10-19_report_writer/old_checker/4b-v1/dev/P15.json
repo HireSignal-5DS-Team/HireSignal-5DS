@@ -1,0 +1,59 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v1.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "report": {
+  "recruiter_summary": "The candidate is sent for review because two must-have requirements are missing or uncertain with low confidence. The candidate has hands-on SQL and Python experience, which are met. However, there is no clear evidence of knowledge of data warehousing principles or experience with cloud platforms like GCP or AWS. The English language proficiency is uncertain due to low confidence in the evidence. The score is 50.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: The CV does not show knowledge of data warehousing principles."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.",
+    "line": "Met: The CV shows 8 years of SQL experience in database tasks."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Python: Experience in using Python for file and database manipulation tasks.",
+    "line": "Met: The CV mentions Python use for file and database tasks."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner.",
+    "line": "Missing: The CV mentions Azure and AWS but does not confirm experience with GCP or another cloud provider as required."
+   },
+   {
+    "req_id": "r5",
+    "decision": "UNCERTAIN",
+    "quote": "English level: upper",
+    "line": "Uncertain: The English level is listed as 'upper' but the Matcher was unsure about its relevance to job requirements."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: No evidence provided for willingness to research business logic."
+   }
+  ],
+  "candidate_letter": "",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about spoken English (r5); please verify the candidate's language proficiency."
+  ]
+ },
+ "source": "llm",
+ "latency_s": 9.1,
+ "peak_vram_mib": 3267,
+ "id": "P15",
+ "outcome": "review",
+ "synthetic_flags": false
+}

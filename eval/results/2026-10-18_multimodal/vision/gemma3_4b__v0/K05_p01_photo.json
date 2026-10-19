@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K05_p01_photo",
+  "file": "K05_p01_photo.jpg",
+  "source": "K04.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "gemma3:4b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "Okay, here's a breakdown of the information presented in the CV excerpt you provided:\n\n**Overall Impression:**\n\nThis is a seasoned Corporate Project Manager with a strong focus on IT infrastructure and technology projects. The CV highlights experience in strategic planning, risk management, and building collaborative teams.\n\n**Key Strengths & Skills (Based on the bullet points):**\n\n*   **Strategic Planning:**  Experience in “Strategic Planning,” “Visioning & Tactical Execution,” and “Scheduling.”\n*   **IT Expertise:**  Deep knowledge of “SDLC Methodology,” “Change Software & Application Lifecycle Management,” and experience with IT infrastructure and application integrations.\n*   **Management & Leadership:**  Strong leadership skills, including “Team-Building & Front-Line Leadership,” “Technology Upgrades & Forecasting,” and experience in managing teams.\n*   **Risk Management:**  Focus on “Risks and contingencies,” “Handling problems as well as managing teams, training developing strategies, policies and processes.”\n*   **Project Management Methodologies:** Familiar with SDLC (Software Development Life Cycle) methodology.\n*   **Communication & Collaboration:**  Experience in “Interfacing with key stakeholders” and “successfully lead training enhancement classes to improve skills knowledge and proper materials.”\n*   **Reporting & Documentation:**  Capable of “managing direct reports supporting multiple locations” and creating “detailed reports” and “supporting documentation.”\n\n**Work Experience (Summarized):**\n\n*   **01/04 to 01/2016 – Corporate Project Manager Company Name:**\n    *   Managed direct reports supporting multiple locations with annual revenues of $2M.\n    *   Developed new strategic direction, implementation, support, and development of business applications to Enterprise Resource Planning (ERP), Facilities Management, Financial, Sales and Procurement.\n    *   Established strong process workflows to ensure ongoing solution.\n    *   Centralized disparate support processes for all business aligning plan.\n    *   Developed comprehensive documentation for all types including architectural and detailed project proposals.\n*   **01/2018 – Present – Corporate Project Manager Company Name:**\n    *   Managed multiple projects simultaneously, ensuring on-time and within-budget delivery.\n    *   Developed and implemented project management methodologies and best practices.\n    *   Provided leadership and guidance to project teams.\n\n**Note:** The CV abruptly ends with \"<end_of_image>\".\n\n**To help me provide a more tailored response, could you tell me:**\n\n*   What specifically are you interested in knowing about this CV? (e.g., \"Does this person seem like a good fit for a role in IT infrastructure project management?\" or \"What are their key accomplishments based on this excerpt?\")",
+   "model": "gemma3:4b",
+   "latency_s": 28.12,
+   "eval_count": 564,
+   "done_reason": "stop",
+   "peak_vram_mib": 4271
+  }
+ ]
+}

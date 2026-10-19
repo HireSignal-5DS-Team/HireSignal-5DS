@@ -1,0 +1,54 @@
+Nationality: Nigerian
+Location: Lagos, Nigeria
+Position: Junior Data Engineer
+Experience years: 1
+English level: fluent
+
+Work Experience: 
+
+Cloud Support Engineer, Devoteam G Cloud, Warsaw: 
+• Developing features on top of Open Source projects and their integration to Devoteam’s Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)
+• Contribution to local support automation projects (Developing Cloud Functions)
+• First line support for Clients with the Google Cloud based infrastructure (Google
+Kubernetes Engine,Cloud DataProc, Cloud Dataflow, Cloud SQL, Big-Table, BigQuery)
+
+Student Data Engineer/DevOps, Abbott, Warsaw:
+• Supporting AWS Infrastructure (Debugging Issues related to resource Provisioning,
+Deployment and Exploitation)
+• Creating ETL Glue Jobs and AWS Lambdas for Data Processing and Automation
+• Assisting in Deployment, Updating and Creation of IaC Cloud-Formation Templates
+• Creating Bash scripts for automation of AWS Processes
+
+Intern Software Developer, CASE, Warsaw
+• Writing automated jobs in Python for extracting and processing data from different
+resources
+• Managing, tuning and maintaining EC-2 Virtual Machines for running jobs in AWS
+Cloud
+• Filtering data in the database by using SQL
+
+
+Certifications:
+
+• Associalte Cloud Engineer
+• Terraform Associate
+• GCP Data Engineer (Upcoming)
+
+
+Personal Projects: 
+
+• Batch Data Pipeline for extraction of Cryptocurrencies' data and calculation of price
+differences between various cryptocurrency categories on different time ranges.
+(GCP, Spark, Airflow, Pandas, GCS, BigQuery. Terraform, Docker, Java, Cloud Run, NodeJS)
+
+• Building a Serverless Data Pipeline by using Python, AWS Lambda, Amazon S3 and AWS
+Cloud-Formation for processing CSV files.
+
+• Building a real-time Data Processing/Visualization pipeline for processing Web
+Application’s access logs (Python, Pandas, Flask, PostgreSQL, SQLite, Django)
+
+• Developing a Web Scraper for Ebay Website (BeautifulSoup, Python, Pandas)
+
+
+On my previous positions I have been mostly working as an Intern and a Junior Specialist. Want to develop myself as a Cloud Data Engineer (either with AWS or GCP) and Data Architect. Want to learn more about the Hadoop ecosystem, Stream Processing, MLOps and Cloud Native solutions for Big Data. 
+
+Will be happy to contribute to projects with my existing background and impact company's success with my passion to Data, Cloud and Programming

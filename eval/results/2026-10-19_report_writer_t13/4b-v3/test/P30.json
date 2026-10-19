@@ -1,0 +1,74 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because two must-have requirements are missing: experience with modern deep learning techniques and gradient boosting trees, and proficiency with ML libraries like TensorFlow, PyTorch, or Scikit-learn. The CV does not show any evidence of these. The score is 25.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: The CV does not show 3 years of ML in production experience.\"}, {\"req_id\": \"r2\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Proven experience with modern deep learning techniques and Gradient Boosting Trees is not found in the CV.\"}, {\"req_id\": \"r3\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: Excellent Python coding skills are not clearly demonstrated in the CV.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) is not found in the CV.\"}, {\"req_id\": \"r5\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: Practical experience with tabular data and time series is not clearly shown in the CV.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"Built cloud infrastructure on AWS with ECS, S3 and CloudFormation.\", \"line\": \"Uncertain: Experience with microservices, cloud technologies, Docker and Kubernetes is not clearly demonstrated in the CV.\"}, {\"req_id\": \"r7\", \"decision\": \"UNCERTAIN\", \"quote\": \"Developed data scraping tool using Selenium and MITM Proxy.\", \"line\": \"Uncertain: Experience with data pipelines or big data is not clearly shown in the CV.\"}, {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Experience designing and implementing AutoML flows or frameworks is not found in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the ML Engineer position. We will not move forward with your application, because your CV does not show these required points: experience with modern deep learning techniques and Gradient Boosting Trees, and proficiency with ML libraries such as TensorFlow, PyTorch, LightGBM, or Scikit-learn.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about r5, r6, and r7\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because two must-have requirements are missing: experience with modern deep learning techniques and gradient boosting trees, and proficiency with ML libraries like TensorFlow, PyTorch, or Scikit-learn. The CV does not show any evidence of these. The score is 25.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: The CV does not show 3 years of ML in production experience."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Proven experience with modern deep learning techniques and Gradient Boosting Trees is not found in the CV."
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Excellent Python coding skills are not clearly demonstrated in the CV."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) is not found in the CV."
+   },
+   {
+    "req_id": "r5",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Practical experience with tabular data and time series is not clearly shown in the CV."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "Built cloud infrastructure on AWS with ECS, S3 and CloudFormation.",
+    "line": "Uncertain: Experience with microservices, cloud technologies, Docker and Kubernetes is not clearly demonstrated in the CV."
+   },
+   {
+    "req_id": "r7",
+    "decision": "UNCERTAIN",
+    "quote": "Developed data scraping tool using Selenium and MITM Proxy.",
+    "line": "Uncertain: Experience with data pipelines or big data is not clearly shown in the CV."
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience designing and implementing AutoML flows or frameworks is not found in the CV."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the ML Engineer position. We will not move forward with your application, because your CV does not show these required points: experience with modern deep learning techniques and Gradient Boosting Trees, and proficiency with ML libraries such as TensorFlow, PyTorch, LightGBM, or Scikit-learn.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about r5, r6, and r7"
+  ]
+ },
+ "source": "llm",
+ "latency_s": 10.71,
+ "peak_vram_mib": 3267,
+ "id": "P30",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

@@ -1,0 +1,46 @@
+{
+ "decisions": {
+  "r1": "MET",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "UNCERTAIN",
+  "r5": "MISSING",
+  "r6": "UNCERTAIN"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "nice",
+  "r5": "nice",
+  "r6": "nice"
+ },
+ "outcome": "review",
+ "score": 78,
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "quotes": {
+  "r1": [
+   "I have 10 years of experience in web application development."
+  ],
+  "r2": [
+   "I have 10 years of experience in web application development.",
+   "Project \"Business Process System\"",
+   "Role: Fullstack developer"
+  ],
+  "r3": [
+   "Project \"Business Process System\"",
+   "Role: Fullstack developer",
+   "Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)"
+  ],
+  "r4": [
+   "Project \"Backend of Web service for recommendation system\"",
+   "Role: Backend developer",
+   "Technologies: Python (Flask), SQLAlchemy, PostgreSQL, REST, Git, Docker, Celery, AWS, CI/CD"
+  ],
+  "r5": [],
+  "r6": []
+ },
+ "elapsed_s": 20.47,
+ "identical_to_base": true,
+ "ran": true
+}

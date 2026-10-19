@@ -1,0 +1,85 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 2,
+ "first_errors": [
+  "r1: quote is not in its verified CV quotes",
+  "r3: quote is not in its verified CV quotes",
+  "r4: quote is not in its verified CV quotes",
+  "r5: quote is not in its verified CV quotes"
+ ],
+ "retry_errors": [
+  "r1: quote is not in its verified CV quotes",
+  "r3: quote is not in its verified CV quotes",
+  "r4: quote is not in its verified CV quotes",
+  "r5: quote is not in its verified CV quotes"
+ ],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is sent for review despite meeting all must-have requirements, as there are doubts about the evidence for two key must-haves: ML in production experience and microservices/cloud experience. The system judge disagrees on the duration and coverage of these requirements, raising concerns about a possible false invite. The candidate has experience with ML techniques, Python, and cloud technologies, but the evidence for production deployment and microservices is unclear. All nice-to-have requirements are evaluated, with AutoML experience missing.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Experienced in ML project life cycle: data collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\", \"line\": \"Met: the CV mentions ML life cycle including monitoring, but duration not confirmed; judge disagrees due to missing evidence on years.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Machine Learning\\nLinear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more.\", \"line\": \"Met: the CV lists multiple deep learning and boosting techniques, but no explicit years of experience provided; judge disagrees on evidence quality.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"Programming and Machine Learning Libraries: Python, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi\", \"line\": \"Met: the CV lists relevant Python libraries, but no years of experience specified; judge disagrees on evidence quality.\"}, {\"req_id\": \"r4\", \"decision\": \"MET\", \"quote\": \"Programming and Machine Learning Libraries: Python, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi\", \"line\": \"Met: the CV lists required ML libraries, but no years of experience specified; judge disagrees on evidence quality.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"Experienced in ML project life cycle: data collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\", \"line\": \"Met: the CV references ML project life cycle, including time series and data handling; judge disagrees on explicit evidence.\"}, {\"req_id\": \"r6\", \"decision\": \"MET\", \"quote\": \"Cloud Services, DevOps and Big Data\\nDocker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more.\", \"line\": \"Met: the CV lists Docker, Kubernetes, and cloud technologies; judge disagrees due to lack of explicit experience duration.\"}, {\"req_id\": \"r7\", \"decision\": \"MET\", \"quote\": \"Experience in working with distributed systems.\", \"line\": \"Met: the CV references distributed systems and big data tools, which aligns with the requirement.\"}, {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of experience with AutoML flows or frameworks.\"}], \"candidate_letter\": \"\", \"flags_for_recruiter\": []}",
+  "{\"recruiter_summary\": \"The candidate is sent for review because the system judge disagrees on two must-have requirements: ML in production experience and microservices/cloud experience, despite the candidate listing relevant skills. The evidence for duration and specific production deployment is missing or unclear. The candidate has experience with ML techniques, Python, and cloud technologies, but no explicit years or clear proof of production deployment. AutoML experience is not mentioned. The score is 93, indicating strong alignment overall but with critical gaps in verification.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Experienced in ML project life cycle: data collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\", \"line\": \"Met: the CV includes a quote about ML project life cycle with post-deployment monitoring, but the judge disagrees due to lack of explicit duration evidence.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Machine Learning\\nLinear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more.\", \"line\": \"Met: the CV lists multiple deep learning and boosting techniques, but no years of experience provided; judge disagrees on evidence quality.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"Programming and Machine Learning Libraries: Python, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi\", \"line\": \"Met: the CV lists relevant Python libraries, but no years of experience specified; judge disagrees on evidence quality.\"}, {\"req_id\": \"r4\", \"decision\": \"MET\", \"quote\": \"Programming and Machine Learning Libraries: Python, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi\", \"line\": \"Met: the CV lists required ML libraries, but no years of experience specified; judge disagrees on evidence quality.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"Experienced in ML project life cycle: data collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.\", \"line\": \"Met: the CV references ML project life cycle including time series and data handling; judge disagrees on explicit evidence.\"}, {\"req_id\": \"r6\", \"decision\": \"MET\", \"quote\": \"Cloud Services, DevOps and Big Data\\nDocker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more.\", \"line\": \"Met: the CV lists Docker, Kubernetes, and cloud technologies; judge disagrees due to lack of explicit experience duration.\"}, {\"req_id\": \"r7\", \"decision\": \"MET\", \"quote\": \"Experience in working with distributed systems.\", \"line\": \"Met: the CV references distributed systems and big data tools, which aligns with the requirement.\"}, {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of experience with AutoML flows or frameworks.\"}], \"candidate_letter\": \"\", \"flags_for_recruiter\": []}"
+ ],
+ "report": {
+  "recruiter_summary": "This case goes to a recruiter for review. 6 of 6 must-have requirements are met; the score is 93. Reason for review: r1: must MET doubted (duration_not_in_evidence, judge:disagrees): possible false invite; r6: must MET doubted (judge:disagrees): possible false invite.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Experienced in ML project life cycle:",
+    "line": "must: ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models) - met (CV: Experienced in ML project life cycle:)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Machine Learning\nLinear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more.",
+    "line": "must: Proven experience with modern deep learning techniques and Gradient Boosting Trees - met (CV: Machine Learning\nLinear Models, Tree-based models, SVM, Boosting, KNN, C-means, Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more.)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Programming and Machine Learning Libraries:",
+    "line": "must: Excellent Python coding skills - met (CV: Programming and Machine Learning Libraries:)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Programming and Machine Learning Libraries:",
+    "line": "must: Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) - met (CV: Programming and Machine Learning Libraries:)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "Experienced in ML project life cycle:",
+    "line": "must: Practical experience with tabular data and time series - met (CV: Experienced in ML project life cycle:)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MET",
+    "quote": "Cloud Services, DevOps and Big Data\nDocker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more.",
+    "line": "must: Experience with microservices architecture, cloud technologies, Docker and Kubernetes - met (CV: Cloud Services, DevOps and Big Data\nDocker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more.)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "MET",
+    "quote": "Experience in working with distributed systems.",
+    "line": "nice: Experience with data pipelines or big data - met (CV: Experience in working with distributed systems.)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience designing and implementing AutoML flows or frameworks - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "",
+  "flags_for_recruiter": []
+ },
+ "source": "template",
+ "latency_s": 27.56,
+ "peak_vram_mib": 3267,
+ "id": "P47",
+ "outcome": "review",
+ "synthetic_flags": false
+}

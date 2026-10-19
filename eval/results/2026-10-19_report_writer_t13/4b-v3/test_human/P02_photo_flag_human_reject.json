@@ -1,0 +1,74 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected after a human review because multiple must-have requirements are missing. The CV shows a Master Degree in Data Science but does not mention 4 years of experience, probability theory, Bayesian methods, time series analysis, sensor signal processing, probabilistic programming, or cloud experience with SageMaker. The score is 13.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Master Degree in Data Science\", \"line\": \"Met: the CV mentions a Master Degree in Data Science.\"}, {\"req_id\": \"r2\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Good knowledge of probability theory and statistics is not found in the CV.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Understanding of Bayesian methods, time series analysis or sensor signal processing is not found in the CV.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) is not found in the CV.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Experience with cloud (Amazon SageMaker) is not found in the CV.\"}, {\"req_id\": \"r6\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Experience with PySpark is not found in the CV.\"}, {\"req_id\": \"r7\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Strong working knowledge of SQL is not found in the CV.\"}, {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"Master Degree in Data Science\", \"line\": \"Missing: Ph.D. in Mathematics is not mentioned in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Scientist position. We will not move forward with your application, because your CV does not show the following required points: good knowledge of probability theory and statistics, understanding of Bayesian methods, time series analysis or sensor signal processing, hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar), experience with cloud (Amazon SageMaker), experience with PySpark, or strong working knowledge of SQL.\\n\\nThis decision was made after a human review. You have the right to reply with questions about the assessment.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The CV image was hard to read (low_confidence_or_little_text)\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected after a human review because multiple must-have requirements are missing. The CV shows a Master Degree in Data Science but does not mention 4 years of experience, probability theory, Bayesian methods, time series analysis, sensor signal processing, probabilistic programming, or cloud experience with SageMaker. The score is 13.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Master Degree in Data Science",
+    "line": "Met: the CV mentions a Master Degree in Data Science."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Good knowledge of probability theory and statistics is not found in the CV."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Understanding of Bayesian methods, time series analysis or sensor signal processing is not found in the CV."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) is not found in the CV."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with cloud (Amazon SageMaker) is not found in the CV."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with PySpark is not found in the CV."
+   },
+   {
+    "req_id": "r7",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Strong working knowledge of SQL is not found in the CV."
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "Master Degree in Data Science",
+    "line": "Missing: Ph.D. in Mathematics is not mentioned in the CV."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Scientist position. We will not move forward with your application, because your CV does not show the following required points: good knowledge of probability theory and statistics, understanding of Bayesian methods, time series analysis or sensor signal processing, hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar), experience with cloud (Amazon SageMaker), experience with PySpark, or strong working knowledge of SQL.\n\nThis decision was made after a human review. You have the right to reply with questions about the assessment.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The CV image was hard to read (low_confidence_or_little_text)"
+  ]
+ },
+ "source": "llm",
+ "latency_s": 10.23,
+ "peak_vram_mib": 3267,
+ "id": "P02_photo_flag_human_reject",
+ "outcome": "reject",
+ "synthetic_flags": true
+}

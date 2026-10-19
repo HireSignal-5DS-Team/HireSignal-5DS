@@ -1,0 +1,15 @@
+Native language: Arabic
+Position: Data Scientist
+Experience years: 1.5
+English level: fluent
+
+Master's degree in Computer Science and Data Analytics at George Washington University (USA).
+- Languages: Python, SQL, C/C++
+I have 1.5 -years of experience as a Data Scientist. I have worked with
+-Data modeling of IFRS9 standards for the banking system.
+-Generating python scripts for data cleaning and preprocessing. 
+-Development of Machine Learning models for various business domains.
+- Prediction of Acute Pancreatitis with medical data
+- Analysis and Application of Automatic Text Classification with 
+ Supervised Machine Learning
+- Modeling, data mining, and identifying anomalies using statistical, math, and probability theory tools (regressions, data sampling, clustering).

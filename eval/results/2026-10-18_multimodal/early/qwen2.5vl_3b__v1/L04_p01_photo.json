@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "L04_p01_photo",
+  "file": "L04_p01_photo.jpg",
+  "source": "L04.pdf",
+  "pages": [
+   1
+  ],
+  "pair": "P52",
+  "split": "test",
+  "condition": "hard photo",
+  "job": "J4"
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "<<<\n04.pdf\n\nDemander à Copilot v\n\nCURRICULUM VITAE\nSenior Python Developer, Team Lead\nPosition: Senior Python Developer, Team Lead\nExperience years: 11\nEnglish level: upper\n\nArchitecture and implementation of an analytics dashboard based on Django, Celery, and D3.js\nImplemented a bunch of features for a B2B coffee business project\nImplemented new features to Django corporate task management system\nDesigned and implemented a distributed CRM\nImplemented a business intelligence system for a game application\nDesigned and developed RESTful API for a game application\nIntegrated a corporate ticket system with Facebook and Twitter APIs\nDesigned and developed a WebSocket web chat for a corporate ticket system using JavaScript and Tornado\nWrote SQL reports for the company clients\nDesigned and implemented a distributed RESTful task queue based on key-value DB using Python and Lua\nSupported a highload e-commerce shop\nOver 10 years of experience as a Software Developer mostly using Python\nBuilt CI pipelines in GitLab CI with testing and code standard checks (pyflakes, pylint)\nBuilt an infrastructure with Terraform, Ansible in various clouds (for AWS and Azure)\nBuilt projects with microservices\nBuilt systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)\n3 years of team leading of web team\nPerformed code review of team members\nPerformed staff candidates review\n\nSkillset:\nGit\nDocker\nDocker Compose\nDjango\nDjango RESTful Framework\nCelery\nFlask SQLAlchemy\naiohttp\nTornado\nRabbitMQ\nPython3\nJavaScript\nLua\nSQL (PostgreSQL/MySQL)\nNoSQL (MongoDB/DynamoDB/Kyotyotycoon/Redis/Memcached/MongoDB/ElasticSearch)\nProxy (Nginx)\nDevOps (Linux/Terraform/Ansible/Amazon AWS Cloud/MS Azure Cloud)\nScrum\nMicroservices\nAutomated Testing\nCD/CI (GitHub runners/GitHub actions/Circle CI/Jenkins)\nCode quality tools\nAPI (REST, GraphQL, JSONRPC)\nWeb Scraping (Selenium + BeautifulSoup)\nTeam leading\n>>>",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 12.07,
+   "eval_count": 442,
+   "done_reason": "stop",
+   "peak_vram_mib": 4251
+  }
+ ]
+}

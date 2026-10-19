@@ -1,0 +1,62 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v1.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because four must-have requirements are missing: knowledge of data warehousing and data lakes, hands-on SQL experience, Python knowledge, and cloud platform experience. The score is 14, indicating a significant gap in core qualifications. No evidence was found for any of the must-have requirements.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No mention of knowledge of data warehousing or data lakes.\"}, {\"req_id\": \"r2\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No evidence of hands-on SQL experience.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No evidence of Python knowledge.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: No mention of experience with GCP or another cloud provider.\"}, {\"req_id\": \"r5\", \"decision\": \"UNCERTAIN\", \"quote\": \"I want to develop my skills, gain more hands-on experience and learn something new from seasoned developers to become a high-class specialist.\", \"line\": \"Uncertain: The quote suggests interest in learning, but does not confirm spoken English proficiency.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: No clear evidence of willingness to research business logic.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show the required skills: knowledge of data warehousing and data lakes, hands-on SQL experience, Python knowledge, and experience with a cloud provider.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about spoken English (r5); please verify the candidate's language ability.\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because four must-have requirements are missing: knowledge of data warehousing and data lakes, hands-on SQL experience, Python knowledge, and cloud platform experience. The score is 14, indicating a significant gap in core qualifications. No evidence was found for any of the must-have requirements.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No mention of knowledge of data warehousing or data lakes."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of hands-on SQL experience."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No evidence of Python knowledge."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: No mention of experience with GCP or another cloud provider."
+   },
+   {
+    "req_id": "r5",
+    "decision": "UNCERTAIN",
+    "quote": "I want to develop my skills, gain more hands-on experience and learn something new from seasoned developers to become a high-class specialist.",
+    "line": "Uncertain: The quote suggests interest in learning, but does not confirm spoken English proficiency."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: No clear evidence of willingness to research business logic."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show the required skills: knowledge of data warehousing and data lakes, hands-on SQL experience, Python knowledge, and experience with a cloud provider.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about spoken English (r5); please verify the candidate's language ability."
+  ]
+ },
+ "source": "llm",
+ "latency_s": 8.68,
+ "peak_vram_mib": 3267,
+ "id": "P19",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

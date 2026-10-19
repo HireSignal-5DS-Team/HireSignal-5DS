@@ -1,0 +1,81 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 2,
+ "first_errors": [
+  "r3: quote is not in its verified CV quotes"
+ ],
+ "retry_errors": [
+  "r3: quote is not in its verified CV quotes"
+ ],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because two must-have requirements are missing: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) and experience with cloud platforms (Amazon SageMaker). The candidate has 8 years of data science experience and shows knowledge of statistics and PySpark, but does not meet the required skills in probabilistic programming or cloud platforms. The score is 60.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Self-motivated Data Scientist with 4+ years of experience (8+ years in IT Data Analytics ). I constantly bring high-quality business solutions to businesses seeking higher efficiency.\", \"line\": \"Met: the CV shows 8 years of experience in data science and IT data analytics.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Advanced mathematical and statistics skills\", \"line\": \"Met: the CV mentions advanced mathematical and statistics skills.\"}, {\"req_id\": \"r3\", \"decision\": \"UNCERTAIN\", \"quote\": \"ML: supervised and unsupervised learning, clustering, regression, classification, recommendation systems, time series\", \"line\": \"Uncertain: the CV mentions time series in machine learning but it is unclear if this constitutes sufficient understanding of Bayesian methods or sensor signal processing.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) is not found in the CV.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: experience with Amazon SageMaker is not found in the CV.\"}, {\"req_id\": \"r6\", \"decision\": \"MET\", \"quote\": \"Hadoop, PySpark\", \"line\": \"Met: the CV mentions PySpark experience.\"}, {\"req_id\": \"r7\", \"decision\": \"MET\", \"quote\": \"SQL\", \"line\": \"Met: the CV mentions SQL experience.\"}, {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Ph.D. in Mathematics is not mentioned in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Scientist position. We will not move forward with your application, because your CV does not show the following required points: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) and experience with Amazon SageMaker.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about r3: understanding of Bayesian methods or sensor signal processing is not clearly demonstrated.\"]}",
+  "{\"recruiter_summary\": \"The candidate is rejected because two must-have requirements are missing: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) and experience with Amazon SageMaker. The candidate has 8 years of data science experience and mentions advanced mathematical and statistics skills, as well as PySpark and SQL. The understanding of Bayesian methods, time series analysis, or sensor signal processing is unclear due to insufficient evidence. The score is 60.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Self-motivated Data Scientist with 4+ years of experience (8+ years in IT Data Analytics ). I constantly bring high-quality business solutions to businesses seeking higher efficiency.\", \"line\": \"Met: the CV shows 8 years of experience in data science and IT data analytics.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Advanced mathematical and statistics skills\", \"line\": \"Met: the CV mentions advanced mathematical and statistics skills.\"}, {\"req_id\": \"r3\", \"decision\": \"UNCERTAIN\", \"quote\": \"ML: supervised and unsupervised learning, clustering, regression, classification, recommendation systems, time series\", \"line\": \"Uncertain: the CV mentions time series in machine learning but it is unclear if this constitutes sufficient understanding of Bayesian methods or sensor signal processing.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) is not found in the CV.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: experience with Amazon SageMaker is not found in the CV.\"}, {\"req_id\": \"r6\", \"decision\": \"MET\", \"quote\": \"Hadoop, PySpark\", \"line\": \"Met: the CV mentions PySpark experience.\"}, {\"req_id\": \"r7\", \"decision\": \"MET\", \"quote\": \"SQL\", \"line\": \"Met: the CV mentions SQL experience.\"}, {\"req_id\": \"r8\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Ph.D. in Mathematics is not mentioned in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Scientist position. We will not move forward with your application, because your CV does not show the following required points: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) and experience with Amazon SageMaker.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about r3: understanding of Bayesian methods or sensor signal processing is not clearly demonstrated.\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 4 of 7 must-have requirements are met; the score is 60. Missing must-haves: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar); Experience with cloud (Amazon SageMaker). Unclear must-haves: Understanding of Bayesian methods, time series analysis or sensor signal processing.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Self-motivated Data Scientist with 4+ years of experience (8+ years in IT Data Analytics ). I constantly bring high-quality business solutions to businesses seeking higher efficiency.",
+    "line": "Met: Data Science: 4 years of experience or more (must; CV: Self-motivated Data Scientist with 4+ years of experience (8+ years in IT Data Analytics ). I constantly bring high-quality business solutions to businesses seeking higher efficiency.)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Advanced mathematical and statistics skills",
+    "line": "Met: Good knowledge of probability theory and statistics (must; CV: Advanced mathematical and statistics skills)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Understanding of Bayesian methods, time series analysis or sensor signal processing (must; unclear in the CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) (must; not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with cloud (Amazon SageMaker) (must; not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MET",
+    "quote": "Hadoop, PySpark",
+    "line": "Met: Experience with PySpark (must; CV: Hadoop, PySpark)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "MET",
+    "quote": "SQL",
+    "line": "Met: Strong working knowledge of SQL (must; CV: SQL)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Ph.D. in Mathematics (nice; not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar); Experience with cloud (Amazon SageMaker).\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r3"
+  ]
+ },
+ "source": "template",
+ "latency_s": 22.77,
+ "peak_vram_mib": 3267,
+ "id": "P43",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

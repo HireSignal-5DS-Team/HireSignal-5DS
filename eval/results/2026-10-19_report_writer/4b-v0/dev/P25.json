@@ -1,0 +1,79 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "candidate letter mentions internals (bias / reader / model)",
+  "reject letter without the right to a human review"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate has been rejected for the ML Engineer position due to missing critical must-have requirements. Specifically, the candidate lacks proven experience with modern deep learning techniques and Gradient Boosting Trees (r2), excellent Python coding skills (r3), proficiency with key ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) (r4), and experience with microservices architecture, cloud technologies, Docker, and Kubernetes (r6). While the candidate demonstrates experience with tabular data and time series (r5), this requirement was only partially met and flagged as a 'FAIL' in judgment. The only partially assessed requirement (r1) related to ML in production has low confidence due to insufficient evidence. Overall, the candidate fails to meet the core technical and architectural expectations of the role.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"Development of online analytical tools for auditors. Responsible for exploring opportunities to design red flags and risk indicators algorithms considering the available procurement data set and for designed red flags and risk indicators algorithms testing, ensuring their correct performance.\",\n      \"line\": \"low confidence: the Matcher was unsure on r1\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"must-have MISSING\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"must-have MISSING\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"must-have MISSING\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MET\",\n      \"quote\": \"Development of online analytical tools for auditors. Responsible for exploring opportunities to design red flags and risk indicators algorithms considering the available procurement data set and for designed red flags and risk indicators algorithms testing, ensuring their correct performance.\",\n      \"line\": \"Practical experience with tabular data and time series\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"must-have MISSING\"\n    },\n    {\n      \"req_id\": \"r7\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"Experience with data pipelines or big data\"\n    },\n    {\n      \"req_id\": \"r8\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Experience designing and implementing AutoML flows or frameworks\"\n    }\n  ],\n  \"candidate_letter\": \"Dear Recruiter,\\n\\nThe candidate has been rejected for the ML Engineer role due to significant gaps in required technical competencies. While they have experience in developing algorithms for risk indicators using procurement data, there is no evidence of proficiency in modern deep learning techniques (e.g., Gradient Boosting Trees), essential Python coding skills, or experience with core ML libraries such as TensorFlow, PyTorch, or LightGBM. Additionally, the candidate lacks experience with microservices, cloud technologies, Docker, and Kubernetes—key components of production-grade ML systems.\\n\\nThe only partially supported requirement (r1: ML in production) was assessed with low confidence due to insufficient detail. The candidate's experience with tabular and time series data is present but not sufficient to meet the role's core expectations.\\n\\nWe recommend further evaluation of candidates with demonstrable experience in deep learning, cloud-native ML deployment, and production-level model lifecycle management.\\n\\nBest regards,\\nAutomated Screening System\",\n  \"flags_for_recruiter\": [\n    \"low confidence: the Matcher was unsure on r1\",\n    \"Missing must-have requirement: deep learning and Gradient Boosting Trees (r2)\",\n    \"Missing must-have requirement: Python coding skills (r3)\",\n    \"Missing must-have requirement: ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) (r4)\",\n    \"Missing must-have requirement: microservices, cloud, Docker, Kubernetes (r6)\",\n    \"Candidate's experience with tabular/time series data was only partially validated (r5)\"\n  ]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 1 of 6 must-have requirements are met; the score is 25. Missing must-haves: Proven experience with modern deep learning techniques and Gradient Boosting Trees; Excellent Python coding skills; Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn); Experience with microservices architecture, cloud technologies, Docker and Kubernetes. Unclear must-haves: ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models).",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models) - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Proven experience with modern deep learning techniques and Gradient Boosting Trees - missing (not found in CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Excellent Python coding skills - missing (not found in CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "Development of online analytical tools for auditors. Responsible for exploring opportunities to design red flags and risk indicators algorithms considering the available procurement data set and for designed red flags and risk indicators algorithms testing, ensuring their correct performance.",
+    "line": "must: Practical experience with tabular data and time series - met (CV: Development of online analytical tools for auditors. Responsible for exploring opportunities to design red flags and risk indicators algorithms considering the available procurement data set and for designed red flags and risk indicators algorithms testing, ensuring their correct performance.)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with microservices architecture, cloud technologies, Docker and Kubernetes - missing (not found in CV)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "nice: Experience with data pipelines or big data - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience designing and implementing AutoML flows or frameworks - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Proven experience with modern deep learning techniques and Gradient Boosting Trees; Excellent Python coding skills; Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn); Experience with microservices architecture, cloud technologies, Docker and Kubernetes.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r1"
+  ]
+ },
+ "source": "template",
+ "latency_s": 15.58,
+ "peak_vram_mib": 3267,
+ "id": "P25",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

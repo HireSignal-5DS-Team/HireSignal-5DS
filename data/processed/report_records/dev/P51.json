@@ -1,0 +1,134 @@
+{
+ "job_title": "Python BackEnd Developer",
+ "decided_by": "gate",
+ "outcome": "reject",
+ "score": 44,
+ "gate_rule": "1 reject: must-have MISSING",
+ "gate_reasons": [
+  "r3: must-have MISSING"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Software development: 5 years of experience or more",
+   "decision": "UNCERTAIN",
+   "quotes": [],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": false,
+   "review_reasons": [
+    "evidence_not_in_cv",
+    "met_without_verified_evidence"
+   ],
+   "skill_terms": [],
+   "min_years": 5.0,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "decision": "MET",
+   "quotes": [
+    "Worked on multiple projects: two web stores(one from scratch) and a multilingual website. Wrote an easy-to-maintain, reliable, and bug-free code wrapped in Docker and deployed on AWS."
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "evidence_not_in_cv",
+    "duration_not_in_evidence",
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "Python"
+   ],
+   "min_years": 2.0,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "asynchronous programming",
+    "performance-critical applications"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "nice",
+   "text": "Working with AWS, Docker and microservices",
+   "decision": "MET",
+   "quotes": [
+    "Configured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK.",
+    "Python 3.9 with FastAPI running on AWS(lambda, SNS, SQS, Athena, DynamoDB, etc. deployed with AWS CDK).",
+    "Linux, Python 3.8 & 2.7, Flask, Docker/Docker-Compose, MongoDB, AWS, CI/CD, logging(Sentry), Git(Bitbucket), Scrum, Agile, JIRA"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "AWS",
+    "Docker",
+    "microservices"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "nice",
+   "text": "Experience with Machine Learning",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Machine Learning"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "nice",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "collaborative filtering",
+    "similarity",
+    "data normalization",
+    "clustering"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P51",
+ "pair_id": "P51",
+ "split": "dev",
+ "synthetic_flags": false
+}

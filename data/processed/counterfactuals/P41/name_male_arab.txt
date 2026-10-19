@@ -1,0 +1,17 @@
+Ahmed Haddad
+Pronouns: he/him
+Position: Data Scientist | Machine Learning Engineer
+Experience years: 5
+English level: upper
+
+- M.SC computer science, Thesis on Automatic wordnet construction using sense embedding for local language
+
+ - finished  data science and visualization training offered by UN Analytics & Visualization Team, 6 months of rigorous training.
+Developed machine learning solutions in various contexts related to Computer vision, Tabular data, Time series, Digital signals processing, and more. Experienced in building efficient Machine learning pipelines and overall MLOps strategy, moving within the unclear scope of requirements, taking a leadership role, communicating with C-level stakeholders.
+
+Last projects:
+Development of Chatbot for health care assistance using DialoGPT, Sbert for sentence similarity, BiLSTM+CNN for predictive modeling
+
+
+
+Machine Learning, PyTorch, Deep Learning, Data Science, Git, computer vision, Docker, Python, Pandas, SQL, numpy, scikit-learn, Jupyter Notebook, statistics, matplotlib, PySpark, Databricks, AWS S3, AWS Sagemaker, MS Azure ML Studio

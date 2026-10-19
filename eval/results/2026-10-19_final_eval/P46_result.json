@@ -1,0 +1,271 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "64",
+ "cv_id": "cv-a5f054a2",
+ "job_id": "J2",
+ "job_title": "Data Engineer",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 77,
+ "reasons": [
+  "r4: must-have MISSING"
+ ],
+ "listed_flags": [
+  "r3 (must, not outcome-relevant): judge:disagrees",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: profile:partial_extraction_requires_review (info only)"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Designed and implemented a BI project(DWH, ETL, Data visualization) from scratch.",
+     "start": 76,
+     "end": 157
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.99509,
+    "MISSING": 0.004853,
+    "UNCERTAIN": 5.7e-05
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9911
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Hands-on experience with SQL",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL",
+     "start": 277,
+     "end": 345
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.99854,
+    "MISSING": 0.001446,
+    "UNCERTAIN": 1.4e-05
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9978
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Knowledge of Python",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Programming languages: Python, Ruby, JS",
+     "start": 487,
+     "end": 526
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999786,
+    "MISSING": 0.000213,
+    "UNCERTAIN": 1e-06
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.8671
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Experience with GCP or another cloud provider",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000189,
+    "MISSING": 0.99829,
+    "UNCERTAIN": 0.001521
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9964
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Good spoken English",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "English level: upper",
+     "start": 54,
+     "end": 74
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.96816,
+    "MISSING": 0.024902,
+    "UNCERTAIN": 0.006938
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9821
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Willingness to research business logic",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.045942,
+    "MISSING": 0.417948,
+    "UNCERTAIN": 0.53611
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because a must-have requirement is missing. The candidate has experience with data warehousing, SQL, Python, and good spoken English, which all meet the requirements. However, experience with GCP or another cloud provider is not found in the CV. The score is 77.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Designed and implemented a BI project(DWH, ETL, Data visualization) from scratch.",
+    "line": "Met: the CV mentions data warehousing and ETL in a BI project."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "DBMS MS SQL Snowfalke, BigQuery, Vertica, Netteza, PostgreSQL, MySQL",
+    "line": "Met: the CV lists multiple SQL-based DBMS systems."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Programming languages: Python, Ruby, JS",
+    "line": "Met: the CV lists Python as a programming language."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with GCP or another cloud provider is not found in the CV."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: upper",
+    "line": "Met: the CV states the English level is upper."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Willingness to research business logic is not clearly stated in the CV."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show this required point: experience with GCP or another cloud provider.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [],
+  "source": "llm",
+  "info_flags": [],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [],
+  "would_be_outcome": "reject",
+  "swap": {
+   "ran": true,
+   "counterfactual": "male_western",
+   "how": "name + pronouns added",
+   "identical_matcher_input": true,
+   "latency_s": 0.004
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.001,
+  "profile": 26.505,
+  "job": 0,
+  "match_and_judge": 8.242
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "model": "qwen3-0.6b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate is rejected because one must-have requirement is missing. The CV shows 5 years of experience in software development, meeting the 5-year minimum. However, the candidate lacks 2 years of experience in big systems with Python, and the requirement for asynchronous programming and algorithms development is unclear. The score is 50.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MET\",\n      \"quote\": \"I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-[URL] websites.\",\n      \"line\": \"Met: the CV shows 5 years of experience in software development.\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MET\",\n      \"quote\": \"Lead redesign and optimization of backend and deployment for two legacy projects in 3-4 member teams.\",\n      \"line\": \"Met: the CV shows 2 years of experience in big systems with Python.\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Uncertain: Docker is not clearly shown in the CV.\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Uncertain: Working with AWS, Docker, and microservices is not clearly shown.\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Uncertain: Experience with Machine Learning is not clearly shown.\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"Uncertain: Algorithms development (collaborative filtering, similarity, data normalization, clustering) is not clearly shown.\"\n    }\n  ],\n  \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show this required point: asynchronous programming and algorithms development. This decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\",\n  \"flags_for_recruiter\": [\"The Matcher was unsure about r6; please check it.\"]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because one must-have requirement is missing. The CV shows 5 years of experience in software development, meeting the 5-year minimum. However, the candidate lacks 2 years of experience in big systems with Python, and the requirement for asynchronous programming and algorithms development is unclear. The score is 50.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-[URL] websites.",
+    "line": "Met: the CV shows 5 years of experience in software development."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Lead redesign and optimization of backend and deployment for two legacy projects in 3-4 member teams.",
+    "line": "Met: the CV shows 2 years of experience in big systems with Python."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Uncertain: Docker is not clearly shown in the CV."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Uncertain: Working with AWS, Docker, and microservices is not clearly shown."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Uncertain: Experience with Machine Learning is not clearly shown."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Algorithms development (collaborative filtering, similarity, data normalization, clustering) is not clearly shown."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show this required point: asynchronous programming and algorithms development. This decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about r6; please check it."
+  ]
+ },
+ "source": "llm",
+ "latency_s": 6.02,
+ "peak_vram_mib": 4910,
+ "id": "P31",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

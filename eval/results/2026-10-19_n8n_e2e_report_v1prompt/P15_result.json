@@ -1,0 +1,268 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "36",
+ "cv_id": "cv-db680c69",
+ "job_id": "J2",
+ "job_title": "Data Engineer",
+ "outcome": "review",
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "score": 50,
+ "reasons": [
+  "r1: must MISSING doubted (judge:disagrees): possible false reject",
+  "r4: must MISSING doubted (judge:disagrees): possible false reject",
+  "r5: must UNCERTAIN (low confidence)"
+ ],
+ "listed_flags": [
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter"
+ ],
+ "message": null,
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": "http://localhost:5678/form-waiting/36?signature=ebcd2d9aed4422b8643475bc596145032e9a4e7d79b72bd78bd4373b4ae9d373",
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.027994,
+    "MISSING": 0.840404,
+    "UNCERTAIN": 0.131602
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.9518
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Hands-on experience with SQL",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.",
+     "start": 125,
+     "end": 326
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.998775,
+    "MISSING": 0.001224,
+    "UNCERTAIN": 1e-06
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.749
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Knowledge of Python",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Python: Experience in using Python for file and database manipulation tasks.",
+     "start": 1117,
+     "end": 1193
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.999542,
+    "MISSING": 0.000457,
+    "UNCERTAIN": 1e-06
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9714
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Experience with GCP or another cloud provider",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "contradicted",
+   "quotes": [
+    {
+     "quote": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner.",
+     "start": 329,
+     "end": 483
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000165,
+    "MISSING": 0.999562,
+    "UNCERTAIN": 0.000273
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.1855
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Good spoken English",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "MET",
+   "basis": "ambiguous",
+   "quotes": [
+    {
+     "quote": "English level: upper",
+     "start": 61,
+     "end": 81
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.687748,
+    "MISSING": 0.237382,
+    "UNCERTAIN": 0.07487
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Willingness to research business logic",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.01232,
+    "MISSING": 0.456664,
+    "UNCERTAIN": 0.531015
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  }
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is sent for review because two must-have requirements are missing or uncertain, and one has low confidence. The candidate has hands-on SQL and Python experience, which are met. However, there is no clear evidence of knowledge of data warehousing principles or experience with GCP or another cloud provider. The English language proficiency is uncertain due to low confidence in the evidence.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: The CV does not show knowledge of data warehousing principles."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.",
+    "line": "Met: The CV shows 8 years of SQL experience in Oracle."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Python: Experience in using Python for file and database manipulation tasks.",
+    "line": "Met: The CV mentions Python use for file and database tasks."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner.",
+    "line": "Missing: The CV mentions Azure and AWS, but does not confirm experience with GCP or another cloud provider as required."
+   },
+   {
+    "req_id": "r5",
+    "decision": "UNCERTAIN",
+    "quote": "English level: upper",
+    "line": "Uncertain: The English level is listed as 'upper', but the Matcher was unsure of its relevance to job requirements."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: No evidence provided for willingness to research business logic."
+   }
+  ],
+  "candidate_letter": "",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about spoken English (r5); please verify the candidate's language proficiency."
+  ],
+  "source": "llm",
+  "info_flags": [],
+  "model": "qwen3-4b"
+ },
+ "bias": {
+  "bias_flags": [],
+  "would_be_outcome": "review",
+  "swap": {
+   "ran": false,
+   "skipped": "gate would answer review: a person reviews it anyway"
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.001,
+  "profile": 28.237,
+  "job": 0,
+  "match_and_judge": 9.657
+ }
+}

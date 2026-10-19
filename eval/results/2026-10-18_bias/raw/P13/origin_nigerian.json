@@ -1,0 +1,43 @@
+{
+ "decisions": {
+  "r1": "MET",
+  "r2": "MET",
+  "r3": "MISSING",
+  "r4": "MET",
+  "r5": "MET",
+  "r6": "UNCERTAIN"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "nice"
+ },
+ "outcome": "reject",
+ "score": 77,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [
+   "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+  ],
+  "r2": [
+   "Hands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop)."
+  ],
+  "r3": [],
+  "r4": [
+   "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+  ],
+  "r5": [
+   "English level: fluent"
+  ],
+  "r6": [
+   "Proactive and continuously growing. Always trying to deliver more and ahead of schedule.",
+   "Interpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile."
+  ]
+ },
+ "elapsed_s": 21.65,
+ "identical_to_base": false,
+ "ran": true
+}

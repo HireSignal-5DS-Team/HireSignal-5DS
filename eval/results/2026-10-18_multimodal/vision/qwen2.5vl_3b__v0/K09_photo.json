@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K09_photo",
+  "file": "K09_photo.jpg",
+  "source": "K04.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "This is a resume that outlines the educational and training background of an individual. Here is a summary of the key points:\n\n### Education and Training\n\n#### Bachelor of Science: Computers and Information Technology\n- **University**: University of Phoenix\n- **City**: Phoenix, Arizona\n- **Program**: Computers and Information Technology\n- **Year**: 2016\n\n#### Associates of Arts: Finance and Business Administration\n- **University**: Lake Sumter Community College\n- **City**: Lake City, Florida\n- **Program**: Finance and Business Administration\n- **Year**: 2016\n\n#### ITIL Foundation Course\n- **Certification**: Microsoft Certified Professional (MCP), CompTIA A+, CompTIA N+\n\n### Skills\n\n- **A+**: Acquisitions, backup, budget planning, budgeting, budgets, budgeting, business development, change management, conversion, decision making, delivery, direction, disaster planning, documentation, ERP, Enterprise Resource Planning, Facilities Management, Financials, focus, Forecasting, help desk, information technology, ITIL, Leadership, Team-Building, managing, materials, access, Microsoft Certified Professional, MCP, network, networks, operations management, organizational, PC systems, people skills, policies, POS, process design, Procurement, Project Management, proposal development, sales, Scheduling, SDLC, SLA, strategic, Strategic Planning, technical support, user training, training material, Upgrades, Windows server, workflow\n\n\n\nThis resume provides a comprehensive overview of the individual's educational background and the specific skills they possess in the field of computers and information technology, finance and business administration, and ITIL foundation course.",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 12.15,
+   "eval_count": 343,
+   "done_reason": "stop",
+   "peak_vram_mib": 4379
+  }
+ ]
+}

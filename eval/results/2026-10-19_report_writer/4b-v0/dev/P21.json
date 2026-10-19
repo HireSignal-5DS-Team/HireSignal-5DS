@@ -1,0 +1,78 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "reject letter without the right to a human review"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate has been rejected for the ML Engineer position due to critical missing requirements. While the candidate demonstrates some relevant experience, such as MLOps practices and Python coding, they fail to meet mandatory requirements including proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) and experience with microservices architecture, cloud technologies, Docker, and Kubernetes. The decision on requirement r6 (microservices/cloud/Docker/Kubernetes) was incorrectly judged as 'PASS' by the system, which is a critical error—this requirement is marked as a must-have and is missing. The system also incorrectly assessed r3 (Python skills) as met, despite the evidence being insufficient. The candidate's experience with deep learning techniques and tabular/time series data is uncertain and lacks supporting evidence. These gaps, especially the missing must-have requirements, result in a final score of 46, which is below the threshold for consideration.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MET\",\n      \"quote\": \"Successfully migrated seven ML models to the Dataiku Platform by applying MLOps best practices\",\n      \"line\": \"FAIL\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"NOT_APPLICABLE\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MET\",\n      \"quote\": \"Successfully migrated seven ML models to the Dataiku Platform by applying MLOps best practices\",\n      \"line\": \"FAIL\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"FAIL\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"NOT_APPLICABLE\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"PASS\"\n    },\n    {\n      \"req_id\": \"r7\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"NOT_APPLICABLE\"\n    },\n    {\n      \"req_id\": \"r8\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"FAIL\"\n    }\n  ],\n  \"candidate_letter\": \"Dear Recruiter,\\n\\nThe candidate has been rejected for the ML Engineer role due to critical gaps in required experience. Specifically, they lack proven proficiency with essential ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) and experience with microservices, cloud technologies, Docker, and Kubernetes—both of which are mandatory requirements (r4 and r6). The system incorrectly judged r6 as 'PASS' when it should have been 'MISSING', indicating a technical error in the evaluation logic.\\n\\nAdditionally, the candidate's experience with deep learning techniques and tabular/time series data is uncertain and lacks supporting evidence. While they have demonstrated some MLOps experience and Python skills, these do not fully satisfy the core technical requirements of the role.\\n\\nWe recommend reviewing the candidate's profile with a focus on these missing must-have qualifications. The current score of 46 reflects insufficient alignment with the job's core technical demands.\\n\\nBest regards,\\nAutomated Screening System\",\n  \"flags_for_recruiter\": [\n    \"Critical missing requirement: ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) – requirement r4 is missing.\",\n    \"Critical missing requirement: Microservices, cloud, Docker, Kubernetes – requirement r6 is missing (system incorrectly judged as PASS).\",\n    \"Low confidence in assessment of deep learning and tabular data experience (r2 and r5).\",\n    \"Inconsistent or incorrect judgment in requirement r3 (Python skills) – evidence provided is insufficient to confirm proficiency.\",\n    \"System error: Requirement r6 was incorrectly judged as 'PASS' when it should be 'MISSING'. This is a high-priority flag for review.\"\n  ]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 2 of 6 must-have requirements are met; the score is 46. Missing must-haves: Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn); Experience with microservices architecture, cloud technologies, Docker and Kubernetes. Unclear must-haves: Proven experience with modern deep learning techniques and Gradient Boosting Trees; Practical experience with tabular data and time series.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Successfully migrated seven ML models to the Dataiku Platform by applying MLOps best practices",
+    "line": "must: ML in production: 3 years of experience or more (training, testing, deployment, monitoring of real-time models) - met (CV: Successfully migrated seven ML models to the Dataiku Platform by applying MLOps best practices)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Proven experience with modern deep learning techniques and Gradient Boosting Trees - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Successfully migrated seven ML models to the Dataiku Platform by applying MLOps best practices",
+    "line": "must: Excellent Python coding skills - met (CV: Successfully migrated seven ML models to the Dataiku Platform by applying MLOps best practices)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Practical experience with tabular data and time series - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with microservices architecture, cloud technologies, Docker and Kubernetes - missing (not found in CV)"
+   },
+   {
+    "req_id": "r7",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "nice: Experience with data pipelines or big data - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience designing and implementing AutoML flows or frameworks - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Proficiency with ML libraries (TensorFlow, PyTorch, LightGBM, Scikit-learn); Experience with microservices architecture, cloud technologies, Docker and Kubernetes.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r2"
+  ]
+ },
+ "source": "template",
+ "latency_s": 15.06,
+ "peak_vram_mib": 3267,
+ "id": "P21",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

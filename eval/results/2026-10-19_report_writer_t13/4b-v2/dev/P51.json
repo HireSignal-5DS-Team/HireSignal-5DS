@@ -1,0 +1,68 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 2,
+ "first_errors": [
+  "reject letter names r2 (must, MET), which is not a missing must-have",
+  "reject letter names r5 (nice, MISSING), which is not a missing must-have"
+ ],
+ "retry_errors": [
+  "reject letter names r2 (must, MET), which is not a missing must-have"
+ ],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because a must-have requirement is missing. The candidate has no evidence of asynchronous programming or performance-critical application development, which is a required must-have. The experience with Python in big systems is marked as uncertain due to lack of clear evidence. The candidate does meet the nice-to-have requirements for AWS, Docker, and microservices, but lacks experience in machine learning and algorithms development.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: no evidence of 5 years of software development experience in the CV.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Worked on multiple projects: two web stores(one from scratch) and a multilingual website. Wrote an easy-to-maintain, reliable, and bug-free code wrapped in Docker and deployed on AWS.\", \"line\": \"Met: the candidate worked on multiple Python-based web projects, including full-stack development and Docker deployment.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of asynchronous programming or performance-critical applications in the CV.\"}, {\"req_id\": \"r4\", \"decision\": \"MET\", \"quote\": \"Configured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK.\", \"line\": \"Met: the candidate has experience with AWS, Docker, and microservices via CI/CD and AWS CDK.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with machine learning in the CV.\"}, {\"req_id\": \"r6\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with algorithms like collaborative filtering or clustering in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application because your CV does not show the following required points: experience in asynchronous programming and performance-critical applications, and it lacks evidence of experience in machine learning and algorithms development.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": []}",
+  "{\"recruiter_summary\": \"The candidate is rejected because one must-have requirement is missing. The candidate lacks experience in asynchronous programming and performance-critical applications, which is a required must-have. The experience with software development is uncertain due to lack of clear evidence. The candidate meets the nice-to-have requirement for AWS, Docker, and microservices, but does not meet the other nice-to-haves.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: no evidence of 5 years of software development experience in the CV.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Worked on multiple projects: two web stores(one from scratch) and a multilingual website. Wrote an easy-to-maintain, reliable, and bug-free code wrapped in Docker and deployed on AWS.\", \"line\": \"Met: the candidate worked on multiple Python-based web projects, including full-stack development and Docker deployment.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no mention of asynchronous programming or performance-critical applications in the CV.\"}, {\"req_id\": \"r4\", \"decision\": \"MET\", \"quote\": \"Configured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK.\", \"line\": \"Met: the candidate has experience with AWS, Docker, and microservices via CI/CD and AWS CDK.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with machine learning in the CV.\"}, {\"req_id\": \"r6\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: no evidence of experience with algorithms like collaborative filtering or clustering in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application because your CV does not show the following required point: experience in asynchronous programming and performance-critical applications.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": []}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 1 of 3 must-have requirements are met; the score is 44. Missing must-haves: Asynchronous programming and developing performance-critical applications. Unclear must-haves: Software development: 5 years of experience or more.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Software development: 5 years of experience or more (must; unclear in the CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Worked on multiple projects: two web stores(one from scratch) and a multilingual website. Wrote an easy-to-maintain, reliable, and bug-free code wrapped in Docker and deployed on AWS.",
+    "line": "Met: Developing big systems with Python: 2 years of experience or more (must; CV: Worked on multiple projects: two web stores(one from scratch) and a multilingual website. Wrote an easy-to-maintain, reliable, and bug-free code wrapped in Docker and deployed on AWS.)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Asynchronous programming and developing performance-critical applications (must; not found in CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Configured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK.",
+    "line": "Met: Working with AWS, Docker and microservices (nice; CV: Configured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK.)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with Machine Learning (nice; not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Algorithms development (collaborative filtering, similarity, data normalization, clustering) (nice; not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Asynchronous programming and developing performance-critical applications.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": []
+ },
+ "source": "template",
+ "latency_s": 18.29,
+ "peak_vram_mib": 3267,
+ "id": "P51",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

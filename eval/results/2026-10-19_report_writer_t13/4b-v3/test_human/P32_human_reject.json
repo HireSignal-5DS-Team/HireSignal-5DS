@@ -1,0 +1,72 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 2,
+ "first_errors": [
+  "reject letter names r2 (must, MET), which is not a missing must-have",
+  "reject letter names r3 (must, MET), which is not a missing must-have",
+  "reject letter names r5 (nice, MISSING), which is not a missing must-have"
+ ],
+ "retry_errors": [
+  "reject letter names r2 (must, MET), which is not a missing must-have",
+  "reject letter names r3 (must, MET), which is not a missing must-have"
+ ],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected after a human review, despite meeting some requirements. The CV shows 10 years of web development, which meets the 5-year software development requirement. The candidate has experience with Python and big systems, but the judge disagrees that this meets the 2-year requirement for developing big systems with Python. Similarly, the judge disputes that the candidate has experience with asynchronous programming and performance-critical applications. The candidate has some mention of AWS, Docker, and microservices, but this is marked as uncertain. Experience with machine learning is missing from the CV. The decision was made by a recruiter after review.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"I have 10 years of experience in web application development.\", \"line\": \"Met: the CV shows 10 years of experience in web application development.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Project \\\"Business Process System\\\"\", \"line\": \"Met: the CV mentions a project in a fullstack role with Python, indicating experience with big systems.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)\", \"line\": \"Met: the CV lists technologies including Celery and Channels, which support asynchronous programming.\"}, {\"req_id\": \"r4\", \"decision\": \"UNCERTAIN\", \"quote\": \"Project \\\"Backend of Web service for recommendation system\\\"\", \"line\": \"Uncertain: the CV mentions Docker and AWS in a project, but the experience with microservices is unclear.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: the CV does not mention any experience with machine learning.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: the CV does not mention algorithms development such as collaborative filtering or clustering.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We regret to inform you that we will not be moving forward with your application.\\n\\nThe decision was made after a human review. The following must-have requirements were not fully met:\\n- Experience with asynchronous programming and developing performance-critical applications was not clearly demonstrated.\\n- Experience with machine learning is missing from the CV.\\n\\nYou have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about AWS and Docker in the context of microservices (r4)\"]}",
+  "{\"recruiter_summary\": \"The candidate is rejected after a human review. The CV shows 10 years of web development, meeting the 5-year software development requirement. The candidate has experience with Python and big systems, but the judge disagrees that this meets the 2-year requirement for developing big systems with Python. The candidate has experience with asynchronous programming technologies like Celery and Channels, but the judge disputes that this constitutes sufficient experience. The candidate has some mention of AWS, Docker, and microservices, but this is marked as uncertain. Experience with machine learning is missing. The decision was made by a recruiter after review.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"I have 10 years of experience in web application development.\", \"line\": \"Met: the CV shows 10 years of experience in web application development.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Project \\\"Business Process System\\\"\", \"line\": \"Met: the CV mentions a project in a fullstack role with Python, indicating experience with big systems.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"Technologies: Python, Django (DRF + Graphen), PostgreSQL, Celery, Git, Linux, Docker, REST, graphQL, Channels, CI/CD (Gitlab)\", \"line\": \"Met: the CV lists technologies including Celery and Channels, which support asynchronous programming.\"}, {\"req_id\": \"r4\", \"decision\": \"UNCERTAIN\", \"quote\": \"Project \\\"Backend of Web service for recommendation system\\\"\", \"line\": \"Uncertain: the CV mentions Docker and AWS in a project, but the experience with microservices is unclear.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: the CV does not mention any experience with machine learning.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: the CV does not mention algorithms development such as collaborative filtering or clustering.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We regret to inform you that we will not be moving forward with your application.\\n\\nThe decision was made after a human review. The following must-have requirements were not fully met:\\n- Experience with asynchronous programming and developing performance-critical applications was not clearly demonstrated.\\n\\nYou have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about AWS and Docker in the context of microservices (r4)\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 3 of 3 must-have requirements are met; the score is 78.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "I have 10 years of experience in web application development.",
+    "line": "Met: Software development: 5 years of experience or more (must; CV: I have 10 years of experience in web application development.)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "I have 10 years of experience in web application development.",
+    "line": "Met: Developing big systems with Python: 2 years of experience or more (must; CV: I have 10 years of experience in web application development.)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Project \"Business Process System\"",
+    "line": "Met: Asynchronous programming and developing performance-critical applications (must; CV: Project \"Business Process System\")"
+   },
+   {
+    "req_id": "r4",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Working with AWS, Docker and microservices (nice; unclear in the CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with Machine Learning (nice; not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Algorithms development (collaborative filtering, similarity, data normalization, clustering) (nice; unclear in the CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After a review by our team, we will not move forward with it.\n\nIf you have questions about this decision, simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r4"
+  ]
+ },
+ "source": "template",
+ "latency_s": 21.53,
+ "peak_vram_mib": 3267,
+ "id": "P32_human_reject",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

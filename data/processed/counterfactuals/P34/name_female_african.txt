@@ -1,0 +1,7 @@
+Ngozi Okonkwo
+Pronouns: she/her
+Position: Software Engineer
+Experience years: 2
+English level: intermediate
+
+During my work experience, I worked extensively with Amazon Web Services (AWS), utilizing the AWS SDK and programming languages such as Python and TypeScript. I built and managed serverless applications using AWS services such as Lambda, DynamoDB, StepFunctions, CloudFormation, CloudWatch, and S3. In addition to serverless development, I also have experience with front-end development using Angular and TypeScript. I collaborated with other developers, product managers, and business analytics to create user-friendly and responsive interfaces that integrated seamlessly with AWS services. In addition to my development work, I also gained experience in testing using JMeter and wrote automated tests using PyTest. I want to continue to expand my knowledge of cloud technologies and continue to improve my skills.

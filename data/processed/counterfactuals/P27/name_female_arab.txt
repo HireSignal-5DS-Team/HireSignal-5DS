@@ -1,0 +1,18 @@
+Leila Saidi
+Pronouns: she/her
+Position: Data Analyst, Product Analyst, Data Scientist
+Experience years: 1
+English level: upper
+
+Used SQL Server Management Studio to implement changes in databases requested via clients of internal business systems.
+Collaborated with cross-functional development team members to analyze potential system solutions based on evolving client requirements.
+Participated in testing modules for new releases of business systems on every stage of it (Training, UAT, Production) as a part of the BSS team.
+Categorized incidents according to SLA standards and to relevant resolution teams, provided transparent communication to clients; used professional and high quality Business English in the incidents.
+
+Using Python to build optimization methods.
+Implementation of numerical methods in Python.
+Training project: creation of a neural network that classifies images of waste into organic and inorganic, using the fastai Python library.
+Coursework: Analysis and prediction of the popularity of the top 50 songs according to Spotify. 
+Attempt to create multiple startups.
+A good team of specialists who will be able to point out mistakes, in which case - to consult;
+Data analysis, product analytics, application of machine learning algorithms for data analysis, creation of visualizations.

@@ -1,0 +1,167 @@
+{
+ "job_title": "Data Scientist",
+ "decided_by": "gate",
+ "outcome": "reject",
+ "score": 60,
+ "gate_rule": "1 reject: must-have MISSING",
+ "gate_reasons": [
+  "r4: must-have MISSING",
+  "r5: must-have MISSING"
+ ],
+ "requirements": [
+  {
+   "req_id": "r1",
+   "kind": "must",
+   "text": "Data Science: 4 years of experience or more",
+   "decision": "MET",
+   "quotes": [
+    "Self-motivated Data Scientist with 4+ years of experience (8+ years in IT Data Analytics ). I constantly bring high-quality business solutions to businesses seeking higher efficiency."
+   ],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": 4.0,
+   "evidence_years": 8.0
+  },
+  {
+   "req_id": "r2",
+   "kind": "must",
+   "text": "Good knowledge of probability theory and statistics",
+   "decision": "MET",
+   "quotes": [
+    "Advanced mathematical and statistics skills"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "probability theory",
+    "statistics"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r3",
+   "kind": "must",
+   "text": "Understanding of Bayesian methods, time series analysis or sensor signal processing",
+   "decision": "UNCERTAIN",
+   "quotes": [
+    "ML: supervised and unsupervised learning,",
+    "clustering, regression, classification,",
+    "recommendation systems,time series"
+   ],
+   "judge": "NOT_APPLICABLE",
+   "low_confidence": true,
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "skill_terms": [
+    "Bayesian methods",
+    "time series analysis",
+    "sensor signal processing"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r4",
+   "kind": "must",
+   "text": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Pyro",
+    "PyMC3",
+    "JAGS"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r5",
+   "kind": "must",
+   "text": "Experience with cloud (Amazon SageMaker)",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [
+    "Amazon SageMaker"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r6",
+   "kind": "must",
+   "text": "Experience with PySpark",
+   "decision": "MET",
+   "quotes": [
+    "Hadoop, PySpark"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "PySpark"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r7",
+   "kind": "must",
+   "text": "Strong working knowledge of SQL",
+   "decision": "MET",
+   "quotes": [
+    "SQL"
+   ],
+   "judge": "FAIL",
+   "low_confidence": false,
+   "review_reasons": [
+    "judge:disagrees"
+   ],
+   "skill_terms": [
+    "SQL"
+   ],
+   "min_years": null,
+   "evidence_years": null
+  },
+  {
+   "req_id": "r8",
+   "kind": "nice",
+   "text": "Ph.D. in Mathematics",
+   "decision": "MISSING",
+   "quotes": [],
+   "judge": "PASS",
+   "low_confidence": false,
+   "review_reasons": [],
+   "skill_terms": [],
+   "min_years": null,
+   "evidence_years": null
+  }
+ ],
+ "reader": {
+  "mode": "text",
+  "review_reasons": []
+ },
+ "bias": {
+  "review_reasons": [],
+  "swap_ran": false,
+  "swap_changed_must": []
+ },
+ "id": "P43",
+ "pair_id": "P43",
+ "split": "test",
+ "synthetic_flags": false
+}

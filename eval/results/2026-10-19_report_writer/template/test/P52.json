@@ -1,0 +1,54 @@
+{
+ "report": {
+  "recruiter_summary": "This case goes to a recruiter for review. 3 of 3 must-have requirements are met; the score is 78. Reason for review: r2: must MET doubted (judge:disagrees): possible false invite.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Over 10 years of experience as a Software Developer mostly using python",
+    "line": "must: Software development: 5 years of experience or more - met (CV: Over 10 years of experience as a Software Developer mostly using python)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Over 10 years of experience as a Software Developer mostly using python",
+    "line": "must: Developing big systems with Python: 2 years of experience or more - met (CV: Over 10 years of experience as a Software Developer mostly using python)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery)",
+    "line": "must: Asynchronous programming and developing performance-critical applications - met (CV: Build systems with multi-threading and asynchronous approach (tornado, aiohttp, celery))"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Build projects with microservices",
+    "line": "nice: Working with AWS, Docker and microservices - met (CV: Build projects with microservices)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience with Machine Learning - missing (not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Algorithms development (collaborative filtering, similarity, data normalization, clustering) - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "",
+  "flags_for_recruiter": []
+ },
+ "source": "template",
+ "attempts": 0,
+ "first_errors": [],
+ "retry_errors": [],
+ "latency_s": 0.0005,
+ "peak_vram_mib": null,
+ "id": "P52",
+ "outcome": "review",
+ "synthetic_flags": false
+}

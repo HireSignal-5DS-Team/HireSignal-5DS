@@ -1,0 +1,56 @@
+{
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 1 of 5 must-have requirements are met; the score is 23. Missing must-haves: Knowledge of the general principles of Data Warehousing and Data Lakes; Hands-on experience with SQL; Knowledge of Python; Experience with GCP or another cloud provider.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Knowledge of the general principles of Data Warehousing and Data Lakes - missing (not found in CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Hands-on experience with SQL - missing (not found in CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Knowledge of Python - missing (not found in CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with GCP or another cloud provider - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: upper",
+    "line": "must: Good spoken English - met (CV: English level: upper)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "nice: Willingness to research business logic - uncertain (unclear in the CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Knowledge of the general principles of Data Warehousing and Data Lakes; Hands-on experience with SQL; Knowledge of Python; Experience with GCP or another cloud provider.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r6"
+  ]
+ },
+ "source": "template",
+ "attempts": 0,
+ "first_errors": [],
+ "retry_errors": [],
+ "latency_s": 0.0008,
+ "peak_vram_mib": null,
+ "id": "P11",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

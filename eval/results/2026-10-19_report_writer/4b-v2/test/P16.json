@@ -1,0 +1,60 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v2.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because a must-have requirement is missing. The candidate lacks knowledge of the general principles of data warehousing and data lakes, which is a required must-have. Other must-haves like SQL, Python, and GCP experience are met, and good spoken English is confirmed. The score is 82, but the missing requirement disqualifies the candidate.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: The CV does not show knowledge of the general principles of Data Warehousing and Data Lakes.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"- Filtering data in the database by using SQL\", \"line\": \"Met: The CV includes evidence of hands-on SQL use.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)\", \"line\": \"Met: The CV shows Python development experience.\"}, {\"req_id\": \"r4\", \"decision\": \"MET\", \"quote\": \"Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)\", \"line\": \"Met: The CV mentions experience with GCP.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"English level: fluent\", \"line\": \"Met: The candidate states fluent spoken English.\"}, {\"req_id\": \"r6\", \"decision\": \"MET\", \"quote\": \"On my previous positions I have been mostly working as an Intern and a Junior Specialist. Want to develop myself as a Cloud Data Engineer (either with AWS or GCP) and Data Architect. Want to learn more about the Hadoop ecosystem, Stream Processing, MLOps and Cloud Native solutions for Big Data.\", \"line\": \"Met: The candidate expresses willingness to research business logic.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show knowledge of the general principles of Data Warehousing and Data Lakes, which is a required must-have.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": []}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because a must-have requirement is missing. The candidate lacks knowledge of the general principles of data warehousing and data lakes, which is a required must-have. Other must-haves like SQL, Python, and GCP experience are met, and good spoken English is confirmed. The score is 82, but the missing requirement disqualifies the candidate.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: The CV does not show knowledge of the general principles of Data Warehousing and Data Lakes."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "- Filtering data in the database by using SQL",
+    "line": "Met: The CV includes evidence of hands-on SQL use."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)",
+    "line": "Met: The CV shows Python development experience."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)",
+    "line": "Met: The CV mentions experience with GCP."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: fluent",
+    "line": "Met: The candidate states fluent spoken English."
+   },
+   {
+    "req_id": "r6",
+    "decision": "MET",
+    "quote": "On my previous positions I have been mostly working as an Intern and a Junior Specialist. Want to develop myself as a Cloud Data Engineer (either with AWS or GCP) and Data Architect. Want to learn more about the Hadoop ecosystem, Stream Processing, MLOps and Cloud Native solutions for Big Data.",
+    "line": "Met: The candidate expresses willingness to research business logic."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show knowledge of the general principles of Data Warehousing and Data Lakes, which is a required must-have.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": []
+ },
+ "source": "llm",
+ "latency_s": 9.9,
+ "peak_vram_mib": 3267,
+ "id": "P16",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

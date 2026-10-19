@@ -1,0 +1,34 @@
+{
+ "cv": "L01",
+ "pair": "P02",
+ "job": "J1",
+ "condition": "scan",
+ "setup": "vision",
+ "items": [
+  "L02_scan"
+ ],
+ "reader_reasons": [
+  "reader:low_confidence_or_little_text"
+ ],
+ "ocr_confidence": 58.1,
+ "outcome": "review",
+ "rule": "0 review: CV image too poor to decide",
+ "score": 13,
+ "reasons": [
+  "pair: reader:low_confidence_or_little_text"
+ ],
+ "pair_review_reasons": [
+  "reader:low_confidence_or_little_text",
+  "profile:name_not_found"
+ ],
+ "decisions": {
+  "r1": "MET",
+  "r2": "MISSING",
+  "r3": "MISSING",
+  "r4": "MISSING",
+  "r5": "MISSING",
+  "r6": "MISSING",
+  "r7": "MISSING",
+  "r8": "MISSING"
+ }
+}

@@ -1,0 +1,114 @@
+{
+  "id": "HsV1Errors000001",
+  "name": "HireSignal errors",
+  "description": null,
+  "active": false,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "efa7a8f3-52fe-595c-a754-033d3a2f6baf",
+      "name": "Error Trigger",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// One line per failed execution: time, workflow, node, message (T05). No CV data is written here.\nconst e = $json.execution ?? {}, wf = $json.workflow ?? {};\nconst msg = String((e.error ?? {}).message ?? 'unknown error').replace(/\\s+/g, ' ').slice(0, 500);\nconst line = [new Date().toISOString(), `workflow=${wf.name}`, `node=${e.lastNodeExecuted}`,\n              `execution=${e.id}`, `message=${msg}`].join('\\t') + '\\n';\nreturn [{ json: { line } }];"
+      },
+      "id": "4ca45993-14a4-54b5-b05d-7c70d483285d",
+      "name": "Log line",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "toText",
+        "sourceProperty": "line",
+        "binaryPropertyName": "data",
+        "options": {
+          "fileName": "n8n_errors.log"
+        }
+      },
+      "id": "dc8a4a5a-7831-5d96-bb8b-c07e45134560",
+      "name": "To text file",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        440,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "eval/logs/n8n_errors.log",
+        "dataPropertyName": "data",
+        "options": {
+          "append": true
+        }
+      },
+      "id": "4e5da567-9f00-5749-8f98-11d1171ff179",
+      "name": "Append to eval/logs/n8n_errors.log",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1.1,
+      "position": [
+        660,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Log line",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log line": {
+      "main": [
+        [
+          {
+            "node": "To text file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "To text file": {
+      "main": [
+        [
+          {
+            "node": "Append to eval/logs/n8n_errors.log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "meta": null,
+  "nodeGroups": [],
+  "pinData": {},
+  "versionId": "f17c1d5b-4a92-4480-a2be-9eeab4c2fb73",
+  "sourceWorkflowId": null,
+  "tags": []
+}

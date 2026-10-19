@@ -1,0 +1,36 @@
+{
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "MISSING",
+  "r3": "MISSING",
+  "r4": "MISSING",
+  "r5": "MISSING",
+  "r6": "MISSING"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "nice",
+  "r5": "nice",
+  "r6": "nice"
+ },
+ "outcome": "reject",
+ "score": 0,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [
+   "Experience years: 1"
+  ],
+  "r2": [
+   "I have got a hands-on experience in using Spark, Spark Streaming, Kafka, Hadoop, Airflow and Hive, ELK stack. I used GCP Dataproc for running services, mentioned above. Also I am experienced in using databases, developing relational database design, working with data warehouses, ETL and BI tools and data analytics. I have worked with GCP BigQuery to aggregate, transform and extract data, and also used Power BI to visualize needed information according to business demand."
+  ],
+  "r3": [],
+  "r4": [],
+  "r5": [],
+  "r6": []
+ },
+ "elapsed_s": 19.61,
+ "identical_to_base": true,
+ "ran": true
+}

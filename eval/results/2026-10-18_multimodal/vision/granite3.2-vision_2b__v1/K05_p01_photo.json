@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K05_p01_photo",
+  "file": "K05_p01_photo.jpg",
+  "source": "K04.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "granite3.2-vision:2b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "<doc>     CORPORATE PROJECT MANAGER \n     Executing business development activities for IT and other company-wide IT infrastructure. \n     material coordinating and conducting group and individual training sessions. \n     Executing business development activities for IT and other company-building systems (Sallok, Ving, Sallo and Armano Me Garn access control sys- \n     tem) in various brands resorts \n     Taking with both management and ownership to guide the hotel theological and philologies needs are the primary focus. \n     Technical support and knowledge on Windows server/desktop applications, including security, backup/recovery/disaster planning, off-hours state and hotel conversion. \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and organizational \n     performance metrics. \n     (terms) in various brands resorts \n     Developing and implementing training programs for staff and organizational \n     performance metrics. \n     (based on staff and",
+   "model": "granite3.2-vision:2b",
+   "latency_s": 13.78,
+   "eval_count": 668,
+   "done_reason": "length",
+   "peak_vram_mib": 3249
+  }
+ ]
+}

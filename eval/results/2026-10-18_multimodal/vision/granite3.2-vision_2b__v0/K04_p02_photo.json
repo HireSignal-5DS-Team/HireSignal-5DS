@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K04_p02_photo",
+  "file": "K04_p02_photo.jpg",
+  "source": "K05.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "granite3.2-vision:2b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "unanswerable",
+   "model": "granite3.2-vision:2b",
+   "latency_s": 5.1,
+   "eval_count": 4,
+   "done_reason": "stop",
+   "peak_vram_mib": 3249
+  }
+ ]
+}

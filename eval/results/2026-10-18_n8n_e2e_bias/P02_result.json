@@ -1,0 +1,258 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "33",
+ "cv_id": "cv-5062aad4",
+ "job_id": "J1",
+ "job_title": "Data Scientist",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 13,
+ "reasons": [
+  "r2: must-have MISSING",
+  "r3: must-have MISSING",
+  "r4: must-have MISSING",
+  "r5: must-have MISSING",
+  "r6: must-have MISSING",
+  "r7: must-have MISSING"
+ ],
+ "listed_flags": [
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: bias:identity placeholder line removed",
+  "pair: job:requirements confirmed by recruiter",
+  "pair: bias:identity placeholder line removed",
+  "pair: profile:name_not_found (info only)"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Data Science: 4 years of experience or more",
+   "kind": "must",
+   "decision": "MET",
+   "model_decision": "MET",
+   "basis": "supported",
+   "quotes": [
+    {
+     "quote": "Master Degree in Data Science",
+     "start": 188,
+     "end": 217
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "review_reasons": [
+    "duration_not_in_evidence",
+    "judge:disagrees"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.872453,
+    "MISSING": 0.12482,
+    "UNCERTAIN": 0.002726
+   },
+   "judge": {
+    "verdict": "FAIL",
+    "score": 0.7192
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Good knowledge of probability theory and statistics",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000443,
+    "MISSING": 0.815374,
+    "UNCERTAIN": 0.184183
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9943
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Understanding of Bayesian methods, time series analysis or sensor signal processing",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000148,
+    "MISSING": 0.967672,
+    "UNCERTAIN": 0.03218
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9619
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 1.5e-05,
+    "MISSING": 0.99952,
+    "UNCERTAIN": 0.000465
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9973
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Experience with cloud (Amazon SageMaker)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 7e-06,
+    "MISSING": 0.999239,
+    "UNCERTAIN": 0.000754
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9956
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Experience with PySpark",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 5e-06,
+    "MISSING": 0.999723,
+    "UNCERTAIN": 0.000272
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9995
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r7",
+   "text": "Strong working knowledge of SQL",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 6e-06,
+    "MISSING": 0.999399,
+    "UNCERTAIN": 0.000595
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9989
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r8",
+   "text": "Ph.D. in Mathematics",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 5e-06,
+    "MISSING": 0.999577,
+    "UNCERTAIN": 0.000418
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9907
+   },
+   "lora_scale": 1
+  }
+ ],
+ "bias": {
+  "bias_flags": [
+   {
+    "kind": "identity placeholder",
+    "rule": "placeholder-only line",
+    "line": 6,
+    "action": "line removed"
+   }
+  ],
+  "would_be_outcome": "reject",
+  "swap": {
+   "ran": true,
+   "counterfactual": "female_arab",
+   "how": "name + pronouns added",
+   "identical_matcher_input": true,
+   "latency_s": 0.036
+  },
+  "review_reasons": []
+ },
+ "reader": {
+  "file_type": "text",
+  "mode": "late",
+  "read_path": [
+   "text"
+  ],
+  "pages": [],
+  "ocr_confidence": null,
+  "review_reasons": []
+ },
+ "timings_s": {
+  "reader": 0.006,
+  "profile": 23.237,
+  "job": 0,
+  "match_and_judge": 20.654
+ }
+}

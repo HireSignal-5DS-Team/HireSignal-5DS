@@ -1,0 +1,66 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "reject letter without the right to a human review"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate has been rejected for the Data Engineer position due to the absence of critical must-have qualifications. Specifically, the candidate lacks demonstrable knowledge or experience in Data Warehousing and Data Lakes, hands-on SQL experience, Python knowledge, and experience with cloud platforms such as GCP. These are fundamental requirements for the role and are all marked as 'MISSING' in the evaluation. While spoken English proficiency was assessed as 'UNCERTAIN' and willingness to research business logic as 'UNCERTAIN', these are considered secondary (nice-to-have) requirements and do not override the critical gaps. The Matcher has noted low confidence in the assessment of spoken English, indicating ambiguity in the candidate's language skills, though this does not fully compensate for the missing core competencies.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Knowledge of the general principles of Data Warehousing and Data Lakes\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Hands-on experience with SQL\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Knowledge of Python\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Experience with GCP or another cloud provider\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"I want to develop my skills, gain more hands-on experience and learn something new from seasoned developers to become a high-class specialist.\",\n      \"line\": \"Good spoken English\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"\",\n      \"line\": \"Willingness to research business logic\"\n    }\n  ],\n  \"candidate_letter\": \"Dear Recruiter,\\n\\nThe candidate has been rejected for the Data Engineer role due to critical gaps in required qualifications. The candidate lacks hands-on experience in SQL, Python, and cloud platforms (such as GCP), as well as foundational knowledge of data warehousing and data lakes—core competencies for this role. While the candidate expresses interest in skill development and learning from experienced developers, this does not demonstrate the necessary technical expertise required.\\n\\nSpoken English proficiency was assessed as uncertain, and willingness to engage with business logic was also marked as uncertain. However, these are secondary requirements and do not mitigate the absence of essential technical skills.\\n\\nWe recommend against moving forward with this candidate, as the missing must-have qualifications significantly reduce their suitability for the role.\\n\\nBest regards,\\nAutomated Screening System\",\n  \"flags_for_recruiter\": [\n    \"The candidate lacks all four must-have technical qualifications (SQL, Python, Data Warehousing/Data Lakes, Cloud Experience).\",\n    \"Spoken English assessment is uncertain and flagged as low confidence.\",\n    \"No evidence or quotes in the resume to support any of the must-have requirements.\",\n    \"The candidate's self-reported interest in skill development does not constitute proof of current capability.\"\n  ]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 0 of 5 must-have requirements are met; the score is 14. Missing must-haves: Knowledge of the general principles of Data Warehousing and Data Lakes; Hands-on experience with SQL; Knowledge of Python; Experience with GCP or another cloud provider. Unclear must-haves: Good spoken English.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Knowledge of the general principles of Data Warehousing and Data Lakes - missing (not found in CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Hands-on experience with SQL - missing (not found in CV)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Knowledge of Python - missing (not found in CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Experience with GCP or another cloud provider - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Good spoken English - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "nice: Willingness to research business logic - uncertain (unclear in the CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Knowledge of the general principles of Data Warehousing and Data Lakes; Hands-on experience with SQL; Knowledge of Python; Experience with GCP or another cloud provider.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r5"
+  ]
+ },
+ "source": "template",
+ "latency_s": 11.62,
+ "peak_vram_mib": 3267,
+ "id": "P19",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

@@ -1,0 +1,1239 @@
+{
+ "P11": {
+  "reader": {
+   "cv_id": "cv-162fcd9b",
+   "file_type": "text",
+   "text_chars": 931,
+   "sections": {
+    "header": 931
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.004
+  },
+  "profile": {
+   "cv_id": "cv-162fcd9b",
+   "anonymised_text": "Position: Big Data Engineer\nExperience years: 5\nEnglish level: upper\n\nThe two startups I've worked for are now unicorns with an overall evaluation of ~10B.\nT-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering. Took part in a variety of Data Science projects for e-commerce and advertising companies. My work covered both Engineering and Product parts. On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions. On the Product side I worked with stakeholders to formalize requirements and present results.\nI'm looking for rather engineering kind of work such as MLOps, Machine Learning, Big Data, then related to the theoretical part of DS. Companies with strong Data Science/Engineering cultures or solid revenue streams are preferred.\nSorry, I'm not considering any Data Science or Analytics positions any longer",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-162fcd9b",
+    "skills": [
+     {
+      "name": "Machine Learning",
+      "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering."
+     },
+     {
+      "name": "DataScience",
+      "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering."
+     },
+     {
+      "name": "Software Engineering",
+      "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering."
+     },
+     {
+      "name": "R&D",
+      "evidence": "On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions."
+     },
+     {
+      "name": "System design",
+      "evidence": "On the engineering side, I did R&Ds, prepared system design specs with recommendations, and of cause built solutions."
+     },
+     {
+      "name": "Requirements",
+      "evidence": "On the Product side I worked with stakeholders to formalize requirements and present results."
+     },
+     {
+      "name": "Product",
+      "evidence": "T-Shaped Product Engineer having 5 years of Machine Learning, DataScience, and 12 years of Software Engineering."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 6.306
+  },
+  "elapsed_s": 6.33
+ },
+ "P12": {
+  "reader": {
+   "cv_id": "cv-19127f8e",
+   "file_type": "text",
+   "text_chars": 2661,
+   "sections": {
+    "header": 2661
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.011
+  },
+  "profile": {
+   "cv_id": "cv-19127f8e",
+   "anonymised_text": "Position: Data Engineer\nExperience years: 11\nEnglish level: intermediate\n\n- SSIS\n- Talend ETL\n- SAP BODS\n- Oracle ODI / OBI - SAP BO\n- Power BI\n- Qlik View/Sense\n- SSRS\nDWH & BI Unit Manager - PayCore Payment Systems - Jun 2021 - Working\n- Designed, DWH architecture of Payment Management Systems, Mastercard systems and many related systems.\n- Uses SSIS, Talend Open Studio, SAP BO/BI, Power BI\n- Managed an agile team.\nSenior Solution Architect - MDS ap Turkey(Midis Group Inc.) - Feb 2019 - May 2021\n- Adaptation of ETL and Business Intelligence projects.\n- ETL/BI project in Türkiye Insurance Inc.\n- Consolidation project for TWF([PERSONAL] Wealth Fund).\n- ETL Development project for Rotana Dubai.\n\nFounder - Fox Analytics - Jun 2019\n- Developed ETL processes and BI Reports any tools\n- Served consultancy solutions and project management\n\nEnterprise Applications Manager - NETAS Telecommunication Inc. - May 2015 - Jan 2019\n- DWH: Project management for the creation of company DWH in SAP BODS and Oracle.\n- Responsible for SAP BI, Power BI: Created structures in accordance with DB and DWH, developed BI dashboard.\n- Managed SAP R/3 and Oracle E-BS HR: Team management supporting Logistics, Finance and HR units, managment of consulting firms.\n- Led a team in Salesforce CRM: Management of the team that develops and supports internal and external applications.\n\nSenior Software Developer - Yataş Inc. - Agu 2011 - May 2015\n- Java ADF Developer; developed Store applications with Java within the scope of Mobile Field Sales Applications project\n- Oracle E-BS Developer; developed Oracle Forms, OAF, PL / SQL, Workflow, Discoverer, XML Publisher.\n- After the R12 transition was completed, developed warehouse and shop handheld terminal applications. Made improvements within the scope of Production, Sales, Purchasing, Shipping, Warehouse process improvement projects.\n- As part of Oracle R12 Project, responsible for additional enhancements, personalized and report enhancements in the production and logistics modules. Re-coded the applications used in the current E-BS 11.5.9 in R12.\n\nIT Project Manager - Tırsan Logistics Inc. - Nov 2009 - Agu 2011.\n- Developed software used by the Shipping, Warehouse, Accounting, Sales and HR unit, project management, process analysis and accounting unit.\n- Executed improvements in logistics operations and oversaw management of projects that were developed according to customer demand.\n- Headed the team that develops software with .Net, Java and Oracle\n- Met new customer / project automation / integration needs in shipping and warehouse units, coordinated the project at the stage of developing B2B applications",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {
+     "[PERSONAL]": 1
+    },
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-19127f8e",
+    "skills": [
+     {
+      "name": "SSIS",
+      "evidence": "- SSIS"
+     },
+     {
+      "name": "Talend ETL",
+      "evidence": "- Talend ETL"
+     },
+     {
+      "name": "SAP BODS",
+      "evidence": "- SAP BODS"
+     },
+     {
+      "name": "Oracle ODI / OBI - SAP BO",
+      "evidence": "- Oracle ODI / OBI - SAP BO"
+     },
+     {
+      "name": "Power BI",
+      "evidence": "- Power BI"
+     },
+     {
+      "name": "Qlik View/Sense",
+      "evidence": "- Qlik View/Sense"
+     },
+     {
+      "name": "SSRS",
+      "evidence": "- SSRS"
+     },
+     {
+      "name": "DWH",
+      "evidence": "- Designed, DWH architecture of Payment Management Systems, Mastercard systems and many related systems."
+     },
+     {
+      "name": "ETL",
+      "evidence": "- Adaptation of ETL and Business Intelligence projects."
+     },
+     {
+      "name": "ETL Development",
+      "evidence": "- ETL Development project for Rotana Dubai."
+     },
+     {
+      "name": "ETL processes",
+      "evidence": "- Developed ETL processes and BI Reports any tools"
+     },
+     {
+      "name": "SAP BI",
+      "evidence": "Responsible for SAP BI, Power BI: Created structures in accordance with DB and DWH, developed BI dashboard."
+     },
+     {
+      "name": "SAP R/3",
+      "evidence": "Managed SAP R/3 and Oracle E-BS HR: Team management supporting Logistics, Finance and HR units, managment of consulting firms."
+     },
+     {
+      "name": "Oracle E-BS HR",
+      "evidence": "Managed SAP R/3 and Oracle E-BS HR: Team management supporting Logistics, Finance and HR units, managment of consulting firms."
+     },
+     {
+      "name": "Salesforce CRM",
+      "evidence": "Led a team in Salesforce CRM: Management of the team that develops and supports internal and external applications."
+     },
+     {
+      "name": "Java",
+      "evidence": "Java ADF Developer; developed Store applications with Java within the scope of Mobile Field Sales Applications project"
+     },
+     {
+      "name": "ADF",
+      "evidence": "Java ADF Developer; developed Store applications with Java within the scope of Mobile Field Sales Applications project"
+     },
+     {
+      "name": "Mobile Field Sales Applications",
+      "evidence": "Java ADF Developer; developed Store applications with Java within the scope of Mobile Field Sales Applications project"
+     },
+     {
+      "name": "Net",
+      "evidence": "Headed the team that develops software with .Net, Java and Oracle"
+     },
+     {
+      "name": "Oracle",
+      "evidence": "Headed the team that develops software with .Net, Java and Oracle"
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "DWH & BI Unit Manager",
+      "company": "PayCore Payment Systems",
+      "start": "2021-06",
+      "end": null,
+      "evidence": "DWH & BI Unit Manager - PayCore Payment Systems - Jun 2021 - Working\n- Designed, DWH architecture of Payment Management Systems, Mastercard systems and many related systems.\n- Uses SSIS, Talend Open Studio, SAP BO/BI, Power BI\n- Managed an agile team."
+     },
+     {
+      "title": "Senior Solution Architect",
+      "company": "MDS ap Turkey(Midis Group Inc.)",
+      "start": "2019-02",
+      "end": "2021-05",
+      "evidence": "Senior Solution Architect - MDS ap Turkey(Midis Group Inc.) - Feb 2019 - May 2021\n- Adaptation of ETL and Business Intelligence projects.\n- ETL/BI project in Türkiye Insurance Inc.\n- Consolidation project for TWF([PERSONAL] Wealth Fund).\n- ETL Development project for Rotana Dubai."
+     },
+     {
+      "title": "Founder",
+      "company": "Fox Analytics",
+      "start": "2019-06",
+      "end": null,
+      "evidence": "Founder - Fox Analytics - Jun 2019\n- Developed ETL processes and BI Reports any tools"
+     },
+     {
+      "title": "Enterprise Applications Manager",
+      "company": "NETAS Telecommunication Inc.",
+      "start": "2015-05",
+      "end": "2019-01",
+      "evidence": "Enterprise Applications Manager - NETAS Telecommunication Inc. - May 2015 - Jan 2019"
+     },
+     {
+      "title": "Senior Software Developer",
+      "company": "Yataş Inc.",
+      "start": "2011-09",
+      "end": "2015-05",
+      "evidence": "Senior Software Developer - Yataş Inc. - Agu 2011 - May 2015"
+     }
+    ],
+    "uncertain": [
+     "skill 'BI': name 'BI' is not written in its evidence, removed",
+     "experience 'DWH & BI Unit Manager': end 'present' not found in its evidence, removed",
+     "part 3/4: answer cut off at the token limit",
+     "part 3/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 3/4: answer cut off at the token limit",
+     "part 3/4: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 49.94
+  },
+  "elapsed_s": 49.97
+ },
+ "P13": {
+  "reader": {
+   "cv_id": "cv-7ce708a9",
+   "file_type": "text",
+   "text_chars": 1600,
+   "sections": {
+    "header": 1600
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.003
+  },
+  "profile": {
+   "cv_id": "cv-7ce708a9",
+   "anonymised_text": "Position: Data Team Lead/Data Delivery Manager\nExperience years: 8\nEnglish level: fluent\n\nWill be described in CV.\nSeasoned Team Leader on a complex project. Successfully managed a team of up to 10 Data Engineers, at the same time\nacting as a Resource/Functional Manager for a pool of up to 20 Data/Data Quality Engineers.\nCurrently transitioning from Team Lead role to the Delivery Manager.\nExperience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres). Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL.\nConducted multiple Technical Interviews, seniority evaluations, project and manager interviews for projects and company needs.\nHands-on experience with multiple DBs (Teradata, PostgreSQL, Azure SQL, Snowflake, MS SQL, Oracle, Hadoop).\nExperience in major cloud technologies: Azure (main), AWS, GCP.\nProactive and continuously growing. Always trying to deliver more and ahead of schedule.\nResponsible for architectural decisions in various teams.\nCan easily communicate with the customer and present the progress to teams and/or stakeholders.\nInterpersonal skills: Active Listening, Communication, Flexibility, Helping Others, Humor, Motivation, Patience, Persuasive, Fast Learner, Knowledge Seeker, Responsive, Eager to go extra mile.\nInterested only in DWBI/DWH/ETL projects as a Team/Tech Lead or Data Delivery Manager. No preferences for team size. Cloud stack is mandatory (Azure preferred).",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-7ce708a9",
+    "skills": [
+     {
+      "name": "Azure",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "ADLS",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "SFTP",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "CosmosDB",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "Azure SQL",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "GCP",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "Oracle",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "Postgres",
+      "evidence": "Experience in building Data project from scratch on Azure, using multiple sources/targets for ETL, such as ADLS, SFTP, CosmosDB, Azure SQL, and completing migration projects (on GCP from Oracle to Postgres)."
+     },
+     {
+      "name": "Azure DevOps",
+      "evidence": "Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+     },
+     {
+      "name": "CI/CD",
+      "evidence": "Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+     },
+     {
+      "name": "ADF",
+      "evidence": "Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+     },
+     {
+      "name": "Snowflake",
+      "evidence": "Proficient in Azure DevOps, engineered CI/CD pipelines (classic and yaml) for ADF, Snowflake, Azure SQL."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: fluent"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 41.82
+  },
+  "elapsed_s": 41.83
+ },
+ "P14": {
+  "reader": {
+   "cv_id": "cv-d4fe9dcb",
+   "file_type": "text",
+   "text_chars": 501,
+   "sections": {
+    "header": 501
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.002
+  },
+  "profile": {
+   "cv_id": "cv-d4fe9dcb",
+   "anonymised_text": "Position: Data engineer\nExperience years: 1\nEnglish level: upper\n\nI have been able to work with a team and have done a great deal of some couple of works together.\nAs a data engineer I have been able to make data more easily accessible to the organization.\nI used the open source ELT .\nAm a co-worker in the team.\nI would want to improve my skills and technology level if am employed by your organization.\nTo work with individual who are advance than me so I can also improve my skills along the line.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-d4fe9dcb",
+    "skills": [
+     {
+      "name": "ELT",
+      "evidence": "I used the open source ELT ."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 1.697
+  },
+  "elapsed_s": 1.71
+ },
+ "P15": {
+  "reader": {
+   "cv_id": "cv-ed309d1c",
+   "file_type": "text",
+   "text_chars": 2331,
+   "sections": {
+    "header": 2331
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-ed309d1c",
+   "anonymised_text": "Position: Junior or Middle Data Engineer\nExperience years: 2\nEnglish level: upper\n\nHere is a summary of my qualifications:\n- Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.\n- Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner.\n- BI Tools: Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis.\n- ETL Tools: Experience in working with Azure Data Factory and SSIS for efficient data extraction, transformation, and loading processes.\n- Technical Proficiencies: Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT.\n- UNIX Administration: Experience in administering UNIX-based systems.\n- Container Technologies: Experience in working with Kubernetes for containerization.\n- Python: Experience in using Python for file and database manipulation tasks.\n- Telecom Knowledge: Experience with Charging and Billing Systems in the telecommunications industry.\n- Collaborative Experience: Worked effectively as a member of globally distributed and cross-functional teams.\n- EPAM Data Analytics and Data Engineering Internal Lab: Currently a member since 06.2022, involved in various projects including the development of ETL pipelines in Azure Data Factory, implementation of ETL processes using SSIS and Python with PostgreSQL in AWS, and creating reports in Power BI and Tableau for data analysis.\n\nI am highly motivated to further enhance my skills and expand my knowledge in the field of data engineering and analytics. I have obtained the following certifications:\n\nDP-203 Microsoft Certified: Azure Data Engineer Associate\nCLF-C01 AWS Certified Cloud Practitioner\nDP-900 Microsoft Certified: Azure Data Fundamentals\nPL-300 Microsoft Certified: Power BI Data Analyst Associate\nAcademy Accreditation - Databricks Lakehouse Fundamentals\nI am looking forward to the opportunity to further enhance my skills, engage in an interesting project, and collaborate with a friendly and supportive team.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-ed309d1c",
+    "skills": [
+     {
+      "name": "Oracle",
+      "evidence": "Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates."
+     },
+     {
+      "name": "SQL",
+      "evidence": "Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates."
+     },
+     {
+      "name": "Azure",
+      "evidence": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+     },
+     {
+      "name": "AWS",
+      "evidence": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+     },
+     {
+      "name": "DP-203",
+      "evidence": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+     },
+     {
+      "name": "CLF-C01",
+      "evidence": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner."
+     },
+     {
+      "name": "PowerBI",
+      "evidence": "Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis."
+     },
+     {
+      "name": "PL-300",
+      "evidence": "Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis."
+     },
+     {
+      "name": "Tableau",
+      "evidence": "Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis."
+     },
+     {
+      "name": "Sisense",
+      "evidence": "Experienced in working with PowerBI (PL-300 Microsoft Certified: Power BI Data Analyst Associate), Tableau, and Sisense for data visualization and analysis."
+     },
+     {
+      "name": "Azure Data Factory",
+      "evidence": "Experience in working with Azure Data Factory and SSIS for efficient data extraction, transformation, and loading processes."
+     },
+     {
+      "name": "SSIS",
+      "evidence": "Experience in working with Azure Data Factory and SSIS for efficient data extraction, transformation, and loading processes."
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     },
+     {
+      "name": "JIRA",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "Confluence",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "Postman",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "Kubernetes",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "Jenkins",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "Cassandra",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "MongoDB",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "Microsoft SQL Server",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "PostgreSQL",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "GIT",
+      "evidence": "Skilled in utilizing JIRA, Confluence, Postman, Kubernetes, Jenkins, Oracle, Cassandra, MongoDB, Microsoft SQL Server, PostgreSQL, and GIT."
+     },
+     {
+      "name": "UNIX",
+      "evidence": "Experience in administering UNIX-based systems."
+     },
+     {
+      "name": "Containerization",
+      "evidence": "Experience in working with Kubernetes for containerization."
+     },
+     {
+      "name": "Python",
+      "evidence": "Experience in using Python for file and database manipulation tasks."
+     },
+     {
+      "name": "Charging and Billing Systems",
+      "evidence": "Experience with Charging and Billing Systems in the telecommunications industry."
+     },
+     {
+      "name": "Power BI",
+      "evidence": "creating reports in Power BI and Tableau for data analysis"
+     },
+     {
+      "name": "DP-900",
+      "evidence": "DP-900 Microsoft Certified: Azure Data Fundamentals"
+     },
+     {
+      "name": "Databricks Lakehouse Fundamentals",
+      "evidence": "Academy Accreditation - Databricks Lakehouse Fundamentals"
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Member",
+      "company": "EPAM Data Analytics and Data Engineering Internal Lab",
+      "start": "2022-06",
+      "end": "present",
+      "evidence": "- EPAM Data Analytics and Data Engineering Internal Lab: Currently a member since 06.2022, involved in various projects including the development of ETL pipelines in Azure Data Factory, implementation of ETL processes using SSIS and Python with PostgreSQL in AWS, and creating reports in Power BI and Tableau for data analysis."
+     }
+    ],
+    "uncertain": [
+     "skill 'ETL': name 'ETL' is not written in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 31.196
+  },
+  "elapsed_s": 31.22
+ },
+ "P16": {
+  "reader": {
+   "cv_id": "cv-7b7e9ecd",
+   "file_type": "text",
+   "text_chars": 2407,
+   "sections": {
+    "header": 72,
+    "experience": 1131,
+    "certifications": 80,
+    "projects": 1063
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [],
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 0.012
+  },
+  "profile": {
+   "cv_id": "cv-7b7e9ecd",
+   "anonymised_text": "Position: Junior Data Engineer\nExperience years: 1\nEnglish level: fluent\n\nWork Experience:\n\nCloud Support Engineer, Devoteam G Cloud, Warsaw:\n- Developing features on top of Open Source projects and their integration to Devoteam's Support Department Environment (Python, Terraform, Flask API, Docker, GCP, Cloud Run, Cloud Functions)\n- Contribution to local support automation projects (Developing Cloud Functions)\n- First line support for Clients with the Google Cloud based infrastructure (Google\nKubernetes Engine,Cloud DataProc, Cloud Dataflow, Cloud SQL, Big-Table, BigQuery)\n\nStudent Data Engineer/DevOps, Abbott, Warsaw:\n- Supporting AWS Infrastructure (Debugging Issues related to resource Provisioning,\nDeployment and Exploitation)\n- Creating ETL Glue Jobs and AWS Lambdas for Data Processing and Automation\n- Assisting in Deployment, Updating and Creation of IaC Cloud-Formation Templates\n- Creating Bash scripts for automation of AWS Processes\n\nIntern Software Developer, CASE, Warsaw\n- Writing automated jobs in Python for extracting and processing data from different\nresources\n- Managing, tuning and maintaining EC-2 Virtual Machines for running jobs in AWS\nCloud\n- Filtering data in the database by using SQL\n\nCertifications:\n\n- Associalte Cloud Engineer\n- Terraform Associate\n- GCP Data Engineer (Upcoming)\n\nPersonal Projects:\n\n- Batch Data Pipeline for extraction of Cryptocurrencies' data and calculation of price\ndifferences between various cryptocurrency categories on different time ranges.\n(GCP, Spark, Airflow, Pandas, GCS, BigQuery. Terraform, Docker, Java, Cloud Run, NodeJS)\n\n- Building a Serverless Data Pipeline by using Python, AWS Lambda, Amazon S3 and AWS\nCloud-Formation for processing CSV files.\n\n- Building a real-time Data Processing/Visualization pipeline for processing Web\nApplication's access logs (Python, Pandas, Flask, PostgreSQL, SQLite, Django)\n\n- Developing a Web Scraper for Ebay Website (BeautifulSoup, Python, Pandas)\n\nOn my previous positions I have been mostly working as an Intern and a Junior Specialist. Want to develop myself as a Cloud Data Engineer (either with AWS or GCP) and Data Architect. Want to learn more about the Hadoop ecosystem, Stream Processing, MLOps and Cloud Native solutions for Big Data.\n\nWill be happy to contribute to projects with my existing background and impact company's success with my passion to Data, Cloud and Programming",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-7b7e9ecd",
+    "skills": [
+     {
+      "name": "Bash",
+      "evidence": "Creating Bash scripts for automation of AWS Processes"
+     },
+     {
+      "name": "Python",
+      "evidence": "Writing automated jobs in Python for extracting and processing data from different\nresources"
+     },
+     {
+      "name": "AWS",
+      "evidence": "Creating Bash scripts for automation of AWS Processes"
+     },
+     {
+      "name": "EC-2",
+      "evidence": "Managing, tuning and maintaining EC-2 Virtual Machines for running jobs in AWS\nCloud"
+     },
+     {
+      "name": "SQL",
+      "evidence": "Filtering data in the database by using SQL"
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Intern Software Developer",
+      "company": "CASE",
+      "start": null,
+      "end": null,
+      "evidence": "Intern Software Developer, CASE, Warsaw"
+     }
+    ],
+    "uncertain": [
+     "part 1/4: answer cut off at the token limit",
+     "part 1/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 1/4: answer cut off at the token limit",
+     "part 1/4: attempt 2: unreadable answer (no JSON object in the model answer)",
+     "experience 'Intern Software Developer': start 'present' not found in its evidence, removed",
+     "experience 'Intern Software Developer': end 'present' not found in its evidence, removed",
+     "part 3/4: answer cut off at the token limit",
+     "part 3/4: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 3/4: answer cut off at the token limit",
+     "part 3/4: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 61.391
+  },
+  "elapsed_s": 61.41
+ },
+ "P17": {
+  "reader": {
+   "cv_id": "cv-caedc033",
+   "file_type": "text",
+   "text_chars": 1469,
+   "sections": {
+    "header": 1469
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.013
+  },
+  "profile": {
+   "cv_id": "cv-caedc033",
+   "anonymised_text": "Position: Machine Learning Engineer\nExperience years: 2.5\nEnglish level: upper\n\nFreelance | .Net / Machine Learning Engineer\n06/2019 - present\nOne of the managers of the shared account. I also take the role of Team\nLead on projects related to my technology stack. (team of up to 5 people)\n\nVideo Object Recognition | Machine Learning Engineer\n03/2022 - 06/2022\nA neural network based on the yolov4 architecture for video object\nrecognition.\n\nArticle Generator | Machine Learning Engineer\n10/2021 - 02/2022\nA neural network for generating scientific articles in the field of crypto\u0002trading.\n\nArticle Generator | Machine Learning Engineer\n10/2021 - 02/2022\nA neural network for generating scientific articles in the field of crypto\u0002trading.\n\nImage Clasificator | Machine Learning Engineer\n05/2021 - 09/2021\nA neural network for image classification using AlexNet.\n\nChat Bot | Machine Learning Engineer\n01/2021 - 03/2021\nA chat bot using Self-Attention architecture to conduct specific dialog\n\nDuplicate Searcher | Machine Learning Engineer\n09/2020 - 12/2020\nA neural network using a Siamese architecture to identify similar\nquestions in forums.\n\nProduct Cluster | Machine Learning Engineer\n05/2020 - 08/2020\nUsed K-Means and Affinity Propagation to cluster products by name and\ndescription.\n\n.Net Fullstack Developer\n01/2020 - 05/2022\nWorked as a .Net fullstack developer. I have done 10+ projects in various\ncompanies such as CRM systems, backends for modern games, etc.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-caedc033",
+    "skills": [
+     {
+      "name": "Net",
+      "evidence": "Freelance | .Net / Machine Learning Engineer"
+     },
+     {
+      "name": "Machine Learning",
+      "evidence": "Freelance | .Net / Machine Learning Engineer"
+     },
+     {
+      "name": "neural network",
+      "evidence": "A neural network based on the yolov4 architecture for video object\nrecognition."
+     },
+     {
+      "name": "image clasificator",
+      "evidence": "Image Clasificator | Machine Learning Engineer"
+     },
+     {
+      "name": "yolov4",
+      "evidence": "A neural network based on the yolov4 architecture for video object\nrecognition."
+     },
+     {
+      "name": "video object recognition",
+      "evidence": "A neural network based on the yolov4 architecture for video object\nrecognition."
+     },
+     {
+      "name": "scientific articles",
+      "evidence": "A neural network for generating scientific articles in the field of crypto\u0002trading."
+     },
+     {
+      "name": "AlexNet",
+      "evidence": "A neural network for image classification using AlexNet."
+     },
+     {
+      "name": "Self-Attention",
+      "evidence": "A chat bot using Self-Attention architecture to conduct specific dialog"
+     },
+     {
+      "name": "Siamese architecture",
+      "evidence": "A neural network using a Siamese architecture to identify similar\nquestions in forums"
+     },
+     {
+      "name": "K-Means",
+      "evidence": "Used K-Means and Affinity Propagation to cluster products by name and\ndescription."
+     },
+     {
+      "name": "Affinity Propagation",
+      "evidence": "Used K-Means and Affinity Propagation to cluster products by name and\ndescription."
+     },
+     {
+      "name": "fullstack",
+      "evidence": "Worked as a .Net fullstack developer."
+     },
+     {
+      "name": "CRM systems",
+      "evidence": "I have done 10+ projects in various\ncompanies such as CRM systems, backends for modern games, etc."
+     },
+     {
+      "name": "backends",
+      "evidence": "I have done 10+ projects in various\ncompanies such as CRM systems, backends for modern games, etc."
+     },
+     {
+      "name": "modern games",
+      "evidence": "I have done 10+ projects in various\ncompanies such as CRM systems, backends for modern games, etc."
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Freelance",
+      "start": "2019-06",
+      "end": "present",
+      "evidence": "Freelance | .Net / Machine Learning Engineer\n06/2019 - present\nOne of the managers of the shared account. I also take the role of Team\nLead on projects related to my technology stack. (team of up to 5 people)"
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Video Object Recognition",
+      "start": "2022-03",
+      "end": "2022-06",
+      "evidence": "Video Object Recognition | Machine Learning Engineer\n03/2022 - 06/2022\nA neural network based on the yolov4 architecture for video object\nrecognition."
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Article Generator",
+      "start": null,
+      "end": null,
+      "evidence": "Article Generator | Machine Learning Engineer"
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Image Clasificator",
+      "start": null,
+      "end": null,
+      "evidence": "Image Clasificator | Machine Learning Engineer"
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Chat Bot",
+      "start": "2021-01",
+      "end": "2021-03",
+      "evidence": "Chat Bot | Machine Learning Engineer\n01/2021 - 03/2021"
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Duplicate Searcher",
+      "start": "2020-09",
+      "end": "2020-12",
+      "evidence": "Duplicate Searcher | Machine Learning Engineer\n09/2020 - 12/2020"
+     },
+     {
+      "title": "Machine Learning Engineer",
+      "company": "Product Cluster",
+      "start": "2020-05",
+      "end": "2020-08",
+      "evidence": "Product Cluster | Machine Learning Engineer\n05/2020 - 08/2020"
+     },
+     {
+      "title": ".Net Fullstack Developer",
+      "company": null,
+      "start": "2020-01",
+      "end": "2022-05",
+      "evidence": ".Net Fullstack Developer\n01/2020 - 05/2022"
+     }
+    ],
+    "uncertain": [
+     "skill 'crypto-trading': name 'crypto-trading' is not written in its evidence, removed",
+     "experience 'Machine Learning Engineer': start '10/2021' not found in its evidence, removed",
+     "experience 'Machine Learning Engineer': end '02/2022' not found in its evidence, removed",
+     "experience 'Machine Learning Engineer': start '10/2021' not found in its evidence, removed",
+     "experience 'Machine Learning Engineer': end '02/2022' not found in its evidence, removed",
+     "experience 'Machine Learning Engineer': start 'null' not found in its evidence, removed",
+     "experience 'Machine Learning Engineer': end 'null' not found in its evidence, removed",
+     "experience '.Net Fullstack Developer': company 'None' is not written in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 24.652
+  },
+  "elapsed_s": 24.68
+ },
+ "P18": {
+  "reader": {
+   "cv_id": "cv-1c75dc7e",
+   "file_type": "text",
+   "text_chars": 1866,
+   "sections": {
+    "header": 1866
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.007
+  },
+  "profile": {
+   "cv_id": "cv-1c75dc7e",
+   "anonymised_text": "Position: Data Engineer, Data Science\nExperience years: 0.5\nEnglish level: upper\n\nAs a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights. My role encompasses a wide range of responsibilities, including:\n\n1. Data Pipeline Development: I design, develop, and maintain robust data pipelines and ETL processes to ensure accurate and timely delivery of data for various banking products and services. This involves collaborating with cross-functional teams to understand data requirements and implementing effective solutions.\n\n2. Data Modeling and Optimization: I optimize data models and database performance to enhance the efficiency and scalability of data processing operations. By writing complex SQL queries, I ensure that data is readily accessible for analysis and reporting purposes.\n\n3. Data Quality and Integrity: I am committed to ensuring data quality and integrity throughout the data lifecycle. This involves implementing data validation, cleansing, and normalization techniques to maintain high standards and accuracy.\n\n4. Collaboration and Communication: I actively collaborate with cross-functional teams, including Data Scientists, Analysts, and Software Engineers, to understand their data requirements and provide them with the necessary support. Clear and effective communication is key to ensuring alignment and successful execution of data-related projects.\n\nWorking as a Data Engineer requires a combination of technical expertise, analytical skills, and a deep understanding of banking products and services. By leveraging my SQL, Python and Data Engineering skills, I contribute to the overall success of the organization by delivering accurate and actionable insights that drive strategic business decisions.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-1c75dc7e",
+    "skills": [
+     {
+      "name": "SQL",
+      "evidence": "leveraging my expertise in SQL, Python, and other relevant tools"
+     },
+     {
+      "name": "Python",
+      "evidence": "leveraging my expertise in SQL, Python, and other relevant tools"
+     },
+     {
+      "name": "ETL",
+      "evidence": "design, develop, and maintain robust data pipelines and ETL processes"
+     },
+     {
+      "name": "database performance",
+      "evidence": "I optimize data models and database performance to enhance the efficiency and scalability of data processing operations."
+     },
+     {
+      "name": "data processing",
+      "evidence": "I optimize data models and database performance to enhance the efficiency and scalability of data processing operations."
+     },
+     {
+      "name": "data validation",
+      "evidence": "I am committed to ensuring data quality and integrity throughout the data lifecycle. This involves implementing data validation, cleansing, and normalization techniques to maintain high standards and accuracy."
+     },
+     {
+      "name": "data quality",
+      "evidence": "I am committed to ensuring data quality and integrity throughout the data lifecycle."
+     },
+     {
+      "name": "Data Engineering",
+      "evidence": "By leveraging my SQL, Python and Data Engineering skills, I contribute to the overall success of the organization by delivering accurate and actionable insights that drive strategic business decisions."
+     }
+    ],
+    "education": [],
+    "experience": [
+     {
+      "title": "Data Engineer",
+      "company": "Space International",
+      "start": null,
+      "end": null,
+      "evidence": "As a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights."
+     }
+    ],
+    "uncertain": [
+     "experience 'Data Engineer': start '0.5' not found in its evidence, removed",
+     "skill 'data modeling': name 'data modeling' is not written in its evidence, removed",
+     "skill 'data accessibility': name 'data accessibility' is not written in its evidence, removed",
+     "skill 'data cleansing': name 'data cleansing' is not written in its evidence, removed",
+     "skill 'data normalization': name 'data normalization' is not written in its evidence, removed",
+     "skill 'data integrity': name 'data integrity' is not written in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 13.559
+  },
+  "elapsed_s": 13.58
+ },
+ "P19": {
+  "reader": {
+   "cv_id": "cv-61adc264",
+   "file_type": "text",
+   "text_chars": 769,
+   "sections": {
+    "header": 769
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [
+    "No section headings recognised (Experience, Education, ...)."
+   ],
+   "review_reasons": [],
+   "info_flags": [
+    "reader:No section headings recognised (Experience, Education, ...)."
+   ],
+   "elapsed_s": 0.01
+  },
+  "profile": {
+   "cv_id": "cv-61adc264",
+   "anonymised_text": "Position: Trainee / Intern / Junior Data Engineer\nExperience years: 0.5\nEnglish level: upper\n\nTrainee Data Engineer\n\n- Finished the theoretical part of a Big Data education plan in a big outsourcing company with practical tasks for each module.\n- This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.).\n- During this course qualified mentors teach you how and when to use these tools.\n- To further consolidate our knowledge we implemented these techniques in practical exercises.\nI want to develop my skills, gain more hands-on experience and learn something new from seasoned developers to become a high-class specialist.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-61adc264",
+    "skills": [
+     {
+      "name": "Hadoop",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Spark",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Spark Streaming",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Hive",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Kafka",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Cloud Computing",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Docker",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "Airflow",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "NoSQL",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "ELK",
+      "evidence": "This education plan is designed to train new specialists in the most common Big Data tools and solutions(Hadoop, Spark, Spark Streaming, Hive, Kafka, Cloud Computing, Docker, Airflow, NoSQL, ELK, etc.)"
+     },
+     {
+      "name": "English",
+      "evidence": "English level: upper"
+     }
+    ],
+    "education": [
+     {
+      "degree": "Big Data education plan",
+      "field": "Big Data",
+      "institution": "a big outsourcing company",
+      "end": null,
+      "evidence": "- Finished the theoretical part of a Big Data education plan in a big outsourcing company with practical tasks for each module."
+     }
+    ],
+    "experience": [
+     {
+      "title": "Trainee Data Engineer",
+      "company": "a big outsourcing company",
+      "start": null,
+      "end": null,
+      "evidence": "Trainee Data Engineer\n\n- Finished the theoretical part of a Big Data education plan in a big outsourcing company with practical tasks for each module."
+     }
+    ],
+    "uncertain": [
+     "education 'Big Data education plan': end 'present' not found in its evidence, removed",
+     "experience 'Trainee Data Engineer': start 'present' not found in its evidence, removed",
+     "experience 'Trainee Data Engineer': end 'present' not found in its evidence, removed"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 14.557
+  },
+  "elapsed_s": 14.58
+ },
+ "P20": {
+  "reader": {
+   "cv_id": "cv-301a59fb",
+   "file_type": "text",
+   "text_chars": 1219,
+   "sections": {
+    "header": 228,
+    "summary": 970
+   },
+   "read_path": [
+    "text"
+   ],
+   "layout": "unknown",
+   "ocr_confidence": null,
+   "needs_human_review": false,
+   "warnings": [],
+   "review_reasons": [],
+   "info_flags": [],
+   "elapsed_s": 0.006
+  },
+  "profile": {
+   "cv_id": "cv-301a59fb",
+   "anonymised_text": "Position: Oracle/Postgres DBA\nExperience years: 11\nEnglish level: fluent\n\nOracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c with about 20 years of experience with Oracle products. Postgres DBA with 3 years of experience.\nObjective.\nOracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c looking for a position of Oracle/Postgres DBA / Database Administrator / DevOps.\n\nSummary.\n- Databases: Oracle 7, Oracle8i, Oracle 9i, Oracle 10g, Oracle 11g, Oracle 12c, Oracle 18c, Oracle 19c, DB2 6.x/7.x, Sybase 11.x/12.x, MS SQL 6.5/7.0, MS SQL 2000, Informix 9.x, MySQL 4.x, Postgres 9/10/11, AWS RDS, AWS Aurora Postgres;\n- Operating Systems: AIX, Solaris, Red Hat Linux, HP-UX, Windows NT/2000;\n- Hardware Platforms: IBM RS/6000, Sun V880, Sun V890, Sun E4000, Sun E5000, Dell4300, IBM PC;\n- Applications: Oracle Financials (ERP) 10.7, 11.0.X, 11i, Vertex, Veritas, Clarify (CRM), Jinitiator, JDK, Oracle Web Server, Oracle Application Server, Brio, MicroStrategy;\n- Programming Languages: SQL, PL/SQL, C/C++, HTML, Korn Shell, C Shell, Bash;\n- Project Management System: Confluence, Jira;\n- Version Control: Git, SVN;\n- Continuous Integration: TeamCity, Jenkins;\n- Agile Methodologies: Kanban, Scrum.\nRemote work.",
+   "privacy": {
+    "schema_version": "0.1.0",
+    "placeholders": {},
+    "detectors": [
+     "rules"
+    ],
+    "name_found": false,
+    "leaks_fixed": 0,
+    "leaks_left": 0,
+    "needs_human_review": true,
+    "warnings": [
+     "candidate name not found: check the anonymised text by hand"
+    ]
+   },
+   "profile": {
+    "schema_version": "0.1.0",
+    "candidate_id": "cv-301a59fb",
+    "skills": [
+     {
+      "name": "Oracle Certified Professional",
+      "evidence": "Oracle Certified Professional (OCP) 8i, 9i, 10g, 11g, 12c"
+     },
+     {
+      "name": "Agile Methodologies",
+      "evidence": "- Agile Methodologies: Kanban, Scrum."
+     },
+     {
+      "name": "Kanban",
+      "evidence": "- Agile Methodologies: Kanban, Scrum."
+     },
+     {
+      "name": "Scrum",
+      "evidence": "- Agile Methodologies: Kanban, Scrum."
+     }
+    ],
+    "education": [],
+    "experience": [],
+    "uncertain": [
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 1: unreadable answer (no JSON object in the model answer)",
+     "part 2/3: answer cut off at the token limit",
+     "part 2/3: attempt 2: unreadable answer (no JSON object in the model answer)"
+    ],
+    "prompt_version": "profile-v1"
+   },
+   "review_reasons": [
+    "profile:partial_extraction_requires_review"
+   ],
+   "info_flags": [
+    "profile:name_not_found"
+   ],
+   "elapsed_s": 32.465
+  },
+  "elapsed_s": 32.48
+ }
+}

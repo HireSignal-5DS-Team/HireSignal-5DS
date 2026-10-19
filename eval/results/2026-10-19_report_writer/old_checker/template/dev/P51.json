@@ -1,0 +1,54 @@
+{
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 1 of 3 must-have requirements are met; the score is 44. Missing must-haves: Asynchronous programming and developing performance-critical applications. Unclear must-haves: Software development: 5 years of experience or more.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Software development: 5 years of experience or more - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Worked on multiple projects: two web stores(one from scratch) and a multilingual website. Wrote an easy-to-maintain, reliable, and bug-free code wrapped in Docker and deployed on AWS.",
+    "line": "must: Developing big systems with Python: 2 years of experience or more - met (CV: Worked on multiple projects: two web stores(one from scratch) and a multilingual website. Wrote an easy-to-maintain, reliable, and bug-free code wrapped in Docker and deployed on AWS.)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Asynchronous programming and developing performance-critical applications - missing (not found in CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MET",
+    "quote": "Configured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK.",
+    "line": "nice: Working with AWS, Docker and microservices - met (CV: Configured pipelines (CI/CD), and managed and provisioned infrastructure as a code using AWS CDK.)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Experience with Machine Learning - missing (not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "nice: Algorithms development (collaborative filtering, similarity, data normalization, clustering) - missing (not found in CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Asynchronous programming and developing performance-critical applications.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": []
+ },
+ "source": "template",
+ "attempts": 0,
+ "first_errors": [],
+ "retry_errors": [],
+ "latency_s": 0.0007,
+ "peak_vram_mib": null,
+ "id": "P51",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

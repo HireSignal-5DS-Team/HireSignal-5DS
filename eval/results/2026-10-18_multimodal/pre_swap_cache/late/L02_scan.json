@@ -1,0 +1,35 @@
+{
+ "item": {
+  "id": "L02_scan",
+  "file": "L02_scan.pdf",
+  "source": "L01.pdf",
+  "pages": [
+   1
+  ],
+  "pair": "P02",
+  "split": "test",
+  "condition": "scan",
+  "job": "J1"
+ },
+ "text": "CURRICULUM VITAE\nSenior Computer Vision Engineer\nPosition: Senior Computer Vision Engineer\nExperience years: 5\nEnglish level: fluent\n- IEEE Conference Poster in the Human-Computer Interaction field\n- Attended domain-related conferences in the US, UK, Japan\n- Apps in App Store and Google Play\n- Master Degree\nHighly performing Research Engineer with Computer Vision/Deep Learning specialization. I'm focused on applying Computer Vision algorithms (classical and deep-learning based) for enterprise-level solutions.\nPosition: Lead C++ Engineer, Computer Vision\nDescription: Low-level Computer Vision algorithms application for manufacturing, algorithms vectorization and parallelization; Computer Vision library architecture; code review, mentoring\nTechnologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins\nPosition: Research Engineer, HCI\nDescription: Various projects focused on new ways of Human-Computer Interaction: navigation in AR, touchless interfaces, combining different forms of interaction\nTechnologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore\nPosition: Unity Developer, Computer Vision\nDescription: App in App Store and Google Play: SLAM system for Augmented Reality at mobile\nTechnologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia\nDeveloping new algorithms/approaches in Computer Vision-related topics",
+ "pages": [
+  {
+   "text": "CURRICULUM VITAE\nSenior Computer Vision Engineer\nPosition: Senior Computer Vision Engineer\nExperience years: 5\nEnglish level: fluent\n- IEEE Conference Poster in the Human-Computer Interaction field\n- Attended domain-related conferences in the US, UK, Japan\n- Apps in App Store and Google Play\n- Master Degree\nHighly performing Research Engineer with Computer Vision/Deep Learning specialization. I'm focused on applying Computer Vision algorithms (classical and deep-learning based) for enterprise-level solutions.\nPosition: Lead C++ Engineer, Computer Vision\nDescription: Low-level Computer Vision algorithms application for manufacturing, algorithms vectorization and parallelization; Computer Vision library architecture; code review, mentoring\nTechnologies: C++17, OpenCV, Multithreading, TDD, CMake, Jenkins\nPosition: Research Engineer, HCI\nDescription: Various projects focused on new ways of Human-Computer Interaction: navigation in AR, touchless interfaces, combining different forms of interaction\nTechnologies: 3D Math, Computer Graphics, CUDA, Google Glass, ARKit/ARCore\nPosition: Unity Developer, Computer Vision\nDescription: App in App Store and Google Play: SLAM system for Augmented Reality at mobile\nTechnologies: Unity3D/C#, Native Mobile, OpenCV, Vuforia\nDeveloping new algorithms/approaches in Computer Vision-related topics",
+   "low_trust_lines": [
+    "in Data Science"
+   ],
+   "stats": {
+    "agree": 28,
+    "ocr_kept": 0,
+    "vision_used": 129,
+    "ocr_dropped": 297,
+    "vision_kept_short": 0,
+    "vision_kept_supported": 10,
+    "low_trust_words": 3
+   }
+  }
+ ],
+ "min_conf": 101,
+ "merge": "vision_backbone",
+ "vision": "qwen2.5vl_3b__v1"
+}

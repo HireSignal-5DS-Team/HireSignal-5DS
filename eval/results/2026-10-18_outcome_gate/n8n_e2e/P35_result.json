@@ -1,0 +1,334 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "23",
+ "cv_id": "cv-cb118925",
+ "job_id": "job-51054613",
+ "job_title": "Python BackEnd Developer",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 22,
+ "reasons": [
+  "r1: must-have MISSING",
+  "r3: must-have MISSING"
+ ],
+ "listed_flags": [
+  "r6 (nice): match:low_confidence",
+  "r9 (nice): match:low_confidence",
+  "r10 (nice): match:low_confidence",
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 80,
+  "pair_flags": "info"
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "5 years of experience in development (At least 2 years experience in developing big systems with Python)",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "contradicted",
+   "quotes": [
+    {
+     "quote": "Experience years: 2",
+     "start": 35,
+     "end": 54
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000256,
+    "MISSING": 0.998143,
+    "UNCERTAIN": 0.001601
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.2868
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "asynchronous programming",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.002875,
+    "MISSING": 0.443863,
+    "UNCERTAIN": 0.553262
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "performance-critical applications",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000348,
+    "MISSING": 0.907054,
+    "UNCERTAIN": 0.092597
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9987
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Working with AWS – Advantages",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 3.5e-05,
+    "MISSING": 0.981376,
+    "UNCERTAIN": 0.018589
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9997
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Working with Docker – Advantages",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.00109,
+    "MISSING": 0.740173,
+    "UNCERTAIN": 0.258737
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9998
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Working with microservices – Advantages",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000347,
+    "MISSING": 0.705197,
+    "UNCERTAIN": 0.294455
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r7",
+   "text": "Experience with Machine Learning",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 3.7e-05,
+    "MISSING": 0.990189,
+    "UNCERTAIN": 0.009774
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9994
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r8",
+   "text": "Algorithms development (collaborative filtering) - Advantages",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000312,
+    "MISSING": 0.857578,
+    "UNCERTAIN": 0.14211
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9411
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r9",
+   "text": "Algorithms development (similarity) - Advantages",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.001266,
+    "MISSING": 0.7141,
+    "UNCERTAIN": 0.284634
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r10",
+   "text": "Algorithms development (data normalization) - Advantages",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.007845,
+    "MISSING": 0.58931,
+    "UNCERTAIN": 0.402846
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r11",
+   "text": "Algorithms development (clustering) - Advantages",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 9.8e-05,
+    "MISSING": 0.90767,
+    "UNCERTAIN": 0.092232
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9794
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r12",
+   "text": "Excellent analytical and time management skills",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.003143,
+    "MISSING": 0.168988,
+    "UNCERTAIN": 0.827869
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r13",
+   "text": "Teamwork skills with a problem-solving attitude.",
+   "kind": "nice",
+   "decision": "UNCERTAIN",
+   "model_decision": "UNCERTAIN",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV only partly or indirectly addresses this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.036042,
+    "MISSING": 0.150138,
+    "UNCERTAIN": 0.81382
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  }
+ ],
+ "timings_s": {
+  "reader": 0.006,
+  "profile": 1.818,
+  "job": 9.333,
+  "match_and_judge": 32.846
+ }
+}

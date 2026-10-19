@@ -1,0 +1,137 @@
+{
+ "cvs": {
+  "rows": 210250,
+  "columns": [
+   "Position",
+   "Moreinfo",
+   "Looking For",
+   "Highlights",
+   "Primary Keyword",
+   "English Level",
+   "Experience Years",
+   "CV",
+   "CV_lang",
+   "id",
+   "__index_level_0__"
+  ],
+  "top_primary_keyword": {
+   "JavaScript": 33980,
+   "QA": 25089,
+   "Design": 15068,
+   "Project Manager": 12499,
+   "Java": 11463,
+   ".NET": 9388,
+   "Marketing": 8984,
+   "Python": 7588,
+   "PHP": 6947,
+   "QA Automation": 5756,
+   "Other": 5395,
+   "Node.js": 4896,
+   "Recruiter": 4865,
+   "HR": 4776,
+   "Support": 4597,
+   "Business Analyst": 4431,
+   "DevOps": 4120,
+   "Product Manager": 4048,
+   "Sales": 3784,
+   "iOS": 3200,
+   "Android": 3087,
+   "C++": 2981,
+   "Data Science": 2571,
+   "Artist": 2542,
+   "Lead": 2373
+  },
+  "CV_chars": {
+   "count": 210250.0,
+   "mean": 944.4,
+   "std": 677.4,
+   "min": 6.0,
+   "10%": 298.0,
+   "50%": 751.0,
+   "90%": 1892.0,
+   "max": 7372.0
+  },
+  "cv_lang": {
+   "en": 210250
+  },
+  "experience_years": {
+   "0.0": 21461,
+   "0.5": 15369,
+   "1.0": 20635,
+   "1.5": 11300,
+   "2.0": 18966,
+   "2.5": 9012,
+   "3.0": 21510,
+   "4.0": 18349,
+   "5.0": 19650,
+   "6.0": 11483,
+   "7.0": 9137,
+   "8.0": 7252,
+   "9.0": 4195,
+   "10.0": 5068,
+   "11.0": 16863
+  },
+  "pii_regex_rows": {
+   "email": 0,
+   "url_profile": 5242,
+   "name_phrase": 3222,
+   "phone": 123
+  },
+  "pii_regex_rows_any": 8499
+ },
+ "jobs": {
+  "rows": 141897,
+  "columns": [
+   "Position",
+   "Long Description",
+   "Company Name",
+   "Exp Years",
+   "Primary Keyword",
+   "English Level",
+   "Published",
+   "Long Description_lang",
+   "id",
+   "__index_level_0__"
+  ],
+  "top_primary_keyword": {
+   "JavaScript": 17903,
+   "Java": 8712,
+   "DevOps": 7979,
+   ".NET": 7826,
+   "Other": 7536,
+   "QA Automation": 7047,
+   "Marketing": 6933,
+   "QA": 6774,
+   "Node.js": 6416,
+   "PHP": 5740,
+   "Python": 5735,
+   "Project Manager": 4618,
+   "HR": 4063,
+   "Design": 4020,
+   "Sales": 4014,
+   "C++": 3743,
+   "Business Analyst": 3679,
+   "Support": 2819,
+   "Android": 2651,
+   "iOS": 2398,
+   "Data Science": 2262,
+   "Product Manager": 1939,
+   "Lead": 1861,
+   "Ruby": 1834,
+   "Golang": 1747
+  },
+  "Long Description_chars": {
+   "count": 141897.0,
+   "mean": 1800.6,
+   "std": 973.2,
+   "min": 51.0,
+   "10%": 737.0,
+   "50%": 1629.0,
+   "90%": 3066.0,
+   "max": 12578.0
+  },
+  "lang": {
+   "en": 141897
+  }
+ }
+}

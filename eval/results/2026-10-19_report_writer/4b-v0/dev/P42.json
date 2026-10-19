@@ -1,0 +1,82 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v0.md",
+ "attempts": 1,
+ "first_errors": [
+  "r1: quote is not in its verified CV quotes",
+  "r3: quote is not in its verified CV quotes",
+  "r5: quote is not in its verified CV quotes",
+  "r6: quote is not in its verified CV quotes",
+  "reject letter without the right to a human review"
+ ],
+ "retry_errors": [],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\n  \"recruiter_summary\": \"The candidate is rejected for the Data Scientist role due to a missing requirement: hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS, or similar). Despite strong evidence of experience in data science, statistics, time series analysis, and cloud platforms (AWS SageMaker), the candidate lacks demonstrable proficiency in probabilistic programming frameworks, which is a mandatory requirement (r4). The candidate has 4+ years of experience and strong academic background in probability and statistics, including a PhD in Mathematics. However, the absence of evidence for probabilistic programming experience—despite being a must-have—leads to a clear gate failure (r4: must-have MISSING). Other requirements are either met or have low confidence, but the critical gap in probabilistic programming experience is decisive in the rejection.\",\n  \"requirements\": [\n    {\n      \"req_id\": \"r1\",\n      \"decision\": \"MET\",\n      \"quote\": \"Together with team achieved TOP 14% in AMEX Kaggle competition. Data scientist: \",\n      \"line\": \"Data Science: 4 years of experience or more\"\n    },\n    {\n      \"req_id\": \"r2\",\n      \"decision\": \"MET\",\n      \"quote\": \"College lecturer (1 term): Probability theory and statistics\",\n      \"line\": \"Good knowledge of probability theory and statistics\"\n    },\n    {\n      \"req_id\": \"r3\",\n      \"decision\": \"MET\",\n      \"quote\": \"- Making research on behavioral biases' impact on traders' performance\\n- Time Series forecasting using FFT, Facebook Prophet model\\n- Developing method for probability calculation in clinical trials which is based on Diophantine inequality, Monte Carlo method for multiple integral derivation\",\n      \"line\": \"Understanding of Bayesian methods, time series analysis or sensor signal processing\"\n    },\n    {\n      \"req_id\": \"r4\",\n      \"decision\": \"MISSING\",\n      \"quote\": \"\",\n      \"line\": \"Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar)\"\n    },\n    {\n      \"req_id\": \"r5\",\n      \"decision\": \"MET\",\n      \"quote\": \"Leading Junior Data Scientist. AWS Sagemaker, sklearn processing jobs.\",\n      \"line\": \"Experience with cloud (Amazon SageMaker)\"\n    },\n    {\n      \"req_id\": \"r6\",\n      \"decision\": \"MET\",\n      \"quote\": \"Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc), Rewriting MSSQL queries to PySpark\",\n      \"line\": \"Experience with PySpark\"\n    },\n    {\n      \"req_id\": \"r7\",\n      \"decision\": \"UNCERTAIN\",\n      \"quote\": \"Rewriting MSSQL queries to PySpark\",\n      \"line\": \"Strong working knowledge of SQL\"\n    },\n    {\n      \"req_id\": \"r8\",\n      \"decision\": \"MET\",\n      \"quote\": \"PhD in Mathematics (currently) (Stochastic differential equations area)\",\n      \"line\": \"Ph.D. in Mathematics\"\n    }\n  ],\n  \"candidate_letter\": \"Dear Recruiter,\\n\\nWe have reviewed the candidate’s profile for the Data Scientist role and determined that they do not meet the mandatory requirement of hands-on experience with probabilistic programming (e.g., Pyro, PyMC3, JAGS). While the candidate demonstrates strong expertise in data science, probability theory, time series analysis, and cloud platforms (AWS SageMaker), there is no evidence of practical experience with probabilistic programming frameworks, which is a core requirement for this role.\\n\\nThe candidate has 4+ years of experience, a PhD in Mathematics, and relevant academic and project-based experience in statistical modeling and forecasting. However, the absence of direct experience with probabilistic programming tools results in a failure on requirement r4, which is a must-have. This gap is decisive in the rejection decision.\\n\\nWe recommend further evaluation of candidates with demonstrable hands-on experience in probabilistic programming frameworks to better align with the technical expectations of the role.\\n\\nBest regards,\\nAutomated Screening System\",\n  \"flags_for_recruiter\": [\n    \"The candidate lacks hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) — a must-have requirement.\",\n    \"Low confidence on SQL knowledge (r7): evidence is indirect and limited to query rewriting in PySpark.\",\n    \"Despite strong academic and technical background, the missing probabilistic programming experience is a critical gap.\"\n  ]\n}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 5 of 7 must-have requirements are met; the score is 80. Missing must-haves: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar). Unclear must-haves: Strong working knowledge of SQL.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Together with team achieved TOP 14% in AMEX Kaggle competition.",
+    "line": "must: Data Science: 4 years of experience or more - met (CV: Together with team achieved TOP 14% in AMEX Kaggle competition.)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "College lecturer (1 term): Probability theory and statistics",
+    "line": "must: Good knowledge of probability theory and statistics - met (CV: College lecturer (1 term): Probability theory and statistics)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "- Making research on behavioral biases' impact on traders' performance",
+    "line": "must: Understanding of Bayesian methods, time series analysis or sensor signal processing - met (CV: - Making research on behavioral biases' impact on traders' performance)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "must: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar) - missing (not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "Leading Junior Data Scientist.",
+    "line": "must: Experience with cloud (Amazon SageMaker) - met (CV: Leading Junior Data Scientist.)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "MET",
+    "quote": "Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc)",
+    "line": "must: Experience with PySpark - met (CV: Building Data Analytics ETL pipeline in Databricks with PySpark (+unittest, pyodbc))"
+   },
+   {
+    "req_id": "r7",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "must: Strong working knowledge of SQL - uncertain (unclear in the CV)"
+   },
+   {
+    "req_id": "r8",
+    "decision": "MET",
+    "quote": "PhD in Mathematics (currently) (Stochastic differential equations area)",
+    "line": "nice: Ph.D. in Mathematics - met (CV: PhD in Mathematics (currently) (Stochastic differential equations area))"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Hands-on experience with probabilistic programming (Pyro, PyMC3, JAGS or similar).\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r7"
+  ]
+ },
+ "source": "template",
+ "latency_s": 16.32,
+ "peak_vram_mib": 3267,
+ "id": "P42",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

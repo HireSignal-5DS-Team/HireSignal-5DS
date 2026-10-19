@@ -1,0 +1,178 @@
+{
+ "workflow": "HireSignal v1",
+ "execution_id": "26",
+ "cv_id": "cv-094fa696",
+ "job_id": "J4",
+ "job_title": "Python BackEnd Developer",
+ "outcome": "reject",
+ "rule": "1 reject: must-have MISSING",
+ "score": 11,
+ "reasons": [
+  "r1: must-have MISSING",
+  "r3: must-have MISSING"
+ ],
+ "listed_flags": [
+  "pair: reader:No section headings recognised (Experience, Education, ...).",
+  "pair: profile:name_not_found",
+  "pair: job:requirements confirmed by recruiter"
+ ],
+ "message": "You can request a human review of this decision.",
+ "gate_settings": {
+  "t_invite": 85,
+  "pair_flags": "info",
+  "judge": "all",
+  "judge_met_max_conf": 0.999,
+  "judge_max_support": null,
+  "judge_skip_proven": false
+ },
+ "decided_by": "gate",
+ "review_form_url": null,
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Software development: 5 years of experience or more",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "contradicted",
+   "quotes": [
+    {
+     "quote": "Experience years: 2",
+     "start": 35,
+     "end": 54
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000155,
+    "MISSING": 0.999658,
+    "UNCERTAIN": 0.000187
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.8609
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r2",
+   "text": "Developing big systems with Python: 2 years of experience or more",
+   "kind": "must",
+   "decision": "UNCERTAIN",
+   "model_decision": "MISSING",
+   "basis": "ambiguous",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [
+    "match:low_confidence"
+   ],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.026168,
+    "MISSING": 0.651351,
+    "UNCERTAIN": 0.322481
+   },
+   "judge": {
+    "verdict": "NOT_APPLICABLE",
+    "score": null
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r3",
+   "text": "Asynchronous programming and developing performance-critical applications",
+   "kind": "must",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.000637,
+    "MISSING": 0.830882,
+    "UNCERTAIN": 0.16848
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9979
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r4",
+   "text": "Working with AWS, Docker and microservices",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.001313,
+    "MISSING": 0.728213,
+    "UNCERTAIN": 0.270474
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9996
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r5",
+   "text": "Experience with Machine Learning",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 3.7e-05,
+    "MISSING": 0.990189,
+    "UNCERTAIN": 0.009774
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9994
+   },
+   "lora_scale": 1
+  },
+  {
+   "req_id": "r6",
+   "text": "Algorithms development (collaborative filtering, similarity, data normalization, clustering)",
+   "kind": "nice",
+   "decision": "MISSING",
+   "model_decision": "MISSING",
+   "basis": "not_documented",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "review_reasons": [],
+   "info_flags": [],
+   "confidence": {
+    "MET": 0.001976,
+    "MISSING": 0.764945,
+    "UNCERTAIN": 0.233079
+   },
+   "judge": {
+    "verdict": "PASS",
+    "score": 0.9808
+   },
+   "lora_scale": 1
+  }
+ ],
+ "timings_s": {
+  "reader": 0.006,
+  "profile": 1.486,
+  "job": 0,
+  "match_and_judge": 11.549
+ }
+}

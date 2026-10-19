@@ -1,0 +1,31 @@
+[
+ {
+  "check": "no identity of kaggle_pdf in /profile, /job, /match responses",
+  "identity_values_found_in_private_file": 3,
+  "ok": true,
+  "leaked_count": 0
+ },
+ {
+  "check": "no identity of djinni_cv in /profile, /job, /match responses",
+  "identity_values_found_in_private_file": 0,
+  "ok": true,
+  "leaked_count": 0
+ },
+ {
+  "check": "every quote == cv_text[start:end]",
+  "quotes": 3,
+  "ok": true
+ },
+ {
+  "check": "no model_output_invalid in /match",
+  "ok": true
+ },
+ {
+  "check": "all responses validate against services/contracts.py",
+  "ok": true
+ },
+ {
+  "check": "/match lora_scale 1, /profile and /job run with scale 0 (client default)",
+  "ok": true
+ }
+]

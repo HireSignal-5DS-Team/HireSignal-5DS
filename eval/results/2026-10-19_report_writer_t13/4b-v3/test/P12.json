@@ -1,0 +1,62 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because three must-have requirements are missing: hands-on experience with SQL, knowledge of Python, and experience with GCP or another cloud provider. The CV shows knowledge of data warehousing principles, which meets the first requirement. No evidence is found for the other must-have requirements. The score is 32.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"Designed, DWH architecture of Payment Management Systems, Mastercard systems and many related systems.\", \"line\": \"Met: the CV shows experience in designing DWH architecture.\"}, {\"req_id\": \"r2\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Hands-on experience with SQL is not found in the CV.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Knowledge of Python is not found in the CV.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Experience with GCP or another cloud provider is not found in the CV.\"}, {\"req_id\": \"r5\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: Good spoken English is not clearly demonstrated in the CV.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: Willingness to research business logic is not clearly shown in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show these required points: hands-on experience with SQL, knowledge of Python, and experience with GCP or another cloud provider.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about willingness to research business logic (r6)\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because three must-have requirements are missing: hands-on experience with SQL, knowledge of Python, and experience with GCP or another cloud provider. The CV shows knowledge of data warehousing principles, which meets the first requirement. No evidence is found for the other must-have requirements. The score is 32.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "Designed, DWH architecture of Payment Management Systems, Mastercard systems and many related systems.",
+    "line": "Met: the CV shows experience in designing DWH architecture."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Hands-on experience with SQL is not found in the CV."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Knowledge of Python is not found in the CV."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with GCP or another cloud provider is not found in the CV."
+   },
+   {
+    "req_id": "r5",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Good spoken English is not clearly demonstrated in the CV."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Willingness to research business logic is not clearly shown in the CV."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show these required points: hands-on experience with SQL, knowledge of Python, and experience with GCP or another cloud provider.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about willingness to research business logic (r6)"
+  ]
+ },
+ "source": "llm",
+ "latency_s": 8.09,
+ "peak_vram_mib": 3267,
+ "id": "P12",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

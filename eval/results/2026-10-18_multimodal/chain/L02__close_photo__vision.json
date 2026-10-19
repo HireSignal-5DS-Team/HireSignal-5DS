@@ -1,0 +1,29 @@
+{
+ "cv": "L02",
+ "pair": "P15",
+ "job": "J2",
+ "condition": "close photo",
+ "setup": "vision",
+ "items": [
+  "K01_photo"
+ ],
+ "reader_reasons": [],
+ "ocr_confidence": 93.1,
+ "outcome": "review",
+ "rule": "2 review: outcome-relevant flag on a must-have",
+ "score": 59,
+ "reasons": [
+  "r1: must MISSING doubted (judge:disagrees): possible false reject",
+  "r4: must MISSING doubted (judge:disagrees): possible false reject",
+  "r5: must MET doubted (judge:disagrees): possible false invite"
+ ],
+ "pair_review_reasons": [],
+ "decisions": {
+  "r1": "MISSING",
+  "r2": "MET",
+  "r3": "MET",
+  "r4": "MISSING",
+  "r5": "MET",
+  "r6": "UNCERTAIN"
+ }
+}

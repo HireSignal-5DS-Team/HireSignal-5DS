@@ -1,0 +1,316 @@
+{
+ "workflow": "HireSignal v1",
+ "outcome_step": "TEMP outcome (temporary rule, replaced by the Outcome gate later)",
+ "execution_id": "13",
+ "cv_id": "cv-90a4c6a7",
+ "job_id": "job-05ead808",
+ "job_title": "Data Engineer",
+ "outcome": "reject",
+ "outcome_reason": "must-have MISSING: r1, r2, r3, r6",
+ "score": 43,
+ "score_formula": "round(100*sum(w*v)/sum(w)); must 2, nice 1; MET 1, UNCERTAIN 0.5, MISSING 0",
+ "requirements": [
+  {
+   "req_id": "r1",
+   "text": "Knowledge of the general principles of Data Warehousing",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/fd6d2981-3d4a-4ce2-9741-cfc98c5b74bd",
+     "title": "implement data warehousing techniques"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/f2d57f41-43b4-4f5b-8100-3df5c21eda50",
+     "title": "process data"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/0d6714c6-720e-4985-9791-5ab85d28da79",
+     "title": "gather data"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 2.825
+  },
+  {
+   "req_id": "r2",
+   "text": "Knowledge of the general principles of Data Lakes",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Knowledge of the general principles of Data Warehousing and Data Lakes",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/f2d57f41-43b4-4f5b-8100-3df5c21eda50",
+     "title": "process data"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/0d6714c6-720e-4985-9791-5ab85d28da79",
+     "title": "gather data"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/57231a22-4da7-49c8-97b8-75672feadf1e",
+     "title": "manage quantitative data"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 2.319
+  },
+  {
+   "req_id": "r3",
+   "text": "Wiliness to do research on business logic",
+   "kind": "must",
+   "category": "other",
+   "min_years": null,
+   "job_evidence": "Wiliness to do research on business logic",
+   "decision": "MISSING",
+   "basis": "not_documented",
+   "model_decision": "MISSING",
+   "quotes": [],
+   "explanation": "The CV says nothing about this requirement.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/410540a4-b88c-4073-9da2-8aa5d7eaf780",
+     "title": "player logic"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/54ad8d82-17ae-4544-898c-19005ff928d3",
+     "title": "conduct costume research"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/294cf13e-4fdf-4cb8-bb6b-31b9da7f4819",
+     "title": "logic"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 2.252
+  },
+  {
+   "req_id": "r4",
+   "text": "Hands-on experience with SQL",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Hands-on experience with SQL",
+   "decision": "MET",
+   "basis": "supported",
+   "model_decision": "MET",
+   "quotes": [
+    {
+     "quote": "Database Experience: Over 8 years of experience in utilizing Oracle (SQL) for various tasks, including troubleshooting subscriber issues, creating complex queries, running procedures, and data updates.",
+     "start": 125,
+     "end": 326
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/c062bab3-3ea0-4291-9220-a2d8fef4bead",
+     "title": "SQL Server"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/598de5b0-5b58-4ea7-8058-a4bc4d18c742",
+     "title": "SQL"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/ab1e97ed-2319-4293-a8b7-072d2648822f",
+     "title": "database management systems"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 3.203
+  },
+  {
+   "req_id": "r5",
+   "text": "Knowledge of Python",
+   "kind": "must",
+   "category": "skill",
+   "min_years": null,
+   "job_evidence": "Knowledge of Python",
+   "decision": "MET",
+   "basis": "supported",
+   "model_decision": "MET",
+   "quotes": [
+    {
+     "quote": "Python: Experience in using Python for file and database manipulation tasks.",
+     "start": 1120,
+     "end": 1196
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/ccd0a1d9-afda-43d9-b901-96344886e14d",
+     "title": "Python (computer programming)"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/5ef0c719-5bcb-49f8-b8eb-824388225333",
+     "title": "use scripting programming"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 2.664
+  },
+  {
+   "req_id": "r6",
+   "text": "Experience with GCP or other cloud providers",
+   "kind": "must",
+   "category": "experience",
+   "min_years": null,
+   "job_evidence": "Experience with GCP or other cloud providers",
+   "decision": "MISSING",
+   "basis": "contradicted",
+   "model_decision": "MISSING",
+   "quotes": [
+    {
+     "quote": "Cloud Knowledge: Azure and AWS services, holding certifications such as DP-203 Azure Data Engineer Associate and CLF-C01 AWS Certified Cloud Practitioner.",
+     "start": 329,
+     "end": 483
+    }
+   ],
+   "explanation": "The CV shows this requirement is not met; the quote is copied from the CV.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/1c2978b8-bb0d-4249-9c23-877571a4dffa",
+     "title": "cloud security and compliance"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/8efa6a7a-6556-4cb8-908d-59d3b5c58d2f",
+     "title": "cloud monitoring and reporting"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/4da4587a-fd0b-4ca2-886c-c42a1562d432",
+     "title": "design cloud networks"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 3.394
+  },
+  {
+   "req_id": "r7",
+   "text": "Good spoken English",
+   "kind": "must",
+   "category": "language",
+   "min_years": null,
+   "job_evidence": "Good spoken English",
+   "decision": "MET",
+   "basis": "supported",
+   "model_decision": "MET",
+   "quotes": [
+    {
+     "quote": "Here is a summary of my qualifications:",
+     "start": 83,
+     "end": 122
+    },
+    {
+     "quote": "[NAME]: Experienced in working with PowerBI (PL-300 Microsoft Certified: Power [NAME] Data Analyst Associate), Tableau, and Sisense for data visualization and analysis.",
+     "start": 486,
+     "end": 654
+    },
+    {
+     "quote": "I am highly motivated to further enhance my skills and expand my knowledge in the field of data engineering and analytics.",
+     "start": 1743,
+     "end": 1865
+    }
+   ],
+   "explanation": "The CV directly shows this requirement; the quote is copied from the CV.",
+   "evidence_years": null,
+   "review_reasons": [],
+   "info_flags": [],
+   "knowledge_refs": [
+    {
+     "source_id": "http://data.europa.eu/esco/skill/0ee9e985-0ee5-4a73-8a12-78b53b261bb2",
+     "title": "interact verbally in English"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/64ff8d5f-58a8-4efb-af5a-e161854b3e9a",
+     "title": "understand spoken English"
+    },
+    {
+     "source_id": "http://data.europa.eu/esco/skill/7ee20fe2-facd-4cc5-837b-927429e0e7ac",
+     "title": "understand written English"
+    }
+   ],
+   "lora_scale": 1,
+   "finish_reason": "stop",
+   "elapsed_s": 3.956
+  }
+ ],
+ "review_reasons": [],
+ "info_flags": [
+  "reader:No section headings recognised (Experience, Education, ...)."
+ ],
+ "request_human_review": "Rejected by the temporary rule: ask for a human review if you disagree.",
+ "timings_s": {
+  "reader": 0.152,
+  "profile": 29.277,
+  "job": 6.663,
+  "match_total": 20.613,
+  "match_each": [
+   {
+    "req_id": "r1",
+    "s": 2.825
+   },
+   {
+    "req_id": "r2",
+    "s": 2.319
+   },
+   {
+    "req_id": "r3",
+    "s": 2.252
+   },
+   {
+    "req_id": "r4",
+    "s": 3.203
+   },
+   {
+    "req_id": "r5",
+    "s": 2.664
+   },
+   {
+    "req_id": "r6",
+    "s": 3.394
+   },
+   {
+    "req_id": "r7",
+    "s": 3.956
+   }
+  ]
+ }
+}

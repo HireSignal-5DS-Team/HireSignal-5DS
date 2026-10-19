@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K07_p02_photo",
+  "file": "K07_p02_photo.jpg",
+  "source": "K02.pdf",
+  "pages": [
+   2
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "This is a resume that outlines the educational background and professional skills of an individual. Here is a summary of the key points from the resume:\n\n### Education\n- **Master of Science in Computer & Information Science**\n  - University of Houston, 2015\n  - Top 15% of class\n  - Emphasis in Cyber Security and Information Awareness\n  - Coursework in Operating Systems and System Programming\n  - Coursework in Computer Networking and Information Technology\n\n- **Bachelor of Science in Management of Information Systems**\n  - University of Maryland University College, 2011\n  - Coursework in Computer Networking and Information Technology\n  - 4.0 GPA\n\n### Skills\n- System administration\n- Windows Server 2003\n- Windows Server 2008\n- VMware\n- Active Directory\n- Microsoft Exchange 2013\n- Large computer networks\n- Linux\n- Mac OS\n- Microsoft Dynamics\n- Access Control Security\n\n### Certifications\n- Certified Naval Information Systems Technician (E6)\n- Information Systems Security Professional (CISSP)\n- Microsoft Certified Systems Administrator (MCSA)\n- PMI - Project Management Professional (PMP)\n- ISA - Certified Automation Professional\n- Cisco Certified Network Associate (CCNA)\n- Cisco Certified Network Professional (CCNP)\n- Cisco Certified Security Professional (CCSP)\n- Video Teleconference Certified Expert\n- CompTIA Security+\n- Network+\n- A+",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 11.09,
+   "eval_count": 302,
+   "done_reason": "stop",
+   "peak_vram_mib": 4379
+  }
+ ]
+}

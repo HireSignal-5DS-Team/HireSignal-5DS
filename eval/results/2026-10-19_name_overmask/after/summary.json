@@ -1,0 +1,399 @@
+{
+ "label": "rules only, no model (CPU)",
+ "synthetic": {
+  "cvs": 10,
+  "identity_pieces": 65,
+  "leaks": 0,
+  "other_people_pieces": 5,
+  "other_people_readable": 0,
+  "facts": 67,
+  "facts_kept": 65,
+  "per_cv": [
+   {
+    "cv": "p01_en_classic",
+    "leaks": [],
+    "other_people_readable": [],
+    "facts_lost": []
+   },
+   {
+    "cv": "p02_fr_classic",
+    "leaks": [],
+    "other_people_readable": [],
+    "facts_lost": [
+     "Ingénieure DevOps"
+    ]
+   },
+   {
+    "cv": "p03_en_two_column",
+    "leaks": [],
+    "other_people_readable": [],
+    "facts_lost": []
+   },
+   {
+    "cv": "p04_fr_labelled",
+    "leaks": [],
+    "other_people_readable": [],
+    "facts_lost": []
+   },
+   {
+    "cv": "p05_en_name_in_footer",
+    "leaks": [],
+    "other_people_readable": [],
+    "facts_lost": []
+   },
+   {
+    "cv": "p06_fr_proxies",
+    "leaks": [],
+    "other_people_readable": [],
+    "facts_lost": []
+   },
+   {
+    "cv": "p07_en_personal_details",
+    "leaks": [],
+    "other_people_readable": [],
+    "facts_lost": []
+   },
+   {
+    "cv": "p08_fr_particle",
+    "leaks": [],
+    "other_people_readable": [],
+    "facts_lost": []
+   },
+   {
+    "cv": "p09_en_years_and_handles",
+    "leaks": [],
+    "other_people_readable": [],
+    "facts_lost": []
+   },
+   {
+    "cv": "p10_fr_header_and_refs",
+    "leaks": [],
+    "other_people_readable": [],
+    "facts_lost": [
+     "Directeur technique"
+    ]
+   }
+  ]
+ },
+ "real_40": {
+  "cvs": 52,
+  "cvs_with_a_detected_name": 0,
+  "name_replacements_total": 0,
+  "detected_names_checked_not_a_name": [],
+  "detected_names_not_in_not_a_name_list": 0,
+  "per_cv": [
+   {
+    "cv": "00218629-911f-5349-8806-e2826075b439",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "05102b97-f298-569a-98ca-209d56d61c37",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "05e042f6-0293-5c13-9ac6-f728b817a811",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "1407eaa2-704d-5609-a699-33caed722335",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "154ad4f1-d0f5-5320-a78b-3fd306090d7b",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "1895c821-57da-5c55-8167-8b096e759b42",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "19074d40-7114-55d7-b550-9f84fa5a8824",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "1adaf0b9-f471-5c1f-92a5-386eabdcdf6d",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "1df02ea9-218c-5b69-a08f-dac1ea5bc75d",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "1ea46f75-c207-5dd0-989d-02c39ce5e24c",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "1fd9c2e7-a3b4-5e44-912b-e88ea072edf1",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "20a91262-993a-553e-b0eb-5c4b764958fb",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "26cd31ab-ce67-5991-9d6d-daddaac297ab",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "291f840e-a2d1-5d50-bd58-1a1ad2d7e237",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "368a9378-9d64-5e03-b238-6cc18d3f28a8",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "3719ad2d-6f8c-5b5f-a258-c8082f3f252a",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "38942650-1829-528f-ae58-db69fa109a92",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "48d329fd-a896-57b2-816f-417046884837",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "4ef163d7-dbac-557e-8232-60ce927f042c",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "4fde9c61-6dc7-5092-9711-f423efd87b1e",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "551b9b18-2179-5b53-b776-7c0e183fbae4",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "559f1772-5225-5f37-b360-441792f9da35",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "5a4c8362-90ff-5ff4-9bb9-9aa7fb51079c",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "64e09210-81b0-57b2-913c-57a0b12166c2",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "7cb2c877-a5c6-5d8b-b890-b80c98801562",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "7dd66f67-c327-5a41-8f2f-dc37d0da0fb5",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "7f020086-92b4-5bba-82a8-4414b03aa091",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "837321d2-f6a1-5db8-8544-7720d1f5a406",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "941e1ef9-a41d-5902-9ee7-abd9ce594c44",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "99f1aae2-4cda-5113-b6fe-0159022084ca",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "9e7f6a17-3bb3-5040-b180-9f3d30e188d5",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "ab7b09a8-2ee2-56fd-9c47-0cce71ea5811",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "ae98cb82-ef23-5558-8738-dca944a0fee6",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "b0347a89-a6a7-5b5f-b6d4-59c941e86555",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "bbae74b8-9101-5e92-a8d2-b62b92c752bf",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "c60edbed-4698-5f78-89fd-8a1e62857cf3",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "c77ac868-bb76-5deb-ae2d-f19f63cdbe05",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "c927a71b-eb8f-5794-8382-f31fca82f7ef",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "d07c090c-a310-5817-9134-0878a8014b4a",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "d1536c11-6819-558a-8a7c-4f8801c38410",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "d3ef2bda-20f8-5821-86ca-ea784f432789",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "d5bdffb0-0c06-5630-ae73-669db0c62957",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "d66dabcf-9e2b-5da0-bdee-ce7706099952",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "d9b175f0-2cb8-58f3-bbce-cecb3b3bea5d",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "dabb2a7e-9f35-5d28-91f2-55e837e9ad83",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "e785fa5f-b60d-52f9-9cc2-29902c7784c9",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "eb00592a-6c62-5caa-a011-f1b0e7ad21fb",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "ec7cd17c-5189-5f25-8d89-c404060abca1",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "ef450b39-445a-5703-b8a7-927d04fef9e0",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "ef68c9f5-969e-59e7-926f-94a1665904a6",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "fc7a52bd-621e-53fd-a58f-027e0d3f0a24",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   },
+   {
+    "cv": "fe026e6d-f4db-560f-aa3a-854c8bb3d166",
+    "name_replacements": 0,
+    "name_found": false,
+    "not_a_name": false
+   }
+  ]
+ }
+}

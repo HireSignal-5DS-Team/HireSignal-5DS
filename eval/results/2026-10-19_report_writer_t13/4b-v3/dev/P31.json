@@ -1,0 +1,69 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 2,
+ "first_errors": [
+  "reject letter names r2 (must, MET), which is not a missing must-have"
+ ],
+ "retry_errors": [
+  "reject letter names r2 (must, MET), which is not a missing must-have"
+ ],
+ "info_flags": [
+  "report:template_fallback"
+ ],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because one must-have requirement is missing. The candidate has 5 years of software development experience, which meets the requirement. Experience in developing big systems with Python is met based on the provided evidence. However, asynchronous programming and performance-critical applications are not mentioned in the CV. The score is 50.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-[URL] websites.\", \"line\": \"Met: the CV shows 5+ years of software development experience.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Lead redesign and optimization of backend and deployment for two legacy projects in 3-4 member teams.\", \"line\": \"Met: the CV mentions backend and deployment work on legacy projects.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Asynchronous programming and performance-critical applications are not found in the CV.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: AWS, Docker, and microservices are not mentioned in the CV.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Experience with Machine Learning is not found in the CV.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: Algorithms development is not clearly shown in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show this required point: asynchronous programming and developing performance-critical applications.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about algorithms development (r6); please check it.\"]}",
+  "{\"recruiter_summary\": \"The candidate is rejected because one must-have requirement is missing. The candidate has 5 years of software development experience, which meets the requirement. Experience in developing big systems with Python is met based on the provided evidence. However, asynchronous programming and performance-critical applications are not mentioned in the CV. The score is 50.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MET\", \"quote\": \"I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-[URL] websites.\", \"line\": \"Met: the CV shows 5+ years of software development experience.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"Lead redesign and optimization of backend and deployment for two legacy projects in 3-4 member teams.\", \"line\": \"Met: the CV mentions backend and deployment work on legacy projects.\"}, {\"req_id\": \"r3\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Asynchronous programming and performance-critical applications are not found in the CV.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: AWS, Docker, and microservices are not mentioned in the CV.\"}, {\"req_id\": \"r5\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Experience with Machine Learning is not found in the CV.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: Algorithms development is not clearly shown in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Python BackEnd Developer position. We will not move forward with your application, because your CV does not show this required point: asynchronous programming and developing performance-critical applications.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about algorithms development (r6); please check it.\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected. 2 of 3 must-have requirements are met; the score is 50. Missing must-haves: Asynchronous programming and developing performance-critical applications.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MET",
+    "quote": "I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-[URL] websites.",
+    "line": "Met: Software development: 5 years of experience or more (must; CV: I am a full-stack web developer and team lead with 5+ years of experience developing small and medium-[URL] websites.)"
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "Lead redesign and optimization of backend and deployment for two legacy projects in 3-4 member teams.",
+    "line": "Met: Developing big systems with Python: 2 years of experience or more (must; CV: Lead redesign and optimization of backend and deployment for two legacy projects in 3-4 member teams.)"
+   },
+   {
+    "req_id": "r3",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Asynchronous programming and developing performance-critical applications (must; not found in CV)"
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Working with AWS, Docker and microservices (nice; not found in CV)"
+   },
+   {
+    "req_id": "r5",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with Machine Learning (nice; not found in CV)"
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Algorithms development (collaborative filtering, similarity, data normalization, clustering) (nice; unclear in the CV)"
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application. After checking your CV against the requirements of this position, we will not move forward, because your CV does not show these required points: Asynchronous programming and developing performance-critical applications.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "low confidence: the Matcher was unsure on r6"
+  ]
+ },
+ "source": "template",
+ "latency_s": 16.85,
+ "peak_vram_mib": 3267,
+ "id": "P31",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

@@ -1,0 +1,46 @@
+{
+  "cv": "p06_fr_proxies",
+  "language": "fr",
+  "must_hide": [
+    {
+      "kind": "NAME",
+      "value": "Yasmine Khelifi"
+    },
+    {
+      "kind": "HONORIFIC",
+      "value": "Mme"
+    },
+    {
+      "kind": "GENDER",
+      "value": "Femme"
+    },
+    {
+      "kind": "AGE",
+      "value": "27 ans"
+    },
+    {
+      "kind": "MARITAL",
+      "value": "Divorcée"
+    },
+    {
+      "kind": "ADDRESS",
+      "value": "Tunis, Tunisie"
+    },
+    {
+      "kind": "PHONE",
+      "value": "+216 20 333 444"
+    },
+    {
+      "kind": "EMAIL",
+      "value": "yasmine.khelifi@gmail.com"
+    }
+  ],
+  "other_people": [],
+  "must_keep": [
+    "BIAT (2019 – 2024)",
+    "5 ans d'expérience",
+    "VBA",
+    "IHEC Carthage, 2019",
+    "Analyste financière"
+  ]
+}

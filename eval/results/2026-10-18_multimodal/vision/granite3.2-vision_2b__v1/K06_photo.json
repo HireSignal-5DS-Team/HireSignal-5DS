@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K06_photo",
+  "file": "K06_photo.jpg",
+  "source": "K03.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "granite3.2-vision:2b",
+ "prompt": "v1",
+ "pages": [
+  {
+   "text": "unanswerable",
+   "model": "granite3.2-vision:2b",
+   "latency_s": 5.03,
+   "eval_count": 4,
+   "done_reason": "stop",
+   "peak_vram_mib": 3249
+  }
+ ]
+}

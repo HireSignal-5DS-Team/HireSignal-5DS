@@ -1,0 +1,33 @@
+Djinni job id: 0dc63314-bb5e-551c-a012-65d5850b4938
+Position: Python BackEnd Developer
+Experience (Djinni field): 3y
+English level (Djinni field): upper
+
+About the project
+
+We are looking for an experienced Python developer. You will be responsible for the server-side of our web applications.
+If you have excellent programming skills and a passion for developing applications or improving existing ones, we would like to meet you.
+As a Back-end developer, you’ll work closely with our engineers to ensure system consistency and improve user experience.
+Ultimately, you should be able to develop and maintain functional and stable web applications to meet our company’s needs.
+
+Responsibilities
+· Participate in the entire application lifecycle, focusing on coding and debugging
+· Write clean code to develop functional web applications
+· Troubleshoot and debug applications
+· Perform UI tests to optimize performance
+· Manage cutting-edge technologies to improve legacy applications
+· Collaborate with Front-end developers to integrate user-facing elements with server-side logic
+· Gather and address technical and design requirements
+· Provide training and support to internal teams
+· Build reusable code and libraries for future use
+· Liaise with developers, designers, and system administrators to identify new features
+· Follow emerging technologies
+
+Requirements
+· 5 years of experience in development (At least 2 years experience in developing big systems with Python) - Must
+· Asynchronous programming and experience in developing performance-critical applications
+· Working with AWS, Docker, and microservices – Advantages
+· Experience with Machine Learning – Advantages
+· Algorithms development (collaborative filtering, similarity, data normalization, clustering) - Advantages
+· Excellent analytical and time management skills
+· Teamwork skills with a problem-solving attitude.

@@ -1,0 +1,37 @@
+{
+ "decisions": {
+  "r1": "MET",
+  "r2": "MISSING",
+  "r3": "MISSING",
+  "r4": "MISSING",
+  "r5": "UNCERTAIN",
+  "r6": "UNCERTAIN"
+ },
+ "kinds": {
+  "r1": "must",
+  "r2": "must",
+  "r3": "must",
+  "r4": "must",
+  "r5": "must",
+  "r6": "nice"
+ },
+ "outcome": "reject",
+ "score": 32,
+ "rule": "1 reject: must-have MISSING",
+ "quotes": {
+  "r1": [
+   "Designed, DWH architecture of Payment Management Systems, Mastercard systems and many related systems.",
+   "DWH: Project management for the creation of company DWH in SAP BODS and Oracle."
+  ],
+  "r2": [],
+  "r3": [],
+  "r4": [],
+  "r5": [
+   "English level: intermediate"
+  ],
+  "r6": []
+ },
+ "elapsed_s": 18.82,
+ "identical_to_base": false,
+ "ran": true
+}

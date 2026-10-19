@@ -1,0 +1,33 @@
+Anna Schneider
+Pronouns: she/her
+Position: Lead / Senior Data Scientist
+Experience years: 10
+English level: fluent
+
+Senior / Lead Data Scientist with over 10 years of total commercial experience in data science, software development, and machine learning related projects.
+
+Experienced in ML project life cycle:
+data collection, preprocessing, feature engineering, training, data augmentation, validation and testing, post-deployment monitoring.
+
+Data Analysis, Statistical Data Models, Machine Learning Models.
+Excellent knowledge of traditional and State-of-the-Art Machine Learning algorithms, including Deep Learning and statistics.
+Deep knowledge in statistical and visualization packages.
+Experience in working with distributed systems.
+
+Machine Learning
+Linear Models, Tree-based models, SVM, Boosting, KNN, C-means,  Markov Chains, Bayesian Optimization, LGBM, XGBoost, CatBoost, Time Series and many more.
+
+Deep Learning and Neural Networks
+Pytorch, Tensorflow, Ray, Convolutions, LSTMs, Transformers, Word Embeddings, Residual Connections, Transfer Learning, Model Pretraining and Fine Tuning, Graph Neural Networks.
+
+Natural Language Processing and Understanding
+Regexp, Text preprocessing, Indexing, vectorization tf-idf, Embedding representations, Word2Vec, FastText, Glove, BERT, Transformers, Stanza, spaCy.
+
+Programming and Machine Learning Libraries:
+Python, Pandas, Numpy, SciPy, Scikit-Learn, Tensorflow, Keras, PyTorch, Stanza, spaCy, Flask, FastApi
+
+Databases:
+BigQuery, MSSQL, MySQL, PostgreSQL, MongoDB
+
+Cloud Services, DevOps and Big Data
+Docker, Docker Compose, Kubernetes. AWS, RDS, Route 53, EC2, S3, GCP, Cloud Run, Cloud Compute, Cloud Composer, Cloud Functions, Cloud Scheduler, Spark, Hadoop, HDFS, Hive, Zeppelin, Airflow, Redis and many more.

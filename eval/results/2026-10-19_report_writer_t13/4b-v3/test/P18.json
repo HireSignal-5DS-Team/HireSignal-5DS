@@ -1,0 +1,62 @@
+{
+ "model": "qwen3-4b",
+ "prompt": "prompts/report_writer/v3.md",
+ "attempts": 1,
+ "first_errors": [],
+ "retry_errors": [],
+ "info_flags": [],
+ "drafts": [
+  "{\"recruiter_summary\": \"The candidate is rejected because two must-have requirements are missing: knowledge of data warehousing and data lakes, and experience with a cloud provider like GCP. The CV shows hands-on SQL and Python experience, and good spoken English, which meet the required criteria. The score is 59.\", \"requirements\": [{\"req_id\": \"r1\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Knowledge of the general principles of Data Warehousing and Data Lakes is not found in the CV.\"}, {\"req_id\": \"r2\", \"decision\": \"MET\", \"quote\": \"As a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights.\", \"line\": \"Met: the CV mentions hands-on experience with SQL.\"}, {\"req_id\": \"r3\", \"decision\": \"MET\", \"quote\": \"As a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights.\", \"line\": \"Met: the CV mentions expertise in Python.\"}, {\"req_id\": \"r4\", \"decision\": \"MISSING\", \"quote\": \"\", \"line\": \"Missing: Experience with GCP or another cloud provider is not found in the CV.\"}, {\"req_id\": \"r5\", \"decision\": \"MET\", \"quote\": \"English level: upper\", \"line\": \"Met: the CV states an upper level of spoken English.\"}, {\"req_id\": \"r6\", \"decision\": \"UNCERTAIN\", \"quote\": \"\", \"line\": \"Uncertain: Willingness to research business logic is not clearly stated in the CV.\"}], \"candidate_letter\": \"Dear candidate,\\n\\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show these required points: knowledge of the general principles of Data Warehousing and Data Lakes, and experience with GCP or another cloud provider.\\n\\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\\n\\nKind regards\", \"flags_for_recruiter\": [\"The Matcher was unsure about willingness to research business logic (r6); please check it.\"]}"
+ ],
+ "report": {
+  "recruiter_summary": "The candidate is rejected because two must-have requirements are missing: knowledge of data warehousing and data lakes, and experience with a cloud provider like GCP. The CV shows hands-on SQL and Python experience, and good spoken English, which meet the required criteria. The score is 59.",
+  "requirements": [
+   {
+    "req_id": "r1",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Knowledge of the general principles of Data Warehousing and Data Lakes is not found in the CV."
+   },
+   {
+    "req_id": "r2",
+    "decision": "MET",
+    "quote": "As a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights.",
+    "line": "Met: the CV mentions hands-on experience with SQL."
+   },
+   {
+    "req_id": "r3",
+    "decision": "MET",
+    "quote": "As a Data Engineer at Space International, I am responsible for leveraging my expertise in SQL, Python, and other relevant tools to manage and transform banking data into valuable insights.",
+    "line": "Met: the CV mentions expertise in Python."
+   },
+   {
+    "req_id": "r4",
+    "decision": "MISSING",
+    "quote": "",
+    "line": "Missing: Experience with GCP or another cloud provider is not found in the CV."
+   },
+   {
+    "req_id": "r5",
+    "decision": "MET",
+    "quote": "English level: upper",
+    "line": "Met: the CV states an upper level of spoken English."
+   },
+   {
+    "req_id": "r6",
+    "decision": "UNCERTAIN",
+    "quote": "",
+    "line": "Uncertain: Willingness to research business logic is not clearly stated in the CV."
+   }
+  ],
+  "candidate_letter": "Dear candidate,\n\nThank you for your application for the Data Engineer position. We will not move forward with your application, because your CV does not show these required points: knowledge of the general principles of Data Warehousing and Data Lakes, and experience with GCP or another cloud provider.\n\nThis decision was prepared with an automated system. You have the right to request a human review of this decision (GDPR Art. 22): simply reply to this message.\n\nKind regards",
+  "flags_for_recruiter": [
+   "The Matcher was unsure about willingness to research business logic (r6); please check it."
+  ]
+ },
+ "source": "llm",
+ "latency_s": 8.95,
+ "peak_vram_mib": 3267,
+ "id": "P18",
+ "outcome": "reject",
+ "synthetic_flags": false
+}

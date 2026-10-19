@@ -1,0 +1,16 @@
+Leila Saidi
+Pronouns: she/her
+Position: Data Scientist
+Experience years: 0.5
+English level: upper
+
+I have finished a Machine Learning course at IT-HILLEL. 
+
+Now diving into Deep Learning, especially Hugging Face, PyTorch, OpenAI API
+
+Have experience in creating a pet project for predicting eSports matches, which gives up to 65% accuracy.
+
+Developed an app to help students prepare for their exams using OpenAI API
+
+I also had experience in a distribution company - my task was to organize the names of products in the database.
+Would like to be part of the Data Scientist team, where I can gain experience and knowledge

@@ -1,0 +1,26 @@
+{
+ "item": {
+  "id": "K07_p01_photo",
+  "file": "K07_p01_photo.jpg",
+  "source": "K02.pdf",
+  "pages": [
+   1
+  ],
+  "pair": null,
+  "split": "dev",
+  "condition": "close photo",
+  "job": null
+ },
+ "model": "qwen2.5vl:3b",
+ "prompt": "v0",
+ "pages": [
+  {
+   "text": "This is a resume for a Manager in Information Technology and Building Automation Systems. The resume highlights the candidate's extensive technical knowledge, certifications, and experience in managing network infrastructure and building automation systems. The candidate has received awards and has managed a team of technicians and project coordinators. The resume also mentions the candidate's experience in developing features, fixing product defects, conducting computer diagnostics, and providing technical support. The candidate has also worked on large enterprise and business critical applications, analyzed and created new configurations for packaged software, and performed second-level support for all workstation and server class systems. The candidate has also served as the technical lead for server infrastructure, including development, QA, staging, and production systems. The candidate has also demonstrated technical expertise in installing, upgrading, and troubleshooting networks and related articles, such as video teleconferencing systems, routers, servers, computers, switches, and sound systems. The candidate has also maintained and monitored the server room, the wireless network, and other server infrastructure. The candidate has also set up staff workstations with PCs, Macs, phones, and laptops, and maintained audiovisual equipment, including overhead projectors, laptops, and video conferencing equipment.",
+   "model": "qwen2.5vl:3b",
+   "latency_s": 9.69,
+   "eval_count": 239,
+   "done_reason": "stop",
+   "peak_vram_mib": 4229
+  }
+ ]
+}
