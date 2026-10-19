@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HireSignal Recruiter</title>
+<style>
+:root{--navy:#14213D;--paper:#F6F5F1;--blue:#2E63C9;--ink:#1d2433;--muted:#5d6577;--line:#d9d6cc;
+  --met:#1f7a4d;--miss:#b3361f;--unc:#a86b00;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.45 "Segoe UI",system-ui,-apple-system,Arial,sans-serif}
+header{background:var(--navy);color:#fff;padding:12px 24px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+header h1{margin:0;font-size:20px}
+header a{color:#c9d3ea;font-size:13px}
+header .tag{color:#c9d3ea;font-size:13px;flex:1}
+nav.steps{display:flex;gap:0;max-width:1320px;margin:16px auto 0;padding:0 20px}
+nav.steps button{flex:1;background:#fff;color:var(--navy);border:1px solid var(--line);border-radius:0;padding:10px 6px;font-size:14px;cursor:pointer;text-align:left}
+nav.steps button:first-child{border-radius:8px 0 0 8px}nav.steps button:last-child{border-radius:0 8px 8px 0}
+nav.steps button b{display:inline-block;width:24px;height:24px;line-height:24px;text-align:center;border-radius:12px;background:#e9edf6;margin-right:6px}
+nav.steps button.on{background:var(--navy);color:#fff}nav.steps button.on b{background:var(--blue);color:#fff}
+nav.steps button.ok b{background:var(--met);color:#fff}
+nav.steps button:disabled{cursor:default;opacity:.55}
+main{max-width:1320px;margin:0 auto;padding:16px 20px 60px}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:16px}
+h2{margin:0 0 10px;font-size:16px;color:var(--navy);text-transform:uppercase;letter-spacing:.6px}
+h3{margin:14px 0 8px;font-size:14px;color:var(--navy)}
+label{display:block;font-weight:600;font-size:13px;margin:8px 0 4px;color:var(--navy)}
+textarea{width:100%;min-height:180px;font:13px/1.4 Consolas,monospace;border:1px solid var(--line);border-radius:6px;padding:8px}
+input[type=text],input[type=number],select{font:13px "Segoe UI",system-ui,sans-serif;border:1px solid var(--line);border-radius:5px;padding:5px 6px;width:100%;background:#fff}
+button{background:var(--blue);color:#fff;border:0;border-radius:6px;padding:8px 14px;font-size:14px;cursor:pointer}
+button.ghost{background:#fff;color:var(--blue);border:1px solid var(--blue)}
+button.small{padding:4px 9px;font-size:12px}
+button.danger{background:#fff;color:var(--miss);border:1px solid var(--miss)}
+button:disabled{opacity:.5;cursor:default}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #9db8ee;outline-offset:1px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+.hint{color:var(--muted);font-size:12px}
+.err{color:var(--miss);font-weight:600}
+.ok{color:var(--met);font-weight:600}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hidden{display:none !important}
+/* step 2 table */
+table.edit{width:100%;border-collapse:collapse;font-size:13px}
+table.edit th{text-align:left;color:var(--muted);font-weight:600;border-bottom:2px solid var(--line);padding:6px 4px}
+table.edit td{border-bottom:1px solid #ece9e1;padding:5px 4px;vertical-align:top}
+table.edit td.id{color:var(--muted);white-space:nowrap}
+.kindtog{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.kindtog button{border-radius:0;background:#fff;color:var(--navy);padding:4px 9px;font-size:12px}
+.kindtog button.on{background:var(--navy);color:#fff}
+/* step 3 */
+.cand{display:grid;grid-template-columns:140px 1fr 120px;gap:12px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:8px;background:#fbfbf9}
+.cand .lab{font-weight:700;color:var(--navy)}
+.status{font-size:12px;text-transform:uppercase;letter-spacing:.5px;font-weight:700}
+.status.running{color:var(--blue)}.status.done{color:var(--met)}.status.error{color:var(--miss)}.status.waiting{color:var(--muted)}
+.mini{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
+.mini span{font-size:11px;border-radius:10px;padding:2px 7px;background:#eee;color:var(--muted)}
+.mini span.done{background:#e3f2ea;color:var(--met)}.mini span.running{background:#e3ebfa;color:var(--blue);animation:pulse 1.2s infinite}
+.mini span.error{background:#f8e5e1;color:var(--miss)}
+@keyframes pulse{50%{opacity:.5}}
+.bar{height:8px;background:#e7e5de;border-radius:4px;overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;background:var(--blue);width:0;transition:width .4s}
+.warn{background:#fff6e0;border:1px solid #f0d9a2;border-radius:6px;padding:6px 10px;font-size:13px;margin-top:8px}
+/* step 4 */
+.cols{display:grid;gap:12px}
+.col{border:1px solid var(--line);border-radius:8px;padding:12px;background:#fff;border-top:5px solid #ccc}
+.col.invite{border-top-color:var(--met)}.col.reject{border-top-color:var(--miss)}.col.review{border-top-color:var(--unc)}
+.col .lab{font-size:18px;font-weight:800;color:var(--navy)}
+.badge{display:inline-block;font-size:12px;font-weight:700;border-radius:10px;padding:2px 9px;text-transform:uppercase;color:#fff;background:#999}
+.badge.invite{background:var(--met)}.badge.reject{background:var(--miss)}.badge.review{background:var(--unc)}
+.allmust{display:inline-block;font-size:12px;font-weight:700;border-radius:10px;padding:2px 9px;background:#e3f2ea;color:var(--met);margin-top:6px}
+.facts{font-size:13px;margin-top:6px}
+table.matrix{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+table.matrix th,table.matrix td{border-bottom:1px solid #ece9e1;padding:6px 6px;text-align:left}
+table.matrix th{color:var(--muted);font-weight:600}
+table.matrix td.c{text-align:center;width:120px}
+table.matrix button.cell{background:#fff;border:1px solid var(--line);color:var(--ink);width:44px;height:30px;font-size:16px;padding:0;border-radius:6px}
+table.matrix button.cell.MET{color:var(--met);border-color:#a9d4bd}
+table.matrix button.cell.MISSING{color:var(--miss);border-color:#e8b6ab}
+table.matrix button.cell.UNCERTAIN{color:var(--unc);border-color:#efd39c;background:#fffaf0}
+table.matrix button.cell.sel{outline:3px solid var(--blue)}
+table.matrix tr.sep td{background:#f3f2ed;font-weight:700;color:var(--navy);font-size:12px;text-transform:uppercase;letter-spacing:.5px}
+.pill{font-size:11px;font-weight:700;border-radius:10px;padding:2px 8px;white-space:nowrap}
+.pill.MET{background:#e3f2ea;color:var(--met)}.pill.MISSING{background:#f8e5e1;color:var(--miss)}.pill.UNCERTAIN{background:#fbf0dc;color:var(--unc)}
+.pill.kind{background:#e9edf6;color:var(--navy)}
+.req{border:1px solid var(--line);border-radius:8px;padding:12px;background:#fff;border-top:4px solid #ccc}
+.req.MET{border-top-color:var(--met)}.req.MISSING{border-top-color:var(--miss)}.req.UNCERTAIN{border-top-color:var(--unc)}
+.req .top{display:flex;justify-content:space-between;gap:8px}.req .txt{font-weight:600}
+.q{background:#f6f5f1;border-left:3px solid var(--blue);padding:6px 8px;margin:8px 0;font-size:13px;font-style:italic}
+.conf{display:flex;height:10px;border-radius:5px;overflow:hidden;margin:8px 0 2px;background:#eee}.conf i{display:block;height:100%}
+.legend{font-size:11px;color:var(--muted)}
+.why{font-size:12px;margin:4px 0 0;padding-left:16px}
+.changed{font-size:12px;background:#fff6e0;border-radius:4px;padding:4px 6px;margin-top:6px}
+.eyes li{margin-bottom:4px;font-size:13px}
+.eyes button{background:none;color:var(--blue);padding:0;font-size:13px;text-decoration:underline}
+.drawer{position:fixed;top:0;right:0;width:min(880px,100%);height:100%;background:var(--paper);box-shadow:-6px 0 24px rgba(0,0,0,.18);overflow:auto;padding:16px 20px;z-index:10}
+.drawer .head{display:flex;justify-content:space-between;align-items:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:10px}
+table.kv{border-collapse:collapse;font-size:13px}table.kv td{padding:3px 10px 3px 0;vertical-align:top}table.kv td:first-child{color:var(--muted)}
+pre.letter{white-space:pre-wrap;font:13px/1.5 "Segoe UI",system-ui,sans-serif;background:#f6f5f1;border-radius:6px;padding:10px;margin:0}
+.decide{border-top:1px dashed var(--line);margin-top:10px;padding-top:10px}
+.decide textarea{min-height:150px;font:13px/1.5 "Segoe UI",system-ui,sans-serif}
+.who{background:#eef3fc;border-radius:6px;padding:8px 10px;margin-top:8px;font-size:13px}
+details summary{cursor:pointer;color:var(--navy);font-weight:600;margin:10px 0}
+.tl{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px}
+.tl div{border:1px solid var(--line);border-left:4px solid var(--met);border-radius:6px;padding:6px 8px;font-size:12px;background:#fff}
+.tl div b{display:block;color:var(--navy)}
+.tl div.skipped{border-left-color:#c9c9c9;opacity:.75}
+@media (max-width:900px){.two{grid-template-columns:1fr}.cand{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><h1>HireSignal · Recruiter</h1>
+  <span class="tag">One job, up to 3 candidates, the same requirements for each, evidence side by side. You decide.</span>
+  <a href="/ui/">Single-CV demo page →</a></header>
+<nav class="steps" aria-label="Steps">
+  <button data-step="1" class="on"><b>1</b>Job</button>
+  <button data-step="2" disabled><b>2</b>Requirements</button>
+  <button data-step="3" disabled><b>3</b>Candidates</button>
+  <button data-step="4" disabled><b>4</b>Compare &amp; decide</button>
+</nav>
+<main>
+
+<!-- STEP 1 -->
+<section id="s1">
+  <h2>1. Job</h2>
+  <div class="two">
+    <div>
+      <label for="job">Job text (paste, or choose a .txt file)</label>
+      <textarea id="job" placeholder="Paste the job offer here"></textarea>
+      <input type="file" id="jobFile" accept=".txt,.text,.md" aria-label="Job text file (.txt)">
+      <div class="row"><button id="extract">Extract requirements</button><span id="s1msg" role="status"></span></div>
+      <p class="hint">The Job Agent (station <code>/job</code>, prompt v2) reads the text once and proposes a requirement card. You confirm it in step 2.</p>
+    </div>
+    <div>
+      <label for="cardFile">Or load an existing requirement card (.json)</label>
+      <input type="file" id="cardFile" accept=".json">
+      <p class="hint">Skips the extraction. The demo cards are in <code>demo/</code>.</p>
+      <label>Demo job</label>
+      <div class="row" style="margin-top:2px"><button class="ghost" id="demoJob">Load the demo job J4 (Python backend) + its card</button></div>
+      <p class="hint">Job text and .txt only: the Reader keeps document text private and does not return it, so PDF/DOCX job files are not accepted here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2 -->
+<section id="s2" class="hidden">
+  <h2>2. Confirm the requirements</h2>
+  <p class="hint">Every candidate is checked against exactly this list. Edit texts, switch must / nice, set minimum years and skill terms. Select rows and press <b>Merge</b> to turn "Pyro / PyMC3 / JAGS or similar" back into one requirement.</p>
+  <div class="row"><label style="margin:0" for="title">Job title</label><input type="text" id="title" style="max-width:420px"></div>
+  <table class="edit" id="tbl" aria-label="Requirement card"></table>
+  <div class="row">
+    <button class="ghost" id="addRow">+ Add a requirement</button>
+    <button class="ghost" id="merge">Merge selected</button>
+    <button class="danger" id="delSel">Delete selected</button>
+    <span style="flex:1"></span>
+    <button class="ghost" id="dlCard">Download card</button>
+    <button id="confirm">Confirm requirements</button>
+  </div>
+  <div id="s2msg" role="status" style="margin-top:8px"></div>
+</section>
+
+<!-- STEP 3 -->
+<section id="s3" class="hidden">
+  <h2>3. Candidates (1 to 3)</h2>
+  <label for="cvs">CV files: PDF, DOCX, JPG, PNG or TXT</label>
+  <input type="file" id="cvs" multiple accept=".pdf,.docx,.jpg,.jpeg,.png,.txt">
+  <div class="row"><button class="ghost" id="demoCvs">Load 3 demo CVs for the J4 job (dataset, public)</button></div>
+  <p class="hint">Candidates are shown as A, B, C in upload order. File names are not shown (they can contain names).</p>
+  <div id="candList"></div>
+  <div class="row"><button id="runBatch" disabled>Run the 3 checks one after another</button><span id="s3msg" role="status"></span></div>
+  <div class="bar" aria-hidden="true"><i id="overall"></i></div>
+</section>
+
+<!-- STEP 4 -->
+<section id="s4" class="hidden">
+  <h2>4. Compare &amp; decide</h2>
+  <p class="hint">Columns: invite, then review, then reject, then upload order. There is no ranking and no score here: the system checks each requirement and shows the evidence; <b>you decide</b>.</p>
+  <div class="cols" id="cols"></div>
+  <h3>Evidence matrix</h3>
+  <p class="hint">✓ met · ✗ missing · ? unclear. Click a cell to see the CV quote, the confidence and the Judge.</p>
+  <div style="overflow-x:auto"><table class="matrix" id="matrix"></table></div>
+  <div id="cellDetail" style="margin-top:10px"></div>
+  <h3>Needs your eyes</h3>
+  <ul class="eyes" id="eyes"></ul>
+</section>
+</main>
+
+<div class="drawer hidden" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+  <div class="head"><h2 id="drawerTitle">Candidate</h2><button class="ghost" id="closeDrawer">Close</button></div>
+  <div id="drawerBody"></div>
+</div>
+
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const REASONS = {
+  "evidence_not_in_cv":"the model gave no exact quote from the CV","evidence_too_short":"the quote is too short to prove anything",
+  "match:low_confidence":"the Matcher was unsure","judge:disagrees":"the Judge says the quote does not support the decision",
+  "judge:uncertain":"the Judge could not confirm the quote","contradiction_refuted_by_evidence":"the model said missing, but its own quote shows the skill",
+  "contradiction_without_evidence":"the model's answer contradicts itself and has no quote","years_below_minimum_in_evidence":"the quoted years are below the minimum asked",
+  "model_output_truncated":"the model's answer was cut off","inconsistent_decision_basis":"the decision and its reason do not agree",
+  "bias:swap_flip":"the decision changed when the identity was swapped","reader:low_confidence_or_little_text":"the file had little readable text",
+  "reader:non_english_text":"the CV is not in English","reader:many_unclear_parts":"the vision model marked many parts as unclear",
+  "reader:many_low_trust_lines":"many lines were read by only one engine","reader:vision_output_truncated":"the vision model's answer was cut off",
+  "profile:possible_prompt_injection":"the CV contains instructions to the AI (removed, a person reviews)",
+  "profile:partial_extraction_requires_review":"the profile was only partly read","report:template_fallback":"the AI report failed the fact check; the checked template was used"};
+const plain = r => { for (const k in REASONS) if (r === k || r.startsWith(k)) return REASONS[k]; return r; };
+const SYM = {MET:"✓", MISSING:"✗", UNCERTAIN:"?"};
+const STAGE_NAMES = {reader:"Reader", profile:"Profile", job:"Job", rag:"RAG", match:"Matcher", judge:"Judge", bias:"Bias", outcome:"Gate", report:"Report"};
+let reqs = [], card = null, files = [], batch = null, results = {}, step = 1, pollT = null, selCell = null, decisions = {};
+
+/* ---------- stepper ---------- */
+function go(n){
+  step = n;
+  [1,2,3,4].forEach(i => $("s" + i).classList.toggle("hidden", i !== n));
+  document.querySelectorAll("nav.steps button").forEach(b => {
+    const i = +b.dataset.step;
+    b.classList.toggle("on", i === n);
+    b.classList.toggle("ok", i < n);
+  });
+}
+function unlock(n){ document.querySelector(`nav.steps button[data-step="${n}"]`).disabled = false; }
+document.querySelectorAll("nav.steps button").forEach(b => b.onclick = () => go(+b.dataset.step));
+
+/* ---------- step 1 ---------- */
+$("jobFile").onchange = async e => { const f = e.target.files[0]; if (f) $("job").value = await f.text(); };
+$("extract").onclick = async () => {
+  const text = $("job").value.trim();
+  if (!text) { $("s1msg").innerHTML = '<span class="err">Paste the job text or choose a .txt file.</span>'; return; }
+  $("extract").disabled = true; $("s1msg").textContent = "The Job Agent is reading the job (about 20 s)…";
+  try {
+    const r = await fetch("/job", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({job_text:text})});
+    const b = await r.json();
+    if (!r.ok) throw new Error(typeof b.detail === "string" ? b.detail : JSON.stringify(b.detail));
+    loadCard({title:b.card.title, job_id:b.card.job_id, requirements:b.card.requirements});
+    $("s1msg").innerHTML = `<span class="ok">${b.card.requirements.length} requirements proposed.</span>`;
+  } catch(e){ $("s1msg").innerHTML = `<span class="err">${esc(e.message)}</span>`; }
+  finally { $("extract").disabled = false; }
+};
+$("cardFile").onchange = async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try { loadCard(JSON.parse(await f.text())); } catch(err){ $("s1msg").innerHTML = `<span class="err">Not a card: ${esc(err.message)}</span>`; }
+};
+$("demoJob").onclick = async () => {
+  $("job").value = await (await fetch("/demo/invite_P50_job_J4.txt")).text();
+  loadCard(await (await fetch("/demo/invite_P50_requirements_J4.json")).json());
+};
+function loadCard(c){
+  reqs = (c.requirements || []).map((r, i) => ({req_id:r.req_id || `r${i+1}`, text:r.text || "", kind:r.kind || "must",
+    category:r.category || "skill", min_years:r.min_years ?? "", skill_terms:(r.skill_terms || []).slice(), evidence:r.evidence || r.text || "", sel:false}));
+  $("title").value = c.title || "";
+  card = null; unlock(2); drawTable(); go(2);
+}
+
+/* ---------- step 2 ---------- */
+const CATS = ["skill","experience","education","certification","language","other"];
+function drawTable(){
+  $("tbl").innerHTML = `<tr><th></th><th>id</th><th style="width:44%">Requirement</th><th>Must / nice</th><th>Category</th><th style="width:80px">Min years</th><th style="width:22%">Skill terms (comma)</th><th></th></tr>` +
+    reqs.map((r, i) => `<tr>
+      <td><input type="checkbox" aria-label="select ${esc(r.req_id)}" data-i="${i}" class="sel" ${r.sel ? "checked" : ""}></td>
+      <td class="id">${esc(r.req_id)}</td>
+      <td><input type="text" data-i="${i}" data-k="text" value="${esc(r.text)}" aria-label="text of ${esc(r.req_id)}"></td>
+      <td><span class="kindtog" role="group" aria-label="must or nice"><button class="${r.kind === "must" ? "on" : ""}" data-i="${i}" data-kind="must">must</button><button class="${r.kind === "nice" ? "on" : ""}" data-i="${i}" data-kind="nice">nice</button></span></td>
+      <td><select data-i="${i}" data-k="category" aria-label="category">${CATS.map(c => `<option ${c === r.category ? "selected" : ""}>${c}</option>`).join("")}</select></td>
+      <td><input type="number" min="0" step="0.5" data-i="${i}" data-k="min_years" value="${esc(r.min_years)}" aria-label="minimum years"></td>
+      <td><input type="text" data-i="${i}" data-k="terms" value="${esc(r.skill_terms.join(", "))}" aria-label="skill terms"></td>
+      <td><button class="danger small" data-del="${i}" aria-label="delete ${esc(r.req_id)}">✕</button></td></tr>`).join("");
+  $("tbl").querySelectorAll("input[data-k],select[data-k]").forEach(el => el.oninput = () => {
+    const r = reqs[+el.dataset.i], k = el.dataset.k;
+    if (k === "terms") r.skill_terms = el.value.split(",").map(s => s.trim()).filter(Boolean); else r[k] = el.value;
+    card = null;
+  });
+  $("tbl").querySelectorAll(".sel").forEach(el => el.onchange = () => reqs[+el.dataset.i].sel = el.checked);
+  $("tbl").querySelectorAll("[data-kind]").forEach(b => b.onclick = () => { reqs[+b.dataset.i].kind = b.dataset.kind; card = null; drawTable(); });
+  $("tbl").querySelectorAll("[data-del]").forEach(b => b.onclick = () => { reqs.splice(+b.dataset.del, 1); card = null; drawTable(); });
+}
+function nextId(){ let n = 1; while (reqs.some(r => r.req_id === `r${n}`)) n++; return `r${n}`; }
+$("addRow").onclick = () => { reqs.push({req_id:nextId(), text:"", kind:"must", category:"skill", min_years:"", skill_terms:[], evidence:"", sel:false}); drawTable(); };
+$("delSel").onclick = () => { reqs = reqs.filter(r => !r.sel); card = null; drawTable(); };
+$("merge").onclick = async () => {
+  const ids = reqs.filter(r => r.sel).map(r => r.req_id);
+  const r = await fetch("/ui/card/merge", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({requirements:reqs, ids})});
+  const b = await r.json();
+  if (!r.ok) { $("s2msg").innerHTML = `<span class="err">${esc(b.detail)}</span>`; return; }
+  reqs = b.requirements.map(x => ({...x, sel:false, min_years: x.min_years ?? ""})); card = null; drawTable();
+  $("s2msg").innerHTML = `<span class="ok">Merged ${ids.length} rows into ${esc(ids[0])}.</span>`;
+};
+function cardBody(){ return {job_id:"job-recruiter", title:$("title").value, requirements:reqs.map(({sel, ...r}) => ({...r, min_years: r.min_years === "" ? null : Number(r.min_years)}))}; }
+$("confirm").onclick = async () => {
+  const r = await fetch("/ui/card/validate", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(cardBody())});
+  const b = await r.json();
+  if (!r.ok) { card = null; $("s2msg").innerHTML = `<div class="err">Please fix:</div><ul class="why">${((b.detail || {}).errors || [String(b.detail)]).map(e => `<li>${esc(e)}</li>`).join("")}</ul>`; return; }
+  card = b;
+  const must = b.requirements.filter(x => x.kind === "must").length;
+  $("s2msg").innerHTML = `<span class="ok">Confirmed: ${b.requirements.length} requirements (${must} must, ${b.requirements.length - must} nice), confirmed_by "recruiter (UI)".</span>`;
+  unlock(3); go(3);
+};
+$("dlCard").onclick = () => { const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(card || cardBody(), null, 1)], {type:"application/json"})); a.download = "requirements_card.json"; a.click(); };
+
+/* ---------- step 3 ---------- */
+$("cvs").onchange = e => setFiles([...e.target.files]);
+$("demoCvs").onclick = async () => {
+  const names = ["invite_P50_cv.pdf", "recruiter_P32_cv.txt", "recruiter_P35_cv.txt"];  // three J4 candidates (Djinni, MIT)
+  const out = [];
+  for (const n of names) { const r = await fetch("/demo/" + n); if (r.ok) out.push(new File([await r.blob()], n)); }
+  setFiles(out);
+};
+function setFiles(list){
+  if (list.length > 3) { $("s3msg").innerHTML = '<span class="err">At most 3 CVs. Only the first 3 are kept.</span>'; list = list.slice(0, 3); }
+  else $("s3msg").textContent = "";
+  files = list; drawCands(null); $("runBatch").disabled = !files.length || !card;
+}
+const isImg = f => /\.(jpe?g|png)$/i.test(f.name);
+function drawCands(st){
+  const rows = files.length ? files : (st ? st.candidates : []);
+  $("candList").innerHTML = rows.map((f, i) => {
+    const c = st ? st.candidates[i] : null, s = c ? c.status : "waiting";
+    const live = c && s === "running" && st.progress ? `<div class="mini">${Object.entries(STAGE_NAMES).map(([k, n]) => {
+        const d = (st.progress.stages || {})[k]; const cls = d ? d.status : "";
+        const cnt = d && ["rag","match","judge"].includes(k) && st.progress.total_requirements ? ` ${d.done}/${st.progress.total_requirements}` : "";
+        return `<span class="${cls}">${n}${cnt}</span>`; }).join("")}</div>` : "";
+    const fact = c && c.facts ? `must-haves met ${c.facts.must_met} of ${c.facts.must_total}` : "";
+    const img = (f.name ? isImg(f) : c && c.is_image) ? '<div class="warn">Photo or scan: about 3 minutes for this candidate.</div>' : "";
+    return `<div class="cand"><div class="lab">Candidate ${"ABC"[i]}</div>
+      <div>${c && c.status === "done" ? `outcome <b>${esc(c.outcome)}</b> · ${fact}` : c && c.status === "error" ? `<span class="err">${esc(c.error)}</span>` : (f.name ? "ready" : "")}${live}${img}</div>
+      <div class="status ${s}">${s}${c && c.elapsed_s ? ` · ${c.elapsed_s} s` : ""}</div></div>`;
+  }).join("") || '<p class="hint">No CV yet.</p>';
+}
+$("runBatch").onclick = async () => {
+  if (!card) { $("s3msg").innerHTML = '<span class="err">Confirm the requirements first (step 2).</span>'; return; }
+  const fd = new FormData();
+  files.forEach(f => fd.append("cvs", f, f.name));
+  fd.append("card", JSON.stringify(card));
+  fd.append("job_text", $("job").value || card.title || "job");
+  $("runBatch").disabled = true;
+  const r = await fetch("/ui/batch", {method:"POST", body:fd});
+  const b = await r.json();
+  if (!r.ok) { $("s3msg").innerHTML = `<span class="err">${esc(b.detail)}</span>`; $("runBatch").disabled = false; return; }
+  batch = b; files = []; poll();
+};
+async function poll(){
+  clearTimeout(pollT);
+  const st = await (await fetch("/ui/batch/status")).json();
+  if (!st.batch_id) return;
+  batch = st; drawCands(st);
+  $("overall").style.width = `${100 * (st.done + (st.state === "running" ? 0.5 : 0)) / Math.max(1, st.total)}%`;
+  $("s3msg").textContent = st.state === "running" ? `Running: ${st.done} of ${st.total} done.` : st.state === "done" ? "All checks done." : "";
+  if (st.state === "running") { pollT = setTimeout(poll, 1000); return; }
+  await loadResults(); unlock(4); go(4); drawCompare();
+}
+async function loadResults(){
+  results = {};
+  for (const c of batch.candidates) if (c.status === "done") results[c.label] = await (await fetch(`/ui/batch/${batch.batch_id}/result/${c.label}`)).json();
+  if (!card && batch.card) card = batch.card;
+}
+
+/* ---------- step 4 ---------- */
+function drawCompare(){
+  const order = batch.order.filter(l => results[l]);
+  $("cols").style.gridTemplateColumns = `repeat(${Math.max(1, order.length)}, 1fr)`;
+  $("cols").innerHTML = order.map(l => {
+    const r = results[l], c = batch.candidates.find(x => x.label === l), f = c.facts || {};
+    return `<div class="col ${r.outcome}"><div class="lab">Candidate ${l}</div>
+      <div style="margin-top:4px"><span class="badge ${r.outcome}">${esc(r.outcome)}</span>
+      <span class="hint">${r.outcome === "review" ? "needs the recruiter" : "decided by: gate"}</span></div>
+      <div class="facts">Must-haves met <b>${f.must_met} of ${f.must_total}</b> · unclear <b>${f.must_unclear}</b> · nice-to-haves met <b>${f.nice_met} of ${f.nice_total}</b></div>
+      ${f.all_must_met ? '<span class="allmust">All must-haves met</span>' : ""}
+      <div class="row"><button class="ghost small" data-detail="${l}">Details</button></div>
+      <div class="decide" id="dec-${l}">${decideBox(l)}</div></div>`;
+  }).join("") + batch.candidates.filter(c => c.status === "error").map(c => `<div class="col"><div class="lab">Candidate ${c.label}</div><p class="err">${esc(c.error)}</p></div>`).join("");
+  document.querySelectorAll("[data-detail]").forEach(b => b.onclick = () => openDrawer(b.dataset.detail));
+  wireDecide();
+  // matrix: requirements of the confirmed card (must first, card order)
+  const base = (card && card.requirements) || (results[order[0]] || {}).requirements || [];
+  const rows = [...base.filter(r => r.kind === "must"), ...base.filter(r => r.kind !== "must")];
+  let html = `<tr><th>Requirement</th>${order.map(l => `<th class="c" style="text-align:center">Candidate ${l}</th>`).join("")}</tr>`, kind = null;
+  rows.forEach(q => {
+    if (q.kind !== kind) { kind = q.kind; html += `<tr class="sep"><td colspan="${order.length + 1}">${kind === "must" ? "Must-haves" : "Nice-to-haves"}</td></tr>`; }
+    html += `<tr><td>${esc(q.req_id)} · ${esc(q.text)}</td>${order.map(l => {
+      const x = (results[l].requirements || []).find(y => y.req_id === q.req_id);
+      if (!x) return '<td class="c">–</td>';
+      return `<td class="c"><button class="cell ${x.decision}" data-cell="${l}|${q.req_id}" aria-label="Candidate ${l}, ${esc(q.req_id)}: ${x.decision}">${SYM[x.decision]}</button></td>`; }).join("")}</tr>`;
+  });
+  $("matrix").innerHTML = html;
+  $("matrix").querySelectorAll("[data-cell]").forEach(b => b.onclick = () => showCell(b.dataset.cell));
+  // needs your eyes
+  const eyes = [];
+  order.forEach(l => {
+    const r = results[l];
+    (r.requirements || []).forEach(x => { if (x.decision === "UNCERTAIN") eyes.push([l, x.req_id, `${x.req_id} is unclear` + ((x.review_reasons || []).length ? `: ${(x.review_reasons || []).map(plain).join("; ")}` : "")]); });
+    (r.requirements || []).forEach(x => { if (x.decision !== "UNCERTAIN" && (x.review_reasons || []).length) eyes.push([l, x.req_id, `${x.req_id} (${x.decision}): ${(x.review_reasons || []).map(plain).join("; ")}`]); });
+    ((r.report || {}).flags_for_recruiter || []).forEach(f => eyes.push([l, null, f]));
+    ((r.reader || {}).review_reasons || []).forEach(f => eyes.push([l, null, "Reader: " + plain(f)]));
+    ((r.bias || {}).review_reasons || []).forEach(f => eyes.push([l, null, "Bias Auditor: " + plain(f)]));
+    if (r.outcome === "review") eyes.push([l, null, "the gate sends this candidate to you (review)"]);
+  });
+  $("eyes").innerHTML = eyes.map(([l, rid, t]) => `<li><b>Candidate ${l}</b>: ${rid ? `<button data-cell="${l}|${rid}">${esc(t)}</button>` : esc(t)}</li>`).join("") || "<li>Nothing flagged.</li>";
+  $("eyes").querySelectorAll("[data-cell]").forEach(b => b.onclick = () => showCell(b.dataset.cell));
+}
+function showCell(key){
+  const [l, rid] = key.split("|"), x = (results[l].requirements || []).find(y => y.req_id === rid);
+  document.querySelectorAll("button.cell").forEach(b => b.classList.toggle("sel", b.dataset.cell === key));
+  $("cellDetail").innerHTML = `<div class="hint">Candidate ${l}</div>` + reqCard(x, results[l]);
+  $("cellDetail").scrollIntoView({block:"nearest"});
+}
+function reqCard(r, res){
+  const c = r.confidence || {}, pct = k => Math.round(100 * (c[k] || 0));
+  const conf = r.confidence ? `<div class="conf"><i style="width:${pct("MET")}%;background:var(--met)"></i><i style="width:${pct("MISSING")}%;background:var(--miss)"></i><i style="width:${pct("UNCERTAIN")}%;background:var(--unc)"></i></div>
+     <div class="legend">Matcher confidence: met ${pct("MET")}% · missing ${pct("MISSING")}% · uncertain ${pct("UNCERTAIN")}%</div>` : "";
+  const quotes = (r.quotes || []).map(q => `<div class="q">“${esc(q.quote ?? q)}”</div>`).join("") || '<div class="hint" style="margin-top:6px">No CV quote.</div>';
+  const changed = r.model_decision && r.model_decision !== r.decision ? `<div class="changed">Model said <b>${r.model_decision}</b> → changed to <b>${r.decision}</b> by ${(r.review_reasons || []).includes("match:low_confidence") ? "the confidence check" : "the quote check"}.</div>` : "";
+  const j = (r.judge || {}).verdict, gate = (res && res.gate_settings) || {};
+  const listed = r.decision === "MET" && j === "FAIL" && (r.kind === "nice" || (c.MET || 0) >= (gate.judge_met_max_conf || 0.999)) ?
+     `<div class="legend">The Judge's doubt is only listed: ${r.kind === "nice" ? "a nice-to-have never blocks" : "the Matcher was at least 99.9% sure"} (gate rule).</div>` : "";
+  const why = (r.review_reasons || []).length ? `<ul class="why">${r.review_reasons.map(x => `<li>${esc(plain(x))}</li>`).join("")}</ul>` : "";
+  return `<div class="req ${r.decision}"><div class="top"><div class="txt">${esc(r.req_id)} · ${esc(r.text)}</div>
+     <div><span class="pill kind">${esc(r.kind)}</span> <span class="pill ${r.decision}">${r.decision}</span></div></div>
+     ${quotes}${conf}<div class="legend" style="margin-top:4px">Judge: <b>${esc(j || "-")}</b></div>${listed}${changed}${why}</div>`;
+}
+function openDrawer(l){
+  const r = results[l], t = r.timings_s || {}, sw = (r.bias || {}).swap || {}, rd = r.reader || {};
+  $("drawerTitle").textContent = `Candidate ${l}`;
+  const tl = [["Reader", `${rd.file_type || "?"}, route ${[...new Set(rd.read_path || [])].join(", ") || "-"}`, t.reader],
+    ["Profile Agent", "identity hidden and stored apart", t.profile],
+    ["Job Agent", t.job != null ? "read the job" : "skipped: the recruiter's card was used", t.job],
+    ["RAG + Matcher + Judge", `${(r.requirements || []).length} requirements checked`, t.match_and_judge],
+    ["Bias Auditor", sw.ran ? `swap ${sw.counterfactual}, identical input: ${sw.identical_matcher_input ? "yes" : "no"}` : `skipped (${sw.skipped || "not run"})`],
+    ["Outcome gate", `${r.outcome} (${r.rule})`], ["Report Writer", `${(r.report || {}).source === "llm" ? "AI" : "template"} letter`]];
+  $("drawerBody").innerHTML = `
+    <p><span class="badge ${r.outcome}">${esc(r.outcome)}</span> <span class="hint">gate score ${esc(r.score)} / 100 (the gate's own threshold value; not a ranking)</span></p>
+    <details><summary>How it was decided</summary><div class="tl">${tl.map(([a, b, s]) => `<div class="${String(b).startsWith("skipped") ? "skipped" : ""}"><b>${a}</b>${esc(b)}${s != null ? ` · ${Number(s).toFixed(1)} s` : ""}</div>`).join("")}</div></details>
+    <h3>Requirements</h3><div class="cards">${(r.requirements || []).map(x => reqCard(x, r)).join("")}</div>
+    <div class="two" style="margin-top:12px"><div><h3>Fairness</h3><table class="kv">
+      <tr><td>Protected lines removed</td><td>${((r.bias || {}).bias_flags || []).length}</td></tr>
+      <tr><td>Swap test</td><td>${sw.ran ? `ran (${esc(sw.counterfactual)})` : `skipped (${esc(sw.skipped || "not run")})`}</td></tr>
+      ${sw.ran ? `<tr><td>Identical Matcher input</td><td>${sw.identical_matcher_input ? "yes" : "no"}</td></tr>` : ""}</table></div>
+    <div><h3>Reader</h3><table class="kv"><tr><td>File type</td><td>${esc(rd.file_type)}</td></tr><tr><td>Route</td><td>${esc([...new Set(rd.read_path || [])].join(", "))}</td></tr>
+      <tr><td>OCR confidence</td><td>${rd.ocr_confidence ?? "-"}</td></tr></table></div></div>
+    <h3>Recruiter summary</h3><pre class="letter">${esc((r.report || {}).recruiter_summary || "-")}</pre>`;
+  $("drawer").classList.remove("hidden"); $("closeDrawer").focus();
+}
+$("closeDrawer").onclick = () => $("drawer").classList.add("hidden");
+document.addEventListener("keydown", e => { if (e.key === "Escape") $("drawer").classList.add("hidden"); });
+
+/* ---------- step 5: decision, letter, approve, identity ---------- */
+function decideBox(l){
+  const d = decisions[l] || {}, r = results[l];
+  const btn = v => `<button class="${d.choice === v ? "" : "ghost"} small" data-choose="${l}|${v}">${v[0].toUpperCase() + v.slice(1)}</button>`;
+  let body = "";
+  if (d.loading) body = '<p class="hint">Preparing the letter…</p>';
+  else if (d.letter && d.letter.needs_form) body = `<p class="hint">${esc(d.letter.how)}</p><div class="row">
+      ${d.letter.review_form_url ? `<button class="small" data-form="${esc(d.letter.review_form_url)}">Open recruiter form</button>` : ""}
+      <button class="ghost small" data-choose="${l}|${d.choice}">Load the letter after the form</button></div>`;
+  else if (d.letter && d.choice === "hold") body = `<p class="hint">${esc(d.letter.how)}</p>${d.approved ? '<p class="ok">Hold recorded in the audit log.</p>' : `<button class="small" data-approve="${l}">Approve hold</button>`}`;
+  else if (d.letter && !d.letter.letter) body = `<p class="hint">${esc(d.letter.how)}</p>`;
+  else if (d.letter) body = `${d.letter.override ? `<div class="warn">Override: ${esc(d.letter.override)}.</div>` : ""}
+      <p class="hint">${esc(d.letter.how)}${d.letter.source ? ` · ${d.letter.source === "llm" ? "AI, fact-checked" : "checked template"}` : ""}. Edit if needed, then approve. Nothing is sent automatically.</p>
+      <label for="let-${l}">Letter preview</label><textarea id="let-${l}" ${d.approved ? "readonly" : ""}>${esc(d.text ?? d.letter.letter)}</textarea>
+      ${d.approved ? `<p class="ok">Approved → ${esc(d.approved.letter_file)}</p>
+        ${d.who ? `<div class="who">${d.who.found ? `<b>${esc(d.who.name || "(no name)")}</b> · ${esc(d.who.email || "(no e-mail)")}` : esc(d.who.note)}
+          ${d.who.email ? `<div class="row"><a href="${mailto(d.who, l)}"><button class="small">Open in my mail app</button></a></div>` : ""}</div>`
+          : `<button class="ghost small" data-reveal="${l}">Reveal identity (local only)</button>`}`
+        : `<div class="row"><button class="small" data-approve="${l}">Approve</button></div>`}`;
+  return `<div class="hint">Your decision${r.outcome === "review" ? " (the gate asks you)" : ` (gate: ${r.outcome})`}</div>
+    <div class="row" style="margin-top:4px">${btn("invite")}${btn("reject")}${btn("hold")}</div>${body}`;
+}
+function mailto(who, l){
+  const d = decisions[l], subject = encodeURIComponent(`Your application: ${(results[l] || {}).job_title || "our position"}`);
+  return `mailto:${encodeURIComponent(who.email)}?subject=${subject}&body=${encodeURIComponent(d.text ?? d.letter.letter)}`;
+}
+function redraw(l){ $("dec-" + l).innerHTML = decideBox(l); wireDecide(); }
+function wireDecide(){
+  document.querySelectorAll("[data-choose]").forEach(b => b.onclick = async () => {
+    const [l, v] = b.dataset.choose.split("|");
+    decisions[l] = {choice:v, loading:true}; redraw(l);
+    const r = await fetch("/ui/letter", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({batch_id:batch.batch_id, label:l, decision:v})});
+    const body = await r.json();
+    decisions[l] = {choice:v, letter: r.ok ? body : {how: body.detail || "error", letter:""}}; redraw(l);
+  });
+  document.querySelectorAll("textarea[id^=let-]").forEach(t => t.oninput = () => decisions[t.id.slice(4)].text = t.value);
+  document.querySelectorAll("[data-form]").forEach(b => b.onclick = () => window.open(b.dataset.form, "_blank"));
+  document.querySelectorAll("[data-approve]").forEach(b => b.onclick = async () => {
+    const l = b.dataset.approve, d = decisions[l];
+    const r = await fetch("/ui/approve", {method:"POST", headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({batch_id:batch.batch_id, label:l, decision:d.choice, letter: d.choice === "hold" ? "" : (d.text ?? d.letter.letter)})});
+    const body = await r.json();
+    if (r.ok) d.approved = body; else d.letter = {...d.letter, how: body.detail};
+    redraw(l);
+  });
+  document.querySelectorAll("[data-reveal]").forEach(b => b.onclick = async () => {
+    const l = b.dataset.reveal;
+    const r = await fetch("/ui/identity", {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify({batch_id:batch.batch_id, label:l})});
+    const body = await r.json();
+    decisions[l].who = r.ok ? body : {found:false, note: body.detail}; redraw(l);
+  });
+}
+
+/* ---------- start: re-attach to a running or finished batch (page reload) ---------- */
+(async () => {
+  drawCands(null);
+  const st = await (await fetch("/ui/batch/status")).json();
+  if (st.batch_id && st.state === "running") { unlock(3); go(3); poll(); }
+  else if (st.batch_id && new URLSearchParams(location.search).get("last")) {
+    batch = st; await loadResults(); [2,3,4].forEach(unlock); go(4); drawCompare();
+    const q = new URLSearchParams(location.search);
+    if (q.get("cell")) showCell(q.get("cell"));
+    if (q.get("letter")) document.querySelector(`[data-choose="${q.get("letter")}"]`)?.click();
+  }
+})();
+</script>
+</body>
+</html>

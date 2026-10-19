@@ -147,6 +147,8 @@ def install(app: FastAPI) -> None:
                         media_type=response.media_type)
 
     app.include_router(router)
+    from services import recruiter  # T19: recruiter flow routes (additive), before the static mounts
+    app.include_router(recruiter.router)
     app.mount("/demo", StaticFiles(directory=str(ROOT / "demo")), name="demo")  # public demo samples only
     app.mount("/ui", StaticFiles(directory=str(ROOT / "ui"), html=True), name="ui")
 

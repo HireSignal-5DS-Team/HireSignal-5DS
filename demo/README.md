@@ -66,6 +66,19 @@ For headless screenshots, the page also accepts:
 - `?last=1` (re-open the last run of this API session);
 - `&only=result|reqs` (hide the zones above).
 
+## Recruiter flow (T19)
+
+Open **http://127.0.0.1:8010/ui/recruiter.html** for one job with up to 3 candidates. The steps:
+1. **Job:** press **Load the demo job J4 + its card**.
+2. **Requirements:** confirm the card.
+3. **Candidates:** press **Load 3 demo CVs for the J4 job**, then **Run** (about 3–4 minutes for 3 text CVs).
+4. **Compare & decide:** the evidence matrix, then Invite / Reject / Hold, the letter preview, Approve, and Reveal
+   identity.
+
+The two extra CVs, `recruiter_P32_cv.txt` and `recruiter_P35_cv.txt`, are the gold pairs P32 and P35 of job J4 from the
+Djinni dataset (MIT, anonymised at source). With P50 they give one invite, one review and one reject. There is no
+ranking and no automatic e-mail; `docs/RECRUITER_FLOW.md` explains why.
+
 ## Where to look
 
 - **n8n editor**: http://localhost:5678 → Executions. Every station is a node: Reader → Profile → Job card → RAG lookup

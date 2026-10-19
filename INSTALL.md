@@ -138,6 +138,10 @@ install). Upload a CV + job text (+ optional requirement card), press **Run**, a
 forwards the run to the n8n webhook and adds the token on the server, so the browser never sees it. **Open a saved
 result** shows a `result.json` without running anything (replay, for a slow laptop). See `demo/README.md`.
 
+**Recruiter flow** (T19): **http://127.0.0.1:8010/ui/recruiter.html**, for one job, a confirmed requirement card and
+up to 3 candidates, compared requirement by requirement, with human-approved letters. Results stay in `private/batches/`
+and approved letters plus the audit log in `eval/outbox/` (both git-ignored). See `docs/RECRUITER_FLOW.md`.
+
 ## Not tested from zero in T13
 
 The guide was checked step by step on the development laptop, where the tools were already installed:
