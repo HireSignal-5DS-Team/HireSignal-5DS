@@ -128,7 +128,7 @@ clean decisions are identical in the T13 run, the T14 run and the controls.
 ## 4. Questions for the Brain
 1. The kept `data/raw/scans/` photos show the laptop's taskbar and PDF viewer (no names, no EXIF). Is that fine for a
    team repo, or should they be cropped?
-2. Push target: the task file names `yassinemaazaoui114-git/HireSignal` / `main`, but the Approver's message says
+2. Push target: the task file names personal repo (removed) / `main`, but the Approver's message says
    "the team repo, branch v3-final". I followed the message: `HireSignal-5DS-Team/HireSignal-5DS`, the same remote as
    the V1 / V2 clones, on a new branch `v3-final`.
 

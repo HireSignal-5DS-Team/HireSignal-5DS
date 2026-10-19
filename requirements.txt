@@ -1,6 +1,7 @@
 # HireSignal Python dependencies, frozen from .venv (Python 3.12.10, Windows, RTX 4050) on 2026-10-18.
 # 2026-10-18 (T03): + openpyxl (labelling sheet), pyarrow (Djinni parquet), kaggle (dataset download) and their dependencies.
 # 2026-10-18 (T04): + reportlab (test fixtures: generated CV PDFs, from V2 tests/conftest.py).
+# 2026-10-19 (T18): pyarrow moved to requirements-dataprep.txt (data-prep scripts only; Smart App Control may block it).
 # 2026-10-19 (T14): + matplotlib (scripts/make_figures.py) and its dependencies.
 # Install: py -3.12 -m venv .venv && .venv\Scripts\python -m pip install -r requirements.txt
 # torch/torchvision are CUDA 12.6 wheels from the PyTorch index below (driver 581.86 supports CUDA <= 13.0).
@@ -64,7 +65,6 @@ platformdirs==4.13.4
 pluggy==1.7.0
 portalocker==3.2.0
 protobuf==7.36.2
-pyarrow==26.0.0
 pydantic==2.14.1
 pydantic_core==2.50.1
 Pygments==2.21.0

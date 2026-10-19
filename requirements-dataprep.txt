@@ -1,0 +1,6 @@
+# Data-prep scripts only (T18): the app itself does not need these.
+# Used by scripts/djinni_stats.py (Djinni parquet) and other T03 data-preparation scripts.
+# Install after requirements.txt: .venv\Scripts\python -m pip install -r requirements-dataprep.txt
+# On Windows with Smart App Control on, pyarrow's unsigned DLLs may be blocked (seen in T16); the station API and the
+# tests do not import it.
+pyarrow==26.0.0

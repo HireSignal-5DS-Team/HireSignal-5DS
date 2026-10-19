@@ -48,6 +48,12 @@ def identity_values() -> set[str]:
             d = json.loads(f.read_text(encoding="utf-8"))
         except (ValueError, UnicodeDecodeError):
             continue
+        # T18: only identity-store files (written by /profile: name, emails, phones, urls, addresses, personal).
+        # Reader texts (*.reader.json) and pipeline results kept in private/ (e.g. my_test/result.json) are not
+        # identity values: their generic strings ("r2: must-have MISSING") gave false hits.
+        if not (isinstance(d, dict) and "emails" in d and "name" in d and not f.name.endswith(".reader.json")):
+            continue
+        d = {k: v for k, v in d.items() if k in ("name", "emails", "phones", "urls", "addresses", "personal")}
         stack = [d]
         while stack:
             x = stack.pop()

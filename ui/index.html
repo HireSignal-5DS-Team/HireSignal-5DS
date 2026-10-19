@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HireSignal Demo</title>
+<style>
+:root{--navy:#14213D;--paper:#F6F5F1;--blue:#2E63C9;--ink:#1d2433;--muted:#5d6577;--line:#d9d6cc;
+  --met:#1f7a4d;--miss:#b3361f;--unc:#a86b00;--card:#ffffff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.45 "Segoe UI",system-ui,-apple-system,Arial,sans-serif}
+header{background:var(--navy);color:#fff;padding:14px 24px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}
+header h1{margin:0;font-size:20px;letter-spacing:.3px}
+header span{color:#c9d3ea;font-size:13px}
+main{max-width:1280px;margin:0 auto;padding:18px 20px 60px}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:16px}
+h2{margin:0 0 12px;font-size:16px;color:var(--navy);text-transform:uppercase;letter-spacing:.6px}
+h3{margin:14px 0 8px;font-size:14px;color:var(--navy)}
+label{display:block;font-weight:600;font-size:13px;margin:8px 0 4px;color:var(--navy)}
+textarea{width:100%;min-height:96px;font:13px/1.4 Consolas,monospace;border:1px solid var(--line);border-radius:6px;padding:8px}
+.grid3{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:16px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:12px}
+button{background:var(--blue);color:#fff;border:0;border-radius:6px;padding:9px 16px;font-size:14px;cursor:pointer}
+button.ghost{background:#fff;color:var(--blue);border:1px solid var(--blue)}
+button:disabled{opacity:.5;cursor:default}
+.hint{color:var(--muted);font-size:12px}
+.err{color:var(--miss);font-weight:600}
+/* timeline */
+.chain{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:stretch}
+.box{border:1px solid var(--line);border-left:5px solid #b9bfcc;border-radius:8px;padding:10px 12px;background:#fbfbf9;position:relative;min-height:118px}
+.box .t{font-weight:700;color:var(--navy);font-size:14px}
+.box .what{color:var(--muted);font-size:12px;margin-top:2px}
+.box .st{position:absolute;top:9px;right:10px;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+.box .sum{margin-top:8px;font-size:13px;font-weight:600;min-height:18px;word-break:break-word}
+.box .sec{font-size:12px;color:var(--muted)}
+.box.running{border-left-color:var(--blue);background:#eef3fc;animation:pulse 1.2s ease-in-out infinite}
+.box.done{border-left-color:var(--met)}
+.box.skipped{border-left-color:#c9c9c9;opacity:.75}
+.box.error{border-left-color:var(--miss);background:#fbeeea}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(46,99,201,.35)}50%{box-shadow:0 0 0 7px rgba(46,99,201,0)}}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;grid-column:span 2}
+.pair .tag{grid-column:span 2;font-size:11px;color:var(--muted);text-align:center;margin-bottom:-6px}
+.arrow{font-size:12px;color:var(--muted);margin:6px 0 0}
+.bar{height:6px;background:#e7e5de;border-radius:3px;margin-top:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--blue);width:0}
+.clock{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px}
+/* result */
+.banner{display:flex;gap:18px;align-items:center;flex-wrap:wrap;border-radius:10px;padding:16px 18px;color:#fff;background:var(--navy)}
+.banner .o{font-size:28px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.banner.invite{background:var(--met)}.banner.reject{background:var(--miss)}.banner.review{background:var(--unc)}
+.banner .kv{font-size:14px}.banner .kv b{font-size:18px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.chip{border:1px solid var(--line);border-radius:16px;padding:4px 12px;background:#fff;cursor:pointer;font-size:13px}
+.chip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:12px}
+.req{border:1px solid var(--line);border-radius:8px;padding:12px;background:#fff;border-top:4px solid #ccc}
+.req.MET{border-top-color:var(--met)}.req.MISSING{border-top-color:var(--miss)}.req.UNCERTAIN{border-top-color:var(--unc)}
+.req .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.req .txt{font-weight:600}
+.pill{font-size:11px;font-weight:700;border-radius:10px;padding:2px 8px;white-space:nowrap}
+.pill.MET{background:#e3f2ea;color:var(--met)}.pill.MISSING{background:#f8e5e1;color:var(--miss)}.pill.UNCERTAIN{background:#fbf0dc;color:var(--unc)}
+.pill.kind{background:#e9edf6;color:var(--navy)}
+.q{background:#f6f5f1;border-left:3px solid var(--blue);padding:6px 8px;margin:8px 0;font-size:13px;font-style:italic}
+.conf{display:flex;height:10px;border-radius:5px;overflow:hidden;margin:8px 0 2px;background:#eee}
+.conf i{display:block;height:100%}
+.legend{font-size:11px;color:var(--muted)}
+.why{font-size:12px;color:var(--ink);margin:4px 0 0;padding-left:16px}
+.changed{font-size:12px;background:#fff6e0;border-radius:4px;padding:4px 6px;margin-top:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+pre.letter{white-space:pre-wrap;font:13px/1.5 "Segoe UI",system-ui,sans-serif;background:#f6f5f1;border-radius:6px;padding:10px;margin:0}
+.tbar{display:flex;height:26px;border-radius:6px;overflow:hidden;margin-top:6px}
+.tbar i{display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-style:normal;white-space:nowrap;overflow:hidden}
+table.kv{border-collapse:collapse;font-size:13px}table.kv td{padding:3px 10px 3px 0;vertical-align:top}table.kv td:first-child{color:var(--muted)}
+.hidden{display:none}
+@media (max-width:900px){.grid3,.two,.chain{grid-template-columns:1fr}.pair{grid-column:span 1;grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><h1>HireSignal</h1><span>Watch each agent screen a CV, step by step. Everything runs locally: n8n, our station API and local models.</span></header>
+<main>
+
+<section id="input">
+  <h2>1. Input</h2>
+  <div class="grid3">
+    <div>
+      <label for="cv">CV file (PDF, image, DOCX or TXT)</label>
+      <input type="file" id="cv" accept=".pdf,.png,.jpg,.jpeg,.docx,.txt">
+      <label for="card">Requirement card, optional (.json, confirmed by the recruiter)</label>
+      <input type="file" id="card" accept=".json">
+      <div class="hint" id="cardInfo">Without a card, the Job Agent reads the job text.</div>
+    </div>
+    <div>
+      <label for="job">Job text (paste, or choose a .txt file)</label>
+      <textarea id="job" placeholder="Paste the job offer here"></textarea>
+      <input type="file" id="jobFile" accept=".txt">
+    </div>
+    <div>
+      <label>Demo samples (public, from demo/)</label>
+      <div class="row" style="margin-top:4px">
+        <button class="ghost" data-demo="invite">Load invite sample (P50 + J4)</button>
+        <button class="ghost" data-demo="reject">Load reject sample (P02 + J1)</button>
+      </div>
+      <label for="saved">Open a saved result (replay, no run)</label>
+      <input type="file" id="saved" accept=".json">
+      <div class="hint">Shows a result.json without running the pipeline.</div>
+    </div>
+  </div>
+  <div class="row">
+    <button id="run">Run</button>
+    <span class="clock" id="clock"></span>
+    <span id="msg"></span>
+  </div>
+</section>
+
+<section id="timelineSec">
+  <h2>2. Agent timeline</h2>
+  <div class="chain" id="chain"></div>
+  <p class="hint">The page asks the station API for progress every second. Profile and Job run on separate branches of the n8n workflow.</p>
+</section>
+
+<section id="resultSec" class="hidden">
+  <h2>3. Result</h2>
+  <div class="banner" id="banner"></div>
+  <div class="row" id="resultBtns"></div>
+
+  <h3 id="reqs">Requirements</h3>
+  <div class="chips" id="filters"></div>
+  <div class="cards" id="cards"></div>
+
+  <div class="two" style="margin-top:16px">
+    <div><h3>Fairness (Bias Auditor)</h3><div id="fair"></div></div>
+    <div><h3>Reader</h3><div id="reader"></div></div>
+  </div>
+
+  <h3>Report (Report Writer)</h3>
+  <div id="report"></div>
+
+  <h3>Time per station</h3>
+  <div id="timings"></div>
+</section>
+</main>
+
+<script>
+"use strict";
+const STAGES = [
+  {key:"reader", title:"Reader", what:"Reads the file: the text layer, or OCR plus a vision model for photos and scans."},
+  {pair:[
+    {key:"profile", title:"Profile Agent", what:"Hides the identity (name, contacts, photo) in code, then lists skills, jobs and degrees."},
+    {key:"job", title:"Job Agent", what:"Turns the job offer into a list of must-have and nice-to-have requirements."}]},
+  {key:"rag", title:"RAG lookup", what:"Looks up unknown skill names in ESCO. It explains terms; it is never evidence."},
+  {key:"match", title:"Matcher", what:"For each requirement: MET, MISSING or UNCERTAIN, with an exact quote from the CV."},
+  {key:"judge", title:"Judge", what:"A second model (NLI) checks that each quote really supports the decision."},
+  {key:"bias", title:"Bias Auditor", what:"Swaps the identity (other gender and origin) and checks the decision does not change."},
+  {key:"outcome", title:"Outcome gate", what:"Code rules decide: invite, reject, or send to a person for review."},
+  {key:"report", title:"Report Writer", what:"Writes the recruiter summary and the candidate letter, then a fact checker verifies them."},
+  {key:"final", title:"Outcome", what:"The decision. A review case waits for the recruiter's form in n8n."}];
+const REASONS = {
+  "evidence_not_in_cv":"the model gave no exact quote from the CV",
+  "evidence_too_short":"the quote is too short to prove anything",
+  "match:low_confidence":"the Matcher was unsure",
+  "judge:disagrees":"the Judge says the quote does not support the decision",
+  "judge:uncertain":"the Judge could not confirm the quote",
+  "contradiction_refuted_by_evidence":"the model said missing, but its own quote shows the skill",
+  "contradiction_without_evidence":"the model's answer contradicts itself and has no quote",
+  "years_below_minimum_in_evidence":"the quoted years are below the minimum asked",
+  "model_output_truncated":"the model's answer was cut off",
+  "inconsistent_decision_basis":"the decision and its reason do not agree",
+  "bias:swap_flip":"the decision changed when the identity was swapped",
+  "reader:low_confidence_or_little_text":"the file had little readable text",
+  "reader:non_english_text":"the CV is not in English",
+  "reader:many_unclear_parts":"the vision model marked many parts as unclear",
+  "reader:many_low_trust_lines":"many lines were read by only one engine",
+  "reader:vision_output_truncated":"the vision model's answer was cut off",
+  "profile:possible_prompt_injection":"the CV contains instructions to the AI (removed, a person reviews)",
+  "profile:injection_removed":"instructions to the AI were removed from the CV text",
+  "profile:partial_extraction_requires_review":"the profile was only partly read",
+  "profile:name_not_found":"no name found (already anonymised source)",
+  "profile:identity_leak_left":"identity data may be left in the text",
+  "job_agent:possible_prompt_injection":"the job text contains instructions to the AI",
+  "report:template_fallback":"the AI report failed the fact check; the checked template was used"};
+const plain = r => { for (const k in REASONS) if (r === k || r.startsWith(k)) return REASONS[k]; return r; };
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let polling = null, startT = 0, tick = null, result = null, filter = "ALL", cardFile = null, demoCv = null;
+
+function drawChain(p){
+  p = p || {stages:{}};
+  const st = p.stages || {};
+  const total = p.total_requirements;
+  const box = s => {
+    const d = st[s.key] || {};
+    let state = d.status || "waiting", sum = d.summary || "";
+    if (s.key === "match" && d.done) sum = `${d.req_id || ""}: ${sum.split(": ")[1] || ""} · ${d.done} / ${total ?? "?"}`;
+    if (s.key === "judge" && d.done) sum = `${sum} · ${d.done} / ${total ?? "?"}`;
+    if (s.key === "rag" && d.done) sum = `${sum} · ${d.done} / ${total ?? "?"}`;
+    if (["rag","match","judge"].includes(s.key) && total && d.done < total && !p.finished && state === "done") state = "running";
+    if (s.key === "final") { state = p.finalState || "waiting"; sum = p.finalSum || ""; }
+    if (s.key === "job" && p.card_given && !d.status) { state = "skipped"; sum = "skipped: the recruiter's card is used"; }
+    if (p.finished && state === "waiting" && s.key !== "final") {
+      state = "skipped";
+      sum = s.key === "job" ? "skipped: the recruiter's card was used" : s.key === "bias" ? "skipped: a person reviews anyway" :
+            s.key === "rag" ? "skipped" : "not called";
+    }
+    const bar = (["match","judge","rag"].includes(s.key) && total) ? `<div class="bar"><i style="width:${Math.min(100,100*(d.done||0)/total)}%"></i></div>` : "";
+    const secs = d.elapsed_s != null ? `${d.elapsed_s} s` : "";
+    return `<div class="box ${state}"><div class="st">${state}</div><div class="t">${s.title}</div><div class="what">${s.what}</div>
+      <div class="sum">${esc(sum)}</div><div class="sec">${secs}</div>${bar}</div>`;
+  };
+  $("chain").innerHTML = STAGES.map(s => s.pair ?
+    `<div class="pair"><div class="tag">in parallel</div>${s.pair.map(box).join("")}</div>` : box(s)).join("");
+}
+
+async function poll(){
+  try {
+    const p = await (await fetch("/ui/progress")).json();
+    drawChain(p);
+    return p;
+  } catch(e){ return null; }
+}
+
+function startClock(){ startT = Date.now(); tick = setInterval(() => $("clock").textContent = `running… ${((Date.now()-startT)/1000).toFixed(0)} s`, 500); }
+function stopClock(){ clearInterval(tick); clearInterval(polling); polling = null; }
+
+$("card").onchange = e => { cardFile = e.target.files[0] || null; $("cardInfo").textContent = cardFile ? `Card: ${cardFile.name} (the Job Agent is skipped)` : "Without a card, the Job Agent reads the job text."; };
+$("jobFile").onchange = async e => { const f = e.target.files[0]; if (f) $("job").value = await f.text(); };
+$("cv").onchange = () => { demoCv = null; };
+
+document.querySelectorAll("[data-demo]").forEach(b => b.onclick = async () => {
+  const set = b.dataset.demo === "invite" ? ["invite_P50_cv.pdf","invite_P50_job_J4.txt","invite_P50_requirements_J4.json"]
+                                          : ["reject_P02_cv.pdf","reject_P02_job_J1.txt","reject_P02_requirements_J1.json"];
+  const get = async n => { const r = await fetch("/demo/" + n); if (!r.ok) throw new Error(n); return r; };
+  try {
+    demoCv = new File([await (await get(set[0])).blob()], set[0], {type:"application/pdf"});
+    $("job").value = await (await get(set[1])).text();
+    cardFile = new File([await (await get(set[2])).blob()], set[2], {type:"application/json"});
+    $("cardInfo").textContent = `Card: ${set[2]} (the Job Agent is skipped)`;
+    $("msg").innerHTML = `Loaded <b>${set[0]}</b> + job + card. Press Run.`;
+  } catch(e){ $("msg").innerHTML = `<span class="err">Could not load the demo files (${esc(e.message)}).</span>`; }
+});
+
+$("run").onclick = async () => {
+  const cv = demoCv || $("cv").files[0];
+  if (!cv) { $("msg").innerHTML = '<span class="err">Choose a CV file.</span>'; return; }
+  if (!$("job").value.trim()) { $("msg").innerHTML = '<span class="err">Paste the job text or choose a .txt file.</span>'; return; }
+  const fd = new FormData();
+  fd.append("cv", cv, cv.name);
+  fd.append("job_text", $("job").value);
+  if (cardFile) fd.append("requirements", cardFile, cardFile.name);
+  $("run").disabled = true; $("msg").textContent = ""; $("resultSec").classList.add("hidden");
+  drawChain(); startClock();
+  polling = setInterval(poll, 1000);
+  try {
+    const r = await fetch("/ui/run", {method:"POST", body:fd});
+    const body = await r.json();
+    stopClock();
+    const p = await poll();
+    if (!r.ok) { $("msg").innerHTML = `<span class="err">${esc(body.detail || ("HTTP " + r.status))}</span>`; return; }
+    $("clock").textContent = `finished in ${((Date.now()-startT)/1000).toFixed(0)} s`;
+    show(body, p);
+  } catch(e){ stopClock(); $("msg").innerHTML = `<span class="err">${esc(e.message)}</span>`; }
+  finally { $("run").disabled = false; }
+};
+
+$("saved").onchange = async e => {
+  const f = e.target.files[0]; if (!f) return;
+  try { show(JSON.parse(await f.text()), null); $("msg").textContent = `Replay of ${f.name} (no run).`; }
+  catch(err){ $("msg").innerHTML = `<span class="err">Not a result file: ${esc(err.message)}</span>`; }
+};
+
+function replayChain(res){
+  // a saved result has no live progress: rebuild the timeline from the result itself
+  const n = (res.requirements || []).length, t = res.timings_s || {}, rd = res.reader || {}, sw = (res.bias||{}).swap || {};
+  const cnt = d => (res.requirements||[]).filter(x => x.decision === d).length;
+  const routes = [...new Set(rd.read_path || [])].join(", ");
+  return {finished:true, total_requirements:n, stages:{
+    reader:{status:"done", summary:`${rd.file_type || "?"}, route ${routes || "-"}`, elapsed_s:t.reader},
+    profile:{status:"done", summary:"anonymised; identity stored apart", elapsed_s:t.profile},
+    job: t.job != null ? {status:"done", summary:`${n} requirements`, elapsed_s:t.job} : undefined,
+    rag:{status:"done", summary:"per requirement", done:n},
+    match:{status:"done", summary:`r${n}: ${cnt("MET")} met, ${cnt("MISSING")} missing, ${cnt("UNCERTAIN")} uncertain`, done:n, elapsed_s:t.match_and_judge},
+    judge:{status:"done", summary:"quotes checked", done:n},
+    bias: sw.ran != null ? {status: sw.ran ? "done" : "skipped", summary: sw.ran ? `swap ${sw.counterfactual}, identical input: ${sw.identical_matcher_input ? "yes":"no"}` : (sw.skipped || "skipped")} : undefined,
+    outcome:{status:"done", summary:`${res.outcome} (score ${res.score})`},
+    report:{status:"done", summary:`${(res.report||{}).source === "llm" ? "AI" : "template"} report`}}};
+}
+
+function show(res, p){
+  result = res;
+  const prog = p && p.stages && Object.keys(p.stages).length ? p : replayChain(res);
+  prog.finished = true;
+  prog.finalState = "done";
+  prog.finalSum = `${String(res.outcome).toUpperCase()} · decided by ${res.decided_by === "human" ? "the recruiter" : "the gate"}` +
+                  (res.review_form_url ? " · waiting for the recruiter form" : "");
+  drawChain(prog);
+  const reqs = res.requirements || [];
+  const n = d => reqs.filter(r => r.decision === d).length;
+  $("banner").className = "banner " + (res.outcome || "");
+  $("banner").innerHTML = `<div class="o">${esc(res.outcome)}</div>
+    <div class="kv">decided by <b>${res.decided_by === "human" ? "recruiter" : "gate"}</b></div>
+    <div class="kv">score <b>${esc(res.score)}</b> / 100</div>
+    <div class="kv">Met <b>${n("MET")}</b> · Missing <b>${n("MISSING")}</b> · Uncertain <b>${n("UNCERTAIN")}</b></div>
+    <div class="kv" style="flex-basis:100%;font-size:13px">${esc(res.job_title || "")} · rule: ${esc(res.rule || "")}${res.message ? " · " + esc(res.message) : ""}</div>`;
+  $("resultBtns").innerHTML = (res.review_form_url ? `<button id="formBtn">Open recruiter form</button>` : "") +
+    `<button class="ghost" id="dl">Download result.json</button>`;
+  if (res.review_form_url) $("formBtn").onclick = () => window.open(res.review_form_url, "_blank");
+  $("dl").onclick = () => { const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([JSON.stringify(res, null, 1)], {type:"application/json"}));
+    a.download = "result.json"; a.click(); };
+  $("filters").innerHTML = ["ALL","MET","MISSING","UNCERTAIN"].map(f =>
+    `<span class="chip ${f === filter ? "on" : ""}" data-f="${f}">${f === "ALL" ? "All" : f[0] + f.slice(1).toLowerCase()} (${f === "ALL" ? reqs.length : n(f)})</span>`).join("");
+  document.querySelectorAll(".chip").forEach(c => c.onclick = () => { filter = c.dataset.f; show(result, p); });
+  $("cards").innerHTML = reqs.filter(r => filter === "ALL" || r.decision === filter).map(card).join("") || '<p class="hint">None.</p>';
+  fairness(res); reader(res); report(res); timings(res);
+  $("resultSec").classList.remove("hidden");
+}
+
+function card(r){
+  const c = r.confidence || {};
+  const pct = k => Math.round(100 * (c[k] || 0));
+  const conf = r.confidence ? `<div class="conf"><i style="width:${pct("MET")}%;background:var(--met)"></i><i style="width:${pct("MISSING")}%;background:var(--miss)"></i><i style="width:${pct("UNCERTAIN")}%;background:var(--unc)"></i></div>
+     <div class="legend">Matcher confidence: met ${pct("MET")}% · missing ${pct("MISSING")}% · uncertain ${pct("UNCERTAIN")}%</div>` : "";
+  const quotes = (r.quotes || []).map(q => `<div class="q">“${esc(q.quote ?? q)}”</div>`).join("") ||
+     '<div class="hint" style="margin-top:6px">No CV quote.</div>';
+  const changed = r.model_decision && r.model_decision !== r.decision ?
+     `<div class="changed">Model said <b>${r.model_decision}</b> → changed to <b>${r.decision}</b> by ${ (r.review_reasons||[]).includes("match:low_confidence") ? "the confidence check" : "the quote check"}.</div>` : "";
+  const reasons = [...(r.review_reasons || [])];
+  const why = reasons.length ? `<ul class="why">${reasons.map(x => `<li>${esc(plain(x))}</li>`).join("")}</ul>` : "";
+  const j = (r.judge || {}).verdict;
+  const gate = (result && result.gate_settings) || {};
+  const listed = r.decision === "MET" && j === "FAIL" && (r.kind === "nice" || (c.MET || 0) >= (gate.judge_met_max_conf || 0.999)) ?
+     `<div class="legend">The Judge's doubt is only listed: ${r.kind === "nice" ? "a nice-to-have never blocks" : "the Matcher was at least 99.9% sure"} (gate rule).</div>` : "";
+  return `<div class="req ${r.decision}"><div class="top"><div class="txt">${esc(r.req_id)} · ${esc(r.text)}</div>
+     <div><span class="pill kind">${esc(r.kind)}</span> <span class="pill ${r.decision}">${r.decision}</span></div></div>
+     ${quotes}${conf}<div class="legend" style="margin-top:4px">Judge: <b>${esc(j || "-")}</b></div>${listed}${changed}${why}</div>`;
+}
+
+function fairness(res){
+  const b = res.bias || {}, sw = b.swap || {};
+  const removed = (b.bias_flags || []).length;
+  $("fair").innerHTML = `<table class="kv">
+    <tr><td>Protected lines removed before the Matcher</td><td><b>${removed}</b></td></tr>
+    <tr><td>Swap test</td><td>${sw.ran ? `ran, counterfactual <b>${esc(sw.counterfactual)}</b> (${esc(sw.how || "")})` : `skipped (${esc(sw.skipped || "not run")})`}</td></tr>
+    ${sw.ran ? `<tr><td>Identical Matcher input</td><td><b>${sw.identical_matcher_input ? "yes" : "no"}</b>${sw.changed_must && sw.changed_must.length ? ` · changed: ${esc(sw.changed_must.join(", "))}` : ""}</td></tr>` : ""}
+    <tr><td>Would-be outcome (before the audit)</td><td>${esc(b.would_be_outcome || "-")}</td></tr>
+    <tr><td>Bias review reasons</td><td>${(b.review_reasons || []).map(plain).map(esc).join(", ") || "none"}</td></tr></table>`;
+}
+
+function reader(res){
+  const r = res.reader || {};
+  const routes = [...new Set(r.read_path || [])];
+  const route = routes.map(x => ({text:"text layer", ocr:"OCR", vision:"vision model", late:"late fusion (OCR + vision)", early:"early fusion"}[x] || x)).join(", ");
+  $("reader").innerHTML = `<table class="kv">
+    <tr><td>File type</td><td><b>${esc(r.file_type || "-")}</b></td></tr>
+    <tr><td>Route</td><td>${esc(route || "-")}${routes.some(x => x !== "text") ? ` (mode ${esc(r.mode)})` : ""}</td></tr>
+    <tr><td>Pages</td><td>${(r.read_path || []).length || "-"}</td></tr>
+    <tr><td>OCR confidence</td><td>${r.ocr_confidence != null ? esc(r.ocr_confidence) : "-"}</td></tr>
+    <tr><td>Reader review reasons</td><td>${(r.review_reasons || []).map(plain).map(esc).join(", ") || "none"}</td></tr></table>`;
+}
+
+function report(res){
+  const r = res.report || {};
+  const flags = (r.flags_for_recruiter || []).map(f => `<li>${esc(f)}</li>`).join("");
+  $("report").innerHTML = `<p class="hint">Source: <b>${r.source === "llm" ? "AI (checked by the fact checker)" : "template fallback (the AI text failed a check)"}</b>${r.model ? " · model " + esc(r.model) : ""}</p>
+    <div class="two"><div><h3>Recruiter summary</h3><pre class="letter">${esc(r.recruiter_summary || "-")}</pre>
+    ${flags ? `<h3>Flags for the recruiter</h3><ul class="why">${flags}</ul>` : ""}</div>
+    <div><h3>Candidate letter</h3><pre class="letter">${esc(r.candidate_letter || "(no letter: a person reviews this case)")}</pre></div></div>`;
+}
+
+function timings(res){
+  const t = res.timings_s || {};
+  const parts = [["Reader","reader","#14213D"],["Profile","profile","#2E63C9"],["Job","job","#6b8fd6"],["Match + Judge","match_and_judge","#1f7a4d"]]
+    .filter(x => t[x[1]] != null);
+  const tot = parts.reduce((s,x) => s + t[x[1]], 0) || 1;
+  $("timings").innerHTML = `<div class="tbar">${parts.map(x => `<i style="width:${100*t[x[1]]/tot}%;background:${x[2]}" title="${x[0]} ${t[x[1]]} s">${x[0]} ${Number(t[x[1]]).toFixed(1)} s</i>`).join("")}</div>
+    <p class="hint">Total of these stations: ${tot.toFixed(1)} s (the Report Writer and n8n overhead are not in this bar).</p>`;
+}
+
+// on load: draw the chain; attach to a run in progress; ?last=1 re-opens the last result of this API session
+(async () => {
+  drawChain();
+  const p = await poll();
+  if (p && p.active) { $("msg").textContent = "A run is in progress (started elsewhere): showing its progress."; startClock(); polling = setInterval(poll, 1000); }
+  const q = new URLSearchParams(location.search);
+  if (q.get("demo") && !(p && p.active)) {  // ?demo=invite|reject loads a sample; &autorun=1 also presses Run
+    document.querySelector(`[data-demo="${q.get("demo")}"]`)?.click();
+    if (q.get("autorun")) setTimeout(() => $("run").click(), 1500);
+  }
+  if (q.get("last")) {
+    const r = await fetch("/ui/last-result");
+    if (r.ok) show(await r.json(), p && p.stages && Object.keys(p.stages).length ? p : null);
+  }
+  // ?only=result | reqs: hide the zones above (for slide screenshots)
+  if (q.get("only")) { $("input").classList.add("hidden"); $("timelineSec").classList.add("hidden"); }
+  if (q.get("only") === "reqs") { ["banner","resultBtns"].forEach(id => $(id).classList.add("hidden")); }
+})();
+</script>
+</body>
+</html>

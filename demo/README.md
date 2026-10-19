@@ -39,6 +39,33 @@ quotes, and three blocks:
 - `bias` (flags, swap test);
 - `report` (recruiter summary, requirement lines, candidate letter, flags).
 
+## Demo page (T16)
+
+Open **http://127.0.0.1:8010/ui/** (served by the station API, works offline). It is a view only: the run still goes
+through the same n8n workflow.
+
+1. **Input.**
+   - Choose a CV file and paste the job text (or choose a .txt file).
+   - Optionally choose a confirmed requirement card (.json); then the Job Agent is skipped.
+   - Or press **Load invite sample** / **Load reject sample**, which load the files of this folder.
+2. **Run.** The station API forwards the upload to the n8n webhook and adds `X-HireSignal-Token` on the server. Only
+   one run at a time (a second one gets "A run is already in progress").
+3. **Agent timeline.** Every second the page reads `/ui/progress`. Each agent box shows its state (waiting / running /
+   done / skipped / error), seconds and a one-line summary. The Matcher shows "r4 / 8".
+4. **Result.**
+   - Outcome banner, and one card per requirement: quotes, Matcher confidence, Judge verdict, review reasons in plain
+     words. Filter by All / Met / Missing / Uncertain.
+   - Fairness, Reader and Report panels, timings, **Download result.json**.
+   - **Open recruiter form** on review cases.
+5. **Replay.** **Open a saved result** loads a `result.json` from disk and shows it without running (use it if the
+   laptop is slow during a presentation). `docs/ui/result_invite.json` and `result_reject.json` are ready-made.
+
+Screenshots for the slides: `docs/ui/1_timeline_running.png`, `2_result_top.png`, `3_requirement_cards.png`.
+For headless screenshots, the page also accepts:
+- `?demo=invite|reject&autorun=1` (load a sample and press Run);
+- `?last=1` (re-open the last run of this API session);
+- `&only=result|reqs` (hide the zones above).
+
 ## Where to look
 
 - **n8n editor**: http://localhost:5678 → Executions. Every station is a node: Reader → Profile → Job card → RAG lookup

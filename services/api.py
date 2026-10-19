@@ -362,3 +362,10 @@ def rag_search(body: RagSearchIn):
     return RagSearchOut(knowledge_refs=refs, retriever=r.name + (" +only-when-missing" if only_missing else ""),
                         skipped=skipped, elapsed_s=round(time.perf_counter() - t, 3))
 
+
+
+# T16: demo page (a view only): progress middleware, /ui/run, /ui/progress, /ui/ static page. Installed last, so the
+# station routes above keep priority and their contracts are unchanged.
+from services.ui import install as _install_ui  # noqa: E402
+
+_install_ui(app)

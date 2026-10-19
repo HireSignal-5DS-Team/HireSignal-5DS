@@ -23,6 +23,9 @@ py -3.12 -m venv .venv
 .venv\Scripts\python -m pip check                           # must say: No broken requirements found.
 ```
 
+Data-prep scripts only: `pip install -r requirements-dataprep.txt`. On Windows with Smart App Control, pyarrow may
+be blocked; the app itself does not need it.
+
 ## 2. Tesseract OCR (Reader, path 1)
 
 1. Download the UB Mannheim Windows installer of Tesseract 5 (github.com/UB-Mannheim/tesseract/wiki) and run it as
@@ -129,6 +132,11 @@ Health checks:
 
 See `demo/README.md`: three sample inputs (an invite, a reject, a phone photo) sent to the webhook with the token
 header, and where the results appear (`eval/outbox/`, the n8n editor, the recruiter form).
+
+**Demo page** (T16): with the stack running, open **http://127.0.0.1:8010/ui/** in a browser (offline, nothing to
+install). Upload a CV + job text (+ optional requirement card), press **Run**, and watch each agent. The station API
+forwards the run to the n8n webhook and adds the token on the server, so the browser never sees it. **Open a saved
+result** shows a `result.json` without running anything (replay, for a slow laptop). See `demo/README.md`.
 
 ## Not tested from zero in T13
 

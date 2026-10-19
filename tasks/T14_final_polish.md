@@ -35,7 +35,7 @@ Add `docs/figures/README.md` listing each figure, its source folder and a one-li
 - **Size check:** no file over 50 MB and a total size estimate. List what is excluded and how to get it back (`scripts/download_models.py`, the LoRA conversion steps in INSTALL.md).
 - Write `docs/PUSH_CHECKLIST.md` with the results.
 - **Push (Approver approved, 2026-10-19), only if the secret scan = 0 and no file is over 50 MB:**
-  - remote `origin` = `https://github.com/yassinemaazaoui114-git/HireSignal.git` (the Approver's own repo; keep it **private** until submission);
+  - remote `origin` = personal repo (removed) (the Approver's own repo; keep it **private** until submission);
   - one clean commit of the whole project, branch `main` (with the attribution lines from your instructions), then `git push -u origin main`;
   - **authentication:** if git asks for credentials, stop and ask the Approver to sign in himself (browser / Git Credential Manager). Never write a token into any file, config or log. Do not use the laptop owner's GitHub account;
   - after the push, list the files on the remote (`git ls-files | wc -l`) and confirm `.env`, `private/` and `models/*.gguf` are not tracked.

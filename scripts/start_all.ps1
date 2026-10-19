@@ -43,3 +43,4 @@ if (Get-NetTCPConnection -LocalPort 5678 -State Listen -ErrorAction SilentlyCont
     Wait-Url "http://127.0.0.1:5678/healthz" "n8n" 120
 }
 "All up. Editor: http://localhost:5678  Webhook: POST http://127.0.0.1:5678/webhook/hiresignal (header X-HireSignal-Token)"
+"Demo page: http://127.0.0.1:8010/ui/"

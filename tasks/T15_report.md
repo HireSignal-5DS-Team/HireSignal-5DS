@@ -178,4 +178,13 @@ execution 75.
 Use the before/after tables and the two examples in the report and slides (prompt-engineering part).
 
 ## 6. Push
-See the end of this report.
+- **Checks first:**
+  - secret scan `eval/results/2026-10-19_secret_scan_t15/scan.json` → PASS (3,568 files; `.env` secrets 0, key
+    patterns 0, identity unexplained 0);
+  - 33.2 MB in total, 0 files over 50 MB;
+  - 0 staged files from `.env`, `private/`, models, `.n8n/`, `tools/`, `.cache/` or `eval/outbox/`.
+- **Commit `a93368d`** on `v3-final`: T15 plus the T14 report's push section.
+- `git push origin v3-final` → `b7d1d1a..a93368d v3-final -> v3-final`; `git ls-remote` shows the same hash.
+- No force push, no other branch.
+- Git did not ask for credentials (the stored login was used again).
+- This section was added after the push, so it is only in the local copy.
