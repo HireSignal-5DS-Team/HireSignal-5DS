@@ -19,7 +19,7 @@ param(
     [int]$BackendPort = 8001,
     [int]$FrontendPort = 5174,
     [string]$V1Repo = (Join-Path $PSScriptRoot "..\..\repo"),
-    [int]$NGpuLayers = 35,
+    [int]$NGpuLayers = 8,
     [switch]$Stop,
     [switch]$NoBrowser
 )
@@ -81,8 +81,12 @@ if (Test-Url "$modelUrl/models") {
     $other = Get-CimInstance Win32_Process -Filter "Name='python.exe'" |
         Where-Object { $_.CommandLine -like "*llama_cpp.server*" }
     if ($other) {
-        # Two Qwen3-4B servers do not fit in 6 GB VRAM.
-        throw "another llama_cpp.server is running (PID $($other.ProcessId -join ', ')). Stop it first, e.g. Ctrl+C in its window or the V1 LoRA server."
+        # Separate model servers were tested with 8 GPU layers in V2 while V1 remained active.
+        # Never require shutting down the working V1 to launch V2.
+        if ($NGpuLayers -gt 8) {
+            throw "A separate llama.cpp server is running. Use -NGpuLayers 8 or lower to protect the available VRAM; V1 remains untouched."
+        }
+        Write-Host "[start_v2] another model server is running; keeping it untouched and using $NGpuLayers GPU layers for V2"
     }
     $gguf = Find-OneFile "Qwen3-4B-Instruct-2507-Q4_K_M.gguf"
     $lora = Find-OneFile "hiresignal-lora-f16.gguf"
@@ -109,7 +113,7 @@ if (Test-Url "$backendUrl/health") {
     Write-Host "[start_v2] reusing backend on $BackendPort"
 } else {
     $envs = @{
-        HF_HOME = $hf; HF_HUB_OFFLINE = "0"
+        HF_HOME = $hf; HF_HUB_OFFLINE = "1"
         HS_MATCHER_URL = $modelUrl; HS_MATCHER_MODEL = "Qwen/Qwen3-4B-Instruct-2507+lora"
         HS_FALLBACK = "off"
         HS_UPSTREAM_LLM_URL = $modelUrl; HS_UPSTREAM_LLM_MODEL = "Qwen/Qwen3-4B-Instruct-2507"
@@ -127,7 +131,7 @@ if (Test-Url "$backendUrl/health") {
         "& $(Quote $py) -m uvicorn backend.main:app --host 127.0.0.1 --port $BackendPort"
     Wait-Url "$backendUrl/health" "backend" 300
 }
-$ready = Invoke-RestMethod "$backendUrl/ready" -TimeoutSec 30
+$ready = Invoke-RestMethod "$backendUrl/ready" -TimeoutSec 300
 if (-not $ready.ready) { throw "backend not ready: $($ready.checks | ConvertTo-Json -Compress)" }
 Write-Host "[start_v2] backend ready (matcher, pipeline, rag_dir ok)"
 
