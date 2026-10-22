@@ -79,7 +79,8 @@ def write_files(out, folder, slm=None, slm_status=None, job_title=None, stem="re
     rep = write(out, slm=slm, slm_status=slm_status, job_title=job_title)
     d = Path(folder)
     d.mkdir(parents=True, exist_ok=True)
-    (d / f"{stem}.report.json").write_text(json.dumps(rep.model_dump(mode="json"), indent=2, ensure_ascii=False) + "\n")
-    (d / f"{stem}.html").write_text(to_html(rep))
-    (d / f"{stem}.slm.md").write_text(to_markdown(rep))
+    # utf-8 explicitly: the Windows default (cp1252) cannot encode the report's warning sign.
+    (d / f"{stem}.report.json").write_text(json.dumps(rep.model_dump(mode="json"), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    (d / f"{stem}.html").write_text(to_html(rep), encoding="utf-8")
+    (d / f"{stem}.slm.md").write_text(to_markdown(rep), encoding="utf-8")
     return rep

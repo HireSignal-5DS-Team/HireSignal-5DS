@@ -26,8 +26,11 @@ After the one-time setup below (worktree, `.v2deps`, LoRA GGUF in the V1 cache):
 
 It starts the model server (8082), backend (8001) and frontend (5174), each in its own window, reuses any that
 already answer, waits for `/ready`, and opens Chrome on `http://127.0.0.1:5174/analysis`. The V1 ports
-8081/8000/5173 stay free. It refuses to start a second `llama_cpp.server` (two 4B models do not fit in 6 GB):
-stop the V1 LoRA server first. Ports, V1 folder and GPU layers are parameters (`-ModelPort`, `-V1Repo`, ...).
+8081/8000/5173 stay free. The model server defaults to `-NGpuLayers 8` so it can run next to a V1 LoRA server
+without stopping it; with another `llama_cpp.server` running, the script refuses more than 8 GPU layers (two
+fully offloaded 4B models do not fit in 6 GB). With V1 stopped, `-NGpuLayers 35` is faster. The backend runs with
+`HF_HUB_OFFLINE=1` (models must already be cached). Ports, V1 folder and GPU layers are parameters
+(`-ModelPort`, `-V1Repo`, ...). After a reboot, see `V2_REBOOT_RECOVERY_20261021.md`.
 
 ## 1. Keep V1 intact: use a second worktree
 

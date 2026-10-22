@@ -106,7 +106,8 @@ def judge_config(env):
         model, known = FINETUNED_JUDGE[0], {"tau_pass": FINETUNED_JUDGE[1], "tau_fail": FINETUNED_JUDGE[1], "hypothesis": "v1"}
     else:
         model = model or JUDGE_DEFAULT
-        if model.startswith("/") and not Path(model).exists():
+        # Path("C:\\x").is_absolute() covers Windows; startswith("/") keeps POSIX-style paths on Windows too.
+        if (model.startswith("/") or Path(model).is_absolute()) and not Path(model).exists():
             note, model = f" (checkpoint {model} missing)", JUDGE_DEFAULT
         known = JUDGE_MODELS.get(model)
         if known is None and (Path(model) / "judge_calibration.json").exists():
