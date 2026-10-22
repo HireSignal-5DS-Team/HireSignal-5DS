@@ -1,0 +1,30 @@
+{
+  "run_id": "bias-qwen3-4b-q4+hslora",
+  "backend": {
+    "backend": "openai_compat",
+    "is_model": true,
+    "model_id": "Qwen/Qwen3-4B-Instruct-2507+lora",
+    "label": "Qwen/Qwen3-4B-Instruct-2507+lora",
+    "provider": "local",
+    "base_url": "http://127.0.0.1:8081/v1",
+    "decoding": {
+      "temperature": 0,
+      "max_tokens": 192
+    },
+    "timeout_s": 300,
+    "max_retries": 2,
+    "prompt_version": "p1",
+    "adapter_id": null,
+    "revision": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946b:Q4_K_M + HireSignal-5DS-Team/hiresignal-qwen3-4b-matcher-lora@0b6925b1e3c89b6b266b10bcd30af4c6a0c2dc3a (llama.cpp --lora_path)"
+  },
+  "n_requirements": 30,
+  "calls": 240,
+  "flagged_rate": 0.03333333333333333,
+  "flip_rate_per_attribute": {
+    "name_signal": 0.03333333333333333,
+    "gender_signal": 0.0,
+    "nationality_signal": 0.0,
+    "age_signal": 0.0
+  },
+  "note": "A flip is a fairness signal for human review, not proof of discrimination."
+}
