@@ -12,9 +12,13 @@
 
 ---
 
-## Overview
+## Overview 
 
 **HireSignal** is an AI-assisted recruitment screening prototype that helps reviewers assess CVs against job descriptions using **verifiable evidence** rather than keyword matching alone. It brings together multimodal document reading, privacy-aware profile extraction, job requirement understanding, retrieval-augmented generation (RAG), LoRA-adapted matching, evidence verification, bias auditing, and explainable reports in one workflow.
+This was a 6 member team work:
+| Member | Area | Folders |
+|---|---|---|
+| Mahmoud-Ben-Khelil | **Report generation (SLM)**: small language model that turns the verified evidence, match scores and bias audit into an explainable, human-readable screening report | `<folder>/` |
 
 > [!IMPORTANT]
 > **Academic research prototype, not an automated hiring system.** Results such as **MET**, **MISSING**, and **UNCERTAIN** are aids for human review, not final employment decisions. Human reviewers must validate the evidence and make any hiring decisions.
